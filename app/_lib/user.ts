@@ -5,6 +5,7 @@
 
 import { readFileSync } from 'fs';
 import path from 'path';
+import { cookies } from 'next/headers';
 import type { User, UsersIndex } from './types';
 
 export const COOKIE_NAME = 'compass-user';
@@ -35,4 +36,14 @@ export function getUserByCode(code: string): User | null {
 export function getAllUsers(): User[] {
   const { users } = loadUsers();
   return Object.values(users);
+}
+
+/**
+ * Get the current user from the cookie. For use in server components and API routes.
+ */
+export async function getCurrentUser(): Promise<User | null> {
+  const cookieStore = await cookies();
+  const userId = cookieStore.get(COOKIE_NAME)?.value;
+  if (!userId) return null;
+  return getUserById(userId);
 }
