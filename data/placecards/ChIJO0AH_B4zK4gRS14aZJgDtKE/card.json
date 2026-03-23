@@ -1,0 +1,100 @@
+{
+  "place_id": "ChIJO0AH_B4zK4gRS14aZJgDtKE",
+  "built": "2026-03-10T16:09:43.986Z",
+  "source": "task-urla",
+  "identity": {
+    "place_id": "ChIJO0AH_B4zK4gRS14aZJgDtKE",
+    "name": "Urla Fine Foods Toronto - Turkish Market & Kitchen",
+    "city": "Toronto",
+    "address": "77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
+    "type": "grocery",
+    "phone": "(416) 781-5741",
+    "website": "http://www.urlafinefoods.com/",
+    "rating": 4.6,
+    "user_rating_count": 671,
+    "location": "77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Food",
+        "body": "📍 Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nTurkish grocery destination with pantry staples, specialty imports, and cultural food products."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗦\n\nLikely specialties: Turkish pantry staples, olives, cheeses, spices, sweets, and imported goods.\nWebsite: http://www.urlafinefoods.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (671 reviews)\nPhone: (416) 781-5741\nWebsite: http://www.urlafinefoods.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada\n\n• walking: 1 hour 50 mins • 7.8 km\n• transit: 49 mins • 10.5 km\n• driving: 24 mins • 8.6 km (traffic: 16 mins)\n• bicycling: 33 mins • 8.5 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (24 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:49.838Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (24 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1432,
+        "durationText": "24 mins",
+        "durationInTrafficSeconds": 974,
+        "durationInTrafficText": "16 mins",
+        "distanceMeters": 8638,
+        "distanceText": "8.6 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 6623,
+        "durationText": "1 hour 50 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7825,
+        "distanceText": "7.8 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1968,
+        "durationText": "33 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8480,
+        "distanceText": "8.5 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2933,
+        "durationText": "49 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10482,
+        "distanceText": "10.5 km"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJEZFe2cc1K4gR5ZSbZH780Fw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJEZFe2cc1K4gR5ZSbZH780Fw",
+    "name": "Aburi Hana",
+    "city": "Toronto",
+    "address": "Yorkville (102 Yorkville Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "aburihana.com"
+  },
+  "narrative": {
+    "summary": "Fine Japanese institution announcing reimagined dining room + shared-plates format for late Spring 2026. Contemporary Japanese fine dining, 4.6★ (283 reviews). $$$$. Worth watching for the relaunch. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJYzr1oP40K4gRzCwxCfKDUME",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJYzr1oP40K4gRzCwxCfKDUME",
+    "name": "VdeV",
+    "city": "Toronto",
+    "address": "Dundas West / Trinity Bellwoods",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via vdevmaison.com"
+  },
+  "narrative": {
+    "summary": "Montreal transplant; vintage + industrial vibe; great eye-catching window displays and eclectic mix.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJm1ZgkGo1K4gRGKljdB0SsCE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJm1ZgkGo1K4gRGKljdB0SsCE",
+    "name": "Post Design Collective",
+    "city": "Toronto",
+    "address": "Munro St (184 Munro St — by appointment)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via postdesigncollective.com"
+  },
+  "narrative": {
+    "summary": "Authentic mid-century Scandinavian furniture sourced directly from Denmark, Sweden, Norway. Small studio, personal curation. Every piece has provenance. 5.0★ (20 reviews).",
+    "blocks": []
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "place_id": "ChIJYXQ_2g03K4gR7HUfcMe1JOo",
+  "built": "2026-03-10T15:37:00.901Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJYXQ_2g03K4gR7HUfcMe1JOo",
+    "name": "Lakeside Cottages Muskoka",
+    "city": "Toronto",
+    "address": "265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada",
+    "type": "accommodation",
+    "phone": "(416) 371-9136",
+    "website": "http://www.lakesidecottages.ca/",
+    "rating": 4.9,
+    "user_rating_count": 113,
+    "location": "265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Lakeside Cottages Muskoka\n265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Lakeside Cottages Muskoka",
+        "body": "\ud83d\udccd Lakeside Cottages Muskoka\n265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nPremium waterfront cottage rentals - turn-key experience, quality properties"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://www.lakesidecottages.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.9 (113 reviews)\nPrice level: n/a\nPhone: (416) 371-9136\nWebsite: http://www.lakesidecottages.ca/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada\n\n\u2022 walking: 1 day 17 hours \u2022 180 km\n\u2022 transit: unavailable\n\u2022 driving: 1 hour 54 mins \u2022 168 km (traffic: 1 hour 50 mins)\n\u2022 bicycling: 10 hours 36 mins \u2022 202 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (1 hour 54 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "265 Lakeview Ave, Gravenhurst, ON P1P 1R4, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:04.008Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (1 hour 54 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 6816,
+        "durationText": "1 hour 54 mins",
+        "durationInTrafficSeconds": 6606,
+        "durationInTrafficText": "1 hour 50 mins",
+        "distanceMeters": 168467,
+        "distanceText": "168 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 146808,
+        "durationText": "1 day 17 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 180444,
+        "distanceText": "180 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 38169,
+        "durationText": "10 hours 36 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 201857,
+        "distanceText": "202 km"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "No route found",
+        "googleStatus": "ZERO_RESULTS"
+      }
+    ]
+  }
+}

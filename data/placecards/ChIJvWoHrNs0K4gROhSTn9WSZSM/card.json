@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJvWoHrNs0K4gROhSTn9WSZSM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJvWoHrNs0K4gROhSTn9WSZSM",
+    "name": "Trinity Square Video",
+    "city": "Toronto",
+    "address": "401 Richmond",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces"
+  },
+  "narrative": {
+    "summary": "4.9 rating, Canada's oldest media arts centre (1971), experimental video/film at art-tech intersection",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJw1ylCFg0K4gRNcy5mMX54uM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJw1ylCFg0K4gRNcy5mMX54uM",
+    "name": "The Emmet Ray Whisky Jazz Bar",
+    "city": "Toronto",
+    "address": "Little Italy / College (924 College St)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via theemmetray.com"
+  },
+  "narrative": {
+    "summary": "Named after the Woody Allen character. 300+ whiskies + live jazz nightly including Sundays. Neighborhood joint energy with serious music curation. 4.6★ (830 reviews). $$",
+    "blocks": []
+  }
+}

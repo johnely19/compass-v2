@@ -1,0 +1,99 @@
+{
+  "place_id": "ChIJz2IRNTLL1IkRo-Xf682fPIg",
+  "built": "2026-02-26",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJz2IRNTLL1IkRo-Xf682fPIg",
+    "name": "Nami Japanese Restaurant",
+    "city": "Toronto",
+    "address": "55 Adelaide St E, Toronto, ON M5C 1K6",
+    "phone": "(416) 362-7373",
+    "website": "https://namirestaurant.ca/",
+    "price_level": 3,
+    "rating": 4.3,
+    "location": "55 Adelaide St E, Toronto, ON M5C 1K6"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAdelaide & Church — The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAdelaide & Church — The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nStep through and you're transported — tatami rooms where you sit on the floor, kimono-wearing servers, one of the city's only robata bars where chefs grill over open flame in front of you. The sushi bar puts you eye-level with masters at work."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🍣 Sushi & Sashimi\n• Omakase — market price ⭐\n• Sushi Pizza — invented here in the 1980s ⭐\n• Sashimi Deluxe — market fresh selection\n• Chirashi — scattered sushi rice bowl\n\n🔥 Robata (Grilled)\n• Black Cod — flown in from Japan ⭐\n• Wagyu Beef\n• Yakitori selection\n• Seafood robata platter\n\n🍲 Specialties\n• Sukiyaki — traditional hot pot\n• Bento Box — complete meal\n• Tempura selection\n\n🥢 A La Carte\n• Hand rolls\n• Onigiri\n• Various appetizers\n\nNote: Much of the fish is flown in from Japan. Omakase recommended for the full experience."
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$\n\nDinner for 2: $120-180 (with drinks)\nOmakase: $85-150pp\n\n⚠️ FINAL DAY: MARCH 7, 2026\n\nReservations: Tock (exploretock.com/namijapaneserestaurant)\nWalk-ins: Limited availability\n\n📞 (416) 362-7373\n🌐 namirestaurant.ca\n\n𝗛𝗢𝗨𝗥𝗦\nTue–Fri: 11:30am–3pm, 5–10pm\nSat: 5–10pm\nSun–Mon: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Happy hour 5-7pm Wed — discounted drinks, quiet before dinner rush\n• Lunch Tue-Fri for lighter crowds\n• Book tatami room for special occasions (5+ people required)\n• Final days will be packed — reserve NOW\n\n𝗟𝗘𝗚𝗔𝗖𝗬\nHosted: Meryl Streep, U2, Rolling Stones, Meg Ryan, Russell Crowe, Carrie Fisher, Japanese Royal Family\nBirthplace of sushi pizza (chef Kaoru Ohsada, 1980s)\n40+ years defining Japanese dining in Toronto"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 55 Adelaide St E, Toronto, ON M5C 1K6\n\n• walking: 1 hour 1 min • 4.6 km\n• transit: 19 mins • 5.0 km\n• driving: 16 mins • 5.7 km (traffic: 12 mins)\n• bicycling: 18 mins • 5.2 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (19 mins vs 16 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "55 Adelaide St E, Toronto, ON M5C 1K6",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:58.101Z",
+    "recommended": {
+      "mode": "transit",
+      "reason": "Transit is close to driving time (19 mins vs 16 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 946,
+        "durationText": "16 mins",
+        "durationInTrafficSeconds": 743,
+        "durationInTrafficText": "12 mins",
+        "distanceMeters": 5672,
+        "distanceText": "5.7 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3680,
+        "durationText": "1 hour 1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4570,
+        "distanceText": "4.6 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1099,
+        "durationText": "18 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5153,
+        "distanceText": "5.2 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1117,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5008,
+        "distanceText": "5.0 km"
+      }
+    ]
+  }
+}

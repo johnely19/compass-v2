@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ6RWIUro3K4gRBLGd3SpVT_s",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ6RWIUro3K4gRBLGd3SpVT_s",
+    "name": "Bonne Choice",
+    "city": "Toronto",
+    "address": "Etobicoke",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via designlinesmagazine.com"
+  },
+  "narrative": {
+    "summary": "Carlo Colacci (Drake Hotel designer) - 4000 sq ft of bold international vintage finds, original artwork",
+    "blocks": []
+  }
+}

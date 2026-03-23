@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJv4wxbJ5dwokR_StiDfSvWQc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJv4wxbJ5dwokR_StiDfSvWQc",
+    "name": "Evil Twin Brewing NYC",
+    "city": "NYC",
+    "address": "Ridgewood (16-16 George St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide",
+    "url": "https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide"
+  },
+  "narrative": {
+    "summary": "Danish-founded craft brewery taproom in Ridgewood. Industrial cool space, rotating taps, food-friendly. 4.6★ (443 reviews). A Ridgewood anchor — TimeOut recommends it as part of a food-tour trifecta with Rolo's and Rudy's Bakery.",
+    "blocks": []
+  }
+}

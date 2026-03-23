@@ -1,0 +1,94 @@
+{
+  "place_id": "ChIJxyhaRi41K4gRIM9ou3wUsNo",
+  "built": "2026-03-11T23:05:57.350Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJxyhaRi41K4gRIM9ou3wUsNo",
+    "name": "Pho Ngoc Yen 3 Toronto",
+    "city": "Toronto",
+    "address": "350 Adelaide St W, Toronto, ON M5V 1R7, Canada",
+    "type": "accommodation",
+    "phone": "(437) 836-2764",
+    "rating": 4.7,
+    "user_rating_count": 770,
+    "location": "350 Adelaide St W, Toronto, ON M5V 1R7, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Pho Ngoc Yen 3 Toronto\n350 Adelaide St W, Toronto, ON M5V 1R7, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Pho Ngoc Yen 3 Toronto",
+        "body": "\ud83d\udccd Pho Ngoc Yen 3 Toronto\n350 Adelaide St W, Toronto, ON M5V 1R7, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNewer downtown branch of well-rated Vietnamese spot; casual, value-conscious and aligned with Golden Turtle-style preference."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (770 reviews)\nPrice level: n/a\nPhone: (437) 836-2764\nWebsite: n/a\n\nHours:\nMonday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM\nTuesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM\nWednesday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM\nThursday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM\nFriday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM\nSaturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nSunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 350 Adelaide St W, Toronto, ON M5V 1R7, Canada\n\n\u2022 walking: 1 hour 14 mins \u2022 5.5 km\n\u2022 transit: 28 mins \u2022 6.6 km\n\u2022 driving: 22 mins \u2022 6.1 km (traffic: 15 mins)\n\u2022 bicycling: 19 mins \u2022 5.8 km\n\nBest modality: BICYCLING \u2b50\nWhy: Fastest available option (19 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "350 Adelaide St W, Toronto, ON M5V 1R7, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:55.400Z",
+    "recommended": {
+      "mode": "bicycling",
+      "reason": "Fastest available option (19 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1312,
+        "durationText": "22 mins",
+        "durationInTrafficSeconds": 928,
+        "durationInTrafficText": "15 mins",
+        "distanceMeters": 6084,
+        "distanceText": "6.1 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4435,
+        "durationText": "1 hour 14 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5505,
+        "distanceText": "5.5 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1160,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5778,
+        "distanceText": "5.8 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1679,
+        "durationText": "28 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6586,
+        "distanceText": "6.6 km"
+      }
+    ]
+  }
+}

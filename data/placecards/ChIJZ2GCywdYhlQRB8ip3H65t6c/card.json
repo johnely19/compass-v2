@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJZ2GCywdYhlQRB8ip3H65t6c",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZ2GCywdYhlQRB8ip3H65t6c",
+    "name": "Sea to Sky Gondola",
+    "city": "Squamish",
+    "address": "Highway 99",
+    "type": "park"
+  },
+  "discovery": {
+    "text": "travelingcanucks.com",
+    "url": "https://travelingcanucks.com/2025/05/things-to-do-along-the-sea-to-sky-highway/"
+  },
+  "narrative": {
+    "summary": "Jaw-dropping views of Howe Sound and surrounding mountains. Summit hiking trails, suspension bridge. 4.7 rating, 12,000+ reviews. Note: check if open in April (sometimes seasonal). Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

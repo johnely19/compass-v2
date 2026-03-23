@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJl-Hi4f00K4gR4X2byQYCO9A",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJl-Hi4f00K4gR4X2byQYCO9A",
+    "name": "Stephen Bulger Gallery - Mehdi Dandi: Afterimage",
+    "city": "Toronto",
+    "address": "Dundas West / Little Portugal",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via bulgergallery.com"
+  },
+  "narrative": {
+    "summary": "New show (opened March 7) by Iranian-Canadian photographer exploring memory, migration, décollage technique. Photography gallery with serious curatorial vision.",
+    "blocks": []
+  }
+}

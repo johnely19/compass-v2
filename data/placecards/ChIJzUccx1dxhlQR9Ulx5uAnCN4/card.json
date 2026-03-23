@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJzUccx1dxhlQR9Ulx5uAnCN4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJzUccx1dxhlQR9Ulx5uAnCN4",
+    "name": "Les Faux Bourgeois",
+    "city": "Vancouver",
+    "address": "East Vancouver",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "reddit.com",
+    "url": "https://www.reddit.com/r/NiceVancouver/comments/1i5eqg1/7_restaurants_unique_to_vancouver_would/"
+  },
+  "narrative": {
+    "summary": "Classic French bistro beloved by locals. Reddit's 'real gem' pick for French in Vancouver. Wine bar + bistro + cocktails. 4.6 rating. Exactly John's French bistro pattern — intimate, unfussy, wine-forward. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

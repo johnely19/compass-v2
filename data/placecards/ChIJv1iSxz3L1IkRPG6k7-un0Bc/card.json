@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJv1iSxz3L1IkRPG6k7-un0Bc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJv1iSxz3L1IkRPG6k7-un0Bc",
+    "name": "Bergo Designs",
+    "city": "Toronto",
+    "address": "Distillery District",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via bergo.ca"
+  },
+  "narrative": {
+    "summary": "Modern jewelry and home accents in the Distillery; good entry point for contemporary Canadian design.",
+    "blocks": []
+  }
+}

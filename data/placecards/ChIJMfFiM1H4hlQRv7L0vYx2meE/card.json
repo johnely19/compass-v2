@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJMfFiM1H4hlQRv7L0vYx2meE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJMfFiM1H4hlQRv7L0vYx2meE",
+    "name": "Backcountry Brewing",
+    "city": "Squamish",
+    "address": "Commercial Way",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "bcaletrail.ca",
+    "url": "https://bcaletrail.ca/road-trip-journals/sea-to-sky/"
+  },
+  "narrative": {
+    "summary": "Squamish's star brewery. Great pizza, huge beer selection. 4.7 rating, 1,371 reviews. Buzzing with locals. The essential Squamish brewery stop. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

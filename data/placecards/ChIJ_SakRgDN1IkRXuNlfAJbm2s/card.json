@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ_SakRgDN1IkRXuNlfAJbm2s",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ_SakRgDN1IkRXuNlfAJbm2s",
+    "name": "Croquembouche",
+    "city": "Toronto",
+    "address": "Danforth East",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/bakery/croquembouche-toronto/",
+    "url": "https://www.blogto.com/bakery/croquembouche-toronto/"
+  },
+  "narrative": {
+    "summary": "Perfect 5.0 rating; classic French patisserie—tarts, croissants, brioche, croquembouche; Paris-in-Toronto energy.",
+    "blocks": []
+  }
+}

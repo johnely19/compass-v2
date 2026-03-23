@@ -1,0 +1,99 @@
+{
+  "place_id": "ChIJhyJSxoNewokRD80Afe45XGg",
+  "built": "2026-03-10T15:37:07.399Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJhyJSxoNewokRD80Afe45XGg",
+    "name": "Bosna Express",
+    "city": "Toronto",
+    "address": "66-99 Fresh Pond Rd, Queens, NY 11385, USA",
+    "type": "restaurant",
+    "website": "http://mta.info/",
+    "rating": 3.9,
+    "user_rating_count": 86,
+    "location": "66-99 Fresh Pond Rd, Queens, NY 11385, USA"
+  },
+  "narrative": {
+    "summary": "📍 Bosna Express\n66-99 Fresh Pond Rd, Queens, NY 11385, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Bosna Express",
+        "body": "📍 Bosna Express\n66-99 Fresh Pond Rd, Queens, NY 11385, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAuthentic Bosnian cevapi and pljeskavica - incredible value, truly local spot under the M train"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://mta.info/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 3.9 (86 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: http://mta.info/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 66-99 Fresh Pond Rd, Queens, NY 11385, USA\n\n• walking: 7 days 2 hours • 742 km\n• transit: 12 hours 40 mins • 838 km\n• driving: 8 hours 21 mins • 793 km (traffic: 8 hours 12 mins)\n• bicycling: 2 days 6 hours • 1,004 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (8 hours 21 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "66-99 Fresh Pond Rd, Queens, NY 11385, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:24.606Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (8 hours 21 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 30069,
+        "durationText": "8 hours 21 mins",
+        "durationInTrafficSeconds": 29542,
+        "durationInTrafficText": "8 hours 12 mins",
+        "distanceMeters": 793108,
+        "distanceText": "793 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 612326,
+        "durationText": "7 days 2 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 742423,
+        "distanceText": "742 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 193600,
+        "durationText": "2 days 6 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 1004257,
+        "distanceText": "1,004 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 45617,
+        "durationText": "12 hours 40 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 837754,
+        "distanceText": "838 km"
+      }
+    ]
+  }
+}

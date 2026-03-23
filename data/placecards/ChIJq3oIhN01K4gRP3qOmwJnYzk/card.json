@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJq3oIhN01K4gRP3qOmwJnYzk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJq3oIhN01K4gRP3qOmwJnYzk",
+    "name": "Dina's Tavern",
+    "city": "Toronto",
+    "address": "Spadina / U of T (486 Spadina Ave)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Opened Sept 2025 on sacred Silver Dollar Room ground. Track & Field team. 70s fever dream: smoking rat mascot, vintage tchotchkes, Monday jazz nights, weekend rock. 4.8\u2605 (42 reviews).",
+    "blocks": []
+  }
+}

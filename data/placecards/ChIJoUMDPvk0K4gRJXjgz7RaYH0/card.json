@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJoUMDPvk0K4gRJXjgz7RaYH0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJoUMDPvk0K4gRJXjgz7RaYH0",
+    "name": "Paris Paris",
+    "city": "Toronto",
+    "address": "Ossington",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via starwinelist.com"
+  },
+  "narrative": {
+    "summary": "Recently relocated to larger space, bright and airy, extensive low-intervention and natural wines by glass/bottle - modern classic",
+    "blocks": []
+  }
+}

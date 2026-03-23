@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJf9Wrt2_a1IkRrHuIaQFuZbs",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJf9Wrt2_a1IkRrHuIaQFuZbs",
+    "name": "University of Toronto Scarborough (Andrews Building)",
+    "city": "Toronto",
+    "address": "Scarborough",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via archdaily.com"
+  },
+  "narrative": {
+    "summary": "John Andrews' 1964 brutalist masterpiece - one of Canada's most studied architectural works, surprisingly human in scale",
+    "blocks": []
+  }
+}

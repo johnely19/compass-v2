@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ_5FcgTY0K4gRCBLnsTyY_w4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ_5FcgTY0K4gRCBLnsTyY_w4",
+    "name": "Revue Cinema",
+    "city": "Toronto",
+    "address": "Roncesvalles",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via https://revuecinema.ca/",
+    "url": "https://revuecinema.ca/"
+  },
+  "narrative": {
+    "summary": "Heritage 1912 single-screen, community-run nonprofit since 2006. Best rep programming in Toronto—classics, cult, singalongs, burlesque nights. The soul of Toronto indie cinema.",
+    "blocks": []
+  }
+}

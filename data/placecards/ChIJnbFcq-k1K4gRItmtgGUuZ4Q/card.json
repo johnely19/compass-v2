@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJnbFcq-k1K4gRItmtgGUuZ4Q",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJnbFcq-k1K4gRItmtgGUuZ4Q",
+    "name": "Subtext Coffee Roasters",
+    "city": "Toronto",
+    "address": "Junction/Bloor West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Sprudge 2025"
+  },
+  "narrative": {
+    "summary": "Elite light roast specialty roaster, competition-level quality, cited as top Toronto roaster",
+    "blocks": []
+  }
+}

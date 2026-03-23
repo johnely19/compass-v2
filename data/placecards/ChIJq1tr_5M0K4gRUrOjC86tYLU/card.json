@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJq1tr_5M0K4gRUrOjC86tYLU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJq1tr_5M0K4gRUrOjC86tYLU",
+    "name": "Seekers Books",
+    "city": "Toronto",
+    "address": "The Annex (Bloor West)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces:details"
+  },
+  "narrative": {
+    "summary": "Operating since 1978—esoteric, spiritual, philosophy, counterculture. 4.8 rating, 634 reviews. Late hours (til 9pm daily) make it great for evening browsing.",
+    "blocks": []
+  }
+}

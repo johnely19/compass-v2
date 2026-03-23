@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJKbInLr_PKIgRhZELaOyRew4",
+  "built": "2026-03-10T15:37:29.088Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJKbInLr_PKIgRhZELaOyRew4",
+    "name": "Huron Shores Cottages",
+    "city": "Toronto",
+    "address": "76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada",
+    "type": "accommodation",
+    "website": "http://www.huronshorescottages.com/",
+    "rating": 5,
+    "user_rating_count": 2,
+    "location": "76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Huron Shores Cottages\n76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Huron Shores Cottages",
+        "body": "\ud83d\udccd Huron Shores Cottages\n76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nTwo family-friendly lakefront cottages in Bayfield - generational vacation destination, crystal-clear water, sandy beaches"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://www.huronshorescottages.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: http://www.huronshorescottages.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada\n\n\u2022 walking: 2 days 1 hour \u2022 219 km\n\u2022 transit: unavailable\n\u2022 driving: 2 hours 42 mins \u2022 223 km (traffic: 2 hours 35 mins)\n\u2022 bicycling: 12 hours 59 mins \u2022 245 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (2 hours 42 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "76999 Bluewater Hwy, Bayfield, ON N0M 1G0, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:46.167Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (2 hours 42 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 9693,
+        "durationText": "2 hours 42 mins",
+        "durationInTrafficSeconds": 9303,
+        "durationInTrafficText": "2 hours 35 mins",
+        "distanceMeters": 223419,
+        "distanceText": "223 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 178193,
+        "durationText": "2 days 1 hour",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 218688,
+        "distanceText": "219 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 46727,
+        "durationText": "12 hours 59 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 245268,
+        "distanceText": "245 km"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "No route found",
+        "googleStatus": "ZERO_RESULTS"
+      }
+    ]
+  }
+}

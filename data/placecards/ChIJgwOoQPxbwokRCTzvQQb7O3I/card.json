@@ -1,0 +1,100 @@
+{
+  "place_id": "ChIJgwOoQPxbwokRCTzvQQb7O3I",
+  "built": "2026-03-10T15:37:05.235Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJgwOoQPxbwokRCTzvQQb7O3I",
+    "name": "Featherweight",
+    "city": "NYC",
+    "address": "135 Graham Ave, Brooklyn, NY 11206, USA",
+    "type": "bar",
+    "phone": "(646) 257-0946",
+    "price_level": 2,
+    "rating": 4.6,
+    "user_rating_count": 153,
+    "location": "135 Graham Ave, Brooklyn, NY 11206, USA"
+  },
+  "narrative": {
+    "summary": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Featherweight",
+        "body": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nHidden Bushwick bar with unmarked entrance - local favorite for impressive craft cocktails, cozy atmosphere"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu link not publicly available in Google data."
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (153 reviews)\nPrice level: $$\nPhone: (646) 257-0946\nWebsite: n/a\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 135 Graham Ave, Brooklyn, NY 11206, USA\n\n• walking: 1 hour 14 mins • 3.3 mi\n• transit: 35 mins • 4.9 mi\n• driving: 19 mins • 3.5 mi (traffic: 20 mins)\n• bicycling: 24 mins • 3.7 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (19 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "135 Graham Ave, Brooklyn, NY 11206, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:16.584Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (19 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1154,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": 1193,
+        "durationInTrafficText": "20 mins",
+        "distanceMeters": 5706,
+        "distanceText": "3.5 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4424,
+        "durationText": "1 hour 14 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5291,
+        "distanceText": "3.3 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1445,
+        "durationText": "24 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6032,
+        "distanceText": "3.7 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2111,
+        "durationText": "35 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7818,
+        "distanceText": "4.9 mi"
+      }
+    ]
+  }
+}

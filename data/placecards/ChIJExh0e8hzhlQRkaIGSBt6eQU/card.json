@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJExh0e8hzhlQRkaIGSBt6eQU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJExh0e8hzhlQRkaIGSBt6eQU",
+    "name": "Grapes & Soda",
+    "city": "Vancouver",
+    "address": "South Granville",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "bc.vitis.ca",
+    "url": "https://bc.vitis.ca/where-to-drink-natural-wine-in-vancouver/"
+  },
+  "narrative": {
+    "summary": "Vancouver's definitive natural wine bar. Intimate, tiny, exceptional natural wine list — BC favourites like Bella and Thorn & Burrow, grower Champagne, Loire Chenin Blancs. Farm-to-table bites. Innovative cocktails. Next to The Acorn restaurant. John's exact vibe. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

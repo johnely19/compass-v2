@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJL0CMPZY0K4gRxMbYYS74cbw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJL0CMPZY0K4gRxMbYYS74cbw",
+    "name": "TSA Lecture: The Wonderful World of Design",
+    "city": "Toronto",
+    "address": "Annex (750 Spadina Ave, Al Green Theatre)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "torontosocietyofarchitects.ca"
+  },
+  "narrative": {
+    "summary": "Toronto Society of Architects 6-week lecture series starting April 14. Tuesday mornings. Architecture + design talks at the Miles Nadal JCC. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

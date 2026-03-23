@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJfcZzi1TN1IkRA2AiXN-6QPc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJfcZzi1TN1IkRA2AiXN-6QPc",
+    "name": "Pii Nong Thai (Bayview)",
+    "city": "Toronto",
+    "address": "Bayview / Leaside (1677 Bayview Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via tastetoronto.substack.com"
+  },
+  "narrative": {
+    "summary": "Chef Chatchalit Chuayruk transformed the original Pii Nong into something dramatically more ambitious — ancient Thai recipes revived with modern technique. Dishes you've never seen on a Thai menu because they haven't been on one in decades. 4.5★ (1020 reviews).",
+    "blocks": []
+  }
+}

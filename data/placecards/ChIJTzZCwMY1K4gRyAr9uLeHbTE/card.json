@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJTzZCwMY1K4gRyAr9uLeHbTE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJTzZCwMY1K4gRyAr9uLeHbTE",
+    "name": "Proper",
+    "city": "Toronto",
+    "address": "Roncesvalles",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via foodism.ca",
+    "url": "https://foodism.ca/eat-drink/bars-restaurants/best-new-italian-restaurants-toronto/"
+  },
+  "narrative": {
+    "summary": "Italian-American red-sauce joint from Giulietta alum in former Cubana space, from-scratch pasta",
+    "blocks": []
+  }
+}

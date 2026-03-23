@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU",
+  "identity": {
+    "name": "Rolo's",
+    "city": "NYC",
+    "address": "Ridgewood (8-53 Onderdonk Ave)",
+    "type": "restaurant",
+    "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU"
+  },
+  "discovery": {
+    "text": "NYC Tourism Local Guide",
+    "url": "https://www.nyctourism.com/articles/on-my-way-nyc-yara-herrera-local-guide-ridgewood/"
+  },
+  "narrative": {
+    "summary": "The anchor restaurant of Ridgewood's food scene. Mediterranean-leaning, seasonal, 4.5★ (1789 reviews). TimeOut and every neighborhood guide names it as the must-eat in the area. Literally in Dessa's neighborhood. $$. Strong Williamsburg–Bushwick–Ridgewood corridor fit with the design-forward food/art energy John tracks.",
+    "blocks": []
+  }
+}

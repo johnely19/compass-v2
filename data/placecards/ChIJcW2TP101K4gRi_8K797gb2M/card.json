@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJcW2TP101K4gRi_8K797gb2M",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJcW2TP101K4gRi_8K797gb2M",
+    "name": "Boogie",
+    "city": "Toronto",
+    "address": "West Queen West (Queen & Gladstone)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.boogieonqueen.com/",
+    "url": "https://www.boogieonqueen.com/"
+  },
+  "narrative": {
+    "summary": "Dedicated listening bar—music-first room, late-night hang; feels like the “go for the system” spot.",
+    "blocks": []
+  }
+}

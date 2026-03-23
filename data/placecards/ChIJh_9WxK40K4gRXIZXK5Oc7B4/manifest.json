@@ -1,0 +1,85 @@
+{
+  "place_id": "ChIJh_9WxK40K4gRXIZXK5Oc7B4",
+  "images": [
+    {
+      "id": "gmap-1",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_1.jpg",
+      "category": "interior_vibe",
+      "caption": "",
+      "order": 1,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-2",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_10.jpg",
+      "category": "interior_detail",
+      "caption": "",
+      "order": 2,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-3",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_2.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 3,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-4",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_3.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 4,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-5",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_4.jpg",
+      "category": "drinks",
+      "caption": "",
+      "order": 5,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-6",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_5.jpg",
+      "category": "interior_vibe",
+      "caption": "",
+      "order": 6,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-7",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_6.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 7,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-8",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_7.jpg",
+      "category": "outside",
+      "caption": "",
+      "order": 8,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-9",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_8.jpg",
+      "category": "interior_detail",
+      "caption": "",
+      "order": 9,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-10",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJh_9WxK40K4gRXIZXK5Oc7B4/photo_9.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 10,
+      "source": "google_maps"
+    }
+  ]
+}

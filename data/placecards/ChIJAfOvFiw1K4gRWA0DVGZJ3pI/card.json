@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJAfOvFiw1K4gRWA0DVGZJ3pI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJAfOvFiw1K4gRWA0DVGZJ3pI",
+    "name": "Makann",
+    "city": "Toronto",
+    "address": "Annex / Bathurst (866 Bathurst St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "Brand-new breakfast sandwich shop, open 2 weeks, already has evangelical fanbase and lines. Middle Eastern-inflected sandwiches, just steps from Bathurst station. 4.8★ (60 reviews). Tue-Sun 9am-3pm. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

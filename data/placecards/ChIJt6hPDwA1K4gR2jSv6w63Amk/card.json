@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJt6hPDwA1K4gR2jSv6w63Amk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJt6hPDwA1K4gR2jSv6w63Amk",
+    "name": "Brasserie Côte",
+    "city": "Toronto",
+    "address": "Annex (Bloor West)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via blogto.com"
+  },
+  "narrative": {
+    "summary": "Second location of cult-favorite Côte de Boeuf — French bistro, steak frites, Chef Teo Paul. Soft-opened March 6. 5.0 rating.",
+    "blocks": []
+  }
+}

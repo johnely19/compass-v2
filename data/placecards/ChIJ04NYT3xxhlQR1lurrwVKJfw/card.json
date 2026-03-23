@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ04NYT3xxhlQR1lurrwVKJfw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ04NYT3xxhlQR1lurrwVKJfw",
+    "name": "Frankie's Jazz Club",
+    "city": "Vancouver",
+    "address": "Downtown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "vancouverguardian.com",
+    "url": "https://vancouverguardian.com/best-live-jazz-venues-in-vancouver/"
+  },
+  "narrative": {
+    "summary": "Vancouver's home for live jazz. 80-100 seats, Steinway piano, full-service menu. Check April 10-11 lineup. Coastal Jazz connection. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

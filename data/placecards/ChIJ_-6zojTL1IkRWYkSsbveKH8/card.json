@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ_-6zojTL1IkRWYkSsbveKH8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ_-6zojTL1IkRWYkSsbveKH8",
+    "name": "Herbie Hancock at Massey Hall",
+    "city": "Toronto",
+    "address": "Downtown / Victoria St",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via broadwayworld.com"
+  },
+  "narrative": {
+    "summary": "Jazz legend kicks off 2026 North American Summer Tour at Massey Hall on July 26. Tickets on sale now. The venue alone is worth it \u2014 recently renovated historic hall.",
+    "blocks": []
+  }
+}

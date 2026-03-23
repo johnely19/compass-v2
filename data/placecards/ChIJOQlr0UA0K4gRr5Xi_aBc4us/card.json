@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJOQlr0UA0K4gRr5Xi_aBc4us",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJOQlr0UA0K4gRr5Xi_aBc4us",
+    "name": "Franz Kaka",
+    "city": "Toronto",
+    "address": "Dupont / Symington",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via http://www.franzkaka.com/",
+    "url": "http://www.franzkaka.com/"
+  },
+  "narrative": {
+    "summary": "Small, sharp contemporary space—great for a tight, focused gallery stop.",
+    "blocks": []
+  }
+}

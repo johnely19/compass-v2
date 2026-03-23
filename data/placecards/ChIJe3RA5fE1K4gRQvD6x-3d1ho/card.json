@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJe3RA5fE1K4gRQvD6x-3d1ho",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJe3RA5fE1K4gRQvD6x-3d1ho",
+    "name": "Petite Bouchée Patisserie",
+    "city": "Toronto",
+    "address": "Junction / Sousa Mendes",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Yelp"
+  },
+  "narrative": {
+    "summary": "Exceptional 4.9★ rating; French pastry; off-the-beaten-path location adds discovery appeal.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJI07DGgA1K4gRkSIMiNjWUW8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJI07DGgA1K4gRkSIMiNjWUW8",
+    "name": "The Matcha Tokyo",
+    "city": "Toronto",
+    "address": "Ossington (139 Ossington Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Tokyo's cult organic matcha cafe — first North American location. Opened on Ossington strip. Ceremonial-grade matcha, minimal design, Japanese precision. No rating yet (brand new). Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

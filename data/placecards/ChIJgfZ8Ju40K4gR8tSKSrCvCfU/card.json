@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJgfZ8Ju40K4gR8tSKSrCvCfU",
+  "built": "2026-03-10T12:59:23.189Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJgfZ8Ju40K4gR8tSKSrCvCfU",
+    "name": "Sotto Voce Wine & Pasta Bar",
+    "city": "Toronto",
+    "address": "595 College St, Toronto, ON M6G 1A9, Canada",
+    "type": "bar",
+    "phone": "(416) 536-4564",
+    "website": "http://sottovoce.ca/",
+    "location": "595 College St, Toronto, ON M6G 1A9, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Sotto Voce Wine & Pasta Bar\n595 College St, Toronto, ON M6G 1A9, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Sotto Voce Wine & Pasta Bar",
+        "body": "📍 Sotto Voce Wine & Pasta Bar\n595 College St, Toronto, ON M6G 1A9, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (399 reviews)\nPhone: (416) 536-4564\nWebsite: http://sottovoce.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 595 College St, Toronto, ON M6G 1A9, Canada\n\n• walking: 1 hour 14 mins • 5.4 km\n• transit: 42 mins • 7.2 km\n• driving: 18 mins • 5.6 km (traffic: 14 mins)\n• bicycling: 19 mins • 5.7 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (18 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "595 College St, Toronto, ON M6G 1A9, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:15.441Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (18 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1093,
+        "durationText": "18 mins",
+        "durationInTrafficSeconds": 831,
+        "durationInTrafficText": "14 mins",
+        "distanceMeters": 5637,
+        "distanceText": "5.6 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4431,
+        "durationText": "1 hour 14 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5443,
+        "distanceText": "5.4 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1162,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5708,
+        "distanceText": "5.7 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2511,
+        "durationText": "42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7249,
+        "distanceText": "7.2 km"
+      }
+    ]
+  }
+}

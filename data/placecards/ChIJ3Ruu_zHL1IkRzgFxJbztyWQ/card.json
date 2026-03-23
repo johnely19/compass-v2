@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ3Ruu_zHL1IkRzgFxJbztyWQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ3Ruu_zHL1IkRzgFxJbztyWQ",
+    "name": "The Reservoir Lounge",
+    "city": "Toronto",
+    "address": "St. Lawrence / Wellington (52 Wellington St E)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via reservoirlounge.com"
+  },
+  "narrative": {
+    "summary": "Basement speakeasy near Flatiron. Swing-jazz 5 nights a week. Where Bublé played before fame. The vibe is real — dark, intimate, the musicians are right there. 4.5★ (1391 reviews). $$",
+    "blocks": []
+  }
+}

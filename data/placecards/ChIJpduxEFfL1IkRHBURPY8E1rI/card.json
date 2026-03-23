@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJpduxEFfL1IkRHBURPY8E1rI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJpduxEFfL1IkRHBURPY8E1rI",
+    "name": "Limberlost Place",
+    "city": "Toronto",
+    "address": "Waterfront (Queens Quay)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via blogto.com/real-estate"
+  },
+  "narrative": {
+    "summary": "New 2025—tallest mass timber public assembly building in North America. Moriyama & Teshima. Net-zero carbon, wood-forward aesthetic. Visitable as George Brown campus.",
+    "blocks": []
+  }
+}

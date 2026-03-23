@@ -1,0 +1,98 @@
+{
+  "place_id": "ChIJZ9KKZYpfwokRfZSERIr8Peo",
+  "built": "2026-03-10T15:36:32.440Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJZ9KKZYpfwokRfZSERIr8Peo",
+    "name": "The Bushwick Collective",
+    "city": "NYC",
+    "address": "427 Troutman St, Brooklyn, NY 11237, USA",
+    "type": "gallery",
+    "rating": 4.7,
+    "user_rating_count": 231,
+    "location": "427 Troutman St, Brooklyn, NY 11237, USA"
+  },
+  "narrative": {
+    "summary": "📍 The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "The Bushwick Collective",
+        "body": "📍 The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNYC's premier street art hub - founded 2011 by Joe Ficalora, features works by artists from around the world, free and open air"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu link not publicly available in Google data."
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (231 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: n/a\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 427 Troutman St, Brooklyn, NY 11237, USA\n\n• walking: 1 hour 42 mins • 4.5 mi\n• transit: 36 mins • 5.8 mi\n• driving: 25 mins • 5.9 mi (traffic: 26 mins)\n• bicycling: 35 mins • 5.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (25 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "427 Troutman St, Brooklyn, NY 11237, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:08.349Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (25 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1493,
+        "durationText": "25 mins",
+        "durationInTrafficSeconds": 1535,
+        "durationInTrafficText": "26 mins",
+        "distanceMeters": 9425,
+        "distanceText": "5.9 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 6107,
+        "durationText": "1 hour 42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7307,
+        "distanceText": "4.5 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2088,
+        "durationText": "35 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8663,
+        "distanceText": "5.4 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2188,
+        "durationText": "36 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 9386,
+        "distanceText": "5.8 mi"
+      }
+    ]
+  }
+}

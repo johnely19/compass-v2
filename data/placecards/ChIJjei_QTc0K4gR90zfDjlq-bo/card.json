@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJjei_QTc0K4gR90zfDjlq-bo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJjei_QTc0K4gR90zfDjlq-bo",
+    "name": "Hugh's Room Live",
+    "city": "Toronto",
+    "address": "296 Broadview Ave, Toronto, ON M4M 2G7, Canada",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Google Places"
+  },
+  "narrative": {
+    "summary": "Live jazz in a characterful room; reliable drop-in programming. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

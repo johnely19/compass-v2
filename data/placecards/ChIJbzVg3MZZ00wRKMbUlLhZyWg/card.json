@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJbzVg3MZZ00wRKMbUlLhZyWg",
+  "built": "2026-03-11T23:06:04.611Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJbzVg3MZZ00wRKMbUlLhZyWg",
+    "name": "CottageLINK Rental Management",
+    "city": "Toronto",
+    "address": "20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada",
+    "type": "accommodation",
+    "phone": "(866) 323-6698",
+    "website": "https://www.clrm.ca/",
+    "rating": 4.8,
+    "user_rating_count": 176,
+    "location": "20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd CottageLINK Rental Management\n20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Cottagelink Rental Management",
+        "body": "\ud83d\udccd CottageLINK Rental Management\n20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nOperational Ontario cottage rental management firm; useful for July availability/cancellation monitoring."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.8 (176 reviews)\nPrice level: n/a\nPhone: (866) 323-6698\nWebsite: https://www.clrm.ca/\n\nHours:\nMonday: Open 24 hours\nTuesday: Open 24 hours\nWednesday: Open 24 hours\nThursday: Open 24 hours\nFriday: Open 24 hours\nSaturday: Open 24 hours\nSunday: Open 24 hours"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada\n\n\u2022 walking: 57 mins \u2022 4.3 km\n\u2022 transit: 16 mins \u2022 4.3 km\n\u2022 driving: 14 mins \u2022 5.5 km (traffic: 11 mins)\n\u2022 bicycling: 17 mins \u2022 4.9 km\n\nBest modality: TRANSIT \u2b50\nWhy: Transit is close to driving time (16 mins vs 14 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "20 Richmond St E Suite 600, Toronto, ON M5C 2R9, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:12.190Z",
+    "recommended": {
+      "mode": "transit",
+      "reason": "Transit is close to driving time (16 mins vs 14 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 854,
+        "durationText": "14 mins",
+        "durationInTrafficSeconds": 667,
+        "durationInTrafficText": "11 mins",
+        "distanceMeters": 5460,
+        "distanceText": "5.5 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3432,
+        "durationText": "57 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4284,
+        "distanceText": "4.3 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1036,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4939,
+        "distanceText": "4.9 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 942,
+        "durationText": "16 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4338,
+        "distanceText": "4.3 km"
+      }
+    ]
+  }
+}

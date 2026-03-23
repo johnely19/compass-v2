@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ02U1DJU0K4gRSd0V3GEKc2E",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ02U1DJU0K4gRSd0V3GEKc2E",
+    "name": "Things Japanese",
+    "city": "Toronto",
+    "address": "Harbord Village / South Annex",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "https://www.thingsjapanese.ca/",
+    "url": "https://www.thingsjapanese.ca/"
+  },
+  "narrative": {
+    "summary": "Kimono, ceramics, calligraphy supplies, ikebana, green tea, incense—old-school Japanese gift shop with wabi-sabi sensibility. 4.6 stars. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

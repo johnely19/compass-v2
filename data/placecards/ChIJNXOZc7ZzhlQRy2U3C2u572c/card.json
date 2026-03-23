@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJNXOZc7ZzhlQRy2U3C2u572c",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJNXOZc7ZzhlQRy2U3C2u572c",
+    "name": "Fable Kitchen",
+    "city": "Vancouver",
+    "address": "Kitsilano",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Farm-to-table Kitsilano gem right next door to Maenam. Local, seasonal BC ingredients. Rustic-cozy atmosphere. Great brunch option for Saturday morning. Rating 4.4/5 (1,478 reviews). Good casual-but-quality pick.",
+    "url": "https://www.reddit.com/r/NiceVancouver/comments/1fe9eli/best_restaurants_in_vancouver/"
+  },
+  "narrative": {
+    "summary": "Farm-to-table Kitsilano gem right next door to Maenam. Local, seasonal BC ingredients. Rustic-cozy atmosphere. Great brunch option for Saturday morning. Rating 4.4/5 (1,478 reviews). Good casual-but-quality pick.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
+      "caption": "Source image"
+    }
+  ]
+}

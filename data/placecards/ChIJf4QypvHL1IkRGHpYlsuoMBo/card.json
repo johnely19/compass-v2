@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJf4QypvHL1IkRGHpYlsuoMBo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJf4QypvHL1IkRGHpYlsuoMBo",
+    "name": "Montauk Sofa",
+    "city": "Toronto",
+    "address": "King East Design District",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via canadianinteriors.com"
+  },
+  "narrative": {
+    "summary": "New showroom in design corridor, Canadian-made sofas with clean Scandinavian-inspired lines",
+    "blocks": []
+  }
+}

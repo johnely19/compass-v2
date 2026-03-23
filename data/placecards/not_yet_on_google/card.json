@@ -1,0 +1,18 @@
+{
+  "place_id": "not_yet_on_google",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "not_yet_on_google",
+    "name": "Pasta Privato",
+    "city": "Toronto",
+    "address": "St. Lawrence / Old Town",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "Hidden 30-seat pasta bar behind Notte Ristorante, 8-course tasting menu $125, Chef Angeloni, opens March 27. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

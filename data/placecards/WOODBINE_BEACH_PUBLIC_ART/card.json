@@ -1,0 +1,18 @@
+{
+  "place_id": "WOODBINE_BEACH_PUBLIC_ART",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "WOODBINE_BEACH_PUBLIC_ART",
+    "name": "Winter Stations 2026: Mirage",
+    "city": "Toronto",
+    "address": "Woodbine Beach (The Beaches)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via winterstations.com"
+  },
+  "narrative": {
+    "summary": "5 interactive public art installations exploring illusion, perception, and AI — international design competition, 12th edition. Free, outdoor. CLOSES MARCH 30. Dezeen + Canadian Architect featured.",
+    "blocks": []
+  }
+}

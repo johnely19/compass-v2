@@ -1,0 +1,18 @@
+{
+  "place_id": "not_yet_on_google_maps",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "not_yet_on_google_maps",
+    "name": "Pasta Privato",
+    "city": "Toronto",
+    "address": "King West (next to Notte)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "blogto.com/eat_drink/2026/03/pasta-privato-toronto/"
+  },
+  "narrative": {
+    "summary": "Hidden 30-seat pasta bar from Yannick Bigourdan & Chef Angeloni, 8-course tasting $125, opens Mar 27. Intimate, modern Italian. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

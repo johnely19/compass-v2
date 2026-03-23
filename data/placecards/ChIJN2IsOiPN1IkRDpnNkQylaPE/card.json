@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJN2IsOiPN1IkRDpnNkQylaPE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJN2IsOiPN1IkRDpnNkQylaPE",
+    "name": "hanamaru market and bento",
+    "city": "Toronto",
+    "address": "Pape / East York",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces:details"
+  },
+  "narrative": {
+    "summary": "Tiny Japanese market + bento counter with 4.9 rating; neighborhood gem feel, real-deal bentos and onigiri.",
+    "blocks": []
+  }
+}

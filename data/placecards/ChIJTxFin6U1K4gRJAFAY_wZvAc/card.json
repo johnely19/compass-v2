@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJTxFin6U1K4gRJAFAY_wZvAc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJTxFin6U1K4gRJAFAY_wZvAc",
+    "name": "Suite 115",
+    "city": "Toronto",
+    "address": "Kensington / College",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://bartenderatlas.com/features/bars/where-were-drinking-in-toronto-the-new-bars/",
+    "url": "https://bartenderatlas.com/features/bars/where-were-drinking-in-toronto-the-new-bars/"
+  },
+  "narrative": {
+    "summary": "Super-considered service/iteration culture; high-minded list but staff explains it well.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJbfn6dAA1K4gRL8pvycTYVck",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJbfn6dAA1K4gRL8pvycTYVck",
+    "name": "Inabstracto",
+    "city": "Toronto",
+    "address": "Little Italy / Crawford St",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via inabstracto.com"
+  },
+  "narrative": {
+    "summary": "MCM + contemporary art gallery hybrid; 19 years in, perfect 5.0 rating—design-nerd destination.",
+    "blocks": []
+  }
+}

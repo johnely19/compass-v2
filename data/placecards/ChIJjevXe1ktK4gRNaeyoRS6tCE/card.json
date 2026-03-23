@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJjevXe1ktK4gRNaeyoRS6tCE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJjevXe1ktK4gRNaeyoRS6tCE",
+    "name": "Another Land Coffee",
+    "city": "Toronto",
+    "address": "North York (Yonge)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Harvey Kalles hidden gems guide"
+  },
+  "narrative": {
+    "summary": "Second-floor balcony cafe, ethically sourced beans, baked goods, hidden gem vibe",
+    "blocks": []
+  }
+}

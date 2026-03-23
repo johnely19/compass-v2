@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJt6xW1_E0K4gRy1QoqXwJhHE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJt6xW1_E0K4gRy1QoqXwJhHE",
+    "name": "The Royal",
+    "city": "Toronto",
+    "address": "Little Italy (College St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via thestar.com Feb 2026"
+  },
+  "narrative": {
+    "summary": "Larger 400-seat venue with eclectic programming—genre nights, premieres, cult classics. Good backup when Revue is sold out. Strong 4.6 rating.",
+    "blocks": []
+  }
+}

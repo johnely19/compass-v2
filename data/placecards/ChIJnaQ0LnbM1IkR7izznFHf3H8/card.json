@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJnaQ0LnbM1IkR7izznFHf3H8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJnaQ0LnbM1IkR7izznFHf3H8",
+    "name": "Lake Inez",
+    "city": "Toronto",
+    "address": "Leslieville (1471 Gerrard St E)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.reddit.com/r/FoodToronto/comments/1rif55j/restaurants_that_are_midbudget_for_date_night_but/",
+    "url": "https://www.reddit.com/r/FoodToronto/comments/1rif55j/restaurants_that_are_midbudget_for_date_night_but/"
+  },
+  "narrative": {
+    "summary": "Neighborhood gem that punches way above its weight. Intimate, affordable, ingredient-driven. Reddit's FoodToronto crowd rates it as a top date-night pick that's 'not mid.' 4.6★ (1324 reviews). $$",
+    "blocks": []
+  }
+}

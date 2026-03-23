@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ__JvS481K4gR6UW8bV20D0A",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ__JvS481K4gR6UW8bV20D0A",
+    "name": "Sakai Bar",
+    "city": "Toronto",
+    "address": "Dundas West (near Dufferin)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "https://www.instagram.com/sakaibarto/",
+    "url": "https://www.instagram.com/sakaibarto/"
+  },
+  "narrative": {
+    "summary": "Izakaya + sake bar + bottle shop hybrid on Dundas W. Intimate, 4.4 stars, Thu-Sat evenings only. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

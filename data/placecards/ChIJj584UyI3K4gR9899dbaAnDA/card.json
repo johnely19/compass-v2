@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJj584UyI3K4gR9899dbaAnDA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJj584UyI3K4gR9899dbaAnDA",
+    "name": "NeuLokal",
+    "city": "Toronto",
+    "address": "The Junction (Dundas West)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://jazzintoronto.ca/",
+    "url": "https://jazzintoronto.ca/"
+  },
+  "narrative": {
+    "summary": "Bar/restaurant that frequently hosts jazz/sets; good “music + dinner” anchor west end.",
+    "blocks": []
+  }
+}

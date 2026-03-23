@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJox25Z_7L1IkRACaFebf4rE0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJox25Z_7L1IkRACaFebf4rE0",
+    "name": "Petite Thuet & Co.",
+    "city": "Toronto",
+    "address": "Leslieville (181A Carlaw Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via stephaniedickison.com"
+  },
+  "narrative": {
+    "summary": "Marc Thuet's bakery-cafe relocated to new Leslieville spot from 235 Carlaw. French-trained master baker. Croissants, bread, sandwiches, prepared foods. 4.7★ (20 reviews).",
+    "blocks": []
+  }
+}

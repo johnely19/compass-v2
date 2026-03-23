@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJAzlRJac1K4gRl5k1WxEhZis",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJAzlRJac1K4gRl5k1WxEhZis",
+    "name": "C Suite",
+    "city": "Toronto",
+    "address": "Yorkville (Cumberland St)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via yelp speakeasy list"
+  },
+  "narrative": {
+    "summary": "Upscale Yorkville speakeasy with serious cocktails. 4.7 rating, 318 reviews. Open til 2am Sat nights.",
+    "blocks": []
+  }
+}

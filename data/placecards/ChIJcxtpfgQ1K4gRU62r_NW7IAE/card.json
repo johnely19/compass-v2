@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJcxtpfgQ1K4gRU62r_NW7IAE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJcxtpfgQ1K4gRU62r_NW7IAE",
+    "name": "Donna's",
+    "city": "Toronto",
+    "address": "Wallace Emerson / Lansdowne (827 Lansdowne Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via tastetoronto.substack.com"
+  },
+  "narrative": {
+    "summary": "Former Momofuku Shoto crew. All-day spot with seasonal shared plates and maybe the best sandwich program in the west end. Sunday roast has become the neighbourhood's open secret. 4.7★ (622 reviews).",
+    "blocks": []
+  }
+}

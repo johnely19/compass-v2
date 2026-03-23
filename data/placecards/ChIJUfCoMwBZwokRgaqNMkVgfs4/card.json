@@ -1,0 +1,102 @@
+{
+  "place_id": "ChIJUfCoMwBZwokRgaqNMkVgfs4",
+  "built": "2026-02-25T09:05:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJUfCoMwBZwokRgaqNMkVgfs4",
+    "name": "Border Town",
+    "city": "Brooklyn",
+    "address": "189 Nassau Ave, Brooklyn, NY 11222",
+    "website": "https://bordertown.co",
+    "price_level": 2,
+    "location": "189 Nassau Ave, Brooklyn, NY 11222"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNassau Ave at Humboldt St — corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNassau Ave at Humboldt St — corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nBig, bright, family-friendly. The tortilla station is right at the counter — watch Jorge roll them to order."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n$15 cocktails — made with Mexican agave spirits, balanced for the food.\n\n🍸 Signatures:\n• Desert Negroni — Cardenxe sotol, botanical, smoky\n• Picafresa — strawberry-tequila-mezcal, spicy-sweet\n• Coco Carajillo — topped with coconut cream, dark chocolate\n• Cadillac Margarita\n\n🍺 Caguamas: 32oz Carta Blanca or Tecate wrapped in Mexican newspaper"
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗧𝗮𝗰𝗼𝘀 (flour tortillas made with Sonoran wheat + lard) $5-7\n• Carne con Chile — $7 ⭐\n• Frijoles y Queso — $5 ⭐\n• Pork Chicharrón — $7, with pickled onion\n• Taco of the Day — rotating\n\n𝗣𝗹𝗮𝘁𝗲𝘀 $17-24\n• Frijoles con Veneno — $22, refried beans with carne con chile, tortillas ⭐\n• Costillas en Salsa Verde — pork ribs, zesty sauce, beans, rice, tortillas\n• Mushroom Al Pastor Gringa — $22, cheesy, folded, piña-habanero salsa ⭐\n• Tacos de Nada — $18, potato corn tortillas, tomato broth, queso fresco\n\n𝗦𝗺𝗮𝗹𝗹 𝗣𝗹𝗮𝘁𝗲𝘀\n• Guacamole Norteño — $17, with pork belly chicharrónnes + Oaxacan tlayuda\n\nNote: Flour from Molino La Fama in Hermosillo, Sonora — the real thing. Breakfast tacos coming soon (gas pending)."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nDinner for 2: $70-90 (with drinks)\n\nReservations: Walk-in only — no reservations, neighborhood-first\n\n🌐 bordertown.co\n📸 @bordertownbk\n\n𝗛𝗢𝗨𝗥𝗦\nWed–Thu: 5–10pm\nFri: 5pm–midnight\nSat: 3pm–midnight (bar opens 3pm)\nSun: 3–9pm (bar opens 3pm)\nMon–Tue: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early weeknight (5–6pm Wed/Thu): Beat the crowd, same tortillas\n• Weekend afternoon (3pm): Start with drinks at the bar, stay for dinner\n• Avoid: Friday/Saturday dinner rush — this place packs out"
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 189 Nassau Ave, Brooklyn, NY 11222\n\n• walking: 1 hour 18 mins • 3.5 mi\n• transit: 33 mins • 4.8 mi\n• driving: 18 mins • 4.2 mi (traffic: 18 mins)\n• bicycling: 25 mins • 4.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (18 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "189 Nassau Ave, Brooklyn, NY 11222",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:55.462Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (18 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1072,
+        "durationText": "18 mins",
+        "durationInTrafficSeconds": 1107,
+        "durationInTrafficText": "18 mins",
+        "distanceMeters": 6776,
+        "distanceText": "4.2 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4691,
+        "durationText": "1 hour 18 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5616,
+        "distanceText": "3.5 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1516,
+        "durationText": "25 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6560,
+        "distanceText": "4.1 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1998,
+        "durationText": "33 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7750,
+        "distanceText": "4.8 mi"
+      }
+    ]
+  }
+}

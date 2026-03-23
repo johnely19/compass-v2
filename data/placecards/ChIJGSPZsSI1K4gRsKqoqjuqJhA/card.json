@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJGSPZsSI1K4gRsKqoqjuqJhA",
+  "built": "2026-03-10T15:36:54.586Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJGSPZsSI1K4gRsKqoqjuqJhA",
+    "name": "Bar Sugo",
+    "city": "Toronto",
+    "address": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
+    "type": "restaurant",
+    "phone": "(416) 792-1279",
+    "website": "https://bar.sugotoronto.com/",
+    "price_level": 2,
+    "rating": 4.8,
+    "user_rating_count": 656,
+    "location": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Bar Sugo",
+        "body": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLocal favorite for pizza - Reddit-recommended, not touristy"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://bar.sugotoronto.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.8 (656 reviews)\nPrice level: $$\nPhone: (416) 792-1279\nWebsite: https://bar.sugotoronto.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1279 Bloor St W, Toronto, ON M6H 1N7, Canada\n\n• walking: 1 hour 29 mins • 6.5 km\n• transit: 44 mins • 7.3 km\n• driving: 21 mins • 6.9 km (traffic: 14 mins)\n• bicycling: 23 mins • 6.8 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (21 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:35.714Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (21 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1242,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": 831,
+        "durationInTrafficText": "14 mins",
+        "distanceMeters": 6857,
+        "distanceText": "6.9 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5353,
+        "durationText": "1 hour 29 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6503,
+        "distanceText": "6.5 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1358,
+        "durationText": "23 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6832,
+        "distanceText": "6.8 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2660,
+        "durationText": "44 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7252,
+        "distanceText": "7.3 km"
+      }
+    ]
+  }
+}

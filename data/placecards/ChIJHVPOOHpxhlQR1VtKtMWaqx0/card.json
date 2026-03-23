@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJHVPOOHpxhlQR1VtKtMWaqx0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJHVPOOHpxhlQR1VtKtMWaqx0",
+    "name": "Skwachàys Lodge",
+    "city": "Vancouver",
+    "address": "31 W Pender St, Vancouver, BC V6B 6N9",
+    "type": "hotel"
+  },
+  "discovery": {
+    "text": "Canada's first Indigenous arts hotel. 18 one-of-a-kind guest suites, each designed by a different Indigenous artist. Street-level Indigenous art gallery. 40-foot totem pole in lobby. Supports Indigenous artist residencies. Maximum character — every room tells a different story. From $162 CAD/night. Rating 4.5/5 (413 reviews). Walking distance to Gastown, Chinatown, Railtown. The most unique hotel option — nothing else like it.",
+    "url": "https://www.kayak.com/Vancouver-Hotels-Skwachays-Lodge.473663.ksp"
+  },
+  "narrative": {
+    "summary": "Canada's first Indigenous arts hotel. 18 one-of-a-kind guest suites, each designed by a different Indigenous artist. Street-level Indigenous art gallery. 40-foot totem pole in lobby. Supports Indigenous artist residencies. Maximum character — every room tells a different story. From $162 CAD/night. Rating 4.5/5 (413 reviews). Walking distance to Gastown, Chinatown, Railtown. The most unique hotel option — nothing else like it.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "http://static1.squarespace.com/static/662aebb21a258f414152d33a/t/663526410e07bc1185a69cd0/1714759233539/Logo+-+colour%404x.png?format=1500w",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "http://static1.squarespace.com/static/662aebb21a258f414152d33a/t/663526410e07bc1185a69cd0/1714759233539/Logo+-+colour%404x.png?format=1500w",
+      "caption": "Source image"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJp27JPgDL1IkRXvGWKA4kkNs",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJp27JPgDL1IkRXvGWKA4kkNs",
+    "name": "Bar Etc.",
+    "city": "Toronto",
+    "address": "Leslieville / Gerrard East (1036 Gerrard St E)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via blogto.com"
+  },
+  "narrative": {
+    "summary": "New tropical-leaning cocktail bar from industry heavyweights. Just opened 2026. Intimate, design-forward. 5.0★ (6 reviews — brand new). Cocktail-first, stylish.",
+    "blocks": []
+  }
+}

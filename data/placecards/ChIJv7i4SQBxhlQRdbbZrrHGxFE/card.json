@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJv7i4SQBxhlQRdbbZrrHGxFE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJv7i4SQBxhlQRdbbZrrHGxFE",
+    "name": "Bar Susu",
+    "city": "Vancouver",
+    "address": "Mount Pleasant",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "destinationvancouver.com",
+    "url": "https://www.destinationvancouver.com/inspirations/food-and-drink/where-to-go-for-a-well-crafted-cocktail-in-vancouver"
+  },
+  "narrative": {
+    "summary": "From the Published on Main team. Natural wine + small plates. Whimsical, buzzy. Local ingredients made revelatory. Always something interesting to drink. If you're at Published on Main for dinner, this is pre/post-dinner drinks. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

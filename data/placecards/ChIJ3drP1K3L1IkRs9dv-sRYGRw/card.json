@@ -1,0 +1,104 @@
+{
+  "place_id": "ChIJ3drP1K3L1IkRs9dv-sRYGRw",
+  "built": "2026-02-26",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJ3drP1K3L1IkRs9dv-sRYGRw",
+    "name": "Notte Ristorante",
+    "city": "Toronto",
+    "address": "9 Church St, Toronto, ON M5E 1M2",
+    "phone": "(647) 349-7297",
+    "website": "https://www.notteristorante.ca/",
+    "price_level": 3,
+    "rating": 4.5,
+    "location": "9 Church St, Toronto, ON M5E 1M2"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nChurch & Front — The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nChurch & Front — The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nFresh paint, new wallpaper and art — the rebrand brought visual energy while keeping the warmth. The salumi bar now anchors the room, where chef Angeloni slices and chats with guests. As evening deepens, lights drop and music picks up."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🧀 Salumi Bar (Mix & match small plates)\n• Finocchiona\n• Nonna's pickled tomatoes\n• Chicken liver mousse with Treviso jam ⭐\n• Assorted assagini (small bites)\n\n🍕 Roman-Style Pizza (72hr fermented, 5 flours)\n• Crazy Calabrese — $24 ⭐\n• Margherita\n• Seasonal varieties\n\n🍝 Fresh Pasta (Made in-house daily)\n• Spaghetti Allo Scoglio — $26\n• Lobster Ravioli — fresh, not fishy ⭐\n• Seasonal pasta rotations\n\n🥩 Large Plates\n• 12oz Bone-in Veal Parm — panko crust, 40-clove tomato sauce, fresh mozz — $56 ⭐\n• After 9pm: 28oz Bistecca Fiorentina — $99 (Social Club) / $160 (regular)\n\nNote: Everything made in-house or locally sourced. Chef Angeloni is in the kitchen nightly."
+      },
+      {
+        "id": "block-4",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍷 Happy Hours (4-6pm & after 9pm daily)\n• House wine — $8/glass\n• Cocktails — $12\n\n🥃 Extensive amaro selection\nFlat pricing for Social Club members\n\n🍸 Classic cocktails, spritz, mocktails"
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$-$$$\n\nDinner for 2: $80-120 (with drinks)\nAperitivo hour: $40-60 for 2\nLate-night steak: $99 (Social Club price)\n\nReservations: OpenTable\nWalk-ins: Bar seating available\n\n📞 (647) 349-7297\n🌐 notteristorante.ca\n\n𝗛𝗢𝗨𝗥𝗦\nMon: 4–10pm\nTue–Thu: 4–11pm\nFri–Sat: 4pm–12am\nSun: 4–10pm\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Aperitivo hour 4-6pm — $8 wine, salumi grazing\n• After 9pm for late-night pricing + energy\n• Perfect pre/post-theatre (St. Lawrence Centre nearby)\n• Friday/Saturday late for the full \"Notte\" vibe\n\n💡 TIP: Join free Notte Social Club online — unlocks $99 bistecca, flat amaro pricing, complimentary bread"
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 9 Church St, Toronto, ON M5E 1M2\n\n• walking: 1 hour 7 mins • 4.9 km\n• transit: 21 mins • 5.1 km\n• driving: 17 mins • 5.8 km (traffic: 14 mins)\n• bicycling: 20 mins • 5.6 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (17 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "9 Church St, Toronto, ON M5E 1M2",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:16.461Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (17 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1002,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": 830,
+        "durationInTrafficText": "14 mins",
+        "distanceMeters": 5770,
+        "distanceText": "5.8 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4008,
+        "durationText": "1 hour 7 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4941,
+        "distanceText": "4.9 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1206,
+        "durationText": "20 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5633,
+        "distanceText": "5.6 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1282,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5109,
+        "distanceText": "5.1 km"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "NOT_YET_ON_GMAPS",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "NOT_YET_ON_GMAPS",
+    "name": "Pasta Privato",
+    "city": "Toronto",
+    "address": "St. Lawrence (11 Church St, hidden behind Notte)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "30-seat hidden pasta bar from Yannick Bigourdan & Chef Michael Angeloni. $125 tasting menu or à la carte. Tajarin with prosecco-butter & Kaluga caviar. Opens March 27. Intimate, intentional, serious pasta. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

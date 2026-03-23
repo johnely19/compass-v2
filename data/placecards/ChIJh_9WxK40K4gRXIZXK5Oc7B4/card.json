@@ -1,0 +1,71 @@
+{
+  "place_id": "ChIJh_9WxK40K4gRXIZXK5Oc7B4",
+  "built": "2026-03-15T15:34:00.000Z",
+  "source": "charlie-live",
+  "identity": {
+    "place_id": "ChIJh_9WxK40K4gRXIZXK5Oc7B4",
+    "name": "Portici",
+    "city": "Toronto",
+    "address": "6 Scollard St, Toronto, ON M5R 1E9",
+    "type": "restaurant",
+    "phone": "(647) 351-2235",
+    "website": "http://www.portici.ca/",
+    "hours": [
+      "Monday: 12:00 \u2013 9:00 PM",
+      "Tuesday: 12:00 \u2013 9:00 PM",
+      "Wednesday: 12:00 \u2013 9:00 PM",
+      "Thursday: 12:00 \u2013 9:00 PM",
+      "Friday: 12:00 \u2013 10:00 PM",
+      "Saturday: 12:00 \u2013 10:00 PM",
+      "Sunday: 12:00 \u2013 7:00 PM"
+    ],
+    "price_level": 2,
+    "rating": 4.6,
+    "user_rating_count": 703,
+    "menu_link": "https://www.portici.ca/menu",
+    "lat": 43.6726436,
+    "lng": -79.3885068
+  },
+  "narrative": {
+    "summary": "Family-run Italian in the heart of Yorkville. Fresh ingredients, homemade pastas, and a menu that keeps it simple but does it right. Less touristy than the main Yorkville strip.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "The Spot",
+        "body": "\ud835\udde3\ud835\udde2\ud835\udde5\ud835\udde7\ud835\udddc\ud835\uddd6\ud835\udddc\n\ud83d\udccd 6 Scollard St, Yorkville\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nTucked just off the main Yorkville drag on Scollard Street. Family-owned and operated \u2014 you can feel it in the warmth of the service. The space is well-lit, unpretentious, cozy without being cramped.\n\n\"We believe in the simple pleasures of life. Good food, fresh ingredients, and awesome vibes.\""
+      },
+      {
+        "id": "block-2",
+        "title": "The Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n**PINSA** (Roman-style flatbread)\n\u2022 Margherita \u2014 $19\n\u2022 Pinsa Yorkville \u2014 $28 \u2b50\n  Olive oil base, arugula, prosciutto, burrata, pistachios\n\u2022 Pinsa Contadina \u2014 $25\n  Pesto, zucchini, bell peppers, mushrooms, burrata\n\n**PASTA** (all can be made vegetarian, dairy-free, or gluten-free)\n\u2022 Rigatoni Rosso \u2014 $16\n  San Marzano tomato sauce, parmesan\n\u2022 Spaghetti Bolognese \u2014 $23\n  Ground beef, homemade San Marzano sauce\n\u2022 Rigatoni Alla Vodka \u2014 $26 \u2b50\n  Vodka sauce, bacon, asparagus, sundried tomato\n\u2022 Linguine al Salmone \u2014 $29\n  Seared salmon, mushrooms, spinach, white cream, lemon\n\u2022 Spaghetti Frutti Di Mare \u2014 $29\n  Shrimps, scallops, mussels, rose sauce\n\n**SPECIALS**\n\u2022 Nonna's Meatballs \u2014 $23 \u2b50\n  Homemade San Marzano sauce, served with bread\n\u2022 Saffron Mushroom Risotto \u2014 $29\n  Arborio, mushrooms, parmesan, saffron, cream\n\u2022 Beef Lasagna \u2014 $26\n  Ground beef, San Marzano, mozzarella, b\u00e9chamel\n\u2022 Pollo Paradiso Platter \u2014 $28\n  Chicken, asparagus, grilled zucchini, cherry tomato"
+      },
+      {
+        "id": "block-3",
+        "title": "The Vibe",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde9\ud835\udddc\ud835\uddd5\ud835\uddd8\n\n**What people say:**\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Blown away by this meal! Family owned and run, produce tasted fresh, high quality, authentic. We live around the corner and cannot wait to make this our regular spot.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Food was delicious, beautifully presented, and full of flavor. The service was amazing \u2014 our host was so warm, attentive, and helpful.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The eggplant dip had wonderful kick to it \u2014 a good char and smokey heat. The mushroom risotto was so creamy and seasoned so well.\"\n\n**Honest note:** A few recent reviews mention inconsistent service and some dishes being heavy on cream/cheese. The overall rating is excellent (4.6\u2605), but it's not flawless \u2014 seems to depend on the day."
+      },
+      {
+        "id": "block-4",
+        "title": "The Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$ (Moderate \u2014 excellent value for Yorkville)\n\n**Lunch for 2:** $60-80 (pasta + pinsa + drinks)\n**Dinner for 2:** $80-120 (apps, mains, drinks)\n\n\ud83d\udcde (647) 351-2235\n\ud83c\udf10 portici.ca\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6 (Sunday)\n12:00 \u2013 7:00 PM \u2713 Open now\n\n\ud835\udddf\ud835\udde2\ud835\uddd6\ud835\uddd4\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\n6 Scollard St \u2014 one block north of Bloor, just off Yonge. Quieter street, easy to walk right past if you're not looking.\n\n**Reservations:** Walk-ins usually fine for lunch, recommend booking for dinner.\n**Book:** portici.ca/reservations"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Bay/Bloor intersection\nTo: 6 Scollard St, Toronto\n\n\u2022 Walking: 4-5 mins\n\u2022 From Bay Station: Exit north, walk up Bay St, turn left on Scollard\n\u2022 From Bloor-Yonge: Exit north, walk west on Bloor, turn right on Scollard\n\nBest modality: WALKING \u2b50\nWhy: It's right there \u2014 no transit needed."
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Bay/Bloor, Toronto",
+    "destination": "6 Scollard St, Toronto, ON M5R 1E9",
+    "recommended": {
+      "mode": "walking",
+      "reason": "4-5 minute walk from Bay/Bloor"
+    }
+  },
+  "discovery": {
+    "text": "Recommended live by Charlie",
+    "url": "http://www.portici.ca/"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJwd1aPIBxhlQRX8pxjPkAb5s",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJwd1aPIBxhlQRX8pxjPkAb5s",
+    "name": "Robson Square",
+    "city": "Vancouver",
+    "address": "Downtown",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "canadianarchitect.com",
+    "url": "https://www.canadianarchitect.com/arthur-ericksons-homecoming/"
+  },
+  "narrative": {
+    "summary": "Arthur Erickson. Cascading terraces, waterfalls, gardens flowing over a courthouse complex. A radical civic gesture — burying government under green space. Bing Thom worked on this as Erickson's protégé. Walk through it, don't just past it. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

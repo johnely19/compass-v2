@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJaX1BV9U0K4gRoBDo6zdzNNE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJaX1BV9U0K4gRoBDo6zdzNNE",
+    "name": "Fleck Dance Theatre",
+    "city": "Toronto",
+    "address": "Harbourfront",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via todocanada.ca"
+  },
+  "narrative": {
+    "summary": "Nagata Shachu × Ryunosuke Yamazumi: 'Rhythms in Flight'—taiko meets contemporary dance; season closer for 28-year-old company. Apr 11.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJUUaSqds0K4gRFuVQIu-b5V0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJUUaSqds0K4gRFuVQIu-b5V0",
+    "name": "Swipe Design books + objects",
+    "city": "Toronto",
+    "address": "Fashion District / 401 Richmond (401 Richmond St W, B04)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via swipe.com"
+  },
+  "narrative": {
+    "summary": "Toronto's premier architecture + design bookstore. City's largest selection of architecture, urbanism, and graphic design books. Independent. Inside 401 Richmond — the creative nerve centre. Book launches, design objects. 4.6★ (92 reviews).",
+    "blocks": []
+  }
+}

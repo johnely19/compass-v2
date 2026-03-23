@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ72_vEqY1K4gRio7zbRPVuY4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ72_vEqY1K4gRio7zbRPVuY4",
+    "name": "Bitters & Bloom",
+    "city": "Toronto",
+    "address": "Little Italy (College St near Bathurst)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.toronto.com/things-to-do/food-and-drink/this-new-speakeasy-style-cocktail-bar-in-toronto-is-hidden-behind-an-unmarked-door/",
+    "url": "https://www.toronto.com/things-to-do/food-and-drink/this-new-speakeasy-style-cocktail-bar-in-toronto-is-hidden-behind-an-unmarked-door/"
+  },
+  "narrative": {
+    "summary": "Hidden behind unmarked door—jazz-influenced atmosphere, culinary-driven cocktails by Le Cordon Bleu-trained bartender. Opened Aug 2025, 4.8 rating. Open NOW til 1am.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJoyUzaJ3L1IkRtk3Hz3MR23k",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJoyUzaJ3L1IkRtk3Hz3MR23k",
+    "name": "GUFF",
+    "city": "Toronto",
+    "address": "Riverside/Leslieville",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via designlinesmagazine.com"
+  },
+  "narrative": {
+    "summary": "Mid-century modern and Scandinavian vintage, meticulously vetted pieces - the kind of place with story",
+    "blocks": []
+  }
+}

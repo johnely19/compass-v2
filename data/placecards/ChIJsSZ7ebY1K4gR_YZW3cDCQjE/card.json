@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJsSZ7ebY1K4gR_YZW3cDCQjE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJsSZ7ebY1K4gR_YZW3cDCQjE",
+    "name": "Boxcar Social Laneway",
+    "city": "Toronto",
+    "address": "Little Italy (alleyway)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via ladystravelblog"
+  },
+  "narrative": {
+    "summary": "New hidden alleyway location, established local brand, excellent bagels + coffee",
+    "blocks": []
+  }
+}

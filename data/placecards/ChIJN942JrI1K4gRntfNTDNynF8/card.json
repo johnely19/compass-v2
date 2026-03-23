@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJN942JrI1K4gRntfNTDNynF8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJN942JrI1K4gRntfNTDNynF8",
+    "name": "Studio Brillantine",
+    "city": "Toronto",
+    "address": "Parkdale (Queen West)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via studiobrillantine.com"
+  },
+  "narrative": {
+    "summary": "Colorful design boutique with jewelry, home objects, and playful goods; strong curation with European flair.",
+    "blocks": []
+  }
+}

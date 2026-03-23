@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ8SrvJ_w0K4gRZsS34uL48Fk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ8SrvJ_w0K4gRZsS34uL48Fk",
+    "name": "ODDSEOUL",
+    "city": "Toronto",
+    "address": "Ossington",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via yelp late-night Toronto"
+  },
+  "narrative": {
+    "summary": "Korean-fusion with cool-kid Ossington energy; late hours and solid bar program.",
+    "blocks": []
+  }
+}

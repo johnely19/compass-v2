@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ_3jhPDE1K4gR2KsVaQIB12M",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ_3jhPDE1K4gR2KsVaQIB12M",
+    "name": "It's OK Studios",
+    "city": "Toronto",
+    "address": "Queen West",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via thegreenline.to"
+  },
+  "narrative": {
+    "summary": "Black arts hub, spiritual successor to legendary BamBoo — 4.8 rating, exhibitions + live music",
+    "blocks": []
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "place_id": "ChIJCxjDu8c1K4gR33Dh5X2QMlc",
+  "built": "2026-03-12T21:46:13Z",
+  "source": "builder-ramen-v2",
+  "identity": {
+    "place_id": "ChIJCxjDu8c1K4gR33Dh5X2QMlc",
+    "name": "Konjiki Ramen (Downtown)",
+    "city": "Toronto",
+    "address": "41 Elm St, Toronto, ON M5G 1H1, Canada",
+    "type": "restaurant",
+    "phone": "(416) 519-6794",
+    "website": "https://konjikiramen.com/",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "price_level": 2,
+    "rating": 4.4,
+    "user_rating_count": 1420,
+    "menu_link": "https://konjikiramen.com/",
+    "location": "41 Elm St, Toronto, ON M5G 1H1, Canada",
+    "lat": 43.6572661,
+    "lng": -79.3836027
+  },
+  "narrative": {
+    "summary": "Ramen-focused Toronto spot with strong local following and dependable bowls.",
+    "blocks": [
+      {
+        "id": "b1",
+        "title": "Map + Practicals",
+        "body": "Start with map and practicals first."
+      },
+      {
+        "id": "b2",
+        "title": "Outside",
+        "body": "Streetfront + arrival context."
+      },
+      {
+        "id": "b3",
+        "title": "Interior vibe",
+        "body": "Wide room views and atmosphere."
+      },
+      {
+        "id": "b4",
+        "title": "Detailed interior",
+        "body": "Close-up design and counter details."
+      },
+      {
+        "id": "b5",
+        "title": "Food + drinks",
+        "body": "Ramen bowls, sides, and drinks where available."
+      },
+      {
+        "id": "b6",
+        "title": "Check",
+        "body": "Estimated check for two using Toronto tax logic."
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Tokyo-style ramen research",
+    "url": "https://konjikiramen.com/"
+  }
+}

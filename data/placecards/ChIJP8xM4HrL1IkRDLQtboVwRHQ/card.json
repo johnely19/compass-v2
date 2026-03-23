@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJP8xM4HrL1IkRDLQtboVwRHQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJP8xM4HrL1IkRDLQtboVwRHQ",
+    "name": "Spike's Table",
+    "city": "Toronto",
+    "address": "Leslieville (487 Logan Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via torontolife.com"
+  },
+  "narrative": {
+    "summary": "6-seat private dining in a Leslieville apartment. One seating nightly at 6:30pm, French-driven tasting menu guided by host Spike. Bookable on OpenTable. Toronto Life featured it as 'you practically need to apply.' 5.0★. The ultimate intimate dining.",
+    "blocks": []
+  }
+}

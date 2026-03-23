@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ-WFB5NI0K4gRIdqgdanG0P8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ-WFB5NI0K4gRIdqgdanG0P8",
+    "name": "Toronto Dominion Centre",
+    "city": "Toronto",
+    "address": "Financial District",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via destinationtoronto.com"
+  },
+  "narrative": {
+    "summary": "Mies van der Rohe's black glass modernist complex - the first wave of skyscrapers that define downtown, still pristine",
+    "blocks": []
+  }
+}

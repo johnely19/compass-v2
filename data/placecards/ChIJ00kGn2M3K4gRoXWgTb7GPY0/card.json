@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ00kGn2M3K4gRoXWgTb7GPY0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ00kGn2M3K4gRoXWgTb7GPY0",
+    "name": "Cheese Boutique Bottega",
+    "city": "Toronto",
+    "address": "Junction / Ripley Ave (next door)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Google Places"
+  },
+  "narrative": {
+    "summary": "The café/bakery spinoff. Fresh pastries, espresso, grab-and-go gourmet. 4.8★ (228 reviews). Same family, lighter format. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

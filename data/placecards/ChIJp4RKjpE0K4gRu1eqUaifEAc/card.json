@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJp4RKjpE0K4gRu1eqUaifEAc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJp4RKjpE0K4gRu1eqUaifEAc",
+    "name": "Fiesta Farms",
+    "city": "Toronto",
+    "address": "Christie Pits / Koreatown",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "Independent grocer punching above its weight. Exceptional produce, local suppliers, craft brands you won't find at chains. 4.5★ (1927 reviews). Community institution. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

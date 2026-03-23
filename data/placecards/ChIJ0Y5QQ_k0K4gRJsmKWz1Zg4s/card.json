@@ -1,0 +1,103 @@
+{
+  "place_id": "ChIJ0Y5QQ_k0K4gRJsmKWz1Zg4s",
+  "built": "2026-02-25T09:02:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJ0Y5QQ_k0K4gRJsmKWz1Zg4s",
+    "name": "Bar Libretto",
+    "city": "Toronto",
+    "address": "221 Ossington Ave, Toronto, ON M6J 2Z8",
+    "phone": "(416) 532-8000",
+    "website": "https://pizzerialibretto.com/bar-libretto",
+    "price_level": 2,
+    "location": "221 Ossington Ave, Toronto, ON M6J 2Z8"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nOssington Strip — between Dundas and Queen\n\nThe original Pizzeria Libretto storefront, now reborn as its nightlife incarnation.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nOssington Strip — between Dundas and Queen\n\nThe original Pizzeria Libretto storefront, now reborn as its nightlife incarnation."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nLow lighting, buzzing room, the wood-fired oven still glowing in the corner."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\nCocktails hit strong. Amaro in heavy rotation.\n\n🍸 Signatures:\n• Negroni — gin, vermouth blend, campari\n• Aperol Spritz — prosecco, soda\n• Espresso Martini — vodka, espresso, kahlua\n• La Vampa — bourbon, montenegro, maple cayenne\n\n🍷 Wine Night: 50% off bottles (Mondays)"
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗡𝗲𝗮𝗽𝗼𝗹𝗶𝘁𝗮𝗻 𝗣𝗶𝘇𝘇𝗮 $19-23\n• Margherita — $19 ⭐\n• Pepperoni (cup & char) — $21 ⭐\n• 'Nduja — $22, spicy calabrian, stracciatella\n• Duck Confit — $23, panna, roasted pear\n• Housemade Sausage — $21, caramelized onion\n• Funghi — $21, gorgonzola crema, mushroom\n\n𝗡𝗬 𝗦𝘁𝘆𝗹𝗲 $27-34\n• Hot Soppressata — $32, hot maple ⭐\n• Hawaiian — $34, bacon, jalapeño, hot maple\n\n𝗦𝗺𝗮𝗹𝗹 𝗣𝗹𝗮𝘁𝗲𝘀 $5-19\n• Arancini — $15\n• Meatballs — $16, house sugo, focaccia\n• Buttermilk Fried Calamari — $19\n• Rapini — $9\n\n𝗗𝗼𝗹𝗰𝗶\n• Tiramisu — $12 ⭐\n• Gelato — $4/6\n\nNote: Same Libretto DNA — 72-hour fermented sourdough crust, 850° wood fire. GF crust +$5."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nDinner for 2: $80-110 (with drinks)\n\nReservations: OpenTable, walk-ins welcome\n\n📞 (416) 532-8000\n🌐 pizzerialibretto.com/bar-libretto\n\n𝗛𝗢𝗨𝗥𝗦\nWed–Sat: 4pm – 1am\nMon–Tue, Sun: Closed\n\n𝗛𝗔𝗣𝗣𝗬 𝗛𝗢𝗨𝗥𝗦\n• 4–6pm: $3 arancini, $4 meatball, $6 beer, $7 wine, $8 Aperol spritz\n• 9pm: Second happy hour kicks in\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early evening (4–6pm): Hit happy hour, quieter vibe\n• Late night (10pm+): This is when it hums — post-dinner crowd, third bottle of wine energy\n• Avoid: Early weekend dinner if you want a seat at the bar"
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 221 Ossington Ave, Toronto, ON M6J 2Z8\n\n• walking: 1 hour 28 mins • 6.5 km\n• transit: 39 mins • 7.2 km\n• driving: 21 mins • 6.9 km (traffic: 15 mins)\n• bicycling: 23 mins • 6.9 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (21 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "221 Ossington Ave, Toronto, ON M6J 2Z8",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:12.466Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (21 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1237,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": 926,
+        "durationInTrafficText": "15 mins",
+        "distanceMeters": 6871,
+        "distanceText": "6.9 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5305,
+        "durationText": "1 hour 28 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6504,
+        "distanceText": "6.5 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1402,
+        "durationText": "23 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6948,
+        "distanceText": "6.9 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2340,
+        "durationText": "39 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7221,
+        "distanceText": "7.2 km"
+      }
+    ]
+  }
+}

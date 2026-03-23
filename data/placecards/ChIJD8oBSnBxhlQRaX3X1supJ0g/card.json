@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJD8oBSnBxhlQRaX3X1supJ0g",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJD8oBSnBxhlQRaX3X1supJ0g",
+    "name": "Kissa Tanto",
+    "city": "Vancouver",
+    "address": "Chinatown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "guide.michelin.com",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-from-the-michelin-guide-vancouver-2025"
+  },
+  "narrative": {
+    "summary": "Michelin 1-star Japanese-Italian fusion in a gorgeous second-floor Chinatown space. Jazz-bar atmosphere meets izakaya meets Italian trattoria. Architecture-obsessed John will love the room. One of Canada's most celebrated restaurants. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

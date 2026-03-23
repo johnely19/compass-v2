@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJQy1yF9U1K4gRIZARBX4q9vI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQy1yF9U1K4gRIZARBX4q9vI",
+    "name": "Bottega Volo",
+    "city": "Toronto",
+    "address": "Little Italy / College",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via bottegavolo.com"
+  },
+  "narrative": {
+    "summary": "Natural wine imports (Keep6 agency) + craft beer from their hidden in-house brewery. Coffee bar too. Triple-threat: café, bottle shop, nano-brewery. 4.4★ (68 reviews).",
+    "blocks": []
+  }
+}

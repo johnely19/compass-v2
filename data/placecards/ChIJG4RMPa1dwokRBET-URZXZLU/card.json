@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJG4RMPa1dwokRBET-URZXZLU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJG4RMPa1dwokRBET-URZXZLU",
+    "name": "Hellbender",
+    "city": "NYC",
+    "address": "Ridgewood (68-22 Forest Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers",
+    "url": "https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers"
+  },
+  "narrative": {
+    "summary": "Innovative Mexican food in Ridgewood, called out by Bon Appétit in March 2026 as a 'must-stop' on the Bushwick→Ridgewood corridor. Cocktails + creative menu. 4.3★ (419 reviews). Walking distance from Dessa & Dean's place.",
+    "blocks": []
+  }
+}

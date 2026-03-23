@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ8zdX2Qg1K4gRbS29GLNUlw8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ8zdX2Qg1K4gRbS29GLNUlw8",
+    "name": "Artist Project 2026",
+    "city": "Toronto",
+    "address": "Exhibition Place (Better Living Centre, 195 Princes' Blvd)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "Canada's biggest contemporary art fair. 250+ artists, large-scale installations. Opening night party March 26 (6-10pm), fair runs March 27-29. New juried exhibition 'The Art of the Game.' $24-39. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJM4XXRdRzhlQRU5tJVe7D8xY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJM4XXRdRzhlQRU5tJVe7D8xY",
+    "name": "Twisted Fork",
+    "city": "Vancouver",
+    "address": "Gastown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Beloved Gastown brunch spot by day, transforms into Breeze cocktail bar Wed-Sun evenings. French-inspired comfort food. Heritage Carrall Street location. Perfect for Friday arrival brunch or dinner. Rating 4.5/5 (1,982 reviews). $$. Featured in Eater Vancouver's 38 Best.",
+    "url": "https://www.eater.com/maps/best-vancouver-restaurants-bc-canada"
+  },
+  "narrative": {
+    "summary": "Beloved Gastown brunch spot by day, transforms into Breeze cocktail bar Wed-Sun evenings. French-inspired comfort food. Heritage Carrall Street location. Perfect for Friday arrival brunch or dinner. Rating 4.5/5 (1,982 reviews). $$. Featured in Eater Vancouver's 38 Best.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://platform.eater.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24406405/Anh_and_Chi_Streetside_Platter_Photographed_by_Leila_Kwok_1.jpg?quality=90&strip=all&crop=0,10.75214828329,100,78.49570343342",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://platform.eater.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24406405/Anh_and_Chi_Streetside_Platter_Photographed_by_Leila_Kwok_1.jpg?quality=90&strip=all&crop=0,10.75214828329,100,78.49570343342",
+      "caption": "Source image"
+    }
+  ]
+}

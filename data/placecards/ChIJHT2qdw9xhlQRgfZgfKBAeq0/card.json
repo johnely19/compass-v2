@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJHT2qdw9xhlQRgfZgfKBAeq0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJHT2qdw9xhlQRgfZgfKBAeq0",
+    "name": "Sumibiyaki Arashi",
+    "city": "Vancouver",
+    "address": "Mount Pleasant",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "cbc.ca",
+    "url": "https://www.cbc.ca/news/canada/british-columbia/michelin-stars-vancouver-restaurants-1.7650070"
+  },
+  "narrative": {
+    "summary": "NEW Michelin 1-star (Oct 2025). Chef Pete Ho's intimate yakitori bar. Charcoal-grilled Japanese perfection. Opened early 2025 and already starred — that's the real signal. Mount Pleasant location. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

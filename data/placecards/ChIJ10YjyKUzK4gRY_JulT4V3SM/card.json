@@ -1,0 +1,100 @@
+{
+  "place_id": "ChIJ10YjyKUzK4gRY_JulT4V3SM",
+  "built": "2026-03-10T16:17:36.721Z",
+  "source": "task-stock-tc",
+  "identity": {
+    "place_id": "ChIJ10YjyKUzK4gRY_JulT4V3SM",
+    "name": "STOCK T.C Grocer",
+    "city": "Toronto",
+    "address": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
+    "type": "grocery",
+    "phone": "(416) 489-1020",
+    "website": "http://www.shopstocktc.com/",
+    "rating": 4,
+    "user_rating_count": 1437,
+    "location": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada"
+  },
+  "narrative": {
+    "summary": "📍 STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Stock T.c Grocer",
+        "body": "📍 STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nModern specialty grocery stop on Yonge, focused on premium pantry and prepared options."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗦\n\nExpected strengths: curated grocery staples, premium prepared foods, and specialty imports.\nWebsite: http://www.shopstocktc.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4 (1437 reviews)\nPrice level: n/a\nPhone: (416) 489-1020\nWebsite: http://www.shopstocktc.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada\n\n• walking: 34 mins • 2.4 km\n• transit: 11 mins • 2.5 km\n• driving: 8 mins • 2.4 km (traffic: 5 mins)\n• bicycling: 13 mins • 3.1 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (8 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:13.790Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (8 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 479,
+        "durationText": "8 mins",
+        "durationInTrafficSeconds": 327,
+        "durationInTrafficText": "5 mins",
+        "distanceMeters": 2394,
+        "distanceText": "2.4 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 2065,
+        "durationText": "34 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 2394,
+        "distanceText": "2.4 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 776,
+        "durationText": "13 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3051,
+        "distanceText": "3.1 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 656,
+        "durationText": "11 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 2472,
+        "distanceText": "2.5 km"
+      }
+    ]
+  }
+}

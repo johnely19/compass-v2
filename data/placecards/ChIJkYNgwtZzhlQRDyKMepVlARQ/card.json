@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJkYNgwtZzhlQRDyKMepVlARQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJkYNgwtZzhlQRDyKMepVlARQ",
+    "name": "OPUS Vancouver",
+    "city": "Vancouver",
+    "address": "322 Davie St, Vancouver, BC V6B 5Z6",
+    "type": "hotel"
+  },
+  "discovery": {
+    "text": "Yaletown's premier design hotel. Bold, colorful contemporary rooms. Excellent on-site Italian restaurant/bar. Steps from Yaletown's galleries, restaurants, and seawall. Rating 4.7/5 (1,129 reviews) — highest-rated boutique in Vancouver. May push above $200 budget but worth checking rates. Condé Nast Traveler featured. The design-forward splurge option.",
+    "url": "https://www.cntraveler.com/hotels/canada/vancouver/opus-hotel--vancouver"
+  },
+  "narrative": {
+    "summary": "Yaletown's premier design hotel. Bold, colorful contemporary rooms. Excellent on-site Italian restaurant/bar. Steps from Yaletown's galleries, restaurants, and seawall. Rating 4.7/5 (1,129 reviews) — highest-rated boutique in Vancouver. May push above $200 budget but worth checking rates. Condé Nast Traveler featured. The design-forward splurge option.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://media.cntraveler.com/photos/562fdc6932e924042509c6fd/16:9/w_2560,c_limit/OPUS-Vancouver-Suite.jpg",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://media.cntraveler.com/photos/562fdc6932e924042509c6fd/16:9/w_2560,c_limit/OPUS-Vancouver-Suite.jpg",
+      "caption": "Source image"
+    }
+  ]
+}

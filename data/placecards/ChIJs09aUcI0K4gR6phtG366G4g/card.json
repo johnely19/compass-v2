@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJs09aUcI0K4gR6phtG366G4g",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJs09aUcI0K4gR6phtG366G4g",
+    "name": "FIKA Cafe",
+    "city": "Toronto",
+    "address": "Kensington Market",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html",
+    "url": "https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html"
+  },
+  "narrative": {
+    "summary": "Swedish-inspired in turquoise bay-and-gable; owner (2017 TO AeroPress champ) now roasting in-house as Lycka Coffee Roasters.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ91Zyht01K4gRjYasSLBSEiA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ91Zyht01K4gRjYasSLBSEiA",
+    "name": "Pinot Grouchio's",
+    "city": "Toronto",
+    "address": "Dundas West (1609 Dundas St W)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via blogto.com"
+  },
+  "narrative": {
+    "summary": "Anti-pretentious 'wine dive bar.' Named after a Bob's Burgers episode. Anonymous owner, ex-Momofuku alum. Wine by the ounce, no-frills romantic space. Opened early 2026, already a local staple. 5.0★ (23 reviews).",
+    "blocks": []
+  }
+}

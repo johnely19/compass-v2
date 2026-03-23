@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJCf_FjlE0K4gRa3HzxrVNpFs",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJCf_FjlE0K4gRa3HzxrVNpFs",
+    "name": "MIKA",
+    "city": "Toronto",
+    "address": "Little Italy (496 College St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via mikafleur.com"
+  },
+  "narrative": {
+    "summary": "Japanese ceramics, tea tasting, kokedama. Founded by Mika Sato from Hiroshima — her partner Satoshi Yoshikawa is a trained Japanese potter (studied under Abe in Tokyo). Intimate slow-living ethos. Deep wabi-sabi spirit. 4.8★ (119 reviews).",
+    "blocks": []
+  }
+}

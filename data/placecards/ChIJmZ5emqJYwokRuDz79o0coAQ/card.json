@@ -1,0 +1,40 @@
+{
+  "place_id": "ChIJmZ5emqJYwokRuDz79o0coAQ",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJmZ5emqJYwokRuDz79o0coAQ",
+    "name": "Guggenheim \u2014 Carol Bove",
+    "city": "New York",
+    "address": "1071 5th Ave, New York, NY 10128, USA",
+    "website": "https://www.guggenheim.org/",
+    "price_level": 3,
+    "location": "1071 5th Ave, New York, NY 10128, USA",
+    "lat": 40.7831815,
+    "lng": -73.9588052
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n5th Ave at 89th St \u2014 Frank Lloyd Wright's spiral, filled to the brim with Carol Bove's steel.\n\nA 25-year retrospective of one of America's most esteemed sculptors, filling the entire six-story rotunda. Opened March 5, 2026.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n5th Ave at 89th St \u2014 the inverted ziggurat itself.\n\nYou walk into Wright's spiral and immediately understand why they gave Bove the entire rotunda. Her steel sculptures \u2014 bent, crinkled, impossibly folded \u2014 inhabit the curving ramp like they grew there. This is a two-pronged affair: a 25-year survey of her work and a radical reimagining of the building itself. She's installed five lounges with tweedy wool cushions in galleries normally reserved for art. You're allowed \u2014 encouraged \u2014 to sit, rest, nap. The quarter-mile walk up the ramp has never felt like this."
+      },
+      {
+        "id": "block-2",
+        "title": "The Exhibition",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd8\ud835\uddeb\ud835\udddb\ud835\udddc\ud835\uddd5\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\n\nCarol Bove is a sculptor who makes steel do things it shouldn't. Her pieces look soft \u2014 crumpled, bent, draped \u2014 but they're massive painted steel. The tension between what you see (fabric-like folds) and what you know (2,000 lbs of metal) is the whole point.\n\nThe retrospective spans her full career, from early assemblages to the monumental painted steel works she's known for. The Guggenheim's spiral ramp becomes part of the sculpture \u2014 you're walking through the work, not past it.\n\n\u2b50 The lounges are a statement: Bove treated Wright's building as something that needed \"home improvements, especially in the seating department\"\n\u2b50 Start at the top and walk down \u2014 the sculptures reveal themselves differently from above"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 Admission: $30 adults, $22 students/seniors\n\n\ud83c\udf10 guggenheim.org\n\ud83d\udcde (212) 423-3500\n\n\ud835\udde2\ud835\udde1 \ud835\udde9\ud835\udddc\ud835\uddd8\ud835\uddea: March 5, 2026 \u2013 ongoing\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon\u2013Sun: 10:30 AM \u2013 5:30 PM\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Weekday morning (10:30am): Fewest crowds, best light in the rotunda\n\u2022 Late afternoon: The light shifts beautifully through the skylight onto the steel\n\u2022 Avoid: Weekend afternoons \u2014 the ramp gets congested"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco via neighbourhood research",
+    "url": "https://www.guggenheim.org/"
+  }
+}

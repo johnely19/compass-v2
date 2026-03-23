@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJk4T82zTL1IkRBR2qH4DZzDU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJk4T82zTL1IkRBR2qH4DZzDU",
+    "name": "Jazz Bistro",
+    "city": "Toronto",
+    "address": "Downtown/Dundas",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via reddit r/askTO"
+  },
+  "narrative": {
+    "summary": "Higher-end jazz supper club format, good food alongside music, Ted the manager gets personal mentions",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ2SnJ0-Y0K4gR9VgNsTlWf58",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ2SnJ0-Y0K4gR9VgNsTlWf58",
+    "name": "Neurotica Records",
+    "city": "Toronto",
+    "address": "Little Italy (College/Manning)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via https://vinylmapper.com/city-guides/toronto-best-record-stores/",
+    "url": "https://vinylmapper.com/city-guides/toronto-best-record-stores/"
+  },
+  "narrative": {
+    "summary": "Hidden gem with basement entrance on Manning Ave—exactly the kind of place you'd miss if no one told you.",
+    "blocks": []
+  }
+}

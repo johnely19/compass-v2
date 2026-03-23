@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJixSwFzY1K4gRMML4AXHghkc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJixSwFzY1K4gRMML4AXHghkc",
+    "name": "Bà Nội",
+    "city": "Toronto",
+    "address": "Bloor West (Christie Pits area)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.chuonthis.ca/best-bakeries-toronto/",
+    "url": "https://www.chuonthis.ca/best-bakeries-toronto/"
+  },
+  "narrative": {
+    "summary": "Vietnamese-inflected French/Italian pastries; rotating menu; 4.8 rating. Tiny gem, no seating.",
+    "blocks": []
+  }
+}

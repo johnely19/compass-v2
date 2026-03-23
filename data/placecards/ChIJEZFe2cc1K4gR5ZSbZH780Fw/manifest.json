@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJEZFe2cc1K4gR5ZSbZH780Fw",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "/place-photos/ChIJEZFe2cc1K4gR5ZSbZH780Fw/photos/1.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "photo-2",
+      "path": "/place-photos/ChIJEZFe2cc1K4gR5ZSbZH780Fw/photos/2.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 2
+    }
+  ]
+}

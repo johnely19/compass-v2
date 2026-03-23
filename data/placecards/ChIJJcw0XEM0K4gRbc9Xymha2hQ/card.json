@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJcw0XEM0K4gRbc9Xymha2hQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJcw0XEM0K4gRbc9Xymha2hQ",
+    "name": "Burdock Brewery & Music Hall",
+    "city": "Toronto",
+    "address": "Bloordale (1184 Bloor St W)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "burdockbrewery.com"
+  },
+  "narrative": {
+    "summary": "Craft brewery with a compact music hall that attracts experimental and indie acts. Ontario-crafted lagers, unpretentious vibes. Musicians love this room. 4.5★, 1,418 reviews. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

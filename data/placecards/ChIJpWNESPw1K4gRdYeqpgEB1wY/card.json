@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJpWNESPw1K4gRdYeqpgEB1wY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJpWNESPw1K4gRdYeqpgEB1wY",
+    "name": "1117 Meats & Pantry",
+    "city": "Toronto",
+    "address": "West Queen West (1117 Queen St W)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "grocerybusiness.ca"
+  },
+  "narrative": {
+    "summary": "Opened May 2025 inside a stunning 1902 heritage post office building. Butcher + artisan pantry. The building alone is worth the visit — architecture meets food. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

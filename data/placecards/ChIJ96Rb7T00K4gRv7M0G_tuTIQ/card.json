@@ -1,0 +1,90 @@
+{
+  "place_id": "ChIJ96Rb7T00K4gRv7M0G_tuTIQ",
+  "built": "2026-03-10T13:01:12.234Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJ96Rb7T00K4gRv7M0G_tuTIQ",
+    "name": "Mattachioni",
+    "city": "Toronto",
+    "address": "1617 Dupont St, Toronto, ON M6P 3S8, Canada",
+    "location": "1617 Dupont St, Toronto, ON M6P 3S8, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Mattachioni",
+        "body": "📍 Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (951 reviews)"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1617 Dupont St, Toronto, ON M6P 3S8, Canada\n\n• walking: 1 hour 29 mins • 6.4 km\n• transit: 45 mins • 8.4 km\n• driving: 20 mins • 6.6 km (traffic: 13 mins)\n• bicycling: 26 mins • 7.0 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1617 Dupont St, Toronto, ON M6P 3S8, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:24.468Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (20 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1186,
+        "durationText": "20 mins",
+        "durationInTrafficSeconds": 795,
+        "durationInTrafficText": "13 mins",
+        "distanceMeters": 6630,
+        "distanceText": "6.6 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5343,
+        "durationText": "1 hour 29 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6435,
+        "distanceText": "6.4 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1540,
+        "durationText": "26 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6975,
+        "distanceText": "7.0 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2695,
+        "durationText": "45 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8357,
+        "distanceText": "8.4 km"
+      }
+    ]
+  }
+}

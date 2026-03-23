@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJn4mPYU40K4gRmmqa_fbtvFc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJn4mPYU40K4gRmmqa_fbtvFc",
+    "name": "Xpace Cultural Centre",
+    "city": "Toronto",
+    "address": "Lansdowne/Dundas",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "goplaces"
+  },
+  "narrative": {
+    "summary": "4.5 rating, student/emerging-run gallery with experimental programming. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

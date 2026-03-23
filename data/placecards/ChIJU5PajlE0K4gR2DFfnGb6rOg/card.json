@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJU5PajlE0K4gR2DFfnGb6rOg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJU5PajlE0K4gR2DFfnGb6rOg",
+    "name": "Lula Lounge",
+    "city": "Toronto",
+    "address": "Dundas West (Little Portugal)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/toronto/the_best_jazz_bars_in_toronto/",
+    "url": "https://www.blogto.com/toronto/the_best_jazz_bars_in_toronto/"
+  },
+  "narrative": {
+    "summary": "Bigger room with dance-music DNA; when the right act is on it\u2019s electric and social.",
+    "blocks": []
+  }
+}

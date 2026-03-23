@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJLegihIg1K4gRZH5QtJ_f2vc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJLegihIg1K4gRZH5QtJ_f2vc",
+    "name": "Machida Shoten",
+    "city": "Toronto",
+    "address": "College & Spadina (326 College St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe."
+  },
+  "narrative": {
+    "summary": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe.",
+    "blocks": []
+  }
+}

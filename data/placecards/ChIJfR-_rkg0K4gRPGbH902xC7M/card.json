@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJfR-_rkg0K4gRPGbH902xC7M",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJfR-_rkg0K4gRPGbH902xC7M",
+    "name": "Daniel Faria Gallery",
+    "city": "Toronto",
+    "address": "Junction Triangle",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces"
+  },
+  "narrative": {
+    "summary": "Serious contemporary program, represents strong roster of Canadian artists in converted industrial space",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJS7QNEQd0hlQRuTZ2xFQRWHk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJS7QNEQd0hlQRuTZ2xFQRWHk",
+    "name": "Masayoshi",
+    "city": "Vancouver",
+    "address": "Fraserhood",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "guide.michelin.com",
+    "url": "https://guide.michelin.com/ca/en/british-columbia/ca-vancouver/restaurant/masayoshi"
+  },
+  "narrative": {
+    "summary": "Michelin 1-star omakase. Chef Masayoshi Baba's 24-seat jewel-box — Edomae-style nigiri using BC bounty. Counter seats are the move. Vancouver's definitive omakase experience. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

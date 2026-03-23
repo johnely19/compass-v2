@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ9dpVvXpxhlQRpw50KX2udjk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ9dpVvXpxhlQRpw50KX2udjk",
+    "name": "The Keefer Bar",
+    "city": "Vancouver",
+    "address": "Chinatown",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "theworlds50best.com",
+    "url": "https://www.theworlds50best.com/northamerica/en/the-list/the-keefer-bar.html"
+  },
+  "narrative": {
+    "summary": "#28 on North America's 50 Best Bars 2025. Apothecary-themed cocktail bar in Chinatown. TCM-inspired cocktails, exotic spices, intimate space. Industry crowd favourite. Craft + intention personified. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

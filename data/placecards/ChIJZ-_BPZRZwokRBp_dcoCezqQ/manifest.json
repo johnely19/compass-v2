@@ -1,0 +1,58 @@
+{
+  "place_id": "ChIJZ-_BPZRZwokRBp_dcoCezqQ",
+  "images": [
+    {
+      "id": "map-1",
+      "category": "map",
+      "order": 0,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/map.png",
+      "caption": "📍 Cookshop, Chelsea, NYC\n156 10th Avenue (at 20th St)\n———————————————",
+      "source": "photo"
+    },
+    {
+      "id": "interior_vibe-2",
+      "category": "interior_vibe",
+      "order": 1,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/interior.jpg",
+      "caption": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nWest Chelsea — one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here — people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries.",
+      "source": "photo"
+    },
+    {
+      "id": "food-4",
+      "category": "food",
+      "order": 2,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/food_1.jpg",
+      "caption": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗",
+      "source": "photo"
+    },
+    {
+      "id": "food-5",
+      "category": "food",
+      "order": 3,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/food_2.jpg",
+      "source": "photo"
+    },
+    {
+      "id": "food-6",
+      "category": "food",
+      "order": 4,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/food_3.jpg",
+      "source": "photo"
+    },
+    {
+      "id": "food-7",
+      "category": "food",
+      "order": 5,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/food_4.jpg",
+      "source": "photo"
+    },
+    {
+      "id": "drinks-3",
+      "category": "drinks",
+      "order": 6,
+      "path": "/placecards/ChIJZ-_BPZRZwokRBp_dcoCezqQ/drinks.jpg",
+      "caption": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The weekend essentials:\n• BLT Mary — $18 (bacon, olives, celery salt rim) ⭐\n• Mimosa — $14\n• Cantaloupe Cooler (mocktail) — $10\n• Bloody Maria — $18\n\nThis is a brunch-drinks destination. The BLT Mary is the move — they skewer a strip of crispy bacon right in your drink.",
+      "source": "photo"
+    }
+  ]
+}

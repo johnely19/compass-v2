@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJe226Px7L1IkR2C6mmYe7TPc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJe226Px7L1IkR2C6mmYe7TPc",
+    "name": "Convivium Dining Community",
+    "city": "Toronto",
+    "address": "Downtown (83 Yonge St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews)."
+  },
+  "narrative": {
+    "summary": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews).",
+    "blocks": []
+  }
+}

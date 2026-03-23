@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJ08b1_7tZwokRtbJxZjQbABM",
+  "built": "2026-03-16T10:04:06.857Z",
+  "source": "morning-build-run",
+  "identity": {
+    "place_id": "ChIJ08b1_7tZwokRtbJxZjQbABM",
+    "name": "Parsons Dance at Joyce Theater",
+    "city": "NYC",
+    "address": "175 8th Ave, New York, NY 10011, USA",
+    "type": "theatre",
+    "phone": "(212) 242-0800",
+    "website": "http://www.joyce.org/",
+    "rating": 4.7,
+    "user_rating_count": 1173,
+    "location": "175 8th Ave, New York, NY 10011, USA"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Parsons Dance at Joyce Theater\n175 8th Ave, New York, NY 10011, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Parsons Dance At Joyce Theater",
+        "body": "\ud83d\udccd Parsons Dance at Joyce Theater\n175 8th Ave, New York, NY 10011, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAthletic and joyful contemporary dance with two world premieres and the beloved 'Caught' (where a dancer appears to freeze mid-air in strobe light). April 29-May 10, overlaps NYC trip. Great date night or solo experience."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (1173 reviews)\nPrice level: n/a\nPhone: (212) 242-0800\nWebsite: http://www.joyce.org/\n\nHours:\nMonday: 12:00\u2009\u2013\u20096:00\u202fPM\nTuesday: 12:00\u2009\u2013\u20097:00\u202fPM\nWednesday: 12:00\u2009\u2013\u20097:00\u202fPM\nThursday: 12:00\u2009\u2013\u20097:00\u202fPM\nFriday: 12:00\u2009\u2013\u20097:00\u202fPM\nSaturday: 12:00\u2009\u2013\u20097:00\u202fPM\nSunday: 12:00\u2009\u2013\u20096:00\u202fPM"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 175 8th Ave, New York, NY 10011, USA\n\n\u2022 walking: 38 mins \u2022 1.7 mi\n\u2022 transit: 17 mins \u2022 1.7 mi\n\u2022 driving: 12 mins \u2022 1.8 mi (traffic: 11 mins)\n\u2022 bicycling: 12 mins \u2022 1.7 mi\n\nBest modality: BICYCLING \u2b50\nWhy: Fastest available option (12 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "175 8th Ave, New York, NY 10011, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:10.528Z",
+    "recommended": {
+      "mode": "bicycling",
+      "reason": "Fastest available option (12 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 718,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": 657,
+        "durationInTrafficText": "11 mins",
+        "distanceMeters": 2947,
+        "distanceText": "1.8 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 2295,
+        "durationText": "38 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 2720,
+        "distanceText": "1.7 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 712,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 2686,
+        "distanceText": "1.7 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1020,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 2735,
+        "distanceText": "1.7 mi"
+      }
+    ]
+  }
+}

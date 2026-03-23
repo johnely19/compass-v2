@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJBfYqyK81K4gR8yZzL0qQTqQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJBfYqyK81K4gR8yZzL0qQTqQ",
+    "name": "De Mello Coffee (The Well)",
+    "city": "Toronto",
+    "address": "The Well / King West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html",
+    "url": "https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html"
+  },
+  "narrative": {
+    "summary": "Sprudge-featured flagship; Korean-Melbourne pedigree; 700 customers/day in Toronto's marquee mixed-use development.",
+    "blocks": []
+  }
+}

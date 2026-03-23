@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJo4O6-FrN1IkRrk25uaGQYm0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJo4O6-FrN1IkRrk25uaGQYm0",
+    "name": "Barcelona Gourmet",
+    "city": "Toronto",
+    "address": "Danforth (777 Danforth Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "hungry416.com"
+  },
+  "narrative": {
+    "summary": "Imported Spanish olive oils, vinegars, tinned seafood, cured meats. The conservas trend in a dedicated shop. Niche, passionate, anti-generic. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

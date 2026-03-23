@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ__-v-c3M1IkRL2e8xdKiKBw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ__-v-c3M1IkRL2e8xdKiKBw",
+    "name": "The Daughter",
+    "city": "Toronto",
+    "address": "Leaside (Bayview Ave)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "https://streetsoftoronto.com/torontos-best-wine-bars/",
+    "url": "https://streetsoftoronto.com/torontos-best-wine-bars/"
+  },
+  "narrative": {
+    "summary": "Stylish natural wine bar + bottle shop in Leaside; rotating biodynamic/low-intervention selection, challah bread, residential-area gem. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

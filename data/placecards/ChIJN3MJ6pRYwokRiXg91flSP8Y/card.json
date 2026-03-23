@@ -1,0 +1,40 @@
+{
+  "place_id": "ChIJN3MJ6pRYwokRiXg91flSP8Y",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJN3MJ6pRYwokRiXg91flSP8Y",
+    "name": "Whitney Biennial 2026",
+    "city": "New York",
+    "address": "99 Gansevoort St, New York, NY 10014, USA",
+    "website": "https://whitney.org/exhibitions/2026-biennial",
+    "price_level": 3,
+    "location": "99 Gansevoort St, New York, NY 10014, USA",
+    "lat": 40.7395868,
+    "lng": -74.00914089999999
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nGansevoort St in the Meatpacking District \u2014 Renzo Piano's glass-and-steel monument to American art.\n\nThe 82nd edition of the Whitney Biennial. 56 artists, duos, and collectives. March 8 \u2013 August 23, 2026. The longest-running survey of contemporary art in the United States.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n99 Gansevoort St \u2014 at the foot of the High Line, overlooking the Hudson.\n\nYou enter Renzo Piano's asymmetric concrete-and-glass building and take the elevator to the upper floors. The 2026 Biennial is spread across floors 1, 5, and 6 \u2014 plus a billboard on Gansevoort Street visible from outside. This edition, co-curated by Marcela Guerrero and Drew Sawyer, foregrounds mood and texture over definitive statements. It's a show about transition, tenderness, tension, and unexpected coexistence."
+      },
+      {
+        "id": "block-2",
+        "title": "The Exhibition",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd8\ud835\uddeb\ud835\udddb\ud835\udddc\ud835\uddd5\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\n\n56 artists, duos, and collectives examining forms of relationality \u2014 interspecies kinships, familial bonds, geopolitical entanglements, technological affinities, shared mythologies.\n\nStandout artists to watch for (per Artsy's 8 picks):\n\u2022 Works that evoke humor, unease, and tenderness simultaneously\n\u2022 Immersive environments rather than traditional gallery hanging\n\u2022 Photography, sculpture, video, installation, and performance\n\nThe Whitney Biennial has always been a barometer of where American art is headed. This edition captures a moment of profound transition \u2014 it doesn't offer answers, it offers atmosphere.\n\n\u2b50 The outdoor terraces with Hudson River views are part of the experience\n\u2b50 Floor 5 tends to be the most immersive \u2014 start there"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 Admission: $30 adults, $25 seniors, $21 students. Pay-what-you-wish Fridays 5-10pm.\n\n\ud83c\udf10 whitney.org/exhibitions/2026-biennial\n\ud83d\udcde (212) 570-3600\n\n\ud835\udde2\ud835\udde1 \ud835\udde9\ud835\udddc\ud835\uddd8\ud835\uddea: March 8 \u2013 August 23, 2026\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon, Wed\u2013Thu, Sat\u2013Sun: 10:30 AM \u2013 6:00 PM\nFriday: 10:30 AM \u2013 10:00 PM\nTuesday: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Weekday morning: Fewest crowds\n\u2022 Friday evening (5-10pm): Pay-what-you-wish, livelier crowd\n\u2022 Combine with a walk on the High Line \u2014 the entrance is right there\n\u2022 Allow 2 hours minimum"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco via neighbourhood research",
+    "url": "https://whitney.org/exhibitions/2026-biennial"
+  }
+}

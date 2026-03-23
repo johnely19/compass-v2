@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ4W9D0_00K4gROV8ltGS0M9A",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ4W9D0_00K4gROV8ltGS0M9A",
+    "name": "Gallery TPW",
+    "city": "Toronto",
+    "address": "St Helens Ave / Junction Triangle",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via gallerytpw.ca"
+  },
+  "narrative": {
+    "summary": "Artist-run centre for lens-based work; moved to new space near MOCA, do a double-header",
+    "blocks": []
+  }
+}

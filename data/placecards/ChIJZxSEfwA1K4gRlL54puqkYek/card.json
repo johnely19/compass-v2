@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJZxSEfwA1K4gRlL54puqkYek",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZxSEfwA1K4gRlL54puqkYek",
+    "name": "520 Cafe Bar",
+    "city": "Toronto",
+    "address": "Fashion District / Richmond W",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/eat_drink/2026/01/520-cafe-toronto/",
+    "url": "https://www.blogto.com/eat_drink/2026/01/520-cafe-toronto/"
+  },
+  "narrative": {
+    "summary": "Cafe by day, speakeasy by night via hidden Graffiti Alley entrance (Wed-Sun 5pm+); opened Oct 2025.",
+    "blocks": []
+  }
+}

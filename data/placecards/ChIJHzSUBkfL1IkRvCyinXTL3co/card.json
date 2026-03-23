@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJHzSUBkfL1IkRvCyinXTL3co",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJHzSUBkfL1IkRvCyinXTL3co",
+    "name": "Citadel + Compagnie \u2014 Kudelka/Lemieux Mix (Ontario Tour)",
+    "city": "Toronto",
+    "address": "Cabbagetown (Parliament St) + touring Kingston/Markham/Oakville",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via citadelcie.com"
+  },
+  "narrative": {
+    "summary": "James Kudelka's Soudain l'Hiver Dernier + The Man in Black paired with Laurence Lemieux's Toi et Moi. Classic Canadian contemporary ballet repertoire. March 31\u2013April 2 tour.",
+    "blocks": []
+  }
+}

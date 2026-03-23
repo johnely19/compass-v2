@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ43RXb8E0K4gRpNM329xtxS4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ43RXb8E0K4gRpNM329xtxS4",
+    "name": "Grossman's Tavern",
+    "city": "Toronto",
+    "address": "377 Spadina Ave., Toronto, ON M5T 2G3, Canada",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Google Places"
+  },
+  "narrative": {
+    "summary": "Live jazz in a characterful room; reliable drop-in programming. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

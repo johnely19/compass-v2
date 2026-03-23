@@ -1,0 +1,96 @@
+{
+  "place_id": "ChIJD3H7Bi5yKk0R0BFMOnrqMSA",
+  "built": "2026-03-10T15:36:58.313Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJD3H7Bi5yKk0R0BFMOnrqMSA",
+    "name": "CottageVacations.com - Muskoka Waterfront",
+    "city": "Toronto",
+    "address": "14 King William St, Huntsville, ON P1H 1G5, Canada",
+    "type": "accommodation",
+    "phone": "(877) 218-5370",
+    "website": "http://www.cottagevacations.com/",
+    "rating": 4.6,
+    "user_rating_count": 92,
+    "location": "14 King William St, Huntsville, ON P1H 1G5, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd CottageVacations.com - Muskoka Waterfront\n14 King William St, Huntsville, ON P1H 1G5, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Cottagevacations.com - Muskoka Waterfront",
+        "body": "\ud83d\udccd CottageVacations.com - Muskoka Waterfront\n14 King William St, Huntsville, ON P1H 1G5, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nPrimary platform for Muskoka cottage rentals - has dedicated waterfront listings, variety from basic to luxurious"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://www.cottagevacations.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (92 reviews)\nPrice level: n/a\nPhone: (877) 218-5370\nWebsite: http://www.cottagevacations.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 14 King William St, Huntsville, ON P1H 1G5, Canada\n\n\u2022 walking: 2 days 3 hours \u2022 226 km\n\u2022 transit: unavailable\n\u2022 driving: 2 hours 20 mins \u2022 218 km (traffic: 2 hours 18 mins)\n\u2022 bicycling: 13 hours 21 mins \u2022 252 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (2 hours 20 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "14 King William St, Huntsville, ON P1H 1G5, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:28.949Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (2 hours 20 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 8399,
+        "durationText": "2 hours 20 mins",
+        "durationInTrafficSeconds": 8281,
+        "durationInTrafficText": "2 hours 18 mins",
+        "distanceMeters": 217969,
+        "distanceText": "218 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 183896,
+        "durationText": "2 days 3 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 225628,
+        "distanceText": "226 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 48046,
+        "durationText": "13 hours 21 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 251530,
+        "distanceText": "252 km"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "No route found",
+        "googleStatus": "ZERO_RESULTS"
+      }
+    ]
+  }
+}

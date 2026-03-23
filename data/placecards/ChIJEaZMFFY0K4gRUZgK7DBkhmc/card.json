@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJEaZMFFY0K4gRUZgK7DBkhmc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJEaZMFFY0K4gRUZgK7DBkhmc",
+    "name": "Imanishi Japanese Kitchen",
+    "city": "Toronto",
+    "address": "Dundas West / Little Portugal",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via yelp late-night Toronto"
+  },
+  "narrative": {
+    "summary": "Thoughtful Japanese cooking in a charming room; 4.5 rating, good for a late weeknight bite.",
+    "blocks": []
+  }
+}

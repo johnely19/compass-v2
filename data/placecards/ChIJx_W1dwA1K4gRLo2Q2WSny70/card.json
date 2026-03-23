@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJx_W1dwA1K4gRLo2Q2WSny70",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJx_W1dwA1K4gRLo2Q2WSny70",
+    "name": "OnePound",
+    "city": "Toronto",
+    "address": "Trinity Bellwoods / Dundas West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/bakery/one-pound-toronto/",
+    "url": "https://www.blogto.com/bakery/one-pound-toronto/"
+  },
+  "narrative": {
+    "summary": "Korean-style cake café with cloud-like confections; 4.8 rating with early fans. Quiet gem on Dundas W for soft pastry lovers.",
+    "blocks": []
+  }
+}

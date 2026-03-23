@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJOVIWNndxhlQRSImd0AeAIIQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJOVIWNndxhlQRSImd0AeAIIQ",
+    "name": "Guilt & Co",
+    "city": "Vancouver",
+    "address": "Gastown",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "yelp.ca",
+    "url": "https://www.yelp.ca/search?find_desc=Jazz+Bar&find_loc=Vancouver,+BC"
+  },
+  "narrative": {
+    "summary": "Underground live music venue in Gastown. Eclectic acts, intimate basement atmosphere. Perfect for a late-night stumble after dinner. 4.5 rating, 2,290 reviews. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

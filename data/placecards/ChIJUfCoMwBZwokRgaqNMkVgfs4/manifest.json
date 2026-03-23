@@ -1,0 +1,58 @@
+{
+  "place_id": "ChIJUfCoMwBZwokRgaqNMkVgfs4",
+  "images": [
+    {
+      "id": "map-1",
+      "category": "map",
+      "order": 0,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/map.png",
+      "caption": "📍 Border Town, Greenpoint, Brooklyn\n189 Nassau Ave, Brooklyn, NY 11222\n———————————————",
+      "source": "photo"
+    },
+    {
+      "id": "exterior-2",
+      "category": "exterior",
+      "order": 1,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/exterior.jpg",
+      "caption": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNassau Ave at Humboldt St — corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations.",
+      "source": "photo"
+    },
+    {
+      "id": "interior_vibe-3",
+      "category": "interior_vibe",
+      "order": 2,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/interior.jpg",
+      "caption": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nBig, bright, family-friendly. The tortilla station is right at the counter — watch Jorge roll them to order.",
+      "source": "photo"
+    },
+    {
+      "id": "food-4",
+      "category": "food",
+      "order": 3,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/drinks.jpg",
+      "caption": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n$15 cocktails — made with Mexican agave spirits, balanced for the food.\n\n🍸 Signatures:\n• Desert Negroni — Cardenxe sotol, botanical, smoky\n• Picafresa — strawberry-tequila-mezcal, spicy-sweet\n• Coco Carajillo — topped with coconut cream, dark chocolate\n• Cadillac Margarita\n\n🍺 Caguamas: 32oz Carta Blanca or Tecate wrapped in Mexican newspaper",
+      "source": "photo"
+    },
+    {
+      "id": "food-5",
+      "category": "food",
+      "order": 4,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_1.jpg",
+      "source": "album"
+    },
+    {
+      "id": "food-6",
+      "category": "food",
+      "order": 5,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_2.jpg",
+      "source": "album"
+    },
+    {
+      "id": "food-7",
+      "category": "food",
+      "order": 6,
+      "path": "/placecards/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_3.jpg",
+      "source": "album"
+    }
+  ]
+}

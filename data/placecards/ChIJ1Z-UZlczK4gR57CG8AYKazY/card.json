@@ -1,0 +1,100 @@
+{
+  "place_id": "ChIJ1Z-UZlczK4gR57CG8AYKazY",
+  "built": "2026-03-10T15:37:24.103Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJ1Z-UZlczK4gR57CG8AYKazY",
+    "name": "Shay",
+    "city": "Toronto",
+    "address": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
+    "type": "restaurant",
+    "phone": "(416) 921-7274",
+    "website": "http://sash.ca/",
+    "rating": 4.6,
+    "user_rating_count": 199,
+    "location": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Shay",
+        "body": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nFirst solo venture from Justin Friedlich (former Buca Yorkville chef) - Italian-inspired wine bar named after his daughter. Most anticipated 2026 opening"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://sash.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (199 reviews)\nPrice level: n/a\nPhone: (416) 921-7274\nWebsite: http://sash.ca/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1133 Yonge St, Toronto, ON M4T 2Y7, Canada\n\n• walking: 10 mins • 0.8 km\n• transit: 7 mins • 0.9 km\n• driving: 3 mins • 0.8 km (traffic: 2 mins)\n• bicycling: 2 mins • 0.8 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (10 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:15.065Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (10 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 207,
+        "durationText": "3 mins",
+        "durationInTrafficSeconds": 120,
+        "durationInTrafficText": "2 mins",
+        "distanceMeters": 773,
+        "distanceText": "0.8 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 594,
+        "durationText": "10 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 773,
+        "distanceText": "0.8 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 139,
+        "durationText": "2 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 773,
+        "distanceText": "0.8 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 408,
+        "durationText": "7 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 879,
+        "distanceText": "0.9 km"
+      }
+    ]
+  }
+}

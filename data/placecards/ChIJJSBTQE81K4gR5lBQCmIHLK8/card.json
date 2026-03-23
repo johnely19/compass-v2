@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJSBTQE81K4gR5lBQCmIHLK8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJSBTQE81K4gR5lBQCmIHLK8",
+    "name": "313 Design Market",
+    "city": "Toronto",
+    "address": "Roncesvalles",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via 313designmarket.com"
+  },
+  "narrative": {
+    "summary": "Artisan-focused design market with modern textiles, floor pillows, and kilim-inspired goods; current installation features fish-scale patterns.",
+    "blocks": []
+  }
+}

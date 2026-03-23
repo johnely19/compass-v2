@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJrY4E26DN1IkRzBaz81H3EVw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJrY4E26DN1IkRzBaz81H3EVw",
+    "name": "Aga Khan Museum",
+    "city": "Toronto",
+    "address": "Don Mills (Wynford Dr)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via archdaily.com"
+  },
+  "narrative": {
+    "summary": "Fumihiko Maki masterwork (2014)—Pritzker-winner minimalism with Islamic geometry. White granite + glass, reflecting pools. One of Toronto's greatest contemporary buildings.",
+    "blocks": []
+  }
+}

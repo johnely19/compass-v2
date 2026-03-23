@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJh2leSPU2K4gRyl33gw24rxQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJh2leSPU2K4gRyl33gw24rxQ",
+    "name": "Jazz Fridays at Old Mill Toronto",
+    "city": "Toronto",
+    "address": "Etobicoke / Humber Valley",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via torontoondemand.ca"
+  },
+  "narrative": {
+    "summary": "March jazz series: Lou Pomanti Quartet (soul-jazz, March 13 done), Alex Bird (March 20), Club Django Toronto (gypsy jazz, March 27). Historic venue. Intimate setting.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJY5Wn9VozK4gRtL3FOYDkE9Q",
+  "built": "2026-03-10T12:59:20.984Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJY5Wn9VozK4gRtL3FOYDkE9Q",
+    "name": "Capocaccia Trattoria",
+    "city": "Toronto",
+    "address": "1366 Yonge St, Toronto, ON M4T 3A7, Canada",
+    "type": "restaurant",
+    "phone": "(416) 921-3141",
+    "website": "https://www.capocaccia.ca/",
+    "location": "1366 Yonge St, Toronto, ON M4T 3A7, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Capocaccia Trattoria",
+        "body": "📍 Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (889 reviews)\nPhone: (416) 921-3141\nWebsite: https://www.capocaccia.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1366 Yonge St, Toronto, ON M4T 3A7, Canada\n\n• walking: 3 mins • 0.2 km\n• transit: 3 mins • 0.2 km\n• driving: 1 min • 0.2 km (traffic: 1 min)\n• bicycling: 1 min • 0.2 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (3 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1366 Yonge St, Toronto, ON M4T 3A7, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:02.468Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (3 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 55,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": 29,
+        "durationInTrafficText": "1 min",
+        "distanceMeters": 229,
+        "distanceText": "0.2 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 187,
+        "durationText": "3 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 229,
+        "distanceText": "0.2 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 32,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 229,
+        "distanceText": "0.2 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 187,
+        "durationText": "3 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 229,
+        "distanceText": "0.2 km"
+      }
+    ]
+  }
+}

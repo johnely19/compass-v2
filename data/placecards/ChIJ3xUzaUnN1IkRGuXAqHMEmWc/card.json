@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ3xUzaUnN1IkRGuXAqHMEmWc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ3xUzaUnN1IkRGuXAqHMEmWc",
+    "name": "Bluet Bakery",
+    "city": "Toronto",
+    "address": "Cabbagetown (Gerrard E)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/bakery/bluet-bakery-toronto/",
+    "url": "https://www.blogto.com/bakery/bluet-bakery-toronto/"
+  },
+  "narrative": {
+    "summary": "Perfect 5.0 rating; seasonal rotating cookies from a beloved pop-up gone brick-and-mortar; 77 reviews already.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ81rnZsw0K4gR4CIzkYYawjE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ81rnZsw0K4gR4CIzkYYawjE",
+    "name": "Toronto City Hall",
+    "city": "Toronto",
+    "address": "Downtown (Queen & Bay)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via re-thinkingthefuture.com"
+  },
+  "narrative": {
+    "summary": "Viljo Revell's 1965 modernist icon—twin curving towers cradle flying-saucer council chamber. Nathan Phillips Square is Toronto's civic soul.",
+    "blocks": []
+  }
+}

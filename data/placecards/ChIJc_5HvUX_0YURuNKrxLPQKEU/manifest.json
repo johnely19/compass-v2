@@ -1,0 +1,18 @@
+{
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/1.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "photo-2",
+      "path": "/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/2.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 2
+    }
+  ]
+}

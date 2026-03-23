@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ9eERzEk0K4gRqBIcDsgq3_k",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ9eERzEk0K4gRqBIcDsgq3_k",
+    "name": "Olga Korper Gallery",
+    "city": "Toronto",
+    "address": "Junction Triangle",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces"
+  },
+  "narrative": {
+    "summary": "4.7 rating, established gallery (since 1973) with museum-quality contemporary painting and sculpture",
+    "blocks": []
+  }
+}

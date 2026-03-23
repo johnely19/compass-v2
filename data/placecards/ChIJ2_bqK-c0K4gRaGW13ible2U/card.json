@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ2_bqK-c0K4gRaGW13ible2U",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ2_bqK-c0K4gRaGW13ible2U",
+    "name": "Bakka-Phoenix Books",
+    "city": "Toronto",
+    "address": "Harbord Village / Annex",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces:details",
+    "url": "https://www.bakkaphoenixbooks.com/"
+  },
+  "narrative": {
+    "summary": "Canada's oldest sci-fi/fantasy bookstore (since 1972); perfect for John's PKD and speculative fiction interests. 4.8 rating, deeply knowledgeable staff.",
+    "blocks": []
+  }
+}

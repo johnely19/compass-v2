@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ4cHb3800K4gRZRf9IDJF62o",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ4cHb3800K4gRZRf9IDJF62o",
+    "name": "National Ballet of Canada \u2014 Pinocchio",
+    "city": "Toronto",
+    "address": "Downtown (Queen St W)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via national.ballet.ca"
+  },
+  "narrative": {
+    "summary": "Will Tuckett choreography with Canadiana iconography, wire-flying, video projections. Final week \u2014 closes March 22. Four Seasons Centre.",
+    "blocks": []
+  }
+}

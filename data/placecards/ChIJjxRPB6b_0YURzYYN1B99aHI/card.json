@@ -1,0 +1,69 @@
+{
+  "place_id": "ChIJjxRPB6b_0YURzYYN1B99aHI",
+  "identity": {
+    "name": "Bot\u00e1nico",
+    "tagline": "Garden-feel indoor-outdoor restaurant in Condesa"
+  },
+  "location": {
+    "city": "Mexico City",
+    "neighborhood": "Condesa",
+    "address": "Alfonso Reyes 217, Colonia Condesa, Cuauht\u00e9moc, 06100 Ciudad de M\u00e9xico, CDMX, Mexico",
+    "lat": 19.4070422,
+    "lng": -99.1739748
+  },
+  "details": {
+    "category": "restaurant",
+    "priceLevel": 2,
+    "phone": "55 5271 2152"
+  },
+  "rating": {
+    "google": 4.1,
+    "reviewCount": 1310
+  },
+  "sections": [
+    {
+      "type": "narrative",
+      "text": "Lush garden-feel restaurant in Condesa with gorgeous indoor-outdoor space. Perfect for a relaxed brunch or morning-after vibes. Beautiful greenery and natural light. Rating 4.1/5 (1,310 reviews). $$."
+    }
+  ],
+  "hours": [
+    "Monday: Closed",
+    "Tuesday: 1:00 PM \u2013 1:00 AM",
+    "Wednesday: 1:00 PM \u2013 1:00 AM",
+    "Thursday: 1:00 PM \u2013 1:00 AM",
+    "Friday: 1:00 PM \u2013 1:00 AM",
+    "Saturday: 1:00 PM \u2013 1:00 AM",
+    "Sunday: 1:00 \u2013 11:00 PM"
+  ],
+  "source": {
+    "created": "2026-03-22T20:00:00Z",
+    "updated": "2026-03-22T20:00:00Z",
+    "discoveredBy": "test-concierge"
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "/data/placecards/ChIJjxRPB6b_0YURzYYN1B99aHI/images/exterior.jpg",
+        "category": "exterior",
+        "order": 1
+      },
+      {
+        "path": "/data/placecards/ChIJjxRPB6b_0YURzYYN1B99aHI/images/map.png",
+        "category": "map",
+        "order": 2
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "/data/placecards/ChIJjxRPB6b_0YURzYYN1B99aHI/images/exterior.jpg",
+      "caption": "Exterior view"
+    },
+    {
+      "type": "image",
+      "path": "/data/placecards/ChIJjxRPB6b_0YURzYYN1B99aHI/images/map.png",
+      "caption": "Map view"
+    }
+  ]
+}

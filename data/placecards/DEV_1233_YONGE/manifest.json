@@ -1,0 +1,40 @@
+{
+  "place_id": "DEV_1233_YONGE",
+  "images": [
+    {
+      "id": "rendering-1",
+      "category": "rendering",
+      "order": 1,
+      "path": "/developments/1233-yonge-hero.jpg",
+      "caption": "1233 Yonge Street rendering 1"
+    },
+    {
+      "id": "rendering-2",
+      "category": "rendering",
+      "order": 2,
+      "path": "/developments/1233-yonge-rendering-1.jpg",
+      "caption": "1233 Yonge Street rendering 2"
+    },
+    {
+      "id": "rendering-3",
+      "category": "rendering",
+      "order": 3,
+      "path": "/developments/1233-yonge-rendering-2.png",
+      "caption": "1233 Yonge Street rendering 3"
+    },
+    {
+      "id": "rendering-4",
+      "category": "rendering",
+      "order": 4,
+      "path": "/developments/1233-yonge-rendering-3.png",
+      "caption": "1233 Yonge Street rendering 4"
+    },
+    {
+      "id": "rendering-5",
+      "category": "rendering",
+      "order": 5,
+      "path": "/developments/1233-yonge-rendering-4.jpg",
+      "caption": "1233 Yonge Street rendering 5"
+    }
+  ]
+}

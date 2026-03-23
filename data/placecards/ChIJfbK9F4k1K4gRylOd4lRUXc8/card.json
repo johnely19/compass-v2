@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJfbK9F4k1K4gRylOd4lRUXc8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJfbK9F4k1K4gRylOd4lRUXc8",
+    "name": "Bar Poet",
+    "city": "Toronto",
+    "address": "Queen West (Trinity Bellwoods)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via yelp late-night Toronto"
+  },
+  "narrative": {
+    "summary": "Wine bar + small plates that runs late; 4.5 rating, neighborhood anchor vibes.",
+    "blocks": []
+  }
+}

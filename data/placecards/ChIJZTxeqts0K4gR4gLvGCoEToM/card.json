@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJZTxeqts0K4gR4gLvGCoEToM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZTxeqts0K4gR4gLvGCoEToM",
+    "name": "401 Richmond Building",
+    "city": "Toronto",
+    "address": "Queen West",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Artist-run centre hub, currently hosting Tangled Art 'Sound/Unsound: Internet Songlines' through May 1",
+    "blocks": []
+  }
+}

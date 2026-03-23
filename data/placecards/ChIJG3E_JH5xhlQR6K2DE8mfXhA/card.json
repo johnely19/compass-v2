@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJG3E_JH5xhlQR6K2DE8mfXhA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJG3E_JH5xhlQR6K2DE8mfXhA",
+    "name": "Moda Hotel",
+    "city": "Vancouver",
+    "address": "900 Seymour St, Vancouver, BC V6B 3L9",
+    "type": "hotel"
+  },
+  "discovery": {
+    "text": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 — lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
+    "url": "https://www.booking.com/hotel/ca/m-vancouver-british-columbia.html"
+  },
+  "narrative": {
+    "summary": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 — lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
+    "blocks": []
+  }
+}

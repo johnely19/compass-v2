@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJh_CLcTI1K4gRYGzUbWLYsm0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJh_CLcTI1K4gRYGzUbWLYsm0",
+    "name": "PREQUEL & CO. APOTHECARY",
+    "city": "Toronto",
+    "address": "Queen West",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via foodism speakeasies"
+  },
+  "narrative": {
+    "summary": "Frankie Solarik's (BarChef) experiential cocktail concept styled like 1800s Paris pharmacy; 4.6 rating, open til 2am weekends.",
+    "blocks": []
+  }
+}

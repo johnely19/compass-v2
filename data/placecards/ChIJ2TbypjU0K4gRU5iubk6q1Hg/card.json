@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ2TbypjU0K4gRU5iubk6q1Hg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ2TbypjU0K4gRU5iubk6q1Hg",
+    "name": "Another Story Bookshop",
+    "city": "Toronto",
+    "address": "Roncesvalles",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via anotherstory.ca"
+  },
+  "narrative": {
+    "summary": "Progressive, inclusive curation—feminist/queer/social justice lit. Highest-rated (4.9★) in city.",
+    "blocks": []
+  }
+}

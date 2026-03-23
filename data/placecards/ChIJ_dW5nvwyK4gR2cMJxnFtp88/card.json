@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJ_dW5nvwyK4gR2cMJxnFtp88",
+  "built": "2026-03-10T12:59:28.152Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJ_dW5nvwyK4gR2cMJxnFtp88",
+    "name": "Pusateri's Fine Foods",
+    "city": "Toronto",
+    "address": "1539 Avenue Rd, Toronto, ON M5M 3X4, Canada",
+    "type": "grocery",
+    "phone": "(416) 785-9100",
+    "website": "https://www.pusateris.com/",
+    "location": "1539 Avenue Rd, Toronto, ON M5M 3X4, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Pusateri's Fine Foods\n1539 Avenue Rd, Toronto, ON M5M 3X4, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Food",
+        "body": "📍 Pusateri's Fine Foods\n1539 Avenue Rd, Toronto, ON M5M 3X4, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4 (567 reviews)\nPhone: (416) 785-9100\nWebsite: https://www.pusateris.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1539 Avenue Rd, Toronto, ON M5M 3X4, Canada\n\n• walking: 1 hour 6 mins • 4.6 km\n• transit: 32 mins • 5.6 km\n• driving: 13 mins • 4.8 km (traffic: 10 mins)\n• bicycling: 21 mins • 5.4 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1539 Avenue Rd, Toronto, ON M5M 3X4, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:09.759Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (13 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 758,
+        "durationText": "13 mins",
+        "durationInTrafficSeconds": 572,
+        "durationInTrafficText": "10 mins",
+        "distanceMeters": 4846,
+        "distanceText": "4.8 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3969,
+        "durationText": "1 hour 6 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4633,
+        "distanceText": "4.6 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1283,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5365,
+        "distanceText": "5.4 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1929,
+        "durationText": "32 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5599,
+        "distanceText": "5.6 km"
+      }
+    ]
+  }
+}

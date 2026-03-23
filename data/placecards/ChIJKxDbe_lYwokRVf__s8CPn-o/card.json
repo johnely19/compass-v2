@@ -1,0 +1,40 @@
+{
+  "place_id": "ChIJKxDbe_lYwokRVf__s8CPn-o",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJKxDbe_lYwokRVf__s8CPn-o",
+    "name": "MoMA \u2014 Marcel Duchamp Retrospective",
+    "city": "New York",
+    "address": "11 W 53rd St, New York, NY 10019, USA",
+    "website": "https://www.moma.org/",
+    "price_level": 3,
+    "location": "11 W 53rd St, New York, NY 10019, USA",
+    "lat": 40.76134920000001,
+    "lng": -73.9773325
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n53rd St between 5th and 6th \u2014 the temple of modern art.\n\nThe first major North American Duchamp retrospective in over 50 years. Nearly 300 works spanning six decades. Opens April 12, 2026.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n11 W 53rd St \u2014 the Steven and Alexandra Cohen Center for Special Exhibitions.\n\n\"Why is this art?\" \u2014 the question that hovers over every corner of contemporary art is virtually impossible to answer without Marcel Duchamp. This is the show that reframes everything. Nearly 300 works across all mediums, spanning Duchamp's six-decade career. The last North American retrospective of this scale was over 50 years ago. If you care about why art looks the way it does today, this is pilgrimage."
+      },
+      {
+        "id": "block-2",
+        "title": "The Exhibition",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd8\ud835\uddeb\ud835\udddb\ud835\udddc\ud835\uddd5\ud835\udddc\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\n\nDuchamp (1887\u20131968) \u2014 the man who put a urinal in a gallery and called it art. But that reductive reading misses the depth. This retrospective traces his evolution from early Cubist paintings through the readymades, the Large Glass, the chess obsession, and into \u00c9tant donn\u00e9s \u2014 the secret installation he worked on for 20 years.\n\nExpect to see:\n\u2022 Nude Descending a Staircase (No. 2) \u2b50\n\u2022 Fountain (1917) \u2014 the readymade that changed everything\n\u2022 The Bride Stripped Bare by Her Bachelors, Even (The Large Glass) \u2b50\n\u2022 Bicycle Wheel, Bottle Rack, and other readymades\n\u2022 Chess sets and correspondence\n\u2022 Works across painting, sculpture, film, photography, and ephemera\n\nFor John: Duchamp sits at the intersection of your interests \u2014 the existentialist questioning, the Cubist roots, the radical reimagining of what art can be. This is essential."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 Admission: $30 adults, $22 seniors, $17 students. Free Fridays 4-8pm (first-come)\n\n\ud83c\udf10 moma.org/calendar/exhibitions/5820\n\ud83d\udcde (212) 708-9400\n\n\ud835\udde2\ud835\udde1 \ud835\udde9\ud835\udddc\ud835\uddd8\ud835\uddea: April 12 \u2013 August 22, 2026\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon\u2013Thu, Sat\u2013Sun: 10:30 AM \u2013 5:30 PM\nFriday: 10:30 AM \u2013 8:30 PM\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Weekday morning: Smallest crowds, most contemplative\n\u2022 Friday evening (4-8pm): Free admission but crowded\n\u2022 Allow 2-3 hours for this show \u2014 300 works demands time\n\u2022 Combine with the permanent collection (Starry Night, Demoiselles d'Avignon)"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco via neighbourhood research",
+    "url": "https://www.moma.org/"
+  }
+}

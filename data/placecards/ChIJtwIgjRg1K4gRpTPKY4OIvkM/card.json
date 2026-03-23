@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJtwIgjRg1K4gRpTPKY4OIvkM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJtwIgjRg1K4gRpTPKY4OIvkM",
+    "name": "Paradise Grapevine Winery",
+    "city": "Toronto",
+    "address": "Geary Ave (Davenport)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "https://paradisegrapevine.com/",
+    "url": "https://paradisegrapevine.com/"
+  },
+  "narrative": {
+    "summary": "Urban winery making wine on-site + natty wine bar; late-night hours Wed–Sat, industrial-cool Geary Ave corridor. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

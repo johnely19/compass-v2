@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ1SlYMMI0K4gR-1WFuJQc2rc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ1SlYMMI0K4gR-1WFuJQc2rc",
+    "name": "Blackbird Baking Co.",
+    "city": "Toronto",
+    "address": "Kensington Market",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Yelp/TripAdvisor consensus"
+  },
+  "narrative": {
+    "summary": "Serious bread bakery; crusty loaves and excellent croissants; also has Riverside location.",
+    "blocks": []
+  }
+}

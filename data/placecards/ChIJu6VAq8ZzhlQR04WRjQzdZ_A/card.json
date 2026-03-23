@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJu6VAq8ZzhlQR04WRjQzdZ_A",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJu6VAq8ZzhlQR04WRjQzdZ_A",
+    "name": "Salmon n' Bannock",
+    "city": "Vancouver",
+    "address": "Fairview",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "destinationvancouver.com",
+    "url": "https://www.destinationvancouver.com/inspirations/food-and-drink/indigenous-dining-and-artisanal-food-in-vancouver"
+  },
+  "narrative": {
+    "summary": "Vancouver's ONLY Indigenous restaurant. Owner Inez Cook. Signature bannock, wild salmon, game meats. Culturally significant and genuinely delicious. 4.7 rating. Sunday brunch service too. A must for experiencing something you can't get anywhere else. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

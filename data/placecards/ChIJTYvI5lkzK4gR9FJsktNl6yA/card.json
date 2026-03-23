@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJTYvI5lkzK4gR9FJsktNl6yA",
+  "built": "2026-03-22T10:56:40.963Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJTYvI5lkzK4gR9FJsktNl6yA",
+    "name": "Seahorse",
+    "address": "",
+    "phone": "(437) 538-4518",
+    "website": "https://seahorserestaurant.ca",
+    "price_level": 4
+  },
+  "narrative": {
+    "summary": "📍 Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n———————————————",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Seahorse, Summerhill, Toronto",
+        "body": "📍 Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n———————————————"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSummerhill — Yonge Street just north of Summerhill station\n\nModern French brasserie in a 130-year-old room. Exposed brick, warm wood, tawny leather banquettes, original floors. The focal point is the L-shaped oyster bar lined with chrome-and-cerulean stools."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\nFreshly squeezed citrus, thoughtful cocktails. Richard Renaud (co-owner) often behind the bar shaking drinks with a juicer he brought from home.\n\n🍸 **Signature cocktails:**\n• Olive Oil Sour — $19. Light, fruity, buttery. Amaretto, Amaro, olive oil, egg white foam.\n• Salted Peanut Espresso Martini — $21. Salty, nutty, bitter espresso. Inspired by Nashville peanut butter whiskey.\n\nOne-liner: \"Part tropical cocktail, part cozy campfire concoction.\""
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n**RAW BAR**\n• Small Ice Box — $48 ⭐\n  Oysters, mussel escabeche, wild Argentinian shrimp, dry-aged kampachi crudo\n• Large Ice Box — $68\n  Larger portions of everything above\n\n**APPETIZERS**\n• Tuna Tartare — $25 ⭐\n  Canadian bluefin tuna, white soy, fermented plum vinegar, crème fraîche, finger lime\n• Scallop Aguachile — $33\n  Hokkaido scallops, yuzu, Calabrian chili oil\n• Seahorse Salad — $19\n  Frilly lolla rossa lettuce, puffed grains, pickled chanterelles, buttermilk dressing\n\n**MAINS**\n• The Fish — $29 ⭐\n  Smoky Atlantic mackerel, grilled kale, salsa verde\n• East Coast Scallops — $31\n  Pan-seared, golden-brown crust, béarnaise\n• Octopus — $69\n  With silky seafood sauce (like lobster bisque)\n\n**DESSERT**\n• Pear Cake — $16\n  Warm, cloud-like crumb, caramel sauce, subtle pear\n• Soft-Serve Ice Cream — $10\n  Olive oil drizzle, Maldon salt, pistachios\n\n**Note:** Portions are shareable. Menu is concise, designed for tasting."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$$ (High-end seafood)\n\n**Dinner for 2:** $150-250 (with drinks, sharing plates)\n\n**Reservations:** OpenTable\n**Walk-ins:** Limited — 38 seats, intimate space\n\n📞 (437) 538-4518\n🌐 seahorserestaurant.ca\n\n𝗛𝗢𝗨𝗥𝗦\nMonday: Closed\nTuesday–Thursday: 4–10pm\nFriday–Saturday: 4–11pm  \nSunday: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• **Weekday evenings (Tue–Thu)** — Quieter, easier to get a table\n• **Avoid weekends** — Small space fills quickly\n• **Oyster happy hour?** Not currently, but check for seasonal promotions\n• **Seasonal note:** Summerhill neighborhood is walkable in warmer months — perfect for pre-dinner stroll\n\n**The team:** Co-owners Simon Bower (Lucien, Mercer Street Grill) + Richard Renaud (Piano Piano), Executive Chef Federico Garcia (ex-George, Quetzal sous chef), Eamon Clark (11-time national oyster-shucking champion)."
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1226 Yonge St, Toronto, ON M4T 1W3\n\n• walking: 8 mins • 0.7 km\n• transit: 8 mins • 0.7 km\n• driving: 2 mins • 0.7 km (traffic: 2 mins)\n• bicycling: 1 min • 0.7 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (8 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1226 Yonge St, Toronto, ON M4T 1W3",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:51.844Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (8 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 144,
+        "durationText": "2 mins",
+        "durationInTrafficSeconds": 105,
+        "durationInTrafficText": "2 mins",
+        "distanceMeters": 656,
+        "distanceText": "0.7 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 498,
+        "durationText": "8 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 656,
+        "distanceText": "0.7 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 84,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 656,
+        "distanceText": "0.7 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 498,
+        "durationText": "8 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 656,
+        "distanceText": "0.7 km"
+      }
+    ]
+  }
+}

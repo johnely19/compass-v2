@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJMXCbgWo1K4gR3mUQ5toU9lo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJMXCbgWo1K4gR3mUQ5toU9lo",
+    "name": "and/ore",
+    "city": "Toronto",
+    "address": "Queen West (Ossington edge)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "https://starwinelist.com/wine-guide/toronto-wine-restaurants-bars",
+    "url": "https://starwinelist.com/wine-guide/toronto-wine-restaurants-bars"
+  },
+  "narrative": {
+    "summary": "Split-personality stunner — light & playful upstairs, dark & dramatic downstairs; Star Wine List 2026 pick. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJqVlUDwA1K4gR9SSpCKfksXA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJqVlUDwA1K4gR9SSpCKfksXA",
+    "name": "Mabel's Bakery",
+    "city": "Toronto",
+    "address": "St Clair West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Yelp"
+  },
+  "narrative": {
+    "summary": "Near John's hood; specialty foods + bakery combo; solid neighborhood staple.",
+    "blocks": []
+  }
+}

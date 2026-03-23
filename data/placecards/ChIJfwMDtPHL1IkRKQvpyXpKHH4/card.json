@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJfwMDtPHL1IkRKQvpyXpKHH4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJfwMDtPHL1IkRKQvpyXpKHH4",
+    "name": "Winter Stations 2026: Mirage",
+    "city": "Toronto",
+    "address": "Woodbine Beach (The Beaches)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via azuremagazine.com"
+  },
+  "narrative": {
+    "summary": "12th annual architectural art installation on the beach. Five artist/architect-designed follies responding to the theme 'mirage.' Covered by Azure Magazine. Free, outdoor. Through March 30.",
+    "blocks": []
+  }
+}

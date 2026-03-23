@@ -1,0 +1,18 @@
+{
+  "place_id": "PENDING_OPENS_APR9",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "PENDING_OPENS_APR9",
+    "name": "Riley's Fish & Steak (pre-opening)",
+    "city": "Toronto",
+    "address": "Financial District / Wellington (155 Wellington St W)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "stephaniedickison.com"
+  },
+  "narrative": {
+    "summary": "Michelin-recommended Vancouver chophouse opening April 9. Custom-built live music stage. Tableside presentations, whole salt-crusted sea bass. From Glowbal Group (Black+Blue). Not yet on Google Maps. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJf_-k0RPb1IkRtfhe1sSDl2U",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJf_-k0RPb1IkRtfhe1sSDl2U",
+    "name": "Clark Centre for the Arts - Yue Gao: Constructed Light",
+    "city": "Toronto",
+    "address": "Scarborough / Guild Park",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via toronto.ca"
+  },
+  "narrative": {
+    "summary": "Scarborough artist exploring light, geometry, stillness. Free. Through March 30. Combine with Guild Park walk.",
+    "blocks": []
+  }
+}

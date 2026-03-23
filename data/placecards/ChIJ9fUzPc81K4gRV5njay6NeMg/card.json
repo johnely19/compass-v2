@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ9fUzPc81K4gRV5njay6NeMg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ9fUzPc81K4gRV5njay6NeMg",
+    "name": "TRE - Viet Heritage Kitchen & Bar",
+    "city": "Toronto",
+    "address": "Yonge & Dundas (31 Elm St, 2nd floor)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via insauga.com"
+  },
+  "narrative": {
+    "summary": "Heritage Vietnamese with serious technique — sá sùng (sea worm) in the pho broth, fish sauce glazed wings, head chef Chau Du. Second-floor hidden spot. Already open, 4.8★ (26 reviews).",
+    "blocks": []
+  }
+}

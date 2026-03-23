@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJiQiJDZTN1IkRTgoWXTMVn1Q",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJiQiJDZTN1IkRTgoWXTMVn1Q",
+    "name": "ÉTAPE 22",
+    "city": "Toronto",
+    "address": "Avenue & Davenport (182 Davenport Rd, Lower Level)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via stephaniedickison.com"
+  },
+  "narrative": {
+    "summary": "Minimalist cycling apparel + coffee shop. Design-forward retail/café hybrid. 5.0★ (29 reviews). Near John's area. Soft-opened March 2026.",
+    "blocks": []
+  }
+}

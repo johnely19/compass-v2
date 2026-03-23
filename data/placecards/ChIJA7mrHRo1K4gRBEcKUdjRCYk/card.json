@@ -1,0 +1,17 @@
+{
+  "place_id": "ChIJA7mrHRo1K4gRBEcKUdjRCYk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJA7mrHRo1K4gRBEcKUdjRCYk",
+    "name": "Unknown Place (ChIJA7mrHRo1K4gRBEcKUdjRCYk)",
+    "address": "Address pending",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Disco discovery"
+  },
+  "narrative": {
+    "summary": "This place surfaced in Disco as a high-signal pick. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

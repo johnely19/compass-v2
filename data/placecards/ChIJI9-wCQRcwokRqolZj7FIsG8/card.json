@@ -1,0 +1,21 @@
+{
+  "place_id": "ChIJI9-wCQRcwokRqolZj7FIsG8",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:40Z",
+  "identity": {
+    "place_id": "ChIJI9-wCQRcwokRqolZj7FIsG8",
+    "name": "Yours Sincerely",
+    "address": "41 Wilson Ave, Brooklyn, NY 11237, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.7,
+    "user_ratings_total": 344,
+    "price_level": 2,
+    "types": [
+      "bar",
+      "cocktail_bar",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

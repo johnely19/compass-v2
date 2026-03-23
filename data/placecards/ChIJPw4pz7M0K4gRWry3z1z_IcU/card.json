@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJPw4pz7M0K4gRWry3z1z_IcU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJPw4pz7M0K4gRWry3z1z_IcU",
+    "name": "Glad Day Bookshop",
+    "city": "Toronto",
+    "address": "Church & Wellesley (Village)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via LSE Review of Books"
+  },
+  "narrative": {
+    "summary": "World's oldest LGBTQ+ bookshop (est. 1970); now bookshop + bar + café + event venue—cultural landmark, 4.7 rating.",
+    "blocks": []
+  }
+}

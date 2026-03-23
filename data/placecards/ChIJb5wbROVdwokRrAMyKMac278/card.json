@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJb5wbROVdwokRrAMyKMac278",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJb5wbROVdwokRrAMyKMac278",
+    "name": "Arrigo's of Fresh Pond Rd",
+    "city": "NYC",
+    "address": "Ridgewood (71-08 Fresh Pond Rd)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://ny.eater.com/maps/best-new-queens-restaurants-heatmap",
+    "url": "https://ny.eater.com/maps/best-new-queens-restaurants-heatmap"
+  },
+  "narrative": {
+    "summary": "From the Daphne's team — Italian sandwich shop by day, 25-seat restaurant by night. Chef Paul Cacici's pasta and Italian plates. 4.8★ (131 reviews). Eater Queens and The Infatuation both list it as a Ridgewood standout.",
+    "blocks": []
+  }
+}

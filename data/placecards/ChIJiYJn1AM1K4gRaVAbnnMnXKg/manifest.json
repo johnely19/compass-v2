@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJiYJn1AM1K4gRaVAbnnMnXKg",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "/place-photos/ChIJiYJn1AM1K4gRaVAbnnMnXKg/photos/1.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "photo-2",
+      "path": "/place-photos/ChIJiYJn1AM1K4gRaVAbnnMnXKg/photos/2.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 2
+    }
+  ]
+}

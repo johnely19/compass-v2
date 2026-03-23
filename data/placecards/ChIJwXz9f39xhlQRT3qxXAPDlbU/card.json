@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJwXz9f39xhlQRT3qxXAPDlbU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJwXz9f39xhlQRT3qxXAPDlbU",
+    "name": "Vancouver Art Gallery",
+    "city": "Vancouver",
+    "address": "Downtown",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "vanartgallery.bc.ca",
+    "url": "https://www.vanartgallery.bc.ca/exhibitions-and-events/"
+  },
+  "narrative": {
+    "summary": "Multiple exhibitions running in April 2026: Future Gallery (Feb 6 - Nov 8), plus new exhibitions opening March 27. The building itself was converted by Erickson from a neoclassical courthouse. Check specific shows closer to date. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

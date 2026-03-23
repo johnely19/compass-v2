@@ -1,0 +1,45 @@
+{
+  "place_id": "ChIJmzPYgJFZwokRg4zUwTlZwtI",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJmzPYgJFZwokRg4zUwTlZwtI",
+    "name": "Comedy Cellar",
+    "city": "New York",
+    "address": "117 MacDougal St, New York, NY 10012, USA",
+    "website": "http://comedycellar.com/",
+    "price_level": 3,
+    "location": "117 MacDougal St, New York, NY 10012, USA",
+    "lat": 40.7302031,
+    "lng": -74.0005719
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMacDougal St between W 3rd and Minetta Lane \u2014 look for the neon sign and the stairs going down.\n\nThe most important comedy club in America. Where Chappelle drops in. Where Seinfeld cut his teeth. Where the next great comic is bombing right now.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMacDougal St between W 3rd and Minetta Lane \u2014 look for the neon sign and the stairs going down.\n\nYou descend into the basement and the room shrinks to maybe 115 seats. The ceiling is low. The stage is close enough to touch. This is the Comedy Cellar \u2014 where legends sharpen their material and unknowns become legends. Chappelle, Rock, Seinfeld, Schumer, Mulaney \u2014 they've all stood on this tiny stage. On any given night, a headliner might drop in unannounced to work out new bits."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nBrick walls, low ceilings, cocktail tables packed tight. You're in the comedian's living room. The intimacy is the point \u2014 you can see the sweat, the pauses, the moment a joke lands or dies. The original room holds about 115; the Village Underground next door and Fat Black Pussycat upstairs expand the empire. The Olive Tree Caf\u00e9 above serves as the legendary green room where comics eat between sets."
+      },
+      {
+        "id": "block-3",
+        "title": "The Show",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udddb\ud835\udde2\ud835\uddea\n\nTypical lineups run 5-7 comics per show, each doing 15-20 minutes. The house emcee warms you up, then it's a parade of talent \u2014 established headliners mixed with rising stars. Drop-in sets happen regularly, especially late-night on weekends. You might see someone testing material for a Netflix special.\n\n\u2b50 The late shows (9:30pm+) are where surprise drop-ins happen most\n\u2b50 Weeknight shows often have the best lineups \u2014 comics trying new material"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$\n\nCover: ~$24-35 + two-drink minimum\nDrinks: $10-16 cocktails, $8-12 beer/wine\n\nReservations: Book online at comedycellar.com \u2014 shows sell out, especially weekends\n\n\ud83c\udf10 comedycellar.com\n\ud83d\udcde (212) 254-3480\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nShows daily 11:00 AM \u2013 3:00 AM\nMultiple shows nightly (typically 7:30, 9:30, 11:30)\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Tuesday/Wednesday: Comics testing new material, smaller crowds\n\u2022 Late Saturday (11:30pm): Drop-in territory\n\u2022 Arrive 30 min early \u2014 seating is first-come in the room"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "NYC comedy institution \u2014 surprise drop-ins",
+    "url": "https://www.comedycellar.com/"
+  }
+}

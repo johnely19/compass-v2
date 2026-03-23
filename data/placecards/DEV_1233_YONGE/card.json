@@ -1,0 +1,67 @@
+{
+  "place_id": "DEV_1233_YONGE",
+  "source": "developments-seed",
+  "identity": {
+    "place_id": "DEV_1233_YONGE",
+    "name": "1233 Yonge Street",
+    "city": "Toronto",
+    "address": "1233 Yonge St & 9 Woodlawn Ave E, Toronto, ON (SE corner Yonge & Woodlawn)",
+    "type": "development"
+  },
+  "discovery": {
+    "text": "Discovered via development tracker"
+  },
+  "narrative": {
+    "summary": "The most controversial development in Summerhill. Originally a modest 13-storey proposal, it has ballooned to 49-53 storeys — right at Summerhill Station. Replaces an existing 3-storey rental building. Includes 40 rental replacement units. Grey brick base with white metal tower. The jump from 13 to 53 storeys is aggressive and has drawn significant neighbourhood opposition.",
+    "blocks": []
+  },
+  "development": {
+    "status": "Under review — City hearing April 1",
+    "storeys": "49-53 storeys (163.5m)",
+    "units": "724-764 units (studios, 1BR, 2BR, 3BR)",
+    "keyDates": [
+      {
+        "label": "Original application",
+        "date": "2021-12-01",
+        "note": "13 storeys, 110 units"
+      },
+      {
+        "label": "Major revision",
+        "date": "2023-05-10",
+        "note": "Jumped to 49 storeys, 764 units — 36 extra storeys"
+      },
+      {
+        "label": "Latest revision",
+        "date": "2024-11-01",
+        "note": "Further increased to 53 storeys per UrbanToronto"
+      },
+      {
+        "label": "City committee hearing",
+        "date": "2026-04-01",
+        "note": "Bousfields presenting to committee — 2 weeks away!"
+      }
+    ],
+    "developer": "Plazacorp / Firm Capital (operating as 1233Y Development LP)",
+    "architect": "Arcadis (IBI Group), originally BDP Quadrangle",
+    "neighbourhood": "Summerhill",
+    "transitContext": "Immediate access to Summerhill Station (Line 1).",
+    "sources": [
+      {
+        "name": "UrbanToronto Database",
+        "url": "https://urbantoronto.ca/database/projects/1233-yonge.46977"
+      },
+      {
+        "name": "Storeys — Revised Proposal (June 2023)",
+        "url": "https://storeys.com/revised-proposal-49-storeys-yonge-street-summerhill-station/"
+      },
+      {
+        "name": "BlogTO — Keeps Getting Taller (Nov 2024)",
+        "url": "https://www.blogto.com/real-estate-toronto/2024/11/1233-yonge-street-toronto/"
+      },
+      {
+        "name": "Summerhill Residents Association",
+        "url": "https://summerhillresidentsassociation.ca/f/new-development-1233-yonge-st-and-9-woodlawn-east"
+      }
+    ]
+  }
+}

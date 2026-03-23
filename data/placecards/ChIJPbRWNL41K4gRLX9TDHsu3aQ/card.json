@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJPbRWNL41K4gRLX9TDHsu3aQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJPbRWNL41K4gRLX9TDHsu3aQ",
+    "name": "Lonely Diner",
+    "city": "Toronto",
+    "address": "Kensington / College",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://bartenderatlas.com/features/bars/where-were-drinking-in-toronto-the-new-bars/",
+    "url": "https://bartenderatlas.com/features/bars/where-were-drinking-in-toronto-the-new-bars/"
+  },
+  "narrative": {
+    "summary": "Transportive 60s cocktail-bar homage with standout lighting; drinks deliver beyond the gimmick.",
+    "blocks": []
+  }
+}

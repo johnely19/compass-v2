@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJoT46qSc1K4gRaiEwckaSG2U",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJoT46qSc1K4gRaiEwckaSG2U",
+    "name": "BSMT254",
+    "city": "Toronto",
+    "address": "Lansdowne (Wallace Emerson)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via bsmt254.com"
+  },
+  "narrative": {
+    "summary": "Basement venue, 4.7 rating (highest in category). DJ nights + live music events in a raw underground space. Hosting GETAWAY party Mar 21.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJd6qMg9w0K4gRJLQ6fdW-WEU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJd6qMg9w0K4gRJLQ6fdW-WEU",
+    "name": "The Cameron House",
+    "city": "Toronto",
+    "address": "408 Queen St W, Toronto, ON M5V 2A7, Canada",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Google Places"
+  },
+  "narrative": {
+    "summary": "Live jazz in a characterful room; reliable drop-in programming. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

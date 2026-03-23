@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJj_wIbTrL1IkRn6Mu5QaKQQY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJj_wIbTrL1IkRn6Mu5QaKQQY",
+    "name": "Klaus",
+    "city": "Toronto",
+    "address": "King East (296 King St E)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via klausn.com"
+  },
+  "narrative": {
+    "summary": "Curated European design furniture showroom — serious pieces from Vitra, Moooi, Tom Dixon, and others. Not retail browsing — a design destination for people who care about the craft. 4.2★ (23 reviews).",
+    "blocks": []
+  }
+}

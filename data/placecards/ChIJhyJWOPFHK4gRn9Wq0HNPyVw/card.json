@@ -1,0 +1,90 @@
+{
+  "place_id": "ChIJhyJWOPFHK4gRn9Wq0HNPyVw",
+  "built": "2026-03-10T13:01:14.360Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJhyJWOPFHK4gRn9Wq0HNPyVw",
+    "name": "Blooming Batter",
+    "city": "NYC",
+    "address": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
+    "location": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Blooming Batter",
+        "body": "📍 Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (271 reviews)"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada\n\n• walking: 6 days 22 hours • 448 mi\n• transit: 12 hours 42 mins • 500 mi\n• driving: 7 hours 39 mins • 463 mi (traffic: 7 hours 42 mins)\n• bicycling: 2 days 4 hours • 612 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (7 hours 39 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:29.094Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (7 hours 39 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 27531,
+        "durationText": "7 hours 39 mins",
+        "durationInTrafficSeconds": 27734,
+        "durationInTrafficText": "7 hours 42 mins",
+        "distanceMeters": 745163,
+        "distanceText": "463 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 595819,
+        "durationText": "6 days 22 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 721511,
+        "distanceText": "448 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 188971,
+        "durationText": "2 days 4 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 984474,
+        "distanceText": "612 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 45735,
+        "durationText": "12 hours 42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 805033,
+        "distanceText": "500 mi"
+      }
+    ]
+  }
+}

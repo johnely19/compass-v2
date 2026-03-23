@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJZ9SfxVM1K4gReZisE95Au9E",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZ9SfxVM1K4gReZisE95Au9E",
+    "name": "Patel Brown",
+    "city": "Toronto",
+    "address": "Junction/Wade Ave",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces"
+  },
+  "narrative": {
+    "summary": "4.8 rating, South Asian-focused contemporary gallery with critical edge — exactly the kind of voice-forward space John's interested in",
+    "blocks": []
+  }
+}

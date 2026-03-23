@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJXSuiypE0K4gRrrpz-eLUTio",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJXSuiypE0K4gRrrpz-eLUTio",
+    "name": "918 Bathurst Centre",
+    "city": "Toronto",
+    "address": "Annex / Bathurst",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via todocanada.ca"
+  },
+  "narrative": {
+    "summary": "Toronto premiere of Sam Holcroft's 'A Mirror'—award-winning British playwright; ARC production; intimate venue. Runs Mar 11–28.",
+    "blocks": []
+  }
+}

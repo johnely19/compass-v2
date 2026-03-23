@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJY62OJvw0K4gR-j35TDeWJrE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJY62OJvw0K4gR-j35TDeWJrE",
+    "name": "The Lunch Lady of Saigon",
+    "city": "Toronto",
+    "address": "Ossington (93 Ossington Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "houseandhome.com"
+  },
+  "narrative": {
+    "summary": "Michelin-awarded Vietnamese from Vancouver. House & Home featured their beef pasta stir-fry as a 2026 food trend highlight. 4.5★ (1045 reviews), 4.7 on OpenTable (639 reviews). Cool Vietnamese street food with chef-driven intention. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

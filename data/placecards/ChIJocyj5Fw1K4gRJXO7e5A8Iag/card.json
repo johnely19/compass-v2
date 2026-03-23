@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJocyj5Fw1K4gRJXO7e5A8Iag",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJocyj5Fw1K4gRJXO7e5A8Iag",
+    "name": "Liliana",
+    "city": "Toronto",
+    "address": "Parkdale / Queen West (1198 Queen St W)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via tastetoronto.substack.com",
+    "url": "https://foodism.ca/eat-drink/bars-restaurants/best-new-italian-restaurants-toronto/"
+  },
+  "narrative": {
+    "summary": "Former Vela chef Marvin Palomo. Asian-Italian fusion with fully halal-certified meat program — a first for this stretch of Queen. Szechuan demi, umeboshi, dashi vinaigrette alongside Italian staples. 4.9★ (214 reviews).",
+    "blocks": []
+  }
+}

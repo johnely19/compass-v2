@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJP_4FULnL1IkR_6waRIwSVrY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJP_4FULnL1IkR_6waRIwSVrY",
+    "name": "Java Roasters",
+    "city": "Toronto",
+    "address": "Carlaw/Leslieville",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Sprudge 2025"
+  },
+  "narrative": {
+    "summary": "Women-owned micro-roaster, obsessed with quality, supplies cool cafes like Fix",
+    "blocks": []
+  }
+}

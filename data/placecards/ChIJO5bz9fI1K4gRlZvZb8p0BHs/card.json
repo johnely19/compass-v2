@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJO5bz9fI1K4gRlZvZb8p0BHs",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJO5bz9fI1K4gRlZvZb8p0BHs",
+    "name": "The Roasters Pack Lab",
+    "city": "Toronto",
+    "address": "Junction Triangle / Wade Ave",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/eat_drink/2026/03/70-dollar-coffee-toronto/",
+    "url": "https://www.blogto.com/eat_drink/2026/03/70-dollar-coffee-toronto/"
+  },
+  "narrative": {
+    "summary": "8-seat reservations-only coffee bar with $68 Panama Gesha; fine-coffee gallery concept; opened late Feb 2026.",
+    "blocks": []
+  }
+}

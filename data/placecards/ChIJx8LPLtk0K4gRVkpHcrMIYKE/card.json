@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJx8LPLtk0K4gRVkpHcrMIYKE",
+  "built": "2026-03-10T15:55:06.798Z",
+  "source": "task-le-select",
+  "identity": {
+    "place_id": "ChIJx8LPLtk0K4gRVkpHcrMIYKE",
+    "name": "Le Sélect Bistro",
+    "city": "Toronto",
+    "address": "432 Wellington St W, Toronto, ON M5V 1E3, Canada",
+    "type": "restaurant",
+    "phone": "(416) 626-6262",
+    "website": "http://www.leselectbistro.com/",
+    "price_level": 3,
+    "rating": 4.4,
+    "user_rating_count": 3134,
+    "location": "432 Wellington St W, Toronto, ON M5V 1E3, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Le Sélect Bistro\n432 Wellington St W, Toronto, ON M5V 1E3, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Le Sélect Bistro",
+        "body": "📍 Le Sélect Bistro\n432 Wellington St W, Toronto, ON M5V 1E3, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nClassic French brasserie atmosphere in the downtown core."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nFrench brasserie staples and cocktails.\nMenu link: http://www.leselectbistro.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (3134 reviews)\nPrice level: $$$\nPhone: (416) 626-6262\nWebsite: http://www.leselectbistro.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 432 Wellington St W, Toronto, ON M5V 1E3, Canada\n\n• walking: 1 hour 25 mins • 6.2 km\n• transit: 35 mins • 6.7 km\n• driving: 23 mins • 6.4 km (traffic: 17 mins)\n• bicycling: 22 mins • 6.6 km\n\nBest modality: BICYCLING ⭐\nWhy: Fastest available option (22 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "432 Wellington St W, Toronto, ON M5V 1E3, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:52.802Z",
+    "recommended": {
+      "mode": "bicycling",
+      "reason": "Fastest available option (22 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1398,
+        "durationText": "23 mins",
+        "durationInTrafficSeconds": 1025,
+        "durationInTrafficText": "17 mins",
+        "distanceMeters": 6409,
+        "distanceText": "6.4 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5076,
+        "durationText": "1 hour 25 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6223,
+        "distanceText": "6.2 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1302,
+        "durationText": "22 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6596,
+        "distanceText": "6.6 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2126,
+        "durationText": "35 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6651,
+        "distanceText": "6.7 km"
+      }
+    ]
+  }
+}

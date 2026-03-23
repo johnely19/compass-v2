@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJZ4QaXF3L1IkRB8F5wt3LpQ8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZ4QaXF3L1IkRB8F5wt3LpQ8",
+    "name": "Bar Cart",
+    "city": "Toronto",
+    "address": "St. Lawrence / The Esplanade",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.google.com/maps/place/?q=place_id:ChIJZ4QaXF3L1IkRB8F5wt3LpQ8",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJZ4QaXF3L1IkRB8F5wt3LpQ8"
+  },
+  "narrative": {
+    "summary": "Speakeasy-ish, old-world railcar glamour; strong rating + late-night hours Tue–Sat.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJo3H5vqZxhlQRrnnUvzvE7p8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJo3H5vqZxhlQRrnnUvzvE7p8",
+    "name": "Oku Izakaya",
+    "city": "Vancouver",
+    "address": "Gastown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "opentable.ca",
+    "url": "https://www.opentable.ca/s/dinerschoice?metroid=73&topic=7bf54b86-bd1f-4e35-bbca-f7cce982b4ed"
+  },
+  "narrative": {
+    "summary": "Michelin Recommended. Avant-garde Japanese izakaya at 2 Water Street in Gastown. 4.8 rating. Top 100 Restaurants 2025. Wine Spectator Award. Exquisite sushi + creative Japanese. Right in Gastown for Friday arrival night. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

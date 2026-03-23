@@ -1,0 +1,20 @@
+{
+  "place_id": "ChIJswMDQW5bwokRFFPWez625wY",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:41Z",
+  "identity": {
+    "place_id": "ChIJswMDQW5bwokRFFPWez625wY",
+    "name": "Bushwick Gallery",
+    "address": "22 Fayette St, Brooklyn, NY 11206, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 5,
+    "user_ratings_total": 40,
+    "price_level": null,
+    "types": [
+      "art_gallery",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

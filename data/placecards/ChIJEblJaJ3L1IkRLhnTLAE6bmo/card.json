@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJEblJaJ3L1IkRLhnTLAE6bmo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJEblJaJ3L1IkRLhnTLAE6bmo",
+    "name": "Zig Zag Collectables",
+    "city": "Toronto",
+    "address": "Leslieville / Queen East",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via zigzagmidcentury.com"
+  },
+  "narrative": {
+    "summary": "Curated mid-century modern (50s-70s) lighting, furniture, art glass—proper collector's shop, not reproductions.",
+    "blocks": []
+  }
+}

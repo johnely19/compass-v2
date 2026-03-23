@@ -1,0 +1,18 @@
+{
+  "place_id": "MASSEY_HALL",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "MASSEY_HALL",
+    "name": "Herbie Hancock at Massey Hall",
+    "city": "Toronto",
+    "address": "Massey Hall (178 Victoria St)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "broadwayworld.com"
+  },
+  "narrative": {
+    "summary": "Jazz legend Herbie Hancock \u2014 2026 North American Summer Tour kickoff. Band includes Lionel Loueke + James Genus. VIP soundcheck packages available. Tickets on sale now. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

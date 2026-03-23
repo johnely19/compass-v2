@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJr0jKBbI0K4gRQN-dXKRMMGA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJr0jKBbI0K4gRQN-dXKRMMGA",
+    "name": "Cyrano (Virginia Gay, gender-flipped)",
+    "city": "Toronto",
+    "address": "Yonge & Bloor / CAA Theatre (651 Yonge St)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "ludwig-van.com"
+  },
+  "narrative": {
+    "summary": "North American premiere. Virginia Gay's queer gender-flipped rom-com reimagining of Cyrano de Bergerac. Financial Times called it 'dazzlingly clever.' March 14\u2013April 5. A modern classic, rewritten with edge. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

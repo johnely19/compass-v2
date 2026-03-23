@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJe9TvMMI0K4gRm2iMmQ6_h2M",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJe9TvMMI0K4gRm2iMmQ6_h2M",
+    "name": "Sanagan's Meat Locker",
+    "city": "Toronto",
+    "address": "Kensington Market",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via torontolife.com"
+  },
+  "narrative": {
+    "summary": "Whole-animal butchery, ethically sourced Ontario farms. The institution. Sausages, charcuterie, bone broth — everything made in-house. 4.7★ (470 reviews).",
+    "blocks": []
+  }
+}

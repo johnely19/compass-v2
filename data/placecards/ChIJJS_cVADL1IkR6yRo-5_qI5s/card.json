@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJS_cVADL1IkR6yRo-5_qI5s",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJS_cVADL1IkR6yRo-5_qI5s",
+    "name": "Ada Slaight Hall",
+    "city": "Toronto",
+    "address": "Regent Park",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via destinationtoronto.com"
+  },
+  "narrative": {
+    "summary": "310-seat intimate venue inside Daniels Spectrum arts hub — excellent acoustics, under-the-radar",
+    "blocks": []
+  }
+}

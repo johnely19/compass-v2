@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJZ48Dhb40K4gRqfQuu9-I0Hw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZ48Dhb40K4gRqfQuu9-I0Hw",
+    "name": "John P. Robarts Research Library",
+    "city": "Toronto",
+    "address": "University of Toronto",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via globeandmail.com"
+  },
+  "narrative": {
+    "summary": "Brutalist icon aka Fort Book - one of Toronto's best modernist spaces, recently upgraded with 1,200 new study spaces",
+    "blocks": []
+  }
+}

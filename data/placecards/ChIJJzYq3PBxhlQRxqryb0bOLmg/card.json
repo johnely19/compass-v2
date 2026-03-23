@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJJzYq3PBxhlQRxqryb0bOLmg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJzYq3PBxhlQRxqryb0bOLmg",
+    "name": "Bar Gobo",
+    "city": "Vancouver",
+    "address": "Strathcona",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "bargobo.com",
+    "url": "https://www.bargobo.com"
+  },
+  "narrative": {
+    "summary": "'The Hi-Fi Wine Bar At The End Of The World.' All vinyl, all the time. Natural wine, cocktails, tasty food. Union Street in Strathcona. Happy hour 5-6 & 10-11. The record-flipping + natty wine combo is peak John. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

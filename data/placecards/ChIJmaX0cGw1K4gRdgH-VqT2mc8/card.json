@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJmaX0cGw1K4gRdgH-VqT2mc8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJmaX0cGw1K4gRdgH-VqT2mc8",
+    "name": "Stackt Market",
+    "city": "Toronto",
+    "address": "Bathurst/Front (28 Bathurst St)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via stacktmarket.com"
+  },
+  "narrative": {
+    "summary": "Shipping container market — architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2★ (958 reviews).",
+    "blocks": []
+  }
+}

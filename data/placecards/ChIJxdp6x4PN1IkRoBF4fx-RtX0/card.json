@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJxdp6x4PN1IkRoBF4fx-RtX0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJxdp6x4PN1IkRoBF4fx-RtX0",
+    "name": "Sambal | Modern Indonesian Bistro",
+    "city": "Toronto",
+    "address": "Danforth (463 Danforth Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.toronto.com/things-to-do/food-and-drink/toronto-chefs-favorite-restaurants-2026-guide/",
+    "url": "https://www.toronto.com/things-to-do/food-and-drink/toronto-chefs-favorite-restaurants-2026-guide/"
+  },
+  "narrative": {
+    "summary": "Modern Indonesian bistro; 4.7 rating with 202 reviews; chef-recommended—authentic and consistently tasty per local chefs.",
+    "blocks": []
+  }
+}

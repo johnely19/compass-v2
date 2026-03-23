@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJQW8K0qvO1IkRfNsqQa1Wjos",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQW8K0qvO1IkRfNsqQa1Wjos",
+    "name": "Fox Theatre",
+    "city": "Toronto",
+    "address": "The Beaches (Queen E)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via thestar.com Feb 2026"
+  },
+  "narrative": {
+    "summary": "1914 neighborhood gem, real character. Classics, cult, recent second-run. Casablanca, Psycho screenings cited—exactly the kind of 'go see a movie' spot that feels like Toronto.",
+    "blocks": []
+  }
+}

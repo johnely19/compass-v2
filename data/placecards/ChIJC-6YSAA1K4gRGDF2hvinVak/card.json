@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJC-6YSAA1K4gRGDF2hvinVak",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJC-6YSAA1K4gRGDF2hvinVak",
+    "name": "Wu Wei Coffee",
+    "city": "Toronto",
+    "address": "Kensington Market",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.hungry416.com/new-cafes-in-toronto/",
+    "url": "https://www.hungry416.com/new-cafes-in-toronto/"
+  },
+  "narrative": {
+    "summary": "Taoist philosophy-inspired ('effortless action'); tea house + coffee hybrid; basement space with intentional vibe.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJacVfweBxhlQRJSijA6JfJSI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJacVfweBxhlQRJSijA6JfJSI",
+    "name": "Nomo Nomo",
+    "city": "Vancouver",
+    "address": "Commercial Drive",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "604now.com",
+    "url": "https://604now.com/best-new-restaurants-vancouver-winter-2026/"
+  },
+  "narrative": {
+    "summary": "NEW (Sep 2025). Japanese snack bar with creative edge. Prawn toast on Chinese doughnut, Ibérico tomahawk. Outstanding cocktail program. Late-night-friendly. The kind of playful, inventive spot John loves. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

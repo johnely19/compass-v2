@@ -1,0 +1,69 @@
+{
+  "images": [
+    {
+      "id": "gmap-1",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_1.jpg",
+      "category": "interior_vibe",
+      "caption": "",
+      "order": 1,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-2",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_2.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 2,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-3",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_3.jpg",
+      "category": "interior_detail",
+      "caption": "",
+      "order": 3,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-4",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_4.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 4,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-5",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_5.jpg",
+      "category": "drinks",
+      "caption": "",
+      "order": 5,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-6",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_6.jpg",
+      "category": "interior_vibe",
+      "caption": "",
+      "order": 6,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-7",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_7.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 7,
+      "source": "google_maps"
+    },
+    {
+      "id": "gmap-8",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmzPYgJFZwokRg4zUwTlZwtI/photo_8.jpg",
+      "category": "outside",
+      "caption": "",
+      "order": 8,
+      "source": "google_maps"
+    }
+  ],
+  "place_id": "ChIJmzPYgJFZwokRg4zUwTlZwtI"
+}

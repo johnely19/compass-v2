@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJvejuJf40K4gR7UZE9WyV91k",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJvejuJf40K4gR7UZE9WyV91k",
+    "name": "Flying Books",
+    "city": "Toronto",
+    "address": "Little Italy / College St",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via flyingbooks.ca"
+  },
+  "narrative": {
+    "summary": "New independent bookstore (opened recently) with its own imprint + regular author events. Thriving literary hub in a decade when bookshops are rare.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ51q_vUZzhlQRCCFO2VqvuQ4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ51q_vUZzhlQRCCFO2VqvuQ4",
+    "name": "Sushi Okeya Kyujiro",
+    "city": "Vancouver",
+    "address": "Yaletown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "guide.michelin.com",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-from-the-michelin-guide-vancouver-2025"
+  },
+  "narrative": {
+    "summary": "Michelin 1-star. Extraordinary omakase from chef Takeshi Okeya. 4.8 rating on Google. Yaletown location. If Masayoshi is booked, this is the alternative — equally world-class. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

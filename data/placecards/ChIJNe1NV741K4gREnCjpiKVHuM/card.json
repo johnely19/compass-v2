@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJNe1NV741K4gREnCjpiKVHuM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJNe1NV741K4gREnCjpiKVHuM",
+    "name": "Mimi Chinese (refreshed)",
+    "city": "Toronto",
+    "address": "Yorkville/Annex",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via toronto.com"
+  },
+  "narrative": {
+    "summary": "Reopened Feb 6 with redesigned room (white tablecloths, chrome details), expanded menu. One of Toronto's most talked-about since 2021, now elevated.",
+    "blocks": []
+  }
+}

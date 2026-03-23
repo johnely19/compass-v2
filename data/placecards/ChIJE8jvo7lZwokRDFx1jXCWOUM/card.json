@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJE8jvo7lZwokRDFx1jXCWOUM",
+  "built": "2026-03-11T23:06:19.750Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJE8jvo7lZwokRDFx1jXCWOUM",
+    "name": "Domino Square",
+    "city": "NYC",
+    "address": "300 Kent Ave, Brooklyn, NY 11249, USA",
+    "type": "park",
+    "phone": "(718) 989-1003",
+    "website": "https://www.therefineryatdomino.com/?utm_source=google&utm_medium=gbp&utm_campaign=listing",
+    "rating": 4.7,
+    "user_rating_count": 42,
+    "location": "300 Kent Ave, Brooklyn, NY 11249, USA"
+  },
+  "narrative": {
+    "summary": "📍 Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Domino Square",
+        "body": "📍 Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNew Williamsburg waterfront gathering plaza with regular programming; strong locals-and-visitors overlap without feeling like a checklist stop."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (42 reviews)\nPrice level: n/a\nPhone: (718) 989-1003\nWebsite: https://www.therefineryatdomino.com/?utm_source=google&utm_medium=gbp&utm_campaign=listing\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 300 Kent Ave, Brooklyn, NY 11249, USA\n\n• walking: 55 mins • 2.5 mi\n• transit: 40 mins • 4.0 mi\n• driving: 16 mins • 3.2 mi (traffic: 17 mins)\n• bicycling: 18 mins • 3.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (16 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "300 Kent Ave, Brooklyn, NY 11249, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:30.966Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (16 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 982,
+        "durationText": "16 mins",
+        "durationInTrafficSeconds": 1045,
+        "durationInTrafficText": "17 mins",
+        "distanceMeters": 5133,
+        "distanceText": "3.2 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3291,
+        "durationText": "55 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3962,
+        "distanceText": "2.5 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1107,
+        "durationText": "18 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4912,
+        "distanceText": "3.1 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2395,
+        "durationText": "40 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6435,
+        "distanceText": "4.0 mi"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJrRn-HiQ4K4gRtwiebD9F1JE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJrRn-HiQ4K4gRtwiebD9F1JE",
+    "name": "Etobicoke Civic Centre Art Gallery",
+    "city": "Toronto",
+    "address": "Etobicoke (The West Mall)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via https://streetsoftoronto.com/toronto-culture/5-art-exhibitions-we-cant-wait-to-see-in-toronto/",
+    "url": "https://streetsoftoronto.com/toronto-culture/5-art-exhibitions-we-cant-wait-to-see-in-toronto/"
+  },
+  "narrative": {
+    "summary": "Free show ‘The Soul in Five Forms’ (Feb 25–Mar 26, 2026) — Ukrainian + Turkish artists; thoughtful identity/belonging theme.",
+    "blocks": []
+  }
+}

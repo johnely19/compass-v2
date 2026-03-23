@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ3TsI4-M0K4gRMuf58japF7U",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ3TsI4-M0K4gRMuf58japF7U",
+    "name": "The Spice Trader & The Olive Pit",
+    "city": "Toronto",
+    "address": "Queen West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via yelp.ca"
+  },
+  "narrative": {
+    "summary": "Spice apothecary + olive oil tasting bar under one roof. Walls of jars, experiential shopping. Design-forward space. 4.8★ (205 reviews).",
+    "blocks": []
+  }
+}

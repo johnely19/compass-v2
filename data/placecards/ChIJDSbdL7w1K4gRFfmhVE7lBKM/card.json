@@ -1,0 +1,69 @@
+{
+  "place_id": "ChIJDSbdL7w1K4gRFfmhVE7lBKM",
+  "built": "2026-03-12T21:45:39Z",
+  "source": "builder-ramen-v2",
+  "identity": {
+    "place_id": "ChIJDSbdL7w1K4gRFfmhVE7lBKM",
+    "name": "Ikkousha Ramen Toronto",
+    "city": "Toronto",
+    "address": "249 Queen St W, Toronto, ON M5V 1Z4, Canada",
+    "type": "restaurant",
+    "phone": "(416) 901-2249",
+    "website": "https://www.ikkousha.ca/",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
+    ],
+    "price_level": 2,
+    "rating": 4.6,
+    "user_rating_count": 2506,
+    "menu_link": "https://www.ikkousha.ca/",
+    "location": "249 Queen St W, Toronto, ON M5V 1Z4, Canada",
+    "lat": 43.6502401,
+    "lng": -79.3887656
+  },
+  "narrative": {
+    "summary": "Ramen-focused Toronto spot with strong local following and dependable bowls.",
+    "blocks": [
+      {
+        "id": "b1",
+        "title": "Map + Practicals",
+        "body": "Start with map and practicals first."
+      },
+      {
+        "id": "b2",
+        "title": "Outside",
+        "body": "Streetfront + arrival context."
+      },
+      {
+        "id": "b3",
+        "title": "Interior vibe",
+        "body": "Wide room views and atmosphere."
+      },
+      {
+        "id": "b4",
+        "title": "Detailed interior",
+        "body": "Close-up design and counter details."
+      },
+      {
+        "id": "b5",
+        "title": "Food + drinks",
+        "body": "Ramen bowls, sides, and drinks where available."
+      },
+      {
+        "id": "b6",
+        "title": "Check",
+        "body": "Estimated check for two using Toronto tax logic."
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Tokyo-style ramen research",
+    "url": "https://www.ikkousha.ca/"
+  }
+}

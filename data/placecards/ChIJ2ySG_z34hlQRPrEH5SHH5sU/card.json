@@ -1,0 +1,61 @@
+{
+  "place_id": "ChIJ2ySG_z34hlQRPrEH5SHH5sU",
+  "built": "2026-03-12T16:42:13.230575Z",
+  "source": "squamish-placecards-batch-2026-03-12",
+  "identity": {
+    "place_id": "ChIJ2ySG_z34hlQRPrEH5SHH5sU",
+    "name": "Saha Eatery",
+    "city": "Squamish",
+    "region": "BC",
+    "province": "BC",
+    "address": "38128 2 Ave, Squamish, BC V8B 0A6, Canada",
+    "location": "38128 2 Ave, Squamish, BC V8B 0A6, Canada",
+    "type": "restaurant",
+    "phone": "(604) 567-5888",
+    "website": "https://sahaeatery.ca/",
+    "hours": [
+      "Monday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM"
+    ],
+    "price_level": 2,
+    "rating": 4.5,
+    "user_rating_count": 963,
+    "menu_link": "https://sahaeatery.ca/",
+    "lat": 49.7007743,
+    "lng": -123.1526702
+  },
+  "narrative": {
+    "summary": "Saha Eatery is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
+    "blocks": [
+      {
+        "id": "arrival",
+        "title": "Arrival",
+        "body": "Address: 38128 2 Ave, Squamish, BC V8B 0A6, Canada."
+      },
+      {
+        "id": "room",
+        "title": "Room",
+        "body": "Expect a lively local crowd with mountain-town energy."
+      },
+      {
+        "id": "food",
+        "title": "Food & Drinks",
+        "body": "See photo gallery sections for food, drinks, and atmosphere references."
+      },
+      {
+        "id": "ops",
+        "title": "Operational snapshot",
+        "body": "Google rating 4.5 from 963 reviews."
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco research agent",
+    "url": "https://sahaeatery.ca/"
+  }
+}

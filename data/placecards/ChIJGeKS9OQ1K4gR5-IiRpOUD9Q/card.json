@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJGeKS9OQ1K4gR5-IiRpOUD9Q",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJGeKS9OQ1K4gR5-IiRpOUD9Q",
+    "name": "Kyma Mediterranean Grill",
+    "city": "Toronto",
+    "address": "Junction",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via stephaniedickison.com"
+  },
+  "narrative": {
+    "summary": "Health-focused Mediterranean from chef Hemant Bhagwani with clinical nutritionist, fermented/sprouted ingredients",
+    "blocks": []
+  }
+}

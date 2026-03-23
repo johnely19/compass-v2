@@ -1,0 +1,103 @@
+{
+  "place_id": "ChIJZ-_BPZRZwokRBp_dcoCezqQ",
+  "built": "2026-02-23T20:53:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJZ-_BPZRZwokRBp_dcoCezqQ",
+    "name": "Cookshop",
+    "city": "NYC",
+    "address": "156 10th Avenue",
+    "phone": "(212) 924-4440",
+    "website": "https://cookshopny.com",
+    "price_level": 3,
+    "location": "156 10th Avenue"
+  },
+  "narrative": {
+    "summary": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nWest Chelsea — one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here — people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nWest Chelsea — one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here — people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries."
+      },
+      {
+        "id": "block-2",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The weekend essentials:\n• BLT Mary — $18 (bacon, olives, celery salt rim) ⭐\n• Mimosa — $14\n• Cantaloupe Cooler (mocktail) — $10\n• Bloody Maria — $18\n\nThis is a brunch-drinks destination. The BLT Mary is the move — they skewer a strip of crispy bacon right in your drink."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗"
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗕𝗥𝗨𝗡𝗖𝗛 (Sat-Sun) $16-26\n• Raisin Walnut French Toast — $19 (seasonal fruit, almonds) ⭐\n• Fried Egg Sandwich — $18 (jalapeño slaw, brioche)\n• Cornmeal Pancakes — $17 (house butter, maple)\n• Eggs Your Way — $16 (with toast)\n\n𝗟𝗨𝗡𝗖𝗛 $19-28\n• Gem Lettuce Salad — $23 (roast chicken, cucumber, tomato) ⭐\n• Pan Bagnat — $19 (olive oil tuna, tomato, egg, olives)\n• Cookshop Burger — $24 (cheddar, pickles, fries)\n• Grilled Salmon — $28\n\n𝗗𝗜𝗡𝗡𝗘𝗥 $26-42\n• Wood-Roasted Half Chicken — $32 ⭐\n• Hanger Steak — $38\n• Whole Roasted Fish (market) — $42\n• Seasonal Risotto — $26\n\n𝗦𝗜𝗗𝗘𝗦 $9-14\n• Spiced Fries — $12 ⭐\n• Roasted Broccolini — $14\n• Market Vegetables — $12\n\nNote: Menu changes seasonally. Known for sourcing from local farms (Greenmarket adjacent)."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$\n\nBrunch for 2: $70-90 (with drinks)\nDinner for 2: $120-160 (with wine)\n\nReservations: Resy (recommended, especially weekends)\nWalk-ins: Possible at the bar, especially weekday lunch\n\n📞 (212) 924-4440\n🌐 cookshopny.com\n📸 @cookshopnyc\n\n𝗛𝗢𝗨𝗥𝗦\nMon: 4:30pm – 11pm (dinner only)\nTue-Fri: 12pm – 3:30pm, 4:30pm – 11pm\nSat: 10am – 3:30pm, 4:30pm – 11pm\nSun: 10am – 3:30pm (brunch only)\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Weekday lunch (12-2pm) — quiet, easy to get a table\n• Saturday brunch early (10-11am) — before the High Line crowds descend\n• Summer: sidewalk tables fill first, reserve ahead\n• Post-gallery: Perfect pre-dinner stop after Chelsea galleries (Thu-Sat)"
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 156 10th Avenue\n\n• walking: 44 mins • 2.0 mi\n• transit: 25 mins • 2.5 mi\n• driving: 13 mins • 2.2 mi (traffic: 13 mins)\n• bicycling: 14 mins • 2.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "156 10th Avenue",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:06.976Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (13 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 799,
+        "durationText": "13 mins",
+        "durationInTrafficSeconds": 755,
+        "durationInTrafficText": "13 mins",
+        "distanceMeters": 3519,
+        "distanceText": "2.2 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 2644,
+        "durationText": "44 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3172,
+        "distanceText": "2.0 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 865,
+        "durationText": "14 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3439,
+        "distanceText": "2.1 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1489,
+        "durationText": "25 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4070,
+        "distanceText": "2.5 mi"
+      }
+    ]
+  }
+}

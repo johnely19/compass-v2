@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJfTuaWl40K4gR0vkLOytRX80",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJfTuaWl40K4gR0vkLOytRX80",
+    "name": "Muddy George",
+    "city": "Toronto",
+    "address": "Bloor West Village / Bloordale",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via muddygeorge.com"
+  },
+  "narrative": {
+    "summary": "Curated menswear boutique with signature olive interior. Owner Altaf Baksh known for transforming wardrobes — 4.9 rating.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJgUBDOQA1K4gRd_8eNwRbAn8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJgUBDOQA1K4gRd_8eNwRbAn8",
+    "name": "Uh Bar",
+    "city": "Toronto",
+    "address": "Dundas West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via bartenderatlas.com"
+  },
+  "narrative": {
+    "summary": "Basement cocktail bar with evolving design, creative takes on classics. Bartender Atlas pick. 4.7 rating, 59 reviews.",
+    "blocks": []
+  }
+}

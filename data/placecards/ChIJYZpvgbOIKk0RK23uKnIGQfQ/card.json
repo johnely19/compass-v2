@@ -1,0 +1,89 @@
+{
+  "place_id": "ChIJYZpvgbOIKk0RK23uKnIGQfQ",
+  "built": "2026-03-10T12:59:33.609Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJYZpvgbOIKk0RK23uKnIGQfQ",
+    "name": "Patterson Kaye Resort",
+    "city": "",
+    "address": "1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada",
+    "type": "hotel",
+    "phone": "(705) 645-4169",
+    "website": "http://www.pattersonkayeresort.com/",
+    "location": "1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Patterson Kaye Resort\n1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Patterson Kaye Resort",
+        "body": "📍 Patterson Kaye Resort\n1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (319 reviews)\nPhone: (705) 645-4169\nWebsite: http://www.pattersonkayeresort.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada\n\n• walking: 1 day 19 hours • 191 km\n• transit: unavailable\n• driving: 2 hours 7 mins • 188 km (traffic: 2 hours 5 mins)\n• bicycling: 11 hours 29 mins • 218 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (2 hours 7 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "1360 Golden Beach Rd, Bracebridge, ON P1L 1W8, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:05.715Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (2 hours 7 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 7601,
+        "durationText": "2 hours 7 mins",
+        "durationInTrafficSeconds": 7501,
+        "durationInTrafficText": "2 hours 5 mins",
+        "distanceMeters": 187740,
+        "distanceText": "188 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 155260,
+        "durationText": "1 day 19 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 190709,
+        "distanceText": "191 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 41358,
+        "durationText": "11 hours 29 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 217984,
+        "distanceText": "218 km"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "No route found",
+        "googleStatus": "ZERO_RESULTS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJlbRkMMzL1IkRtOGzkUPcH5E",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJlbRkMMzL1IkRtOGzkUPcH5E",
+    "name": "ZERO Cocktail Bar, Tasting Room & Bottle Shop",
+    "city": "Toronto",
+    "address": "Carlton / Garden District",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.google.com/maps/place/?q=place_id:ChIJlbRkMMzL1IkRtOGzkUPcH5E",
+    "url": "https://www.google.com/maps/place/?q=place_id:ChIJlbRkMMzL1IkRtOGzkUPcH5E"
+  },
+  "narrative": {
+    "summary": "Non-alcoholic cocktail program with a tasting-room + bottle-shop angle; good ratings and open now (easy weeknight).",
+    "blocks": []
+  }
+}

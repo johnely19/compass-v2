@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJkxUKZvTN1IkRBSWcKr1ie3w",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJkxUKZvTN1IkRBSWcKr1ie3w",
+    "name": "Jupiter Bakehouse",
+    "city": "Toronto",
+    "address": "Little India (Gerrard E)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/bakery/jupiter-bakehouse-toronto/",
+    "url": "https://www.blogto.com/bakery/jupiter-bakehouse-toronto/"
+  },
+  "narrative": {
+    "summary": "Canadian-grain-only bakery; 4.9 rating; took over the Glory Hole Doughnuts space—strong local lineage.",
+    "blocks": []
+  }
+}

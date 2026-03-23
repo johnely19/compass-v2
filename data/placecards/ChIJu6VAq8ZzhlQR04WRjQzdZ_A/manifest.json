@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJu6VAq8ZzhlQR04WRjQzdZ_A",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJu6VAq8ZzhlQR04WRjQzdZ_A/photos/1.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "photo-2",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJu6VAq8ZzhlQR04WRjQzdZ_A/photos/2.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 2
+    }
+  ]
+}

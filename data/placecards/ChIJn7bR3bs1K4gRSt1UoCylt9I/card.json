@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJn7bR3bs1K4gRSt1UoCylt9I",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJn7bR3bs1K4gRSt1UoCylt9I",
+    "name": "Cong Caphe (Annex)",
+    "city": "Toronto",
+    "address": "Annex (424 Bloor St W)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Hanoi-born Vietnamese coffee brand. Military-green aesthetic, reclaimed wood, vintage memorabilia — anti-clean-girl café. Signature Bac Xiu (coconut white coffee) and coconut green rice smoothie. 4.5★ (582 reviews). Global chain but culturally interesting. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

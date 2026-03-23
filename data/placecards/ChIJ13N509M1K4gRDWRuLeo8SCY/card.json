@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ13N509M1K4gRDWRuLeo8SCY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ13N509M1K4gRDWRuLeo8SCY",
+    "name": "Emmer",
+    "city": "Toronto",
+    "address": "Harbord Village (Annex edge)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.emmertoronto.ca/",
+    "url": "https://www.emmertoronto.ca/"
+  },
+  "narrative": {
+    "summary": "Sourdough + double-baked croissants that built a citywide reputation; seasonal focus with local collaborations; 4.2 rating with 720+ reviews—established craft credentials.",
+    "blocks": []
+  }
+}

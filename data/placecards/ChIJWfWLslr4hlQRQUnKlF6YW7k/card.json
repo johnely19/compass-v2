@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJWfWLslr4hlQRQUnKlF6YW7k",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJWfWLslr4hlQRQUnKlF6YW7k",
+    "name": "A-FRAME Brewing Co",
+    "city": "Squamish",
+    "address": "Squamish",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Small-batch craft brewery with a cozy tasting room. Great complement to Backcountry if doing a Squamish brewery crawl with Seb. Rating 4.3/5 (396 reviews). Local favourite.",
+    "url": "https://www.yelp.ca/search?cflt=breweries&find_loc=Squamish,+BC"
+  },
+  "narrative": {
+    "summary": "Small-batch craft brewery with a cozy tasting room. Great complement to Backcountry if doing a Squamish brewery crawl with Seb. Rating 4.3/5 (396 reviews). Local favourite.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
+      "caption": "Source image"
+    }
+  ]
+}

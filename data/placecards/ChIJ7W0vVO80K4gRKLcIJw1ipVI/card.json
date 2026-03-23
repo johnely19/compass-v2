@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ7W0vVO80K4gRKLcIJw1ipVI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ7W0vVO80K4gRKLcIJw1ipVI",
+    "name": "Dirty Laundry Gallery",
+    "city": "Toronto",
+    "address": "Dundas West (808 Dundas St W)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via sootoday.com"
+  },
+  "narrative": {
+    "summary": "OG laundromat gallery — 6+ years running. Monthly rotating exhibitions by emerging artists. $25 admin fee for artists = zero pretension. 4.5★ (65 reviews).",
+    "blocks": []
+  }
+}

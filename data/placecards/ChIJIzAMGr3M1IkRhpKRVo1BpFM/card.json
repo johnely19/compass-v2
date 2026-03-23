@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJIzAMGr3M1IkRhpKRVo1BpFM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJIzAMGr3M1IkRhpKRVo1BpFM",
+    "name": "*here | there by Howard Rideout (TSA / Todmorden Mills)",
+    "city": "Toronto",
+    "address": "East York / Don Valley (67 Pottery Rd)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "torontosocietyofarchitects.ca"
+  },
+  "narrative": {
+    "summary": "Architect's vision for a Muskoka nature preserve & sculpture garden — charcoal drawings, photography, film. Three realms of wilderness in the Papermill Gallery. Opens April 1. Free admission. Architecture-meets-landscape art. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

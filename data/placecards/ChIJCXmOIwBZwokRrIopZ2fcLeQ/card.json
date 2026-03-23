@@ -1,0 +1,94 @@
+{
+  "place_id": "ChIJCXmOIwBZwokRrIopZ2fcLeQ",
+  "built": "2026-03-11T23:06:22.615Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJCXmOIwBZwokRrIopZ2fcLeQ",
+    "name": "telos.haus",
+    "city": "NYC",
+    "address": "303 Ten Eyck St, Brooklyn, NY 11206, USA",
+    "type": "gallery",
+    "website": "https://telos.haus/",
+    "rating": 5,
+    "user_rating_count": 7,
+    "location": "303 Ten Eyck St, Brooklyn, NY 11206, USA"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd telos.haus\n303 Ten Eyck St, Brooklyn, NY 11206, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Telos.haus",
+        "body": "\ud83d\udccd telos.haus\n303 Ten Eyck St, Brooklyn, NY 11206, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nIndie creative coworking/events warehouse surfaced via neighborhood Reddit; directly matches John's creative-projects interest."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (7 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: https://telos.haus/\n\nHours:\nMonday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM\nTuesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM\nWednesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM\nThursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM\nFriday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM\nSaturday: Closed\nSunday: Closed"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 303 Ten Eyck St, Brooklyn, NY 11206, USA\n\n\u2022 walking: 1 hour 21 mins \u2022 3.6 mi\n\u2022 transit: 34 mins \u2022 4.6 mi\n\u2022 driving: 20 mins \u2022 4.5 mi (traffic: 22 mins)\n\u2022 bicycling: 27 mins \u2022 3.9 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (20 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "303 Ten Eyck St, Brooklyn, NY 11206, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:27.151Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (20 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1199,
+        "durationText": "20 mins",
+        "durationInTrafficSeconds": 1328,
+        "durationInTrafficText": "22 mins",
+        "distanceMeters": 7310,
+        "distanceText": "4.5 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4868,
+        "durationText": "1 hour 21 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5821,
+        "distanceText": "3.6 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1592,
+        "durationText": "27 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6356,
+        "distanceText": "3.9 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2050,
+        "durationText": "34 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7435,
+        "distanceText": "4.6 mi"
+      }
+    ]
+  }
+}

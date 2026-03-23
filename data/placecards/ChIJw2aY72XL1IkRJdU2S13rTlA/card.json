@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJw2aY72XL1IkRJdU2S13rTlA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJw2aY72XL1IkRJdU2S13rTlA",
+    "name": "Good Cheese",
+    "city": "Toronto",
+    "address": "Gerrard East / Leslieville",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via yelp.ca"
+  },
+  "narrative": {
+    "summary": "Specialist cheese + natural wine shop. Intimate, curated, serious about product. The kind of place where the person behind the counter knows every wheel. 4.8★ (277 reviews).",
+    "blocks": []
+  }
+}

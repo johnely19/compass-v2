@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJbxWsn_40K4gRJab3_Arl4c4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJbxWsn_40K4gRJab3_Arl4c4",
+    "name": "Small Talk",
+    "city": "Toronto",
+    "address": "Ossington (110 Ossington Ave)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via toronto.com"
+  },
+  "narrative": {
+    "summary": "New jazz lounge from Municipal Goods team (Paris Texas, Pizza Wine Disco). Opened Sept 2025 in former Baby Huey space. Moët champagne vending machine, live jazz trios, martini-forward, maroon interiors by Block Plan Studios. Cheese Boutique collab menu. 4.5★ (207 reviews).",
+    "blocks": []
+  }
+}

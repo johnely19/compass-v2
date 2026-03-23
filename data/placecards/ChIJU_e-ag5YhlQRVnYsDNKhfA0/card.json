@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJU_e-ag5YhlQRVnYsDNKhfA0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJU_e-ag5YhlQRVnYsDNKhfA0",
+    "name": "Shannon Falls Provincial Park",
+    "city": "Squamish",
+    "address": "Highway 99",
+    "type": "park"
+  },
+  "discovery": {
+    "text": "matadornetwork.com",
+    "url": "https://matadornetwork.com/read/sea-to-sky-highway-roadtrip/"
+  },
+  "narrative": {
+    "summary": "BC's third-highest waterfall. Short walk from parking. Right off Highway 99, easy stop en route to Squamish. Free. April = good water flow from snowmelt. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJn-6mDyI1K4gRoQIAsJ6Rh3Y",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJn-6mDyI1K4gRoQIAsJ6Rh3Y",
+    "name": "Unboxed Market",
+    "city": "Toronto",
+    "address": "Dundas West / Trinity Bellwoods",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via unboxedmarket.com"
+  },
+  "narrative": {
+    "summary": "Toronto's first zero-waste grocery. Bulk bins, refill stations, butcher counter, cheese counter, in-store café. Concept-driven retail that actually works. 4.6★ (275 reviews).",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJ0fOv6TM1IkRka89i2s5JJA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJ0fOv6TM1IkRka89i2s5JJA",
+    "name": "Evergreen Brick Works",
+    "city": "Toronto",
+    "address": "Don Valley (Bayview)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via frommers.com"
+  },
+  "narrative": {
+    "summary": "Diamond Schmitt adaptive reuse of heritage industrial kilns—sustainability showcase. Saturday farmers market, ravine trails, great photography spot.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "place_id": "ChIJu7IT6QFcwokRJ2Jo-qP0B-E",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:41Z",
+  "identity": {
+    "place_id": "ChIJu7IT6QFcwokRJ2Jo-qP0B-E",
+    "name": "Luhring Augustine Gallery",
+    "address": "25 Knickerbocker Ave, Brooklyn, NY 11237, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.6,
+    "user_ratings_total": 10,
+    "price_level": null,
+    "types": [
+      "art_gallery",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

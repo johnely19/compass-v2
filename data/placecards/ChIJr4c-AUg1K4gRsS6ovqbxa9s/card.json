@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJr4c-AUg1K4gRsS6ovqbxa9s",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJr4c-AUg1K4gRsS6ovqbxa9s",
+    "name": "Rooms | 915 Dupont",
+    "city": "Toronto",
+    "address": "Dupont / Junction Triangle-ish",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://instagram.com/915dupont",
+    "url": "https://instagram.com/915dupont"
+  },
+  "narrative": {
+    "summary": "Day-to-night hybrid (coffee + cocktails) with strong music/vinyl 'listening bar' vibe; consistently high ratings and late hours.",
+    "blocks": []
+  }
+}

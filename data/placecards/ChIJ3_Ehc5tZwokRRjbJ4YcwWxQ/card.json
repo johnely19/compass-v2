@@ -1,0 +1,34 @@
+{
+  "place_id": "ChIJ3_Ehc5tZwokRRjbJ4YcwWxQ",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJ3_Ehc5tZwokRRjbJ4YcwWxQ",
+    "name": "Dessa's Art Show \u2014 Cooper Union",
+    "city": "New York",
+    "address": "30 Cooper Sq, New York, NY 10003, USA",
+    "website": "http://www.cooper.edu/",
+    "location": "30 Cooper Sq, New York, NY 10003, USA",
+    "lat": 40.7280482,
+    "lng": -73.9915438
+  },
+  "narrative": {
+    "summary": "\ud835\udde3\ud835\uddd8\ud835\udde5\ud835\udde6\ud835\udde2\ud835\udde1\ud835\uddd4\ud835\udddf \ud835\uddd8\ud835\udde9\ud835\uddd8\ud835\udde1\ud835\udde7\n\nDessa's student exhibition at The Cooper Union, East Village.\n\nA chance to see Dessa's work in the context of one of America's most storied art and architecture schools.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nCooper Square at E 7th St \u2014 the iconic Foundation Building (1859) and the angular Morphosis-designed 41 Cooper Square (2009) anchor the campus.\n\nThis is personal. Dessa's student exhibition at Cooper Union \u2014 one of the few remaining tuition-free art schools in America, housed in a building that's hosted everyone from Abraham Lincoln to Mark Twain. The East Village location puts you in the heart of downtown Manhattan's creative pulse."
+      },
+      {
+        "id": "block-2",
+        "title": "About",
+        "body": "\ud835\uddd4\ud835\uddd5\ud835\udde2\ud835\udde8\ud835\udde7\n\nThe Cooper Union for the Advancement of Science and Art has been a pillar of New York's creative community since 1859. Student exhibitions here carry the weight of a school that counts Milton Glaser, Alex Katz, and Tom Otterness among its alumni. The gallery spaces rotate between the Foundation Building and the Morphosis building.\n\n\ud83d\udccd 30 Cooper Square, New York, NY 10003\n\ud83c\udf10 cooper.edu\n\ud83d\udcde (212) 353-4100"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco via neighbourhood research",
+    "url": "http://www.cooper.edu/"
+  }
+}

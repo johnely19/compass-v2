@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJ71SONs9dwokRJC0NxZRa1eU",
+  "built": "2026-03-16T10:04:12.285Z",
+  "source": "morning-build-run",
+  "identity": {
+    "place_id": "ChIJ71SONs9dwokRJC0NxZRa1eU",
+    "name": "Cicchetti BK",
+    "city": "NYC",
+    "address": "185 Howard Ave, Brooklyn, NY 11233, USA",
+    "type": "bar",
+    "phone": "(917) 982-1561",
+    "website": "https://cicchettibk.com/",
+    "rating": 5,
+    "user_rating_count": 2,
+    "location": "185 Howard Ave, Brooklyn, NY 11233, USA"
+  },
+  "narrative": {
+    "summary": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Cicchetti Bk",
+        "body": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nVenetian wine bar in Bed-Stuy, opened March 8. Every drink comes with 3 cicchetti (tiny bites). All 15 wines by the glass are $14 each. Parmigiana di melanzane main. Stylish, intimate. Perfect hidden gem energy — brand new, barely any reviews yet."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: (917) 982-1561\nWebsite: https://cicchettibk.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 185 Howard Ave, Brooklyn, NY 11233, USA\n\n• walking: 2 hours 0 mins • 5.3 mi\n• transit: 42 mins • 8.1 mi\n• driving: 39 mins • 6.5 mi (traffic: 32 mins)\n• bicycling: 44 mins • 6.6 mi\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (42 mins vs 39 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "185 Howard Ave, Brooklyn, NY 11233, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:20.027Z",
+    "recommended": {
+      "mode": "transit",
+      "reason": "Transit is close to driving time (42 mins vs 39 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 2364,
+        "durationText": "39 mins",
+        "durationInTrafficSeconds": 1910,
+        "durationInTrafficText": "32 mins",
+        "distanceMeters": 10511,
+        "distanceText": "6.5 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 7176,
+        "durationText": "2 hours 0 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8491,
+        "distanceText": "5.3 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2617,
+        "durationText": "44 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10615,
+        "distanceText": "6.6 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2543,
+        "durationText": "42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 13061,
+        "distanceText": "8.1 mi"
+      }
+    ]
+  }
+}

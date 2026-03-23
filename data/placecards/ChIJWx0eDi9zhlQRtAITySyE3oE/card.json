@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJWx0eDi9zhlQRtAITySyE3oE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJWx0eDi9zhlQRtAITySyE3oE",
+    "name": "Published on Main",
+    "city": "Vancouver",
+    "address": "Mount Pleasant",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "guide.michelin.com",
+    "url": "https://guide.michelin.com/us/en/british-columbia/ca-vancouver/restaurant/published-on-main"
+  },
+  "narrative": {
+    "summary": "Michelin 1-star, #28 North America's 50 Best. Chef Gus Stieffenhofer-Brandson's contemporary Canadian tasting menu with foraged BC ingredients. Elderflower symbol. This is THE dinner of the trip. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

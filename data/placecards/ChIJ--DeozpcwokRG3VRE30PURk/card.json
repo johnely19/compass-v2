@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ--DeozpcwokRG3VRE30PURk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ--DeozpcwokRG3VRE30PURk",
+    "name": "Nowadays",
+    "city": "NYC",
+    "address": "Ridgewood/Glendale (56-06 Cooper Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide",
+    "url": "https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide"
+  },
+  "narrative": {
+    "summary": "16,000 sq ft indoor/outdoor space — part beer garden, part dance venue, part chill backyard with hammocks. Beloved Mister Sunday parties. Spring opening means the garden is back. 4.3★ (1846 reviews). Perfect for a warm-weather visit with Dessa.",
+    "blocks": []
+  }
+}

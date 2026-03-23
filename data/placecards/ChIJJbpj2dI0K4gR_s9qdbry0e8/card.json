@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJJbpj2dI0K4gR_s9qdbry0e8",
+  "built": "2026-03-10T15:47:19.143Z",
+  "source": "communication-test",
+  "identity": {
+    "place_id": "ChIJJbpj2dI0K4gR_s9qdbry0e8",
+    "name": "Stratus",
+    "city": "Toronto",
+    "address": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
+    "type": "restaurant",
+    "phone": "(416) 865-1924",
+    "website": "http://www.stratusrestaurant.com/",
+    "price_level": 3,
+    "rating": 4.4,
+    "user_rating_count": 485,
+    "location": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Stratus",
+        "body": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSky-high dining and lounge experience in Toronto's Financial District, perched on the 36th floor with city views."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nContemporary fine-dining and cocktail lounge experience.\nMenu link: http://www.stratusrestaurant.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (485 reviews)\nPrice level: $$$\nPhone: (416) 865-1924\nWebsite: http://www.stratusrestaurant.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada\n\n• walking: 1 hour 7 mins • 5.0 km\n• transit: 21 mins • 5.5 km\n• driving: 22 mins • 5.9 km (traffic: 16 mins)\n• bicycling: 19 mins • 5.2 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (21 mins vs 22 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:44.404Z",
+    "recommended": {
+      "mode": "transit",
+      "reason": "Transit is close to driving time (21 mins vs 22 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1330,
+        "durationText": "22 mins",
+        "durationInTrafficSeconds": 971,
+        "durationInTrafficText": "16 mins",
+        "distanceMeters": 5932,
+        "distanceText": "5.9 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4031,
+        "durationText": "1 hour 7 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4994,
+        "distanceText": "5.0 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1166,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5188,
+        "distanceText": "5.2 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1270,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5524,
+        "distanceText": "5.5 km"
+      }
+    ]
+  }
+}

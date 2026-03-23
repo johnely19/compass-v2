@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ6WFHd3w1K4gRerr6HGTIzO4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ6WFHd3w1K4gRerr6HGTIzO4",
+    "name": "MADE RITE COFFEE",
+    "city": "Toronto",
+    "address": "Wales Ave / Queen West",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.hungry416.com/new-cafes-in-toronto/",
+    "url": "https://www.hungry416.com/new-cafes-in-toronto/"
+  },
+  "narrative": {
+    "summary": "In-house roasting, minimalist industrial space; newer but getting serious buzz from coffee nerds.",
+    "blocks": []
+  }
+}

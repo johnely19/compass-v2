@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJTSsdMkXL1IkR8Cb1ySnUGR4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJTSsdMkXL1IkR8Cb1ySnUGR4",
+    "name": "The Room Upstairs (Toronto Dance Theatre / DanceWorks / Holla Jazz)",
+    "city": "Toronto",
+    "address": "Cabbagetown (Winchester St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via tdt.org"
+  },
+  "narrative": {
+    "summary": "New work set to John Coltrane's music using jazz, lindy hop, and black vernacular dance with live musicians. Choreographer Natasha Powell (Johanna Metcalf Prize winner). April 29–May 2.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "place_id": "ChIJGWoBKrNbwokRYqGihCSHp0U",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJGWoBKrNbwokRYqGihCSHp0U",
+    "name": "Confidant",
+    "city": "Brooklyn",
+    "address": "127 Atlantic Ave, Brooklyn, NY 11201, USA",
+    "website": "https://www.confidantnyc.com/",
+    "price_level": 3,
+    "location": "127 Atlantic Ave, Brooklyn, NY 11201, USA",
+    "lat": 40.690897,
+    "lng": -73.9958083
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAtlantic Ave at Henry St \u2014 the former Colonie space, now reborn.\n\nA seasonal, chef-driven New American restaurant with natural wine ambitions, opened February 2026 in the Brooklyn Heights space that housed Colonie for over a decade.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAtlantic Ave at Henry St \u2014 the edge where Brooklyn Heights meets Cobble Hill.\n\nYou walk into a room of wood and brick that feels lived-in, warm, like someone's been cooking here forever. Chef-owners Brendan Kelley (Aska, Per Se) and Daniel Grossman (Gage & Tollner, Foul Witch) moved here from Industry City in February 2026, and the space fits them like it was always theirs. Next door at 129 Atlantic, their all-day bakery and pizza shop Lou & Bev's is coming soon."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nExposed brick, warm wood, the kind of neighborhood restaurant where the staff remembers your name by the third visit. Intimate without being cramped. The bar is worth sitting at if you're solo \u2014 watch the cocktails being built while Lucy Saintcyr's wine picks line the shelf behind."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf77 All-natural wine list \u2014 75+ bottles, 10 by the glass. Old World-leaning, curated by wine director Lucy Saintcyr.\n\n\ud83c\udf78 Cocktails built on classic templates with local spirits and seasonal ingredients:\n\u2022 M&M Negroni \u2014 mezcal, amaro, vermouth, blood orange \u2b50\n\u2022 Seasonal rotating cocktails\n\nThe wine program is the real draw \u2014 ask Lucy what's open and interesting."
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\nContemporary American with a focus on dry-aged fish and meats. Menu changes seasonally.\n\n\ud835\udde6\ud835\ude01\ud835\uddee\ud835\uddff\ud835\ude01\ud835\uddf2\ud835\uddff\ud835\ude00\n\u2022 Trout Mousse \u2b50\n\u2022 Seasonal crudo\n\n\ud835\udde3\ud835\uddee\ud835\ude00\ud835\ude01\ud835\uddee\ud835\ude00 (new since the Brooklyn Heights move)\n\u2022 Cavatelli \u2014 white rabbit ragu, horseradish, fiore sardo \u2b50\n\u2022 Spaghetti al Funghi \u2014 mixed mushrooms, garlic, serrano pepper\n\n\ud835\uddd8\ud835\uddfb\ud835\ude01\ud835\uddff\u00e9\ud835\uddf2\ud835\ude00\n\u2022 Prawn Pot Pie \u2014 made-to-order prawn bisque, seasonal vegetables \u2b50\n\u2022 Fish of the Day \u2014 gigante beans, mushroom garum, fermented lemon\n\u2022 Rotating seasonal entr\u00e9es with dry-aged meats\n\n\ud835\uddd7\ud835\uddf2\ud835\ude00\ud835\ude00\ud835\uddf2\ud835\uddff\ud835\ude01\ud835\ude00 (pastry chef Mariah Neston, ex-Le Rock)\n\u2022 Malted Mille Feuille \u2014 chocolate cr\u00eape dentelles, hazelnut cr\u00e9meux, coffee diplomat cream \u2b50\n\u2022 Banoffee Sundae \u2014 banana ice cream, butterscotch toffee, buttered brioche crumbs\n\nNote: Menu evolves seasonally. Expect new pasta additions and rotating proteins."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$\n\nDinner for 2: ~$120-160 (with wine)\n\nReservations: Via Resy at confidantnyc.com\n\n\ud83c\udf10 confidantnyc.com\n\ud83d\udcf8 @confidant.bk\n\ud83d\udcde (929) 252-0205\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nWed\u2013Sun: 5:00\u201310:00 PM\nMon\u2013Tue: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Early weeknight (Wed/Thu 5pm): Fewer covers, more attention from the kitchen\n\u2022 Bar seats for walk-ins\n\u2022 Just opened Feb 2026 \u2014 still building a following, easier to get in now"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Eater NY \u2014 hidden cocktail bar on Atlantic Ave",
+    "url": "https://ny.eater.com/maps/best-cocktail-bars-brooklyn"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJQYoBf6E0K4gR04UK2skt0wM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQYoBf6E0K4gR04UK2skt0wM",
+    "name": "Designers Walk",
+    "city": "Toronto",
+    "address": "Annex/Bedford",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via designerswalk.com"
+  },
+  "narrative": {
+    "summary": "5-building design complex with 20+ showrooms - Kravet, Lee Jofa, Primavera - open to public",
+    "blocks": []
+  }
+}

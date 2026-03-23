@@ -1,0 +1,12 @@
+{
+  "place_id": "DEV_YONGE_BIRCH",
+  "images": [
+    {
+      "id": "rendering-1",
+      "category": "rendering",
+      "order": 1,
+      "path": "/developments/yonge-birch-rendering-1.jpg",
+      "caption": "Yonge & Birch Residences rendering 1"
+    }
+  ]
+}

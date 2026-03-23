@@ -1,0 +1,94 @@
+{
+  "place_id": "ChIJUaAuMl1ZwokRt0-S_ynnRtc",
+  "built": "2026-03-11T23:06:29.158Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJUaAuMl1ZwokRt0-S_ynnRtc",
+    "name": "Brooklyn Brewery",
+    "city": "NYC",
+    "address": "79 N 11th St, Brooklyn, NY 11249, USA",
+    "type": "music-venue",
+    "website": "http://www.brooklynbrewery.com/",
+    "rating": 4.5,
+    "user_rating_count": 1841,
+    "location": "79 N 11th St, Brooklyn, NY 11249, USA"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Brooklyn Brewery\n79 N 11th St, Brooklyn, NY 11249, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Brooklyn Brewery",
+        "body": "\ud83d\udccd Brooklyn Brewery\n79 N 11th St, Brooklyn, NY 11249, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nTourist-popular Williamsburg stop worth selective inclusion for first-time orientation and neighborhood context."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.5 (1841 reviews)\nPrice level: $$\nPhone: n/a\nWebsite: http://www.brooklynbrewery.com/\n\nHours:\nMonday: 4:00\u2009\u2013\u20099:00\u202fPM\nTuesday: 4:00\u2009\u2013\u20099:00\u202fPM\nWednesday: 4:00\u2009\u2013\u20099:00\u202fPM\nThursday: 4:00\u2009\u2013\u200910:00\u202fPM\nFriday: 2:00\u2009\u2013\u200911:00\u202fPM\nSaturday: 12:00\u202fPM\u2009\u2013\u200912:00\u202fAM\nSunday: 12:00\u2009\u2013\u20098:00\u202fPM"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 79 N 11th St, Brooklyn, NY 11249, USA\n\n\u2022 walking: 1 hour 8 mins \u2022 3.0 mi\n\u2022 transit: 34 mins \u2022 3.7 mi\n\u2022 driving: 21 mins \u2022 4.0 mi (traffic: 21 mins)\n\u2022 bicycling: 24 mins \u2022 4.0 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (21 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "79 N 11th St, Brooklyn, NY 11249, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:52.955Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (21 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1287,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": 1282,
+        "durationInTrafficText": "21 mins",
+        "distanceMeters": 6419,
+        "distanceText": "4.0 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4079,
+        "durationText": "1 hour 8 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4906,
+        "distanceText": "3.0 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1413,
+        "durationText": "24 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6488,
+        "distanceText": "4.0 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2015,
+        "durationText": "34 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5994,
+        "distanceText": "3.7 mi"
+      }
+    ]
+  }
+}

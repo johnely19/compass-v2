@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ10sm0hpIK4gR2szc64QDb5E",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ10sm0hpIK4gR2szc64QDb5E",
+    "name": "Sandown Market",
+    "city": "Toronto",
+    "address": "Browns Line / South Etobicoke",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces:details"
+  },
+  "narrative": {
+    "summary": "Hidden-gem Japanese grocer; owner-operated, strong snack selection, 4.8 rating; described as 'warmth of the owners' + deep inventory.",
+    "blocks": []
+  }
+}

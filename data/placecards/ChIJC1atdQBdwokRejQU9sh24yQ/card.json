@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJC1atdQBdwokRejQU9sh24yQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJC1atdQBdwokRejQU9sh24yQ",
+    "name": "Orion Bar",
+    "city": "NYC",
+    "address": "Bushwick (157 Suydam St)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers",
+    "url": "https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers"
+  },
+  "narrative": {
+    "summary": "The 'insanely fun soju spot' per Bon Appétit's March 2026 NYC food guide. Korean-inspired cocktails, soju-forward. 4.8★ (85 reviews). On the Bushwick→Ridgewood walk.",
+    "blocks": []
+  }
+}

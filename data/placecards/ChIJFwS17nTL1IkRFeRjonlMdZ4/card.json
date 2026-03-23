@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJFwS17nTL1IkRFeRjonlMdZ4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJFwS17nTL1IkRFeRjonlMdZ4",
+    "name": "Vatican Gift Shop",
+    "city": "Toronto",
+    "address": "Leslieville (Gerrard East)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via foodism speakeasies"
+  },
+  "narrative": {
+    "summary": "Moody east-end speakeasy with theatrical religious kitsch decor; open W-Sat til 2am, 4.4 rating.",
+    "blocks": []
+  }
+}

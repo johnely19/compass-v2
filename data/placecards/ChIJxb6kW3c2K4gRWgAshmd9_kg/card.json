@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJxb6kW3c2K4gRWgAshmd9_kg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJxb6kW3c2K4gRWgAshmd9_kg",
+    "name": "Cheese Boutique",
+    "city": "Toronto",
+    "address": "South Etobicoke (45 Ripley Ave)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.reddit.com/r/askTO/comments/1czyccu/best_high_end_grocery_stores_in_toronto/",
+    "url": "https://www.reddit.com/r/askTO/comments/1czyccu/best_high_end_grocery_stores_in_toronto/"
+  },
+  "narrative": {
+    "summary": "Toronto's legendary cheese & gourmet destination. 4.8★ (2708 reviews). Best-in-city cheese selection, premium meats, fish, and specialty items. The Bottega next door adds bakery/café. Small Talk jazz bar does a Cheese Boutique collab menu. Worth the trip from midtown. $$$",
+    "blocks": []
+  }
+}

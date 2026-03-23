@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ84jUOZ80K4gRL3FQhJXUkUQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ84jUOZ80K4gRL3FQhJXUkUQ",
+    "name": "South Hill Home",
+    "city": "Toronto",
+    "address": "Dupont/Annex",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via southhillhome.com"
+  },
+  "narrative": {
+    "summary": "Ever-changing curated gallery - world-renowned artists, trendsetting displays",
+    "blocks": []
+  }
+}

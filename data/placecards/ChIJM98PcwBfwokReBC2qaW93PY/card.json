@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJM98PcwBfwokReBC2qaW93PY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJM98PcwBfwokReBC2qaW93PY",
+    "name": "Bodega Nights",
+    "city": "New York",
+    "address": "Bushwick (425 Troutman St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Brand new natural wine bar + Brazilian-Iberian kitchen from the Babysips team. On Troutman near Bushwick Collective — on Day 2 walking route. Salt cod fritters, house-made sausages, minimal-intervention wines. 5.0★."
+  },
+  "narrative": {
+    "summary": "Brand new natural wine bar + Brazilian-Iberian kitchen from the Babysips team. On Troutman near Bushwick Collective — on Day 2 walking route. Salt cod fritters, house-made sausages, minimal-intervention wines. 5.0★.",
+    "blocks": []
+  }
+}

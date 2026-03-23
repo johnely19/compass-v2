@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJCc64mRU1K4gRe-MfTTPHLS8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJCc64mRU1K4gRe-MfTTPHLS8",
+    "name": "Hinoya Curry",
+    "city": "Toronto",
+    "address": "Church-Yonge Corridor (20 Carlton St)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "toronto.com"
+  },
+  "narrative": {
+    "summary": "Tokyo curry chain's first Canadian location. Authentic Japanese curry. 3.9 rating, 50 reviews already. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

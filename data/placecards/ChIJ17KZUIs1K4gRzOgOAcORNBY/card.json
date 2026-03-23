@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ17KZUIs1K4gRzOgOAcORNBY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ17KZUIs1K4gRzOgOAcORNBY",
+    "name": "She Said Gallery",
+    "city": "Toronto",
+    "address": "Roncesvalles (384 Roncesvalles Ave)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Art gallery inside a laundromat. Run by Jyll Simmons. New exhibit every week — 50 shows booked for 2026. Deliberately anti-intimidating. Free. Very Atlas Obscura. 4.9★ (9 reviews).",
+    "blocks": []
+  }
+}

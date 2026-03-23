@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJX_O5HQA1K4gRNYqajXFSji4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJX_O5HQA1K4gRNYqajXFSji4",
+    "name": "Bellis Café & Bar",
+    "city": "Toronto",
+    "address": "The Annex / Bloor W (Nomas Hotel)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/eat_drink/2026/02/bellis-nomas-hotel-toronto/",
+    "url": "https://www.blogto.com/eat_drink/2026/02/bellis-nomas-hotel-toronto/"
+  },
+  "narrative": {
+    "summary": "Japanese-Italian concept at new boutique hotel Nomas; just opened, no Google rating yet but high-signal pedigree.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJST3PBLI1K4gR8859Qq6llKk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJST3PBLI1K4gR8859Qq6llKk",
+    "name": "Studio1484",
+    "city": "Toronto",
+    "address": "Parkdale / Queen West",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via studio1484.com"
+  },
+  "narrative": {
+    "summary": "Hidden gem for eccentric vintage MCM; 2nd floor treasure hunt vibe, 4.9 rating.",
+    "blocks": []
+  }
+}

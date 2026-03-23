@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJZbKDWO8zK4gRgFbMnYPI13Q",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZbKDWO8zK4gRgFbMnYPI13Q",
+    "name": "Elte",
+    "city": "Toronto",
+    "address": "Caledonia / Ronald Ave",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via elte.com"
+  },
+  "narrative": {
+    "summary": "Toronto design institution—massive showroom with curated European + contemporary lines.",
+    "blocks": []
+  }
+}

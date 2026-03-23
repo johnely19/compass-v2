@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJAefF64DN1IkRlbV8VGFSusE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJAefF64DN1IkRlbV8VGFSusE",
+    "name": "Avenue Road",
+    "city": "Toronto",
+    "address": "Leslieville (20 Wagstaff Dr)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via avenue-road.com"
+  },
+  "narrative": {
+    "summary": "Gallery-like furniture showroom in a 1907 Victorian warehouse. Interior by Sebastian Herkner. Carries Christophe Delcourt, Raf Simons textiles, Obumex bespoke kitchens. Originally designed by Yabu Pushelberg. More art installation than furniture store. 4.5★ (27 reviews).",
+    "blocks": []
+  }
+}

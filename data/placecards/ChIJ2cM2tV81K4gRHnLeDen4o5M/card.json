@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJ2cM2tV81K4gRHnLeDen4o5M",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ2cM2tV81K4gRHnLeDen4o5M",
+    "name": "Grape Witches",
+    "city": "Toronto",
+    "address": "Dundas West (Trinity Bellwoods)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "https://grapewitches.com/",
+    "url": "https://grapewitches.com/"
+  },
+  "narrative": {
+    "summary": "OG Toronto natty wine shop + bar; 250+ organic/biodynamic/natural bottles, educational tastings, second location at Waterworks. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

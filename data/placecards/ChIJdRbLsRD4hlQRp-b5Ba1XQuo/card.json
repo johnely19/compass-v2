@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJdRbLsRD4hlQRp-b5Ba1XQuo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJdRbLsRD4hlQRp-b5Ba1XQuo",
+    "name": "Howe Sound Inn & Brewing",
+    "city": "Squamish",
+    "address": "Cleveland Ave",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "bcaletrail.ca",
+    "url": "https://bcaletrail.ca/road-trip-journals/sea-to-sky/"
+  },
+  "narrative": {
+    "summary": "Squamish icon. Established brewpub on Cleveland Avenue. Huge restaurant space with mountain views of The Chief. Good food, solid beer. More traditional pub feel than Backcountry. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://static.wixstatic.com/media/0393bd_10d8ee3a46844edb8f7741462066e2d5~mv2.jpg/v1/fill/w_2500,h_1710,al_c/0393bd_10d8ee3a46844edb8f7741462066e2d5~mv2.jpg",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://static.wixstatic.com/media/0393bd_10d8ee3a46844edb8f7741462066e2d5~mv2.jpg/v1/fill/w_2500,h_1710,al_c/0393bd_10d8ee3a46844edb8f7741462066e2d5~mv2.jpg",
+      "caption": "Source image"
+    }
+  ]
+}

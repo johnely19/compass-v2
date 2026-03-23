@@ -1,0 +1,94 @@
+{
+  "place_id": "ChIJE-vhZPJdwokRrv9QxK5q894",
+  "built": "2026-03-16T10:04:09.726Z",
+  "source": "morning-build-run",
+  "identity": {
+    "place_id": "ChIJE-vhZPJdwokRrv9QxK5q894",
+    "name": "Bushwick Comedy Club",
+    "city": "NYC",
+    "address": "259 Melrose St, Brooklyn, NY 11206, USA",
+    "type": "theatre",
+    "website": "https://bushwickcomedy.com/",
+    "rating": 4.9,
+    "user_rating_count": 244,
+    "location": "259 Melrose St, Brooklyn, NY 11206, USA"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Bushwick Comedy Club\n259 Melrose St, Brooklyn, NY 11206, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Bushwick Comedy Club",
+        "body": "\ud83d\udccd Bushwick Comedy Club\n259 Melrose St, Brooklyn, NY 11206, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nReddit locals' favorite Brooklyn comedy club. 4.9 stars (244 reviews). 130+ comics in rotation, never the same show twice. Walk-in friendly. Right in Bushwick \u2014 perfect for the trip corridor. $13-15 tickets. HIGH locality: multiple Reddit threads name this as THE spot."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.9 (244 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: https://bushwickcomedy.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 259 Melrose St, Brooklyn, NY 11206, USA\n\n\u2022 walking: 1 hour 34 mins \u2022 4.1 mi\n\u2022 transit: 42 mins \u2022 5.5 mi\n\u2022 driving: 25 mins \u2022 5.6 mi (traffic: 27 mins)\n\u2022 bicycling: 32 mins \u2022 4.9 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (25 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "259 Melrose St, Brooklyn, NY 11206, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:29.805Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (25 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1525,
+        "durationText": "25 mins",
+        "durationInTrafficSeconds": 1597,
+        "durationInTrafficText": "27 mins",
+        "distanceMeters": 9035,
+        "distanceText": "5.6 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5629,
+        "durationText": "1 hour 34 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6671,
+        "distanceText": "4.1 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1918,
+        "durationText": "32 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7868,
+        "distanceText": "4.9 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2510,
+        "durationText": "42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8893,
+        "distanceText": "5.5 mi"
+      }
+    ]
+  }
+}

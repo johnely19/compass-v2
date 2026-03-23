@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJq6qqFpYNhlQRCQ7sHGVl_00",
+  "built": "2026-02-23T20:54:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJq6qqFpYNhlQRCQ7sHGVl_00",
+    "name": "The Watershed Grill",
+    "city": "BC",
+    "address": "57896 Squamish Valley Road",
+    "phone": "604-898-2002",
+    "website": "https://watershedgrill.com",
+    "price_level": 2,
+    "location": "57896 Squamish Valley Road"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSquamish Valley — where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view — it's why the restaurant exists.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSquamish Valley — where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view — it's why the restaurant exists."
+      },
+      {
+        "id": "block-2",
+        "title": "Pull Into The Gravel Lot. Red Adirondack Chairs Scattered By The Water. The Wooden Building Looks Like Someone's Uncle Built It In The '70s And They Just Kept Adding Decks",
+        "body": "Pull into the gravel lot. Red Adirondack chairs scattered by the water. The wooden building looks like someone's uncle built it in the '70s and they just kept adding decks."
+      },
+      {
+        "id": "block-3",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nFloor-to-ceiling windows. Every table has the view. Friends crowd around platters of everything — burgers, wings, eggs benny, Caesars. This is what a road trip lunch looks like when you find the right place."
+      },
+      {
+        "id": "block-4",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The classics:\n• Caesar — $9 (spiced rim, pickled bean) ⭐\n• Coronarita — $14 (Corona inverted in margarita)\n• OK Springs 1516 Lager — $6.25/16oz\n\nThis is a \"beer with a view\" kind of place. Order your drink, take it out to the deck, watch eagles circle over the river."
+      },
+      {
+        "id": "block-5",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗"
+      },
+      {
+        "id": "block-6",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗕𝗥𝗘𝗔𝗞𝗙𝗔𝗦𝗧 $14-22\n• Classic Benny — $18\n• Watershed Benny (smoked salmon) — $22 ⭐\n• Breakfast Skillet — $18\n• Chorizo Scramble — $19\n\n𝗕𝗨𝗥𝗚𝗘𝗥𝗦 $19-24\n• Watershed Burger — $21 (bacon, cheese, onion ring tower) ⭐\n• Bison Burger — $24\n• Mushroom Swiss — $21\n• Pulled Pork Burger — $19\n\n𝗣𝗨𝗕 𝗙𝗔𝗥𝗘 $10-26\n• Fish & Chips — $21 (local catch, beer batter) ⭐\n• Wings (1lb) — $17\n• Nashville Hot Chicken Sando — $23\n• Poutine — $14\n\n𝗗𝗜𝗡𝗡𝗘𝗥 $22-32\n• Roast Beef Dinner — $25 (Yorkshire pud, gravy)\n• Salmon — $28\n• Steak Sandwich — $26\n• Ribs (full rack) — $32 ⭐\n\nNote: Menu rotates seasonally. Brunch served daily until 3pm."
+      },
+      {
+        "id": "block-7",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nLunch for 2: $50-70 (with drinks)\nDinner for 2: $80-110 (with drinks)\n\nReservations: Walk-in only — no reservations\nNote: Cash only (ATM on site)\n\n📞 604-898-2002\n🌐 watershedgrill.com\n📸 @watershedgrill\n\n𝗛𝗢𝗨𝗥𝗦\nDaily: 9am – 9pm (kitchen closes 8:30pm)\nClosed Tuesdays (winter)\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Weekday lunch (11am-2pm) — quietest, best deck seats\n• Late afternoon (3-5pm) — golden light on mountains\n• Summer weekends — arrive before 11am or expect a wait\n• Eagle watching season (Nov-Feb) — hundreds gather on the river"
+      },
+      {
+        "id": "block-8",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 57896 Squamish Valley Road\n\n• walking: 41 days 1 hour • 4,377 km\n• transit: unavailable\n• driving: unavailable\n• bicycling: unavailable\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (41 days 1 hour)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "57896 Squamish Valley Road",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:48.543Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (41 days 1 hour)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": false,
+        "error": "Requested route too long.",
+        "googleStatus": "MAX_ROUTE_LENGTH_EXCEEDED"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3546382,
+        "durationText": "41 days 1 hour",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4377170,
+        "distanceText": "4,377 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": false,
+        "error": "Requested route too long.",
+        "googleStatus": "MAX_ROUTE_LENGTH_EXCEEDED"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "Requested route too long.",
+        "googleStatus": "MAX_ROUTE_LENGTH_EXCEEDED"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJU1r7cM7M1IkRn09EaxJOWpo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJU1r7cM7M1IkRn09EaxJOWpo",
+    "name": "Dolce & Gourmando",
+    "city": "Toronto",
+    "address": "Leaside / Bayview Ave",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "yelp"
+  },
+  "narrative": {
+    "summary": "Artisan chocolates, confections, premium pantry gifts. 4.5★. Boutique feel, handmade quality. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

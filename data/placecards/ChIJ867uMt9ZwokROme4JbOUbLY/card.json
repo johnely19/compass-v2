@@ -1,0 +1,104 @@
+{
+  "place_id": "ChIJ867uMt9ZwokROme4JbOUbLY",
+  "built": "2026-02-26",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJ867uMt9ZwokROme4JbOUbLY",
+    "name": "Johnny's",
+    "city": "Brooklyn",
+    "address": "642 Lorimer St, Brooklyn, NY 11211",
+    "phone": "(718) 535-8554",
+    "website": "https://www.johnnysbk.com/",
+    "price_level": 2,
+    "rating": 4.9,
+    "location": "642 Lorimer St, Brooklyn, NY 11211"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLorimer & Jackson — Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLorimer & Jackson — Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗧𝗢𝗥𝗬\n\nThree generations of the Tang family have fed New Yorkers since 1973, when grandfather Yuen Jam Tan opened Peking BBQ in Woodside with nothing but Peruvian recipes and determination. Grandkids Stephanie and John Jr. finally realized their father Johnny's dream — a full-service, full-bar restaurant celebrating their Chifa (Chinese-Peruvian) heritage."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🍗 Rotisserie (True to 1970s family recipes)\n• Rotisserie Chicken — quarter/half/whole ⭐\n  • Half chicken combo w/ yuca fries & salad — $25\n  • Quarter chicken combo — ~$18\n• Spare Ribs — sweet & funky, \"small\" 3 slabs — $14 ⭐\n\n🍜 Chifa Classics\n• Lomo Saltado — beefy, well-seasoned, rice + fries — $28 ⭐\n• Vegetable Lo Mein — bright, crunchy, vegetable-forward — $16\n• Arroz Chaufa — Peruvian fried rice\n• Jalea — Peruvian seafood platter\n\n🍔 Other\n• Johnny's Smashburger — Asian pickles, aji verde\n• Wok-charred seasonal greens\n• Caesar salad\n• Yuca fries\n\n🍨 Dessert\n• Chocolate chip cookie — dulce de leche, black sesame, vanilla ice cream ⭐\n\nNote: Everything comes with aji verde, the spicy creamy jalapeño-cilantro sauce that livens everything up."
+      },
+      {
+        "id": "block-4",
+        "title": "Drinks",
+        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 Frozen cocktails — $14\n• Chicha Morada (rum) — dark purple, reportedly quite potent ⭐\n• Frozen Lychee Pisco Sour ⭐\n\n🍺 Beer\n• Tsingtao 12oz — $6\n\n🍸 House cocktails — $15"
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nDinner for 2: $60-80 (with drinks)\n\nReservations: Walk-in only (currently)\n\n📞 (718) 535-8554\n🌐 johnnysbk.com\n📸 @johnnysbk\n\n𝗛𝗢𝗨𝗥𝗦\nTue–Thu: 5–10pm\nFri–Sat: 5–10:30pm\nSun: 5–10pm\nMon: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early Tuesday (5-6pm) — no wait, neighborhood-quiet\n• Weekend evenings fill with families by 6pm\n• Watch the rotisserie through the window while you wait\n• 5 blocks from Arnold's place — perfect neighborhood dinner"
+      },
+      {
+        "id": "block-6",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 642 Lorimer St, Brooklyn, NY 11211\n\n• walking: 1 hour 8 mins • 3.1 mi\n• transit: 29 mins • 3.9 mi\n• driving: 17 mins • 4.1 mi (traffic: 17 mins)\n• bicycling: 22 mins • 3.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (17 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "642 Lorimer St, Brooklyn, NY 11211",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:22.679Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (17 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1033,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": 1042,
+        "durationInTrafficText": "17 mins",
+        "distanceMeters": 6671,
+        "distanceText": "4.1 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 4106,
+        "durationText": "1 hour 8 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4927,
+        "distanceText": "3.1 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1304,
+        "durationText": "22 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5468,
+        "distanceText": "3.4 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1738,
+        "durationText": "29 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6265,
+        "distanceText": "3.9 mi"
+      }
+    ]
+  }
+}

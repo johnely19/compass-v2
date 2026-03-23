@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJx70ycC7L1IkRfhWzG3mc6O0",
+  "built": "2026-03-10T15:36:48.872Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJx70ycC7L1IkRfhWzG3mc6O0",
+    "name": "Giulietta",
+    "city": "Toronto",
+    "address": "972 College St, Toronto, ON M6H 1A5, Canada",
+    "type": "restaurant",
+    "phone": "(416) 964-0606",
+    "website": "http://giu.ca/",
+    "price_level": 3,
+    "rating": 4.6,
+    "user_rating_count": 1711,
+    "location": "972 College St, Toronto, ON M6H 1A5, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Giulietta\n972 College St, Toronto, ON M6H 1A5, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Giulietta",
+        "body": "📍 Giulietta\n972 College St, Toronto, ON M6H 1A5, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSassier sister to Michelin-starred Osteria Giulia - neighborhood Italian with local Ontario wine focus"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://giu.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (1711 reviews)\nPrice level: $$$\nPhone: (416) 964-0606\nWebsite: http://giu.ca/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 972 College St, Toronto, ON M6H 1A5, Canada\n\n• walking: 1 hour 27 mins • 6.4 km\n• transit: 45 mins • 8.1 km\n• driving: 20 mins • 6.7 km (traffic: 15 mins)\n• bicycling: 22 mins • 6.7 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "972 College St, Toronto, ON M6H 1A5, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:50.908Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (20 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1215,
+        "durationText": "20 mins",
+        "durationInTrafficSeconds": 871,
+        "durationInTrafficText": "15 mins",
+        "distanceMeters": 6713,
+        "distanceText": "6.7 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 5204,
+        "durationText": "1 hour 27 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6357,
+        "distanceText": "6.4 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1311,
+        "durationText": "22 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6707,
+        "distanceText": "6.7 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2709,
+        "durationText": "45 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8129,
+        "distanceText": "8.1 km"
+      }
+    ]
+  }
+}

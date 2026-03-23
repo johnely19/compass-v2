@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJpWYR79VzhlQRYo-cR-_0ktg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJpWYR79VzhlQRYo-cR-_0ktg",
+    "name": "Contemporary Art Gallery",
+    "city": "Vancouver",
+    "address": "Downtown",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "cagvancouver.org",
+    "url": "https://cagvancouver.org/"
+  },
+  "narrative": {
+    "summary": "Free admission. Artist-driven contemporary art space on Nelson Street. Smaller, more experimental than VAG. Worth 30-60 min during downtown exploring. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

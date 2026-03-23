@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJQxWQCwA1K4gRol-CoEDUBUU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQxWQCwA1K4gRol-CoEDUBUU",
+    "name": "Civil Works",
+    "city": "Toronto",
+    "address": "King West (Waterworks)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via yourcitywithin.com"
+  },
+  "narrative": {
+    "summary": "Award-winning bar, new menu honoring Toronto's industrial history. Connected to Waterworks Foodhall. 4.5 rating, 144 reviews.",
+    "blocks": []
+  }
+}

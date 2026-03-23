@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJx6bz5M0K4gRxRx385CYfBY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJx6bz5M0K4gRxRx385CYfBY",
+    "name": "Hot Docs Ted Rogers Cinema",
+    "city": "Toronto",
+    "address": "The Annex (Bloor W)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via reddit r/askTO"
+  },
+  "narrative": {
+    "summary": "Documentary-focused but excellent arthouse programming year-round. Former Bloor Cinema, proper film-nerd audience. 4.6 rating, strong calendar.",
+    "blocks": []
+  }
+}

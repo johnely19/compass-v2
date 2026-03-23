@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ2RpLnLw0K4gRe0xjgPn8PBg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ2RpLnLw0K4gRe0xjgPn8PBg",
+    "name": "SuperBlue: Kurt Elling & Charlie Hunter at Koerner Hall",
+    "city": "Toronto",
+    "address": "Bloor / Annex (Royal Conservatory)",
+    "type": "theatre"
+  },
+  "discovery": {
+    "text": "Discovered via kurtelling.com"
+  },
+  "narrative": {
+    "summary": "Grammy-winning jazz vocalist + 8-string guitar virtuoso. Standards, originals, reinventions. March 28, 8pm. Koerner Hall (4.9\u2605) \u2014 one of the best acoustics rooms in Canada.",
+    "blocks": []
+  }
+}

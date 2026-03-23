@@ -1,0 +1,61 @@
+{
+  "place_id": "ChIJddQwhZX5hlQRjlY7UNcmuHY",
+  "built": "2026-03-12T16:42:08.010809Z",
+  "source": "squamish-placecards-batch-2026-03-12",
+  "identity": {
+    "place_id": "ChIJddQwhZX5hlQRjlY7UNcmuHY",
+    "name": "The Broken Seal",
+    "city": "Squamish",
+    "region": "BC",
+    "province": "BC",
+    "address": "38038 Loggers Ln, Squamish, BC V8B 0V7, Canada",
+    "location": "38038 Loggers Ln, Squamish, BC V8B 0V7, Canada",
+    "type": "restaurant",
+    "phone": null,
+    "website": "https://thebrokenseal.ca/",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 4:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 3:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 3:00\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "price_level": null,
+    "rating": 4.9,
+    "user_rating_count": 251,
+    "menu_link": "https://thebrokenseal.ca/",
+    "lat": 49.6981135,
+    "lng": -123.1521377
+  },
+  "narrative": {
+    "summary": "The Broken Seal is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
+    "blocks": [
+      {
+        "id": "arrival",
+        "title": "Arrival",
+        "body": "Address: 38038 Loggers Ln, Squamish, BC V8B 0V7, Canada."
+      },
+      {
+        "id": "room",
+        "title": "Room",
+        "body": "Expect a lively local crowd with mountain-town energy."
+      },
+      {
+        "id": "food",
+        "title": "Food & Drinks",
+        "body": "See photo gallery sections for food, drinks, and atmosphere references."
+      },
+      {
+        "id": "ops",
+        "title": "Operational snapshot",
+        "body": "Google rating 4.9 from 251 reviews."
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco research agent",
+    "url": "https://thebrokenseal.ca/"
+  }
+}

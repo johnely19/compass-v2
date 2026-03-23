@@ -1,0 +1,61 @@
+{
+  "place_id": "ChIJddQwhZX5hlQRjlY7UNcmuHY",
+  "images": [
+    {
+      "id": "outside-1",
+      "category": "outside",
+      "order": 1,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/outside-1.jpg",
+      "caption": "Street-facing arrival and exterior context"
+    },
+    {
+      "id": "interior-vibe-1",
+      "category": "interior_vibe",
+      "order": 2,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/interior_vibe-1.jpg",
+      "caption": "Interior mood and seating vibe"
+    },
+    {
+      "id": "interior-detail-1",
+      "category": "interior_detail",
+      "order": 3,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/interior_detail-1.jpg",
+      "caption": "Interior detail and finish"
+    },
+    {
+      "id": "food-1",
+      "category": "food",
+      "order": 4,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/food-1.jpg",
+      "caption": "Dish and plating reference"
+    },
+    {
+      "id": "drinks-1",
+      "category": "drinks",
+      "order": 5,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/drinks-1.jpg",
+      "caption": "Beverage program reference"
+    },
+    {
+      "id": "check-1",
+      "category": "check",
+      "order": 6,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/check-1.jpg",
+      "caption": "Receipt/check visual context"
+    },
+    {
+      "id": "exterior-1",
+      "category": "exterior",
+      "order": 7,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/exterior.jpg",
+      "caption": "The Broken Seal is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe."
+    },
+    {
+      "id": "map-1",
+      "category": "map",
+      "order": 8,
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/map.png",
+      "caption": "📍 The Broken Seal\n38038 Loggers Ln, Squamish, BC V8B 0V7, Canada"
+    }
+  ]
+}

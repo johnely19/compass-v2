@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJX18iSiA0K4gRpylkVZEoBP4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJX18iSiA0K4gRpylkVZEoBP4",
+    "name": "Mjölk",
+    "city": "Toronto",
+    "address": "Junction (2959 Dundas St W)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via mjolk.ca"
+  },
+  "narrative": {
+    "summary": "Japanese + Scandinavian design objects. Run by a couple who apprenticed with Japanese artisans. Curated ceramics, woodwork, textiles — wabi-sabi meets Nordic minimalism. Directly aligned with John's Japanese aesthetics interest. 4.8★ (71 reviews).",
+    "blocks": []
+  }
+}

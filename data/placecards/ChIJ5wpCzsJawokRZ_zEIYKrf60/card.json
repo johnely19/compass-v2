@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJ5wpCzsJawokRZ_zEIYKrf60",
+  "built": "2026-03-10T12:59:35.536Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJ5wpCzsJawokRZ_zEIYKrf60",
+    "name": "Green-Wood Cemetery",
+    "city": "NYC",
+    "address": "25th St, Brooklyn, NY 11232, USA",
+    "type": "architecture",
+    "phone": "(718) 768-7300",
+    "website": "https://www.green-wood.com/",
+    "location": "25th St, Brooklyn, NY 11232, USA"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Green-Wood Cemetery\n25th St, Brooklyn, NY 11232, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Green-wood Cemetery",
+        "body": "\ud83d\udccd Green-Wood Cemetery\n25th St, Brooklyn, NY 11232, USA"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (808 reviews)\nPhone: (718) 768-7300\nWebsite: https://www.green-wood.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 25th St, Brooklyn, NY 11232, USA\n\n\u2022 walking: 1 hour 50 mins \u2022 4.9 mi\n\u2022 transit: 31 mins \u2022 5.5 mi\n\u2022 driving: 20 mins \u2022 5.4 mi (traffic: 18 mins)\n\u2022 bicycling: 36 mins \u2022 5.4 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (20 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "25th St, Brooklyn, NY 11232, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:19.186Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (20 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1207,
+        "durationText": "20 mins",
+        "durationInTrafficSeconds": 1078,
+        "durationInTrafficText": "18 mins",
+        "distanceMeters": 8760,
+        "distanceText": "5.4 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 6590,
+        "durationText": "1 hour 50 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 7830,
+        "distanceText": "4.9 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2179,
+        "durationText": "36 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8648,
+        "distanceText": "5.4 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1886,
+        "durationText": "31 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8845,
+        "distanceText": "5.5 mi"
+      }
+    ]
+  }
+}

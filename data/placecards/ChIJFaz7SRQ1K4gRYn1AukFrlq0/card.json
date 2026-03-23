@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJFaz7SRQ1K4gRYn1AukFrlq0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJFaz7SRQ1K4gRYn1AukFrlq0",
+    "name": "Rooms | 17 Baldwin",
+    "city": "Toronto",
+    "address": "Baldwin Village / Chinatown edge",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html",
+    "url": "https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html"
+  },
+  "narrative": {
+    "summary": "Hi-fi listening bar + pour-over concept; DJ booth meets coffee bar; flagship opened summer 2024; uses SEY/La Cabra + in-house roast.",
+    "blocks": []
+  }
+}

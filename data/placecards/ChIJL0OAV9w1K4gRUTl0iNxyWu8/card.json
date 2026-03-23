@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJL0OAV9w1K4gRUTl0iNxyWu8",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJL0OAV9w1K4gRUTl0iNxyWu8",
+    "name": "Ethica Coffee Roasters",
+    "city": "Toronto",
+    "address": "Junction Triangle / Sterling Rd (MOCA corridor)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://sprudge.com/",
+    "url": "https://sprudge.com/"
+  },
+  "narrative": {
+    "summary": "Coffee roastery + wine bar on the arts corridor; great pairing with a MOCA/gallery day.",
+    "blocks": []
+  }
+}

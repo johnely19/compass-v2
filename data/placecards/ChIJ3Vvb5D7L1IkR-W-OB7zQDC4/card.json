@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ3Vvb5D7L1IkR-W-OB7zQDC4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ3Vvb5D7L1IkR-W-OB7zQDC4",
+    "name": "Kiosk Design",
+    "city": "Toronto",
+    "address": "King East Design District",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via designlinesmagazine.com"
+  },
+  "narrative": {
+    "summary": "Architectural tour de force - dramatic staircases, 3 floors of Poltrona Frau, Glas Italia, pure Euro flair",
+    "blocks": []
+  }
+}

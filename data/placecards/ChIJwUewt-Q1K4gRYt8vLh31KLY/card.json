@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJwUewt-Q1K4gRYt8vLh31KLY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJwUewt-Q1K4gRYt8vLh31KLY",
+    "name": "Standard Time",
+    "city": "Toronto",
+    "address": "Geary Ave",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via reddit.com/r/naturalwine"
+  },
+  "narrative": {
+    "summary": "Second-floor wine bar with DJ nights - the cool Geary corridor play, events-driven",
+    "blocks": []
+  }
+}

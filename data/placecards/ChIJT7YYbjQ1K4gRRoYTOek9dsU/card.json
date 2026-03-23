@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJT7YYbjQ1K4gRRoYTOek9dsU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJT7YYbjQ1K4gRRoYTOek9dsU",
+    "name": "Enoteca Rossio",
+    "city": "Toronto",
+    "address": "Junction Triangle",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via blogto.com"
+  },
+  "narrative": {
+    "summary": "New contemporary Italian with hidden speakeasy in back. Chef Andrew Capone. Replaced 25-yr Piri Piri Grill. 4.9 rating early. Weekend brunch + dinner.",
+    "blocks": []
+  }
+}

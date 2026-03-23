@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJq2b6dAA1K4gR0aojV5oOqvs",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJq2b6dAA1K4gR0aojV5oOqvs",
+    "name": "Pizzeria Badiali Annex",
+    "city": "Toronto",
+    "address": "581 Markham St (Mirvish Village)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Verified find (Disco) — expansion of Pizzeria Badiali (Dovercourt)",
+    "url": ""
+  },
+  "narrative": {
+    "summary": "Second location of Toronto’s standout NY-style slice shop, opening in Mirvish Village (Annex). The original Dovercourt location is a proven hit (4.7★, 6,548 reviews). Expect serious demand early.",
+    "blocks": []
+  }
+}

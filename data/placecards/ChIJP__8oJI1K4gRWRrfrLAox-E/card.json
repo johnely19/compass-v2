@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJP__8oJI1K4gRWRrfrLAox-E",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJP__8oJI1K4gRWRrfrLAox-E",
+    "name": "Next Stop Japan Marketplace",
+    "city": "Toronto",
+    "address": "Queen West (938 Queen St W — Welcome Market)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via toronto.com"
+  },
+  "narrative": {
+    "summary": "Free immersive Japanese culture pop-up: tea ceremonies, wagashi making, kimono dressing, knife demos, curated marketplace of rare Japanese brands. THIS WEEKEND March 20-22. Aligns perfectly with John's Japanese aesthetics interest.",
+    "blocks": []
+  }
+}

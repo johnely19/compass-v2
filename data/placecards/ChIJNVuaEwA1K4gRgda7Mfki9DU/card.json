@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJNVuaEwA1K4gRgda7Mfki9DU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJNVuaEwA1K4gRgda7Mfki9DU",
+    "name": "Understory Café",
+    "city": "Toronto",
+    "address": "Church St (The Village)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.gaycities.com/articles/103738/",
+    "url": "https://www.gaycities.com/articles/103738/"
+  },
+  "narrative": {
+    "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already—strong early signal.",
+    "blocks": []
+  }
+}

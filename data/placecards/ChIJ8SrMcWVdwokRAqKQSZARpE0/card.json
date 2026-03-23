@@ -1,0 +1,50 @@
+{
+  "place_id": "ChIJ8SrMcWVdwokRAqKQSZARpE0",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJ8SrMcWVdwokRAqKQSZARpE0",
+    "name": "Ornithology Jazz Club",
+    "city": "Brooklyn",
+    "address": "6 Suydam St, Brooklyn, NY 11221, USA",
+    "website": "http://ornithologyjazzclub.com/",
+    "price_level": 1,
+    "location": "6 Suydam St, Brooklyn, NY 11221, USA",
+    "lat": 40.6955708,
+    "lng": -73.93199709999999
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSuydam St in Bushwick \u2014 a bohemian jazz sanctuary named after Charlie Parker.\n\nLive jazz every night, a Bechstein Grand Piano, cocktails in a space where the musicians are close enough to touch. Three floors including a rooftop and a chess room.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n6 Suydam St, Bushwick \u2014 the sign is subtle, the vibe is not.\n\nYou walk in and the piano is right there. A Bechstein Grand \u2014 the kind of instrument that serious jazz musicians cross boroughs to play. Named after \"Ornithology,\" the Charlie Parker bebop standard, this place channels Bird's restless creative spirit. The room is small, the lighting is dim, and the musicians are so close you can hear them breathe between phrases."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nThree floors of bohemian warmth:\n\u2022 Ground floor: The bar and the stage. Intimate, standing-room vibe with some seating. The Bechstein commands the room \u2b50\n\u2022 Second floor: A lounge where you can play chess between sets\n\u2022 Rooftop: Open air, for when you need to decompress from the intensity below\n\nThe d\u00e9cor is artsy \u2014 hand-painted signs, eclectic decorations, the kind of place where every surface tells a story."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf78 Cocktails ~$15 each \u2014 classic and contemporary creations\n\u2022 Classic cocktails done right (Old Fashioned, Negroni)\n\u2022 Seasonal house specialties from the mixologist\n\u2022 Beer and wine also available\n\nThe cocktails are described as \"fun and flavorful\" \u2014 built to complement a jazz evening, not compete with it. The price point is remarkably fair for the experience."
+      },
+      {
+        "id": "block-4",
+        "title": "The Music",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\udde8\ud835\udde6\ud835\udddc\ud835\uddd6\n\nLive jazz every night, 6 PM onwards. Different bands rotate through \u2014 you might catch a trio, a quartet, or a solo pianist stretching out on the Bechstein. The programming leans bebop and post-bop but ranges across the jazz spectrum.\n\n\u2b50 Friday/Saturday: Peak nights, cover charge applies (~$10-20), arrive early for a seat\n\u2b50 Weeknights: More intimate, easier to get close to the stage\n\nThis is jazz the way it should be experienced \u2014 in a room small enough that the music wraps around you."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $\n\nCover: Free\u2013$20 depending on night/act\nCocktails: ~$15\nEvening for 2: $60-80\n\n\ud83c\udf10 ornithologyjazzclub.com\n\ud83d\udcde (917) 231-4766\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nDaily: 6:00 PM \u2013 2:00 AM\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Early arrival (6pm): Best seats, no cover on some nights\n\u2022 Friday: The hottest night \u2014 expect a cover and a crowd\n\u2022 Sunday: More relaxed, the musicians play looser\n\u2022 Note: Address is 6 Suydam St (not the old 553 Gates Ave location)"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "r/Brooklyn \u2014 'best late-night jazz in Bed-Stuy'",
+    "url": "https://www.reddit.com/r/Brooklyn/"
+  }
+}

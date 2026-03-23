@@ -1,0 +1,45 @@
+{
+  "place_id": "ChIJCzOjDd9bwokRGcl6XXitceU",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJCzOjDd9bwokRGcl6XXitceU",
+    "name": "Williamsburg Music Center",
+    "city": "Brooklyn",
+    "address": "367 Bedford Ave, Brooklyn, NY 11211, USA",
+    "website": "https://wmcjazz.com/",
+    "price_level": 2,
+    "location": "367 Bedford Ave, Brooklyn, NY 11211, USA",
+    "lat": 40.7112945,
+    "lng": -73.9630773
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nBedford Ave in Williamsburg \u2014 a Friday/Saturday night jazz and live music venue.\n\nIntimate live music space on Williamsburg's main drag. Jazz, soul, and more in a lounge setting. Weekends only.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n367 Bedford Ave \u2014 right on Williamsburg's main artery.\n\nYou push through the door into a dimly lit lounge where the music is already happening. Williamsburg Music Center is the kind of place that feels like a secret even though it's on the busiest street in the neighborhood. The programming leans jazz but stretches \u2014 you might catch soul, funk, or experimental sets depending on the night."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nLounge-bar atmosphere with a small stage area. Intimate enough that you feel the music physically. The bar runs full cocktails and the vibe is upscale-casual \u2014 you could come from dinner at The Four Horsemen (five minutes away) and fit right in."
+      },
+      {
+        "id": "block-3",
+        "title": "The Music",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\udde8\ud835\udde6\ud835\udddc\ud835\uddd6\n\nLive performances Friday and Saturday nights, 9 PM onwards. Check wmcjazz.com for the lineup \u2014 it rotates weekly. The focus is jazz but the programming is eclectic.\n\n\u2b50 Arrive by 9pm for the best seats\n\u2b50 Great as a second stop after dinner in Williamsburg"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$\n\nCover: Varies by act (~$15-30)\nCocktails: ~$14-18\n\n\ud83c\udf10 wmcjazz.com\n\ud83d\udcde (718) 384-1654\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nFriday: 9:00 PM \u2013 1:00 AM\nSaturday: 9:00 PM \u2013 1:00 AM\nSun\u2013Thu: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Friday night: The main event\n\u2022 Pair with dinner at Four Horsemen (5 min walk) for a perfect Williamsburg evening"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco via neighbourhood research",
+    "url": "https://wmcjazz.com/"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJpYIgKY9ZwokRG4V7_MMagCo",
+  "built": "2026-03-10T15:37:16.890Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJpYIgKY9ZwokRG4V7_MMagCo",
+    "name": "The Crosby Bar",
+    "city": "NYC",
+    "address": "79 Crosby St, New York, NY 10012, USA",
+    "type": "restaurant",
+    "phone": "(646) 929-6307",
+    "website": "https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar",
+    "price_level": 3,
+    "rating": 4.4,
+    "user_rating_count": 346,
+    "location": "79 Crosby St, New York, NY 10012, USA"
+  },
+  "narrative": {
+    "summary": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "The Crosby Bar",
+        "body": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nMUST-TRY per John's preferences - relaxed brasserie at Firmdale hotel, great for brunch or cocktails"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (346 reviews)\nPrice level: $$$\nPhone: (646) 929-6307\nWebsite: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 79 Crosby St, New York, NY 10012, USA\n\n• walking: 1 min • 33 ft\n• transit: 1 min • 33 ft\n• driving: 1 min • 33 ft (traffic: 1 min)\n• bicycling: 1 min • 33 ft\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (1 min)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "79 Crosby St, New York, NY 10012, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:40.089Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (1 min)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 4,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": 3,
+        "durationInTrafficText": "1 min",
+        "distanceMeters": 10,
+        "distanceText": "33 ft"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 8,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10,
+        "distanceText": "33 ft"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10,
+        "distanceText": "33 ft"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 8,
+        "durationText": "1 min",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10,
+        "distanceText": "33 ft"
+      }
+    ]
+  }
+}

@@ -1494,3 +1494,20 @@ a:hover {
 .review-item-name:hover {
   color: var(--accent);
 }
+
+
+/* ---- 22. Place Browse ---- */
+
+.place-browse-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.place-browse-card:hover {
+  color: inherit;
+}
+
+.place-browse-name {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-xs);
+}

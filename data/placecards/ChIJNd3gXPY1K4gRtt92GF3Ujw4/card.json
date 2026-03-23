@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJNd3gXPY1K4gRtt92GF3Ujw4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJNd3gXPY1K4gRtt92GF3Ujw4",
+    "name": "Cassette",
+    "city": "Toronto",
+    "address": "Queen West / Gladstone (1214 Queen St W)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "Just opened inside historic Gladstone House, reviving the legendary Melody Bar space. Monthly Dinner & Drag with Tynomi Banks, rotating live shows. Soulful retro-inspired restaurant + music venue. 4.6★ (32 reviews — brand new).",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJCRSanSE1K4gRRVOos7pnals",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJCRSanSE1K4gRRVOos7pnals",
+    "name": "Bar Allegro",
+    "city": "Toronto",
+    "address": "Little Italy (College St)",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via toronto.com"
+  },
+  "narrative": {
+    "summary": "Pompette team replaced Vinoteca Pompette with intentional wine-bar concept. 5.0 rating, 18 reviews.",
+    "blocks": []
+  }
+}

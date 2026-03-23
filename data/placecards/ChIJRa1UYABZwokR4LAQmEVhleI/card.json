@@ -1,0 +1,96 @@
+{
+  "place_id": "ChIJRa1UYABZwokR4LAQmEVhleI",
+  "built": "2026-02-25T09:07:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJRa1UYABZwokR4LAQmEVhleI",
+    "name": "Bistrot Ha",
+    "city": "NYC",
+    "address": "137 Eldridge St, New York, NY 10002",
+    "price_level": 3,
+    "location": "137 Eldridge St, New York, NY 10002"
+  },
+  "narrative": {
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nEldridge St near Delancey — 300 feet from the original Ha's Snack Bar\n\nThe follow-up to one of NYC's most acclaimed 2025 openings.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nEldridge St near Delancey — 300 feet from the original Ha's Snack Bar\n\nThe follow-up to one of NYC's most acclaimed 2025 openings."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nMoodily dark, parchment-skin light fixtures by James Cherry. 45 seats — bigger than the Snack Bar but same vibe.\n\n🍸 The house martini comes with a whole oyster at the bottom."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\nFranco-Vietnamese cooking — fish sauce in everything (literally printed on the check).\n\n𝗦𝗶𝗴𝗻𝗮𝘁𝘂𝗿𝗲𝘀\n• House Martini — fish sauce, sea salt, whole oyster at bottom ⭐\n• Escargots in Tamarind Butter ⭐\n• Pâté Chaud — flaky pastry, vermicelli-stuffed\n• Vol-au-Vent — puff-pastry tart (fillings rotate; shaking beef version is best)\n• Leeks Vinaigrette — with Maggi, mayo, pickled mussels\n• Vitello Tonnato (revisionist) — cold pork loin, tuna-mayo, chile crisp ⭐\n\n𝗠𝗮𝗶𝗻𝘀\n• Beef Wellington\n• Steak Frites\n• General Ha's Trotter — high gloss, when available\n• Pork Chop — with dried shrimp and chile paste\n\n𝗗𝗼𝗹𝗰𝗶\n• Ice Cream Bombes — meringue domes, elaborate (Esther Williams vibes)\n\n⚠️ Skip the \"big steak\" ($225) — there are better things here.\n\nNote: Menu changes frequently. Don't get attached."
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$\n\nDinner for 2: $150-200 (with drinks)\n\nReservations: Resy (essential — very hot right now)\nWalk-ins: Good luck\n\n📸 @has_dac_biet\n\n𝗛𝗢𝗨𝗥𝗦\nTue–Sat: 5:30–10:30pm\nSun–Mon: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early seating (5:30pm): Best shot at walk-in, quieter vibe\n• Late weeknight: Still sceney but less frantic than weekend\n• Avoid: Saturday prime time without reservation — packed"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 137 Eldridge St, New York, NY 10002\n\n• walking: 12 mins • 0.5 mi\n• transit: 12 mins • 0.5 mi\n• driving: 9 mins • 1.0 mi (traffic: 9 mins)\n• bicycling: 7 mins • 0.8 mi\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (12 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "137 Eldridge St, New York, NY 10002",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:50.825Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (12 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 522,
+        "durationText": "9 mins",
+        "durationInTrafficSeconds": 541,
+        "durationInTrafficText": "9 mins",
+        "distanceMeters": 1608,
+        "distanceText": "1.0 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 740,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 819,
+        "distanceText": "0.5 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 437,
+        "durationText": "7 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 1345,
+        "distanceText": "0.8 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 740,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 819,
+        "distanceText": "0.5 mi"
+      }
+    ]
+  }
+}

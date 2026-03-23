@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJJTx3c3HN1IkRTo6DQMYmvrw",
+  "built": "2026-03-10T12:59:29.762Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJJTx3c3HN1IkRTo6DQMYmvrw",
+    "name": "McEwan Fine Foods",
+    "city": "",
+    "address": "38 Karl Fraser Rd, North York, ON M3C 0H7, Canada",
+    "type": "grocery",
+    "phone": "(416) 444-6262",
+    "website": "https://www.mcewanfoods.com/?utm_source=Google&utm_medium=GoogleBusiness&utm_campaign=Organic",
+    "location": "38 Karl Fraser Rd, North York, ON M3C 0H7, Canada"
+  },
+  "narrative": {
+    "summary": "📍 McEwan Fine Foods\n38 Karl Fraser Rd, North York, ON M3C 0H7, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Food",
+        "body": "📍 McEwan Fine Foods\n38 Karl Fraser Rd, North York, ON M3C 0H7, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.3 (1194 reviews)\nPhone: (416) 444-6262\nWebsite: https://www.mcewanfoods.com/?utm_source=Google&utm_medium=GoogleBusiness&utm_campaign=Organic"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 38 Karl Fraser Rd, North York, ON M3C 0H7, Canada\n\n• walking: 1 hour 57 mins • 8.5 km\n• transit: 45 mins • 9.8 km\n• driving: 21 mins • 9.5 km (traffic: 14 mins)\n• bicycling: 36 mins • 10.0 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (21 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "38 Karl Fraser Rd, North York, ON M3C 0H7, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:42.927Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (21 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1267,
+        "durationText": "21 mins",
+        "durationInTrafficSeconds": 866,
+        "durationInTrafficText": "14 mins",
+        "distanceMeters": 9467,
+        "distanceText": "9.5 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 7045,
+        "durationText": "1 hour 57 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 8496,
+        "distanceText": "8.5 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2135,
+        "durationText": "36 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 9978,
+        "distanceText": "10.0 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2724,
+        "durationText": "45 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 9821,
+        "distanceText": "9.8 km"
+      }
+    ]
+  }
+}

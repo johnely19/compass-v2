@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJS5xKTs80K4gRKD5q5-SgtZM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJS5xKTs80K4gRKD5q5-SgtZM",
+    "name": "Library Coffee",
+    "city": "Toronto",
+    "address": "Dundas West/AGO",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via Reddit r/askTO"
+  },
+  "narrative": {
+    "summary": "Top-tier pour-over specialists, excellent light roasts, central location",
+    "blocks": []
+  }
+}

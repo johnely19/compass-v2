@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJQ0CvewA1K4gRf8e8AzqS4fY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQ0CvewA1K4gRf8e8AzqS4fY",
+    "name": "General Public Restaurant",
+    "city": "Toronto",
+    "address": "Geary Ave",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via starwinelist.com"
+  },
+  "narrative": {
+    "summary": "Two-story gastropub with Jake Skakun's exceptional wine list - balances esoteric glou-glou with classics, Star Wine List featured",
+    "blocks": []
+  }
+}

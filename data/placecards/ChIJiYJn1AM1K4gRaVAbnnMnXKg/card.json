@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJiYJn1AM1K4gRaVAbnnMnXKg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJiYJn1AM1K4gRaVAbnnMnXKg",
+    "name": "Waterworks Food Hall",
+    "city": "Toronto",
+    "address": "King West / Entertainment District",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via goplaces:details"
+  },
+  "narrative": {
+    "summary": "Heritage building (1932 waterworks) housing 15+ artisanal vendors + 3 bars; open 7 days, Sunday-friendly; good Bello Pizza + new vendors in 2026.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJS-1Wu1Y0K4gR4iJvyV0_iNQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJS-1Wu1Y0K4gR4iJvyV0_iNQ",
+    "name": "Easy Tiger",
+    "city": "Toronto",
+    "address": "Dundas West (Trinity Bellwoods edge)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via easytigereasytiger.com"
+  },
+  "narrative": {
+    "summary": "Quirky general store vibes with curated home goods, pantry items, and gifts; playful but tasteful selection.",
+    "blocks": []
+  }
+}

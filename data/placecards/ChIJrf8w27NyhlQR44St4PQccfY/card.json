@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJrf8w27NyhlQR44St4PQccfY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJrf8w27NyhlQR44St4PQccfY",
+    "name": "Museum of Anthropology at UBC",
+    "city": "Vancouver",
+    "address": "UBC",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "architecturaldigest.com",
+    "url": "https://www.architecturaldigest.com/story/arthur-erickson-vancouver"
+  },
+  "narrative": {
+    "summary": "Arthur Erickson's MASTERPIECE. Soaring glass great hall framing Pacific + NW Coast totem poles. Post-and-beam inspired by Haida longhouses. Recently seismically upgraded. THE must-see for an architecture obsessive. Note: may need taxi/transit to UBC. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

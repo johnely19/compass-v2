@@ -1,0 +1,91 @@
+{
+  "place_id": "ChIJIw3AQNHzKk0RosaXCl0RTC0",
+  "built": "2026-03-11T23:06:07.256Z",
+  "source": "ready-pending-queue-build",
+  "identity": {
+    "place_id": "ChIJIw3AQNHzKk0RosaXCl0RTC0",
+    "name": "Muskoka Cottage Rental",
+    "city": "Toronto",
+    "address": "2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada",
+    "type": "accommodation",
+    "phone": "(416) 587-8583",
+    "website": "https://muskokacottagerental.ca/",
+    "rating": 5,
+    "user_rating_count": 4,
+    "location": "2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada"
+  },
+  "narrative": {
+    "summary": "\ud83d\udccd Muskoka Cottage Rental\n2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Muskoka Cottage Rental",
+        "body": "\ud83d\udccd Muskoka Cottage Rental\n2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nOperational rental operator in Muskoka market; strong relevance for July booking window and potential openings."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (4 reviews)\nPrice level: n/a\nPhone: (416) 587-8583\nWebsite: https://muskokacottagerental.ca/\n\nHours:\nMonday: Open 24 hours\nTuesday: Open 24 hours\nWednesday: Open 24 hours\nThursday: Open 24 hours\nFriday: Open 24 hours\nSaturday: Open 24 hours\nSunday: Open 24 hours"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada\n\n\u2022 walking: 1 day 19 hours \u2022 188 km\n\u2022 transit: unavailable\n\u2022 driving: 2 hours 5 mins \u2022 191 km (traffic: 2 hours 3 mins)\n\u2022 bicycling: 10 hours 35 mins \u2022 200 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (2 hours 5 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "2798 Muskoka Rd 169, Muskoka Lakes, ON P0C 1M0, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:39.481Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (2 hours 5 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 7516,
+        "durationText": "2 hours 5 mins",
+        "durationInTrafficSeconds": 7351,
+        "durationInTrafficText": "2 hours 3 mins",
+        "distanceMeters": 191432,
+        "distanceText": "191 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 153667,
+        "durationText": "1 day 19 hours",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 188330,
+        "distanceText": "188 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 38077,
+        "durationText": "10 hours 35 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 199838,
+        "distanceText": "200 km"
+      },
+      {
+        "mode": "transit",
+        "ok": false,
+        "error": "No route found",
+        "googleStatus": "ZERO_RESULTS"
+      }
+    ]
+  }
+}

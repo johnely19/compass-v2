@@ -1,0 +1,29 @@
+{
+  "place_id": "ChIJIThsB6NZwokRMhJbqlyA6XY",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:40Z",
+  "identity": {
+    "place_id": "ChIJIThsB6NZwokRMhJbqlyA6XY",
+    "name": "BABA on Withers",
+    "address": "47 Withers St, Brooklyn, NY 11211, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.5,
+    "user_ratings_total": 391,
+    "price_level": 1,
+    "types": [
+      "wine_bar",
+      "brunch_restaurant",
+      "cocktail_bar",
+      "night_club",
+      "live_music_venue",
+      "bar",
+      "association_or_organization",
+      "event_venue",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

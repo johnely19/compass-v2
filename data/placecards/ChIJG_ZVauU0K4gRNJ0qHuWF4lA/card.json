@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJG_ZVauU0K4gRNJ0qHuWF4lA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJG_ZVauU0K4gRNJ0qHuWF4lA",
+    "name": "Archive Wine Bar",
+    "city": "Toronto",
+    "address": "Little Portugal",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via streetsoftoronto.com"
+  },
+  "narrative": {
+    "summary": "OG natural wine bar since 2012, minimalist design, 400+ bottles, 30+ by the glass - the anchor of Toronto's natty wine scene",
+    "blocks": []
+  }
+}

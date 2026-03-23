@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJvWoHrNs0K4gRGIQyt6021sY",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJvWoHrNs0K4gRGIQyt6021sY",
+    "name": "Gallery 44 Centre for Contemporary Photography",
+    "city": "Toronto",
+    "address": "401 Richmond",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via gallery44.org"
+  },
+  "narrative": {
+    "summary": "Non-profit photography centre since 1979; 4.7 rating; always has a thoughtful show",
+    "blocks": []
+  }
+}

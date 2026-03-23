@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJs8IJ5W9xhlQR37XQMO_WQ04",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJs8IJ5W9xhlQR37XQMO_WQ04",
+    "name": "Phnom Penh Restaurant",
+    "city": "Vancouver",
+    "address": "Chinatown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "narcity.com",
+    "url": "https://www.narcity.com/vancouver/best-restaurants-in-vancouver-according-to-locals"
+  },
+  "narrative": {
+    "summary": "Vancouver legend. Cambodian-Vietnamese. Reddit locals call it 'the best restaurant in Vancouver' — the butter beef and chicken wings are iconic. Affordable, no-frills, absolutely essential Chinatown experience. 5,300+ reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

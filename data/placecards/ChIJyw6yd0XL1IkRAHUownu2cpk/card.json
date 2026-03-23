@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJyw6yd0XL1IkRAHUownu2cpk",
+  "built": "2026-03-10T12:59:26.417Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJyw6yd0XL1IkRAHUownu2cpk",
+    "name": "Johnny G's Restaurant",
+    "city": "Toronto",
+    "address": "478 Parliament St, Toronto, ON M5A 2L3, Canada",
+    "type": "bar",
+    "phone": "(647) 368-3877",
+    "website": "https://www.johnnygsrestaurant.ca/contact",
+    "location": "478 Parliament St, Toronto, ON M5A 2L3, Canada"
+  },
+  "narrative": {
+    "summary": "📍 Johnny G's Restaurant\n478 Parliament St, Toronto, ON M5A 2L3, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Johnny G's Restaurant",
+        "body": "📍 Johnny G's Restaurant\n478 Parliament St, Toronto, ON M5A 2L3, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (1028 reviews)\nPhone: (647) 368-3877\nWebsite: https://www.johnnygsrestaurant.ca/contact"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 478 Parliament St, Toronto, ON M5A 2L3, Canada\n\n• walking: 54 mins • 4.0 km\n• transit: 23 mins • 4.6 km\n• driving: 12 mins • 4.8 km (traffic: 9 mins)\n• bicycling: 14 mins • 4.3 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (12 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "478 Parliament St, Toronto, ON M5A 2L3, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:56.891Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (12 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 726,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": 510,
+        "durationInTrafficText": "9 mins",
+        "distanceMeters": 4795,
+        "distanceText": "4.8 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3233,
+        "durationText": "54 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4014,
+        "distanceText": "4.0 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 813,
+        "durationText": "14 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4322,
+        "distanceText": "4.3 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1402,
+        "durationText": "23 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4599,
+        "distanceText": "4.6 km"
+      }
+    ]
+  }
+}

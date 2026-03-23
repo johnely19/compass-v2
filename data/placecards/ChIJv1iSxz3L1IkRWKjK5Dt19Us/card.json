@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJv1iSxz3L1IkRWKjK5Dt19Us",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJv1iSxz3L1IkRWKjK5Dt19Us",
+    "name": "Soulpepper — Detroit: Music of the Motor City",
+    "city": "Toronto",
+    "address": "Distillery District (Tank House Lane)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via soulpepper.ca"
+  },
+  "narrative": {
+    "summary": "Original Soulpepper production about the collapse and rebirth of Detroit through Motown, jazz, hip hop, and Detroit rock. Sold out in 2023 run, returning March 19–29. Physically dynamic, movement-driven theatre.",
+    "blocks": []
+  }
+}

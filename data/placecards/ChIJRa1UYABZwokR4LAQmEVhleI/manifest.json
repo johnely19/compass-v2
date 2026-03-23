@@ -1,0 +1,50 @@
+{
+  "place_id": "ChIJRa1UYABZwokR4LAQmEVhleI",
+  "images": [
+    {
+      "id": "map-1",
+      "category": "map",
+      "order": 0,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/map.png",
+      "caption": "📍 Bistrot Ha, Lower East Side, NYC\n137 Eldridge St, New York, NY 10002\n———————————————",
+      "source": "photo"
+    },
+    {
+      "id": "exterior-2",
+      "category": "exterior",
+      "order": 1,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/exterior.jpg",
+      "caption": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nEldridge St near Delancey — 300 feet from the original Ha's Snack Bar\n\nThe follow-up to one of NYC's most acclaimed 2025 openings.",
+      "source": "photo"
+    },
+    {
+      "id": "interior_detail-3",
+      "category": "interior_detail",
+      "order": 2,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/interior.jpg",
+      "caption": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nMoodily dark, parchment-skin light fixtures by James Cherry. 45 seats — bigger than the Snack Bar but same vibe.\n\n🍸 The house martini comes with a whole oyster at the bottom.",
+      "source": "photo"
+    },
+    {
+      "id": "food-4",
+      "category": "food",
+      "order": 3,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/food_1.jpg",
+      "source": "album"
+    },
+    {
+      "id": "food-5",
+      "category": "food",
+      "order": 4,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/food_2.jpg",
+      "source": "album"
+    },
+    {
+      "id": "food-6",
+      "category": "food",
+      "order": 5,
+      "path": "/placecards/ChIJRa1UYABZwokR4LAQmEVhleI/food_3.jpg",
+      "source": "album"
+    }
+  ]
+}

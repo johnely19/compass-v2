@@ -1,0 +1,50 @@
+{
+  "place_id": "ChIJbTCMl19ZwokRUohF137p9cQ",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJbTCMl19ZwokRUohF137p9cQ",
+    "name": "The Four Horsemen",
+    "city": "Brooklyn",
+    "address": "295 Grand St, Brooklyn, NY 11211, USA",
+    "website": "http://fourhorsemenbk.com/",
+    "price_level": 2,
+    "location": "295 Grand St, Brooklyn, NY 11211, USA",
+    "lat": 40.7131054,
+    "lng": -73.9572975
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nGrand St in Williamsburg \u2014 James Murphy's wine bar that became one of the world's most respected restaurants.\n\nMichelin-starred. North America's 50 Best. Natural wine list that rewrites the rules. Chef Nick Curtola's seasonal cooking is precise and effortlessly unfussy.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n295 Grand St, Williamsburg \u2014 corner spot, unassuming from outside.\n\nYou walk in and the first thing you notice is the sound. Not the kitchen, not the conversation \u2014 the music. LCD Soundsystem's James Murphy co-founded this place in 2015, and the playlist and sound design are impeccable. Then the wine list arrives and you realize this is one of the most important natural wine programs in America. Then the food comes and you understand why Michelin gave it a star."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nWarm, minimal, eternally cool without trying. The room is intimate \u2014 maybe 40 seats \u2014 with a bar you'd happily spend the night at. The late wine director Justin Chearno's spirit lives in every bottle on the shelf. The sound system is probably the best in any restaurant in New York."
+      },
+      {
+        "id": "block-3",
+        "title": "Drinks",
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf77 The wine list is the reason this place exists. Eclectic, laser-focused on varietals, predominantly natural. The staff knows every bottle and will guide you with genuine enthusiasm.\n\n\u2022 Wines by the glass: ~$16-22\n\u2022 Bottles: $50-200+ (deep list of natural, biodynamic, and minimal-intervention wines)\n\u2022 Ask what's just been opened \u2014 the by-the-glass pours rotate constantly \u2b50\n\nThis is a wine bar that also happens to be a Michelin-starred restaurant."
+      },
+      {
+        "id": "block-4",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\nChef Nick Curtola's menu changes daily. Seasonal, North Atlantic-sourced, globally accented. Precise and effortlessly unfussy.\n\n\ud835\udde6\ud835\ude01\ud835\uddee\ud835\uddff\ud835\ude01\ud835\uddf2\ud835\uddff\ud835\ude00 ~$18-22\n\u2022 Veal sweetbread skewers with soy-cured egg yolk \u2b50\n\u2022 Crisp chickpea cr\u00eape with squash blossoms and glistening lardon \u2b50\n\u2022 Razor clams with fish sauce and lime\n\u2022 Seasonal crudo\n\n\ud835\udde0\ud835\uddee\ud835\uddf6\ud835\uddfb\ud835\ude00 ~$28-42\n\u2022 Fried skate wing \u2014 deep golden, impossibly crisp \u2b50\n\u2022 Berkshire pork with cider glaze\n\u2022 Chicken schnitzel with blistered sungold tomatoes (seasonal)\n\u2022 Yakitori-style sweetbreads\n\n\ud835\uddd7\ud835\uddf2\ud835\ude00\ud835\ude00\ud835\uddf2\ud835\uddff\ud835\ude01 ~$15-18\n\u2022 Cr\u00e8me caramel with toasted crispy soba bits \u2b50\n\n\ud835\uddd5\ud835\uddff\ud835\ude02\ud835\uddfb\ud835\uddf0\ud835\uddf5 (Fri\u2013Sun from 11am)\nAvailable with a different seasonal menu\n\nNote: Menu changes daily. These are representative dishes \u2014 whatever's on when you go will be excellent."
+      },
+      {
+        "id": "block-5",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$\n\nDinner for 2: $140-200 (with wine)\n\nReservations: Required \u2014 book via Resy. Be ready to queue if walk-in.\n\n\ud83c\udf10 fourhorsemenbk.com\n\ud83d\udcde (718) 599-4900\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon\u2013Thu: 5:30\u201310:45 PM\nFri\u2013Sun: 11:00 AM \u2013 10:45 PM\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Monday/Tuesday dinner: Easiest reservations\n\u2022 Weekend brunch (11am): Different vibe, more relaxed\n\u2022 Bar seating: Sometimes available for walk-ins\n\u2022 Let the staff pick your wine \u2014 they're the best in the business at this"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Featured in Eater NY \u2014 'Best Wine List in NYC'",
+    "url": "https://ny.eater.com/maps/best-wine-bars-nyc"
+  }
+}

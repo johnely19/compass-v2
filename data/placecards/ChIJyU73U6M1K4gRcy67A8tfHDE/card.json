@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJyU73U6M1K4gRcy67A8tfHDE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJyU73U6M1K4gRcy67A8tfHDE",
+    "name": "AM Coffee Studio",
+    "city": "Toronto",
+    "address": "Dundas West/Roncesvalles",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via TheBestToronto 2025"
+  },
+  "narrative": {
+    "summary": "Cafe + yoga studio + flower workshop hybrid - quirky concept, quality coffee",
+    "blocks": []
+  }
+}

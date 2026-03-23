@@ -1,0 +1,18 @@
+{
+  "place_id": "via_notte_ChIJ3drP1K3L1IkRs9dv-sRYGRw",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "via_notte_ChIJ3drP1K3L1IkRs9dv-sRYGRw",
+    "name": "Pasta Privato",
+    "city": "Toronto",
+    "address": "St. Lawrence / Church St (hidden inside Notte Ristorante, 11 Church St)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "blogto.com"
+  },
+  "narrative": {
+    "summary": "30-seat hidden pasta speakeasy opening March 27. Chef Michael Angeloni (ex-Amano). 8-course tasting $125 or à la carte. Artisanal pasta, Kaluga caviar tajarin, Iberico agnolotti. Accessed through a door inside Notte. Coolest concept opening this month. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "place_id": "ChIJVVWIvFlZwokRCb91vYtPZjA",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:41Z",
+  "identity": {
+    "place_id": "ChIJVVWIvFlZwokRCb91vYtPZjA",
+    "name": "Brooklyn Comedy Collective (BCC) @ Eris",
+    "address": "Eris, 167 Graham Ave, Brooklyn, NY 11206, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.8,
+    "user_ratings_total": 66,
+    "price_level": null,
+    "types": [
+      "comedy_club",
+      "association_or_organization",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

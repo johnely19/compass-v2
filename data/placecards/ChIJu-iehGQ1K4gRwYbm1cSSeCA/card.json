@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJu-iehGQ1K4gRwYbm1cSSeCA",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJu-iehGQ1K4gRwYbm1cSSeCA",
+    "name": "Cry Baby Gallery",
+    "city": "Toronto",
+    "address": "Dundas West / Little Portugal",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via yelp hidden bars list"
+  },
+  "narrative": {
+    "summary": "Art gallery + cocktail bar hybrid—rotating exhibits + late-night drinks. 4.6 rating, 498 reviews. Open til 2am. The 'discovery' vibe.",
+    "blocks": []
+  }
+}

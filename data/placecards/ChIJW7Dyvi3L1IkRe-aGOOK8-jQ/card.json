@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJW7Dyvi3L1IkRe-aGOOK8-jQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJW7Dyvi3L1IkRe-aGOOK8-jQ",
+    "name": "Bluma Appel Theatre",
+    "city": "Toronto",
+    "address": "St Lawrence / Front",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via thestar.com"
+  },
+  "narrative": {
+    "summary": "Lynn Nottage's 'Clyde's' at Canadian Stage—Pulitzer winner; strong word-of-mouth from NYC premiere; cast includes Sophia Walker. Apr 11–26.",
+    "blocks": []
+  }
+}

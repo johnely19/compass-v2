@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJo4JedQDL1IkRk-5YF8DGZXI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJo4JedQDL1IkRk-5YF8DGZXI",
+    "name": "Bakerrae",
+    "city": "Toronto",
+    "address": "East Chinatown (Broadview)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.blogto.com/bakery/bakerrae-toronto-2/",
+    "url": "https://www.blogto.com/bakery/bakerrae-toronto-2/"
+  },
+  "narrative": {
+    "summary": "Filipino-French fusion; 4.9 rating; also houses Chachalate chocolate—two cool things under one roof.",
+    "blocks": []
+  }
+}

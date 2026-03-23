@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJTZVOoN1zhlQRSMNq0C_JoIo",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJTZVOoN1zhlQRSMNq0C_JoIo",
+    "name": "Sylvia Hotel",
+    "city": "Vancouver",
+    "address": "1154 Gilford St, Vancouver, BC V6G 2P6",
+    "type": "hotel"
+  },
+  "discovery": {
+    "text": "Vancouver heritage icon — ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
+    "url": "https://www.ca.kayak.com/Vancouver-Hotels-Sylvia-Hotel.70791.ksp"
+  },
+  "narrative": {
+    "summary": "Vancouver heritage icon — ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
+    "blocks": []
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "https://sylviahotel.com/wp-content/uploads/slider_2-1.jpeg",
+        "category": "exterior",
+        "order": 1
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "https://sylviahotel.com/wp-content/uploads/slider_2-1.jpeg",
+      "caption": "Source image"
+    }
+  ]
+}

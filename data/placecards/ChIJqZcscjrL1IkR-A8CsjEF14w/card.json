@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJqZcscjrL1IkR-A8CsjEF14w",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJqZcscjrL1IkR-A8CsjEF14w",
+    "name": "D & E Lake Ltd.",
+    "city": "Toronto",
+    "address": "King East Design District (239 King St E)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via delakeltd.com"
+  },
+  "narrative": {
+    "summary": "Three-floor family-owned bookstore. Architecture monographs, rare books, prints on the third floor. Deep collection of interior design, architectural history. Open 7 days. Old-school curation in the design district. 3.8★ (124 reviews).",
+    "blocks": []
+  }
+}

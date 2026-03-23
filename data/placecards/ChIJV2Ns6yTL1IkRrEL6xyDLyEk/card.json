@@ -1,0 +1,93 @@
+{
+  "place_id": "ChIJV2Ns6yTL1IkRrEL6xyDLyEk",
+  "built": "2026-03-10T12:59:24.896Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJV2Ns6yTL1IkRrEL6xyDLyEk",
+    "name": "L'Avenue on Parliament",
+    "city": "Toronto",
+    "address": "583 Parliament St, Toronto, ON M4X 1P9, Canada",
+    "type": "restaurant",
+    "phone": "(647) 368-8008",
+    "website": "https://lavenueonparliament.ca/",
+    "location": "583 Parliament St, Toronto, ON M4X 1P9, Canada"
+  },
+  "narrative": {
+    "summary": "📍 L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "L'avenue On Parliament",
+        "body": "📍 L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (249 reviews)\nPhone: (647) 368-8008\nWebsite: https://lavenueonparliament.ca/"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 583 Parliament St, Toronto, ON M4X 1P9, Canada\n\n• walking: 50 mins • 3.7 km\n• transit: 26 mins • 4.2 km\n• driving: 11 mins • 4.5 km (traffic: 8 mins)\n• bicycling: 12 mins • 3.8 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (11 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada",
+    "destination": "583 Parliament St, Toronto, ON M4X 1P9, Canada",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:56.918Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (11 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 651,
+        "durationText": "11 mins",
+        "durationInTrafficSeconds": 465,
+        "durationInTrafficText": "8 mins",
+        "distanceMeters": 4471,
+        "distanceText": "4.5 km"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 2980,
+        "durationText": "50 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3690,
+        "distanceText": "3.7 km"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 716,
+        "durationText": "12 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3841,
+        "distanceText": "3.8 km"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 1541,
+        "durationText": "26 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4180,
+        "distanceText": "4.2 km"
+      }
+    ]
+  }
+}

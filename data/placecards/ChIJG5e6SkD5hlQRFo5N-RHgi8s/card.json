@@ -1,0 +1,61 @@
+{
+  "place_id": "ChIJG5e6SkD5hlQRFo5N-RHgi8s",
+  "built": "2026-03-12T16:42:04.027847Z",
+  "source": "squamish-placecards-batch-2026-03-12",
+  "identity": {
+    "place_id": "ChIJG5e6SkD5hlQRFo5N-RHgi8s",
+    "name": "The Watershed Grill",
+    "city": "Squamish",
+    "region": "BC",
+    "province": "BC",
+    "address": "41101 Government Rd, Brackendale, BC V0N 1H0, Canada",
+    "location": "41101 Government Rd, Brackendale, BC V0N 1H0, Canada",
+    "type": "restaurant",
+    "phone": "(604) 898-6665",
+    "website": "http://thewatershedgrill.com/",
+    "hours": [
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+    ],
+    "price_level": 2,
+    "rating": 4.5,
+    "user_rating_count": 3688,
+    "menu_link": "http://thewatershedgrill.com/",
+    "lat": 49.7534399,
+    "lng": -123.1416217
+  },
+  "narrative": {
+    "summary": "The Watershed Grill is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
+    "blocks": [
+      {
+        "id": "arrival",
+        "title": "Arrival",
+        "body": "Address: 41101 Government Rd, Brackendale, BC V0N 1H0, Canada."
+      },
+      {
+        "id": "room",
+        "title": "Room",
+        "body": "Expect a lively local crowd with mountain-town energy."
+      },
+      {
+        "id": "food",
+        "title": "Food & Drinks",
+        "body": "See photo gallery sections for food, drinks, and atmosphere references."
+      },
+      {
+        "id": "ops",
+        "title": "Operational snapshot",
+        "body": "Google rating 4.5 from 3688 reviews."
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Discovered by Disco research agent",
+    "url": "http://thewatershedgrill.com/"
+  }
+}

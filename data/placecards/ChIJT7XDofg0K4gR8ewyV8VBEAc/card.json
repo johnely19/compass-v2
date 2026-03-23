@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJT7XDofg0K4gR8ewyV8VBEAc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJT7XDofg0K4gR8ewyV8VBEAc",
+    "name": "Mahjong Bar",
+    "city": "Toronto",
+    "address": "Dundas West / Little Portugal",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via foodism speakeasies"
+  },
+  "narrative": {
+    "summary": "Hidden behind pink bodega facade on Dundas W; tiki-adjacent cocktails, playful vibe, 4.2 rating.",
+    "blocks": []
+  }
+}

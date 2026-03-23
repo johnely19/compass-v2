@@ -1,0 +1,71 @@
+{
+  "place_id": "ChIJc_5HvUX_0YURuNKrxLPQKEU",
+  "identity": {
+    "name": "Lardo",
+    "tagline": "All-day Mediterranean caf\u00e9 in Condesa"
+  },
+  "location": {
+    "city": "Mexico City",
+    "neighborhood": "Condesa",
+    "address": "Agust\u00edn Melgar 6, Colonia Condesa, Cuauht\u00e9moc, 06140 Ciudad de M\u00e9xico, CDMX, Mexico",
+    "lat": 19.4179589,
+    "lng": -99.17522679999999
+  },
+  "details": {
+    "category": "restaurant",
+    "subcategory": "mediterranean",
+    "priceLevel": 3,
+    "website": "https://www.lardo.com.mx/",
+    "phone": "55 5211 7731"
+  },
+  "rating": {
+    "google": 4.4,
+    "reviewCount": 7533
+  },
+  "sections": [
+    {
+      "type": "narrative",
+      "text": "All-day Mediterranean caf\u00e9 in the heart of Condesa. Famous for their crispy croque madame at breakfast and effortlessly chic atmosphere. A go-to for the digital nomad crowd but beloved by locals too. From the same team behind Rosetta. Rating 4.4/5 (7,533 reviews). $$$."
+    }
+  ],
+  "hours": [
+    "Monday: 7:00 AM \u2013 10:30 PM",
+    "Tuesday: 7:00 AM \u2013 10:30 PM",
+    "Wednesday: 7:00 AM \u2013 10:30 PM",
+    "Thursday: 7:00 AM \u2013 10:30 PM",
+    "Friday: 7:00 AM \u2013 10:30 PM",
+    "Saturday: 7:00 AM \u2013 10:30 PM",
+    "Sunday: 7:00 AM \u2013 5:30 PM"
+  ],
+  "source": {
+    "created": "2026-03-22T20:00:00Z",
+    "updated": "2026-03-22T20:00:00Z",
+    "discoveredBy": "test-concierge"
+  },
+  "manifest": {
+    "images": [
+      {
+        "path": "/data/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/images/exterior.jpg",
+        "category": "exterior",
+        "order": 1
+      },
+      {
+        "path": "/data/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/images/map.png",
+        "category": "map",
+        "order": 2
+      }
+    ]
+  },
+  "messages": [
+    {
+      "type": "image",
+      "path": "/data/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/images/exterior.jpg",
+      "caption": "Exterior view"
+    },
+    {
+      "type": "image",
+      "path": "/data/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/images/map.png",
+      "caption": "Map view"
+    }
+  ]
+}

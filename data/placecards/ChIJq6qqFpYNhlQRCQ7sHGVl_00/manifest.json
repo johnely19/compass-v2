@@ -1,0 +1,67 @@
+{
+  "place_id": "ChIJq6qqFpYNhlQRCQ7sHGVl_00",
+  "images": [
+    {
+      "id": "map-1",
+      "category": "map",
+      "order": 0,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/map.png",
+      "caption": "📍 The Watershed Grill, Brackendale, BC\n57896 Squamish Valley Road\n———————————————",
+      "source": "photo"
+    },
+    {
+      "id": "exterior-2",
+      "category": "exterior",
+      "order": 1,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/exterior_1.jpg",
+      "caption": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSquamish Valley — where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view — it's why the restaurant exists.",
+      "source": "photo"
+    },
+    {
+      "id": "exterior-3",
+      "category": "exterior",
+      "order": 2,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/exterior_2.jpg",
+      "caption": "Pull into the gravel lot. Red Adirondack chairs scattered by the water. The wooden building looks like someone's uncle built it in the '70s and they just kept adding decks.",
+      "source": "photo"
+    },
+    {
+      "id": "interior_vibe-4",
+      "category": "interior_vibe",
+      "order": 3,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/interior.jpg",
+      "caption": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nFloor-to-ceiling windows. Every table has the view. Friends crowd around platters of everything — burgers, wings, eggs benny, Caesars. This is what a road trip lunch looks like when you find the right place.",
+      "source": "photo"
+    },
+    {
+      "id": "food-6",
+      "category": "food",
+      "order": 4,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/food_1.jpg",
+      "caption": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗",
+      "source": "photo"
+    },
+    {
+      "id": "food-7",
+      "category": "food",
+      "order": 5,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/food_2.jpg",
+      "source": "photo"
+    },
+    {
+      "id": "food-8",
+      "category": "food",
+      "order": 6,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/food_3.jpg",
+      "source": "photo"
+    },
+    {
+      "id": "drinks-5",
+      "category": "drinks",
+      "order": 7,
+      "path": "/placecards/ChIJq6qqFpYNhlQRCQ7sHGVl_00/drinks.jpg",
+      "caption": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The classics:\n• Caesar — $9 (spiced rim, pickled bean) ⭐\n• Coronarita — $14 (Corona inverted in margarita)\n• OK Springs 1516 Lager — $6.25/16oz\n\nThis is a \"beer with a view\" kind of place. Order your drink, take it out to the deck, watch eagles circle over the river.",
+      "source": "photo"
+    }
+  ]
+}

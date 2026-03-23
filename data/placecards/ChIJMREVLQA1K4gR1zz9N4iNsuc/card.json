@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJMREVLQA1K4gR1zz9N4iNsuc",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJMREVLQA1K4gR1zz9N4iNsuc",
+    "name": "Sounds Good",
+    "city": "Toronto",
+    "address": "Dundas West (Little Portugal/West End)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via http://www.soundsgoodtoronto.com/",
+    "url": "http://www.soundsgoodtoronto.com/"
+  },
+  "narrative": {
+    "summary": "Vinyl-forward bar/cafe/restaurant hybrid—good for a low-key, music-led night.",
+    "blocks": []
+  }
+}

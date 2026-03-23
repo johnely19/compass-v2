@@ -1,0 +1,22 @@
+{
+  "place_id": "ChIJ3xYJKABbwokRjhgU1mfahJk",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:40Z",
+  "identity": {
+    "place_id": "ChIJ3xYJKABbwokRjhgU1mfahJk",
+    "name": "SSAW Brooklyn",
+    "address": "330 S 3rd St, Brooklyn, NY 11211, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.7,
+    "user_ratings_total": 122,
+    "price_level": null,
+    "types": [
+      "japanese_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

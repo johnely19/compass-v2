@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJZQEX1DnL1IkRGpuNjMbD2bg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJZQEX1DnL1IkRGpuNjMbD2bg",
+    "name": "Acadia Art & Rare Books - Est 1931",
+    "city": "Toronto",
+    "address": "Moss Park / Queen East (232 Queen St E)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via acadiabooks.com"
+  },
+  "narrative": {
+    "summary": "Operating since 1931. Rare books, Islamic art, fashion magazines, French & Spanish literature, out-of-print treasures. Full auctioneer service with house calls. A collector's paradise. 4.7★ (201 reviews).",
+    "blocks": []
+  }
+}

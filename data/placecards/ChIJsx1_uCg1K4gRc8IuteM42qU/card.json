@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJsx1_uCg1K4gRc8IuteM42qU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJsx1_uCg1K4gRc8IuteM42qU",
+    "name": "Artist Project 2026",
+    "city": "Toronto",
+    "address": "Exhibition Place",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via explace.on.ca"
+  },
+  "narrative": {
+    "summary": "EVENT: March 26-29 — 250+ independent artists, great for discovering emerging talent",
+    "blocks": []
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "place_id": "ChIJIQqfcfJZwokRMY6IZZDQW2k",
+  "built": "2026-03-16T10:04:15.456Z",
+  "source": "morning-build-run",
+  "identity": {
+    "place_id": "ChIJIQqfcfJZwokRMY6IZZDQW2k",
+    "name": "SoZo Sip Bar + Omakase",
+    "city": "NYC",
+    "address": "319 Bowery, New York, NY 10003, USA",
+    "type": "restaurant",
+    "phone": "(646) 666-0003",
+    "website": "https://www.sozo-nyc.com/",
+    "rating": 5,
+    "user_rating_count": 7,
+    "location": "319 Bowery, New York, NY 10003, USA"
+  },
+  "narrative": {
+    "summary": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Sozo Sip Bar + Omakase",
+        "body": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAffordable 15-course omakase for $89 on the Bowery. Smoked salmon sushi, uni temaki, toro hand rolls, plus mochi. Speakeasy sip bar with rare sakes and Japanese whisky. Just opened March 2026. 5.0 rating. Great value for quality omakase."
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 5 (7 reviews)\nPrice level: n/a\nPhone: (646) 666-0003\nWebsite: https://www.sozo-nyc.com/\n\nHours:\nMonday: 4:00 – 10:30 PM\nTuesday: 4:00 – 10:30 PM\nWednesday: 4:00 – 10:30 PM\nThursday: 4:00 – 10:30 PM\nFriday: 4:00 – 11:30 PM\nSaturday: 12:00 – 11:30 PM\nSunday: 12:00 – 10:30 PM"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 319 Bowery, New York, NY 10003, USA\n\n• walking: 10 mins • 0.4 mi\n• transit: 8 mins • 0.6 mi\n• driving: 4 mins • 0.5 mi (traffic: 4 mins)\n• bicycling: 4 mins • 0.4 mi\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (10 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "319 Bowery, New York, NY 10003, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:37.729Z",
+    "recommended": {
+      "mode": "walking",
+      "reason": "Walk is convenient (10 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 232,
+        "durationText": "4 mins",
+        "durationInTrafficSeconds": 245,
+        "durationInTrafficText": "4 mins",
+        "distanceMeters": 736,
+        "distanceText": "0.5 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 618,
+        "durationText": "10 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 692,
+        "distanceText": "0.4 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 260,
+        "durationText": "4 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 685,
+        "distanceText": "0.4 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 490,
+        "durationText": "8 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 888,
+        "distanceText": "0.6 mi"
+      }
+    ]
+  }
+}

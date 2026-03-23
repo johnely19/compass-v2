@@ -1,0 +1,101 @@
+{
+  "place_id": "ChIJxdiXIn9dwokRbQRLN0aPS2U",
+  "built": "2026-03-10T15:37:14.342Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJxdiXIn9dwokRbQRLN0aPS2U",
+    "name": "Cream Ridgewood",
+    "city": "NYC",
+    "address": "59-09 71st Ave, Ridgewood, NY 11385, USA",
+    "type": "restaurant",
+    "phone": "(718) 576-3237",
+    "website": "http://creamridgewood.com/",
+    "price_level": 2,
+    "rating": 4.1,
+    "user_rating_count": 518,
+    "location": "59-09 71st Ave, Ridgewood, NY 11385, USA"
+  },
+  "narrative": {
+    "summary": "📍 Cream Ridgewood\n59-09 71st Ave, Ridgewood, NY 11385, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Cream Ridgewood",
+        "body": "📍 Cream Ridgewood\n59-09 71st Ave, Ridgewood, NY 11385, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLatin and Caribbean fusion - TikTok-discovered hidden gem with festive garden/beach club decor"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://creamridgewood.com/"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.1 (518 reviews)\nPrice level: $$\nPhone: (718) 576-3237\nWebsite: http://creamridgewood.com/\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 59-09 71st Ave, Ridgewood, NY 11385, USA\n\n• walking: 2 hours 11 mins • 5.7 mi\n• transit: 52 mins • 7.4 mi\n• driving: 33 mins • 8.5 mi (traffic: 32 mins)\n• bicycling: 42 mins • 6.5 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (33 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "59-09 71st Ave, Ridgewood, NY 11385, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:53.969Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (33 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1988,
+        "durationText": "33 mins",
+        "durationInTrafficSeconds": 1904,
+        "durationInTrafficText": "32 mins",
+        "distanceMeters": 13694,
+        "distanceText": "8.5 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 7845,
+        "durationText": "2 hours 11 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 9253,
+        "distanceText": "5.7 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 2521,
+        "durationText": "42 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 10531,
+        "distanceText": "6.5 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 3123,
+        "durationText": "52 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 11968,
+        "distanceText": "7.4 mi"
+      }
+    ]
+  }
+}

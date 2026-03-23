@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJsWOG91s1K4gReu6pwyIU8tg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJsWOG91s1K4gReu6pwyIU8tg",
+    "name": "Emissions Record Shop",
+    "city": "Toronto",
+    "address": "Dundas West (basement)",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via https://www.reddit.com/r/vinyl/comments/13xeklq/",
+    "url": "https://www.reddit.com/r/vinyl/comments/13xeklq/"
+  },
+  "narrative": {
+    "summary": "Punk/metal/new wave/post-punk specialist in a BASEMENT. High signal for anyone into aggressive genres.",
+    "blocks": []
+  }
+}

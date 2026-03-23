@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJO5qmpaDN1IkRBXUbqD48SOU",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJO5qmpaDN1IkRBXUbqD48SOU",
+    "name": "Kaiseki Yu-zen Hashimoto Restaurant",
+    "city": "Toronto",
+    "address": "North York (Japanese Canadian Cultural Centre)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "https://www.kaiseki.ca/",
+    "url": "https://www.kaiseki.ca/"
+  },
+  "narrative": {
+    "summary": "4.9 stars, 247 reviews, $$$$—serious kaiseki in an unlikely North York location. Reservations-only, Mon/Thu-Sun evenings. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

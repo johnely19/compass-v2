@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJNzpPDDU0K4gR_qZcthSxTF0",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJNzpPDDU0K4gR_qZcthSxTF0",
+    "name": "The Mercantile",
+    "city": "Toronto",
+    "address": "Roncesvalles",
+    "type": "grocery"
+  },
+  "discovery": {
+    "text": "Discovered via yelp.ca"
+  },
+  "narrative": {
+    "summary": "Beautifully curated specialty food + gifts. Small, intentional inventory — every item chosen with care. The kind of shop that feels European. 4.8★ (105 reviews).",
+    "blocks": []
+  }
+}

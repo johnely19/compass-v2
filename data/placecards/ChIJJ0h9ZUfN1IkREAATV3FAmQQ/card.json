@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJJ0h9ZUfN1IkREAATV3FAmQQ",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJJ0h9ZUfN1IkREAATV3FAmQQ",
+    "name": "here | there — the art of nolevelon (Howard Rideout)",
+    "city": "Toronto",
+    "address": "East York (Todmorden Mills / Papermill Gallery)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via canadianarchitect.com"
+  },
+  "narrative": {
+    "summary": "Architect Howard Rideout's exhibition transforms the gallery into a journey through his vision for a nature preserve and sculpture garden in Muskoka. Charcoal drawings, photography, film — three 'realms' of wilderness. Architecture meets landscape art.",
+    "blocks": []
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "place_id": "ChIJEWbXz6ZZwokRLKmKrtPfVFY",
+  "built": "2026-03-16T13:06:00Z",
+  "source": "workspace-sync",
+  "identity": {
+    "place_id": "ChIJEWbXz6ZZwokRLKmKrtPfVFY",
+    "name": "Ichimura at Eleven Madison Park",
+    "city": "New York",
+    "address": "11 Madison Ave, New York, NY 10010, USA",
+    "website": "https://www.sushiichimura.nyc/",
+    "price_level": 4,
+    "location": "11 Madison Ave, New York, NY 10010, USA",
+    "lat": 40.7418281,
+    "lng": -73.9869858
+  },
+  "narrative": {
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n11 Madison Ave \u2014 a sushi master hiding above one of the world's most famous restaurants.\n\nEiji Ichimura's 9-seat Edomae omakase counter, nestled inside the Eleven Madison Park building. ~20 courses of exquisitely aged nigiri. The quiet return of one of NYC's greatest sushi masters.",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Arrival",
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMadison Ave at 24th St \u2014 you enter through Eleven Madison Park's grand art deco lobby, then you're guided upstairs.\n\nYou sit at a nine-seat counter and watch Eiji Ichimura work. The man is a legend in repose \u2014 he spent years at David Bouley's Brushstroke, became an if-you-know-you-know bragging right, opened his own Tribeca spot (closed 2025), and has now returned to the embrace of a major institution. Daniel Humm gave him a room above EMP. It's surprisingly easy to book. That won't last."
+      },
+      {
+        "id": "block-2",
+        "title": "Space",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nNine seats at a hinoki counter. That's it. No music, no frills. The sound of knife on fish, the quiet murmur of the chef explaining each piece. The intimacy is absolute \u2014 you're watching one of the world's great sushi masters at work from inches away."
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde2\ud835\udde0\ud835\uddd4\ud835\uddde\ud835\uddd4\ud835\udde6\ud835\uddd8\n\nEdomae-style sushi \u2014 a callback to sushi's 19th-century Tokyo origins, built on preservation techniques: marination, kelp-pressing, aging.\n\n~20 courses:\n\u2022 Seasonal appetizers including Ichimura's signature housemade mochi rice cracker filled with Hokkaido bafun uni and Kaviari caviar \u2b50\n\u2022 12+ courses of delicately aged nigiri sushi \u2b50\n\u2022 Fish sourced from Tokyo's Tsukiji network and local waters\n\u2022 Each piece placed directly in front of you by the chef\n\nThis is not contemporary fusion sushi. This is the old way \u2014 the fish speaks, the rice is warm, the nori crackles. Ichimura's technique is precision itself.\n\n\ud83d\udcb0 Omakase: ~$400-500 per person (before drinks/tax/tip)\n\nNote: No substitutions. No allergies easily accommodated. Come hungry and open-minded."
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$$\n\nDinner for 2: $1,000-1,200+ (with sake pairings)\n\nReservations: Via sushiichimura.nyc \u2014 currently still gettable on weeknights\n\n\ud83c\udf10 sushiichimura.nyc\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nTue\u2013Sat: Seatings at 5:30 PM and 8:30 PM\nSun\u2013Mon: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Tuesday/Wednesday: Easiest to book\n\u2022 5:30 seating: More relaxed pace\n\u2022 Book now \u2014 the Grub Street review just dropped (Feb 2026) and availability will evaporate"
+      }
+    ]
+  },
+  "discovery": {
+    "text": "Michelin Guide NYC \u2014 omakase counter",
+    "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/ichimura"
+  }
+}

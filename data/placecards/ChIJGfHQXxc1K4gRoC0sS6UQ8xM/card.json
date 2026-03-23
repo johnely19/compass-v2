@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJGfHQXxc1K4gRoC0sS6UQ8xM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJGfHQXxc1K4gRoC0sS6UQ8xM",
+    "name": "Yuugi Izakaya",
+    "city": "Toronto",
+    "address": "Baldwin Village / Downtown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "https://www.yuugiizakaya.com/",
+    "url": "https://www.yuugiizakaya.com/"
+  },
+  "narrative": {
+    "summary": "Contemporary izakaya on Baldwin with 4.6 stars, 847 reviews—feels like Tokyo transplant. Open 7 days, late-night hours. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "blocks": []
+  }
+}

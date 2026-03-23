@@ -1,0 +1,26 @@
+{
+  "place_id": "ChIJ2YwyMVhZwokRE47dTb7x1fo",
+  "source": "disco-sync",
+  "built": "2026-03-21T02:42:39Z",
+  "identity": {
+    "place_id": "ChIJ2YwyMVhZwokRE47dTb7x1fo",
+    "name": "Okonomi",
+    "address": "150 Ainslie St, Brooklyn, NY 11211, USA",
+    "city": "Brooklyn",
+    "neighborhood": null,
+    "rating": 4.5,
+    "user_ratings_total": 1353,
+    "price_level": 3,
+    "types": [
+      "japanese_restaurant",
+      "ramen_restaurant",
+      "breakfast_restaurant",
+      "meal_takeaway",
+      "seafood_restaurant",
+      "restaurant",
+      "food",
+      "point_of_interest",
+      "establishment"
+    ]
+  }
+}

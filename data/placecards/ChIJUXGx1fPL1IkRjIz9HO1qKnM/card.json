@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJUXGx1fPL1IkRjIz9HO1qKnM",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJUXGx1fPL1IkRjIz9HO1qKnM",
+    "name": "Fangio Trattoria",
+    "city": "Toronto",
+    "address": "Leslieville (1111 Queen St E)",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via tastetoronto.substack.com"
+  },
+  "narrative": {
+    "summary": "Named after Juan Manuel Fangio — racing rival of Alberto Ascari, whose namesake restaurant held this exact address for 14 years. Italian classics with Argentine detours. Playful cocktails. The naming backstory alone is worth the visit. 4.7★ (89 reviews).",
+    "blocks": []
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "place_id": "ChIJC0TUZABxhlQR67ZNMmVof_4",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJC0TUZABxhlQR67ZNMmVof_4",
+    "name": "La Taqueria Pinche Taco Shop",
+    "city": "Vancouver",
+    "address": "Downtown",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
+    "url": "https://www.quora.com/What-are-the-best-restaurants-to-try-when-visiting-Vancouver-BC-What-should-you-try-while-youre-there"
+  },
+  "narrative": {
+    "summary": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
+    "blocks": []
+  }
+}

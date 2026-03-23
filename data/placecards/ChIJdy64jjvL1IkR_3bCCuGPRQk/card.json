@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJdy64jjvL1IkR_3bCCuGPRQk",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJdy64jjvL1IkR_3bCCuGPRQk",
+    "name": "Canadian Stage (Berkeley Street Theatre)",
+    "city": "Toronto",
+    "address": "Corktown / King East",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via broadwayworld.com"
+  },
+  "narrative": {
+    "summary": "Ronnie Burkett's 'Little Willy' runs through Apr 5—master marionettist riffing on Romeo & Juliet with his handcrafted Daisy Theatre puppets. Arguably Canada's greatest contribution to world theatre.",
+    "blocks": []
+  }
+}

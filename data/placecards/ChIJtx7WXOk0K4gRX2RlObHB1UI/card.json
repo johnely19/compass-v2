@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJtx7WXOk0K4gRX2RlObHB1UI",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJtx7WXOk0K4gRX2RlObHB1UI",
+    "name": "Cineforum",
+    "city": "Toronto",
+    "address": "Kensington/Bathurst",
+    "type": "restaurant"
+  },
+  "discovery": {
+    "text": "Discovered via yelp arthouse list"
+  },
+  "narrative": {
+    "summary": "Underground 30-seat screening room, only 33 Google reviews—the insider's arthouse pick. International cinema, experimental programming. True hidden gem.",
+    "blocks": []
+  }
+}

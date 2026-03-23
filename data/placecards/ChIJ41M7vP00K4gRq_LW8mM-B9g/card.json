@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJ41M7vP00K4gRq_LW8mM-B9g",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJ41M7vP00K4gRq_LW8mM-B9g",
+    "name": "Paul Petro Contemporary Art",
+    "city": "Toronto",
+    "address": "Queen West",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via paulpetro.com"
+  },
+  "narrative": {
+    "summary": "Long-running program gallery; 4.6 rating; shows established Canadian artists",
+    "blocks": []
+  }
+}

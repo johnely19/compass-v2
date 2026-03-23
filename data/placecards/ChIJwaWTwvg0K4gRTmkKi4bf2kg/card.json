@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJwaWTwvg0K4gRTmkKi4bf2kg",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJwaWTwvg0K4gRTmkKi4bf2kg",
+    "name": "The Monkey's Paw",
+    "city": "Toronto",
+    "address": "Bloor West / Bloorcourt (1067 Bloor St W)",
+    "type": "gallery"
+  },
+  "discovery": {
+    "text": "Discovered via monkeyspaw.com"
+  },
+  "narrative": {
+    "summary": "Uncommon books and paper artifacts from the age of print. Home of the Biblio-mat — a random-book vending machine ($5/book). Pure Atlas Obscura energy. 4.8★ (472 reviews).",
+    "blocks": []
+  }
+}

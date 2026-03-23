@@ -1,0 +1,100 @@
+{
+  "place_id": "ChIJX7hLk0FZwokRFhRcjtylakg",
+  "built": "2026-03-10T15:36:38.195Z",
+  "source": "ready-queue-build",
+  "identity": {
+    "place_id": "ChIJX7hLk0FZwokRFhRcjtylakg",
+    "name": "Domino Park",
+    "city": "NYC",
+    "address": "15 River St, Brooklyn, NY 11249, USA",
+    "type": "park",
+    "phone": "(212) 484-2700",
+    "website": "https://www.dominopark.com/ice-skating?utm_source=Skate&utm_medium=GMB",
+    "rating": 4.8,
+    "user_rating_count": 6472,
+    "location": "15 River St, Brooklyn, NY 11249, USA"
+  },
+  "narrative": {
+    "summary": "📍 Domino Park\n15 River St, Brooklyn, NY 11249, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Domino Park",
+        "body": "📍 Domino Park\n15 River St, Brooklyn, NY 11249, USA"
+      },
+      {
+        "id": "block-2",
+        "title": "Arrival",
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nWaterfront park on former Domino Sugar site - developed by Two Trees, locals love the elevated walkways and East River views"
+      },
+      {
+        "id": "block-3",
+        "title": "Food",
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://www.dominopark.com/ice-skating?utm_source=Skate&utm_medium=GMB"
+      },
+      {
+        "id": "block-4",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.8 (6472 reviews)\nPrice level: n/a\nPhone: (212) 484-2700\nWebsite: https://www.dominopark.com/ice-skating?utm_source=Skate&utm_medium=GMB\n\nHours:\nHours unavailable"
+      },
+      {
+        "id": "block-5",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 15 River St, Brooklyn, NY 11249, USA\n\n• walking: 55 mins • 2.5 mi\n• transit: 41 mins • 4.1 mi\n• driving: 17 mins • 3.3 mi (traffic: 18 mins)\n• bicycling: 19 mins • 3.2 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (17 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "15 River St, Brooklyn, NY 11249, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:00:58.119Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (17 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 1027,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": 1061,
+        "durationInTrafficText": "18 mins",
+        "distanceMeters": 5306,
+        "distanceText": "3.3 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 3329,
+        "durationText": "55 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4010,
+        "distanceText": "2.5 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1142,
+        "durationText": "19 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 5127,
+        "distanceText": "3.2 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2464,
+        "durationText": "41 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6519,
+        "distanceText": "4.1 mi"
+      }
+    ]
+  }
+}

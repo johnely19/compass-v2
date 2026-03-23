@@ -1,0 +1,18 @@
+{
+  "place_id": "ChIJUV6ZXAk1K4gRGWxcW_9swuE",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJUV6ZXAk1K4gRGWxcW_9swuE",
+    "name": "The Bad Angel",
+    "city": "Toronto",
+    "address": "Dundas West / Little Portugal",
+    "type": "bar"
+  },
+  "discovery": {
+    "text": "Discovered via blogto Feb 2026"
+  },
+  "narrative": {
+    "summary": "BRAND NEW (Feb 2026)—replaced beloved spot, already earning fans. 5.0 rating with only 20 reviews = early-adopter energy.",
+    "blocks": []
+  }
+}

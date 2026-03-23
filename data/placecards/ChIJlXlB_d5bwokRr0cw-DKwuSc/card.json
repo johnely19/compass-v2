@@ -1,0 +1,90 @@
+{
+  "place_id": "ChIJlXlB_d5bwokRr0cw-DKwuSc",
+  "built": "2026-03-10T13:01:10.913Z",
+  "source": "builder-backfill",
+  "identity": {
+    "place_id": "ChIJlXlB_d5bwokRr0cw-DKwuSc",
+    "name": "WAH Center (Williamsburg Art & Historical Center)",
+    "city": "NYC",
+    "address": "135 Broadway, Brooklyn, NY 11211, USA",
+    "location": "135 Broadway, Brooklyn, NY 11211, USA"
+  },
+  "narrative": {
+    "summary": "📍 WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA",
+    "blocks": [
+      {
+        "id": "block-1",
+        "title": "Check",
+        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+      },
+      {
+        "id": "block-2",
+        "title": "Enter",
+        "body": "📍 WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA"
+      },
+      {
+        "id": "block-3",
+        "title": "Check",
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (39 reviews)"
+      },
+      {
+        "id": "block-4",
+        "title": "Travel Intel",
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 135 Broadway, Brooklyn, NY 11211, USA\n\n• walking: 47 mins • 2.1 mi\n• transit: 34 mins • 3.9 mi\n• driving: 13 mins • 2.7 mi (traffic: 16 mins)\n• bicycling: 17 mins • 2.7 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+      }
+    ]
+  },
+  "travel": {
+    "origin": "The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA",
+    "destination": "135 Broadway, Brooklyn, NY 11211, USA",
+    "departureTime": "now",
+    "context": "default",
+    "updatedAt": "2026-03-21T05:01:34.946Z",
+    "recommended": {
+      "mode": "driving",
+      "reason": "Fastest available option (13 mins)"
+    },
+    "comparisons": [
+      {
+        "mode": "driving",
+        "ok": true,
+        "durationSeconds": 799,
+        "durationText": "13 mins",
+        "durationInTrafficSeconds": 932,
+        "durationInTrafficText": "16 mins",
+        "distanceMeters": 4355,
+        "distanceText": "2.7 mi"
+      },
+      {
+        "mode": "walking",
+        "ok": true,
+        "durationSeconds": 2805,
+        "durationText": "47 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 3341,
+        "distanceText": "2.1 mi"
+      },
+      {
+        "mode": "bicycling",
+        "ok": true,
+        "durationSeconds": 1041,
+        "durationText": "17 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 4415,
+        "distanceText": "2.7 mi"
+      },
+      {
+        "mode": "transit",
+        "ok": true,
+        "durationSeconds": 2023,
+        "durationText": "34 mins",
+        "durationInTrafficSeconds": null,
+        "durationInTrafficText": null,
+        "distanceMeters": 6232,
+        "distanceText": "3.9 mi"
+      }
+    ]
+  }
+}
