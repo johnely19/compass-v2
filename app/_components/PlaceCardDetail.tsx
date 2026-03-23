@@ -45,8 +45,11 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
   const typeMeta = getTypeMeta(card.type);
   const widgets = TYPE_WIDGETS[card.type] || DEFAULT_WIDGETS;
 
-  const heroImage = card.data.images?.[0]?.path;
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name)}`;
+  const data = card.data ?? { description: '', highlights: [], images: [] };
+  const heroImage = data.images?.[0]?.path;
+  const googleMapsUrl = card.place_id
+    ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name)}`;
 
   const renderWidget = (widgetName: string) => {
     switch (widgetName) {
@@ -54,43 +57,43 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         return (
           <RatingWidget
             key="rating"
-            rating={card.data.rating as number | undefined}
-            reviewCount={card.data.reviewCount as number | undefined}
+            rating={data.rating as number | undefined}
+            reviewCount={data.reviewCount as number | undefined}
           />
         );
       case 'HoursWidget':
-        return card.data.hours ? (
-          <HoursWidget key="hours" hours={card.data.hours} />
+        return data.hours ? (
+          <HoursWidget key="hours" hours={data.hours} />
         ) : null;
       case 'MapWidget':
         return <MapWidget key="map" placeId={card.place_id} name={card.name} />;
       case 'PhotoGallery':
-        return card.data.images && card.data.images.length > 0 ? (
-          <PhotoGallery key="photos" images={card.data.images} />
+        return data.images && data.images.length > 0 ? (
+          <PhotoGallery key="photos" images={data.images} />
         ) : null;
       case 'MenuWidget':
-        return card.data.menu ? (
-          <MenuWidget key="menu" menu={card.data.menu as any} />
+        return data.menu ? (
+          <MenuWidget key="menu" menu={data.menu as any} />
         ) : null;
       case 'PricingWidget':
-        return card.data.pricing ? (
-          <PricingWidget key="pricing" pricing={card.data.pricing as any} />
+        return data.pricing ? (
+          <PricingWidget key="pricing" pricing={data.pricing as any} />
         ) : null;
       case 'AmenitiesWidget':
-        return card.data.amenities ? (
-          <AmenitiesWidget key="amenities" amenities={card.data.amenities as any} />
+        return data.amenities ? (
+          <AmenitiesWidget key="amenities" amenities={data.amenities as any} />
         ) : null;
       case 'ExhibitionWidget':
-        return card.data.exhibitions ? (
-          <ExhibitionWidget key="exhibitions" exhibitions={card.data.exhibitions as any} />
+        return data.exhibitions ? (
+          <ExhibitionWidget key="exhibitions" exhibitions={data.exhibitions as any} />
         ) : null;
       case 'StatusWidget':
-        return card.data.status ? (
-          <StatusWidget key="status" status={card.data.status as string} />
+        return data.status ? (
+          <StatusWidget key="status" status={data.status as string} />
         ) : null;
       case 'KeyDatesWidget':
-        return card.data.dates ? (
-          <KeyDatesWidget key="dates" dates={card.data.dates as any} />
+        return data.dates ? (
+          <KeyDatesWidget key="dates" dates={data.dates as any} />
         ) : null;
       default:
         return null;
@@ -135,18 +138,18 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
       </div>
 
       {/* Description */}
-      {card.data.description && (
+      {data.description && (
         <div className="place-detail-description">
-          <p>{card.data.description}</p>
+          <p>{data.description}</p>
         </div>
       )}
 
       {/* Highlights */}
-      {card.data.highlights && card.data.highlights.length > 0 && (
+      {data.highlights && data.highlights.length > 0 && (
         <div className="place-detail-highlights">
           <h3>Highlights</h3>
           <ul>
-            {card.data.highlights.map((highlight, i) => (
+            {data.highlights.map((highlight, i) => (
               <li key={i}>{highlight}</li>
             ))}
           </ul>
