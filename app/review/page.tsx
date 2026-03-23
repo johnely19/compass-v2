@@ -1,5 +1,6 @@
 import { getCurrentUser } from '../_lib/user';
 import { getUserManifest } from '../_lib/user-data';
+import { getContextStatus } from '../_lib/context-lifecycle';
 import ReviewHubClient from '../_components/ReviewHubClient';
 
 export const dynamic = 'force-dynamic';
@@ -19,7 +20,25 @@ export default async function ReviewPage() {
   }
 
   const manifest = await getUserManifest(user.id);
-  const contexts = (manifest?.contexts ?? []).filter(c => c.active);
+  const allContexts = manifest?.contexts ?? [];
 
-  return <ReviewHubClient userId={user.id} contexts={contexts} />;
+  // Active + completed contexts shown in main section
+  const activeContexts = allContexts.filter(c => {
+    const status = getContextStatus(c);
+    return status === 'active' || status === 'completed';
+  });
+
+  // Archived contexts shown in separate section
+  const archivedContexts = allContexts.filter(c => {
+    const status = getContextStatus(c);
+    return status === 'archived';
+  });
+
+  return (
+    <ReviewHubClient
+      userId={user.id}
+      contexts={activeContexts}
+      archivedContexts={archivedContexts}
+    />
+  );
 }

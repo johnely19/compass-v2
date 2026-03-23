@@ -1,6 +1,7 @@
 import { getCurrentUser } from './_lib/user';
 import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery } from './_lib/types';
+import { isContextActive } from './_lib/context-lifecycle';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -38,7 +39,7 @@ export default async function HomePage() {
   ]);
 
   const contexts = sortContexts(
-    (manifest?.contexts ?? []).filter(c => c.active),
+    (manifest?.contexts ?? []).filter(c => isContextActive(c)),
   );
   const discoveries = discoveriesData?.discoveries ?? [];
 

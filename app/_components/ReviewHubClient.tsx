@@ -8,6 +8,7 @@ import { getContextCounts } from '../_lib/triage';
 interface ReviewHubClientProps {
   userId: string;
   contexts: Context[];
+  archivedContexts?: Context[];
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -16,16 +17,19 @@ const TYPE_EMOJI: Record<string, string> = {
   radar: '📡',
 };
 
-export default function ReviewHubClient({ userId, contexts }: ReviewHubClientProps) {
+export default function ReviewHubClient({ userId, contexts, archivedContexts = [] }: ReviewHubClientProps) {
   const [counts, setCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
+  const [showArchived, setShowArchived] = useState(false);
+
+  const allContexts = [...contexts, ...archivedContexts];
 
   const refresh = useCallback(() => {
     const c: typeof counts = {};
-    for (const ctx of contexts) {
+    for (const ctx of allContexts) {
       c[ctx.key] = getContextCounts(userId, ctx.key);
     }
     setCounts(c);
-  }, [userId, contexts]);
+  }, [userId, allContexts]);
 
   useEffect(() => {
     refresh();
@@ -73,6 +77,48 @@ export default function ReviewHubClient({ userId, contexts }: ReviewHubClientPro
           </div>
         )}
       </div>
+
+      {archivedContexts.length > 0 && (
+        <div style={{ marginTop: 'var(--space-xl)' }}>
+          <button
+            className="filter-clear"
+            onClick={() => setShowArchived(!showArchived)}
+            style={{ marginBottom: 'var(--space-md)' }}
+          >
+            {showArchived ? 'Hide' : 'Show'} archived ({archivedContexts.length})
+          </button>
+
+          {showArchived && (
+            <div className="review-hub-list">
+              {archivedContexts.map(ctx => {
+                const c = counts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 };
+                return (
+                  <Link
+                    key={ctx.key}
+                    href={`/review/${encodeURIComponent(ctx.key)}`}
+                    className="review-hub-card card"
+                    style={{ opacity: 0.7 }}
+                  >
+                    <div className="card-body">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <h3>{ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} {ctx.label}</h3>
+                          <span className="status-badge status-archived">Archived</span>
+                          {ctx.dates && <span className="text-xs text-muted" style={{ marginLeft: '8px' }}>{ctx.dates}</span>}
+                        </div>
+                        <div className="review-counts">
+                          {c.saved > 0 && <span className="badge badge-success">✓ {c.saved}</span>}
+                          {c.dismissed > 0 && <span className="badge badge-danger">✗ {c.dismissed}</span>}
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                );
+              })}
+            </div>
+          )}
+        </div>
+      )}
     </main>
   );
 }

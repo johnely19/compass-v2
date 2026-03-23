@@ -42,6 +42,8 @@ export interface UserPreferences {
 
 export type ContextType = 'trip' | 'outing' | 'radar';
 
+export type ContextStatus = 'active' | 'completed' | 'archived' | 'paused';
+
 export interface Context {
   key: string;          // "trip:slug", "outing:slug", "radar:slug"
   label: string;        // "NYC Solo Trip"
@@ -52,6 +54,7 @@ export interface Context {
   parentTrip?: string;  // for outings nested in a trip
   focus: string[];      // "food", "jazz", "architecture"
   active: boolean;
+  status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
 }
 
 export interface UserManifest {
