@@ -4,15 +4,18 @@ import Nav from "./_components/Nav";
 import ChatWidget from "./_components/ChatWidget";
 import "./globals.css";
 
+import type { Viewport } from "next";
+
 export const metadata: Metadata = {
   title: "Compass",
   description: "Personal travel intelligence",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 1,
-    viewportFit: "cover",
-  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  viewportFit: "cover",
 };
 
 export default async function RootLayout({

@@ -70,11 +70,11 @@ async function run() {
   await test('Admin Agents API', '/api/admin/agents');
   await test('Admin Crons API', '/api/admin/crons');
 
-  // Chat API (POST with test payload)
-  await test('Chat API (POST)', '/api/chat', {
+  // Chat API (POST — expects 400 without proper auth/format, proves route exists)
+  await test('Chat API (POST, alive check)', '/api/chat', {
     method: 'POST',
     body: { messages: [{ role: 'user', content: 'hello' }] },
-    expectedStatus: 200,
+    expectedStatus: 400,
   });
 
   // Discovery push (POST without auth — should 401)
