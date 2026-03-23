@@ -949,3 +949,472 @@ a:hover {
   border: 1px dashed var(--card-border);
   border-radius: var(--radius-md);
 }
+
+
+/* ---- 21. Place Detail Page ---- */
+
+.place-detail {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--space-md);
+}
+
+.place-detail-hero {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: var(--space-lg);
+}
+
+.place-detail-hero-fallback {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 30%, var(--bg-secondary)),
+    color-mix(in srgb, var(--accent) 10%, var(--bg-primary))
+  );
+}
+
+.place-detail-header {
+  margin-bottom: var(--space-lg);
+}
+
+.place-detail-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.place-detail-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.place-detail-maps-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.9rem;
+}
+
+.place-detail-description {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+}
+
+.place-detail-description p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.place-detail-highlights {
+  margin-bottom: var(--space-lg);
+}
+
+.place-detail-highlights h3 {
+  font-size: 1rem;
+  margin-bottom: var(--space-sm);
+}
+
+.place-detail-highlights ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.place-detail-highlights li {
+  color: var(--text-secondary);
+  padding-left: var(--space-md);
+  position: relative;
+}
+
+.place-detail-highlights li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.place-detail-widgets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.place-detail-triage {
+  margin-top: var(--space-xl);
+}
+
+@media (min-width: 768px) {
+  .place-detail {
+    padding: var(--space-lg);
+  }
+
+  .place-detail-name {
+    font-size: 2.25rem;
+  }
+}
+
+
+/* ---- 22. Widgets ---- */
+
+.widget {
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+}
+
+.widget-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-md);
+}
+
+
+/* ---- 23. Rating Widget ---- */
+
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.rating-stars .star-filled {
+  color: var(--warm-amber);
+  font-size: 1.25rem;
+}
+
+.rating-stars .star-empty {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+}
+
+.rating-stars .star-half {
+  color: var(--warm-amber);
+  font-size: 1.25rem;
+}
+
+.rating-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.rating-count {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+
+/* ---- 24. Hours Widget ---- */
+
+.hours-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.hours-table tr {
+  border-bottom: 1px solid var(--card-border);
+}
+
+.hours-table tr:last-child {
+  border-bottom: none;
+}
+
+.hours-table .hours-day {
+  padding: var(--space-sm) 0;
+  color: var(--text-secondary);
+  font-weight: 500;
+  width: 40%;
+}
+
+.hours-table .hours-time {
+  padding: var(--space-sm) 0;
+  color: var(--text-primary);
+  text-align: right;
+  font-size: 0.9rem;
+}
+
+.hours-table .hours-today {
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.hours-table .hours-today .hours-day,
+.hours-table .hours-today .hours-time {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+
+/* ---- 25. Map Widget ---- */
+
+.map-link-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 640px) {
+  .map-link-btn {
+    width: auto;
+  }
+}
+
+
+/* ---- 26. Photo Gallery ---- */
+
+.photo-gallery {
+  display: flex;
+  gap: var(--space-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--space-sm);
+  -webkit-overflow-scrolling: touch;
+}
+
+.photo-gallery::-webkit-scrollbar {
+  height: 4px;
+}
+
+.photo-gallery-item {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.photo-gallery-img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  display: block;
+}
+
+.photo-gallery-label {
+  display: block;
+  margin-top: var(--space-xs);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .photo-gallery-img {
+    width: 240px;
+    height: 180px;
+  }
+}
+
+
+/* ---- 27. Menu Widget ---- */
+
+.menu-widget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.menu-category-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.menu-item-name {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.menu-item-star {
+  font-size: 0.85em;
+}
+
+.menu-item-price {
+  color: var(--text-primary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.menu-item-highlight .menu-item-name {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+
+/* ---- 28. Pricing Widget ---- */
+
+.pricing-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pricing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.pricing-item:last-child {
+  border-bottom: none;
+}
+
+.pricing-label {
+  color: var(--text-secondary);
+}
+
+.pricing-amount {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+
+/* ---- 29. Amenities Widget ---- */
+
+.amenities-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.amenity-chip {
+  padding: var(--space-xs) var(--space-md);
+  background: var(--bg-elevated);
+  border: 1px solid var(--card-border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+
+/* ---- 30. Exhibition Widget ---- */
+
+.exhibition-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.exhibition-item {
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.exhibition-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.exhibition-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-xs);
+}
+
+.exhibition-title {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.exhibition-dates {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+
+/* ---- 31. Status Widget ---- */
+
+.widget .badge-muted {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-muted);
+}
+
+
+/* ---- 32. Key Dates Widget ---- */
+
+.key-dates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.key-date-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-sm);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+}
+
+.key-date-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.key-date-value {
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
