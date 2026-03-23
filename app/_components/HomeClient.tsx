@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
 import PlaceGrid from './PlaceGrid';
+import BriefingBanner from './BriefingBanner';
 
 interface HomeClientProps {
   userId: string;
@@ -38,6 +39,8 @@ export default function HomeClient({
         <h1>🧭 Compass</h1>
         <p>Your discovery inbox — what needs your attention.</p>
       </div>
+
+      <BriefingBanner userId={userId} />
 
       {contexts.map(ctx => {
         const discoveries = discoveryMap[ctx.key] ?? [];
