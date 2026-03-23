@@ -1646,3 +1646,55 @@ a:hover {
   font-size: 0.95rem;
   margin-bottom: var(--space-xs);
 }
+
+.place-browse-city {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.place-browse-rating {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-top: var(--space-xs);
+}
+
+/* ---- 23. Browse Controls ---- */
+
+.browse-controls {
+  margin-bottom: var(--space-lg);
+}
+
+.browse-search {
+  margin-bottom: var(--space-md);
+}
+
+.browse-search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 0.95rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.browse-search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+@media (min-width: 768px) {
+  .browse-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-lg);
+  }
+
+  .filter-section {
+    flex-shrink: 0;
+  }
+}
