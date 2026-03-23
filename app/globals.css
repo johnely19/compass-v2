@@ -939,3 +939,13 @@ a:hover {
     align-items: center;
   }
 }
+
+
+/* ---- 19. Empty States ---- */
+
+.empty-state {
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  border: 1px dashed var(--card-border);
+  border-radius: var(--radius-md);
+}
