@@ -457,3 +457,110 @@ a:hover {
   background: var(--text-muted);
   border-radius: 3px;
 }
+
+
+/* ---- 14. Chat Widget ---- */
+
+.chat-fab {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: var(--btn-primary-bg);
+  color: white;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  z-index: 200;
+  transition: transform var(--transition-fast), background var(--transition-fast);
+}
+
+.chat-fab:hover {
+  background: var(--btn-primary-hover);
+  transform: scale(1.05);
+}
+
+.chat-panel {
+  position: fixed;
+  bottom: calc(var(--space-lg) + 60px);
+  right: var(--space-lg);
+  width: 360px;
+  max-height: 500px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-md);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.chat-panel-header h3 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.chat-panel-body {
+  padding: var(--space-lg);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .chat-panel {
+    width: calc(100vw - var(--space-lg) * 2);
+    right: var(--space-md);
+    bottom: calc(var(--space-lg) + 60px);
+    max-height: 60vh;
+  }
+
+  .chat-fab {
+    bottom: var(--space-md);
+    right: var(--space-md);
+  }
+}
+
+
+/* ---- 15. Nav Avatar ---- */
+
+.nav-user {
+  display: flex;
+  align-items: center;
+}
+
+.nav-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .nav-links {
+    gap: var(--space-sm);
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+}
