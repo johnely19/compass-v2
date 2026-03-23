@@ -593,3 +593,105 @@ a:hover {
   display: inline-block;
   line-height: 1;
 }
+
+
+/* ---- 17. Triage Buttons ---- */
+
+.triage-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.triage-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--card-border);
+  background: var(--bg-secondary);
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  line-height: 1;
+}
+
+.triage-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.triage-save.triage-active {
+  background: rgba(74, 222, 128, 0.2);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.triage-dismiss.triage-active {
+  background: rgba(248, 113, 113, 0.2);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.triage-buttons-md .triage-btn {
+  width: 40px;
+  height: 40px;
+  font-size: 1.3rem;
+}
+
+/* ---- 18. Triage Widget (detail page) ---- */
+
+.triage-widget {
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+}
+
+.triage-widget-context {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: var(--space-sm);
+}
+
+.triage-widget-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.triage-widget-btn {
+  flex: 1;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.triage-widget-btn:hover {
+  border-color: var(--accent);
+}
+
+.triage-widget-save.triage-active {
+  background: rgba(74, 222, 128, 0.15);
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.triage-widget-dismiss.triage-active {
+  background: rgba(248, 113, 113, 0.15);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+.triage-resurface-note {
+  margin-top: var(--space-sm);
+}
