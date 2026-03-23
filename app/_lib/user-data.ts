@@ -67,11 +67,63 @@ export async function getUserPreferences(userId: string): Promise<UserPreference
 }
 
 export async function getUserManifest(userId: string): Promise<UserManifest | null> {
-  return getUserData(userId, 'manifest');
+  const raw = await getUserData(userId, 'manifest');
+  if (!raw) return null;
+  
+  // V1→V2 compatibility: map "section" contexts to "radar" type
+  if (raw.contexts) {
+    raw.contexts = raw.contexts.map(ctx => {
+      let key = ctx.key;
+      let type = ctx.type;
+      // Map V1 "section" type to V2 "radar"
+      if ((type as string) === 'section' || key?.startsWith('section:')) {
+        type = 'radar';
+        key = key.replace(/^section:/, 'radar:');
+      }
+      // Ensure type exists
+      if (!type) {
+        if (key?.startsWith('trip:')) type = 'trip';
+        else if (key?.startsWith('outing:')) type = 'outing';
+        else type = 'radar';
+      }
+      return {
+        ...ctx,
+        key,
+        type,
+        emoji: ctx.emoji || '📋',
+      };
+    });
+  }
+  return raw;
 }
 
 export async function getUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
-  return getUserData(userId, 'discoveries');
+  const raw = await getUserData(userId, 'discoveries');
+  if (!raw) return null;
+
+  // V1→V2 compatibility: normalize contextKeys
+  if (raw.discoveries && Array.isArray(raw.discoveries)) {
+    raw.discoveries = raw.discoveries.map(d => {
+      let contextKey = d.contextKey;
+      if (typeof contextKey === 'string') {
+        // Map section: → radar:
+        if (contextKey.startsWith('section:')) {
+          contextKey = contextKey.replace(/^section:/, 'radar:');
+        }
+        // Strip user prefix (e.g. "john:outing:..." → "outing:...")
+        const prefixMatch = contextKey.match(/^[a-z0-9]+:(trip:|outing:|radar:)/);
+        if (prefixMatch && !contextKey.startsWith('trip:') && !contextKey.startsWith('outing:') && !contextKey.startsWith('radar:')) {
+          contextKey = contextKey.replace(/^[a-z0-9]+:/, '');
+        }
+      }
+      // Default fallback for invalid contextKeys
+      if (!contextKey || contextKey === 'undefined' || !contextKey.includes(':')) {
+        contextKey = 'radar:toronto-experiences';
+      }
+      return { ...d, contextKey };
+    });
+  }
+  return raw;
 }
 
 export async function getUserChat(userId: string): Promise<UserChat | null> {

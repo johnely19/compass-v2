@@ -1,14 +1,24 @@
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, readdirSync } from 'fs';
 import path from 'path';
-import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
-import TypeBadge from '../_components/TypeBadge';
+import { ALL_TYPES } from '../_lib/discovery-types';
+import HotClient from './HotClient';
 
 export const dynamic = 'force-dynamic';
 
 interface IndexEntry {
   name: string;
   type: DiscoveryType;
+}
+
+interface CardData {
+  built?: string | null;
+  identity?: {
+    city?: string | null;
+  };
+  narrative?: {
+    summary?: string | null;
+  };
 }
 
 function loadIndex(): Record<string, IndexEntry> {
@@ -21,42 +31,66 @@ function loadIndex(): Record<string, IndexEntry> {
   }
 }
 
+function loadCardData(placeId: string): CardData {
+  const cardPath = path.join(process.cwd(), 'data', 'placecards', placeId, 'card.json');
+  if (!existsSync(cardPath)) return {};
+  try {
+    return JSON.parse(readFileSync(cardPath, 'utf8')) as CardData;
+  } catch {
+    return {};
+  }
+}
+
+// Check if a card is a "new opening" based on summary content
+function isNewOpening(summary: string | null): boolean {
+  if (!summary) return false;
+  const lower = summary.toLowerCase();
+  // Look for keywords indicating new/opened/recent
+  return (
+    lower.includes('new') ||
+    lower.includes('opened') ||
+    lower.includes('2026') ||
+    lower.includes('soft-opened') ||
+    lower.includes('just opened') ||
+    lower.includes('opening') ||
+    lower.includes('arrival')
+  );
+}
+
+interface HotPlaceCard {
+  placeId: string;
+  name: string;
+  type: DiscoveryType;
+  city: string;
+  isNewOpening: boolean;
+  addedAt: string | null;
+}
+
 export default function HotPage() {
   const index = loadIndex();
-  const entries = Object.entries(index);
 
-  // For now, show a random selection as "hot" — will be powered by real
-  // trending data from Disco's hourly-discoveries.jsonl and place-movers.json
-  // once the agent wiring is complete
-  const shuffled = [...entries].sort(() => Math.random() - 0.5).slice(0, 24);
+  // Build enriched card data with city, new opening detection, and date
+  const cards: HotPlaceCard[] = Object.entries(index).map(([placeId, entry]) => {
+    const cardData = loadCardData(placeId);
+    const city = cardData.identity?.city ?? '';
+    const summary = cardData.narrative?.summary ?? null;
+    const isNew = isNewOpening(summary);
+    // Use built date as the date signal for sorting (when card was created)
+    const addedAt = cardData.built ?? null;
 
-  return (
-    <main className="page">
-      <div className="page-header">
-        <h1>🔥 What&apos;s Hot</h1>
-        <p className="text-muted">Trending and recently discovered places.</p>
-      </div>
+    return {
+      placeId,
+      name: entry.name,
+      type: entry.type,
+      city,
+      isNewOpening: isNew,
+      addedAt,
+    };
+  });
 
-      <div className="grid grid-auto">
-        {shuffled.map(([placeId, entry]) => (
-          <Link
-            key={placeId}
-            href={`/placecards/${placeId}`}
-            className="card place-browse-card"
-          >
-            <div className="card-body">
-              <h3 className="place-browse-name">{entry.name}</h3>
-              <TypeBadge type={entry.type} />
-            </div>
-          </Link>
-        ))}
-      </div>
+  // Get available types from the data
+  const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));
+  const availableTypes = ALL_TYPES.filter((t) => typeSet.has(t));
 
-      {entries.length === 0 && (
-        <div className="empty-state">
-          <p className="text-muted">No discoveries yet.</p>
-        </div>
-      )}
-    </main>
-  );
+  return <HotClient cards={cards} availableTypes={availableTypes} />;
 }

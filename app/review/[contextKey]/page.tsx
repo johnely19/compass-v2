@@ -16,7 +16,7 @@ export default async function ReviewContextPage({ params }: Props) {
   if (!user) {
     return (
       <main className="page">
-        <p className="text-muted">Sign in to review.</p>
+        <p className="text-muted"><a href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</a> to review.</p>
       </main>
     );
   }

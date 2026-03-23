@@ -25,7 +25,7 @@ export default async function HomePage() {
       <main className="page">
         <div className="page-header">
           <h1>🧭 Compass</h1>
-          <p>Personal travel intelligence. Sign in to get started.</p>
+          <p>Personal travel intelligence. <a href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</a> to get started.</p>
         </div>
       </main>
     );

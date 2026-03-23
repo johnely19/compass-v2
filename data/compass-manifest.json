@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "updatedAt": "2026-03-23T21:55:00Z",
+  "contexts": [
+    {
+      "key": "trip:nyc-april-2026",
+      "label": "NYC Solo Trip",
+      "emoji": "🗽",
+      "type": "trip",
+      "city": "New York",
+      "dates": "April 27-30, 2026",
+      "focus": ["Brooklyn food scene", "galleries", "off-Broadway", "jazz", "architecture"],
+      "active": true
+    },
+    {
+      "key": "trip:cottage-july-2026",
+      "label": "Ontario Cottage",
+      "emoji": "🏡",
+      "type": "trip",
+      "city": "Lake Huron",
+      "dates": "July 2026 (3+ weeks)",
+      "focus": ["waterfront", "swimming", "dock access", "private shoreline"],
+      "active": true
+    },
+    {
+      "key": "outing:date-night-huzur",
+      "label": "Date Night with Huzur",
+      "emoji": "🍷",
+      "type": "outing",
+      "city": "Toronto",
+      "focus": ["intimate", "wine bar", "French bistro", "romantic"],
+      "active": true
+    },
+    {
+      "key": "outing:dinner-jackson",
+      "label": "Dinner with Jackson",
+      "emoji": "🍽️",
+      "type": "outing",
+      "city": "Toronto",
+      "focus": ["casual", "good food", "interesting"],
+      "active": true
+    },
+    {
+      "key": "radar:premium-grocery",
+      "label": "Premium Grocery Shopping",
+      "emoji": "🛒",
+      "type": "radar",
+      "city": "Toronto",
+      "focus": ["exceptional produce", "specialty stores", "quality ingredients"],
+      "active": true
+    },
+    {
+      "key": "radar:toronto-experiences",
+      "label": "Toronto Experiences",
+      "emoji": "🌆",
+      "type": "radar",
+      "city": "Toronto",
+      "focus": ["architecture", "jazz", "art", "dance", "interesting venues"],
+      "active": true
+    },
+    {
+      "key": "radar:developments",
+      "label": "Developments",
+      "emoji": "🏗️",
+      "type": "radar",
+      "city": "Toronto",
+      "focus": ["condo projects", "urban development", "architecture"],
+      "active": true
+    }
+  ]
+}

@@ -12,7 +12,7 @@ export default async function ReviewPage() {
       <main className="page">
         <div className="page-header">
           <h1>Review</h1>
-          <p className="text-muted">Sign in to manage your discoveries.</p>
+          <p className="text-muted"><a href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</a> to manage your discoveries.</p>
         </div>
       </main>
     );
