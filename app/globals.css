@@ -695,3 +695,247 @@ a:hover {
 .triage-resurface-note {
   margin-top: var(--space-sm);
 }
+
+
+/* ---- 19. Place Card ---- */
+
+.place-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+  text-decoration: none;
+  color: inherit;
+}
+
+.place-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-2px);
+}
+
+.place-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.place-card-image-fallback {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent) 30%, var(--bg-secondary)),
+    color-mix(in srgb, var(--accent) 10%, var(--bg-primary))
+  );
+}
+
+.place-card-body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.place-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.place-card-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.place-card-rating {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 0.85rem;
+}
+
+.star-filled {
+  color: var(--warm-amber);
+}
+
+.star-empty {
+  color: var(--text-muted);
+}
+
+.rating-value {
+  margin-left: 4px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.place-card-footer {
+  padding: var(--space-sm) var(--space-md);
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.place-card-maps {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.place-card-maps:hover {
+  color: var(--accent);
+}
+
+
+/* ---- 20. Place Grid ---- */
+
+.place-grid-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.triage-summary {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  padding: var(--space-sm) 0;
+}
+
+.place-grid-empty {
+  text-align: center;
+  padding: var(--space-2xl);
+  color: var(--text-muted);
+}
+
+
+/* ---- 21. Filter Bar ---- */
+
+.filter-bar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+  margin-bottom: var(--space-md);
+}
+
+.filter-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.filter-section-row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-md);
+}
+
+.filter-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 100px;
+  border: 1px solid var(--card-border);
+  background: var(--bg-elevated);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.filter-chip:hover {
+  border-color: var(--type-color, var(--accent));
+  color: var(--type-color, var(--accent));
+}
+
+.filter-chip-active {
+  background: color-mix(in srgb, var(--type-color, var(--accent)) 15%, transparent);
+  border-color: var(--type-color, var(--accent));
+  color: var(--type-color, var(--accent));
+}
+
+.filter-chip-icon {
+  font-size: 0.9em;
+}
+
+.filter-chip-label {
+  white-space: nowrap;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-select {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  cursor: pointer;
+  min-width: 100px;
+}
+
+.filter-select:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.filter-clear {
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.filter-clear:hover {
+  color: var(--danger);
+}
+
+@media (min-width: 768px) {
+  .filter-bar {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  .filter-section-row {
+    align-items: center;
+  }
+}
