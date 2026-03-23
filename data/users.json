@@ -1,0 +1,20 @@
+{
+  "users": {
+    "usr_001": {
+      "id": "usr_001",
+      "name": "John",
+      "code": "john",
+      "city": "Toronto",
+      "isOwner": true,
+      "createdAt": "2026-02-10T00:00:00.000Z"
+    },
+    "usr_002": {
+      "id": "usr_002",
+      "name": "Billy",
+      "code": "billy",
+      "city": "Toronto",
+      "isOwner": false,
+      "createdAt": "2026-03-15T00:00:00.000Z"
+    }
+  }
+}
