@@ -1,0 +1,132 @@
+'use client';
+
+import { useState, useEffect, useCallback, useMemo } from 'react';
+import Link from 'next/link';
+import type { Context, Discovery, TriageState } from '../_lib/types';
+import { getTriageState, getTriageEntry } from '../_lib/triage';
+import TypeBadge from './TypeBadge';
+import TriageButtons from './TriageButtons';
+
+type Tab = 'unreviewed' | 'saved' | 'dismissed';
+
+interface ReviewContextClientProps {
+  userId: string;
+  context: Context;
+  discoveries: Discovery[];
+}
+
+function timeAgo(dateStr: string): string {
+  const ms = Date.now() - new Date(dateStr).getTime();
+  const min = Math.floor(ms / 60000);
+  if (min < 60) return `${min}m ago`;
+  const hrs = Math.floor(min / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.floor(hrs / 24)}d ago`;
+}
+
+export default function ReviewContextClient({
+  userId,
+  context,
+  discoveries,
+}: ReviewContextClientProps) {
+  const [tab, setTab] = useState<Tab>('unreviewed');
+  const [, setRefresh] = useState(0);
+
+  useEffect(() => {
+    const handler = () => setRefresh(n => n + 1);
+    window.addEventListener('triage-changed', handler);
+    return () => window.removeEventListener('triage-changed', handler);
+  }, []);
+
+  const filtered = useMemo(() => {
+    return discoveries.filter(d => {
+      const placeId = d.place_id ?? d.id;
+      const state = getTriageState(userId, context.key, placeId);
+
+      if (tab === 'unreviewed') return state === 'unreviewed' || state === 'resurfaced';
+      if (tab === 'saved') return state === 'saved';
+      if (tab === 'dismissed') return state === 'dismissed';
+      return false;
+    });
+  }, [discoveries, userId, context.key, tab]);
+
+  const counts = useMemo(() => {
+    let unreviewed = 0, saved = 0, dismissed = 0;
+    for (const d of discoveries) {
+      const placeId = d.place_id ?? d.id;
+      const state = getTriageState(userId, context.key, placeId);
+      if (state === 'unreviewed' || state === 'resurfaced') unreviewed++;
+      else if (state === 'saved') saved++;
+      else if (state === 'dismissed') dismissed++;
+    }
+    return { unreviewed, saved, dismissed };
+  }, [discoveries, userId, context.key]);
+
+  const tabs: { key: Tab; label: string; count: number }[] = [
+    { key: 'unreviewed', label: 'Needs Review', count: counts.unreviewed },
+    { key: 'saved', label: 'Saved', count: counts.saved },
+    { key: 'dismissed', label: 'Dismissed', count: counts.dismissed },
+  ];
+
+  return (
+    <main className="page">
+      <div className="page-header">
+        <h1>{context.emoji} {context.label}</h1>
+        {context.dates && <p className="text-muted">{context.dates}</p>}
+      </div>
+
+      <div className="review-tabs">
+        {tabs.map(t => (
+          <button
+            key={t.key}
+            className={`review-tab ${tab === t.key ? 'review-tab-active' : ''}`}
+            onClick={() => setTab(t.key)}
+          >
+            {t.label} ({t.count})
+          </button>
+        ))}
+      </div>
+
+      <div className="review-list">
+        {filtered.map(d => {
+          const placeId = d.place_id ?? d.id;
+          const entry = getTriageEntry(userId, context.key, placeId);
+
+          return (
+            <div key={d.id} className="review-item card">
+              <div className="card-body flex items-center justify-between">
+                <div className="review-item-info">
+                  <Link href={`/placecards/${placeId}`} className="review-item-name">
+                    {d.name}
+                  </Link>
+                  <div className="flex items-center gap-sm">
+                    <TypeBadge type={d.type} />
+                    <span className="text-xs text-muted">{timeAgo(d.discoveredAt)}</span>
+                    {entry?.state === 'resurfaced' && entry.resurfaceReason && (
+                      <span className="badge badge-warning">{entry.resurfaceReason}</span>
+                    )}
+                  </div>
+                </div>
+                <TriageButtons
+                  userId={userId}
+                  contextKey={context.key}
+                  placeId={placeId}
+                />
+              </div>
+            </div>
+          );
+        })}
+
+        {filtered.length === 0 && (
+          <div className="empty-state">
+            <p className="text-muted text-sm">
+              {tab === 'unreviewed'
+                ? 'All caught up — nothing to review!'
+                : `No ${tab} places yet.`}
+            </p>
+          </div>
+        )}
+      </div>
+    </main>
+  );
+}
