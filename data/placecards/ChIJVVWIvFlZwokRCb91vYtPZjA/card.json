@@ -16,6 +16,7 @@
       "association_or_organization",
       "point_of_interest",
       "establishment"
-    ]
+    ],
+    "type": "theatre"
   }
 }

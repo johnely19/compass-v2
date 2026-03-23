@@ -11,7 +11,8 @@
     "price_level": 1,
     "location": "330 Hicks St, Brooklyn, NY 11201, USA",
     "lat": 40.691532,
-    "lng": -73.99788699999999
+    "lng": -73.99788699999999,
+    "type": "cafe"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nHicks St in Brooklyn Heights \u2014 a tiny bakery that sells out daily.\n\nAfghan baked goods and breads from the team behind Astoria's Little Flower Cafe, with skilled baker Bryan Ford. Opened December 2025. Rating: 4.9 stars.",

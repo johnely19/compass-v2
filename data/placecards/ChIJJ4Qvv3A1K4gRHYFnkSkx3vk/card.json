@@ -6,13 +6,13 @@
     "name": "Marugame Udon",
     "city": "Toronto",
     "address": "Yonge & Wellesley",
-    "type": "grocery"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
-    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0★.",
+    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0\u2605.",
     "blocks": []
   }
 }

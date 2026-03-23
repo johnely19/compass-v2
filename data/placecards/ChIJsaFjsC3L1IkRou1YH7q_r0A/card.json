@@ -3,16 +3,16 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJsaFjsC3L1IkRou1YH7q_r0A",
-    "name": "Ballets Jazz Montréal: Dance Me (Leonard Cohen)",
+    "name": "Ballets Jazz Montr\u00e9al: Dance Me (Leonard Cohen)",
     "city": "Toronto",
     "address": "Meridian Hall (1 Front St E)",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "discovery": {
     "text": "Discovered via meridian-hall"
   },
   "narrative": {
-    "summary": "Leonard Cohen's music transformed into contemporary ballet by BJM. Approved by Cohen himself before his death. April 10-11, 2026. Tickets from ~$29. Peak intersection of dance + music + poetry. 4.5★ venue (8584 reviews).",
+    "summary": "Leonard Cohen's music transformed into contemporary ballet by BJM. Approved by Cohen himself before his death. April 10-11, 2026. Tickets from ~$29. Peak intersection of dance + music + poetry. 4.5\u2605 venue (8584 reviews).",
     "blocks": []
   }
 }

@@ -57,8 +57,9 @@ function normalizeType(raw?: string): DiscoveryType {
 /**
  * Adapt a V1 card.json (or V2 PlaceCard) into a V2 PlaceCard.
  * Handles both formats gracefully — if it's already V2, returns as-is.
+ * Optionally pass manifest data to include image URLs.
  */
-export function adaptCard(raw: Record<string, unknown>): PlaceCard {
+export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string, unknown>): PlaceCard {
   // Already V2 format?
   if (raw.data && typeof raw.data === 'object' && raw.type) {
     return raw as unknown as PlaceCard;
@@ -115,6 +116,18 @@ export function adaptCard(raw: Record<string, unknown>): PlaceCard {
     if (block.type === 'rating') {
       rating = block.rating as number | undefined;
       reviewCount = block.reviewCount as number | undefined;
+    }
+  }
+
+  // Merge images from manifest if available
+  if (manifest) {
+    const manifestImages = manifest.images as Array<{ path?: string; category?: string }> | undefined;
+    if (manifestImages && manifestImages.length > 0 && images.length === 0) {
+      for (const img of manifestImages) {
+        if (img.path) {
+          images.push({ path: img.path, category: img.category ?? 'general' });
+        }
+      }
     }
   }
 

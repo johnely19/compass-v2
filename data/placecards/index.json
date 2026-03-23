@@ -5,7 +5,7 @@
   },
   "ChIJI7M5uOE1K4gRLfk375V4hLY": {
     "name": "Hopeless Romantic Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJn4mPYU40K4gRmmqa_fbtvFc": {
     "name": "Xpace Cultural Centre",
@@ -13,7 +13,7 @@
   },
   "ChIJ2TbypjU0K4gRU5iubk6q1Hg": {
     "name": "Another Story Bookshop",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJvWoHrNs0K4gRGIQyt6021sY": {
     "name": "Gallery 44 Centre for Contemporary Photography",
@@ -53,11 +53,11 @@
   },
   "ChIJN942JrI1K4gRntfNTDNynF8": {
     "name": "Studio Brillantine",
-    "type": "grocery"
+    "type": "gallery"
   },
   "ChIJ-z5EAcI0K4gRWvzgvGtqh88": {
     "name": "Poetry Jazz Cafe",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJo4O6-FrN1IkRrk25uaGQYm0": {
     "name": "Barcelona Gourmet",
@@ -89,19 +89,19 @@
   },
   "ChIJrf8w27NyhlQR44St4PQccfY": {
     "name": "Museum of Anthropology at UBC",
-    "type": "restaurant"
+    "type": "museum"
   },
   "ChIJw1ylCFg0K4gRNcy5mMX54uM": {
     "name": "The Emmet Ray Whisky Jazz Bar",
-    "type": "bar"
+    "type": "music-venue"
   },
   "ChIJS5xKTs80K4gRKD5q5-SgtZM": {
     "name": "Library Coffee",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJe3RA5fE1K4gRQvD6x-3d1ho": {
     "name": "Petite Bouch\u00e9e Patisserie",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJj584UyI3K4gR9899dbaAnDA": {
     "name": "NeuLokal",
@@ -113,7 +113,7 @@
   },
   "ChIJsaFjsC3L1IkRou1YH7q_r0A": {
     "name": "Ballets Jazz Montr\u00e9al: Dance Me (Leonard Cohen)",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJ16XlVQBbwokRgf0iOTiIPiU": {
     "name": "Golden Ratio",
@@ -129,7 +129,7 @@
   },
   "ChIJtUYmCeM0K4gRAqNppxmS5Zs": {
     "name": "Type Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJIzAMGr3M1IkRhpKRVo1BpFM": {
     "name": "*here | there by Howard Rideout (TSA / Todmorden Mills)",
@@ -137,7 +137,7 @@
   },
   "ChIJs1yWJM00K4gRgs0W7GBLO9A": {
     "name": "Ben McNally Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJacVfweBxhlQRJSijA6JfJSI": {
     "name": "Nomo Nomo",
@@ -149,7 +149,7 @@
   },
   "ChIJ6WFHd3w1K4gRerr6HGTIzO4": {
     "name": "MADE RITE COFFEE",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJz2IRNTLL1IkRo-Xf682fPIg": {
     "name": "Nami Japanese Restaurant",
@@ -157,7 +157,7 @@
   },
   "ChIJZxSEfwA1K4gRlL54puqkYek": {
     "name": "520 Cafe Bar",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJPyZGhz1dwokRlSIds1zjzGQ": {
     "name": "Unknown Place (ChIJPyZGhz1dwokRlSIds1zjzGQ)",
@@ -217,11 +217,11 @@
   },
   "ChIJ3Vvb5D7L1IkR-W-OB7zQDC4": {
     "name": "Kiosk Design",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJPw4pz7M0K4gRWry3z1z_IcU": {
     "name": "Glad Day Bookshop",
-    "type": "bar"
+    "type": "shop"
   },
   "ChIJ2ySG_z34hlQRPrEH5SHH5sU": {
     "name": "Saha Eatery",
@@ -229,7 +229,7 @@
   },
   "ChIJVVWIvFlZwokRCb91vYtPZjA": {
     "name": "Brooklyn Comedy Collective (BCC) @ Eris",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJpduxEFfL1IkRHBURPY8E1rI": {
     "name": "Limberlost Place",
@@ -237,7 +237,7 @@
   },
   "ChIJf_-k0RPb1IkRtfhe1sSDl2U": {
     "name": "Clark Centre for the Arts - Yue Gao: Constructed Light",
-    "type": "gallery"
+    "type": "architecture"
   },
   "ChIJjei_QTc0K4gR90zfDjlq-bo": {
     "name": "Hugh's Room Live",
@@ -261,7 +261,7 @@
   },
   "ChIJST3PBLI1K4gR8859Qq6llKk": {
     "name": "Studio1484",
-    "type": "grocery"
+    "type": "gallery"
   },
   "ChIJt8EMLG01K4gRAE3QF2g8Zw8": {
     "name": "The Little Jerry",
@@ -273,11 +273,11 @@
   },
   "ChIJn-6mDyI1K4gRoQIAsJ6Rh3Y": {
     "name": "Unboxed Market",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJS-1Wu1Y0K4gR4iJvyV0_iNQ": {
     "name": "Easy Tiger",
-    "type": "grocery"
+    "type": "bar"
   },
   "PENDING_OPENS_APR9": {
     "name": "Riley's Fish & Steak (pre-opening)",
@@ -313,7 +313,7 @@
   },
   "ChIJqZcscjrL1IkR-A8CsjEF14w": {
     "name": "D & E Lake Ltd.",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJZ9SfxVM1K4gReZisE95Au9E": {
     "name": "Patel Brown",
@@ -321,7 +321,7 @@
   },
   "ChIJqVlUDwA1K4gR9SSpCKfksXA": {
     "name": "Mabel's Bakery",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJ5wpCzsJawokRZ_zEIYKrf60": {
     "name": "Green-Wood Cemetery",
@@ -353,7 +353,7 @@
   },
   "ChIJmaX0cGw1K4gRdgH-VqT2mc8": {
     "name": "Stackt Market",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJJ0fOv6TM1IkRka89i2s5JJA": {
     "name": "Evergreen Brick Works",
@@ -361,7 +361,7 @@
   },
   "ChIJNVuaEwA1K4gRgda7Mfki9DU": {
     "name": "Understory Caf\u00e9",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJsx1_uCg1K4gRc8IuteM42qU": {
     "name": "Artist Project 2026",
@@ -385,7 +385,7 @@
   },
   "ChIJsWOG91s1K4gReu6pwyIU8tg": {
     "name": "Emissions Record Shop",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJD3H7Bi5yKk0R0BFMOnrqMSA": {
     "name": "CottageVacations.com - Muskoka Waterfront",
@@ -397,7 +397,7 @@
   },
   "PENDING_SPRING_2026": {
     "name": "Gyopo Brewery",
-    "type": "restaurant"
+    "type": "bar"
   },
   "ChIJzUccx1dxhlQR9Ulx5uAnCN4": {
     "name": "Les Faux Bourgeois",
@@ -425,11 +425,11 @@
   },
   "ChIJ3xUzaUnN1IkRGuXAqHMEmWc": {
     "name": "Bluet Bakery",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJrY4E26DN1IkRzBaz81H3EVw": {
     "name": "Aga Khan Museum",
-    "type": "restaurant"
+    "type": "museum"
   },
   "ChIJG4RMPa1dwokRBET-URZXZJU": {
     "name": "Hellbender",
@@ -441,7 +441,7 @@
   },
   "ChIJm1ZgkGo1K4gRGKljdB0SsCE": {
     "name": "Post Design Collective",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJN_ADPvk0K4gRWJa4Smex6uo": {
     "name": "COOPER COLE",
@@ -461,7 +461,7 @@
   },
   "ChIJe0cva9s1K4gR5FwK5JmrFXc": {
     "name": "Castle & Coal",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJz5bNPKg0K4gRRRqlfyqn5Ns": {
     "name": "Hollace Cluny",
@@ -513,7 +513,7 @@
   },
   "ChIJ_5FcgTY0K4gRCBLnsTyY_w4": {
     "name": "Revue Cinema",
-    "type": "grocery"
+    "type": "theatre"
   },
   "ChIJG_ZVauU0K4gRNJ0qHuWF4lA": {
     "name": "Archive Wine Bar",
@@ -525,7 +525,7 @@
   },
   "ChIJUxg5Mc40K4gRqeelKegdE3c": {
     "name": "The Rex Hotel Jazz and Blues Bar",
-    "type": "bar"
+    "type": "music-venue"
   },
   "ChIJMREVLQA1K4gR1zz9N4iNsuc": {
     "name": "Sounds Good",
@@ -541,7 +541,7 @@
   },
   "ChIJdRbLsRD4hlQRp-b5Ba1XQuo": {
     "name": "Howe Sound Inn & Brewing",
-    "type": "restaurant"
+    "type": "hotel"
   },
   "ChIJXSuiypE0K4gRrrpz-eLUTio": {
     "name": "918 Bathurst Centre",
@@ -557,7 +557,7 @@
   },
   "ChIJ5cQDcUZbwokRodOytx_WYI0": {
     "name": "The Gecko Gallery NYC",
-    "type": "accommodation"
+    "type": "gallery"
   },
   "ChIJlVXaW8k0K4gR4LUZWHqvLmA": {
     "name": "Sansotei Ramen",
@@ -569,7 +569,7 @@
   },
   "ChIJqbMYqu40K4gRTJNyn7giSf0": {
     "name": "Balfour Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJ__-v-c3M1IkRL2e8xdKiKBw": {
     "name": "The Daughter",
@@ -585,7 +585,7 @@
   },
   "ChIJh2leSPU2K4gRyl33gw24rxQ": {
     "name": "Jazz Fridays at Old Mill Toronto",
-    "type": "gallery"
+    "type": "music-venue"
   },
   "ChIJmZ5emqJYwokRuDz79o0coAQ": {
     "name": "Guggenheim \u2014 Carol Bove",
@@ -597,11 +597,11 @@
   },
   "ChIJW7Dyvi3L1IkRe-aGOOK8-jQ": {
     "name": "Bluma Appel Theatre",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJBfYqyK81K4gR8yZzL0qQTqQ": {
     "name": "De Mello Coffee (The Well)",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJtx7WXOk0K4gRX2RlObHB1UI": {
     "name": "Cineforum",
@@ -629,7 +629,7 @@
   },
   "ChIJv-uOPfk0K4gRpLud2dt1ZbU": {
     "name": "Grasshopper Records",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJq2b6dAA1K4gR0aojV5oOqvs": {
     "name": "Pizzeria Badiali Annex",
@@ -661,7 +661,7 @@
   },
   "ChIJ04NYT3xxhlQR1lurrwVKJfw": {
     "name": "Frankie's Jazz Club",
-    "type": "restaurant"
+    "type": "music-venue"
   },
   "ChIJJ0h9ZUfN1IkREAATV3FAmQQ": {
     "name": "here | there \u2014 the art of nolevelon (Howard Rideout)",
@@ -681,11 +681,11 @@
   },
   "ChIJVxXpRW01K4gR54XMfswcb08": {
     "name": "High Notes Coffee + Vinyl",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJmzPYgJFZwokRg4zUwTlZwtI": {
     "name": "Comedy Cellar",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJPTR3fUg0K4gRGH1cEOzq6TM": {
     "name": "MOCA \u2014 Jeff Wall: Photographs 1984\u20132023",
@@ -693,7 +693,7 @@
   },
   "ChIJL0OAV9w1K4gRUTl0iNxyWu8": {
     "name": "Ethica Coffee Roasters",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJbTCMl19ZwokRUohF137p9cQ": {
     "name": "The Four Horsemen",
@@ -713,7 +713,7 @@
   },
   "ChIJo06Ogd00K4gRMIB6EbKBHNw": {
     "name": "Theatre Passe Muraille \u2014 White Girls in Moccasins",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJN5tKCWY1K4gRAZmNko2c0s8": {
     "name": "CH\u00c9RIE",
@@ -753,11 +753,11 @@
   },
   "ChIJUUaSqds0K4gR7hgbDKT64CA": {
     "name": "Spacing Store",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJHT91IABzhlQRdRS8-YrB9CI": {
     "name": "Jeju",
-    "type": "grocery"
+    "type": "restaurant"
   },
   "ChIJ0Y5QQ_k0K4gRJsmKWz1Zg4s": {
     "name": "Bar Libretto",
@@ -777,7 +777,7 @@
   },
   "ChIJdy64jjvL1IkR_3bCCuGPRQk": {
     "name": "Canadian Stage (Berkeley Street Theatre)",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJayDthGM1K4gRnW2l0cGfZkg": {
     "name": "Craft Ontario Gallery \u2014 Akash Inbakumar exhibition",
@@ -797,7 +797,7 @@
   },
   "ChIJnaQ0LnbM1IkR7izznFHf3H8": {
     "name": "Lake Inez",
-    "type": "grocery"
+    "type": "bar"
   },
   "ChIJHzSUBkfL1IkRvCyinXTL3co": {
     "name": "Citadel + Compagnie \u2014 Kudelka/Lemieux Mix (Ontario Tour)",
@@ -813,11 +813,11 @@
   },
   "ChIJAZKXrpM0K4gRw_KEkxV4jWU": {
     "name": "A Different Booklist",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJVVUVjGU0K4gRq8VPS02xoCw": {
     "name": "Invisible City Record Shop",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJo4JedQDL1IkRk-5YF8DGZXI": {
     "name": "Bakerrae",
@@ -825,11 +825,11 @@
   },
   "ChIJv1iSxz3L1IkRPG6k7-un0Bc": {
     "name": "Bergo Designs",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJJ4Qvv3A1K4gRHYFnkSkx3vk": {
     "name": "Marugame Udon",
-    "type": "grocery"
+    "type": "restaurant"
   },
   "ChIJw2aY72XL1IkRJdU2S13rTlA": {
     "name": "Good Cheese",
@@ -837,7 +837,7 @@
   },
   "ChIJQW8K0qvO1IkRfNsqQa1Wjos": {
     "name": "Fox Theatre",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "not_yet_on_google": {
     "name": "Pasta Privato",
@@ -849,11 +849,11 @@
   },
   "ChIJs09aUcI0K4gR6phtG366G4g": {
     "name": "FIKA Cafe",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJHRcAaABbwokRcdnFupcwIus": {
     "name": "Dilj\u0101n Bakery",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJgUBDOQA1K4gRd_8eNwRbAn8": {
     "name": "Uh Bar",
@@ -909,7 +909,7 @@
   },
   "ChIJNzpPDDU0K4gR_qZcthSxTF0": {
     "name": "The Mercantile",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJ8zdX2Qg1K4gRbS29GLNUlw8": {
     "name": "Artist Project 2026",
@@ -937,7 +937,7 @@
   },
   "ChIJEWbXz6ZZwokRLKmKrtPfVFY": {
     "name": "Ichimura at Eleven Madison Park",
-    "type": "restaurant"
+    "type": "park"
   },
   "ChIJS7QNEQd0hlQRuTZ2xFQRWHk": {
     "name": "Masayoshi",
@@ -949,7 +949,7 @@
   },
   "ChIJZTxeqts0K4gR4gLvGCoEToM": {
     "name": "401 Richmond Building",
-    "type": "gallery"
+    "type": "architecture"
   },
   "ChIJ3xYJKABbwokRjhgU1mfahJk": {
     "name": "SSAW Brooklyn",
@@ -957,7 +957,7 @@
   },
   "ChIJu7IT6QFcwokRJ2Jo-qP0B-E": {
     "name": "Luhring Augustine Gallery",
-    "type": "restaurant"
+    "type": "gallery"
   },
   "ChIJUfCoMwBZwokRgaqNMkVgfs4": {
     "name": "Border Town",
@@ -965,7 +965,7 @@
   },
   "ChIJq8LbKf40K4gRDKj3qI3LgkE": {
     "name": "Preservation \u2014 Palestinian Artists at The Theatre Centre",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJHT2qdw9xhlQRgfZgfKBAeq0": {
     "name": "Sumibiyaki Arashi",
@@ -973,7 +973,7 @@
   },
   "ChIJ63noIFU0K4gRNz6cltJfaMI": {
     "name": "Fix Coffee + Bikes",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJ9dpVvXpxhlQRpw50KX2udjk": {
     "name": "The Keefer Bar",
@@ -1001,7 +1001,7 @@
   },
   "ChIJk4T82zTL1IkRBR2qH4DZzDU": {
     "name": "Jazz Bistro",
-    "type": "restaurant"
+    "type": "music-venue"
   },
   "ChIJvRlT7cU0K4gRr0bg7VV3J9o": {
     "name": "AGO \u2014 Moments in Modernism",
@@ -1077,7 +1077,7 @@
   },
   "ChIJvejuJf40K4gR7UZE9WyV91k": {
     "name": "Flying Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJq3oIhN01K4gRP3qOmwJnYzk": {
     "name": "Dina's Tavern",
@@ -1121,7 +1121,7 @@
   },
   "ChIJ2_bqK-c0K4gRaGW13ible2U": {
     "name": "Bakka-Phoenix Books",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJC0TUZABxhlQR67ZNMmVof_4": {
     "name": "La Taqueria Pinche Taco Shop",
@@ -1141,7 +1141,7 @@
   },
   "ChIJTSsdMkXL1IkR8Cb1ySnUGR4": {
     "name": "The Room Upstairs (Toronto Dance Theatre / DanceWorks / Holla Jazz)",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJZ4QaXF3L1IkRB8F5wt3LpQ8": {
     "name": "Bar Cart",
@@ -1153,7 +1153,7 @@
   },
   "ChIJlbRkMMzL1IkRtOGzkUPcH5E": {
     "name": "ZERO Cocktail Bar, Tasting Room & Bottle Shop",
-    "type": "restaurant"
+    "type": "bar"
   },
   "ChIJxdiXIn9dwokRbQRLN0aPS2U": {
     "name": "Cream Ridgewood",
@@ -1193,7 +1193,7 @@
   },
   "ChIJjevXe1ktK4gRNaeyoRS6tCE": {
     "name": "Another Land Coffee",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJMfFiM1H4hlQRv7L0vYx2meE": {
     "name": "Backcountry Brewing",
@@ -1209,7 +1209,7 @@
   },
   "ChIJyU73U6M1K4gRcy67A8tfHDE": {
     "name": "AM Coffee Studio",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJ9fUzPc81K4gRV5njay6NeMg": {
     "name": "TRE - Viet Heritage Kitchen & Bar",
@@ -1217,7 +1217,7 @@
   },
   "ChIJ8SrMcWVdwokRAqKQSZARpE0": {
     "name": "Ornithology Jazz Club",
-    "type": "restaurant"
+    "type": "music-venue"
   },
   "ChIJx_W1dwA1K4gRLo2Q2WSny70": {
     "name": "OnePound",
@@ -1237,7 +1237,7 @@
   },
   "ChIJnbFcq-k1K4gRItmtgGUuZ4Q": {
     "name": "Subtext Coffee Roasters",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJN8T23es0K4gRZXVo0Gb3Fag": {
     "name": "Ramen Isshin",
@@ -1277,7 +1277,7 @@
   },
   "ChIJcTqTNNM0K4gRZR46MK6g2GM": {
     "name": "A Kind of Order \u2014 Union Station x BAND Gallery",
-    "type": "restaurant"
+    "type": "gallery"
   },
   "ChIJNe1NV741K4gREnCjpiKVHuM": {
     "name": "Mimi Chinese (refreshed)",
@@ -1309,11 +1309,11 @@
   },
   "ChIJX_O5HQA1K4gRNYqajXFSji4": {
     "name": "Bellis Caf\u00e9 & Bar",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJu-iehGQ1K4gRwYbm1cSSeCA": {
     "name": "Cry Baby Gallery",
-    "type": "bar"
+    "type": "gallery"
   },
   "ChIJDSbdL7w1K4gRFfmhVE7lBKM": {
     "name": "Ikkousha Ramen Toronto",
@@ -1349,7 +1349,7 @@
   },
   "ChIJN2IsOiPN1IkRDpnNkQylaPE": {
     "name": "hanamaru market and bento",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJkYNgwtZzhlQRDyKMepVlARQ": {
     "name": "OPUS Vancouver",
@@ -1393,7 +1393,7 @@
   },
   "ChIJE-Xa87o0K4gRkvXFHuE0hMk": {
     "name": "Royal Ontario Museum (Crystal)",
-    "type": "gallery"
+    "type": "museum"
   },
   "ChIJm3rwl8M0K4gRM-t7jIKZ75A": {
     "name": "Unknown Place (ChIJm3rwl8M0K4gRM-t7jIKZ75A)",
@@ -1413,7 +1413,7 @@
   },
   "ChIJswMDQW5bwokRFFPWez625wY": {
     "name": "Bushwick Gallery",
-    "type": "restaurant"
+    "type": "gallery"
   },
   "ChIJ_SakRgDN1IkRXuNlfAJbm2s": {
     "name": "Croquembouche",
@@ -1517,7 +1517,7 @@
   },
   "ChIJ74cHAQBfwokRcM6K2LE3LOM": {
     "name": "Brooklyn Spark",
-    "type": "accommodation"
+    "type": "park"
   },
   "ChIJGfHQXxc1K4gRoC0sS6UQ8xM": {
     "name": "Yuugi Izakaya",
@@ -1533,11 +1533,11 @@
   },
   "ChIJC-6YSAA1K4gRGDF2hvinVak": {
     "name": "Wu Wei Coffee",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "ChIJ10sm0hpIK4gR2szc64QDb5E": {
     "name": "Sandown Market",
-    "type": "theatre"
+    "type": "shop"
   },
   "ChIJCc64mRU1K4gRe-MfTTPHLS8": {
     "name": "Hinoya Curry",
@@ -1557,7 +1557,7 @@
   },
   "ChIJO0AH_B4zK4gRS14aZJgDtKE": {
     "name": "Urla Fine Foods Toronto - Turkish Market & Kitchen",
-    "type": "grocery"
+    "type": "shop"
   },
   "ChIJGeKS9OQ1K4gR5-IiRpOUD9Q": {
     "name": "Kyma Mediterranean Grill",
@@ -1573,7 +1573,7 @@
   },
   "ChIJaX1BV9U0K4gRoBDo6zdzNNE": {
     "name": "Fleck Dance Theatre",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "ChIJIThsB6NZwokRMhJbqlyA6XY": {
     "name": "BABA on Withers",
@@ -1589,7 +1589,7 @@
   },
   "ChIJUaAuMl1ZwokRt0-S_ynnRtc": {
     "name": "Brooklyn Brewery",
-    "type": "music-venue"
+    "type": "bar"
   },
   "ChIJQYoBf6E0K4gR04UK2skt0wM": {
     "name": "Designers Walk",
@@ -1601,7 +1601,7 @@
   },
   "ChIJwQCnGmdZwokRLMiSzjZtHwo": {
     "name": "Music Hall of Williamsburg",
-    "type": "restaurant"
+    "type": "music-venue"
   },
   "ChIJKbInLr_PKIgRhZELaOyRew4": {
     "name": "Huron Shores Cottages",

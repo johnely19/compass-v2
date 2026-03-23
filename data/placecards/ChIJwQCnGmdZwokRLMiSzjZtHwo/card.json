@@ -16,6 +16,7 @@
       "live_music_venue",
       "point_of_interest",
       "establishment"
-    ]
+    ],
+    "type": "music-venue"
   }
 }

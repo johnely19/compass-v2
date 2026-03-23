@@ -6,14 +6,14 @@
     "name": "Invisible City Record Shop",
     "city": "Toronto",
     "address": "Chinatown Centre (Spadina)",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via https://www.thevinylfactory.com/features/toronto-best-record-shops-guide",
     "url": "https://www.thevinylfactory.com/features/toronto-best-record-shops-guide"
   },
   "narrative": {
-    "summary": "Meticulously curated Caribbean funk, soca, island soul—legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
+    "summary": "Meticulously curated Caribbean funk, soca, island soul\u2014legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
     "blocks": []
   }
 }

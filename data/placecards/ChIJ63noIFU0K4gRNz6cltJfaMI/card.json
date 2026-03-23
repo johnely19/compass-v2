@@ -6,14 +6,14 @@
     "name": "Fix Coffee + Bikes",
     "city": "Toronto",
     "address": "Gladstone / Dundas West",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via https://www.hungry416.com/new-cafes-in-toronto/",
     "url": "https://www.hungry416.com/new-cafes-in-toronto/"
   },
   "narrative": {
-    "summary": "Hybrid coffee + bike repair shop; hosts group rides; 4.7★ with passionate community.",
+    "summary": "Hybrid coffee + bike repair shop; hosts group rides; 4.7\u2605 with passionate community.",
     "blocks": []
   }
 }

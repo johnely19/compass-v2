@@ -3,16 +3,16 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJcTqTNNM0K4gRZR46MK6g2GM",
-    "name": "A Kind of Order — Union Station x BAND Gallery",
+    "name": "A Kind of Order \u2014 Union Station x BAND Gallery",
     "city": "Toronto",
     "address": "Union Station (55 Front St W)",
-    "type": "restaurant"
+    "type": "gallery"
   },
   "discovery": {
     "text": "Discovered via cbc.ca/arts"
   },
   "narrative": {
-    "summary": "Multi-site collage art exhibition by four contemporary artists (three local, one international) spread throughout Canada's busiest train station. BAND Gallery partnership — Black-owned gallery, BIPOC creatives. Themes of movement and transformation. Free. Through August 2026.",
+    "summary": "Multi-site collage art exhibition by four contemporary artists (three local, one international) spread throughout Canada's busiest train station. BAND Gallery partnership \u2014 Black-owned gallery, BIPOC creatives. Themes of movement and transformation. Free. Through August 2026.",
     "blocks": []
   }
 }

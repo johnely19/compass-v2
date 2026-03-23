@@ -6,13 +6,13 @@
     "name": "Balfour Books",
     "city": "Toronto",
     "address": "Little Italy (College St)",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via 1000libraries.com"
   },
   "narrative": {
-    "summary": "Secondhand treasures in a packed, browsable space. Perfect for serendipitous Calvino finds. 4.7★.",
+    "summary": "Secondhand treasures in a packed, browsable space. Perfect for serendipitous Calvino finds. 4.7\u2605.",
     "blocks": []
   }
 }

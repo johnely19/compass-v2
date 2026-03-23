@@ -6,13 +6,13 @@
     "name": "Poetry Jazz Cafe",
     "city": "Toronto",
     "address": "Queen West (1078 Queen St W)",
-    "type": "restaurant"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via toronto-travel-guide.com"
   },
   "narrative": {
-    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto — next-gen artists, eclectic programming. 4.4★ (876 reviews). $$",
+    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto \u2014 next-gen artists, eclectic programming. 4.4\u2605 (876 reviews). $$",
     "blocks": []
   }
 }

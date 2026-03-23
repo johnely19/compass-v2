@@ -6,14 +6,14 @@
     "name": "Castle & Coal",
     "city": "Toronto",
     "address": "Dovercourt / Queen W",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via https://www.chuonthis.ca/best-bakeries-toronto/",
     "url": "https://www.chuonthis.ca/best-bakeries-toronto/"
   },
   "narrative": {
-    "summary": "Canelés as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
+    "summary": "Canel\u00e9s as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
     "blocks": []
   }
 }

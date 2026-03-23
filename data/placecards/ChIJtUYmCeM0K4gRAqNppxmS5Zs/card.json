@@ -6,13 +6,13 @@
     "name": "Type Books",
     "city": "Toronto",
     "address": "Queen West (883 Queen St W) + Junction + Forest Hill",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via typebooks.ca"
   },
   "narrative": {
-    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7★ (461 reviews).",
+    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7\u2605 (461 reviews).",
     "blocks": []
   }
 }

@@ -15,6 +15,7 @@
       "art_gallery",
       "point_of_interest",
       "establishment"
-    ]
+    ],
+    "type": "gallery"
   }
 }

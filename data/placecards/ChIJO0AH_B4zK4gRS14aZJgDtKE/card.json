@@ -7,7 +7,7 @@
     "name": "Urla Fine Foods Toronto - Turkish Market & Kitchen",
     "city": "Toronto",
     "address": "77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
-    "type": "grocery",
+    "type": "shop",
     "phone": "(416) 781-5741",
     "website": "http://www.urlafinefoods.com/",
     "rating": 4.6,
@@ -15,32 +15,32 @@
     "location": "77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada"
   },
   "narrative": {
-    "summary": "📍 Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
+    "summary": "\ud83d\udccd Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Food",
-        "body": "📍 Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada"
+        "body": "\ud83d\udccd Urla Fine Foods Toronto - Turkish Market & Kitchen\n77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nTurkish grocery destination with pantry staples, specialty imports, and cultural food products."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nTurkish grocery destination with pantry staples, specialty imports, and cultural food products."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗦\n\nLikely specialties: Turkish pantry staples, olives, cheeses, spices, sweets, and imported goods.\nWebsite: http://www.urlafinefoods.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde3\ud835\udde5\ud835\udde2\ud835\uddd7\ud835\udde8\ud835\uddd6\ud835\udde7\ud835\udde6\n\nLikely specialties: Turkish pantry staples, olives, cheeses, spices, sweets, and imported goods.\nWebsite: http://www.urlafinefoods.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (671 reviews)\nPhone: (416) 781-5741\nWebsite: http://www.urlafinefoods.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (671 reviews)\nPhone: (416) 781-5741\nWebsite: http://www.urlafinefoods.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada\n\n• walking: 1 hour 50 mins • 7.8 km\n• transit: 49 mins • 10.5 km\n• driving: 24 mins • 8.6 km (traffic: 16 mins)\n• bicycling: 33 mins • 8.5 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (24 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 77 Samor Rd Unit 1, Toronto, ON M6A 1J2, Canada\n\n\u2022 walking: 1 hour 50 mins \u2022 7.8 km\n\u2022 transit: 49 mins \u2022 10.5 km\n\u2022 driving: 24 mins \u2022 8.6 km (traffic: 16 mins)\n\u2022 bicycling: 33 mins \u2022 8.5 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (24 mins)"
       }
     ]
   },

@@ -6,13 +6,13 @@
     "name": "Spacing Store",
     "city": "Toronto",
     "address": "401 Richmond (Fashion District)",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"
   },
   "narrative": {
-    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6★, 238 reviews. Same building as Swipe—pair them.",
+    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6\u2605, 238 reviews. Same building as Swipe\u2014pair them.",
     "blocks": []
   }
 }

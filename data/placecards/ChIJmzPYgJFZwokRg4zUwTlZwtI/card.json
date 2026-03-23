@@ -11,7 +11,8 @@
     "price_level": 3,
     "location": "117 MacDougal St, New York, NY 10012, USA",
     "lat": 40.7302031,
-    "lng": -74.0005719
+    "lng": -74.0005719,
+    "type": "theatre"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMacDougal St between W 3rd and Minetta Lane \u2014 look for the neon sign and the stairs going down.\n\nThe most important comedy club in America. Where Chappelle drops in. Where Seinfeld cut his teeth. Where the next great comic is bombing right now.",

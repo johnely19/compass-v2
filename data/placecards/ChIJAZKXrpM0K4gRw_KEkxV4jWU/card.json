@@ -6,13 +6,13 @@
     "name": "A Different Booklist",
     "city": "Toronto",
     "address": "The Annex / Bathurst (779 Bathurst St)",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via adifferentbooklist.com"
   },
   "narrative": {
-    "summary": "Black-owned for 30+ years. Specializes in literature from the Global South, Caribbean and African diasporas. Community hub with readings and panels. García Márquez territory. 4.7★ (285 reviews).",
+    "summary": "Black-owned for 30+ years. Specializes in literature from the Global South, Caribbean and African diasporas. Community hub with readings and panels. Garc\u00eda M\u00e1rquez territory. 4.7\u2605 (285 reviews).",
     "blocks": []
   }
 }

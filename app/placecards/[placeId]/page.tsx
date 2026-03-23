@@ -1,4 +1,4 @@
-import { readFileSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import { getCurrentUser } from '../../_lib/user';
@@ -13,7 +13,8 @@ interface PageProps {
 
 export default async function PlaceCardPage({ params }: PageProps) {
   const { placeId } = await params;
-  const cardPath = path.join(process.cwd(), 'data', 'placecards', placeId, 'card.json');
+  const cardDir = path.join(process.cwd(), 'data', 'placecards', placeId);
+  const cardPath = path.join(cardDir, 'card.json');
 
   let raw: Record<string, unknown>;
   try {
@@ -22,7 +23,18 @@ export default async function PlaceCardPage({ params }: PageProps) {
     notFound();
   }
 
-  const card = adaptCard(raw);
+  // Load manifest for image data
+  let manifest: Record<string, unknown> | undefined;
+  const manifestPath = path.join(cardDir, 'manifest.json');
+  if (existsSync(manifestPath)) {
+    try {
+      manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as Record<string, unknown>;
+    } catch {
+      // ignore
+    }
+  }
+
+  const card = adaptCard(raw, manifest);
   const user = await getCurrentUser();
 
   return (

@@ -6,13 +6,13 @@
     "name": "Another Story Bookshop",
     "city": "Toronto",
     "address": "Roncesvalles",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via anotherstory.ca"
   },
   "narrative": {
-    "summary": "Progressive, inclusive curation—feminist/queer/social justice lit. Highest-rated (4.9★) in city.",
+    "summary": "Progressive, inclusive curation\u2014feminist/queer/social justice lit. Highest-rated (4.9\u2605) in city.",
     "blocks": []
   }
 }

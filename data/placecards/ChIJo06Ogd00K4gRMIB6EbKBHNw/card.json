@@ -3,17 +3,17 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJo06Ogd00K4gRMIB6EbKBHNw",
-    "name": "Theatre Passe Muraille — White Girls in Moccasins",
+    "name": "Theatre Passe Muraille \u2014 White Girls in Moccasins",
     "city": "Toronto",
     "address": "Queen West",
-    "type": "restaurant"
+    "type": "theatre"
   },
   "discovery": {
     "text": "Discovered via https://www.todocanada.ca/things-to-do-in-toronto-this-weekend/",
     "url": "https://www.todocanada.ca/things-to-do-in-toronto-this-weekend/"
   },
   "narrative": {
-    "summary": "Yolanda Bonnell's acclaimed Indigenous theatre piece returns to Toronto. Native Earth Performing Arts + manidoons collective. March 22–April 12, 2026. Theatre Passe Muraille verified operational (4.7★, 316 reviews).",
+    "summary": "Yolanda Bonnell's acclaimed Indigenous theatre piece returns to Toronto. Native Earth Performing Arts + manidoons collective. March 22\u2013April 12, 2026. Theatre Passe Muraille verified operational (4.7\u2605, 316 reviews).",
     "blocks": []
   }
 }

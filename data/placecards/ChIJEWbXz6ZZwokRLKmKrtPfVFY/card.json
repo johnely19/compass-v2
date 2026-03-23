@@ -11,7 +11,8 @@
     "price_level": 4,
     "location": "11 Madison Ave, New York, NY 10010, USA",
     "lat": 40.7418281,
-    "lng": -73.9869858
+    "lng": -73.9869858,
+    "type": "park"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n11 Madison Ave \u2014 a sushi master hiding above one of the world's most famous restaurants.\n\nEiji Ichimura's 9-seat Edomae omakase counter, nestled inside the Eleven Madison Park building. ~20 courses of exquisitely aged nigiri. The quiet return of one of NYC's greatest sushi masters.",

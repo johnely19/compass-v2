@@ -6,13 +6,13 @@
     "name": "Ben McNally Books",
     "city": "Toronto",
     "address": "Queen East / Old Town (108 Queen St E)",
-    "type": "grocery"
+    "type": "shop"
   },
   "discovery": {
     "text": "Discovered via benmcnallybooks.com"
   },
   "narrative": {
-    "summary": "Family-run indie institution. Beautiful space, handpicked curation across all genres. The kind of bookstore where the staff recommendations are better than any algorithm. 4.7★ (330 reviews).",
+    "summary": "Family-run indie institution. Beautiful space, handpicked curation across all genres. The kind of bookstore where the staff recommendations are better than any algorithm. 4.7\u2605 (330 reviews).",
     "blocks": []
   }
 }

@@ -11,7 +11,8 @@
     "price_level": 1,
     "location": "6 Suydam St, Brooklyn, NY 11221, USA",
     "lat": 40.6955708,
-    "lng": -73.93199709999999
+    "lng": -73.93199709999999,
+    "type": "music-venue"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSuydam St in Bushwick \u2014 a bohemian jazz sanctuary named after Charlie Parker.\n\nLive jazz every night, a Bechstein Grand Piano, cocktails in a space where the musicians are close enough to touch. Three floors including a rooftop and a chess room.",

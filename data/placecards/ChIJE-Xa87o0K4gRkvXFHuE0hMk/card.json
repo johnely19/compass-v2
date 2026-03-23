@@ -6,13 +6,13 @@
     "name": "Royal Ontario Museum (Crystal)",
     "city": "Toronto",
     "address": "University & Bloor",
-    "type": "gallery"
+    "type": "museum"
   },
   "discovery": {
     "text": "Discovered via archdaily.com"
   },
   "narrative": {
-    "summary": "Daniel Libeskind's 2007 crystalline addition—love it or hate it, it's a landmark. Bold angular aluminum-clad forms burst from the heritage building.",
+    "summary": "Daniel Libeskind's 2007 crystalline addition\u2014love it or hate it, it's a landmark. Bold angular aluminum-clad forms burst from the heritage building.",
     "blocks": []
   }
 }
