@@ -16,6 +16,18 @@
     "summary": "📍 Terroni Price\n1095 Yonge St, Toronto, ON M4W 2L8, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a busy stretch of Yonge Street where the sidewalk hums with foot traffic. Inside, exposed brick walls meet dark wood tables under warm Edison bulb lighting—the kind of room that gets louder as the night goes on. Your water glass arrives (check it for lipstick, apparently) and you're shoulder-to-shoulder with couples and groups who've clearly been here before.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Southern Italian purists run this kitchen, so your pizza arrives whole and unsliced—they want that thin crust to stay crisp on your plate, not soggy from steam. The Tonnarelli alla Norcina comes slicked with truffle and crumbled sausage, while the Spaghetti Limone does that magic trick where three ingredients taste like summer on the Amalfi Coast. Expect to spend $20-30 for pasta, a bit more if you're adding the Funghi Assoluti to start.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

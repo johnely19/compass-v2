@@ -3548,3 +3548,87 @@ body {
 .hours-row-time {
   color: var(--text-primary);
 }
+
+
+/* ---- Travel Intel Widget (#63) ---- */
+.travel-intel-widget {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.travel-intel-from {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--card-border);
+}
+
+.travel-intel-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.travel-intel-from-name {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.travel-intel-modes {
+  display: flex;
+}
+
+.travel-intel-mode {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: var(--space-sm) var(--space-xs);
+  border-right: 1px solid var(--card-border);
+  position: relative;
+}
+
+.travel-intel-mode:last-child { border-right: none; }
+
+.travel-intel-mode-best {
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.travel-intel-mode-icon { font-size: 1.2rem; }
+
+.travel-intel-mode-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.travel-intel-mode-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+}
+
+.travel-intel-mode-duration {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.travel-intel-best-badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  background: rgba(59, 130, 246, 0.12);
+  padding: 1px 6px;
+  border-radius: 100px;
+}

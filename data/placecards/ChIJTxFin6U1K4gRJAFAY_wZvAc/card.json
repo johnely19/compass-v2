@@ -28,6 +28,18 @@
     "summary": "Super-considered service/iteration culture; high-minded list but staff explains it well.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential stretch of College West, the kind where storefronts tuck into Victorian houses. Inside, the tables press close enough that you'll hear your neighbour's order—speakeasy dimensions without the theatre. Low light, lots of bartenders working the room, the kind of place where tight quarters feel intentional rather than cramped.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into cocktails you might need explained—the Old Man built on black tea, the Ice and Aura with its translucent clarity—but the bartenders actually know how to walk you through them. Savouries come in threes and fours, meant to pace a night of drinking. Expect to spend thoughtfully: these are $18-22 cocktails with the kind of balance that justifies it.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

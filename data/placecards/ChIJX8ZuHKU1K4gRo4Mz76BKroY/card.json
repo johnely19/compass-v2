@@ -28,6 +28,18 @@
     "summary": "📍 À Toi\n214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You descend below King Street West into a basement that feels more Paris wine bar than Financial District. Low ceilings, dim lighting, and the kind of intimate scale where you hear neighboring tables pop champagne corks. The staff don't just seat you—they perform the space's story with the theatricality of people who actually care.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a champagne-and-oyster operation, executed exactly as it should be. The oysters arrive cold and clean, no fussy mignonette getting in the way, meant to be knocked back between sips from a serious sparkling list. Expect to spend accordingly—you're paying for pristine bivalves and bottles that go well beyond entry-level bubbles.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "À Toi",
         "body": "📍 À Toi\n214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada"

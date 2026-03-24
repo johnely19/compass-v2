@@ -8,6 +8,7 @@ import RatingWidget from './widgets/RatingWidget';
 import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
+import TravelIntelWidget from './widgets/TravelIntelWidget';
 
 /* ---- Type-specific hero gradients ---- */
 const TYPE_GRADIENTS: Record<string, string> = {
@@ -263,6 +264,11 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
             Open in Maps
           </a>
         </div>
+
+        {/* Travel intel — only for trip contexts */}
+        {contextKey && contextKey.startsWith('trip:') && card.place_id && (
+          <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
+        )}
 
         {/* Map */}
         <MapWidget placeId={card.place_id} name={card.name} />

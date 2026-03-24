@@ -30,6 +30,18 @@
     "summary": "Family-run Italian in the heart of Yorkville. Fresh ingredients, homemade pastas, and a menu that keeps it simple but does it right. Less touristy than the main Yorkville strip.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find it on a quieter Yorkville side street, away from the Hermès bags and hotel traffic. Inside, the light is bright enough to actually see what you're eating—white tablecloths, wood accents, the kind of unpretentious room where an Italian family actually wants you to stay for three hours. The owners are usually working the floor themselves.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The pasta is made in-house, and you can taste the difference in how it holds onto the sauce—try the lasagna, which comes beef-only if you ask, or the meatballs that get the same treatment. Everything skews traditional: fresh tomatoes that taste like actual tomatoes, salads with good olive oil, bruschetta you'd order again. Mains run $20-30, and the portions assume you're here with people you like.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "The Spot",
         "body": "𝗣𝗢𝗥𝗧𝗜𝗖𝗜\n📍 6 Scollard St, Yorkville\n———————————————\n\nTucked just off the main Yorkville drag on Scollard Street. Family-owned and operated — you can feel it in the warmth of the service. The space is well-lit, unpretentious, cozy without being cramped.\n\n\"We believe in the simple pleasures of life. Good food, fresh ingredients, and awesome vibes.\""

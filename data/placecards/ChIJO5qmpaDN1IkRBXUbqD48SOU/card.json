@@ -30,6 +30,18 @@
     "summary": "4.9 stars, 247 reviews, $$$$—serious kaiseki in an unlikely North York location. Reservations-only, Mon/Thu-Sun evenings. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're driving past the North York suburban sprawl to the Japanese Canadian Cultural Centre, where Hashimoto operates behind a door that feels like a portal shift. Inside, you get your own private tatami room—actual shoji screens, low tables, waitresses in traditional kimono who kneel to explain each course. The light is soft, the pace is ceremonial, and you're somehow in Kyoto while strip malls hum outside.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is proper kaiseki—seven to nine courses that follow the seasonal calendar with the kind of precision that makes each dish feel like a small, edible thesis. Expect pristine sashimi cuts, delicate chawanmushi with matsutake if you're lucky, and presentations that involve a lot of ceramic thought and the occasional gold leaf. At $150-200 per person, you're paying for technique and theater in equal measure.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

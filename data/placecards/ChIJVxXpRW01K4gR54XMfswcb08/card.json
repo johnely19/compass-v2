@@ -28,6 +28,18 @@
     "summary": "Coffee-by-day, vinyl-bar-by-evening. Neighbourhood listening room with a 4.9★ rating from 208 reviews. Curated record selection. Quieter, more contemplative than the nightlife spots. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet stretch of Dundas West where the storefronts still have personality. Inside, two floors of vinyl bins organized by genre—hip hop gets serious real estate—and enough breathing room between the racks that you can actually flip through without elbowing someone. The coffee bar runs along one side, and by evening the lights drop low enough that the listening stations feel like private booths.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a coffee program, not a kitchen—espresso drinks pulled properly, beans rotated seasonally, the kind of flat white that doesn't need a pour pattern to prove itself. They're licensed, so you can pivot to a beer or natural wine when the sun goes down and you're three records deep into your hunt. Everything stays under $8.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

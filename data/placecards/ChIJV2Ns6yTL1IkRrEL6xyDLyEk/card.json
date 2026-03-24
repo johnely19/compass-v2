@@ -27,6 +27,18 @@
     "summary": "📍 L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Parliament just south of Wellesley, where the Victorian rowhouses still have their original storefronts. Inside, the decor leans French bistro—expect dark wood, good lighting that makes morning feel optimistic, and tables close enough that you'll overhear your neighbor's weekend plans. The room has that polished neighborhood spot energy where regulars read the paper alone and groups linger over second coffees.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The brunch menu runs classic French-leaning: eggs Benedict variations with properly poached eggs, though the hollandaise can be timid. Their Lyon version comes with sweet brioche and thick-cut ham that doesn't hold back on portion size. Expect to spend around $18-22 for mains, and skip the orange juice—it tastes like it came from a carton despite the 'fresh-squeezed' claim.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

@@ -29,6 +29,18 @@
     "summary": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You take the express elevator up 36 floors from the Financial District's TD South Tower, stepping out to floor-to-ceiling windows that frame the entire Toronto skyline. The dining room feels suspended—glass on three sides, tables spaced wide enough that the view becomes part of your table setting. At night, the city lights reflect off your wine glass before you even taste what's in it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen leans into refined Canadian ingredients with the kind of precision you'd expect at this altitude—both literal and figurative. You're looking at dishes that might include seared scallops with brown butter or duck breast with seasonal accompaniments, executed with the polish that comes with a $50-80 per person dinner price point. The wine list matches the view: deep, expensive, worth it if you're celebrating.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Stratus",
         "body": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"

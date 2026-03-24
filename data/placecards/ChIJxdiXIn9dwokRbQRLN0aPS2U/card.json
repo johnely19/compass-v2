@@ -19,6 +19,18 @@
     "summary": "📍 Cream Ridgewood\n59-09 71st Ave, Ridgewood, NY 11385, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential stretch of 71st Avenue where Ridgewood blurs into Middle Village, the kind of block that still has brick storefronts and neighbors who've lived here for decades. Inside, you'll find a casual dining room with wooden tables and warm lighting that feels more like a neighborhood hangout than a scene. The pull-apart bread arrives in a cast iron skillet with a pool of melted cheese sauce that people apparently dream about for months.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen runs comfort food with global inflections—think rasta pasta heavy on the jerk seasoning and cream, shrimp tossed through al dente noodles with enough flavor to justify the hype. Wings come properly sauced (buffalo, barbecue, probably more) with that ratio where the coating sticks without getting gummy, and mocktails run sweeter than you'd expect but in a way that works with the richness of everything else. Most mains land in the mid-teens to low-twenties.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Cream Ridgewood",
         "body": "📍 Cream Ridgewood\n59-09 71st Ave, Ridgewood, NY 11385, USA"

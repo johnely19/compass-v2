@@ -28,6 +28,18 @@
     "summary": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Bowery, where the Whole Foods crowd meets old-guard graffiti artists, and SoZo sits in that in-between with clean lines and blonde wood. The counter seats maybe ten—close enough to watch the chef's hands work but not so tight you're in your neighbor's conversation. Low ambient light catches the ceramic plates and sake bottles lined up behind the bar like a ceramics collection that actually gets used.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Each piece of nigiri gets just enough—a brush of nikiri, a whisper of yuzu, maybe charred scallion—so you taste the fish first and the flourish second. The fish itself is pristine, sliced with precision, though you might wish for slightly thicker cuts if you're used to West Coast portions. Expect to spend around $150-200 for the full omakase, more if you're working through their sake list, which you should.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Sozo Sip Bar + Omakase",
         "body": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA"

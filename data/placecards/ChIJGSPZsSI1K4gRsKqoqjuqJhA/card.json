@@ -29,6 +29,18 @@
     "summary": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Bloor West in the heart of Little Portugal, pushing open the door to a compact room where bar seating faces directly into the kitchen. Pull up a stool and you're close enough to watch dough get stretched, pizza peels slide in and out of the oven, and chefs who'll talk you through what they're making. The setup is deliberately intimate—you're not observing the cooking, you're practically part of it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The pizza here is the kind that makes you remember crust matters—blistered, chewy, with real structure. You'll want the tiramisu, which apparently stops conversations mid-sentence, and whatever pie Max recommends that day (the pesto keeps coming up). Cash or debit only, which tells you everything about the priorities here.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Bar Sugo",
         "body": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada"

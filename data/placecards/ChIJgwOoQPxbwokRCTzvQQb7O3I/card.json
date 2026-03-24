@@ -18,6 +18,18 @@
     "summary": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll walk right past it on Graham Avenue unless you know to look for the unmarked entrance leading into what was probably a narrow gap between buildings. Inside, the speakeasy feel is real—low ceilings, dim amber lighting, maybe a dozen seats maximum. The bar takes up most of the room, and the small scale means your bartender remembers your drink halfway through.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar first, so come for the drinks—expect $16-18 per pour, but you're paying for precision and a bartender who's actually watching your glass. The menu leans into classic technique with careful execution. Bring someone you want to impress with your ability to find places that don't advertise.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Featherweight",
         "body": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA"

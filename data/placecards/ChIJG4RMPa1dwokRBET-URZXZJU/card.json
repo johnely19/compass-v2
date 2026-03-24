@@ -27,6 +27,18 @@
     "summary": "📍 Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Forest Avenue in Ridgewood still feels like a neighborhood where people actually live, and Hellbender sits on that line between local bar and destination restaurant. Inside, tables pack close enough that you'll catch pieces of other conversations—save the gossip for post-dinner. They bring your milk for coffee in a tiny ceramic cow pitcher, the kind of detail that shouldn't matter but does.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into comfort—egg tostadas at brunch, shrimp tacos that people order multiple rounds of, crispy potatoes you'll want as insurance against small portions. The cooking is thoughtful without announcing itself, the kind of place where technique shows up in texture and seasoning rather than descriptions. Expect to spend around $15-20 per plate and maybe order one more thing than you planned.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Hellbender",
         "body": "📍 Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA"

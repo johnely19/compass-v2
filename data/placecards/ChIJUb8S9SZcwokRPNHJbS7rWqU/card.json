@@ -29,6 +29,18 @@
     "summary": "📍 Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet Ridgewood corner where Seneca Ave still feels like old Queens—brick buildings, tree cover, locals who've been coming here for decades. Inside, the bakery spreads out wider than you'd expect from the street, all open floor and glass cases running the length of the room. It's warm without trying to be, the kind of place where you can actually breathe while deciding between twelve different pastries.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The pastry case reads like a greatest hits of European baking—Linzer tarts with their latticed tops, cannoli shells filled to order, chocolate raspberry rum bread pudding that goes home in a container because you're not sharing. You're looking at old-school technique and fair prices, the kind where $4 still gets you something worth the trip. Ask if anything's 'decent' and prepare for the full Brooklyn treatment from whoever's behind the counter that day.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Rudy's",
         "body": "📍 Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA"

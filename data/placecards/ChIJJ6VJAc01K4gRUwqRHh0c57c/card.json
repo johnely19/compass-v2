@@ -27,6 +27,18 @@
     "summary": "📍 Bar Piquette\n1084 Queen St W, Toronto, ON M6J 1H8, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a scruffy stretch of Queen West where the rent hasn't totally squeezed out the interesting spots yet. Inside, low lighting and close-set tables make it feel like you've stumbled into someone's very good dinner party—the kind where everyone's drinking natural wine and nobody's checking their phone. It's small enough that you can hear the kitchen working behind you.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Euro small-plates cooking that actually understands restraint—creamy burrata, properly smoked trout whipped into a dip you'll want more bread for, duck crostini that people photograph and then immediately eat. The mortadella sandwich is the kind of simple-sounding thing that makes you realize the kitchen knows what it's doing. You'll spend $60-80 a person if you're sharing three or four plates and drinking wine that isn't on every other list in the city.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

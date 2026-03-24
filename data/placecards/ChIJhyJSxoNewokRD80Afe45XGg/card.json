@@ -17,6 +17,18 @@
     "summary": "📍 Bosna Express\n66-99 Fresh Pond Rd, Queens, NY 11385, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're under the elevated M train on Fresh Pond Road, where the tracks cast moving shadows across the sidewalk. The restaurant sits at street level below the station platform—utilitarian tiles, fluorescent lighting, and a counter setup built for speed. Through the windows, you'll see that unusually wide platform overhead, the one everyone mentions because subway platforms in Queens are usually crammed.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Balkan fast food: ćevapi (those skinless beef sausages), pljeskavica patties, and proper lepinja bread that's somewhere between pita and flatbread. You're looking at plates under $12, the kind of food that makes sense when you're catching the M train and need something that actually fills you up. The somun comes hot, which matters more than you'd think.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Bosna Express",
         "body": "📍 Bosna Express\n66-99 Fresh Pond Rd, Queens, NY 11385, USA"

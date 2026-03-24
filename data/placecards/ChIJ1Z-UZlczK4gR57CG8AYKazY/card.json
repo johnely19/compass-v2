@@ -28,6 +28,18 @@
     "summary": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a busy stretch of Yonge Street north of Summerhill, where the restaurant sits in a converted storefront with tall windows that let you watch the sidewalk traffic. Inside, the design leans theatrical—dark walls, brass fixtures, and moody lighting that makes everyone look like they're celebrating something. Tables are close enough to feel the energy but far enough that your birthday inscription on the dessert plate stays private.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu runs modern with bold, layered flavours that don't apologize for themselves—the kind of cooking that wants you to notice the work behind it. Order the Troublemaker cocktail (they're serious about their bar program) and settle in for dishes that balance richness with enough acidity to keep you going. Expect to spend $60-80 per person before drinks, more if you're marking an occasion.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Shay",
         "body": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada"

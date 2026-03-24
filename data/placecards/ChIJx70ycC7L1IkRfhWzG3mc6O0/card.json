@@ -19,6 +19,18 @@
     "summary": "📍 Giulietta\n972 College St, Toronto, ON M6H 1A5, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this Italian spot on a residential stretch of College West, past the Portuguese bakeries and vintage shops. The counter seats are where you want to be—close enough to watch chefs work the line, plating each dish with the kind of precision usually reserved for much stuffier rooms. The dining room runs long and narrow, all warm wood and cream walls that catch the light just right.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen turns out refined Italian that doesn't try too hard—think grilled octopus with proper char and handmade ravioli that actually tastes like someone's nonna made it, if she had restaurant training. Their cacio e pepe has the kind of emulsified, glossy sauce that proves they know what they're doing with pasta water and Pecorino. Expect to spend around $70-90 per person with a bottle of wine.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Giulietta",
         "body": "📍 Giulietta\n972 College St, Toronto, ON M6H 1A5, Canada"

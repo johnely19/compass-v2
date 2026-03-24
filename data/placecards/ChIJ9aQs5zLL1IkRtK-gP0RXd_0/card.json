@@ -29,6 +29,18 @@
     "summary": "📍 Sud Forno\n132 Yonge St, Toronto, ON M5C 1X3, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Yonge Street in the Financial District, and Sud Forno splits itself across two floors—a café downstairs where light hits marble counters and espresso machines hiss, then a dining room upstairs that opens up into something quieter. The design leans Italian modernist: clean lines, warm wood, enough space between tables that you can actually hear your conversation. Upstairs is where you linger.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen works in that northern Italian register—precise technique, quality product, nothing overdone. Cod comes on celery purée so smooth it's almost a sauce, tuna gets treated with the same restraint. Expect to spend around $25-35 for pasta, closer to $40-50 for mains, and the wine list knows what it's doing.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Sud Forno",
         "body": "📍 Sud Forno\n132 Yonge St, Toronto, ON M5C 1X3, Canada"

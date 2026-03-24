@@ -28,6 +28,18 @@
     "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already—strong early signal.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find it on Church Street in The Village, where Rowan and Dani have built something that feels like a friend's apartment if that friend had exceptional taste in ceramics and ferns. Handmade mugs line the shelves, tiny plants sprout from every surface, and the seating—actual comfortable seating, rare for a café—gives you room to spread out with your laptop or settle in with someone. The washroom is fully accessible, which shouldn't be notable but still is.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into careful, considered café fare—the kind of place where the pastries come from a good baker and the coffee program gets real attention. Early reviews mention a breakfast sandwich and soup options that rotate with intention, plus loose leaf tea that arrives in those handmade mugs. Expect to spend $8-15 for breakfast or lunch, less if you're just here for excellent coffee.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

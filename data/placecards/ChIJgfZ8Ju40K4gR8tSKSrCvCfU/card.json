@@ -16,6 +16,18 @@
     "summary": "📍 Sotto Voce Wine & Pasta Bar\n595 College St, Toronto, ON M6G 1A9, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a Little Italy stretch of College where the streetcar rumbles past vintage storefronts and corner trattorias. Inside, you'll find yourself in a compact, wine-bar-sized room where tables sit close enough that you can smell the burrata on your neighbour's plate. The space feels more neighbourhood hang than destination dining—low lighting, brick or exposed elements, the kind of place where the owner knows regulars by name and Wine Wednesday actually means something.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Italian cooking that doesn't cut corners on the proteins—actual chunks of lobster in the ravioli, lamb that's been braised long enough to collapse into the rigatoni. The burrata comes with fresh orange segments, which sounds precious but works because they're not trying to reinvent pasta, just make it better than you'd expect for neighbourhood prices. Specials rotate often enough that you're not eating the same menu as last month.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

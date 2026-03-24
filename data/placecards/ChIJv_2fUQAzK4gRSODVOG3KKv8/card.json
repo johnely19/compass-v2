@@ -16,6 +16,18 @@
     "summary": "📍 Manita\n1164 Yonge St, Toronto, ON M4W 2L9, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a busy stretch of Yonge between Summerhill and Rosedale, stepping into a room that feels more wine bar than bistro. Natural light floods the front windows during the day, hitting blonde wood tables and a marble-topped bar where you'll want to sit if you're solo. The vibe is casual enough for early-evening drinks but polished enough that your date won't think you didn't try.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu skews Mediterranean with French technique—think shrimp à la plancha with proper char, roasted mushrooms that taste like they've seen real fire, and chicken brochettes that arrive juicy on the skewer. You'll want the fries (everyone gets the fries), and the rainbow trout if you're hungry enough for a proper main. Most dishes land between $18-32, but you'll spend more once the wine starts flowing.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

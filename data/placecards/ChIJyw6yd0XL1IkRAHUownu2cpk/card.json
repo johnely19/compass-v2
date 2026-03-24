@@ -16,6 +16,18 @@
     "summary": "📍 Johnny G's Restaurant\n478 Parliament St, Toronto, ON M5A 2L3, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Parliament Street in Cabbagetown, climbing a few steps into what used to be a casual cafe and is now a dim-lit jazz room with recent renovations that lean into velvet and dark wood. The band sets up close enough that you feel the upright bass in your chest, but the acoustics keep conversation possible at your table. Low lighting catches the rims of martini glasses, and the whole room runs on that specific energy of a neighborhood spot that figured out how to grow up without getting stiff.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu keeps it straightforward—quinoa salads with actual texture, classic martinis mixed properly—the kind of cooking that knows a jazz venue needs food you can eat with one hand while holding a drink in the other. You're here for the Stone's Trio and the atmosphere Rocky's built, not a tasting menu, and everyone involved seems clear on that. Expect to spend modestly on drinks and light plates that don't fight with the music.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

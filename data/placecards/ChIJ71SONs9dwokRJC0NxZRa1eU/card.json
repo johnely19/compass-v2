@@ -28,6 +28,18 @@
     "summary": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're deep in Bushwick on a stretch of Howard Avenue that still feels residential, walking into what reads immediately as someone's good taste made public. The room is simple—wooden tables, minimal fuss, the kind of lighting that makes everyone look like they're having a better time than they probably are. The owners are usually around, pouring wine and making recommendations like they actually care what you eat.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Italian small plates in the Venetian tradition—cicchetti, which means you're eating ricotta drizzled with honey on toast, not contemplating a full tasting menu. The portions are tight, the flavors are clean, and the wine list is short enough that you won't spiral into choice paralysis. You'll spend $40-60 a person if you're actually hungry and want a few glasses.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Cicchetti Bk",
         "body": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA"

@@ -19,6 +19,18 @@
     "summary": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the cobblestone stretch of Soho where the boutiques thin out. Inside the Crosby hotel, the bar pulls you past the lobby with its velvet banquettes and those whimsical dog portraits on the walls—greyhounds and terriers rendered like aristocratic ancestors. The light stays dim even at lunch, the kind of place where rosé at 3pm makes perfect sense.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen riffs on French brasserie standards with enough tweaks to keep you interested—their French onion soup comes spiked with tarragon instead of the usual thyme-heavy approach. Truffle fries arrive properly crisp, and afternoon tea runs the full tiered service without rushing you out the door. Expect $20-30 for appetizers, more if you commit to the full tea spread.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "The Crosby Bar",
         "body": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA"

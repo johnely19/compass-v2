@@ -28,6 +28,18 @@
     "summary": "📍 Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find it just south of St. Clair on Yonge, where the neighborhood shifts from business strip to residential calm. Inside, the trattoria runs smaller than you'd expect—close-set tables, warm lighting that makes everyone look good, the kind of space where conversations layer over each other without getting loud. The heated patio works year-round, strung with lights and enclosed enough that you forget you're eating outside in February.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen knows its way around proper Italian fundamentals—thick paccheri tubes catching chunks of sausage and sweet peppers, fritto di calamari that comes out actually crisp instead of the usual soggy rings. Prices land where a neighborhood trattoria should: reasonable enough that you'll come back next week, not just for special occasions. They'll bring focaccia on the side without you asking.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Check",
         "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."

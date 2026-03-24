@@ -28,6 +28,18 @@
     "summary": "📍 Brooklyn Brewery\n79 N 11th St, Brooklyn, NY 11249, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on North 11th in Williamsburg, where the brewery occupies a former matzo factory with soaring ceilings and exposed steel beams. Inside, communal beer garden tables stretch across the concrete floor under industrial pendant lights—it's built for volume, for weekend crowds, for the kind of space where a Bavarian beer purist would actually nod in approval. The murals outside mark your arrival before you even push through the door.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a brewery first, so the kitchen keeps it simple: pretzels with beer cheese, flatbreads, and whatever pairs well with their IPAs and lagers without competing for attention. You're here for the beer selection—extensive, rotating, and the actual point—with food running $8-$15 to keep you vertical while you work through the taps. Come for the tour if you want the technical deep dive on their brewing process.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Brooklyn Brewery",
         "body": "📍 Brooklyn Brewery\n79 N 11th St, Brooklyn, NY 11249, USA"

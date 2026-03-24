@@ -29,6 +29,18 @@
     "summary": "📍 Toast on Bloor\n520 Bloor St W, Toronto, ON M5S 1Y3, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Annex stretch of Bloor West, where student budget meets quick-service efficiency. The counter-style setup runs fast—order, pay, wait maybe ten minutes while they fry your katsu to order. Steam from the miso soup fogs up the small space on cold nights.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "They're panko-frying pork cutlets stuffed with cheese, then drowning them in Japanese curry or their house tonkatsu sauce that cuts through all that molten richness. The curry tonkatsu and the cash-and-carry combo (around $10, includes miso soup) are what you're here for. Everything comes out hot from the fryer, not sitting under a heat lamp.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Toast On Bloor",
         "body": "📍 Toast on Bloor\n520 Bloor St W, Toronto, ON M5S 1Y3, Canada"

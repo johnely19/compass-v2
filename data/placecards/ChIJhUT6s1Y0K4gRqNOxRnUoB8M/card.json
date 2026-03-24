@@ -19,6 +19,18 @@
     "summary": "📍 Antler Kitchen & Bar\n1454 Dundas St W, Toronto, ON M6J 1Y6, Canada",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a stretchy section of West Dundas, where the restaurant sits with wide windows that flood the wood-heavy room with natural light during the day. Inside, exposed brick meets dark timber, and the chef's table gives you a straight sightline into the kitchen where your server might also be the one plating your venison. It's intimate without feeling cramped—maybe forty seats total, with that lived-in warmth of a room where regulars actually exist.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Alex runs a tight operation focused on Canadian game and foraged ingredients, the kind of cooking that namedrops the wilderness without feeling precious about it. You'll see dishes built around wild boar, house-cured elk, and whatever's been hunted or gathered that week, all treated with French technique and plated like they matter. The tasting menu runs around $85-95 per person, and if you spring for the chef's table, expect Alex himself to walk you through each course.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Antler Kitchen & Bar",
         "body": "📍 Antler Kitchen & Bar\n1454 Dundas St W, Toronto, ON M6J 1Y6, Canada"

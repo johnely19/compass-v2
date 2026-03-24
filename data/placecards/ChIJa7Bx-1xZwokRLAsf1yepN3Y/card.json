@@ -19,6 +19,18 @@
     "summary": "📍 Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a Williamsburg corner where Bedford meets the residential blocks, in a room that feels more like a neighborhood pub than a Brooklyn scene. Dark wood booths line the walls, the bar runs along one side, and the lighting stays dim enough that you'll want to claim one of those booths and stay through dinner. The kitchen moves at its own pace—order that spicy chicken sandwich and settle in.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu bounces between American comfort and unexpected heat—that spicy chicken sandwich everyone mentions comes on a bao bun with enough chili oil to make you pause between bites. You're looking at $16-22 for mains, and the kitchen changes their fryer oil daily, which explains why regulars always add a side of fries. Skip the chicken nuggets and stick with what they do well: the source bowl, the house salad with crispy chicken, anything that lets them show off their fryer discipline.",
+        "id": "block-the-food-1"
+      },
+      {
         "id": "block-1",
         "title": "Allswell",
         "body": "📍 Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA"
