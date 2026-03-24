@@ -97,11 +97,18 @@ function countByType(discoveries: Array<{ type: DiscoveryType }>): Record<string
   return counts;
 }
 
+interface TokenData {
+  total24h: number;
+  hourly: Array<{ hour: string; tokens: number }>;
+  agents: Array<{ name: string; tokens: number; pct: number }>;
+}
+
 export default function AdminClient() {
   const [activeTab, setActiveTab] = useState<TabId>('users');
   const [users, setUsers] = useState<UserWithData[]>([]);
   const [agents, setAgents] = useState<AgentInfo[]>([]);
   const [crons, setCrons] = useState<CronJob[]>([]);
+  const [tokenData, setTokenData] = useState<TokenData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
@@ -109,21 +116,22 @@ export default function AdminClient() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const [usersRes, agentsRes, cronsRes] = await Promise.all([
+        const [usersRes, agentsRes, cronsRes, tokensRes] = await Promise.all([
           fetch('/api/admin/users'),
           fetch('/api/admin/agents'),
           fetch('/api/admin/crons'),
+          fetch('/api/admin/tokens'),
         ]);
-
-        if (!usersRes.ok || !agentsRes.ok || !cronsRes.ok) {
-          throw new Error('Failed to load admin data');
-        }
 
         const [usersData, agentsData, cronsData] = await Promise.all([
-          usersRes.json(),
-          agentsRes.json(),
-          cronsRes.json(),
+          usersRes.ok ? usersRes.json() : { users: [] },
+          agentsRes.ok ? agentsRes.json() : { agents: [] },
+          cronsRes.ok ? cronsRes.json() : { jobs: [] },
         ]);
+
+        if (tokensRes.ok) {
+          setTokenData(await tokensRes.json());
+        }
 
         setUsers(usersData.users || []);
         setAgents(agentsData.agents || []);
@@ -373,47 +381,84 @@ export default function AdminClient() {
       {activeTab === 'tokens' && (
         <div className="admin-section">
           <div className="section-header">
-            <h2>Token Usage</h2>
+            <h2>Token Usage (24h)</h2>
+            {tokenData && (
+              <span className="section-count">
+                {tokenData.total24h.toLocaleString()} tokens
+              </span>
+            )}
           </div>
 
-          <div className="grid grid-2">
-            {agents
-              .filter((a) => a.tokenUsage)
-              .map((agent) => (
-                <div key={agent.name} className="card">
-                  <div className="card-body">
-                    <h3>{agent.name}</h3>
-                    <div className="admin-token-stats">
-                      <div className="admin-token-row">
-                        <span>Input:</span>
-                        <span className="admin-token-value">
-                          {agent.tokenUsage?.input.toLocaleString() || 0}
-                        </span>
+          {tokenData ? (
+            <>
+              {/* Per-agent breakdown */}
+              <div className="grid grid-2" style={{ marginBottom: 'var(--space-lg)' }}>
+                {tokenData.agents.map((agent) => (
+                  <div key={agent.name} className="card">
+                    <div className="card-body">
+                      <div className="admin-agent-header">
+                        <span className="admin-agent-name">{agent.name}</span>
+                        <span className="text-muted">{agent.pct}%</span>
                       </div>
-                      <div className="admin-token-row">
-                        <span>Output:</span>
-                        <span className="admin-token-value">
-                          {agent.tokenUsage?.output.toLocaleString() || 0}
-                        </span>
+                      <div className="admin-token-stats">
+                        <div className="admin-token-row">
+                          <span>Tokens:</span>
+                          <span className="admin-token-value">
+                            {agent.tokens.toLocaleString()}
+                          </span>
+                        </div>
                       </div>
-                      <div className="admin-token-row admin-token-total">
-                        <span>Total:</span>
-                        <span className="admin-token-value">
-                          {(
-                            (agent.tokenUsage?.input || 0) +
-                            (agent.tokenUsage?.output || 0)
-                          ).toLocaleString()}
-                        </span>
+                      {/* Simple bar */}
+                      <div style={{
+                        marginTop: '8px',
+                        height: '4px',
+                        borderRadius: '2px',
+                        background: 'var(--bg-secondary)',
+                        overflow: 'hidden',
+                      }}>
+                        <div style={{
+                          width: `${agent.pct}%`,
+                          height: '100%',
+                          background: 'var(--accent)',
+                          borderRadius: '2px',
+                        }} />
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
-          </div>
+                ))}
+              </div>
 
-          <div className="empty-state">
-            <p>Full token reports available in agent logs</p>
-          </div>
+              {/* Hourly bars */}
+              <div className="card">
+                <div className="card-body">
+                  <h3>Hourly Distribution</h3>
+                  <div style={{ display: 'flex', alignItems: 'flex-end', gap: '2px', height: '100px', marginTop: 'var(--space-md)' }}>
+                    {tokenData.hourly.map((h, i) => {
+                      const maxTokens = Math.max(...tokenData.hourly.map(x => x.tokens), 1);
+                      const height = (h.tokens / maxTokens) * 100;
+                      return (
+                        <div
+                          key={i}
+                          title={`${h.hour}: ${h.tokens.toLocaleString()} tokens`}
+                          style={{
+                            flex: 1,
+                            height: `${Math.max(height, 2)}%`,
+                            background: h.tokens > 0 ? 'var(--accent)' : 'var(--bg-secondary)',
+                            borderRadius: '2px 2px 0 0',
+                            minWidth: '4px',
+                          }}
+                        />
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <div className="empty-state">
+              <p className="text-muted">Token usage data unavailable</p>
+            </div>
+          )}
         </div>
       )}
     </main>

@@ -97,33 +97,70 @@ export async function getUserManifest(userId: string): Promise<UserManifest | nu
   return raw;
 }
 
+const VALID_DISCOVERY_TYPES = new Set([
+  'restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum',
+  'theatre', 'music-venue', 'hotel', 'experience', 'shop', 'park',
+  'architecture', 'development', 'accommodation', 'neighbourhood',
+]);
+
+function inferTypeFromName(name: string | undefined | null): string {
+  if (!name) return 'restaurant';
+  const lower = name.toLowerCase();
+  if (/gallery|art\s/.test(lower)) return 'gallery';
+  if (/museum/.test(lower)) return 'museum';
+  if (/bar|wine|cocktail|brewery|pub\b/.test(lower)) return 'bar';
+  if (/caf[eé]|coffee|bakery/.test(lower)) return 'cafe';
+  if (/theatre|theater/.test(lower)) return 'theatre';
+  if (/park|garden/.test(lower)) return 'park';
+  if (/hotel|inn\b/.test(lower)) return 'hotel';
+  if (/market|grocer|butcher/.test(lower)) return 'grocery';
+  if (/shop|store|book/.test(lower)) return 'shop';
+  return 'restaurant';
+}
+
+function normalizeContextKey(key: string | undefined | null): string {
+  if (!key || key === 'undefined' || !key.includes(':')) return 'radar:toronto-experiences';
+  let k = key;
+  if (k.startsWith('section:')) k = k.replace(/^section:/, 'radar:');
+  // Strip user prefix (e.g. "john:outing:..." → "outing:...")
+  if (!k.startsWith('trip:') && !k.startsWith('outing:') && !k.startsWith('radar:')) {
+    const m = k.match(/^[a-z0-9]+:(trip:|outing:|radar:|section:)(.*)/);
+    if (m && m[1] && m[2]) k = m[1] + m[2];
+    if (k.startsWith('section:')) k = k.replace(/^section:/, 'radar:');
+  }
+  if (!k.includes(':')) return 'radar:toronto-experiences';
+  return k;
+}
+
 export async function getUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
   const raw = await getUserData(userId, 'discoveries');
   if (!raw) return null;
 
-  // V1→V2 compatibility: normalize contextKeys
-  if (raw.discoveries && Array.isArray(raw.discoveries)) {
-    raw.discoveries = raw.discoveries.map(d => {
-      let contextKey = d.contextKey;
-      if (typeof contextKey === 'string') {
-        // Map section: → radar:
-        if (contextKey.startsWith('section:')) {
-          contextKey = contextKey.replace(/^section:/, 'radar:');
-        }
-        // Strip user prefix (e.g. "john:outing:..." → "outing:...")
-        const prefixMatch = contextKey.match(/^[a-z0-9]+:(trip:|outing:|radar:)/);
-        if (prefixMatch && !contextKey.startsWith('trip:') && !contextKey.startsWith('outing:') && !contextKey.startsWith('radar:')) {
-          contextKey = contextKey.replace(/^[a-z0-9]+:/, '');
-        }
-      }
-      // Default fallback for invalid contextKeys
-      if (!contextKey || contextKey === 'undefined' || !contextKey.includes(':')) {
-        contextKey = 'radar:toronto-experiences';
-      }
-      return { ...d, contextKey };
-    });
-  }
-  return raw;
+  // V1→V2 compatibility: V1 stores as raw array, V2 expects { discoveries: [...] }
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const rawAny = raw as any;
+  const rawArray: Array<Record<string, unknown>> = Array.isArray(rawAny)
+    ? rawAny
+    : Array.isArray(rawAny?.discoveries)
+      ? rawAny.discoveries
+      : [];
+
+  // Normalize all fields for V1→V2 compatibility
+  const normalized = rawArray.map((d, i) => ({
+    ...d,
+    id: (d.id as string) || `v1_${i}`,
+    name: (d.name as string) || 'Unknown Place',
+    city: (d.city as string) || 'Toronto',
+    type: (d.type as string) && VALID_DISCOVERY_TYPES.has(d.type as string)
+      ? d.type
+      : inferTypeFromName(d.name as string),
+    contextKey: normalizeContextKey(d.contextKey as string),
+    discoveredAt: (d.discoveredAt as string) || new Date().toISOString(),
+    placeIdStatus: (d.placeIdStatus as string) || (d.place_id ? 'verified' : 'missing'),
+    source: (d.source as string) || 'v1:migrated',
+  }));
+
+  return { discoveries: normalized, updatedAt: new Date().toISOString() } as unknown as UserDiscoveries;
 }
 
 export async function getUserChat(userId: string): Promise<UserChat | null> {

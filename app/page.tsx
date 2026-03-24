@@ -1,10 +1,22 @@
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
 import { getCurrentUser } from './_lib/user';
 import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
-import type { Context, Discovery } from './_lib/types';
+import type { Context, Discovery, UserManifest } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
+
+/** Load local manifest as fallback when Blob has none */
+function loadLocalManifest(): UserManifest | null {
+  const p = path.join(process.cwd(), 'data', 'compass-manifest.json');
+  if (!existsSync(p)) return null;
+  try {
+    const raw = JSON.parse(readFileSync(p, 'utf8'));
+    return { contexts: raw.contexts ?? [], updatedAt: raw.updatedAt ?? '' };
+  } catch { return null; }
+}
 
 function sortContexts(contexts: Context[]): Context[] {
   return [...contexts].sort((a, b) => {
@@ -32,23 +44,31 @@ export default async function HomePage() {
     );
   }
 
-  // Load user data from Blob
-  const [manifest, discoveriesData] = await Promise.all([
+  // Load user data from Blob, with local manifest as fallback
+  const [blobManifest, discoveriesData] = await Promise.all([
     getUserManifest(user.id),
     getUserDiscoveries(user.id),
   ]);
+
+  const manifest = blobManifest ?? loadLocalManifest();
 
   const contexts = sortContexts(
     (manifest?.contexts ?? []).filter(c => isContextActive(c)),
   );
   const discoveries = discoveriesData?.discoveries ?? [];
 
-  // Group discoveries by context
+  // Group discoveries by context — fuzzy match on slug to handle key variants
   const byContext = new Map<string, Discovery[]>();
   for (const ctx of contexts) {
+    const ctxSlug = ctx.key.split(':').slice(1).join(':');
     byContext.set(
       ctx.key,
-      discoveries.filter(d => d.contextKey === ctx.key),
+      discoveries.filter(d => {
+        if (d.contextKey === ctx.key) return true;
+        // Fuzzy: slug contains or is contained by context slug
+        const dSlug = d.contextKey.split(':').slice(1).join(':');
+        return dSlug === ctxSlug || dSlug.includes(ctxSlug) || ctxSlug.includes(dSlug);
+      }),
     );
   }
 

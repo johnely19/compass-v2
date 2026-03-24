@@ -40,8 +40,11 @@ export async function GET() {
   try {
     const agentsDir = getAgentSessionsDir();
     const agentDirs = readdirSync(agentsDir).filter((name) => {
-      const stat = readdirSync(path.join(agentsDir, name));
-      return stat.includes('sessions');
+      if (name.startsWith('.')) return false;
+      try {
+        const contents = readdirSync(path.join(agentsDir, name));
+        return contents.includes('sessions');
+      } catch { return false; }
     });
 
     const agents: AgentInfo[] = [];
