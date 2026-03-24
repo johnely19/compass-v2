@@ -1,8 +1,8 @@
 'use client';
 
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import type { Discovery } from '../_lib/types';
-import { getTriageState, getContextCounts } from '../_lib/triage';
+import { getTriageState } from '../_lib/triage';
 import PlaceCard from './PlaceCard';
 
 interface PlaceGridProps {
@@ -10,14 +10,17 @@ interface PlaceGridProps {
   contextKey: string;
   userId?: string;
   showFilters?: boolean;
+  layout?: 'grid' | 'carousel';
 }
 
 export default function PlaceGrid({
   discoveries,
   contextKey,
   userId,
+  layout = 'grid',
 }: PlaceGridProps) {
   const [, setRefresh] = useState(0);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
   // Listen for triage changes
   useEffect(() => {
@@ -38,21 +41,46 @@ export default function PlaceGrid({
     });
   }, [discoveries, userId, contextKey]);
 
-  // Get triage counts
-  const triageCounts = userId
-    ? getContextCounts(userId, contextKey)
-    : { saved: 0, dismissed: 0, resurfaced: 0 };
+  const scrollLeft = () => {
+    scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' });
+  };
 
-  // Count reviewed items (saved or dismissed)
-  const reviewedCount = triageCounts.saved + triageCounts.dismissed;
+  const scrollRight = () => {
+    scrollRef.current?.scrollBy({ left: 300, behavior: 'smooth' });
+  };
+
+  if (visibleDiscoveries.length === 0) {
+    return (
+      <div className="place-grid-empty">
+        {discoveries.length === 0
+          ? 'No discoveries yet'
+          : 'All places have been dismissed'}
+      </div>
+    );
+  }
+
+  if (layout === 'carousel') {
+    return (
+      <div className="carousel-container">
+        <button className="carousel-arrow carousel-arrow-left" onClick={scrollLeft} aria-label="Scroll left">‹</button>
+        <div className="carousel-track" ref={scrollRef}>
+          {visibleDiscoveries.map((discovery) => (
+            <div key={discovery.id} className="carousel-item">
+              <PlaceCard
+                discovery={discovery}
+                contextKey={contextKey}
+                userId={userId}
+              />
+            </div>
+          ))}
+        </div>
+        <button className="carousel-arrow carousel-arrow-right" onClick={scrollRight} aria-label="Scroll right">›</button>
+      </div>
+    );
+  }
 
   return (
     <div className="place-grid-container">
-      {userId && reviewedCount > 0 && (
-        <div className="triage-summary">
-          Saved ({triageCounts.saved}) · Dismissed ({triageCounts.dismissed})
-        </div>
-      )}
       <div className="grid grid-auto">
         {visibleDiscoveries.map((discovery) => (
           <PlaceCard
@@ -63,13 +91,6 @@ export default function PlaceGrid({
           />
         ))}
       </div>
-      {visibleDiscoveries.length === 0 && (
-        <div className="place-grid-empty">
-          {discoveries.length === 0
-            ? 'No discoveries yet'
-            : 'All places have been dismissed'}
-        </div>
-      )}
     </div>
   );
 }
