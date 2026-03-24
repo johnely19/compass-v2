@@ -5,6 +5,7 @@ import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery, UserManifest } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
 import { resolveImageUrl, getManifestHeroImage } from './_lib/image-url';
+import { isTypeCompatible } from './_lib/context-compat';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -99,6 +100,8 @@ export default async function HomePage() {
     byContext.set(
       ctx.key,
       enrichedDiscoveries.filter(d => {
+        // Type-context compatibility check (e.g. no galleries in dinner outings)
+        if (!isTypeCompatible(ctx.key, d.type)) return false;
         if (d.contextKey === ctx.key) return true;
         // Fuzzy: slug contains or is contained by context slug
         const dSlug = d.contextKey.split(':').slice(1).join(':');
