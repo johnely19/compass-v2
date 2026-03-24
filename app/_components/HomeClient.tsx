@@ -6,6 +6,7 @@ import type { Context, Discovery } from '../_lib/types';
 import { getContextCounts } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
+import Twemoji from './Twemoji';
 
 interface HomeClientProps {
   userId: string;
@@ -135,7 +136,8 @@ export default function HomeClient({
             <div className="section-header">
               <div className="section-header-left">
                 <h2>
-                  {ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} {ctx.label}
+                  <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="lg" />
+                  {ctx.label}
                 </h2>
                 <div className="section-meta">
                   {naturalDate && (

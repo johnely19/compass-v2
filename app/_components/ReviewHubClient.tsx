@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState, useCallback } from 'react';
 import type { Context } from '../_lib/types';
 import { getContextCounts } from '../_lib/triage';
+import Twemoji from './Twemoji';
 
 interface ReviewHubClientProps {
   userId: string;
@@ -57,7 +58,7 @@ export default function ReviewHubClient({ userId, contexts, archivedContexts = [
               <div className="card-body">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3>{ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} {ctx.label}</h3>
+                    <h3><Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="md" /> {ctx.label}</h3>
                     {ctx.dates && <span className="text-xs text-muted">{ctx.dates}</span>}
                   </div>
                   <div className="review-counts">
@@ -102,7 +103,7 @@ export default function ReviewHubClient({ userId, contexts, archivedContexts = [
                     <div className="card-body">
                       <div className="flex items-center justify-between">
                         <div>
-                          <h3>{ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} {ctx.label}</h3>
+                          <h3><Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="md" /> {ctx.label}</h3>
                           <span className="status-badge status-archived">Archived</span>
                           {ctx.dates && <span className="text-xs text-muted" style={{ marginLeft: '8px' }}>{ctx.dates}</span>}
                         </div>

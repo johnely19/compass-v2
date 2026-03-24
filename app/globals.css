@@ -415,6 +415,22 @@ a:hover {
 .section-header h2 {
   font-size: 1.125rem;
   margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 0.4em;
+}
+
+/* Twemoji */
+.twemoji {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.twemoji-img {
+  height: var(--twemoji-size, 1.2em);
+  width: var(--twemoji-size, 1.2em);
+  vertical-align: -0.15em;
 }
 
 .section-header-left {
