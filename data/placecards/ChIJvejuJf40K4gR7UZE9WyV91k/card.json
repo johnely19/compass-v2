@@ -6,7 +6,20 @@
     "name": "Flying Books",
     "city": "Toronto",
     "address": "Little Italy / College St",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 11:00 AM – 6:00 PM",
+      "Tuesday: 11:00 AM – 6:00 PM",
+      "Wednesday: 11:00 AM – 6:00 PM",
+      "Thursday: 11:00 AM – 7:00 PM",
+      "Friday: 11:00 AM – 6:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 11:00 AM – 5:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 71,
+    "phone": "(416) 532-8552",
+    "website": "http://www.flyingbooks.ca/"
   },
   "discovery": {
     "text": "Discovered via flyingbooks.ca"

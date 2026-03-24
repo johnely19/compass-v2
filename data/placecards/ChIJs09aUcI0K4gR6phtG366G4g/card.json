@@ -14,6 +14,13 @@
   },
   "narrative": {
     "summary": "Swedish-inspired in turquoise bay-and-gable; owner (2017 TO AeroPress champ) now roasting in-house as Lycka Coffee Roasters.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"The very definition of “cute”!\nIf you’re looking for a peaceful spot near Kensington, this place is a gem. The natural lighting is lovely, warm, and inviting. I tried their fika iced latte and the walnut-hazelnut brownie — both were delicious. They also offer savoury food options. There’s both a front and back patio, perfect for enjoying a quiet moment.\"\n\n⭐⭐⭐⭐⭐ \"I had their Strawberry Matcha drink back in the summer and it was great. There’s also a beautiful and spacious patio, which is perfect on a sunny day.\n\nA minor downside for me was that they didn’t take Amex, but nothing to take away from the overall experience.\"\n\n⭐⭐⭐⭐⭐ \"Stellar Scandinavian coffee shop that is a specialty/craft/third wave coffee shop. It hits the trifecta. 1. Great coffee- their house roast is good but also is a multi roaster and had several high end roasters available. Pretty rare these days. 2. Great aesthetics and comfortable. This place has out front and outdoor back patio seating as well as indoor dining. 3. Great place to hang out with friends and catch up. Definitely good for that. Best coffee in Toronto!!\""
+      }
+    ]
   }
 }

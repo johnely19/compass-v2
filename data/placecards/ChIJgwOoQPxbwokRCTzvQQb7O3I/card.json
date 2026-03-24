@@ -12,8 +12,7 @@
     "price_level": 2,
     "rating": 4.6,
     "user_rating_count": 153,
-    "location": "135 Graham Ave, Brooklyn, NY 11206, USA",
-    "review_count": 153
+    "location": "135 Graham Ave, Brooklyn, NY 11206, USA"
   },
   "narrative": {
     "summary": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA",
@@ -42,6 +41,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 135 Graham Ave, Brooklyn, NY 11206, USA\n\n• walking: 1 hour 14 mins • 3.3 mi\n• transit: 35 mins • 4.9 mi\n• driving: 19 mins • 3.5 mi (traffic: 20 mins)\n• bicycling: 24 mins • 3.7 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (19 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Featherweight is such a great hidden gem tucked away in a back alley and probably was just empty space between buildings. Definitely has a speakeasy feel. Drinks are pricey but you know you are getting more attention service here as the place is small. Can’t get too busy. Fun place to take someone on a date if you are looking to throw a “I know this really fun quaint place.” Dis iz da place to do that move.\"\n\n⭐⭐⭐⭐⭐ \"I really love this speakeasy! Super chill vibe with great music and dim lights. It’s a great place to meet with a small group or to go on a date. The cocktails here done so well here. They creep up on you- so be careful! Also remember that it’s cash only!\"\n\n⭐⭐⭐⭐ \"The interior is small, enough to house 40 people, but the decoration and low lighting help make the feel old and comfortable. This is my new favorite spot where the $12 cocktails are unique and classy. Perfect date spot or place to stop before a late show. The staff was attentive and the music is modern-smooth-poppy.\""
       }
     ]
   },

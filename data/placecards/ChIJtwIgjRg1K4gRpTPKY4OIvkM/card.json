@@ -14,6 +14,13 @@
   },
   "narrative": {
     "summary": "Urban winery making wine on-site + natty wine bar; late-night hours Wed–Sat, industrial-cool Geary Ave corridor. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Great spot for natural wine. They have a great selection of bottles and glasses. They also do cocktails as well. Really pretty inside.\"\n\n⭐⭐⭐⭐⭐ \"Organized informal wine tasting here during Geary Art Crawl. Everyone loved it…we tried 5 different wines and we loved the varied selection. We also really enjoyed the frozen rose on offer. Will definitely come back to try more of what they have and the food!\"\n\n⭐⭐⭐⭐⭐ \"Such a lovely patio!!! The indoors looks nice as well.\nOur server was super nice and friendly.\nWe only had a quick snack and a couple glasses of wine.\nThe place is pretty busy but we managed to grab a table on their party.\nGo check out their patio before summer is gone!\""
+      }
+    ]
   }
 }

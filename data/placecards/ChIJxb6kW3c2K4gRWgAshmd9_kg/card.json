@@ -6,7 +6,21 @@
     "name": "Cheese Boutique",
     "city": "Toronto",
     "address": "South Etobicoke (45 Ripley Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 6:00 PM",
+      "Tuesday: 9:00 AM – 6:00 PM",
+      "Wednesday: 9:00 AM – 6:00 PM",
+      "Thursday: 9:00 AM – 6:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 2713,
+    "price_level": 3,
+    "phone": "(416) 762-6292",
+    "website": "https://www.cheeseboutique.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.reddit.com/r/askTO/comments/1czyccu/best_high_end_grocery_stores_in_toronto/",

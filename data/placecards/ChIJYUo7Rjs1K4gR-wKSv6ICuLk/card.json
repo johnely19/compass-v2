@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Cozy French wine bar that Toronto's top chefs choose for their own date nights — featured in Toronto Star's 'Best Date Night Restaurants' (Feb 2026). Intimate room, natural wines, seasonal French plates. 4.5★ (581 reviews). The kind of place where the meal becomes a conversation. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Date night with the lady - we got lost in the tasty food and awesome service, so we didn’t take any photos beyond the first course… that’s how it should be, right!? Highlights were the sea urchin and steak, both incredible. Had fun trying lamb heart. Seems like their menu is always getting shuffled - I’d recommend exploring and trying something new on your visit. It’ll be great.\"\n\n⭐⭐⭐⭐⭐ \"Great spot with amazing service. It’s a small, cozy space so doesn’t feel snobby/too snobby. We sat at the bar and was cool watching them prep cocktails and small dishes. The menu changes weekly.\nWe had the tuna (very soft and flavourful), lamb tartar (very mild and stuffed olives were great) and the very unique trout and leek pastry puff. The French toast was a cool savoury dessert. The server was very knowledgeable.\"\n\n⭐⭐⭐⭐ \"Dreyfus is absolutely incredible and without a doubt one of the best restaurants in the city. The various dishes are perfectly executed and full of flavour in exquisite combinations that work flawlessly. The ever changing menu is relatively small but works fantastically since you can order a few dishes and sample almost everything. I’ve been to the restaurant maybe 5 times and I was positively surprised every single one of them.\n\nThe only slight negative part of my last visit was the service. Our server was very nonchalant when explaining the dishes and recommended two wines that my table didn’t enjoy at all. On top of that, she said one of the bottles was “somewhere around $90” but when the bill arrived it was 130 - sorry but 50% more expensive than advertised is not ok - not because of the money, as a principle.\n\nI highly recommend this place to anyone that loves food. Definitely worth a night out.\""
+      }
+    ]
   }
 }

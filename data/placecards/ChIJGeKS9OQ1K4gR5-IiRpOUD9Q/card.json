@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Health-focused Mediterranean from chef Hemant Bhagwani with clinical nutritionist, fermented/sprouted ingredients",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This was a great meal! I built my own salad bowl (harissa chicken) and everything was delicious and fresh. The servers were knowledgeable and kind. Definitely a great addition to the junction. I will be back!\"\n\n⭐⭐⭐⭐⭐ \"We just attended recovery day at the wellness club and was famished after the workout.  We googled healthy eats in the area and couldn’t be happier with the service and the food. It was the best bowl I’ve ever had!\"\n\n⭐⭐⭐⭐⭐ \"Healthy, delicious, quick, affordable. What’s not to like! A nice cozy and tasty spot in the heart of the Junction!\""
+      }
+    ]
   }
 }

@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Diamond Schmitt adaptive reuse of heritage industrial kilns—sustainability showcase. Saturday farmers market, ravine trails, great photography spot.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"If there's one place you'll never tire of visiting, it's definitely Evergreen. Whether it's spring, summer, fall, or winter, the park brings a unique feeling to each season, allowing for a different experience with each visit.\n\nIn the fall, you can buy pumpkins to decorate your home, in the summer, participate in the Saturday markets (which begin in spring), in the winter, participate in the festivals, in November, participate in the Day of the Dead, and many others.\n\nThe socializing, market, and gardening space is enormous, but the green area is even larger.\n\nFor those arriving by public transportation, bus number 14 drops you off right inside, and for those arriving by car, Evergreen has paid parking with plenty of spaces available.\n\nFor visitors with disabilities or limited mobility, the park has designated parking, adapted restrooms with automatic opening and closing doors and grab bars, and trained staff to support visitors with hearing and visual impairments.\n\nFor those traveling with children, the restrooms have changing tables. And to check out the park's activities, check the park's social media, as the schedule is constantly changing.\n\nIn addition to the frequent markets, the park also has a restaurant and a café.\n\nIt's definitely worth checking out.\"\n\n⭐⭐⭐⭐⭐ \"Great little ice rink to enjoy in the winters. Free helmet rentals and skates available to rent for a fee. Always a magical experience!\"\n\n⭐⭐⭐⭐⭐ \"Enjoyed my visit. Plenty of walking trails\nTook a detour off the main trails. There were some challenging climbs and descents.  Was supposed to do the free Nature tour but the tour guide did not show up. Did the historical tour instead which was nice. The volunteer tour guide was quite knowledgeable. Would visit again. Take note that parking is $10. Easier to download the app and pay there.\""
+      }
+    ]
   }
 }

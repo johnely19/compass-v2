@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "5-building design complex with 20+ showrooms - Kravet, Lee Jofa, Primavera - open to public",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The best part about designers walk is Le Paradis. Great traditional French food, all made in house, with the best prices in the city.\""
+      }
+    ]
   }
 }

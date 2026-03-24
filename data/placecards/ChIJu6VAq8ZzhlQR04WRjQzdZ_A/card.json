@@ -14,6 +14,13 @@
   },
   "narrative": {
     "summary": "Vancouver's ONLY Indigenous restaurant. Owner Inez Cook. Signature bannock, wild salmon, game meats. Culturally significant and genuinely delicious. 4.7 rating. Sunday brunch service too. A must for experiencing something you can't get anywhere else. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Salmon & Bannock is an absolute gem. The bison bone marrow is my all‑time favorite – rich, indulgent, and perfectly balanced – and this year’s Dine Out bison ribs were so tender they literally melted in your mouth. The Dine Out menu overall was excellent, and their Indigenous wine list is delicious and pairs beautifully with the food. On the regular menu, the game sausage appetizer and main are always a standout: in my opinion, the best sausage, served with blueberry sage sauce, gravy, and amazing mashed potatoes. The mushrooms on toasted bannock with Brie, blueberry sage, and gravy are to die for and a must‑order appetizer. I’m also a big fan of the game sampler, but honestly you can’t go wrong with any of their starters. Service is warm and welcoming, and I can’t wait to come back.\"\n\n⭐⭐⭐⭐⭐ \"Great food and staff is very welcoming! Tried a 3-course menu that did not disappoint. My first time having bannock and I’m completely hooked with it! There was a birthday party on the day I was there, having the vibe of everyone in the restaurant singing happy birthday definitely leveled up the experience.\"\n\n⭐⭐⭐⭐⭐ \"Went there 3 weeks ago during the dining out season. Highly recommend the duck leg and the bison meat, so delicious that we finished so quick then paired a wine flight. Warm service from Bridget, definitely would like to try other interesting ingredients from the menu.\""
+      }
+    ]
   }
 }

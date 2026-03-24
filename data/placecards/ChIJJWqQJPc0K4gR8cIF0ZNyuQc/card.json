@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "The romantic hum of this Spanish-inflected restaurant makes it a perennial chef pick for date night — featured in Toronto Star's 2026 list. Late-night energy, adventurous small plates, great wine list. 4.5★ (2913 reviews). $$$$. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had a great experience at bar isabel! Food was great. Service was superb! The vibes inside are nice and cozy.\n\nOur favourite dishes were the brussel sprout salad, the jamon croquetas, and the iberico jamon. We could have passed on the patatas bravas. They were just ok\n\nThe only critique I have is they did not pace the dinner at all. We ordered many dishes and they brought it pretty much all at once. It was hard to fit everything on the table and we want to have a slower paced dinner.\"\n\n⭐⭐⭐⭐⭐ \"Had a lovely time celebrating our anniversary here!\n\nWent for the lunch prix fixe for 2 people, available Saturday 12-4pm.  There was plenty of food, and it was maybe the best tapas I've had outside of Spain?  The pan con tomate had a bit more tomato than I'd expect, but I'm not complaining.  Standouts were the Patatas Bravas and the Pork Secreto - the sticky sweet dip complemented the salty juicy pork so well!\n\nIt's beautiful and vibrant inside.  While it would've been nice to sit in the colourful lighting rather than the natural light closer to the window, I really appreciated being able to sit somewhere a little quieter to enjoy our meal.\n\n10/10 - would definitely come back again!\"\n\n⭐⭐⭐⭐⭐ \"Fantastic experience for the first time coming here! Service was exceptional and the food was some of the best I’ve had at any restaurant. Tried numerous dishes and all were very delicious but the stand out dishes was certainly the Octopus, Pork Secreto and the Basque cake! The atmosphere was also very great.\""
+      }
+    ]
   }
 }

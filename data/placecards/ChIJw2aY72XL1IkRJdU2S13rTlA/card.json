@@ -6,7 +6,20 @@
     "name": "Good Cheese",
     "city": "Toronto",
     "address": "Gerrard East / Leslieville",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 11:00 AM – 7:00 PM",
+      "Tuesday: 11:00 AM – 7:00 PM",
+      "Wednesday: 11:00 AM – 7:00 PM",
+      "Thursday: 11:00 AM – 7:00 PM",
+      "Friday: 11:00 AM – 7:00 PM",
+      "Saturday: 11:00 AM – 7:00 PM",
+      "Sunday: 11:00 AM – 7:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 277,
+    "phone": "(416) 285-8482",
+    "website": "http://goodcheese.ca/"
   },
   "discovery": {
     "text": "Discovered via yelp.ca"

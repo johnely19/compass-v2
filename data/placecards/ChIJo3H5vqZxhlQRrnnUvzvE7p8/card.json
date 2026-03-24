@@ -6,20 +6,7 @@
     "name": "Oku Izakaya",
     "city": "Vancouver",
     "address": "Gastown",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 5:00 PM – 1:00 AM",
-      "Thursday: 5:00 PM – 1:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
-      "Sunday: 5:00 PM – 1:00 AM"
-    ],
-    "rating": 4.8,
-    "review_count": 496,
-    "phone": "(604) 428-6557",
-    "website": "https://okuizakayabar.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "opentable.ca",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Michelin Recommended. Avant-garde Japanese izakaya at 2 Water Street in Gastown. 4.8 rating. Top 100 Restaurants 2025. Wine Spectator Award. Exquisite sushi + creative Japanese. Right in Gastown for Friday arrival night. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This is one of my favorite Japanese restaurants in Vancouver. Their sushi is exceptionally well done — the quality of the fish is excellent, and each slice is thick, fresh, and generous. Every bite is incredibly satisfying and full of flavor.\n\nWhat impressed me the most was the beef tongue. It was slightly crispy on the outside while remaining tender and juicy inside. Easily one of the top three thick-cut beef tongue dishes I’ve ever had.\n\nThe atmosphere is wonderful, and the staff are all very friendly and welcoming. It’s a great place for a date or for a relaxed gathering with friends.\"\n\n⭐⭐⭐⭐⭐ \"A real gem in the heart of Vancouver. Their food was exceptional, and the wait staff were even better.\n\nLike everyone else said, you must try the karaage. It is so flavorful. The sake options are extensive and totally legit. I was blown away by the menu and what drinks they had to offer.\n\nThe staff are everything you could want. Knowledgeable, polite, and attentive. They even turned off the lights to sing happy birthday as they brought out ice cream for me! A world class demonstration of their work ethic.\n\nThank you for making my birthday very special.\"\n\n⭐⭐⭐⭐⭐ \"🍣 OKU IZAKAYA - Gastown 🍱\n\n4.8 Stars on Google? Had to give it a try!  And it did not disappoint!  Overall I was very impressed and I would definitely come back here.  Unfortunately it’s only open in the evenings from 5pm onwards.\n\nWhat did we get?\n🖤 Nagoya Style Spiced Chicken Karaage $16.90\namadare glaze, yamitsuki spice, ponzu onion, sesame.  Hands down these were the best Chicken Karaage I have ever had in my entire life!  10/10\n\n🖤 Yellowtail Hamachi with Wa-Chimichurri Sauce $18.90\nExcellent quality Hamachin Sashimi, and I was shocked about how thick and big the slices were!  Great value, excellent taste! 9.8/10\n\n🖤 Aburi Black Cod Miso Sansho Temaki Sushi $6.90\nI have never seen Black Cod Miso Sablefish in a Temaki.  It was DELICIOUS! 10/10\n\n🖤 Poached Black Cod with Ponzu Grated Daikon $16.90\nsesame sauce, momiji, oba.  Melt in your mouth goodness!  8.7/10\n\n🖤 Tempura Shrimp w/ Eel, Avocado Temaki Sushi $6.90\nWhat a perfect and tasty combo! Crunchy from the Tempura, but wonderful umami punch from the Unagi! $9.5/10\n\n🖤 Soy Marinated Yellowfin Tuna Oba $5.90\nThis was good, but nothing special! 7.8/10\n\n🖤 Spicy Root Vegetable Kimpira Stir-fry with Chili Oil and Sesame $6.90\nlotus roots / bamboo shoots / daikon radish.  This was good, but nothing amazing.  I would not get this again.  I would try other items!  6.8/10\n\nWould I come back?  DEFINITELY!  Many wonderful delicious items that won’t break the bank!  I would highly recommend this place!\""
+      }
+    ]
   }
 }

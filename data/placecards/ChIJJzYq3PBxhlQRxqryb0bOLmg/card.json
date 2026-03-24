@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "'The Hi-Fi Wine Bar At The End Of The World.' All vinyl, all the time. Natural wine, cocktails, tasty food. Union Street in Strathcona. Happy hour 5-6 & 10-11. The record-flipping + natty wine combo is peak John. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Went here for their dine out menu on a Sunday and will be coming back for the steak and gnocchi courses alone. They were melt in your mouth delicious. Really wanted to give this place 5 stars but felt the dessert course let them down which is a shame as everything else on their dine out menu was so tasty and delectable. The ambience was great too, the music wasn't too loud. The space is small but intimate and cozy. The staff were friendly and attentive. It's a shame their steak and gnocchi dishes are only available for dine out but will be coming back with a different friend to experience it.\"\n\n⭐⭐⭐⭐⭐ \"Bar Gobo is an absolute hidden gem. Staff is wonderful, music is on point and the food is creative and delicious. Everything we ordered was great, including the house-made focaccia, cabbage salad and delicata squash, but the stars for me were definitely the chicken liver mousse bites, the oyster and the mushroom pasta. We loved it so much went twice on our trip. Highly, highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Such a great spot. Great interior design, music, service, and overall atmosphere. The tartare was a bit acidic & monotone but the rest of the food was perfectly executed. A must!\""
+      }
+    ]
   }
 }

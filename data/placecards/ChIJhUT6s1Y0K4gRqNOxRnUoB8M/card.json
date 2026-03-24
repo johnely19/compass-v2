@@ -13,17 +13,7 @@
     "price_level": 3,
     "rating": 4.8,
     "user_rating_count": 2815,
-    "location": "1454 Dundas St W, Toronto, ON M6J 1Y6, Canada",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 5:00 – 10:00 PM",
-      "Saturday: 3:00 – 10:00 PM",
-      "Sunday: 3:00 – 10:00 PM"
-    ],
-    "review_count": 2817
+    "location": "1454 Dundas St W, Toronto, ON M6J 1Y6, Canada"
   },
   "narrative": {
     "summary": "📍 Antler Kitchen & Bar\n1454 Dundas St W, Toronto, ON M6J 1Y6, Canada",
@@ -67,6 +57,12 @@
         "id": "block-8",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1454 Dundas St W, Toronto, ON M6J 1Y6, Canada\n\n• walking: 1 hour 36 mins • 7.0 km\n• transit: 47 mins • 7.9 km\n• driving: 23 mins • 7.5 km (traffic: 16 mins)\n• bicycling: 25 mins • 7.4 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (23 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Antler Kitchen & Bar totally blew me away for my birthday dinner. We got the chef’s table with the tasting menu, and from start to finish, everything was beautifully made and super flavorful.\n\nChef Alex and his crew made the night feel really special. He personally served us all evening, explained each dish with so much passion, and you could tell how much thought went into every little thing. The whole team was friendly, professional, and super attentive without ever being in the way.\n\nThe food really highlighted tasty Canadian ingredients and wild-inspired dishes in such a fancy, creative way, and the timing of the tasting menu was spot on. The cocktails were amazing too – balanced, creative, and a perfect match for the food.\n\nThe cozy, rustic vibe, open kitchen, and chill atmosphere made it a perfect spot for a special occasion, but it still felt comfy and down-to-earth. Honestly, it was one of the best dining experiences I’ve had in Toronto, and I’m so thankful to Chef Alex and the team for making my birthday so memorable. I’d totally recommend Antler to anyone looking for a unique and unforgettable night out.\"\n\n⭐⭐⭐⭐⭐ \"Finally got a chance to dine at Antler with their Chef's Table Tasting Menu. Came with high expectations and what we got exceeded it. Each of their dishes were spot on, but the highlights for us were the Venison Tartare topped with an awesome fried shiitake, their smoked boar belly and the bison steak with a duck fat potato rosti. Value for the price, we would happily come back for it again.\"\n\n⭐⭐⭐⭐⭐ \"We love Antler so much! Having been loyal customers for a long time, when we accepted a job in Australia, leaving Antler was on the “con” list…so we were very happy to squeeze in a dinner on our first visit back to Canada last month.\nAs always the meal, service and atmosphere were really special. Although restaurants in Melbourne are great, there is only one Antler. Don’t miss it.\""
       }
     ]
   },

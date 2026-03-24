@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Original Soulpepper production about the collapse and rebirth of Detroit through Motown, jazz, hip hop, and Detroit rock. Sold out in 2023 run, returning March 19–29. Physically dynamic, movement-driven theatre.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Theatre:\nWhat an outstanding theatre Soul pepper is.\nLocated in the distillery district loop, this place exudes a wonderful vibe. I enjoyed the theatre and the 🍿 movie nights here.The staff is very helpful and cordial.\n\nParking:\nSufficient parking on street level and underground available.\n\nCafe:\nThey have a nice reasonable cafe,open till 7.30 pm. Good to grab a quick snack and some dinner.\n\nI loved the fact that soul pepper regularly arranges yoga sessions in Aug mornings for free for health enthusiasts.\"\n\n⭐⭐⭐⭐⭐ \"Cannot say enough great things about this venue and the entertainment it provides. The setting is intimate, the singers and musicians are so enormously talented and the narrator is brilliant. I love music but getting the history and interesting juicy bits in a story form makes the music that much more enjoyable! Thank you all for an amazing performance of revolutionary women in jazz!!!\"\n\n⭐⭐⭐⭐⭐ \"Had the best experience! Got in for free since I’m under 25, saw the coolest political musical drama, and even got to talk to the cast after about my career goals and what inspired them.\""
+      }
+    ]
   }
 }

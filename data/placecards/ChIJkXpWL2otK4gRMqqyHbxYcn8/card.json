@@ -6,17 +6,20 @@
     "name": "Artist Project 2026",
     "city": "Toronto",
     "address": "Exhibition Place / Enercare Centre",
-    "type": "restaurant",
-    "rating": 4.3,
-    "review_count": 6020,
-    "phone": "(416) 263-3000",
-    "website": "http://www.enercarecentre.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via blogto.com"
   },
   "narrative": {
     "summary": "Canada's biggest contemporary art fair returns March 26-29. 250+ juried Canadian artists. Opening Night Party Thu Mar 26 6-10pm. Buy directly from artists. Enercare Centre. 4.3★ (6006 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Wednesday. November 12, 2025.\nHad an absolute blast at Royal Agricultural Winter Fair 2025. Took pictures of schedule if you intend to go. Great food and vendors from across entire Ontario. Amazing dog show. Had a great time watching horseshoeing competition and Horse show. Good program. A lot of things to do. Come early. Worth every penny spend. I'd be back in 2026 for sure 😉\"\n\n⭐⭐⭐⭐⭐ \"Great venue space for big projects events. I recently went to the HYROX fitness event, Whisky Tasting event & the Waterfront marathon expo. Location is near by the lake with providing TTC service via Streetcars and plenty of parking with a fee.\"\n\n⭐⭐⭐⭐⭐ \"Amazing home show. Lots of great inventions, food and entertainment. Parking was easy. Getting in was easy. All around five star experience for sure. A stand out booth was 416 Security Solutions with their unbreakable glass doors and windows. Truly amazing and  potentially life saving.\""
+      }
+    ]
   }
 }

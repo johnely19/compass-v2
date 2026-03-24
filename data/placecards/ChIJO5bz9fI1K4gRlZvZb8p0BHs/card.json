@@ -17,6 +17,13 @@
   },
   "narrative": {
     "summary": "8-seat reservations-only coffee bar with $68 Panama Gesha; fine-coffee gallery concept; opened late Feb 2026.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Actually good customer service. They really do read your reviews and take your feedback into consideration which seems pretty rare these days.\"\n\n⭐⭐⭐⭐⭐ \"Had an afternoon reservation for the coffee tasting at The Roasters Pack Lab and had an amazing experience. The baristas are very talented and knowledgeable, and helpful in understanding the differences between the flight options available. This was a very unique and fun experience that I would highly recommend trying.\""
+      }
+    ]
   }
 }

@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Pan-Asian cocktails with modern bartending tech. Troy Gilchrist running the show. Bartender Atlas featured. 4.6 rating, 299 reviews.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I really liked this place. I visited with my friends and had a great experience — the atmosphere, drinks, and food were all excellent. We especially loved the Beef Rib (food) and the ‘Seeing Green’ cocktail. A great place to meet friends or go on a date.\nHighly recommend!\"\n\n⭐⭐⭐⭐ \"Phenomenal atmosphere and drinks, and our waiter/ bartender Nick was very knowledgeable about the drinks.\n\nThe drinks were creative and top notch, definitely unique twists and worth the visit for their interesting flavours and delightful presentation.\n\nMy only critique, the calamansi tart (which looked stunning) had a very muted calamansi flavour and it was overwhelmed by the richness meringue and tart shell (which were phenomenal on their own, but would have been better with a more tart lemon or lime curd).\n\nPhenomenal ambiance and decor, would definitely go back and try their savory offerings and other food options!\"\n\n⭐⭐⭐⭐⭐ \"No Vacancy is one of those Ossington spots that instantly pulls you in with its intimate and warm vibe. It's not only a great place to hang out with your friends but also ideal for a date night.\n\nWe tried a mix of dishes and drinks, and everything was pretty decent. Cocktails are fun and creative. The mix of Japanese influences with inventive twists makes it worth coming back just to try new drinks each time.\n\nOverall, they nail the balance of atmosphere, creativity, and quality. It can be a little pricier than your average night out, but I think it's worth it for the experience.\""
+      }
+    ]
   }
 }

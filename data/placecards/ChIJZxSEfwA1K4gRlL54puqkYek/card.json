@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Cafe by day, speakeasy by night via hidden Graffiti Alley entrance (Wed-Sun 5pm+); opened Oct 2025.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I tried one of their matcha drinks and really enjoyed how light and well-balanced it was. The lemon scone I tried was also perfectly baked, simple but very satisfying. The cafe feels cozy and comfortable, making it easy to stay as long as you like without feeling rushed.\n\nIt seems like the place has recently opened, and everything felt clean and modern. There are plenty of menu options to choose from, which was a nice surprise.\nThe owner was also very kind and welcoming, which made the experience even better. Overall, a great spot to relax and enjoy good drinks and pastries. Highly recommend!!\"\n\n⭐⭐⭐⭐⭐ \"Went to the soft launch & was very impressed. The crew that put this together is so dedicated to the craft & put a lot of attention to detail and effort into this space. I can tell it will be the new neighbourhood hang out & work space. They have charging ports tucked into the furniture, nice natural light and wifi, plus great drinks! Would definitely recommend you check out this place!\"\n\n⭐⭐⭐⭐⭐ \"Very pretty cafe with high ceilings and modern decor\nGood coffee\nHad the veggie breakfast sandwich which was oily for me but they had other bakery options and protein bars too.\nEmpty early morning on a sunday but got quite busy soon!\""
+      }
+    ]
   }
 }

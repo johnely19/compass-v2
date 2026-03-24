@@ -6,27 +6,20 @@
     "name": "Waterworks Food Hall",
     "city": "Toronto",
     "address": "King West / Entertainment District",
-    "type": "bar",
-    "hours": [
-      "Monday: 8:00 AM – 10:00 PM",
-      "Tuesday: 8:00 AM – 10:00 PM",
-      "Wednesday: 8:00 AM – 10:00 PM",
-      "Thursday: 8:00 AM – 10:00 PM",
-      "Friday: 8:00 AM – 12:00 AM",
-      "Saturday: 8:00 AM – 12:00 AM",
-      "Sunday: 8:00 AM – 10:00 PM"
-    ],
-    "rating": 4.5,
-    "review_count": 604,
-    "price_level": 2,
-    "phone": "(416) 366-5500",
-    "website": "https://www.waterworksfoodhall.com/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"
   },
   "narrative": {
     "summary": "Heritage building (1932 waterworks) housing 15+ artisanal vendors + 3 bars; open 7 days, Sunday-friendly; good Bello Pizza + new vendors in 2026.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Great spot to hang and have different types of food with friends! We got a burger from Harry’s Charbroiled, steak and frites from Tantxo Steak Bar, coco bun jerk chicken sandwich from Rasta Pasta and ice cream from Scooped. All the meals were equally delicious, prices were all right, my favourite was the lounge space to relax, chat and enjoy our meal! Definitely will be back!\"\n\n⭐⭐⭐⭐⭐ \"The service here was SO good!! Aboud was so nice, while we were waiting for our food he gave us a couple falafel bites to try. He also asked if we wanted our wrap. It in half because we were sharing. The food was 10/10 as well. Thank you Aboud! He made our visit!!\"\n\n⭐⭐⭐⭐⭐ \"Looking for a place with a variety of culinary styles to choose from in one location? The Waterworks is a great choice, and another place full of history that you can add to your list of places to visit.\n\nThe Hall is located in the city center, close to many attractions and with easy access to bus stops, parking lots, other shops, and next to a park with a playground and pet area.\n\nThe place has a huge variety of restaurants, and especially a variety of prices.\n\nThe decorations and comfort for visitors are excellent, especially considering accessibility for families with children and visitors with disabilities and/or reduced mobility.\n\n🅿️Parking: the space has private parking, which provides direct access to the hall.\n\n♿️Accessibility: the entrance to the hall has doors with automatic opening and closing, elevators for transition between floors, adapted restrooms with automatic doors, automatic faucets and grab bars, and crack-free floors. However, there are no menus in Braille, so it's important to ask the staff at each restaurant for assistance.\n\nChildren: some restaurants have high chairs and changing tables in the restrooms.\n\nIt's worth a visit, and you can enjoy the space more.\""
+      }
+    ]
   }
 }

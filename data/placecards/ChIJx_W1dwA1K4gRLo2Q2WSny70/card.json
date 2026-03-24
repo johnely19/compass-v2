@@ -6,7 +6,20 @@
     "name": "OnePound",
     "city": "Toronto",
     "address": "Trinity Bellwoods / Dundas West",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 9:30 AM – 6:00 PM",
+      "Wednesday: 9:30 AM – 6:00 PM",
+      "Thursday: 9:30 AM – 6:00 PM",
+      "Friday: 9:30 AM – 6:00 PM",
+      "Saturday: 9:30 AM – 6:00 PM",
+      "Sunday: 9:30 AM – 6:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 45,
+    "phone": "(416) 364-5025",
+    "website": "https://www.onepound.ca/"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/bakery/one-pound-toronto/",

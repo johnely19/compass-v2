@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Super-considered service/iteration culture; high-minded list but staff explains it well.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Love the drink menu, I feel there's a little bit for everyone. We got the ice and aura, old man, three savouries, a few others. All were amazing but my favorite is the old man.  Truly perfect if you love black tea! They also sell their cocktails by the bottle.\n\nService was good, seating is tight but overall a nice ambiance.\"\n\n⭐⭐⭐⭐⭐ \"A lot of fun at this chic spot for creative cocktails and snacks. Service was on point, lots of bartenders checking in. It was busy but never took too long for drinks.\nIt’s got a speakeasy vibe. I’d recommend reservations.\nThe cocktails were balanced with fun garnishes.\nDefinitely check out the secret menu\"\n\n⭐⭐⭐⭐⭐ \"It was truly the best bar experience I’ve ever had. The cocktail, the atmosphere, the service all exceeded my expectations. Especially the bartenders - Santiago, Eric, and Jacky were amazing:) so hospitable, friendly and professional. I don’t leave reviews often but I had to for this one. We had a great time and it was an unforgettable experience. We got The Heart of Normandy, it was phenomenal.\""
+      }
+    ]
   }
 }

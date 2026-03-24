@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Named after Juan Manuel Fangio — racing rival of Alberto Ascari, whose namesake restaurant held this exact address for 14 years. Italian classics with Argentine detours. Playful cocktails. The naming backstory alone is worth the visit. 4.7★ (89 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Amazing experience at Fangio Trattoria.\n\nBeautiful atmosphere, excellent service, and incredible food. The osso buco with risotto was absolutely delicious and the dessert was the perfect finish. Every dish was thoughtfully prepared and full of flavour.\n\nHighly recommend this place if you enjoy great Italian food.\"\n\n⭐⭐⭐⭐⭐ \"We had an incredible dinner at Fangio Trattoria! We ordered the Carne Cruda, Veal Chop, and Vongole, and every dish was beautifully executed with rich flavour and top-quality ingredients. The veal chop was perfectly cooked, the vongole was fresh and aromatic, and the carne cruda was one of the best we’ve had in the city.\n\nTheir wine list is outstanding — clearly curated with passion and knowledge. We enjoyed a fantastic bottle that paired perfectly with our meal.\n\nA huge thank you to Mathew and the entire team for the warm, attentive, and professional service. They made the whole experience feel special from start to finish.\n\nHighly recommend Fangio Trattoria — we’ll definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Our favorite date night spot in Leslieville.\n\nFood is very tasty - they finally added the carbonara to their menu and I think about their focaccia very often. We always get exceptional service (would recommend bar seating). Just to note, the restaurant can get loud, but overall has good vibes!\""
+      }
+    ]
   }
 }

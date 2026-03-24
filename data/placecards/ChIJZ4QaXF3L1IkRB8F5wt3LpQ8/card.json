@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Speakeasy-ish, old-world railcar glamour; strong rating + late-night hours Tue–Sat.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The typical speakeasy fashion entrance sets up an exciting journey. Then the interior, lighting, ambiance, service, … all come together organically to echo the mysterious and intimate theme.\n\nDrinks are great. Pricy-ish as you would expect from this kind of establishments, but tasty!\"\n\n⭐⭐⭐⭐⭐ \"The valentines day drinks were all amazing. We enjoyed all 3. We are definitively coming back to try their regular drinks. Ambiance was dark and cozy\"\n\n⭐⭐⭐⭐ \"Great atmosphere, good music, mellow vibe for an easy night out. Covering all the classic cocktails, with a few original twists from the kitchen, it's a good all-round experience. The staff can be a little pushy, but otherwise, it's a nice spot for a slow-and-easy Saturday.\""
+      }
+    ]
   }
 }

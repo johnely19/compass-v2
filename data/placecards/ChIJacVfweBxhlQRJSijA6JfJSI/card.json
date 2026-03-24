@@ -6,20 +6,7 @@
     "name": "Nomo Nomo",
     "city": "Vancouver",
     "address": "Commercial Drive",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 5:00 – 11:00 PM",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:30 PM",
-      "Saturday: 5:00 – 11:30 PM",
-      "Sunday: 5:00 – 11:00 PM"
-    ],
-    "rating": 4.7,
-    "review_count": 163,
-    "phone": "(236) 480-0850",
-    "website": "https://nomonomo.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "604now.com",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "NEW (Sep 2025). Japanese snack bar with creative edge. Prawn toast on Chinese doughnut, Ibérico tomahawk. Outstanding cocktail program. Late-night-friendly. The kind of playful, inventive spot John loves. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had a great time at nomo nomo celebrating my friend’s birthday. Our waitress Rachel took amazing care of us. She noticed I didn’t finish the drink I ordered and kindly recommended another one, only charging me for the second drink. She also surprised us with dessert and a birthday candle for my friend, which was such a sweet touch. The service was wonderful and I loved their homemade gelato. We had a great night! 🎂\"\n\n⭐⭐⭐⭐⭐ \"If I could only recommend one restaurant in Vancouver, this would be it.\n\nHonestly, everything we tried was so good, not a single miss. The food is creative, well-balanced, and just genuinely delicious. You can really tell a lot of care goes into each dish.\n\nThe space itself is super cozy, with such a nice, relaxed vibe. Perfect for a date night, a chill dinner with friends, or just a place you want to sit and enjoy your time.\n\nAnd the cocktails… so good. Well-crafted, smooth, and actually memorable (not just pretty).\n\nOverall, amazing food, great drinks, and a lovely atmosphere.\nHighly recommend, this place is a must if you’re in Vancouver. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Nomo Nomo is a perfect spot on Commercial Drive for Japanese Izakaya style dining! Love how everything is in shareable sizes so you can try multiple dishes. Each dish is carefully thought out and complement each other so well. The drinks are so refreshing and innovative. While all the dishes and cocktails are absolutely delicious (you seriously can’t go wrong with any), my personal favourites are the King Salmon, Wagyu Tartare, Red Crab and Tonka and Ume for the drinks!\n\nThe space is designed with so many small details in mind, cool artwork and a cozy vibe. It’s perfect for a date night or catching up with friends/family!\n\nThe service is top-notch! Benedict, Wayne and the whole staff provide such great hospitality and are so friendly!\n\nWould highly recommend this place (they fill up fast so make sure to book a reso)!\""
+      }
+    ]
   }
 }

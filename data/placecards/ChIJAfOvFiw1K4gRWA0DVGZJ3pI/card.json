@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Brand-new breakfast sandwich shop, open 2 weeks, already has evangelical fanbase and lines. Middle Eastern-inflected sandwiches, just steps from Bathurst station. 4.8★ (60 reviews). Tue-Sun 9am-3pm. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Delicious new breakfast spot we stumbled into this morning. Our group got the za’atar & egg, foole & egg, and the egg & cheese and they were all a 10/10. Super flavourful and hearty. The owner is extremely sweet and personable. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"My new favourite sandwich shop! Love the veggie/vegan friendly options (so rare to find a good veggie breakfast!! And at such a great price??) The owner is so sweet and kind, and clearly has put a lot of love into the space and the food he makes. PLUS THE BREAD IS BAKED FRESH EVERY SANDWICH.  Can’t wait to go back!\"\n\n⭐⭐⭐⭐⭐ \"Takeout shop across from Bathurst subway station that sells Palestinian inspired breakfast sandwiches. The sandwiches are assembled like a flatbread pizza with the bread baked fresh at the time of ordering (takes about 2 mins) and then folded over into a sandwich. The smell of freshly baked bread fills the air, wrapping itself around you like a mother’s warm embrace.\n\nI got the egg and cheese sandwich, which had arugula and some sort of green sauce on it. The flavours were fresh and bright and delicious. I finished the sandwich feeling full, but not bloated or ashamed.\n\nGuy who runs the place was friendly and seemed to take a lot of pride in his shop, which was clean and nicely decorated. Makann is the kind of independent shop Toronto needs more of, and which feels good supporting.\""
+      }
+    ]
   }
 }

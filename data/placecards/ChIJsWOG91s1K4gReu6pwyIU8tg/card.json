@@ -6,7 +6,19 @@
     "name": "Emissions Record Shop",
     "city": "Toronto",
     "address": "Dundas West (basement)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 7:00 PM",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: 12:00 – 7:00 PM",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: 12:00 – 7:00 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 72,
+    "website": "http://recordshopemissions.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.reddit.com/r/vinyl/comments/13xeklq/",

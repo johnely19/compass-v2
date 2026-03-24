@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Natural wine imports (Keep6 agency) + craft beer from their hidden in-house brewery. Coffee bar too. Triple-threat: café, bottle shop, nano-brewery. 4.4★ (68 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Three of us ladies decided to indulge in a delightful dinner at Bottega Volo on College Street, and it was truly an unforgettable experience. Julian, the owner, graciously introduced himself and his warmth and professionalism added to the charm of the evening. He recommended several dishes, and we eagerly tried them all. The food was exceptionally fresh, piping hot, and absolutely delicious. The atmosphere was inviting, and the service was impeccable. We had such a wonderful time that we’re already looking forward to exploring more exciting options from their menu!\"\n\n⭐⭐⭐⭐⭐ \"Amazing spot. If you’re looking for special wines, beer and food that you can’t find anywhere else, this is the place. Love that they’ve taken over the old cinema and kept it authentic. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Favourite spot in little Italy hands down. Coffee and Italian pastries in the morning, amazing sandwiches for lunch, and arguably one of the best pantries in the city. The staff is always kind and helpful when trying to choose something from their massive wine selection.\""
+      }
+    ]
   }
 }

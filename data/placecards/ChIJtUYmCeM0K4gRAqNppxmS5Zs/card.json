@@ -6,13 +6,26 @@
     "name": "Type Books",
     "city": "Toronto",
     "address": "Queen West (883 Queen St W) + Junction + Forest Hill",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 6:00 PM",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: 11:00 AM – 6:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 462,
+    "phone": "(416) 366-8973",
+    "website": "https://typebooks.ca/"
   },
   "discovery": {
     "text": "Discovered via typebooks.ca"
   },
   "narrative": {
-    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7\u2605 (461 reviews).",
+    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7★ (461 reviews).",
     "blocks": []
   }
 }

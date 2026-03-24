@@ -138,21 +138,32 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
     }
   }
 
-  // Also pull identity fields not in blocks
+  // Also pull identity fields not in blocks (including enriched fields from #58)
+  const ident = v1.identity as Record<string, unknown> ?? {};
   const identityFields: Record<string, unknown> = {
-    phone: (v1.identity as Record<string, unknown>)?.phone,
-    website: (v1.identity as Record<string, unknown>)?.website,
-    price_level: (v1.identity as Record<string, unknown>)?.price_level,
-    rating: (v1.identity as Record<string, unknown>)?.rating,
-    user_rating_count: (v1.identity as Record<string, unknown>)?.user_rating_count,
-    menu_link: (v1.identity as Record<string, unknown>)?.menu_link,
-    lat: (v1.identity as Record<string, unknown>)?.lat,
-    lng: (v1.identity as Record<string, unknown>)?.lng,
-    address: (v1.identity as Record<string, unknown>)?.address,
-    city: (v1.identity as Record<string, unknown>)?.city,
+    phone: ident.phone,
+    website: ident.website,
+    price_level: ident.price_level,
+    rating: ident.rating,
+    user_rating_count: ident.user_rating_count,
+    review_count: ident.review_count,
+    menu_link: ident.menu_link,
+    lat: ident.lat,
+    lng: ident.lng,
+    address: ident.address,
+    city: ident.city,
+    hours: ident.hours, // enriched by #58
   };
   if (!rating && identityFields.rating) rating = identityFields.rating as number;
   if (!reviewCount && identityFields.user_rating_count) reviewCount = identityFields.user_rating_count as number;
+  if (!reviewCount && identityFields.review_count) reviewCount = identityFields.review_count as number;
+
+  // Also lift vibe blocks from narrative.blocks (enriched by #60)
+  for (const block of blocks) {
+    if (block.type === 'vibe' && block.title && block.body) {
+      narrativeBlocks.push({ title: block.title as string, body: block.body as string });
+    }
+  }
 
   // Merge images from manifest if available
   if (manifest) {
@@ -188,6 +199,7 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
       ...(identityFields.lng ? { lng: identityFields.lng } : {}),
       ...(identityFields.address ? { address: identityFields.address } : {}),
       ...(identityFields.city ? { city: identityFields.city } : {}),
+      ...(identityFields.hours ? { hours: identityFields.hours as string[] | Record<string, string> } : {}),
     },
   };
 }

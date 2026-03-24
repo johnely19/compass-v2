@@ -6,26 +6,20 @@
     "name": "Petite Thuet & Co.",
     "city": "Toronto",
     "address": "Leslieville (181A Carlaw Ave)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 7:30 AM – 5:00 PM",
-      "Tuesday: 7:30 AM – 5:00 PM",
-      "Wednesday: 7:30 AM – 5:00 PM",
-      "Thursday: 7:30 AM – 5:00 PM",
-      "Friday: 7:30 AM – 5:00 PM",
-      "Saturday: 7:30 AM – 5:00 PM",
-      "Sunday: 8:00 AM – 5:00 PM"
-    ],
-    "rating": 4.5,
-    "review_count": 22,
-    "phone": "(647) 265-9034",
-    "website": "https://petitethuet.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
     "summary": "Marc Thuet's bakery-cafe relocated to new Leslieville spot from 235 Carlaw. French-trained master baker. Croissants, bread, sandwiches, prepared foods. 4.7★ (20 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"They've relocated from their old location which was slightly north. This new location is a lot brighter.\n\nI really liked their croissants for their taste and value. Their almond croissant was flakely and generously filled with almond paste. I also tried their cookie, but thought it was okay.\n\nWould recommend and come back.\"\n\n⭐⭐⭐⭐⭐ \"My favorite croissant in the city. Marc is a genius and I'm very happy to have him in our neighborhood. The eclair is the best I've had in my life. His chou à la crème also, amazing. The breads,  outstanding.  Merci!\"\n\n⭐⭐⭐⭐⭐ \"Heard that this coffee spot moved from down the street. Very beautiful interior with some seating and also sale of dried goodies such as pasta sauces and noodles.\n\nThey have some amazing croissants that are perfectly crispy and soft and buttery on the inside. The cookie was a tad too sweet but was baked very well.\""
+      }
+    ]
   }
 }

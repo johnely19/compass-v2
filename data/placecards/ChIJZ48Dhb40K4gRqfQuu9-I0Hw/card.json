@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Brutalist icon aka Fort Book - one of Toronto's best modernist spaces, recently upgraded with 1,200 new study spaces",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Not sure about the library itself as a whole, but great place to see the cherry blossoms in Toronto 🌸 I really appreciate the accessibility of the cherry blossom trees. Way easier to get to than High Park!\n\nI’ll come back for the flowers next year, and maybe even go inside the library itself next time!\"\n\n⭐⭐⭐⭐⭐ \"Robarts, as U of Toronto faculty and student would affectionately called it, has been around since 1973. It is U of Toronto’s largest library and is a popular place to study with its many study pods. Its brutalist architecture with its massive, raw cement and unusual geometric design is a must-see for design and urban architecture buffs. The added bonus of cherry blossoms on its compound brought a touch of beauty not often seen at a library. The library is not opened to public.\"\n\n⭐⭐⭐⭐⭐ \"Robarts Library at the University of Toronto is one of the best libraries I’ve ever seen. It boasts an extensive collection of books, journals, and digital resources, making it a key destination for research across all disciplines. The library offers a variety of study spaces, from quiet corners for individual work to areas designed for group collaboration, all equipped with modern technology and research tools. Access requires a U of T student card, ensuring it remains a dedicated space for academic work. Robarts is a true hub for learning and research at the university.\""
+      }
+    ]
   }
 }

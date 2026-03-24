@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Legendary Williamsburg pizza",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"A New York staple that everyone needs to try at least once when visiting. Get in line before opening because this place gets busy fast.\n\nTheir pizza is classic, cooked to perfection with fresh ingredients. The pesto slice is a standout. Bright green sauce layered over bubbling mozzarella, finished with fresh basil and creamy dollops of ricotta. The crust is thin but sturdy, with that perfect balance of crisp bottom and chewy interior.\n\nDefinitely want to come back try more\"\n\n⭐⭐⭐⭐⭐ \"Delicious pizza! I’m very happy we got to try. Super thin crust, but not crunchy, which I love. The toppings were delicious as well. Def recommend the fig and bacon, pepperoni, pesto mushroom and the pesto sausage. Get the olive oil cake as well, it was the perfect dessert.\"\n\n⭐⭐⭐⭐⭐ \"Finally!!!!!\n\nI am usually not the biggest fan of American pizza - it is too greasy, too thick, has a little too much going on but wow this was a perfect slice.\n\na burrata pizza is a must. I got also New Yorker and omg it was so so good. The price are higher but so worth it. And they have beer which is a plus.\n\nPizza with a side of Perroni - incredible!\""
+      }
+    ]
   }
 }

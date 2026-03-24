@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Michelin-awarded Vietnamese from Vancouver. House & Home featured their beef pasta stir-fry as a 2026 food trend highlight. 4.5★ (1045 reviews), 4.7 on OpenTable (639 reviews). Cool Vietnamese street food with chef-driven intention. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I've been meaning to come here for a while but wow this whole meal blew me away. Everything was so flavourful and it was hard to pick a dish I loved the most. I had to eat in silence just to savour how good the food was!\n\nMy favourite dishes were probably the beef carpaccio and the Che Ba Mau dessert. But you can't go wrong I'd highly recommend the soft shell crab and the pho was excellent and definitely shareable for two.\n\nSerena was a wonderful server as well shoutout to her! Atmosphere was lovely especially with all the decorations for Lunar New Year!\n\nI've eaten a lot of nice food in the city but this is definitely one spot that left a really strong impression on me. I'll definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Might just be my favourite Toronto restaurant. The XO garlic noodles alone are enough to warrant this reaction. The interior is very classy and authentic; there's a mix of traditional Vietnamese decor, and the seating is very nice. The overall atmosphere is lively.\n\nThe food is absolutely spectacular, such a great fusion of Vietnamese flavours and dishes. The dessert is also great, such a nice Viet twist on common desserts, with traditional flavours and just incredible food. The service is also great. I have been about 3 times since I first tried this place a few months ago!\"\n\n⭐⭐⭐⭐ \"Drove all the way from Buffalo durning what was just a major snow storm in Toronto. But I am so glad that we got the chance to eat here. First of all the service was top notch. Quick and all of the staff was very friendly and personable. I loved the ambiance, from the decorations to the hip music. Cool looking bar as well. The food and cocktails were very good. We shared several plates between the 3 of us girls. My favorite was the Wagyu pho, the beef carpaccio, and the octopus skewers. Our server was so nice and was surprised we drove all the way there in a snow storm that she let us sample their famous sticky rice cake dessert. Let me tell you it was delicious. From the cake to the homemade gelato. Little things like that made the whole experience more Memorable. I would return again, hopefully when the weather is better!\""
+      }
+    ]
   }
 }

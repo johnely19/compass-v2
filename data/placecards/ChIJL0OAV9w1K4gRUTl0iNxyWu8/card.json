@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Coffee roastery + wine bar on the arts corridor; great pairing with a MOCA/gallery day.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Is this place in the middle of nowhere? Yes. But should you still go? Yes.\n\nI have been getting my beans from Ethica so im pretty excited to go to their roasters, and it doesn’t disappoint. It’s big but cozy, with lots of place to study and work your day away. It’s a Saturday that we went there and it was quite packed, but we still got lots of seats to choose from. The brick wall and the wooden decor gives a bit of ruggedness to the place, almost like an old factory.\n\nMy coffee comes with the purchase of the beans that I got from there, which is always nice. The staff picked a special type of bean for me (I think it’s Colombian) and it was good as usual, fragrant and bright. The place is also filled with art books for customers to read, very on brand on the location being right next to MOCA.\n\nIt’s really nice to just go there and unwind, and look out of the window and seeing all the big industrial buildings where pedestrians are  sparse and rare, and just enjoy the oasis in the middle of nowhere.\"\n\n⭐⭐⭐⭐⭐ \"I live close, so sometimes come in for cup of coffee. I love this place, it’s nice and warm atmosphere. I’ve been looking for good coffee since I moved to Canada. That’s not that easy as I thought. Quality of coffee here is on high level. One of the best I tried in Toronto. Area is peaceful and quiet cause it’s hidden away from crowded streets and I love it so much. Prices are high but reasonable, if you wanna cheap coffee go to Tim Hortons.\nAbsolutely recommend this place 🫶🏻\"\n\n⭐⭐⭐⭐⭐ \"This place is a rarity - it has spacious interior seating and great tasting coffee. There is plenty of seating available inside, even on a late weekend morning. There was also a live DJ that day.\n\nI ordered the flat white with their classic roast, which tasted great. Although I chose the classic roast, it didn’t taste too bitter and the latte art was cute too. They also have a good selection of pastries that seem very tasty, and I would definitely want to come back and try another time.\n\nThe staff seem very friendly here, and will take the time to explain the different roasts to you. When I was trying to take a photo of my drink on the counter, one of the staff kindly moved some other cups out of my way. Thank you!\""
+      }
+    ]
   }
 }

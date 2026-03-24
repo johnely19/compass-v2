@@ -28,6 +28,13 @@
   },
   "narrative": {
     "summary": "Vancouver's definitive natural wine bar. Intimate, tiny, exceptional natural wine list — BC favourites like Bella and Thorn & Burrow, grower Champagne, Loire Chenin Blancs. Farm-to-table bites. Innovative cocktails. Next to The Acorn restaurant. John's exact vibe. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This bar has officially made it to my list of favourites. We stopped by last night for a drink and dessert, and it did not disappoint. The warm chocolate cookie with roasted coconut ice cream was absolutely delicious, and my cocktail was both creative and full of flavour. I also tried my husband’s feature soda cocktail, it was refreshing and perfectly balanced.\n\nWe’ll definitely be back, especially since the featured cocktails change often. The selection of scotches, whiskeys, gin, and other spirits is impressive, and the service was warm and welcoming. A great spot all around!\"\n\n⭐⭐⭐⭐ \"Charming, intimate cocktail bar with daily features and small plates. The Red Door cocktail was a standout—layered, balanced, and delicious. Loved the beef croquette and sablefish too. Portions are small but high quality. No happy hour, but worth it. Great spot for creative drinks. Highly recommend booking ahead!\"\n\n⭐⭐⭐⭐⭐ \"I ordered a cocktail called I believed “Mr. soy boy”? It was so good! I had two. Definitely going back to try more.\""
+      }
+    ]
   }
 }

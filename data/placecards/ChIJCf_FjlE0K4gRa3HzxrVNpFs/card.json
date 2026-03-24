@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Japanese ceramics, tea tasting, kokedama. Founded by Mika Sato from Hiroshima — her partner Satoshi Yoshikawa is a trained Japanese potter (studied under Abe in Tokyo). Intimate slow-living ethos. Deep wabi-sabi spirit. 4.8★ (119 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Mika’s tea tasting sessions have brought her beautiful dream to life! Whoever read this review, please contact them and try!\nI had such a wonderful time — her deep knowledge and passion guided me to appreciate tea on a whole new level.\nI love this hidden gem 💎 ✨️\"\n\n⭐⭐⭐⭐⭐ \"Fantastic store with wonderful owner and staff. This store has been so helpful and informative in helping me prepare my loft for my 50th birthday party. Orchids, air plants, succulents, snake plants, ficus... Lots of selection and beautiful hand made pots. Note that my photos are not in the store but of plants in my own place that were purchased at Mika. Highly recommended.\"\n\n⭐⭐⭐⭐⭐ \"The coziest gift shop with great selection and the nicest staff!\nI recently went to Mika to pick out Christmas gifts for my friends and I was absolutely in love with the shop. The vibe was so great and the people there are both friendly and helpful. Special shoutout to Luna who helped me pick out a great gift box and also gave me advice on taking care of my house plants. It was overall a great experience and I will definitely recommend Mika for holiday shopping!!\""
+      }
+    ]
   }
 }

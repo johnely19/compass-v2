@@ -6,13 +6,26 @@
     "name": "Ben McNally Books",
     "city": "Toronto",
     "address": "Queen East / Old Town (108 Queen St E)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 5:00 PM",
+      "Tuesday: 10:00 AM – 5:00 PM",
+      "Wednesday: 10:00 AM – 5:00 PM",
+      "Thursday: 10:00 AM – 5:00 PM",
+      "Friday: 10:00 AM – 5:00 PM",
+      "Saturday: 10:00 AM – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 331,
+    "phone": "(416) 361-0032",
+    "website": "https://www.benmcnallybooks.com/"
   },
   "discovery": {
     "text": "Discovered via benmcnallybooks.com"
   },
   "narrative": {
-    "summary": "Family-run indie institution. Beautiful space, handpicked curation across all genres. The kind of bookstore where the staff recommendations are better than any algorithm. 4.7\u2605 (330 reviews).",
+    "summary": "Family-run indie institution. Beautiful space, handpicked curation across all genres. The kind of bookstore where the staff recommendations are better than any algorithm. 4.7★ (330 reviews).",
     "blocks": []
   }
 }

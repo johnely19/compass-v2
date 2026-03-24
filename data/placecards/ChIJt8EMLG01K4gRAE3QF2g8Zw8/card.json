@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Dinner AND dancing with natural wine - Saturday DJ nights, neighborhood fixture on College St",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Beautiful spot for dinner. The atmosphere is beautiful and cozy. The food is incredible and light with sharing plates that fit a wide variety of tastes. Highly recommend asking what their specials for the night are. The tuna tartare was a standout! This is an incredible spot for a date night. Definitely recommend.\"\n\n⭐⭐⭐⭐⭐ \"The duck confit was so tender and filling & was my first time trying a calamari with a sweeter sauce - highly recommended. The tuna tartar came with seaweed salad and roasted nori - super delish pairing. The beef tartar was solid too.\"\n\n⭐⭐⭐⭐⭐ \"An absolute masterclass in atmosphere and vibes. I go here on a regular basis for the music and late night dancing. The sound system is incredible, and they spin vinyl. A lot of artists frequent here.\n\nAs if this already wasn’t enough, they have a delicious lunch/dinner menu cooked by some magical hands.\nThe pave fries are insane\nStaff is super friendly and honestly a well rounded and really cool place to be\n\nOne of my favourite spots in the city, hands down\""
+      }
+    ]
   }
 }

@@ -6,26 +6,20 @@
     "name": "Sanagan's Meat Locker",
     "city": "Toronto",
     "address": "Kensington Market",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 10:00 AM – 6:00 PM",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 10:00 AM – 6:00 PM",
-      "Friday: 10:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 10:00 AM – 5:00 PM"
-    ],
-    "rating": 4.7,
-    "review_count": 474,
-    "phone": "(416) 593-9747",
-    "website": "http://www.sanagansmeatlocker.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via torontolife.com"
   },
   "narrative": {
     "summary": "Whole-animal butchery, ethically sourced Ontario farms. The institution. Sausages, charcuterie, bone broth — everything made in-house. 4.7★ (470 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Sanagan’s has been my butcher since they opened on Baldwin Street in Kensington Market and now they have three locations.  One of the biggest draws for me is that they only buy from small (often family-owned) Ontario farms that handle the animals humanely.  Another plus is that Peter hires really good people…Claire, and Angelique in particular are awesome but I have never had a bad experience with anyone that works there.  They are all helpful, friendly and seem to enjoy their work. They will vacuum-pack your meat which is great when you live alone because you can get your wings, ground meat etc. in 1lb packages. Their Jerk marinade is just as good as if I made it myself. They have great meat pies, sausages, and other ready-made fare, and their rotisserie chicken is great too.  They also carry some of my fave brands like Kozlik’s.  Peter Sanagan  was a chef and his cookbook is great; it also shows all the cuts and how best to cook with them.  And they give you reward points which adds up nicely…and no card or fob…just your phone number so it is easy.  Bottom line, for me, a butcher that was also a chef, and sells humanely-raised meat is a winning combination.\"\n\n⭐⭐⭐⭐⭐ \"Amazing selection of all kinds of meat, deli, sausages, sauces, condiments, broths, prepared and frozen foods. Expect to pay more than the regular grocery store but you know you're getting good quality.\n\nSanagan's Meat Locker is not just another butcher shop, it's a meat lover's paradise. They cater to diverse palate ensuring there's something for everyone including offering seasonal and local game meats.\n\nBut beyond the exceptional quality of their meats, what truly elevates Sanagan's is their outstanding customer service. The staff is not only knowledgeable but also incredibly friendly. They take the time to understand your needs and preferences and provide personalized recommendations.\n\nThis is my go to place for when I need to buy quality meat to make a perfect dinner at home or impress guests for that special occasions.\"\n\n⭐⭐⭐⭐⭐ \"Great experience. Super friendly, fast and the portions are fresh and affordable. I just ordered some lamb and they took the bones out for me and everything. The frozen was CAD2.50 for like 200gram. Really affordable. Highly recommend.\""
+      }
+    ]
   }
 }

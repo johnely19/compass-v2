@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "6-seat private dining in a Leslieville apartment. One seating nightly at 6:30pm, French-driven tasting menu guided by host Spike. Bookable on OpenTable. Toronto Life featured it as 'you practically need to apply.' 5.0★. The ultimate intimate dining.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Not just a 'dinner' but a beautiful evening dining experience. The chef hosted 6 of us for the entire evening and meticioulslcy  created some the most delicious dishes we've ever had!  To date, this is my favourite dining experience and beautiful manner in which to spend an evening in an exclusive setting with friends. Definitely elevating the dining scene in Toronto. Highly recommended.\""
+      }
+    ]
   }
 }

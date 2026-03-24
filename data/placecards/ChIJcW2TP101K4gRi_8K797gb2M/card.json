@@ -6,20 +6,7 @@
     "name": "Boogie",
     "city": "Toronto",
     "address": "West Queen West (Queen & Gladstone)",
-    "type": "bar",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 7:00 PM – 2:00 AM",
-      "Thursday: 7:00 PM – 2:00 AM",
-      "Friday: 7:00 PM – 3:00 AM",
-      "Saturday: 7:00 PM – 3:00 AM",
-      "Sunday: 5:00 PM – 2:00 AM"
-    ],
-    "rating": 4.6,
-    "review_count": 71,
-    "phone": "(416) 992-4039",
-    "website": "http://www.boogieonqueen.com/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via https://www.boogieonqueen.com/",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Dedicated listening bar—music-first room, late-night hang; feels like the “go for the system” spot.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Arrived before 11 and the bar was at capacity already.  After a short wait we were in. Great night of music with a great crowd.\"\n\n⭐⭐⭐⭐⭐ \"I absolutely love this crew. The owners did a fantastic job of renovating this space. Offering a beautiful bar and sound system, this is a great place to both dance and lounge. Their regulars are often veterans of Toronto's underground electronic music scene. If you have a passion for electronic music, this is a great place to frequent, dance, and network.\"\n\n⭐⭐⭐⭐⭐ \"The music here had me having the best night I’ve had in so long. Great small vibe with just the right amount of people. The bartender, Chris, was the sweetest. Definitely an underrated, lowkey and groovy spot.\""
+      }
+    ]
   }
 }

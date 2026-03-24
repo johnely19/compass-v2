@@ -28,7 +28,14 @@
   },
   "narrative": {
     "summary": "Elevated Thai by chef Angus An — West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"The dishes were full of flavor, with a great balance of sweetness, spice, and acidity. The spices and herbs instantly reminded me of Thailand. The banana blossom salad was especially memorable — my first time trying it, and a very interesting experience. The desserts, panna cotta and cashew cake, were also quite good.\n\nThe only drawback is the pricing, which feels a bit high for the seafood quality, could be better or more consistent. Service was excellent and the staff were very friendly, though the space is somewhat cramped and can get noisy, especially near the entrance.\"\n\n⭐⭐⭐⭐⭐ \"Incredible on all fronts. Every dish featured high-quality ingredients and delivered bold, memorable flavors. The cocktail was fun, the service was top-notch, and the restaurant itself is beautifully decorated. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Very friendly staff. The Dine out dinner menu had enough options for us to choose from. You could probably enjoy the same menu more than once.\n\nAtmosphere lost points because there’s a large freezing draft every time the door opens. Not much they can really do about that though.. bring an extra blanket or a coat if you feel cold easily.\""
+      }
+    ]
   },
   "manifest": {
     "images": [

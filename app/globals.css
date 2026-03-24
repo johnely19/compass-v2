@@ -3451,3 +3451,100 @@ body {
   color: var(--text-primary);
   border-color: var(--text-muted);
 }
+
+
+/* ---- Hours Widget (#64) ---- */
+.hours-widget {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-secondary);
+}
+
+.hours-widget-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.hours-widget-header:hover {
+  background: var(--bg-elevated);
+}
+
+.hours-widget-today {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex: 1;
+}
+
+.hours-widget-day {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  min-width: 70px;
+}
+
+.hours-widget-time {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.hours-widget-status-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.hours-status-badge {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 100px;
+}
+
+.hours-status-open    { background: rgba(74,222,128,0.15); color: #4ade80; }
+.hours-status-closed  { background: rgba(248,113,113,0.15); color: #f87171; }
+.hours-status-warn    { background: rgba(251,191,36,0.15); color: #fbbf24; }
+.hours-status-soon    { background: rgba(96,165,250,0.15); color: #60a5fa; }
+
+.hours-widget-toggle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.hours-widget-full {
+  border-top: 1px solid var(--card-border);
+  padding: var(--space-sm) 0;
+}
+
+.hours-row {
+  display: flex;
+  padding: 4px var(--space-md);
+  font-size: 0.85rem;
+}
+
+.hours-row-today {
+  background: rgba(59,130,246,0.08);
+  font-weight: 600;
+}
+
+.hours-row-day {
+  width: 40px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.hours-row-time {
+  color: var(--text-primary);
+}

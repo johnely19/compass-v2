@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Toronto's premier architecture + design bookstore. City's largest selection of architecture, urbanism, and graphic design books. Independent. Inside 401 Richmond — the creative nerve centre. Book launches, design objects. 4.6★ (92 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Anyone interested in design, unique objects, and unique books really needs to go here. It's a place where you easily get cought up browsing and find no shortage of things that would be neat to have. They sell quite a wide variety of things. Must see for yourself.\"\n\n⭐⭐⭐⭐⭐ \"Lots of unique and great gift ideas for the design/creative folks in your life! Definitely a place to stop by for that interesting gift for someone's birthday or Christmas. Love the professional graphic design related items and lots of diverse products from houseware, books, stationary, toys and greeting cards to name a few. Everything is well laid out and very nice showcase of the products. Also ask the staff if you need assistance, they can search up items on their computers!\"\n\n⭐⭐⭐⭐⭐ \"If you love design,  will love this store. It’s like half a bookstore and half home decor. They have a variety of other items too. I actually discovered this retailer from a Instagram account who was showing some of their items. I have been in twice since then and this is now where I get cool gifts for all my family and friends. Everything I have gotten from here has been adored  by whoever I gave it to. I feel like I’m not sophisticated enough to understand more of their technical books, magazines and design aesthetic but I have found the staff to be exceptionally helpful and while I felt that way. They definitely make you feel like you are, which is so refreshing because the design world can be snooty. This is such a cool spot downtown and really they just have cool things that are unique and almost defy trend. If you go you will definitely become a more styled person, you can’t be around such beauty and style and not pick some of it up. Also the store itself like the building, is also just beautiful.\""
+      }
+    ]
   }
 }

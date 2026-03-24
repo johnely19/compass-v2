@@ -14,6 +14,13 @@
   },
   "narrative": {
     "summary": "Day-to-night hybrid (coffee + cocktails) with strong music/vinyl 'listening bar' vibe; consistently high ratings and late hours.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had a chance to check out this amazing place last week for dinner collab with the incredible Chef FT Funmilade Taiwo from Lamureninc for their \"Do Me Nice\" dinner series and it was just incredible! The food curated by the chef was such a special one and I was happy to bring 4 friends with me as we all had a great time.\n\nThe service was great and I was wondering if this will be a monthly series with Do Me Nice there as this will be something that me and my friends will definitely look for to attend every month. Well done! This is such an incredible way to bring the community together, highlight such a talented chef and enjoy good food and music!\n\nPlease, bring them back!!!!\"\n\n⭐⭐⭐⭐ \"915 Dupont-Rooms Coffee has become one of our absolute go to spots. I’ve been here several times with my husband, for coffee, matcha, lunch during the day, and even for evening hangs with a DJ and great music. I celebrated my birthday here, dancing the night away.\n\nDuring the day, it’s a vibrant, cozy coffee shop with amazing drinks and a really chill vibe. At night, it completely transforms, the music is great, and the sound system is honestly pretty sick. I live just 5 minutes away, and it’s hands down our favorite place for coffee dates or dancing the night away..\n\nThe only small thing I’d mention is that the space felt a little dusty and could use a good vacuum and cleaning but overall, such a fun and versatile spot!\"\n\n⭐⭐⭐⭐⭐ \"DuPont 915 has been one of my fav secret spots in my neighborhood. I love it for the aesthetic interior, the unique curated drink menu, the DJ spinnin boogie bangers & the welcoming waiters. I’ve been told the food is decent but there aren’t many vegetarian options. They have small snacks to try which is nice with a drink. Sometimes they have chefs trying a new menu here so you get to try foods from Toronto chefs before anyone else!\n\nThis a great spot to visit with a small group. It’s a small spot so it can get packed if it’s busy. They have the best comfy seating too. I could relax all day. I like how it’s a cafe during the day and bar at night. The bathrooms were very clean as well. Definitely visit if you haven’t already!\""
+      }
+    ]
   }
 }

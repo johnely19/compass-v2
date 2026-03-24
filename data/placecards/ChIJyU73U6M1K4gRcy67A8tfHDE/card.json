@@ -6,7 +6,20 @@
     "name": "AM Coffee Studio",
     "city": "Toronto",
     "address": "Dundas West/Roncesvalles",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 7:00 AM – 7:00 PM",
+      "Tuesday: 7:00 AM – 7:00 PM",
+      "Wednesday: 7:00 AM – 7:00 PM",
+      "Thursday: 7:00 AM – 7:00 PM",
+      "Friday: 7:00 AM – 7:00 PM",
+      "Saturday: 8:00 AM – 5:00 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 274,
+    "phone": "(416) 588-0531",
+    "website": "http://www.amcoffeestudio.com/"
   },
   "discovery": {
     "text": "Discovered via TheBestToronto 2025"

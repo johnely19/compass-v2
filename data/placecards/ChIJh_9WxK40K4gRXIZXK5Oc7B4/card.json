@@ -11,13 +11,13 @@
     "phone": "(647) 351-2235",
     "website": "http://www.portici.ca/",
     "hours": [
-      "Monday: 12:00 \u2013 9:00 PM",
-      "Tuesday: 12:00 \u2013 9:00 PM",
-      "Wednesday: 12:00 \u2013 9:00 PM",
-      "Thursday: 12:00 \u2013 9:00 PM",
-      "Friday: 12:00 \u2013 10:00 PM",
-      "Saturday: 12:00 \u2013 10:00 PM",
-      "Sunday: 12:00 \u2013 7:00 PM"
+      "Monday: 12:00 – 9:00 PM",
+      "Tuesday: 12:00 – 9:00 PM",
+      "Wednesday: 12:00 – 9:00 PM",
+      "Thursday: 12:00 – 9:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 7:00 PM"
     ],
     "price_level": 2,
     "rating": 4.6,
@@ -32,27 +32,33 @@
       {
         "id": "block-1",
         "title": "The Spot",
-        "body": "\ud835\udde3\ud835\udde2\ud835\udde5\ud835\udde7\ud835\udddc\ud835\uddd6\ud835\udddc\n\ud83d\udccd 6 Scollard St, Yorkville\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\n\nTucked just off the main Yorkville drag on Scollard Street. Family-owned and operated \u2014 you can feel it in the warmth of the service. The space is well-lit, unpretentious, cozy without being cramped.\n\n\"We believe in the simple pleasures of life. Good food, fresh ingredients, and awesome vibes.\""
+        "body": "𝗣𝗢𝗥𝗧𝗜𝗖𝗜\n📍 6 Scollard St, Yorkville\n———————————————\n\nTucked just off the main Yorkville drag on Scollard Street. Family-owned and operated — you can feel it in the warmth of the service. The space is well-lit, unpretentious, cozy without being cramped.\n\n\"We believe in the simple pleasures of life. Good food, fresh ingredients, and awesome vibes.\""
       },
       {
         "id": "block-2",
         "title": "The Food",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n**PINSA** (Roman-style flatbread)\n\u2022 Margherita \u2014 $19\n\u2022 Pinsa Yorkville \u2014 $28 \u2b50\n  Olive oil base, arugula, prosciutto, burrata, pistachios\n\u2022 Pinsa Contadina \u2014 $25\n  Pesto, zucchini, bell peppers, mushrooms, burrata\n\n**PASTA** (all can be made vegetarian, dairy-free, or gluten-free)\n\u2022 Rigatoni Rosso \u2014 $16\n  San Marzano tomato sauce, parmesan\n\u2022 Spaghetti Bolognese \u2014 $23\n  Ground beef, homemade San Marzano sauce\n\u2022 Rigatoni Alla Vodka \u2014 $26 \u2b50\n  Vodka sauce, bacon, asparagus, sundried tomato\n\u2022 Linguine al Salmone \u2014 $29\n  Seared salmon, mushrooms, spinach, white cream, lemon\n\u2022 Spaghetti Frutti Di Mare \u2014 $29\n  Shrimps, scallops, mussels, rose sauce\n\n**SPECIALS**\n\u2022 Nonna's Meatballs \u2014 $23 \u2b50\n  Homemade San Marzano sauce, served with bread\n\u2022 Saffron Mushroom Risotto \u2014 $29\n  Arborio, mushrooms, parmesan, saffron, cream\n\u2022 Beef Lasagna \u2014 $26\n  Ground beef, San Marzano, mozzarella, b\u00e9chamel\n\u2022 Pollo Paradiso Platter \u2014 $28\n  Chicken, asparagus, grilled zucchini, cherry tomato"
+        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n**PINSA** (Roman-style flatbread)\n• Margherita — $19\n• Pinsa Yorkville — $28 ⭐\n  Olive oil base, arugula, prosciutto, burrata, pistachios\n• Pinsa Contadina — $25\n  Pesto, zucchini, bell peppers, mushrooms, burrata\n\n**PASTA** (all can be made vegetarian, dairy-free, or gluten-free)\n• Rigatoni Rosso — $16\n  San Marzano tomato sauce, parmesan\n• Spaghetti Bolognese — $23\n  Ground beef, homemade San Marzano sauce\n• Rigatoni Alla Vodka — $26 ⭐\n  Vodka sauce, bacon, asparagus, sundried tomato\n• Linguine al Salmone — $29\n  Seared salmon, mushrooms, spinach, white cream, lemon\n• Spaghetti Frutti Di Mare — $29\n  Shrimps, scallops, mussels, rose sauce\n\n**SPECIALS**\n• Nonna's Meatballs — $23 ⭐\n  Homemade San Marzano sauce, served with bread\n• Saffron Mushroom Risotto — $29\n  Arborio, mushrooms, parmesan, saffron, cream\n• Beef Lasagna — $26\n  Ground beef, San Marzano, mozzarella, béchamel\n• Pollo Paradiso Platter — $28\n  Chicken, asparagus, grilled zucchini, cherry tomato"
       },
       {
         "id": "block-3",
         "title": "The Vibe",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde9\ud835\udddc\ud835\uddd5\ud835\uddd8\n\n**What people say:**\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Blown away by this meal! Family owned and run, produce tasted fresh, high quality, authentic. We live around the corner and cannot wait to make this our regular spot.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Food was delicious, beautifully presented, and full of flavor. The service was amazing \u2014 our host was so warm, attentive, and helpful.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The eggplant dip had wonderful kick to it \u2014 a good char and smokey heat. The mushroom risotto was so creamy and seasoned so well.\"\n\n**Honest note:** A few recent reviews mention inconsistent service and some dishes being heavy on cream/cheese. The overall rating is excellent (4.6\u2605), but it's not flawless \u2014 seems to depend on the day."
+        "body": "𝗧𝗛𝗘 𝗩𝗜𝗕𝗘\n\n**What people say:**\n\n⭐⭐⭐⭐⭐ \"Blown away by this meal! Family owned and run, produce tasted fresh, high quality, authentic. We live around the corner and cannot wait to make this our regular spot.\"\n\n⭐⭐⭐⭐⭐ \"Food was delicious, beautifully presented, and full of flavor. The service was amazing — our host was so warm, attentive, and helpful.\"\n\n⭐⭐⭐⭐⭐ \"The eggplant dip had wonderful kick to it — a good char and smokey heat. The mushroom risotto was so creamy and seasoned so well.\"\n\n**Honest note:** A few recent reviews mention inconsistent service and some dishes being heavy on cream/cheese. The overall rating is excellent (4.6★), but it's not flawless — seems to depend on the day."
       },
       {
         "id": "block-4",
         "title": "The Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$ (Moderate \u2014 excellent value for Yorkville)\n\n**Lunch for 2:** $60-80 (pasta + pinsa + drinks)\n**Dinner for 2:** $80-120 (apps, mains, drinks)\n\n\ud83d\udcde (647) 351-2235\n\ud83c\udf10 portici.ca\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6 (Sunday)\n12:00 \u2013 7:00 PM \u2713 Open now\n\n\ud835\udddf\ud835\udde2\ud835\uddd6\ud835\uddd4\ud835\udde7\ud835\udddc\ud835\udde2\ud835\udde1\n6 Scollard St \u2014 one block north of Bloor, just off Yonge. Quieter street, easy to walk right past if you're not looking.\n\n**Reservations:** Walk-ins usually fine for lunch, recommend booking for dinner.\n**Book:** portici.ca/reservations"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$ (Moderate — excellent value for Yorkville)\n\n**Lunch for 2:** $60-80 (pasta + pinsa + drinks)\n**Dinner for 2:** $80-120 (apps, mains, drinks)\n\n📞 (647) 351-2235\n🌐 portici.ca\n\n𝗛𝗢𝗨𝗥𝗦 (Sunday)\n12:00 – 7:00 PM ✓ Open now\n\n𝗟𝗢𝗖𝗔𝗧𝗜𝗢𝗡\n6 Scollard St — one block north of Bloor, just off Yonge. Quieter street, easy to walk right past if you're not looking.\n\n**Reservations:** Walk-ins usually fine for lunch, recommend booking for dinner.\n**Book:** portici.ca/reservations"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Bay/Bloor intersection\nTo: 6 Scollard St, Toronto\n\n\u2022 Walking: 4-5 mins\n\u2022 From Bay Station: Exit north, walk up Bay St, turn left on Scollard\n\u2022 From Bloor-Yonge: Exit north, walk west on Bloor, turn right on Scollard\n\nBest modality: WALKING \u2b50\nWhy: It's right there \u2014 no transit needed."
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Bay/Bloor intersection\nTo: 6 Scollard St, Toronto\n\n• Walking: 4-5 mins\n• From Bay Station: Exit north, walk up Bay St, turn left on Scollard\n• From Bloor-Yonge: Exit north, walk west on Bloor, turn right on Scollard\n\nBest modality: WALKING ⭐\nWhy: It's right there — no transit needed."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Dined here tonight with my whole family—husband, parents, in-laws—and we were all blown away by this meal! Love that the ambiance is very lowkey, well lit, family owned and run. We had high hopes based on the reviews, and everything was truly exceptional. From the salads to the soup, to the bruschetta, to an array of mains (pasta, meatballs, lasagna). The produce tasted fresh, high quality, authentic. We are non-pork eaters and so we truly appreciated the ability to be able to order lasagna and meatballs worry free as the menu indicated that they were made entirely from beef vs. the traditional blend with ground pork. The menu is just long enough with all of the key Italian delicacies. My husband and I live just around the corner and we cannot wait to start to make this place our regular dining choice. Highly recommend; worth giving this place a try.\"\n\n⭐⭐⭐⭐⭐ \"We had a wonderful experience at Portico! The food was delicious, beautifully presented, and full of flavor. The service was amazing — our host was so warm, attentive, and helpful throughout. We truly loved the overall vibe and can’t wait to visit again. Also to mention we had kids along and they were given small activities for good engagement. Appreciate it.\"\n\n⭐⭐⭐⭐⭐ \"Please take the time to enjoy the delicious food made at portici. I ordered way to much for one person, but thanks okay, I definitely look forward to eating whag I ordered later. It was that tasty, and flavorful. I ordered the eggplant dip with side salad, the mushroom risotto, and lastly their seasonal pumpkin pudding.\n\nThe eggplant dip had wonderful kick to it, like a good char and smokey heat. It wasn't spicy at all, would recommend if you like eggplant. The mushroom risotto was so creamy and seasoned so well. I also would recommend if you like mushrooms.\n\nIf I ever make it back to toronto this will be my first stop. Oh yes the service was wonderful. I was by myself and came at slower time. But my server was kind attentive, and fun.\""
       }
     ]
   },

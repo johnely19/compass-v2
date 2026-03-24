@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Relaxed vibe, cheese and charcuterie focus, always-changing interesting wine list - casual neighborhood anchor",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Great wine bar located on Dundas W Toronto. The ambience was amazing and the wine selection was comprehensive. However, the biggest surprise for me was the food. It surpassed my expectations.\n\nWe ordered Pedro Ximenez wine - which we rarely see in most wine bars. The wine itself was interesting but the sherry notes were too prominent for my liking.\n\nThe food was excellent. We picked the kampachi crudo (my fave), squash, gnocchi (least fave) and the market fish. The nori jam on the kampachi was the highlight for me. Additionally, it was great to see the menu is seasonal.\n\nAll in all, it was a lovely experience and I’d recommend it!\"\n\n⭐⭐⭐⭐⭐ \"Such a great, cozy environment surrounded by wine and plants! Staff is super lovely and friendly. Great variety of wine and interesting dishes to choose from. I went for the hen of the woods mushroom dish, rarely see it being on menu and it was tasty! Definitely recommend and will be back.\"\n\n⭐⭐⭐⭐⭐ \"What a wonderful place. Great wine selection lovely  service. The focaccia bread is made with love. Have everything on the menu at least once. It's very delightful. Oh the salmon ceviche crudo melange... Order it twice!!🤘\""
+      }
+    ]
   }
 }

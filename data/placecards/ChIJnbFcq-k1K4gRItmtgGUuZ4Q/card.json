@@ -6,25 +6,20 @@
     "name": "Subtext Coffee Roasters",
     "city": "Toronto",
     "address": "Junction/Bloor West",
-    "type": "cafe",
-    "hours": [
-      "Monday: 9:00 AM – 3:00 PM",
-      "Tuesday: 9:00 AM – 3:00 PM",
-      "Wednesday: 9:00 AM – 3:00 PM",
-      "Thursday: 9:00 AM – 3:00 PM",
-      "Friday: 9:00 AM – 3:00 PM",
-      "Saturday: Closed",
-      "Sunday: Closed"
-    ],
-    "rating": 4.8,
-    "review_count": 182,
-    "website": "https://www.subtext.coffee/"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via Sprudge 2025"
   },
   "narrative": {
     "summary": "Elite light roast specialty roaster, competition-level quality, cited as top Toronto roaster",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Their rotating and extensive coffee selection makes me want to come back again! Affordable pourover that is executed with skill and passion.\n\nFriendly staff, chill vibe to sit and chat. Mostly tall bar seating, few seated booths, and interesting bleacher setup overseeing the coffee bar. Roasted beans and coffee brewing gear available to purchase.\n\nFree street parking but for some reason, the entire street was already full at 10am on a Friday.\n\nI really enjoyed the experience and hoping to try more of the coffees there next time.\"\n\n⭐⭐⭐⭐⭐ \"Alex kindly shared his knowledge on the process type.   The Barista lady I interacted with found the exact coffee beans I was looking for and I really enjoyed her service and her kindness she shared with me today :) Thank you SubTextTeam for this blissful moment of Cortado ☕️ and this new Coffee Beans, Toby! Well done 💯\"\n\n⭐⭐⭐⭐⭐ \"We bussed out of our way for this one since we had a good recomendation for it.  You can tell they focus just on good beens and good coffee which is a huge plus in my book.  I think they said they didnt do syrups or fermented (but I may be remembering that wrong).  We ended up getting just a coldbrew which was great with the heat.  They have a variety of good seating, some of which is kind of unusual and bleacher-like but works.  The staff is pretty friendly and knowlegable as well.  It may be a bit out of the way but I think its worth it.\""
+      }
+    ]
   }
 }

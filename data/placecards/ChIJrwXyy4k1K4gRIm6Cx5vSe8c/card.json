@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Saigon pho institution (est. 1970, 50+ years). Michelin Bib Gourmand in Ho Chi Minh City. Herbs and spices flown in from Vietnam. Just opened downtown — their first location outside Richmond Hill. 3.7★ (3 reviews — brand new).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Pho Le is what Baldwin St needed: excellent Pho. I came here during their soft opening.\n\nI got the combo: 1 soup plus 1 appetizer. Fresh spring roll was absolutely amazing: fresh, and the sauce that cane with it was outstanding. The House special pho was great, you can taste the cleanness in the soup without any MSG added, perfectly balanced meaty flavours with a hint of sweetness that comes from the vegetables. Paying an extra $3 and you get upside your Pho. My, however, was lacking beed slices, hence the low rating. Passed the comment to the servers. I will come back again and try the other dishes. Did not have dessert or any of their speciality drinks, as I was full.\"\n\n⭐⭐⭐⭐⭐ \"I’ve gone twice in less than 24hrs!  For dinner and then for lunch the next day.\nOrdered: Bun Rieu, Pho Ga (chicken) and the combo pho dac biet + appetizer (spring rolls) and added the Thai green tea.\nI loved the pho dac biet, spring rolls and Thai green tea!  So delicious!\nWill definitely be coming back!\"\n\n⭐⭐⭐⭐⭐ \"I highly recommend the Pho Dac Biet combo with fried chicken wings in fish sauce. The broth is sweet and fragrant with the aroma of beef bones, rich and flavorful. The meat is tender and juicy. The prices are reasonable, the service is good, and the space is clean and cozy. I will definitely come back to try other dishes!\""
+      }
+    ]
   }
 }

@@ -27,7 +27,14 @@
   },
   "narrative": {
     "summary": "Small-batch craft brewery with a cozy tasting room. Great complement to Backcountry if doing a Squamish brewery crawl with Seb. Rating 4.3/5 (396 reviews). Local favourite.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Told my folks I was working in Squamish for the week and my old man suggested I go here because his former Dead Frog Brewery coworker works here as a brewmaster now.\n\nPlace was nice and toasty which was nice considering there’s still a nip in the air. Staff were friendly and were knowledgeable about their products. A-Frame Brewing Co. also offers non-alcoholic drinks which I think is a great addition because it means kids and sober people can enjoy the business as well.\nA-Frame Brewing Co. boasts a pretty patio with fire pits as well which meant I could enjoy my cold beer outside on a cold day, especially since it’s supposed to rain the rest of the week.\n\nThey’re also partnered with the food truck, Flipside Burgers, which was also really tasty and paired perfectly with the Nitro Stout beer I had.\n\nIn fact, I enjoyed the beer so much I bought this 650mL 10.2% Alcohol bottle of Imperial Stout to bring back to my hotel. I think the wax is unneeded and, without a discernible pull tab, makes popping open and enjoying it a bit of a chore, especially since it’s a bottle cap and thus you can’t just corkscrew through the top of the wax anyways. Still really tasty though. The cocoa really comes through.\n\nOf course it’s quite pricy but every place is nowadays so it is what it is. Will definitely go back if I ever come back to Squamish on a nice day.\"\n\n⭐⭐⭐⭐⭐ \"Nice place. The beers are overrated. I think the people go there for the burgers from Flipside, they look so delicious\"\n\n⭐⭐⭐⭐ \"Pretty looking brewery beside the taco food truck. I like the aesthetic inside and they have a nice wooden patio for sitting and enjoying. It’s a nice place to relax and have some beers especially if you’re close to the sandman hotel. There are other amenities and the area so you can always find your way here if you’re just going on a walk.\""
+      }
+    ]
   },
   "manifest": {
     "images": [

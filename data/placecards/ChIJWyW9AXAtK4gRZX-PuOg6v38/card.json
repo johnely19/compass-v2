@@ -17,6 +17,13 @@
   },
   "narrative": {
     "summary": "World premiere Afrofusion dance-theatre epic. Mensah is a Dora-nominated choreographer who's worked with National Ballet School. Fuses West African movement, modern dance, theatre. March 13–15 (just concluded but reviews emerging — artist to watch).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I attended a violin concert here this evening and it was amazing!\n\nThe acoustics were phenomenal, the violin orchestra was mind blowing! I felt so much emotion and comfort it blew me away.\n\nThe staff are an absolute joy! I walk with the aid of a cane and the service I received was top tier. The manager went above and beyond to make my evening amazing!\n\nLoved the coat check gals! $3 to check your coat, was great!\n\nI will be coming back for sure.\"\n\n⭐⭐⭐⭐ \"We went to see the U of T Sounds of the Season. The theatre we were in was very nice an intimate. Everyone could see well even from the back which is where we were seated. The only annoying thing about the theatre is the lights all along the sides of the theatre. The singers were great and so was the show.\"\n\n⭐⭐⭐⭐⭐ \"An amazing center with a professional, kind, and outstanding team! I had the pleasure of working with Eion on the lighting for our show her expertise, dedication, and respect for every request were truly appreciated.\""
+      }
+    ]
   }
 }

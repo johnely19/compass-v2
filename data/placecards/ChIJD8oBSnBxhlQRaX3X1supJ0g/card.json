@@ -28,6 +28,13 @@
   },
   "narrative": {
     "summary": "Michelin 1-star Japanese-Italian fusion in a gorgeous second-floor Chinatown space. Jazz-bar atmosphere meets izakaya meets Italian trattoria. Architecture-obsessed John will love the room. One of Canada's most celebrated restaurants. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"We came for a group dinner, all in all it wasn’t bad. First time back in 10 years+. Not my favourite in Vancouver but nice ambiance, professional service, and fairly good pacing. There were some hits and some misses for me, nothing really stood out in particular. Whole fish was a bit dry. Octopus salad, truffle pasta and pork dishes nicely done. We opted for the omakase, I did enjoy the variety but the portions were mid for the price, 1-2 bites per person family style.\"\n\n⭐⭐⭐⭐⭐ \"My wife and I had a wonderful experience at Kissa Tonto this evening. Our server, Roberto, was amazing. Knowledgeable, fun and attentive. Though the entire team works really well to support service and vibe. The food was amazing. We had the omakase which highlighted some staples from the menu but the also elevated some dishes. We will definitely be returning.\"\n\n⭐⭐⭐⭐ \"First time visiting and was quite impressed with service and the flavours. The Japanese & Italian fusion was great but wished the portions were a little larger. Highlight of the night was definitely the steak (off menu) and the tiramisu. The tiramisu biscuit is dipped in plum wine and brandy which gives it a unique and refreshing taste. Notable mention is the green sauce on the octopus salad - had to lick the plate clean as our hostess suggested.\n\nOverall very nice experience and would return to try out some other dishes!\""
+      }
+    ]
   }
 }

@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Hi-fi listening bar + pour-over concept; DJ booth meets coffee bar; flagship opened summer 2024; uses SEY/La Cabra + in-house roast.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"One of the most beautiful coffee shops I've ever seen! They have Nintendo figurines, a spacious seating area, and expert baristas. I ordered a hojicha latte and my partner ordered a regular latte. Both lattes were deliciously smooth and well made.\n\nThe best part of this coffee shop is again the vibes and atmosphere. It has a long narrow and deep space, but it goes really deep. As in this cafe looks bigger than than you think once you move further down the place.\n\nI really enjoyed the overall feeling I got from being here and again the vibes here are amazing. Great place to study or hangout with friends!\"\n\n⭐⭐⭐⭐⭐ \"Quite rare to find a coffee shop like this that opens early! Been here several times and the drinks and service have been top notch.\n\nIt's generally packed inside so YMMV if you can secure a spot. Come early enough, and there will be plenty around.\n\nThe music being played by these gigantic vintage speakers further bring out the uniqueness of this cafe too. If you prefer a quieter environment, the seats in the far back are your best bet.\"\n\n⭐⭐⭐⭐⭐ \"Beautiful and cozy cafe with variety of sitting and relaxing atmosphere. Love that you can enjoy coffee for several hours, there’s no rush and no haste.\""
+      }
+    ]
   }
 }

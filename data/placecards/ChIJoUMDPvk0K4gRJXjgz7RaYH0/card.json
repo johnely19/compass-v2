@@ -6,27 +6,20 @@
     "name": "Paris Paris",
     "city": "Toronto",
     "address": "Ossington",
-    "type": "bar",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 12:00 – 11:00 PM",
-      "Wednesday: 12:00 – 11:00 PM",
-      "Thursday: 12:00 PM – 2:00 AM",
-      "Friday: 12:00 PM – 2:00 AM",
-      "Saturday: 11:00 AM – 2:00 AM",
-      "Sunday: 11:00 AM – 11:00 PM"
-    ],
-    "rating": 3.9,
-    "review_count": 1240,
-    "price_level": 2,
-    "phone": "(437) 983-8774",
-    "website": "http://www.parisparis.ca/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via starwinelist.com"
   },
   "narrative": {
     "summary": "Recently relocated to larger space, bright and airy, extensive low-intervention and natural wines by glass/bottle - modern classic",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"We had such a great experience! We ordered two cocktails, Baby No Peach and Berry Blossom, both made by Camila, and they were absolutely delicious. Perfectly balanced, fresh, and honestly some of the best cocktails we’ve had in a while. You can tell care and skill went into them.\n\nWe shared the octopus, which was cooked perfectly tender, flavorful, and beautifully presented. And the lava cake to finish? Unreal. Rich, warm, and the perfect sweet ending.\n\nBut what really made everything stand out was the service. Camila was attentive, friendly, and made us feel genuinely taken care of without ever being overbearing. She gave great recommendations and her energy really elevated the whole experience.\n\nAmazing drinks, incredible food, and top-tier service. Definitely coming back\"\n\n⭐⭐⭐⭐⭐ \"Such a lovely spot — I’ve visited Paris Paris many times, and it continues to deliver consistently great food. The corn croquettes are excellent: crisp on the outside, soft and flavorful inside. The half chicken is also one of the best versions I’ve had — beautifully cooked, juicy, and full of flavor.\n\nI do enjoy the salads here, but personally I would love to see a version with raw tuna or tuna tataki. That style would bring an even smoother texture and elevate the dish further. Overall, the food is thoughtful, well executed, and very satisfying.\n\nIf you appreciate well-made, delicious food in a relaxed setting, this place is absolutely worth a visit.\"\n\n⭐⭐⭐⭐⭐ \"My boyfriend and I had an incredible time at Paris Paris celebrating a late Valentine’s Day dinner. The staff were all very friendly, attentive, and knowledgeable. Jay went above and beyond to make sure we had a great time. All of his food and drink recommendations were amazing. We highly recommend this restaurant and will definitely be back!\""
+      }
+    ]
   }
 }

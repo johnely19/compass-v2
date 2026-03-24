@@ -13,17 +13,7 @@
     "price_level": 2,
     "rating": 4.5,
     "user_rating_count": 1029,
-    "location": "124 Bedford Ave, Brooklyn, NY 11211, USA",
-    "hours": [
-      "Monday: 12:00 – 11:00 PM",
-      "Tuesday: 12:00 – 11:00 PM",
-      "Wednesday: 12:00 – 11:00 PM",
-      "Thursday: 12:00 – 11:00 PM",
-      "Friday: 12:00 – 11:00 PM",
-      "Saturday: 11:00 AM – 11:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
-    ],
-    "review_count": 1031
+    "location": "124 Bedford Ave, Brooklyn, NY 11211, USA"
   },
   "narrative": {
     "summary": "📍 Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA",
@@ -52,6 +42,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 124 Bedford Ave, Brooklyn, NY 11211, USA\n\n• walking: 1 hour 2 mins • 2.8 mi\n• transit: 28 mins • 3.5 mi\n• driving: 20 mins • 4.6 mi (traffic: 20 mins)\n• bicycling: 21 mins • 3.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"This place has the best spicy chicken sandwich in town, hands down! The Bao is incredibly spicy, so consider yourself warned if you don't handle a lot of heat well.\n\nWhile the chicken sandwich is a must-try, the chicken nuggets were forgettable.\n\nService/kitchen is a bit slow\"\n\n⭐⭐⭐⭐⭐ \"Allswell is a weekly spot for me. I love sitting in the booth at the bar and catching up with my favorite bartender, James. I usually alternate between the source bowl and the house salad with crispy chicken, but I always order a side of fries (they change their oil daily). I also really appreciate that they make a proper, in-house ají hot sauce.\n\nJames is a true mixologist—an experienced, vetted bartender—and the bar offers an excellent selection of both cocktails and mocktails. The ambiance is warm and old-school Brooklyn, with exposed wood beams and stained-glass chandeliers. Consistent every time.\"\n\n⭐⭐⭐⭐⭐ \"We’ve eaten here a couple times in the last few months and it’s rarely let us done. Surprisingly some of the best huevos rancheros in Williamsburg are delivered here. The eggs Benedict are great and the French toast. The only let down was the egg tacos which seemed very uninspired and kinda bland. But we will forgive them for that just this once.\""
       }
     ]
   },

@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "EVENT: March 26-29 — 250+ independent artists, great for discovering emerging talent",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had free passes from the soccer game. Lines were not too bad early, got busier as the day went on. Food building had lots of options and of course the 1.99 spaghetti! We took the train down, easy access right from the GO. Would definitely go back. They have refillable water stations around the grounds, bottles water was 5.80 up to over 7.00 so I would recommend packing some!\"\n\n⭐⭐⭐⭐ \"Went for CNE. much more spread out this year with noticeable vendors missing.  Less sampling and prices used to start at $10 and continues to climb.    Addition of banshell performances was nice. We miss all the buildings and things for kids to do that weren't rides. Grounds were pretty well kept.\""
+      }
+    ]
   }
 }

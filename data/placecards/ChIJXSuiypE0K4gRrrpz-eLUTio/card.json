@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Toronto premiere of Sam Holcroft's 'A Mirror'—award-winning British playwright; ARC production; intimate venue. Runs Mar 11–28.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"This is really a 4.5 or of 5 but again, no half star option.\n\nAttended a 3 day festival here and had a chance to really take in three space and all it offered.\n\nI'll start with the pristine nature this venue is kept in on all levels, including the bathrooms, even though this is an older event space.\n\nJohnathan and Joe (venue staff) were friendly, knowledgable, attentive, efficient and accommodating in their dealings.\n\nThe space itself is pretty unique as it used to be a church and the ceilings are the old school, wood triangle so sounds travels well. It can be a drawback if there's music with heavy bass but they do a good job of monitoring that closely.\n\nThe half star deduction is based on the fact that accessibility is painfully missing. There are quite a few steps patrons have to climb, both inside and outside, in order to enter the Great Hall.\n\nIf air circulation was totally within their control, that would be another point raised as the Great Hall can get a little hot with larger numbers but when that is addressed through air conditioning, the foyer is now frigid.\n\nOnce those issues are addressed this would get 5 stars.\"\n\n⭐⭐⭐⭐⭐ \"Beautiful space where my sister hosted her wedding. The wood interior and natural sunlight illuminates the space, making it a warm, bright environment. I believe this place was a Zen Buddhist temple in a previous life and that calming atmosphere persists today.\"\n\n⭐⭐⭐⭐⭐ \"Absolutely incredible venue for concerts! The acoustics are amazing and they had the good folding seats. We were there to see The Holy Gasp with an orchestra and choir.\""
+      }
+    ]
   }
 }

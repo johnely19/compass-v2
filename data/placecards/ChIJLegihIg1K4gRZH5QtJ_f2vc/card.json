@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This was my first time trying Iekei ramen in downtown Toronto, and I knew from the very first sip of the pork broth that I’d be coming back. The flavor is seriously impressive—rich, deep, and incredibly satisfying. The added chicken oil takes the broth to another level, giving it that extra layer of amazing umami and richness.\n\nThe noodles had a perfect texture for me. I went with the standard (normal) options for everything—noodle firmness, saltiness, and chicken oil level—but they let you customize it all.\n\nI’m a relatively small eater, and the oily, hearty soup base makes this ramen super filling. I could barely finish my bowl!\n\nThe servers were cheerful and friendly, the place is clean with cool decor, and overall it felt like a great vibe. (I didn’t check out the washroom, though.) Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Hands down the most flavourful ramen I’ve had in Toronto. The Kara Ramen is outstanding — topped with a generous scoop of spicy soybean paste that adds a bold, satisfying kick without overpowering the broth.\n\nThe broth itself is deeply savoury, rich, and beautifully layered with complexity in every sip. You can customize both the noodle firmness and the saltiness of the broth, which makes the experience feel thoughtfully tailored.\n\nEach bowl also comes with a complimentary serving of rice, along with instructions on how to enjoy it with the remaining broth — a simple but brilliant finishing touch.\n\nAn unforgettable ramen experience I’ll definitely be coming back for.\"\n\n⭐⭐⭐⭐⭐ \"If you like some heat, you’ve gotta try the Kara ramen—it’s got the perfect kick. But the real star for me was the broth; it’s so good that I couldn't resist ordering a bowl of rice to mix in at the end. Total soul food. Honestly, it's the best way to eat it!\""
+      }
+    ]
   }
 }

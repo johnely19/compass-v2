@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Operating since 1978—esoteric, spiritual, philosophy, counterculture. 4.8 rating, 634 reviews. Late hours (til 9pm daily) make it great for evening browsing.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I’ve wanted to thrift the Silmarillion for so long and I’ve looked everywhere, even outside the GTA, and they were the only one that had it! The lady at the counter was also nice to point me exactly where it was. Pristine condition. They have a lot of books here worth checking out\"\n\n⭐⭐⭐⭐⭐ \"I chanced upon this store accidentally while walking along Bloor. I went in to take a look and was quite surprised to find all of my favourite books metaphysical and spiritual books. Patrick, the owner of the store is warm, friendly, and has a ton of knowledge about a variety of topics. He's a great conversationalist and is fanscinating to listen to. He's quite helpful and easygoing. There's a friendly orange cat in the store by the name, Churchill, which is a big plus!\n\nI usually go there when it's slow and I take my time in the store. If you like books and enjoy having a warm, relational experience (as opposed to a transactional one), you will enjoy this store.\"\n\n⭐⭐⭐⭐⭐ \"One of the best used book stores in Toronto!\nThis is one of my favourite spots in general to visit mainly because of the atmosphere. Feels so welcoming!\n\nI’ve found so many great books here as well. From philosophy to religion to poetry. They have a huge selection for all types of genres. The owner is so sweet and friendly as well! Oh and I cannot forget the special Churchill who you must visit once you’re here! The most beautiful orange cat.\n\nI’ve brought so many people here and they’ve loved it here. Definitely visit if you’re in the area!\""
+      }
+    ]
   }
 }

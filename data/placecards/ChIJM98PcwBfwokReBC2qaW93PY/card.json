@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Brand new natural wine bar + Brazilian-Iberian kitchen from the Babysips team. On Troutman near Bushwick Collective — on Day 2 walking route. Salt cod fritters, house-made sausages, minimal-intervention wines. 5.0★.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Came here tonight to celebrate a work victory, and they provided the perfect spot for a couple glasses of wine to toast! I am not well versed in wines, but the bartender took a few notes of what I liked and came back with a suggestion that hit the spot perfectly. The food was also excellent, and the portion size was a great balance to let you try several things on the menu but not so small to leave you wanting. We got the bread service which was toasty and warm and came with an herby butter, the sausage and long hots, and the sautéed cabbage which was phenomenal. My only minor note is the long hots came with only a singular hot, and a second pepper would’ve been appreciated lol. We finished off with the steak which came with a generous variety of sides and a delicious bright chimichurri sauce.  And to top it off when we wrapped up the bartender surprised us with two glasses of bubbles after hearing about my work victory! Sad I didn’t catch her name, but it was so generous and a lovely cap to the night! Will definitely be coming back to work through more of the menu, especially when the weather warms up and we can put the outdoor space to good use! Thank you for a great evening !\"\n\n⭐⭐⭐⭐⭐ \"The dark beer is sweet and corny and nuanced. They're playing Daft Punk. I'll be back for the food because the vibes are right and the attention to detail is real.\"\n\n⭐⭐⭐⭐⭐ \"Waiting for a place like this in the neighborhood… Yeah ! Thank You !!! Baby Sips heads east …. Wine and food amazing …. Staff - don’t stop what you are doing!!!!\""
+      }
+    ]
   }
 }

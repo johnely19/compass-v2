@@ -6,7 +6,19 @@
     "name": "Limberlost Place",
     "city": "Toronto",
     "address": "Waterfront (Queens Quay)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 8:00 AM – 5:30 PM",
+      "Tuesday: 8:00 AM – 5:30 PM",
+      "Wednesday: 8:00 AM – 5:30 PM",
+      "Thursday: 8:00 AM – 5:30 PM",
+      "Friday: 8:00 AM – 5:30 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "rating": 5,
+    "review_count": 3,
+    "website": "https://www.georgebrown.ca/limberlost"
   },
   "discovery": {
     "text": "Discovered via blogto.com/real-estate"

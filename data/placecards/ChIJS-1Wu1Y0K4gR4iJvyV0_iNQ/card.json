@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Quirky general store vibes with curated home goods, pantry items, and gifts; playful but tasteful selection.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Nice store, the products look like they’re inspired by modern art, clean lines solid colours. A nice selection of baggu items, quite pricey though. Sad to see the negative reviews for service, the woman working when I was there was perfectly nice!\"\n\n⭐⭐⭐⭐⭐ \"Consciously curated & design-minded, this little jewel of a shop is one of the best places to find gifts for you or yours. Excellent independent lifestyle, jewelry, home & design brands here, with an rad coffee bar to boot. The owner and staff are the sweetest and awesome at helping you pick the perfect gift. A++++\"\n\n⭐⭐⭐⭐⭐ \"Amazing store full of fun and unique finds. I love the incense they offer. The shop owner is extremely sweet and helpful. Highly recommend!\""
+      }
+    ]
   }
 }

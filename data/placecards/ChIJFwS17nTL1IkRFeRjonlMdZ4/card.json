@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Moody east-end speakeasy with theatrical religious kitsch decor; open W-Sat til 2am, 4.4 rating.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I don’t usually wait in lines to get in places. But on new years my friend got me a ticket, so we waited. They had slices of pizza at the coat check (which were amazing!) That the bar gave everyone for free!! Champagne to celebrate at the countdown. Was a great way to ring in the new year. Def recommend 🎉🎉🎉\"\n\n⭐⭐⭐⭐ \"Great stop for after dinner drinks and dancing.\n1980s dance party theme was fun with music to remember.  Got pretty packed as the night went on, and if you want somewhere to sit, make sure you make a reservation.\n\nGood mix of people in many age categories, everyone having fun.\n\nThe pizza was being pumped out all night and smelled delicious, so I grabbed a slice on the way out.  It definitely hit the spot for the drive home.\nWould like to try dinner and a fresh hot pizza next time as pizza sitting in the warmer probably didn't do itself justice.\n\nLooking forward to another night there.\"\n\n⭐⭐⭐⭐⭐ \"Great atmosphere and energy all around. The ambiance strikes a perfect balance between lively retro and comfortable — good lighting, great music, and a vibe that makes it easy to relax and enjoy the night. The crowd felt welcoming and the overall setup of the space made it feel upscale without being pretentious.\nOne thing that really stood out was the cleanliness. The floors, seating areas, and bar were well maintained throughout the night, and the washrooms were surprisingly clean for a busy spot. It’s clear the staff, and specifically Alicia; take pride in keeping the place looking good.\nOverall, it’s a great spot if you’re looking for a fun night out with a good vibe, solid atmosphere, and a clean environment. Definitely a place I’d come back to, and strongly recommend.\""
+      }
+    ]
   }
 }

@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Just opened inside historic Gladstone House, reviving the legendary Melody Bar space. Monthly Dinner & Drag with Tynomi Banks, rotating live shows. Soulful retro-inspired restaurant + music venue. 4.6★ (32 reviews — brand new).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Cassette is quickly becoming my number one restaurant. This was already my second visit, and I loved it just as much as the first. The interior and overall vibe are amazing, and even the music was perfect.\n\nI especially loved the cocktail menu — the names are adorable and the drinks taste great. My top recommendations are the Extra Dirty Martini and the Kiss Cam.\n\nA huge thank-you to Alex, the manager, for taking such good care of our table. It made the whole experience even better. I’ll definitely be coming back again!\"\n\n⭐⭐⭐⭐⭐ \"I went to the Tynomi Banks Drag Show and she was honestly the funniest! Would definitely come back for another show.\nService, food, and drinks were also great, specially the corn ribs, they’re insane!!!\"\n\n⭐⭐⭐⭐ \"Love the vibe here. I visited during the Saturday sound sommelier. The throwback music set a perfect ambiance. It was loud enough to enjoy but not so loud that you can’t have a conversation. I only had drinks and I wasn’t a huge fan of their house cocktail menu, but there’s always the option to order a classic. I’ll definitely be back and maybe try the food as well.\""
+      }
+    ]
   }
 }

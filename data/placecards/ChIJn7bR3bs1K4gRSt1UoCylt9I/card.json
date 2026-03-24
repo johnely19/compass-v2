@@ -6,26 +6,20 @@
     "name": "Cong Caphe (Annex)",
     "city": "Toronto",
     "address": "Annex (424 Bloor St W)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 8:00 AM – 10:00 PM",
-      "Tuesday: 8:00 AM – 10:00 PM",
-      "Wednesday: 8:00 AM – 10:00 PM",
-      "Thursday: 8:00 AM – 10:00 PM",
-      "Friday: 8:00 AM – 10:00 PM",
-      "Saturday: 9:00 AM – 10:00 PM",
-      "Sunday: 9:00 AM – 10:00 PM"
-    ],
-    "rating": 4.5,
-    "review_count": 585,
-    "phone": "(416) 925-1336",
-    "website": "http://www.congcaphe.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "streetsoftoronto.com"
   },
   "narrative": {
     "summary": "Hanoi-born Vietnamese coffee brand. Military-green aesthetic, reclaimed wood, vintage memorabilia — anti-clean-girl café. Signature Bac Xiu (coconut white coffee) and coconut green rice smoothie. 4.5★ (582 reviews). Global chain but culturally interesting. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Cong was recommended to me by one of my favourite Toronto baristas. He had spent some time in Vietnam and had been to a few of these franchised coffee shops when he was there. It was an absolutely amazing find once again proving that if you wanna know where the best coffee in Toronto is ask your barista\n\nFrom the moment you stepped through the doors of Cong you realize that you are in a carefully curated and extremely lovingly designed space. Immediately when you walk in the door, there is a poster on the wall discussing the founder of the franchise and her vision for the cafés. I feel her vision has been fully realized. I have included a picture of this poster in my photos so that you can read the story of the café and the founders vision.\n\nAs many of you who follow my Google reviews will know, I do not generally like sweet coffee. My typical coffee drink is a straight up old school Cortodo  made with a very dark espresso roast. However, at Cong I asked the barista what she would recommend as the most typical coffee which would be served in the morning at the cafés in Vietnam. She produced an absolutely beautiful, frothy, sweet coffee, which I understand to be a combination of very strong espresso with condensed milk. The coffee is somehow frothed to make it beautifully rich with just the perfect amount of sweetness.\n\nWe are so absolutely fortunate in Toronto to have such a vast variety of coffee experiences open to us .Cong is a perfect example of the way in which the world of coffee is now easily accessible in Toronto. I certainly will be back to this beautiful café to try some of their other signature coffee drinks. This is an absolute must coffee experience if you're in the Annex!\"\n\n⭐⭐⭐⭐ \"Follow @bredgyeats for more food posts!\n\nBaked to a crispy crunch, the bread itself was aromatic and yeasty with a soft, fluffy interior. The trio of classic cold cuts, subtly savory pate, and a rich, but not overpowering butter brings the mouth-watering flavour, while the fresh cilantro, cucumbers and finely chopped pickled carrots offer a refreshing contrast and a subtly sweet acidity. Pair it with something sweet and creamy, like the Coconut Coffee, which has a fine, icy texture of coconut milk with swirls of creamy Vietnamese coffee.\"\n\n⭐⭐⭐⭐⭐ \"I & my bf came in earlier today to grab coffee and sandwiches. The bac xiu & nau brown were flavourful; Banh mi was spot on  as well. The manager girl who served us was so friendly and energetic despite it was super early in the morning 👍 highly recommend for anyone who wants to experience authentic Viet coffee!\""
+      }
+    ]
   }
 }

@@ -10,19 +10,7 @@
     "type": "restaurant",
     "phone": "(416) 925-4020",
     "website": "https://www.terroni.com/locations/terroni-price",
-    "location": "1095 Yonge St, Toronto, ON M4W 2L8, Canada",
-    "hours": [
-      "Monday: 11:30 AM – 9:00 PM",
-      "Tuesday: 11:30 AM – 9:00 PM",
-      "Wednesday: 11:30 AM – 9:00 PM",
-      "Thursday: 11:30 AM – 9:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 11:30 AM – 10:00 PM",
-      "Sunday: 11:30 AM – 9:00 PM"
-    ],
-    "rating": 4.2,
-    "review_count": 3782,
-    "price_level": 2
+    "location": "1095 Yonge St, Toronto, ON M4W 2L8, Canada"
   },
   "narrative": {
     "summary": "📍 Terroni Price\n1095 Yonge St, Toronto, ON M4W 2L8, Canada",
@@ -46,6 +34,12 @@
         "id": "block-4",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1095 Yonge St, Toronto, ON M4W 2L8, Canada\n\n• walking: 12 mins • 0.9 km\n• transit: 9 mins • 1.0 km\n• driving: 3 mins • 0.9 km (traffic: 2 mins)\n• bicycling: 2 mins • 0.9 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (12 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The menu focuses on traditional pasta and thin-crust pizza, which arrives unsliced to preserve the crust's texture. Signature Dishes: Popular items include the Tonnarelli alla Norcina (truffle and sausage pasta), Spaghetti Limone, and the Funghi Assoluti appetizer. Widely recognized for its strict commitment to authentic Southern Italian cuisine.\nDefinitely give it a try you won't leave disappointed, quality of food so far being served no hiccups on my visits, except for lipstick lips stamped right on the water glass, don't rush washing the cups please keep it hygienic.\"\n\n⭐⭐⭐⭐⭐ \"We ordered the chanterelle risotto — it was absolutely delicious!\nFresh homemade bread, baked right there — you can really taste the care.\nThe house-made ice cream was delightful, and the cocktails were amazing too.\nLovely atmosphere and friendly, attentive staff.\nA wonderful place — everything we ordered was perfectly prepared. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Last night we spent our third Valentine’s together, and for the first time we celebrated at Terroni. It was pretty busy because of Valentine’s Day, but the atmosphere was honestly so beautiful. Seeing so many couples in love around us just gave such a nice vibe.\n\nOverall it was a really lovely experience. Our waiter was kind and super quick with everything, and overall a really nice guy. I just feel like he didn’t have the best suggestions when we asked for recommendations — not a big deal, just something to note.\n\nThe food was delicious, and for dessert we tried the tiramisu. I’m a huge tiramisu lover and I try it everywhere, and I can genuinely say this was one of the best tiramisus I’ve ever had!\n\nDefinitely a memorable Valentine’s for us 🤍\""
       }
     ]
   },

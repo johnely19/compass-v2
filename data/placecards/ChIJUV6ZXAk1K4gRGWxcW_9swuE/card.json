@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "BRAND NEW (Feb 2026)—replaced beloved spot, already earning fans. 5.0 rating with only 20 reviews = early-adopter energy.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This is the bar I've been looking for.  Strong canned beer selections, great bartenders and mixed drinks.\n\nReally good cozy vibes and good music. I'm thrilled that this corner of Brock and Dundas is coming back!\"\n\n⭐⭐⭐⭐⭐ \"Such a nice space for a drink. Not too loud. Great staff. Warm cocktails for the winter months. What else do you need?!\"\n\n⭐⭐⭐⭐⭐ \"My wife and I spent a cozy evening here watching the snow fall and making new friends. Wonderful hosts and staff, great drinks and the kind of atmosphere you never forget. Can’t wait for my next visit.\""
+      }
+    ]
   }
 }

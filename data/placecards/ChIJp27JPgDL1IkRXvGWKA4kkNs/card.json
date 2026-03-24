@@ -6,25 +6,20 @@
     "name": "Bar Etc.",
     "city": "Toronto",
     "address": "Leslieville / Gerrard East (1036 Gerrard St E)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 5:30 PM – 12:00 AM",
-      "Thursday: 5:30 PM – 12:00 AM",
-      "Friday: 5:30 PM – 1:00 AM",
-      "Saturday: 5:30 PM – 1:00 AM",
-      "Sunday: 5:30 – 11:00 PM"
-    ],
-    "rating": 5,
-    "review_count": 10,
-    "website": "http://baretc.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via blogto.com"
   },
   "narrative": {
     "summary": "New tropical-leaning cocktail bar from industry heavyweights. Just opened 2026. Intimate, design-forward. 5.0★ (6 reviews — brand new). Cocktail-first, stylish.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"My friends and I LOVED our night here! The cocktails. OMG. The menu is in my pics, and the drinks were ridiculously great. They do so much in house, including carbonation of the highball, and infusions for ten days or more. I had the signature martini, also in my pics, and it was stellar. The food is awesome. We ordered items one through five on the menu, in the pics. Our favourite was the scallops, unanimous and hands down. Nothing disappointed. I took a pic of the burger and chicken at the table beside us, because they looked so good, and they were, according to the people who ate them. Service was fantastic. The space is SUPER cute. The soundtrack, thumbs up. HIGHLY recommend!!!\"\n\n⭐⭐⭐⭐⭐ \"Welcome Bar Etc to the Hood! So lucky to have a new and inclusive, welcoming, FUN, and fabulous cocktail bar to Gerrard and Jones (steps from the Dineen Coffee). Service was awesome Ziye and the Owner Sasha were amazing. Cocktails 🍹 10/10 and the food bites including the chicken and burger 👍👍 #PerfectSpot #AMustTry\""
+      }
+    ]
   }
 }

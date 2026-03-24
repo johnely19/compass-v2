@@ -6,20 +6,7 @@
     "name": "Liliana",
     "city": "Toronto",
     "address": "Parkdale / Queen West (1198 Queen St W)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 5:00 – 11:00 PM",
-      "Sunday: 5:00 – 11:00 PM"
-    ],
-    "rating": 4.9,
-    "review_count": 220,
-    "phone": "(416) 539-0101",
-    "website": "http://www.lilianatoronto.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Former Vela chef Marvin Palomo. Asian-Italian fusion with fully halal-certified meat program — a first for this stretch of Queen. Szechuan demi, umeboshi, dashi vinaigrette alongside Italian staples. 4.9★ (214 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Liliana was a solid spot. We usually go to the same Italian restaurant, so it was nice to switch it up and try somewhere new in town.\n\nThe beef carpaccio was definitely the highlight. It came with a chili aioli and it was so good, easily the most memorable dish of the night. We also had the octopus, mushroom pappardelle, strip loin, and the millefoglie for dessert. Everything was well done and enjoyable.\n\nI did notice quite a few Asian inspired elements throughout the menu. It was creative, but personally I would have preferred it to lean more into classic Italian flavours. I am definitely not a food critic, that is just how I personally perceive traditional Italian cuisine. I tend to gravitate toward simple, authentic flavours, so that probably shapes my expectations.\n\nThe only downside was that the tables felt pretty close together, so it was a bit tight. Still, it is a cute spot and I would come back, especially to try the stuffed chicken wings next time.\"\n\n⭐⭐⭐⭐⭐ \"Came to celebrate my boyfriend's birthday and had such an amazing experience.\n\nThe food was delicious, my boyfriend and I enjoyed everything. My favourites were the bluefin tuna crudo and the beef carpaccio for appetizers which were so buttery, 10/10. We also had a pasta, stuff chicken wings, and octopus for our mains. And for dessert we had the millefoglie which tasted so good with the black sesame and miso caramel. It was a great way to end our meal.\n\nService was also fantastic, everyone was so kind. Food came out at a reasonable time. We also got to meet the head chet/owner of the restaurant who came to our table which was a pleasant surprise as it's something that doesn't happen at every restaurant.\n\nThe interior of the restaurant is so cozy and intimate. The music choice in the restaurant is great, and the volume wasn't too loud which was perfect as I was still able to have conversations with my partner. Bathrooms were also nice and clean.\n\nFood was tasty, filling, and the experience as a whole at Liliana's was excellent. Definitely need to come back for sure. I highly recommend coming here!\"\n\n⭐⭐⭐⭐⭐ \"Last night we cheerfully dined at Liliana’s in Toronto . We received a warm welcome. As we looked around, it was clear we weren’t the only ones enjoying ourselves. There was an air of cheer and contentment on the faces of fellow diners. Nick was our server. He was extremely friendly and took delight in explaining each item to us with so much passion and enthusiasm that it heightened our anticipation for the meal. My daughter has a food allergy and Chef Marvin and his team were accommodating and catered to our needs very well . It gave us a sense of ease and allowed us to enjoy a stress free dinner  which we really appreciated. The food tantalized our tastebuds and the appetizers served as a prelude to something better with each additional dish. We  happily devoured it all . My absolute favorite item was the stuffed chicken wings and the papardelle . My husband could not stop raving about the beet salad . We kept ordering more bread which is baked in house . The breadsticks were made to perfection. Just when we thought we couldn’t be wowed any further , Chef Marvin introduced us to 4 scrumptious desserts. We enjoyed a bite of every dessert presented to us . I’m a lover of all things tiramisu  and Liliana’s tiramisu was exceptionally amazing as well as the  Millefoglie. I salute the entire team at Liliana’s for their excellence, attention to detail and heartfelt hospitality. Hats off to you!\""
+      }
+    ]
   }
 }

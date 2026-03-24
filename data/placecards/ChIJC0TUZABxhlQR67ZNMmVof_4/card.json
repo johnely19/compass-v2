@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"⭐️⭐️⭐️⭐️⭐️\n\nStopped into Pinche Taco Shop on a cold Vancouver afternoon and left feeling like I’d been on a mini vacation.\n\nRight from the moment I walked in I was greeted which honestly already put this place ahead of most spots these days. I had pretty much made up my mind about what I wanted, and the guy taking my order confirmed I was making the right choice. Food came out quickly and everything tasted incredibly fresh bright flavours, great balance, and exactly the kind of warmth you’re craving when it’s grey outside.\n\nWhat really stood out though was the service. When I left he actually said goodbye and used my name. In a world of phones, zero eye contact, and rushed interactions, that small moment made a big impression.\n\nGreat food, fast service, and genuine hospitality. I’ll absolutely be back.\"\n\n⭐⭐⭐⭐⭐ \"Awesome space with nice vibes. I tried the pork and chicken tacos. Both a 5/5\n\nI just wish the tacos were wallet friendly. I paid around $21 for 2 tacos after tips. Personally, $6-7 per taco would be the sweet spot.\"\n\n⭐⭐⭐⭐⭐ \"I visited this place right before a party event, and honestly, it couldn’t have been a more perfect choice for me and my friends. The atmosphere was vibrant without being overwhelming, and the staff made us feel welcomed from the moment we walked in.\nDo yourself a favor and don’t leave without trying the Trompo de Sirloin. It’s tender, flavorful, and perfectly seasoned, easily one of the best mexican dishes I’ve had in a long time.\nAnd then comes their only dessert. At first I wondered why there was just one option… but once you try it, you immediately understand. They don’t need anything else. It’s the kind of dessert that makes the whole table go quiet for a second because everyone is too busy enjoying it. Can’t wait to go back!\""
+      }
+    ]
   }
 }

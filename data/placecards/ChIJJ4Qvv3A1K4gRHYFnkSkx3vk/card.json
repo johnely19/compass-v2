@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0★.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I visited for the soft opening near the end of the night, and it was quite an event. When we walked in, we were told they were almost out of udon, but we luckily snagged one of the very last portions in line.\n\nI ordered the Chicken Katsu Curry Udon. Since there was no Katsu ready, the staff held my noodles aside while I paid so they could bring the full bowl out once the chicken was ready. Unfortunately, there was some confusion, and they accidentally gave my reserved noodles to someone else. By the time the mistake was realized, they were completely sold out.\n\nWhile I was sad to miss out on the udon I’d been looking forward to, I find that the staff handled the situation well. To compensate for the mix-up, they refunded my original udon, gave me a Katsu Curry Rice for free, and let me have as much tempura as I wanted.\n\nSome extra feedback, the tempura station labels of food were really mixed up and some did not properly represent what was behind the sign so it got confusing what I was looking at. Again, I’m sure this will be improved as tike comes.\n\nMy girlfriend enjoyed her udon, and the curry rice was great. The tempura was decent, too. I think the food it’s solid and fair for its price.\n\nIt’s clear they’re still finding their rhythm during the soft opening, but I can definitely see the passion and willingness to get things right for the customers. I’ll definitely be back to finally try the udon!\"\n\n⭐⭐⭐⭐⭐ \"Overall best Japanese Udon I’ve had in Downtown Toronto!\n\nEverything was freshly made, food tasted really good and was well seasoned. Staff seemed very well coordinated despite the long line from dinner/opening rush. I’ve had better udon in Markham but in DT i would say this is the best.\n\nI was surprised by how good the tempura is, Chikawa and Croquette were very good. Price is good, making this budget friendly but doesn’t loose quality or taste. Will return!\"\n\n⭐⭐⭐⭐⭐ \"very excited to try this restaurant. The food we had overall was good but nothing outstanding, can't argue since the price point is great and service was super quick and friendly despite the long line. The lineup inside is a but confusing though as they take up space and people just try to reserve seats even though they're so far along in the line.\""
+      }
+    ]
   }
 }

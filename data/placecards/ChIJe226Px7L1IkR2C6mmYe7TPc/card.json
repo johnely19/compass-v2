@@ -6,26 +6,20 @@
     "name": "Convivium Dining Community",
     "city": "Toronto",
     "address": "Downtown (83 Yonge St)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 11:30 AM – 10:00 PM",
-      "Tuesday: 11:30 AM – 10:00 PM",
-      "Wednesday: 11:30 AM – 10:00 PM",
-      "Thursday: 11:30 AM – 10:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
-    ],
-    "rating": 4.6,
-    "review_count": 158,
-    "phone": "(416) 913-1577",
-    "website": "https://myconvivium.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews)."
   },
   "narrative": {
     "summary": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"First time trying this restaurant on Yonge between King and Adelaide during Winterlicious. Food was excellent. Recommend the fig salad or the other salads for starters. Duck confit was nicely done, tasty and served with risotto. Our other main veal osso buco also excellent. Enjoyed the classic crème brûlée and eclair. The chef was well trained.\nThat combined with very good service and nice ambience, I highly recommend this place.\nA three course lunch at $48 or dinner at $65 during Winterlicious was a steal.\"\n\n⭐⭐⭐⭐⭐ \"This was an amazing new discovery, in the heart of the financial district, a very charming and beauful place. The service is WOW, Raza was amazing, the food was double WOW. Price quality is perfect and now they also have a 2 courses menu for 35$ and 3 courses for 45$. The Bisque is a must! But everything was delicious, the Rack of Lamb superb, duck risotto!, fillet!!!, ossobuco melts in your mouth and ceviche is very refreshing.\"\n\n⭐⭐⭐⭐ \"It's a new elegant restaurant at historic downtown building recently renovated (The tin and copper smith building 1857).\nBTW \"Convivium\" means a \"banquet \" in Latin.\nInterior design emphasizes antique character of building with pseudo rusty style - aging mirrors with patina, not so bright colors, - and it's with contrast with white starched tablecloth and new white plates.\nPleasant music plays on background.\nTableware is elegant as it should be in fine dining place.\nService is very good.\nWe dined during “Winterlicious” festival, thus, portions could be smaller than usual (I have a problem to upload photos, some glitch on Google side).\n\nConvivium - Char-Grilled Calamari with Spring Mix Salad\nIt's one of the best calamari in GTA - it's very tender without any bitter flavor.\nThe proportion of chopped olives and capers in greens mix is just perfect. And greens with balsamic vinegar ideally paired with calamari.\n\nConvivium - Filet Mignon with Mush Potato and Classic Demi-Glaze\nIt was proper done to medium-rare condition and really thick and tender. Mashed potatoes were good (and take into account that I don't normally eat potatoes) and paired perfectly with broccolini and beef.\nThe size of steak was smaller than normal as we dined during Winterlicious restaurant festival.\n\nConvivium - Crème Brûlée\nVery good crème Brulée with ideal crisp thickness. Although, I think that strawberry and mint leaf would make it even better.\n\nConvivium - Éclair Berry Blush with Raspberry\nIt's a very European desert with subtle sweetness and much more prominent raspberry sour fresh flavor and a pretty thin pastry layer. That kind of dessert - rich on flavor and very light on calories, - is hard to find in North America.\n\nConclusion: I do recommend the place for its charm and warmth.\""
+      }
+    ]
   }
 }

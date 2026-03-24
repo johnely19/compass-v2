@@ -6,20 +6,7 @@
     "name": "ZERO Cocktail Bar, Tasting Room & Bottle Shop",
     "city": "Toronto",
     "address": "Carlton / Garden District",
-    "type": "bar",
-    "hours": [
-      "Monday: 12:00 – 8:00 PM",
-      "Tuesday: 11:00 AM – 8:00 PM",
-      "Wednesday: 11:00 AM – 9:00 PM",
-      "Thursday: 11:00 AM – 9:00 PM",
-      "Friday: 10:00 AM – 10:00 PM",
-      "Saturday: 10:00 AM – 10:00 PM",
-      "Sunday: 10:00 AM – 8:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 61,
-    "phone": "(416) 920-9376",
-    "website": "https://zero-bar.ca/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via https://www.google.com/maps/place/?q=place_id:ChIJlbRkMMzL1IkRtOGzkUPcH5E",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Non-alcoholic cocktail program with a tasting-room + bottle-shop angle; good ratings and open now (easy weeknight).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Amazing experience overall at Zero Cocktail Bar. We booked with Chef Ling for dinner and got to enjoy cocktails and an insane meal. Service was fantastic, food was incredible. Our favourites were the shark and bake, shrimp dumplings and the coconut mango crème brûlée. We'll be back soon for sure!\"\n\n⭐⭐⭐⭐⭐ \"What a gem! You must come and experience this place. Gail, the proprietor of this tasting shop, is full of wisdom, energy, and story. We went off of a recommendation on a mission to find a good non-alcohol cocktail, because we were striking out shopping online… wow were we surprised and impressed at what we found. Not only did Gail sample many AMAZING drinks, but gave a ton of backstory and nuance to each, as well as some history of herself at the same time. 1.5hrs flew by, and we were on our way with some amazing options. My fav was the CROSSIP line - we came home with two bottles (pure hibiscus and fresh citrus). FYI - we still enjoy alcohol drinks, but continue to add more and more non-alc options in as the quality improves and variety continues to grow. Gail seems to be at the front of this wave. Go check her out.\"\n\n⭐⭐⭐⭐⭐ \"Walked by this spot on a walk down Carlton. The proprietor was so friendly and offered great recommendations - even my partner who is not a zero proof person was impressed. The interior was very well decorated and had a great, welcoming vibe. Strongly recommend folks to give this place a shot ! Great place to pick up some phony negronis as well.\""
+      }
+    ]
   }
 }

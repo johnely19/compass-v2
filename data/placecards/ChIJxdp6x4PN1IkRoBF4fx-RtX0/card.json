@@ -6,7 +6,20 @@
     "name": "Sambal | Modern Indonesian Bistro",
     "city": "Toronto",
     "address": "Danforth (463 Danforth Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 10:00 PM",
+      "Tuesday: 5:00 – 10:00 PM",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 205,
+    "phone": "(416) 523-3252",
+    "website": "http://www.sambal.to/"
   },
   "discovery": {
     "text": "Discovered via https://www.toronto.com/things-to-do/food-and-drink/toronto-chefs-favorite-restaurants-2026-guide/",

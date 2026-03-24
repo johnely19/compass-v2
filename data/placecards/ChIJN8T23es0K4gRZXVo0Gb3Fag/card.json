@@ -11,13 +11,13 @@
     "phone": "(416) 367-4013",
     "website": "http://www.ramenisshin.com/",
     "hours": [
-      "Monday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM"
+      "Monday: 11:30 AM – 9:00 PM",
+      "Tuesday: 11:30 AM – 9:00 PM",
+      "Wednesday: 11:30 AM – 9:00 PM",
+      "Thursday: 11:30 AM – 9:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 9:00 PM"
     ],
     "price_level": 2,
     "rating": 4.6,
@@ -59,11 +59,17 @@
         "id": "b6",
         "title": "Check",
         "body": "Estimated check for two using Toronto tax logic."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Just came back from Japan less than a week ago and was missing/craving ramen so we thought we would give Ramen Isshin a try.   The ramen had a good springy chew to it, the broth had good flavour depth, and the chicken karaage and age tofu were very tasty though the prices is not cheap.   The night we went, the place was staffed with all Japanese staff so that reminded us of our time in Japan however the restaurant was extremely, beyond loud…so loud that I could barely hear the conversation at my own table!  For that reason, I can only give 4/5\"\n\n⭐⭐⭐⭐ \"I like their tsukemen and karaage. Tsukemen came with a thick dipping broth on the side, it was hot and rich and you can dip your noodles into the steaming hot broth and eat. Karaage was juicy and hot every time I ordered.\"\n\n⭐⭐⭐⭐⭐ \"I have eaten ramen at so many different restaurants in the GTA and abroad that I have lost count.  I do however remember the most memorable ramen soups I have eaten.  The “Red Dragon” made by Ramen Isshin is absolutely magnificently delicious.  I added a bunch of extras like I do with most ramen restaurants.  The “Red Dragon” is in my top 3 ramen soups, I love it!.  Super spicy with pork and chicken chashu, bean sprouts, bamboo, seaweed, scallions, eggs etc.  All I can say is WOW.  Thank you so much for offering a ramen soup with such a complex flavour profile.  If you love spicy then you will love the “Red Dragon”.\""
       }
     ]
   },
   "discovery": {
-    "text": "BlogTO \u2014 Best Ramen in Toronto",
+    "text": "BlogTO — Best Ramen in Toronto",
     "url": "https://www.blogto.com/eat_drink/ramen-toronto/"
   }
 }

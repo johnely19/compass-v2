@@ -6,19 +6,7 @@
     "name": "Jupiter Bakehouse",
     "city": "Toronto",
     "address": "Little India (Gerrard E)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 9:00 AM – 5:00 PM",
-      "Thursday: 9:00 AM – 5:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 5:00 PM"
-    ],
-    "rating": 4.9,
-    "review_count": 87,
-    "phone": "(647) 352-1505"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/bakery/jupiter-bakehouse-toronto/",
@@ -26,6 +14,13 @@
   },
   "narrative": {
     "summary": "Canadian-grain-only bakery; 4.9 rating; took over the Glory Hole Doughnuts space—strong local lineage.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"The olive fougasse (French flatbread) is a delight, spot-on flavour and texture. The everything bagel pretzel? Fine, but not worth the price. It had the right rise and chew, but lacked salt aka those dense, crunchy bits that make a pretzel satisfying. The sourdough looked gorgeous; great rise, lovely air pockets. I’d recommend the fougasse and sourdough baguette, and I’m curious enough to try the sweeter pastries next time.\"\n\n⭐⭐⭐⭐⭐ \"I’ve been to Jupiter a handful of times now and it’s easy to see why it’s consistently jam packed. The staff is kind, warm and knowledgeable about their product. They’re quick and efficient while delivering great service, and incredible bread and pastry. The truffle manchego danish is genuinely one of the best things I’ve ever tasted! Such a great neighbourhood spot, we love you Jupiter!!\"\n\n⭐⭐⭐⭐⭐ \"Stopped by this place today for a snow day treat and coffee, and I will say I was blown away by how good the espresso in my cortado was. Chandler was pulling the shots and has a decade of barista experience (and it SHOWS) and her recommendation for the tiramisu danish was unreal. It was unbelievably good and i will go back for it over and over. Also chat with Austin, who has a wealth of knowledge and experience about/in the Toronto food scene. This place and these people are genuinely trying to bring good coffee, incredible baked goods, and loving vibes to the neighbourhood and it’s so welcomed. Sincerely appreciated them both and this place is worth having a break AND a coffee at (so rare); easily one of only two good coffee spots this side of Carlaw. Anyway, off my soap box — go check this place out! They run out of the goods by 2pm on Sundays so go early!\n\nEDIT: forgot to mention that this is run by one of the head guys/bakers from Blackbird SO YOU KNOW THIS IS GOOD / WILL BE THE FUTURE OF GOOD BREAD IN THIS CITY!\""
+      }
+    ]
   }
 }

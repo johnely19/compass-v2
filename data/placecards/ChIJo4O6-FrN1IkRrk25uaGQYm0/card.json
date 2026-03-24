@@ -6,26 +6,20 @@
     "name": "Barcelona Gourmet",
     "city": "Toronto",
     "address": "Danforth (777 Danforth Ave)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 7:00 PM",
-      "Sunday: 10:00 AM – 3:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 73,
-    "phone": "(416) 778-8557",
-    "website": "http://barcelonagourmet.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "hungry416.com"
   },
   "narrative": {
     "summary": "Imported Spanish olive oils, vinegars, tinned seafood, cured meats. The conservas trend in a dedicated shop. Niche, passionate, anti-generic. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I came to this outstanding store looking for well priced Yerba Mate, and I did.  To my surprise, I found an incredible variety of imported foods beverages and spices from Latin America and Europe (Spain, etc), as well.  The owner's name is Sandra and she is a gem. A well travelled individual with excellent views of numerous cultures and plenty to talk about. Sandra has that warm personality we find only when we go on vacation. In her store, Sandra carries vegetarian and meat filled versions of: 'paellas', 'empanadas', 'tamales', etc. and also has other typical plates such as: 'tres leches cakes', 'churros', etc.  What Sandra does not have, she can prepare upon request in the days to come, for you. All you have to do is ask. Sandra has also applied for a liquor licence, so we will see what hapens in the future. Everything at the store is carefully arranged, products that require refrigeration are in the fridges. Sandra has a great eye for detail and also checks her food to make sure all is alright on an ongoing basis. During my first visit to this store, I bought a 'Sara' labeled yerba mate which I am thoroughly enjoying, a vegetarian empanada, which I trully enjoyed, and also got 'jalapeños' and 'tomatillos' and as she suggested, make a nice sause, well, it turns out I turned this into a delicious spicy dish with onions, ginger and coriander seeds that tastes delicious. Well, do not let me bore you with my inventive cooking, why not just make it a point to go visit her museum of gourmet food, Located at 777 Danforth, on the South side of the street, and put some goodies in your pantry and fridge, so you can as well have a delightful experience, as I did.  Thank you Sandra!\"\n\n⭐⭐⭐⭐⭐ \"Found this Spanish & Mexican grocery on Danforth and it’s a gem. They have a variety of paellas for take-out which you need to order a day in advance. But they have an assortment of empanadas and tamales and they are delish. The empanada crust was so light and crispy and the empanada was so flavorful. Deliciosa! This is such a good place to find your ingredients for both Spanish & Mexican dishes and paelleras in all sizes!\"\n\n⭐⭐⭐⭐⭐ \"Great variety of European food.\nDelicious empanadas.\nPaella is next day order only, which is a shame - we sooo wanted to try.\nVery friendly staff!\""
+      }
+    ]
   }
 }

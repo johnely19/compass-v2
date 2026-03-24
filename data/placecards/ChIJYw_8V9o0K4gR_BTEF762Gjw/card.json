@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "New solo exhibition 'Naal-Naal' running March 6–May 1. Free admission. Gallery at 401 Richmond — Toronto's creative nerve centre. 4.9★ (23 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"The zine exhibit was impressive and thought-provoking. The cafe downstairs was also relaxing and the service was great. It was a little tricky navigating the building however I loved the gifts shops and the historic and artistic look of the building.\"\n\n⭐⭐⭐⭐⭐ \"This is a fantastic gallery that really pushes the stereotypes of the art experience -- tactile interactions, braille labels, and more. Highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Wheelchair accessible building.  Many studios, venues and offices in this building. Many wonderful art exhibits.  Artistic expression with accessibility and disability themes.\""
+      }
+    ]
   }
 }

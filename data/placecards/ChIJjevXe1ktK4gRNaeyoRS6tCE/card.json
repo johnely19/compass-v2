@@ -6,25 +6,20 @@
     "name": "Another Land Coffee",
     "city": "Toronto",
     "address": "North York (Yonge)",
-    "type": "cafe",
-    "hours": [
-      "Monday: 9:00 AM – 6:00 PM",
-      "Tuesday: 9:00 AM – 6:00 PM",
-      "Wednesday: 9:00 AM – 6:00 PM",
-      "Thursday: 9:00 AM – 6:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
-    ],
-    "rating": 4.6,
-    "review_count": 529,
-    "website": "http://www.anotherlandcoffee.ca/"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via Harvey Kalles hidden gems guide"
   },
   "narrative": {
     "summary": "Second-floor balcony cafe, ethically sourced beans, baked goods, hidden gem vibe",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I have been here several times and always got excellent experience.\nNice homebaked cheese cake! Very good tea and coffee. Also I really love chilling here. It's quiet and relaxing for study a while (but I'm not sure about weekends I usually come on weekdays)\nSpace is well-organized. Not too crowded but has proper amount of seats. Staff and the owner are all friendly and caring. Would recommend to anyone who's looking for a cafe to stay!\"\n\n⭐⭐⭐⭐⭐ \"A lovely, cozy coffee shop in a part of Yonge Street where you wouldn’t usually expect to find such a warm, inviting spot. The atmosphere is welcoming, and the owner, Hong, is incredibly friendly. She even served us our drinks herself. We ordered the seasonal peppermint latte with oat milk, topped with marshmallows, which was sweet and comforting. While I couldn’t fully judge the quality of the coffee itself since the flavors were quite strong, the drink was still very enjoyable overall. A pleasant surprise and a great place for a cozy break along Yonge Street! ☕️✨\nNote: Parking is limited, and there’s no guarantee of finding a spot during busy weekdays.\"\n\n⭐⭐⭐⭐⭐ \"Stepping into Another Land Coffee feels like being transported straight into an elegant English tea house. The aesthetic is stunning—the shelves are stacked with a variety of beautiful tea cups that you can actually purchase, which adds such a sophisticated and charming touch to the atmosphere.\n\nThe menu is well-balanced with a wide range of coffee and non-alcoholic drinks. Food-wise, they offer everything from fancy toasts to croissant sandwiches.\n\nI ordered the fresh scones with clotted butter and jam alongside an osmanthus latte with almond milk.\n\nA quick heads-up for those with preferences: almond milk is their only non-dairy alternative, but it paired perfectly with the floral notes of the latte. The scone was the highlight—served warm, and the combination of clotted butter and jam was absolute perfection.\""
+      }
+    ]
   }
 }

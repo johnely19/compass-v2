@@ -10,19 +10,7 @@
     "type": "bar",
     "phone": "(416) 536-4564",
     "website": "http://sottovoce.ca/",
-    "location": "595 College St, Toronto, ON M6G 1A9, Canada",
-    "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 2:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
-      "Sunday: Closed"
-    ],
-    "rating": 4.5,
-    "review_count": 403,
-    "price_level": 2
+    "location": "595 College St, Toronto, ON M6G 1A9, Canada"
   },
   "narrative": {
     "summary": "📍 Sotto Voce Wine & Pasta Bar\n595 College St, Toronto, ON M6G 1A9, Canada",
@@ -46,6 +34,12 @@
         "id": "block-4",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 595 College St, Toronto, ON M6G 1A9, Canada\n\n• walking: 1 hour 14 mins • 5.4 km\n• transit: 42 mins • 7.2 km\n• driving: 18 mins • 5.6 km (traffic: 14 mins)\n• bicycling: 19 mins • 5.7 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (18 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Always a great meal and welcoming atmosphere. Love how there is always specials. The lamb rigatoni was so tender and flavourful with a generous portion. Lobster ravioli had lots of lobster in it and the cream sauce wasnt too heavy. Burrata with fresh orange is a nice touch, such a great appetizer! Will come back again for Wine Wednesday- great wine list!\"\n\n⭐⭐⭐⭐⭐ \"Hosted my birthday party (private event) at Sotto Voce. From my initial inquiry email right up to the day of the event, Anita was nothing short of spectacular - warm, genuine, engaged, accommodating, attentive to detail. And her staff reflected these qualities as well. Food and drinks were amazing! Guests had a great time. My husband and I were very impressed. They’ve definitely gained a number of new customers after this event!\"\n\n⭐⭐⭐⭐⭐ \"My Goshhhh, the Welcome by Tatiana reminds me of a 5 💎 Hotel I came from in Barbados 🇧🇧, the Sandy Lane Hotel...\n\nHer level of Service excellence and attention to detail is impeccable..\n\nAlso, she took the order while I was on my way to Sotto Voce, being mindful of the time the kitchen closes...\n\nThe Food was without a fault, flavours amazing and tantalizing to my palate (compliments the Chef)...\n\nAnd the ambience, was an Oasis in a bustling city..\n\nOverall, I rate this small and personalized Restaurant 5 🌟🌟🌟🌟🌟\""
       }
     ]
   },

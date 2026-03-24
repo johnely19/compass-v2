@@ -18,6 +18,13 @@
   },
   "narrative": {
     "summary": "Japanese-Italian concept at new boutique hotel Nomas; just opened, no Google rating yet but high-signal pedigree.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"A quaint space on bloor street, seamlessly blending the cafe and the bar. Great in the morning and even better at night. 10/10 would recommend\"\n\n⭐⭐⭐⭐⭐ \"Love the dashi olives and duck tataki! The Café turns into a vibey bar at night. Great intimate space to hangout with a couple friends. 👯‍♀️\"\n\n⭐⭐⭐⭐⭐ \"Nice latte, pastries from Noctua. A very chill environment, the booths are comfy. I'll return to try the cocktails!\""
+      }
+    ]
   }
 }

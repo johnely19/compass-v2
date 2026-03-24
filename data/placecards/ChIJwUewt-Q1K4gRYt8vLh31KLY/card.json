@@ -6,7 +6,19 @@
     "name": "Standard Time",
     "city": "Toronto",
     "address": "Geary Ave",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 PM – 2:30 AM",
+      "Saturday: 3:00 PM – 2:30 AM",
+      "Sunday: 3:00 – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 104,
+    "website": "http://www.standardtime.to/"
   },
   "discovery": {
     "text": "Discovered via reddit.com/r/naturalwine"

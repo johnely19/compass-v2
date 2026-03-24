@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Pompette team replaced Vinoteca Pompette with intentional wine-bar concept. 5.0 rating, 18 reviews.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Met up with drinks for a friend and was really pleased at this spot!\n\nThe cocktails were delicious (Spicy Margherita ftw) and the service really stood out. Both servers were really friendly and even brought out complementary congnac for my friend and I (haven’t seen each other in 10 years, hence the 10 year-aged cognac - very attentive of our server!).\n\nThanks for a great time! Would highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Took my boyfriend here for date night :) devilled eggs and artichokes were standouts as well as the cynar orange cocktail\"\n\n⭐⭐⭐⭐⭐ \"Amazing drinks, friendly staff and great atmosphere. The crispy potato and artichokes were absolutely delicious. Highly recommended!\""
+      }
+    ]
   }
 }

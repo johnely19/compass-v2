@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "1960s-inspired speakeasy inside AGO's Grange House. Craft cocktails + cultural rebellion theme. Opens THIS WEDNESDAY Mar 18, runs through Jun 5. Pairs perfectly with Edna Taçon exhibition. 4.5★.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"During my visit to the Art Gallery of Ontario (AGO), I had the pleasure of experiencing The Grange, thanks to my friend's AGO membership. It was a stroke of luck, as this hidden gem offers a delightful selection of desserts!\n\nI couldn't resist trying the \"Dessert\" Chocolate Cake, which was recommended by the friendly staff. It was a true indulgence - lovely to look at and even more delicious to savour. The flavours were perfectly balanced, leaving me with a satisfied sweet tooth. The ambiance at The Grange was incredibly comfortable and inviting. Since it is exclusively available to AGO members, it offered a tranquil and serene environment. The absence of large crowds allowed for a relaxed and enjoyable dining experience.\n\nIf you appreciate scrumptious desserts in a cozy setting, The Grange is the place to be. It's a haven for those seeking a moment of respite and culinary pleasure during their AGO visit.\"\n\n⭐⭐⭐⭐ \"It was a lovely afternoon for a treat at the Grange, though the place was quite full during my visit. Having experienced afternoon tea in London, UK, it’s hard to replicate the same ambiance and quality here. The food was decent, though I wasn’t sure if everything was made in-house. Our server was attentive at first but seemed to disappear for about 20 minutes midway through. Adding a bit more decor could also elevate the overall experience. If you’ve never had afternoon tea before, this is a nice introduction. However, seasoned afternoon tea enthusiasts might find it a bit underwhelming.\"\n\n⭐⭐⭐⭐⭐ \"Went to do high tea at the Norma Ridly Members lounge.\n\nSeats available right away.  Knowledgeable staff.  Friendly front desk.  You're not seated close to the other guests.  Light airy space.  Comfy couches with pillows and a coffee table in between for the high tea.\n\nService was quick and took pur orders right away.  Tea choices were plentiful and brewed perfectly for you.  No hot chocolate option for kids , just juice, milk and whatever decaf teas they have.\n\nFood came fairly quickly.  All hot items were hot and desserts weren't ice cold.  Enjoyed all the food and portions , while they looked small, they filled us up perfectly.\n\nPrice per person with tax and tip was about $55 which is cheap compared to other high tea places.\n\nWe thoroughly enjoyed ourselves and will be back again for more.\""
+      }
+    ]
   }
 }

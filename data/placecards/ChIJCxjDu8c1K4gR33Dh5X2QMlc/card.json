@@ -11,13 +11,13 @@
     "phone": "(416) 519-6794",
     "website": "https://konjikiramen.com/",
     "hours": [
-      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
-      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
-      "Sunday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM"
+      "Monday: 11:30 AM – 9:30 PM",
+      "Tuesday: 11:30 AM – 9:30 PM",
+      "Wednesday: 11:30 AM – 9:30 PM",
+      "Thursday: 11:30 AM – 9:30 PM",
+      "Friday: 11:30 AM – 10:30 PM",
+      "Saturday: 11:30 AM – 10:30 PM",
+      "Sunday: 11:30 AM – 10:00 PM"
     ],
     "price_level": 2,
     "rating": 4.4,
@@ -59,6 +59,12 @@
         "id": "b6",
         "title": "Check",
         "body": "Estimated check for two using Toronto tax logic."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Very tasty ramen and appetisers. We ordered original shoyu & Spicy. The spicy ramen is not very spicy but very flavourful with burnt garlic chilly oil. The broth is creamy and tasty. Noodles are thin hand made!\nWe also orders mini chashu and Deep Fried King Mushrooms both were delicious.\nService is excellent and staff is friendly.\nThey have vegetarian options available. They have option to substitute the Pork chashu with Chicken but the broth is pork or seafood based. We ordered regular size and it’s perfect for a meal. You can also order super size if you want.\"\n\n⭐⭐⭐⭐⭐ \"Got a chance to try this ramen place. Friendly staff, and the food was really good. I had a bowl of Smokey Black Tonkotsu Ramen and a side of truffle gyoza. The gyoza’s didn’t come in time so they didn’t charge me for them! I appreciated that!  I will be back for sure!\"\n\n⭐⭐⭐⭐⭐ \"This place is definitely worth a visit for ramen lovers. I had the wagyu ramen and it was absolutely delicious. The flavors were so rich and satisfying. The service was also quite good, adding to the overall pleasant experience. I would highly recommend trying this dish. Of all the places I've visited for Ramen, this ranks the best as far as tastes goes.\""
       }
     ]
   },

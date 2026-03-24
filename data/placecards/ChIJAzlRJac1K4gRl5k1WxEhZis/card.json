@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Upscale Yorkville speakeasy with serious cocktails. 4.7 rating, 318 reviews. Open til 2am Sat nights.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"An upscale cocktail bar in the heart of Yorkville, C-suite nevertheless feels like an escape— a brief weekend trip away from the city. Immediately upon entering you are struck by the lovely scent of dozens of candles, the Orient-Express inspired decor, and warm lighting that bathes the setting. The cocktails are elaborate and excellent, taking advantage not just taste but every sense, in the Space Mule: smells of citrus and fresh cinnamon, gentle crackles of embers, and a bombastic visual presentation compliment the rich and surprisingly complex flavours.\n\nFor those that prefer to keep it simple, they have an extensive whisky menu, which I had on the rocks paired with a beautifully carved sphere of ice. As you had your drinks, there was pleasant music throughout the night, at a reserved volume that clearly implied spurring flowing conversations were the main goal of the setting. The service was truly excellent, the servers knowledgeable, friendly, and very professional.\n\nOverall C-Suite is a truly one of a kind experience with its decor, cocktails, and vibe all being idiosyncratic and excellent. I would note that the prices for their signature cocktails were somewhat eye watering on first glance, and it certainly is an upscale option, but when witnessing the bartenders make your drink you do get the sense that to the extent that anything justifies a $40 cocktail, the time, skill, and passion put into not just the drinks but the whole experience by their staff certainly would. I would recommend C-Suite to anyone that enjoys cocktails, particularly as a place to end off the night of a memorable event such a birthday, anniversary, or other celebration that you do not want to forget.\"\n\n⭐⭐⭐⭐⭐ \"Absolutely love this speakeasy style secret bar! Their bespoke experience is unreal. The bartenders are dynamic, intriguing, and you’ll want to come back just to hang out with them. Visited this place 2 days in a row because I just couldn’t resist. Love the personalised drink experience and the complimentary truffle chips straight from France. The 70s/80s music is always so befitting for the ambiance. Will definitely be a regular here!\"\n\n⭐⭐⭐⭐⭐ \"I can highly recommend the bar experience. If you have never done it, it's a lot if fun. Albert and Fei created delicious and innovative cocktails, we enjoyed their company. In fact, all staff we encountered were kind and fun. The ambiance is wonderful, dim lighting, great music, beautiful decor, a very cool 'speakeasy' vibe. Great for ladies night or a date night, or even a night cap!\""
+      }
+    ]
   }
 }

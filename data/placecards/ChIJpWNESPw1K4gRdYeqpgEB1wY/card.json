@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Opened May 2025 inside a stunning 1902 heritage post office building. Butcher + artisan pantry. The building alone is worth the visit — architecture meets food. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Pretty unbelievable prices for the quality of meat! This place won’t stay quiet for long as more people realize this. Better than the budget grocery stores, and runs laps around them in quality. Mennonite eggs. Massive selection of meats that you can’t get unless you’re at a butcher. Tight little produce section, great frozen food selection, wide array of pantry items.\"\n\n⭐⭐⭐⭐⭐ \"I live right by the store and was so excited when they opened. The neighbourhood definitely needed this. Fresh meat selections, sometimes even cheaper than Freshco, and the quality is top notch!! I heard that prepared food like pasta and sandwiches are made in house and they are SO GOOD!! I wish to see a little more selection of fruits and veggies too but it’s definitely my new go-to grocery store!\"\n\n⭐⭐⭐⭐⭐ \"This will definitely be my new go to grocery store. Very clean, value priced, staff is very welcoming. Great selection of meats- prime cuts available. You won’t be disappointed.\""
+      }
+    ]
   }
 }

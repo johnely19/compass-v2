@@ -10,7 +10,18 @@
     "type": "restaurant",
     "phone": "(647) 398-9270",
     "website": "https://manita.ca/",
-    "location": "1164 Yonge St, Toronto, ON M4W 2L9, Canada"
+    "location": "1164 Yonge St, Toronto, ON M4W 2L9, Canada",
+    "hours": [
+      "Monday: 10:00 AM – 10:00 PM",
+      "Tuesday: 10:00 AM – 10:00 PM",
+      "Wednesday: 10:00 AM – 10:00 PM",
+      "Thursday: 10:00 AM – 10:00 PM",
+      "Friday: 10:00 AM – 10:00 PM",
+      "Saturday: 10:00 AM – 10:00 PM",
+      "Sunday: 10:00 AM – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 111
   },
   "narrative": {
     "summary": "📍 Manita\n1164 Yonge St, Toronto, ON M4W 2L9, Canada",

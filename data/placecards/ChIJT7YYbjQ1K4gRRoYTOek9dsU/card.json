@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "New contemporary Italian with hidden speakeasy in back. Chef Andrew Capone. Replaced 25-yr Piri Piri Grill. 4.9 rating early. Weekend brunch + dinner.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had a very enjoyable evening at their opening. Service was top notch. Had Fish with couscous, arincini, the tomatoe sauce was out standing, and a nice bottle of red. Atmosphere was very nice. Look forward to the next visit.\"\n\n⭐⭐⭐⭐⭐ \"Perfect place to catch up with a friend and share some delicious Italian food! The branzino, cacio e pepe spaghetti, & the gnocchi with braised rabbit were to die for!! Thank you Katie, Pedro, and Tiago for the incredible service and recommendations. Will definitely be returning❣️\"\n\n⭐⭐⭐⭐⭐ \"The food was on point, balanced, full of flavour, and handled with a light touch that showed real restraint and confidence in the kitchen. Nothing felt overworked, and every dish tasted thoughtful and well composed. The service matched the food perfectly: attentive, warm, and present without ever feeling forced or performative.\nThe cocktails were spot on as well. The bartender was engaging, curious, and clearly passionate about what they’re doing. They took the time to understand our palate and seemed genuinely interested in crafting drinks that suited us, which made the whole experience feel personal and fun.\nThis place feels like exactly what the neighbourhood has been missing. It has an energy and sense of care behind it, and it’s the kind of spot you leave already thinking about your next visit. The tartar was my favourite dish of the night and definitely has the feel of a signature item. And the seafood linguine, made in house, was cooked perfectly, simple, elegant, and deeply satisfying.\nReally looking forward to coming back. Keep up the great work Team Rossio!\""
+      }
+    ]
   }
 }

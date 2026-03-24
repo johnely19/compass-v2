@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Montreal transplant; vintage + industrial vibe; great eye-catching window displays and eclectic mix.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I love this store! You can find everything you need for your home. I was so happy when I found this boutique with a vintage style. Finally a place to find unique furniture!! I always go there when I need to buy a gift. The staff always have great recommendations:)\"\n\n⭐⭐⭐⭐⭐ \"Incredible store. High quality home pieces to make your space unique and intersting while still being cozy. Its also a great store for gift shopping. As well the staff is really nice and has great customer service.\"\n\n⭐⭐⭐⭐⭐ \"I struggle to think of a better gift and home good store west of Yonge. This place is endlessly charming, and you will find products that delight yourself or impress your friends and family as thoughtful gifts. Whether you’re shopping for a homeowner or renter, man or woman, young or old, you’ll find something for anyone in your life from $25-$100+ and you’ll probably get yourself some nice decor on the way.\""
+      }
+    ]
   }
 }

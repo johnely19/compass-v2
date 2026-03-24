@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Craft brewery with a compact music hall that attracts experimental and indie acts. Ontario-crafted lagers, unpretentious vibes. Musicians love this room. 4.5★, 1,418 reviews. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Absolutely fantastic beers here and a stellar happy hour with great deals and options. I had their staple IPA and absolutely loved it! I'm not sure why they were so good, but we had an order of fries and they were just the best fries ever? I can't even describe why they were so great. The vibe here is electric and they have a lovely patio for warmer times. Big reccomend!\"\n\n⭐⭐⭐⭐ \"This bar/brewery has a great selection of beers—something for every taste, and definitely worth a visit if you’re a craft beer fan. The atmosphere is lively, and it’s clear they put effort into their brews.\n\nUnfortunately, our experience was a bit overshadowed by the seating arrangement. We were placed in a spot uncomfortably close to the service area, where I kept getting bumped as servers rushed by and handled food orders behind me. It really affected the overall vibe.\n\nWe also waited quite a while for our food, and when the tempura green beans finally arrived, they were underwhelming—mostly tempura batter with a few green beans, and lacking in flavor.\n\nIt’s a solid place for drinks, but I’d recommend choosing your table carefully and tempering expectations when it comes to the food.\"\n\n⭐⭐⭐⭐ \"4.4.\nGo for the beer, stay for the vibes. Have been here a few times for drinks over the past few years and it’s always great. Great lighting, great patio (in the summer), great beers, and a good vibe all around.\nWent recently for dinner- the service was great, and the food was also pretty good. Menu changes but there are some staples.\nDon’t sleep on the French fries or the lemon ricotta doughnuts!\nThey have a rotating kombucha and some zero-proof options as welll!\""
+      }
+    ]
   }
 }

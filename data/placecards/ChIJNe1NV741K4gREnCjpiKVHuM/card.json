@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Reopened Feb 6 with redesigned room (white tablecloths, chrome details), expanded menu. One of Toronto's most talked-about since 2021, now elevated.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"We had such an amazing dinner here! The vibe at MIMI is unmatched—the red lighting and the decor create this cool, high-energy atmosphere that’s perfect for a night out.\n\nThe food definitely lived up to the hype. The four-foot belt noodles were the highlight; watching them being cut tableside is such a cool experience, and the texture was spot on. We also loved the Green Scallion Fried Rice and the crispy chicken.\n\nThe service was 10/10 and the presentation is beautiful. Just a heads up that it is definitely on the higher end of the price scale for Chinese food, but for the quality and the overall experience, it’s well worth it for a special occasion.\"\n\n⭐⭐⭐⭐⭐ \"Great experience!\nBest items to get were\n1. the General Tao chicken is a MUST (generic, sure, but so good!!!)\n2. Strip loin is a MUST.\n3. Lamb fried rice\n4. Potatoes (so incredibly flavourful)\n5. Char Sui\n6. Dessert - Cookies & Crème (unreal)\"\n\n⭐⭐⭐⭐⭐ \"Had the valentines tasting menu with my gf and it was spectacular. Staff was great and super helpful with everything. Food was great plus we added on the 4ft noodle which was a fun and delicious experience. My favourite dishes were the duck, fried rice, and char siu ribs.\""
+      }
+    ]
   }
 }

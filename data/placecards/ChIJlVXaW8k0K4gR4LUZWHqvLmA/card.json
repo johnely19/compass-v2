@@ -11,13 +11,13 @@
     "phone": "(647) 748-3833",
     "website": "http://www.sansotei.com/",
     "hours": [
-      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Friday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Saturday: 11:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Sunday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM"
+      "Monday: 11:00 AM – 9:00 PM",
+      "Tuesday: 11:00 AM – 9:00 PM",
+      "Wednesday: 11:00 AM – 9:00 PM",
+      "Thursday: 11:00 AM – 9:00 PM",
+      "Friday: 11:00 AM – 9:30 PM",
+      "Saturday: 11:00 AM – 9:30 PM",
+      "Sunday: 11:00 AM – 9:00 PM"
     ],
     "price_level": 1,
     "rating": 4.5,
@@ -59,6 +59,12 @@
         "id": "b6",
         "title": "Check",
         "body": "Estimated check for two using Toronto tax logic."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Not much to say cuz me coming back already says it all! I’ve tried other locations before but finally stopped by this one after walking past so many times. The noodles were cooked perfectly with great texture and bold flavors. And their cheesecake? Amazing!!! Always has the right sweetness with fresh fruit flavor. Definitely recommend!\"\n\n⭐⭐⭐⭐⭐ \"The shoyu ramen was really good, would definitely get again. Cheese cake is okay. The staff here is very friendly and helpful.\"\n\n⭐⭐⭐⭐ \"Nice spot to get some yummy ramen! Only tried once but I'll be back for more. My first time trying ramen that didnt come from a package. I cant believe I've been missing out this much!!\""
       }
     ]
   },

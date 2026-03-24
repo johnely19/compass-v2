@@ -6,7 +6,20 @@
     "name": "Fiesta Farms",
     "city": "Toronto",
     "address": "Christie Pits / Koreatown",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 8:00 AM – 8:00 PM",
+      "Tuesday: 8:00 AM – 8:00 PM",
+      "Wednesday: 8:00 AM – 8:00 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 8:00 PM",
+      "Saturday: 8:00 AM – 8:00 PM",
+      "Sunday: 9:00 AM – 7:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1930,
+    "phone": "(416) 537-1235",
+    "website": "http://fiestafarms.ca/"
   },
   "discovery": {
     "text": "blogto.com"

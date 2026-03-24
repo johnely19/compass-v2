@@ -14,13 +14,13 @@
     "phone": "(604) 898-6665",
     "website": "http://thewatershedgrill.com/",
     "hours": [
-      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
-      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
-      "Saturday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
-      "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 11:00 PM",
+      "Saturday: 10:00 AM – 11:00 PM",
+      "Sunday: 10:00 AM – 10:00 PM"
     ],
     "price_level": 2,
     "rating": 4.5,
@@ -51,6 +51,12 @@
         "id": "ops",
         "title": "Operational snapshot",
         "body": "Google rating 4.5 from 3688 reviews."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Local vibes. They have daily specials. Ipa in can didn't taste fresh, lolked under and it was dated from september. Soup and salad were good. The lasagna was huge, the meat sauce was thick but there wasn't enough to my taste.\n\nRoast beef was a bit disapointing, didn't look close to their instagram promo. The plate was loaded with Well done tiny slices. Gravy was good\"\n\n⭐⭐⭐⭐⭐ \"Great vibes at this beautiful location near the river. Very limited parking (5 spots max). The drinks were delicious, chicken brie burger was a 5/5; however the chicken pot pie was more just a bowl of filling with the puff pastry on top. Tasted good but was lacking in the amount of pastry. The fries were the best we've had.\"\n\n⭐⭐⭐⭐⭐ \"Watershed Grill is a very charming restaurant in an excellent location at Eagle Run, with a relaxed, local atmosphere that feels welcoming and authentic.\n\nThe staff were friendly, attentive, and professional, which made the experience even more enjoyable.\n\nWe tried the Roasted Tomato Soup and the Chicken Vegetable Soup. The roasted tomato soup was outstanding — rich, creamy, and full of flavor, and it paired perfectly with the garlic bread. The chicken vegetable soup was also warm, comforting, and well prepared.\n\nThe Fish and Chips were very crispy, fresh, and delicious, exactly how they should be. The Poutine was also very good and satisfying.\n\nOverall, Watershed Grill offers great food, a pleasant atmosphere, and excellent service. Highly recommended, and we would definitely come back again.\""
       }
     ]
   },

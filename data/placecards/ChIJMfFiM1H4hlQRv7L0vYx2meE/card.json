@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Squamish's star brewery. Great pizza, huge beer selection. 4.7 rating, 1,371 reviews. Buzzing with locals. The essential Squamish brewery stop. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The wings are amazing. We tried all three flavors! All great! And such a variety of beers! And the best names for these beers! Haha. I also had the beet and apple salad which was very refreshing and the fries were perfect and of course you can’t not try the kochjang chicken burger!! Yummy!\"\n\n⭐⭐⭐⭐⭐ \"This place is an absolute embarrassment to dedicated pizza places. How does a brewery go out and make some of the best pizza I’ve had around Vancouver? I have no idea. You need to go here. Get the pizzas. Just get all of them. They’re so good. I don’t drink beer, so I just come for the pizzas, and I’ve been multiple time. They’re really good.\"\n\n⭐⭐⭐⭐ \"Great variety of palettes and portions that seem well-rounded. Only sat down for beverages for the first visit, but overall a great first impression of service and atmosphere. I am primarily a zero proof seeker and got to try A Beer for Ants and the Dentville Ginger Beer. Both complimented each other well and I had to get a second round of the Ginger beer. Well worth the 1h drive away to also pick up limited edition cans. Thanks Backcountry Brewing team for the warm welcome. Looking forward to returning to try the kitchen offerings.\""
+      }
+    ]
   }
 }

@@ -6,26 +6,20 @@
     "name": "Petite Bouchée Patisserie",
     "city": "Toronto",
     "address": "Junction / Sousa Mendes",
-    "type": "cafe",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 10:00 AM – 9:00 PM",
-      "Wednesday: 10:00 AM – 9:00 PM",
-      "Thursday: 10:00 AM – 9:00 PM",
-      "Friday: 10:00 AM – 9:00 PM",
-      "Saturday: 10:00 AM – 9:00 PM",
-      "Sunday: 10:00 AM – 9:00 PM"
-    ],
-    "rating": 4.9,
-    "review_count": 353,
-    "phone": "(416) 588-8882",
-    "website": "https://www.instagram.com/petite__bouchee_patisserie/"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via Yelp"
   },
   "narrative": {
     "summary": "Exceptional 4.9★ rating; French pastry; off-the-beaten-path location adds discovery appeal.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Came in for a slice of their famous chocolate cake and somehow walked out with the best cupcake of my life instead 🤤\n\nThe chocolate cupcake was unreal!! perfectly moist, rich without being too heavy, and topped with the dreamiest frosting. One bite in and I knew I made the right decision. I’m genuinely still thinking about it.\n\nOn top of that, the owner is so sweet and welcoming. You can feel the love and care the moment you walk in. Everything in the display looked incredible. Safe to say I’ll be back and next time I might just grab a whole chocolate cake for myself and fully indulge. 10/10 recommend 🩷✨\"\n\n⭐⭐⭐⭐⭐ \"If you’re a chocolate lover, you absolutely don’t want to miss the chocolate cake. Just make sure to reserve it in advance because it’s in very high demand—and for good reason. It’s made by one person only, Nancy, who is truly the sweetest.\n\nThe coffee was great, and the butter tart and almond croissant were also incredibly delicious. Thank you, Nancy, for your kindness, your cheerful personality, and for making the best chocolate cake ever! XD\"\n\n⭐⭐⭐⭐⭐ \"The people of the internet aren’t lying - this place has the BEST chocolate cake in Toronto. We came from Buffalo, NY for a bday weekend and were excited to try it after tons of reddit research. A plate wasn’t needed, so good we dug right in. Nancy was the sweetest and we will definitely be back during our next visit! ❤️\""
+      }
+    ]
   }
 }

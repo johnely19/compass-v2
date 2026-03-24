@@ -146,7 +146,7 @@ export interface PlaceCard {
   data: {
     description: string;
     highlights: string[];
-    hours?: Record<string, string>;
+    hours?: Record<string, string> | string[];  // string[] from Google Places API
     images: PlaceCardImage[];
     [key: string]: unknown;  // type-specific data
   };

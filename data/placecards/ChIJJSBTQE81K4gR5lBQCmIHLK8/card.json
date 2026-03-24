@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Artisan-focused design market with modern textiles, floor pillows, and kilim-inspired goods; current installation features fish-scale patterns.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"When I first walked into the store, my eyes were darting everywhere because there are too many beautiful things. Such a good inventory of storage and curated items to make the house a home.\n\nI bought a colorful crate for my office drawer, and different photo frame accessories. Happy with all my purchases and will definitely return another time.\"\n\n⭐⭐⭐⭐ \"Great place to buy colourful crates and unique items. Sometimes the staff doesn’t know the products too well - I asked one employee to weigh in on incense (specifically how fast it would burn, thinking it would burn more slowly based on the price $$$ and material), but the person had no idea and so I ended up purchasing it and being disappointed. I will do more research before next purchase, but will definitely go back to this store.\"\n\n⭐⭐⭐⭐⭐ \"An amazing store with such a great range of products to bring some beauty to your home, 313 has something for all budgets. I purchased some pillows and they were able to hold them for me until I could come back with a car.\n\nCustomer service was great in the summer when I was able to shop in person and they also had free local delivery that I was able to use in lockdown.\""
+      }
+    ]
   }
 }

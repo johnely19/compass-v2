@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Bottle shop by day, natural wine bar by night. Focus on sustainable, estate-grown, low-intervention wines. 643 Dupont — walkable from Yonge & St Clair. 4.7★ (78 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Great selection of interesting wine, attentive and knowledgeable service at that right pitch of checking in but not hovering. Small plates are super tasty. Honestly shocked at the volume of fantastic olives, Toronto has broken me, I only expect to get 6 olives for $10, there were like 25 castelvetranos in there. Super cute vibes, the back room felt like a secret (quiet on Easter long weekend). Highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Barnabas and the team were friendly and knowledgeable. Great atmosphere, wine, and music on a Friday night. The negroni is a must try if you go! The best we’ve ever had. Period.\"\n\n⭐⭐⭐⭐⭐ \"Don't miss this little gem. Superior food in Tapas style. Menu changes frequently for seasonal freshness. Get the chef to recommend.  Paired with great wines.\""
+      }
+    ]
   }
 }

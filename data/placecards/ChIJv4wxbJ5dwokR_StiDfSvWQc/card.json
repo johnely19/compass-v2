@@ -6,7 +6,19 @@
     "name": "Evil Twin Brewing NYC",
     "city": "NYC",
     "address": "Ridgewood (16-16 George St)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 4:00 – 9:00 PM",
+      "Tuesday: 4:00 – 9:00 PM",
+      "Wednesday: 4:00 – 9:00 PM",
+      "Thursday: 4:00 – 9:00 PM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 443,
+    "website": "https://eviltwin.nyc/location/ridgewood-taproom/"
   },
   "discovery": {
     "text": "Discovered via https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide",

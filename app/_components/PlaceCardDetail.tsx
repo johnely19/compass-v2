@@ -5,6 +5,7 @@ import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
 import TriageWidget from './TriageWidget';
 import RatingWidget from './widgets/RatingWidget';
+import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
 
@@ -174,6 +175,11 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         {/* Identity bar — rating + review count + price in one compact row */}
         {(rating || priceLevel) && (
           <RatingWidget rating={rating} reviewCount={reviewCount} priceLevel={priceLevel} />
+        )}
+
+        {/* Hours widget — shows today + expand for full week */}
+        {data.hours && (Array.isArray(data.hours) ? data.hours.length > 0 : Object.keys(data.hours).length > 0) && (
+          <HoursWidget hours={data.hours as string[] | Record<string, string>} />
         )}
 
         {/* Food photos strip — right after identity, before prose */}

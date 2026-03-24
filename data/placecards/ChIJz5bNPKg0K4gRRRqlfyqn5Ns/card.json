@@ -6,7 +6,20 @@
     "name": "Hollace Cluny",
     "city": "Toronto",
     "address": "Annex/Davenport",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 5:00 PM",
+      "Tuesday: 9:00 AM – 5:00 PM",
+      "Wednesday: 9:00 AM – 5:00 PM",
+      "Thursday: 9:00 AM – 5:00 PM",
+      "Friday: 9:00 AM – 5:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "rating": 5,
+    "review_count": 7,
+    "phone": "(416) 968-7894",
+    "website": "http://hollacecluny.ca/"
   },
   "discovery": {
     "text": "Discovered via designlinesmagazine.com"

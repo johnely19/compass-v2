@@ -6,24 +6,20 @@
     "name": "Uh Bar",
     "city": "Toronto",
     "address": "Dundas West",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 7:00 PM – 1:00 AM",
-      "Thursday: 7:00 PM – 1:00 AM",
-      "Friday: 7:00 PM – 2:00 AM",
-      "Saturday: 7:00 PM – 2:00 AM",
-      "Sunday: 7:00 PM – 1:00 AM"
-    ],
-    "rating": 4.7,
-    "review_count": 59
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via bartenderatlas.com"
   },
   "narrative": {
     "summary": "Basement cocktail bar with evolving design, creative takes on classics. Bartender Atlas pick. 4.7 rating, 59 reviews.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"10/10 vibes and drinks are delicious.\n\nThankfully we came early at 8:15 PM and beat the rush on a Saturday night. I really liked the vibes and it made for the perfect date spot. We got to try the whiskey highball, vodka soda and 3 other off menu items. Super dangerous how tasty the drinks are and that you don't taste the alcohol.\n\nHighly recommend and would come back.\"\n\n⭐⭐⭐⭐⭐ \"Imagine a Rooms location but make it a cocktail laboratory. In a vast basement but not a dungeon. Or, maybe a very luxe, cool dungeon, the lighting is superb. Jazz playing at the right volume. So much seating, good for solos or even groups of 6+ with their massive booths, like something out of the '70s era.\nThe cocktail menu is all creative spins on classic cocktails. I had the Uh Negroni ($23), which was fruitier than the bitterness of a regular Negroni. I saw someone order the espresso Martini which had no foam and was a translucent brown 🤯\n\nLooking forward to visiting again. ✌️Josh + Alex for the hospitality\"\n\n⭐⭐⭐⭐⭐ \"i will be shocked if this is not the next it bar in toronto. the aesthetic and vibe of this place is unreal and all of the drinks are incredible. we went even though they haven’t officially opened but this is my fav bar right now, excited for the official open!\""
+      }
+    ]
   }
 }

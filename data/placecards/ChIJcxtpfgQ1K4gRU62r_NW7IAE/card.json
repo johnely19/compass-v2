@@ -6,27 +6,20 @@
     "name": "Donna's",
     "city": "Toronto",
     "address": "Wallace Emerson / Lansdowne (827 Lansdowne Ave)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 9:00 AM – 10:00 PM",
-      "Wednesday: 9:00 AM – 10:00 PM",
-      "Thursday: 9:00 AM – 10:00 PM",
-      "Friday: 9:00 AM – 10:00 PM",
-      "Saturday: 9:00 AM – 10:00 PM",
-      "Sunday: Closed"
-    ],
-    "rating": 4.7,
-    "review_count": 625,
-    "price_level": 2,
-    "phone": "(416) 536-1414",
-    "website": "http://donnas.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
     "summary": "Former Momofuku Shoto crew. All-day spot with seasonal shared plates and maybe the best sandwich program in the west end. Sunday roast has become the neighbourhood's open secret. 4.7★ (622 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Donna’s is one of my favourite restaurants anywhere in the world.\n\nThe food is outstanding: genuine, healthy, perfectly cooked, and always original — never predictable, always memorable. Every dish feels thoughtfully prepared, with great respect for ingredients and balance.\n\nThe atmosphere is just as impressive. The space is clean and stylish, warm and carefully designed, with music that perfectly complements the experience and makes you feel immediately at ease.\n\nService is truly top-level. Hanna and the entire team are professional, attentive, and genuinely welcoming — the kind of hospitality that makes you feel valued, not rushed.\n\nWhat more could you ask for?\nSimply go to Donna’s, sit back, and enjoy an exceptional experience.\"\n\n⭐⭐⭐⭐⭐ \"I've been to Donna's a few times and have always enjoyed, but I just the most absolutely spectacular birthday dinner here and had to rave about it! For our larger party if 9, we were required to do a tasting menu, and it was an incredible experience. There was so much food (10-12 different dishes by our count including dessert, we lost count) and every bite was delicious. This is not a tasting menu you'll leave hungry from, we were all stuffed AND had leftovers to bring home, and all for $85 a person! Also, they were extremely accommodating of individual dietary needs—we had a gluten-free member of our party, and for the few dishes that contained gluten (most of them were inherently GF), they were given a personal alternative portion. Our server was attentive and friendly. There was a technical difficulty with the bill at the end that resulted in a bit of a wait, and they comped a round of our drinks as an apology (totally not necessary but of course appreciated).\n\nThank you Donna's, we will be back 💕\"\n\n⭐⭐⭐⭐⭐ \"Cute restaurant and cozy vibe in a relatively obscure area. Couldn’t quite place their dishes but I’d say Asian fusion? Tried their prawn brown rice in broth and really enjoyed the flavour - a hint of ginger and just warms you from the inside on a chilly day. The dish itself feels healthy (the brown rice I suppose?) and the prawns and veg. Would return to try their other dishes!\""
+      }
+    ]
   }
 }

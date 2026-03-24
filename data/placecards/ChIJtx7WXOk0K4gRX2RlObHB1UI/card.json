@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Underground 30-seat screening room, only 33 Google reviews—the insider's arthouse pick. International cinema, experimental programming. True hidden gem.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Just found a gem in Toronto! For all the classic horror movies fanatics, this is your place! I have probably walked past that house so many times but I had no idea what was inside! The owner Regg Hart has created this incredible cinematic universe with a stunning set of collectibles, movie posters and vintage masks as decoration! Every weekend he is hosting movies from the golden age of horror, I had the chance to watch his remastered piece of the famous movie “Nosferatu” mixed with the music of Radiohead, it was just the perfect fit! This is definitely not the last time I go there and I recommend it! Regg Hart is always there and he is so welcoming, he also gives a small presentation at the start and end of the movie!\"\n\n⭐⭐⭐⭐ \"Came here on a Wednesday to see Metropolis, and it was one of the most unique experiences I’ve ever had in Toronto. The theatre is set up in Reg’s living room - there’s a huge screen and a ton of cool decor. Reg does a talk at the beginning and during the intermission of the movie - mostly about his life and experiences in the industry. If you’re expecting an in-depth analysis of the film, that’s not what this is, but you will get his pov on some of the main themes.\n\nReg composes his own score for the movie - intermingling the new music with the film music - so if you’re looking to watch with the original audio, keep that in mind. The new score definitely added to the unique experience.\n\nAll in all, I’d recommend Cineforum if you’re looking for a interesting movie-watching experience in the city. It wasn’t my cup of tea, but I’m really glad I went!\"\n\n⭐⭐⭐⭐⭐ \"This is the best cinema in Toronto. Intimate and lovingly curated. Not fancy, maybe a little worn, but done proper. Reg Hartt is a tyrant (he will kick you out if he feels you don't deserve to be there), but he is the most knowledgeable person in the business. This theatre is an institution and a gem of the city.\""
+      }
+    ]
   }
 }

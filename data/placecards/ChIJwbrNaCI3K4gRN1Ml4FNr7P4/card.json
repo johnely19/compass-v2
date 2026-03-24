@@ -6,7 +6,20 @@
     "name": "Donna Child Fine Art — Magdalena Morey exhibition",
     "city": "Toronto",
     "address": "South Etobicoke (365 Evans Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 5:00 PM",
+      "Wednesday: 11:00 AM – 5:00 PM",
+      "Thursday: 11:00 AM – 7:00 PM",
+      "Friday: 11:00 AM – 5:00 PM",
+      "Saturday: 10:00 AM – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 5,
+    "review_count": 18,
+    "phone": "(416) 620-0500",
+    "website": "https://donnachildfineart.com/"
   },
   "discovery": {
     "text": "donnachildfineart.com"

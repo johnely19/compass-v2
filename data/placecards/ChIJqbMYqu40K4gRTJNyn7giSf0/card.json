@@ -6,13 +6,26 @@
     "name": "Balfour Books",
     "city": "Toronto",
     "address": "Little Italy (College St)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 12:00 – 6:00 PM",
+      "Tuesday: 12:00 – 6:00 PM",
+      "Wednesday: 12:00 – 6:00 PM",
+      "Thursday: 12:00 – 6:00 PM",
+      "Friday: 12:00 – 6:00 PM",
+      "Saturday: 12:00 – 6:00 PM",
+      "Sunday: 12:00 – 6:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 241,
+    "phone": "(416) 531-9911",
+    "website": "http://balfourbooks.squarespace.com/"
   },
   "discovery": {
     "text": "Discovered via 1000libraries.com"
   },
   "narrative": {
-    "summary": "Secondhand treasures in a packed, browsable space. Perfect for serendipitous Calvino finds. 4.7\u2605.",
+    "summary": "Secondhand treasures in a packed, browsable space. Perfect for serendipitous Calvino finds. 4.7★.",
     "blocks": []
   }
 }

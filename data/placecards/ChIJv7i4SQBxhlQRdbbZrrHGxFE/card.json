@@ -6,7 +6,11 @@
     "name": "Bar Susu",
     "city": "Vancouver",
     "address": "Mount Pleasant",
-    "type": "bar"
+    "type": "bar",
+    "rating": 4.2,
+    "review_count": 105,
+    "phone": "(604) 874-4687",
+    "website": "https://thisisbarsusu.com/"
   },
   "discovery": {
     "text": "destinationvancouver.com",

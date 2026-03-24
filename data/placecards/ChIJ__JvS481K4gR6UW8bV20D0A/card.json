@@ -6,20 +6,7 @@
     "name": "Sakai Bar",
     "city": "Toronto",
     "address": "Dundas West (near Dufferin)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 6:00 – 11:00 PM",
-      "Tuesday: Closed",
-      "Wednesday: Closed",
-      "Thursday: 6:00 – 11:00 PM",
-      "Friday: 6:00 – 11:00 PM",
-      "Saturday: 6:00 – 11:00 PM",
-      "Sunday: 6:00 – 11:00 PM"
-    ],
-    "rating": 4.4,
-    "review_count": 389,
-    "phone": "(416) 532-2904",
-    "website": "https://www.instagram.com/sakaibarto/?hl=en"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "https://www.instagram.com/sakaibarto/",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Izakaya + sake bar + bottle shop hybrid on Dundas W. Intimate, 4.4 stars, Thu-Sat evenings only. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Follow @bredgyeats for more food photos!\n\nSakai Bar creates an unforgettable fusion of flavours that both respects and elevates traditional Japanese ingredients. Starting with the showstopper, the Hambagu Steak was nothing short of indulgent - its panko crust shattering with the lightest bite, revealing a juicy, velvety interior bursting with beefy aroma. Each bite melted into umami richness, deepened by chives, onions, and a tangy demi-glace that strikes the perfect contrast. Binding everything in creamy decadence is a blend of grated white cheese and gooey egg yolk oozing into the mix, and after each bite, my anxiousness grew, knowing this experience wouldn’t last nearly as long as I wanted it to. Then, the Chicken + Morels are simply executed with fine-dining finesse. The Mennonite chicken, pan-roasted in cast iron, arrived with a blistered, glassy skin and juicy, tender flesh. The soy butter jus beneath it shimmered with richness and a deep umami, soaking into the mizuna greens and plump morels. After this, no supermarket chicken will ever be the same. Backtracking, the anago sunomono was a refreshing prelude that elevated the rest of the experience. Grilled anago carried a mild sweetness and a whisper of char, accompanied by crunchy cucumbers dressed in a bright vinegar sauce. The fluke tartare, quiet yet full of intent, dissolved on the tongue with a gentle chew to lend out its subtle sweetness and sesame oil dressing. Sheets of nori accompanied the texturally varied bite, bulked out with cucumbers, shallots and scallions. Grilled to impeccable tenderness, the surface crisped just enough to give way to a succulent, almost springy interior. A sweet dashi soy broth pooled beneath, hugging the meat in an elegant umami glaze that elevates the robust bovine aromas. Sweet white onions added texture, while a dab of wasabi sparked heat and lifted the richness. To end, the silky panna cotta carried a creamy, slightly boozy and floral sake kasu aroma. A tangy clementine curd and vibrant Cara Cara orange segments brought acidity and brightness, cutting through the cream.\"\n\n⭐⭐⭐⭐ \"Walk-ins only, head there a little before 6pm for a seat. The warm potato salad is the standout item. The flavours and texture of the dish are outstanding!\n\nGratuity is applied automatically and there is a fee for paying with credit.\"\n\n⭐⭐⭐⭐⭐ \"Come and show some support to the restaurant after reviewing some comments:)\n\nMy friend and I came here to celebrate for my promotion and we had a wonderful night here! The food is amazing and portions are fair. And they have a wide variety of Japanese sake and shochu, which we really enjoyed. All people who served us were super sweet and nice. We tried to order some additional food and they were okay with that and we really appreciated that! We were not aware of the policy that we had to order all at once (that’s something mentioned by others in other reviews) but given the long line it’d be totally understandable if they said no to my additional order — so I really appreciated their accommodation:) (I was excited about the dinner the whole day so I didn’t eat much during the day lol)\n\nAnd sitting at the bar I really enjoyed seeing their teamwork. This restaurant has a great team and everyone was very friendly. Thanks so much for tonight.\""
+      }
+    ]
   }
 }

@@ -6,18 +6,20 @@
     "name": "Pii Nong Thai (Bayview)",
     "city": "Toronto",
     "address": "Bayview / Leaside (1677 Bayview Ave)",
-    "type": "restaurant",
-    "rating": 4.5,
-    "review_count": 1019,
-    "price_level": 2,
-    "phone": "(416) 322-8828",
-    "website": "http://piinongthai.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
     "summary": "Chef Chatchalit Chuayruk transformed the original Pii Nong into something dramatically more ambitious — ancient Thai recipes revived with modern technique. Dishes you've never seen on a Thai menu because they haven't been on one in decades. 4.5★ (1020 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"We had such a great experience at Pii Nong! The food was absolutely delicious and full of flavor. The butterfly coconut shrimp was perfectly crispy, the vegetable spring rolls were light and tasty, and the cashew chicken was cooked beautifully (just a tip: it doesn’t come with rice, so order some on the side). The curry pad thai was outstanding, rich, aromatic, and so satisfying.\n\nOn top of the amazing food, the service was excellent, friendly, attentive, and made us feel really welcome. It’s rare to find a spot that nails both food and service, but Pii Nong definitely does. Highly recommend if you’re craving authentic Thai in Toronto!\"\n\n⭐⭐⭐⭐⭐ \"We stopped in while we were in the neighbourhood and are so glad we did. The food here is excellent and staff are lovely. We had the shrimp fresh rolls and butterfly coconut shrimp to start, and the cashew chicken and curry pad Thai as mains. The coconut shrimp were perfectly fried and the sauce with each app was delicious. Portions for mains are very generous and the food has a good spice level. FYI the cashew chicken did not come with rice so we added an order. We had the mango sticky rice and coconut ice cream for dessert. Both were lovely and a nice way to end the meal. I would eat here again for sure\"\n\n⭐⭐⭐⭐ \"Pii Nong is a cute classy vibe. I’m not the biggest fan of the location but it’s a place you should definitely try. Beware it’s a very high traffic area, paid parking is available near by, there’s a few lots or street parking.\n\nFood came out fairly quick. We got the chicken green curry and I was it was spicier but it was more mild & coconut base. The crispy beef was one of my favourites, super flavourful! A must try! Pad See Ew was good, I’ve had better but still tasted good, we asked for extra spicy and it was spicy.  The fried rice has bigger chunks of pinapple, it wasn’t as sweet as I would have liked it to be but it was good. I love the large shrimp it came with!\n\nI would recommend trying this place at-least once.  I was too full to order a drink but a lot of people were drinking the Teddy Bear Tea, it was super cute to see !!\""
+      }
+    ]
   }
 }

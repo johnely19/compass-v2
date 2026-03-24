@@ -25,6 +25,13 @@
   },
   "narrative": {
     "summary": "Award-winning bar, new menu honoring Toronto's industrial history. Connected to Waterworks Foodhall. 4.5 rating, 144 reviews.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This is one of my favorite cocktail bars in the city. I’ve come here multiple times and I have always had a consistent and fantastic experience.\n\nThis is an unexpected bar sitting at the top of the food-hall. You simply do not expect the grandeur and allure of the space as you make your way up. You’re transported in Civil Works’ universe. Additionally, music adds to the ambience without being too loud. The menu is creatively woven with the story of the building. Please don’t hesitate to ask your servers questions as they do a much better job at storytelling. I love that they offer different types of water as a nod to the history of the space. I’ve never tried the different waters but I appreciate the intentionality.\n\nService: The service is amazing, I’d like to call out Mo and Rob who I’ve had the pleasure to be served by. Not only are they welcoming, but they’re also passionate and knowledgeable about their craft making the experience all the better. The menu is extensive which can be overwhelming to some, when and if in doubt, lean on your server.\n\nMenu: Creative, extensive & thoughtfully navigable with the help of descriptions, categorization and charts that facilitate the decision making process.\n\nDrinks: The cocktails are amazing. Even those that may not be to my liking are executed with mastery. In the extremely rare instances that I didn’t enjoy a drink, it was a matter of personal taste preferences not of skill.\n\nBonus: I believe the bar has a partnership with a couple food merchants in the food-hall, allowing you to order and have it served to you!\"\n\n⭐⭐⭐⭐ \"Very nice cocktails and ambience, however service is not as attentive as a regular bar, given the nature of the seating/roaming.\nHand Laundry - a warm cocktail with sweet/savoury flavours, like a salted caramel vibe.\"\n\n⭐⭐⭐⭐ \"This is the upstairs mezzanine style cocktail bar at Waterworks Food Hall. Opening hours are 5pm to late each day. The interior seating area is gorgeous, Art Deco themed arrangement Lots of tables were already reserved during our midweek visit. However, they had a handful set aside for walk ins.\n\nDrink list is a nice range of signature cocktail specials to go along with their beer and wine drinks. Drinks were mixed very well. I particularly enjoyed their take on an Old Fashioned. Don't hesitate to ask for recommendations if helpful. Otherwise, just enjoy the good drinks and great vibes with friends or date at Civil Works Bar. Will gladly return during future visits to Toronto.\""
+      }
+    ]
   }
 }

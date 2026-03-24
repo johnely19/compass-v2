@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Thoughtful Japanese cooking in a charming room; 4.5 rating, good for a late weeknight bite.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Cool vibes & drinks with  SMALL plates.\n\nLove the Tokyo toast ($10) deep fried thick toast with two scoops of taro ice cream and some crunchy toasted soba (feels like corn flakes).\n\nTried a few other small plates and I mean they’re SMALL small. Karachi ribs was tender and flavourful. Can’t remember the rest because they were quite forgettable honestly.\nUnfortunately the rotational feature, a deep fried octopus, was kinda soggy and there wasn’t much flavour. The powder on the side also added absolutely nothing to the dish.\n\nDrinks are quite good, I’d recommend the Kuchibeni ($17) with vodka, calico, and strawberry.\nThe Shochu Highballs were quite strong, the oolong one tastes like watery tea spiked with hard alcohol.\n\nI think for 3 people, 3 drinks each, and 3 small dishes, total was about $250. Staff were friendly and attentive! Love the old school artsy Japanese hole in the wall wooden decor aesthetic. Fun place for  drinks and to soak up the vibes, and maybe be a bit more selective on the dishes.\"\n\n⭐⭐⭐⭐⭐ \"Food 5/5\nService 4/5\nVibe 5/5\n\nAnother hidden Japanese style reso GEM in Toronto DT.\n\nI have really high hopes as it was a MISSION to get a reservation, and they did not disappoint. 👏🏻👏🏻👏🏻\n\nMy personal fav was the toast dessert, liver paste with garlic toast and corns tempura. I feel a lot of dishes are a mix of Japanese and chinese culture (but not 100% sure), but everyone was a seller! Love, yum and want more b\n\nOverall 5/5! definitely coming back and trying out more dishes! #eatwithclaw\"\n\n⭐⭐⭐⭐ \"Tapas style Japanese. The corn tempura, beef ribs, pork, sashimi, curry are all winners. Very strong dishes all around with small sharing portions. Exceptional atmosphere really took me back to a cozy Osaka establishment, full of 90s Japanese vinyl and trinkets. Recommended.\""
+      }
+    ]
   }
 }

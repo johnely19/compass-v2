@@ -13,6 +13,13 @@
   },
   "narrative": {
     "summary": "Near John's hood; specialty foods + bakery combo; solid neighborhood staple.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Everything you could ever want from a bakery/cafe!\nMany vegan and vegetarian options for food and drink. I had the walnut & lentil baked good. Delicious with some ketchup. Lots of seating to dine in. Will be back to try more! I hope they open a location in the East End :)\"\n\n⭐⭐⭐⭐⭐ \"I stop by Mabel’s almost every day, it’s become one of my favourite parts of my routine. The coffee is consistently the best around. Their bread is soooo yummy & fresh! We buy our sausages and eggs from there all the time. If you're looking for quality farm to table grocery, this is where you want to go!\nYou can really tell they care about what they serve. The whole place has a comforting, welcoming vibe, and the staff always make you feel looked after. Highly recommend!\"\n\n⭐⭐⭐⭐ \"Great sausage rolls and great chocolate chip oatmeal cookies! Made by hand and the service was lovely, by friendly folks who clearly love what they're doing. You have to pay for premium ingredients and the time it's made with care, so be forewarned it's not cheap, but it's worth it for a treat!\""
+      }
+    ]
   }
 }

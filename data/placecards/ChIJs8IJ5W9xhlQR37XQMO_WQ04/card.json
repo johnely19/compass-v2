@@ -14,6 +14,13 @@
   },
   "narrative": {
     "summary": "Vancouver legend. Cambodian-Vietnamese. Reddit locals call it 'the best restaurant in Vancouver' — the butter beef and chicken wings are iconic. Affordable, no-frills, absolutely essential Chinatown experience. 5,300+ reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Still thinking about our dining experience here! From the quickest service we have ever experienced at the table to the very delicious appetizers, it was the perfect way to start our evening. We went here for two things only: chicken wings and marinated butter beef.\n\nThey were bursting in flavour! The beef itself melts in your mouth and the chicken wings were so juicy, yet crispy. It was my first time tasting the flavour combinations in the beef marinade and the chicken batter, which I really enjoyed. I am so happy that I got to expand my palate!\n\nJust as Phnom Penh Restaurant was recommended to us, it will be one of the places I will tell people about when visiting Vancouver. We will certainly be back!\"\n\n⭐⭐⭐⭐⭐ \"I’m so surprised at how delicious this restaurant is! It was my first visit, and my friend said it’s her favorite spot in town. The rare beef (Marinated Butter Beef) was incredible! The dry two kinds noodles, spicy basil clams and the butter chicken wings were amazing too! I’ll definitely come back next time!\"\n\n⭐⭐⭐⭐ \"Was Phnom Penh worth the hype? Definitely \"Yes\". The butter beef itself was worth the line up. With the sweet and sour sour, it keeps you wanting more. Its unlike any raw beef dish anywhere.  Unfortunately,  this visit,  the famous chicken wings was over cooked,  and a bit bland.  The Phnom Penh dry noodles was lacking flavor,  but they do give quality ingredients.  The Pho was not very good.  Bland and soggy noodles.\nThis place is extremely busy,  so be prepared to wait and possibly be seated on a shared table. All the staff are extremely helpful and friendly.\nWill definitely come back and try other items on the menu.\""
+      }
+    ]
   }
 }

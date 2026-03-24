@@ -6,19 +6,7 @@
     "name": "Bà Nội",
     "city": "Toronto",
     "address": "Bloor West (Christie Pits area)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 9:00 AM – 4:00 PM",
-      "Wednesday: 9:00 AM – 4:00 PM",
-      "Thursday: 9:00 AM – 4:00 PM",
-      "Friday: 9:00 AM – 4:00 PM",
-      "Saturday: 9:00 AM – 4:00 PM",
-      "Sunday: 9:00 AM – 4:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 399,
-    "website": "https://ba-noi.myshopify.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.chuonthis.ca/best-bakeries-toronto/",
@@ -26,6 +14,13 @@
   },
   "narrative": {
     "summary": "Vietnamese-inflected French/Italian pastries; rotating menu; 4.8 rating. Tiny gem, no seating.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Lovely little place tucked away without a big sign, which makes it feel like a hidden local gem. I found Bà Nội with the help of the address, 806 Bloor West.\n\nThe tomato focaccia was fluffy and delicious. The butter tart met expectations — sweet and good. By 10:30 a.m., the apple crumble pastries were almost sold out, other options on display included coconut buns, cookies, and a variety of savory pastries. Everything looked tempting and worth trying, like immediately :)\"\n\n⭐⭐⭐⭐ \"Hi.\nHad the char Siu Bao and felt the ratio of bun to filling wasn't right as it was a little too much bun so some bites was more bread and less char Siu. And the the char Siu was plentiful but lacked a sweetness and fluidity to make every bite 'mouth watering '. Also the bread could benefit from a little more sweetness.  I'd rate this a 3.5\n\nThe curry bun was ok. And wish the curry was a little more kick/curry sauce and just gave us the 'wow effects ' when taking a bite.  I'd rate this a 3.5.\n\nButter tart is really good!  Crust was crispy and a tad thick (very picky here as I think a crust role is to hold the butter filling and not overwhelm the taste - personal thought but let's me clear.this is an excellent crust.) and filling was sweet, earthy almost burned sugar/ carsmel like.  Almost perfection if there was more filling to give every bite (and maybe I take top big of a bite) a buttery explosion in your mouth.\n\nI look forward to returning and trying their other items.\n\nStaff is so so friendly and they made this a very enjoyable and happy visit.\"\n\n⭐⭐⭐⭐⭐ \"I don’t think I can say anything new that other reviews haven’t already said but to add to them, this place is super special - best butter tarts in Toronto if not Canada. They also do amazing cookies, curry beef buns, savour danishes, sourdoughs and coffee. I love getting a treat with Vietnamese coffee in the summer. But I visit all year round. Yes, their coffee is also amazing. Expect for there to be lineups at times depending on time of day or day of the week!\""
+      }
+    ]
   }
 }

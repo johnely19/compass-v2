@@ -27,6 +27,13 @@
   },
   "narrative": {
     "summary": "Stylish natural wine bar + bottle shop in Leaside; rotating biodynamic/low-intervention selection, challah bread, residential-area gem. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The Daughter is one of those places that instantly makes you want to stay longer than planned.\n\nThe wine list is thoughtful without being intimidating—natural-leaning, well curated, and clearly chosen by people who actually drink and love wine. Whether you’re in the mood for something crisp and easy or curious and a little wild, there’s always a bottle (or glass) that feels right. Bonus points for staff who listen instead of flexing—recommendations feel personal, not performative.\n\nThe vibe hits that rare sweet spot: cozy but cool, relaxed but intentional. It’s the kind of bar where a casual glass turns into a whole evening without you noticing. Great music, warm energy, and a room that feels lived-in rather than staged.\n\nFood-wise, everything is designed to pair effortlessly with the wine—nothing overcomplicated, just really well executed.\n\nIf you’re looking for a wine bar that prioritizes pleasure, atmosphere, and genuine hospitality over hype, The Daughter absolutely delivers.\nWould go back. Will go back. Already thinking about the next glass. 🍷\"\n\n⭐⭐⭐⭐⭐ \"Discovered and visited this place for the first time today and I have a feeling I’ll be back in no time. The food menu is very unique and excellent for pairing with any of the wines they have. And the wine selection is excellent. If you are a fan of rose or orange wine then you will feel like a kid in a candy store here. And our server Ainsley was very welcoming and really amazing at recommending a few items worth trying. Absolutely loved the radicchio salad. And there is also a nice patio outside.\"\n\n⭐⭐⭐⭐⭐ \"Discovered The Daughter on Bayview with my wife on our anniversary, and it instantly became a favorite. The atmosphere was perfect for a special evening …. intimate, stylish, and filled with the kind of energy that makes you want to stay for hours. We enjoyed a fantastic evening tap that night, and I couldn’t stop raving about it to my good friend. We recently went back together for a guys’ night, and it was just as impressive. The selection of red wines is top-notch, and the vibe is exactly what you want in a wine bar ….. relaxed but refined. If you’re a red wine lover looking for a spot that feels like a hidden gem, this is it. Highly recommend!\""
+      }
+    ]
   }
 }

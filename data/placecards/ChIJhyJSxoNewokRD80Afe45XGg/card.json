@@ -11,8 +11,7 @@
     "website": "http://mta.info/",
     "rating": 3.9,
     "user_rating_count": 86,
-    "location": "66-99 Fresh Pond Rd, Queens, NY 11385, USA",
-    "review_count": 86
+    "location": "66-99 Fresh Pond Rd, Queens, NY 11385, USA"
   },
   "narrative": {
     "summary": "📍 Bosna Express\n66-99 Fresh Pond Rd, Queens, NY 11385, USA",
@@ -41,6 +40,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 66-99 Fresh Pond Rd, Queens, NY 11385, USA\n\n• walking: 7 days 2 hours • 742 km\n• transit: 12 hours 40 mins • 838 km\n• driving: 8 hours 21 mins • 793 km (traffic: 8 hours 12 mins)\n• bicycling: 2 days 6 hours • 1,004 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (8 hours 21 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"This is a typical New York City subway station that was renovated not too long ago. It is only served by the M line. (The M to Metropolitan is very sporadic during off-peak hours). There is some kitschy art murals on the walls as well as token booth and some public seating. It is also a relatively safe station.\"\n\n⭐⭐⭐⭐⭐ \"The platform is SO WIDE, which is great. Also the station is nearly litter free. There's lots of great places to eat below the station.\"\n\n⭐⭐⭐⭐ \"It's an outdoor station that is covered in places to stay out of the rain. The decking isn't totally dallying apart but will be in another year or two.\""
       }
     ]
   },

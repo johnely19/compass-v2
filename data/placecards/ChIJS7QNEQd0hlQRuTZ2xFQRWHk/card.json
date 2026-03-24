@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Michelin 1-star omakase. Chef Masayoshi Baba's 24-seat jewel-box — Edomae-style nigiri using BC bounty. Counter seats are the move. Vancouver's definitive omakase experience. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"We celebrated my husband’s birthday at Masayoshi, and it was an unforgettable experience from start to finish. This was our family’s very first omakase, and Chef Masayoshi exceeded every expectation we had.\n\nThe quality of the food was truly outstanding. Every course was presented like a work of art, and the flavors were exceptionally clean, fresh, and balanced. The service was equally impressive, the team took the time to explain each dish, including where every ingredient was sourced. We were blown away by the beautiful, meaty, and sweet Hokkaido scallops, as well as the gorgeous fish flown in from Japan and Nova Scotia.\n\nSitting at the Chef’s table and watching Chef Masayoshi craft each piece with such precision and care made the evening even more special. It felt intimate, thoughtful, and elevated without being pretentious.\n\nEverything from the pacing to the presentation to the hospitality was excellent. This was truly a night we will always remember!\"\n\n⭐⭐⭐⭐⭐ \"If food place could resemble a spa, this is it. Master Masa's gentle character is felt everywhere, and it was heavenly. I was cozy while feeling slightly nervous at the beginning (probably because I had no clue what to expect).\n\nPortions are pretty small. So if you are one of those that require quantity over quality, this is not for you.\n\nExperience the food artistry and taste each ingredients.\n\nBar seats recommended 100% for full experience. The subtle scents you find as dishes are being prepared was a bonus.\"\n\n⭐⭐⭐⭐⭐ \"Came here for my dad's birthday.  My dad loves sushi, but my mom, son, and I aren't really fond of eating raw fish.  Soup was a bit bland, but the taste started to pick up once we hit the snow crab dish.  My son doesn't like to eat crab, but even he enjoyed it.  I love crab and wouldn't mind if my entire meal was that dish.  The nigiri was really well done.  I was expecting/hoping for more seared varieties, but there were a lot of raw ones, which I also enjoyed.  Service was also excellent.  The dinner was a bit pricy, but the experience was unforgettable.\""
+      }
+    ]
   }
 }

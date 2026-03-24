@@ -26,6 +26,13 @@
   },
   "narrative": {
     "summary": "Top-tier pour-over specialists, excellent light roasts, central location",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Amazing oat latte. Perfect ratio of espresso to oat milk, and the right beans for latte. If you like your lattes foamy, you will love this one. Barista was extremely friendly. Overall just a good experience\"\n\n⭐⭐⭐⭐⭐ \"Recommend:\nPour-over with house vanilla syrup and milk – lovely soy-honey aftertaste, though a bit pricey at around $10.\n\nAlso good:\nCappuccino – balanced and smooth.\n\nSkip:\nCold brew – too bitter for my taste.\"\n\n⭐⭐⭐⭐⭐ \"For those in the Dundas area toward the AGO, The Library is a great place for a good coffee and a quick snack.\n\nThe cafe is small, but offers excellent service and a great selection of coffees and quick snacks, such as cookies, cakes, and more.\n\nIt can be accessed via the St. Patrick subway exit and several subway lines.\n\nThe location is wheelchair-accessible, allowing for entry by customers with disabilities. It also has a spring-operated door.\n\nIt's worth adding to your list of good places for quality coffee.\""
+      }
+    ]
   }
 }

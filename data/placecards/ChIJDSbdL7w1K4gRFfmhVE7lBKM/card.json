@@ -11,13 +11,13 @@
     "phone": "(416) 901-2249",
     "website": "https://www.ikkousha.ca/",
     "hours": [
-      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
-      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
-      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
-      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
+      "Monday: 11:30 AM – 9:30 PM",
+      "Tuesday: 11:30 AM – 9:30 PM",
+      "Wednesday: 11:30 AM – 9:30 PM",
+      "Thursday: 11:30 AM – 9:30 PM",
+      "Friday: 11:30 AM – 10:30 PM",
+      "Saturday: 11:30 AM – 10:30 PM",
+      "Sunday: 11:30 AM – 9:30 PM"
     ],
     "price_level": 2,
     "rating": 4.6,
@@ -59,6 +59,12 @@
         "id": "b6",
         "title": "Check",
         "body": "Estimated check for two using Toronto tax logic."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"With the frigid temperatures that Toronto is currently experiencing, Ikkousha's Ramen just felt like a nice warm blanket wrap by the fire. We had the Spicy Veg and the Fried chicken and both were excellent! The ingredients felt fresh. The broth very flavorful. The condiments greatly complimentary to the dishes.\n\nThe service was as needed, and the atmosphere was buzzing, a testament to the place. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Very good ramen. I have been trying out many of the options in Toronto and this is one of the best. The unique part about this location as there are two Ikkoushas nearly next to each other. One focused on pork broth and the other on chicken so look closely on the signs outside of each location and pick your preference.\n\nI love tonkotsu broth (pork) in general and this did not disappoint\"\n\n⭐⭐⭐⭐⭐ \"Great everything. Once you enter you feel as the loud streets of Toronto disappear and you are teleported to the quiet streets of Japan. There's soft Japanese music playing in the background. The staff is super friendly. The menu is small 1 small sheet but you really don't need anymore. This was my second or third time trying ramen and I got the basic one with steamed rice and fried chicken. It was perfect. Came within 10 minutes of cooking and when I asked for a fork they polite gave me it. Very nice staff , very tasty food and great atmosphere. If I could give this a 11/10 or even 15/10 it would not give the place justice for how good they are.\""
       }
     ]
   },

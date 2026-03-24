@@ -6,20 +6,7 @@
     "name": "Arrigo's of Fresh Pond Rd",
     "city": "NYC",
     "address": "Ridgewood (71-08 Fresh Pond Rd)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
-      "Thursday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
-      "Friday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
-      "Saturday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
-      "Sunday: 11:30 AM – 4:00 PM, 5:30 – 9:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 132,
-    "phone": "(917) 620-6978",
-    "website": "https://www.arrigosnyc.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://ny.eater.com/maps/best-new-queens-restaurants-heatmap",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "From the Daphne's team — Italian sandwich shop by day, 25-seat restaurant by night. Chef Paul Cacici's pasta and Italian plates. 4.8★ (131 reviews). Eater Queens and The Infatuation both list it as a Ridgewood standout.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Arrigo’s on Fresh Pond is the kind of restaurant you end up talking about for years.\n\nSome places do one thing really well, a dish with insane balance (acid, sweet, salty, crunchy, soft) and combinations you don’t see anywhere else because most kitchens play it safe. Other places win you over with ambiance that instantly feels warm and familiar. Some have staff who actually remember you and treat you like a friend they’re genuinely happy to see again. And then there are spots that are great at hospitality in the big picture, take care of you way.\n\nWhat’s rare is finding all of that in one room. Arrigo’s has it.\n\nEvery time you leave, you feel wildly better than when you walked in. And in a city full of restaurants, that matters, because most places are fine, but very few are worth returning to again and again.\n\nArrigo’s is beyond “worth returning to.” Eat there once and it feels like you’ve been let into some kind of all star dining club. Come back a second or third time and it starts to feel like part of you, like this place is stitched into your life.\n\nThe chef and the team don’t have to tell you they care. You can feel it. It’s beautiful, it’s delicious, and it’s honestly become one of my favorite places in the entire world.\"\n\n⭐⭐⭐⭐⭐ \"This is a gem of Ridgewood! I want to first say their sandwiches are on-point and the quality to price to size of the sandwich is incredible. Each part is made with care and packed with flavor.\n\nIn regards to dinner Arrigos has a delicious seasonal menu that features some stars like their incredible Cabbage that's perfectly cooked with amazing flavor. They also have a variant on a Crudo each time I've been that's tasty, fresh and always a perfect starter. However the star for me is the unassuming Foccacia that is always seasoned with something seasonal but cooked perfectly each time and will blow you away.\n\nFor mains they always have delicious and playful versions of pasta dishes you love. Most recently they had a Squid Ink Tuna Bolognese which had incredible having flavors familiar and new to a classic like a Bolognese.\n\nLastly their staff is so kind, the space is cozy, and the wine selection on point. This is a treat to go with a loved one, catch up with a friend, or take someone visiting. Feel lucky to have such. Thoughtful, dynamic menu in our neighborhood that's a must, and if you don't it's worth taking the M to Fresh Pond for treat!\"\n\n⭐⭐⭐⭐⭐ \"One of my favorite dinners in awhile. Fairly small, cozy spot, with maybe ten tables. The torchiette was incredible, extremely tender beef and delicious pasta. I had it paired with a tasty red wine.\n\nI have a peanut and cashew allergy, so I reached out in advance, and the restaurant let me know that they only had almonds, pine nuts, and pistachios on the menu. The server double checked with the kitchen for me when I arrived too! Great service, great vibe, and fun early-2000s music too.\n\nWill be back ASAP!\""
+      }
+    ]
   }
 }

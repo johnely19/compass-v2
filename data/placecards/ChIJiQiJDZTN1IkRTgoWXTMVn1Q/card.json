@@ -6,26 +6,20 @@
     "name": "ÉTAPE 22",
     "city": "Toronto",
     "address": "Avenue & Davenport (182 Davenport Rd, Lower Level)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: 11:00 AM – 6:00 PM",
-      "Thursday: 11:00 AM – 6:00 PM",
-      "Friday: 11:00 AM – 6:00 PM",
-      "Saturday: 11:00 AM – 6:00 PM",
-      "Sunday: 11:00 AM – 6:00 PM"
-    ],
-    "rating": 5,
-    "review_count": 29,
-    "phone": "(647) 953-9178",
-    "website": "https://www.etape22.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
     "summary": "Minimalist cycling apparel + coffee shop. Design-forward retail/café hybrid. 5.0★ (29 reviews). Near John's area. Soft-opened March 2026.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I went to visit Etape22 in Toronto over the weekend and it is one of the best bike / cycling apparel experiences I've had. It doesn't matter if you are a beginner or expert in cycling, the owners make you feel welcome and have amazing cycling knowledge. It was really interesting learning about some of the brands they carry (MAAP, Universal Colours, ASSOS, etc.) and what makes their cycling kits unique. They also have great coffee which was yummy to sip on while perusing through their cycling apparel. Overall, one of the best cycling retail / coffee shop experiences in Toronto!\"\n\n⭐⭐⭐⭐⭐ \"Both Mitch and Henry are great guys and very tentative to your orders and needs. Not only is the studio space gorgeous they also brew a great espresso ;)\"\n\n⭐⭐⭐⭐⭐ \"Hidden gem in midtown! Mitch and Henry are super nice and helpful regarding everything cycling related!\n\nEasily become my favorite cycling shop in the city!\n\nCoffee is also great for mid/post ride stop:)\""
+      }
+    ]
   }
 }

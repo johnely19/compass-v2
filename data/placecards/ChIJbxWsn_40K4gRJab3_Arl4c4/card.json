@@ -6,26 +6,20 @@
     "name": "Small Talk",
     "city": "Toronto",
     "address": "Ossington (110 Ossington Ave)",
-    "type": "bar",
-    "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: Closed",
-      "Wednesday: Closed",
-      "Thursday: 5:00 PM – 2:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
-      "Sunday: 5:00 PM – 12:00 AM"
-    ],
-    "rating": 4.5,
-    "review_count": 210,
-    "phone": "(437) 476-5475",
-    "website": "https://www.smalltalkjazz.com/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via toronto.com"
   },
   "narrative": {
     "summary": "New jazz lounge from Municipal Goods team (Paris Texas, Pizza Wine Disco). Opened Sept 2025 in former Baby Huey space. Moët champagne vending machine, live jazz trios, martini-forward, maroon interiors by Block Plan Studios. Cheese Boutique collab menu. 4.5★ (207 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Kiki was AMAZING, the best waitress one could ask for girls night! Didn’t get any food but the drinks were great and vibes phenomenal! Live music turned into dj later in the night which kept the energy electric! Loved the atmosphere, def coming back soon!\"\n\n⭐⭐⭐⭐⭐ \"What an absolutely incredible experience!! Kiki was absolutely incredible! She was such a great person to work with and made amazing drink recommendations.  This place is amazing for late night drinks or listening to live music, but whatever you do....go!!!!! Such a vibe!!!!!!\"\n\n⭐⭐⭐⭐⭐ \"Went there for the first time and I had a very enjoyable experience. Our server Maxine was very kind and friendly as well as the rest of the staff. I really love the interior decors and the music. The food is also very good, I had a glass of house wine, the grilled cheese supernova and the maple whisky bread pudding. The pudding is a must, really delicious!\""
+      }
+    ]
   }
 }

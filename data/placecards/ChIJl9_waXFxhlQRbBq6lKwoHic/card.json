@@ -6,21 +6,7 @@
     "name": "St. Lawrence Restaurant",
     "city": "Vancouver",
     "address": "Railtown/Gastown",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 5:00 – 10:30 PM",
-      "Wednesday: 5:00 – 10:30 PM",
-      "Thursday: 5:00 – 10:30 PM",
-      "Friday: 5:00 – 10:30 PM",
-      "Saturday: 5:00 – 10:30 PM",
-      "Sunday: 5:00 – 10:30 PM"
-    ],
-    "rating": 4.6,
-    "review_count": 1465,
-    "price_level": 3,
-    "phone": "(604) 620-3800",
-    "website": "http://www.stlawrencerestaurant.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "guide.michelin.com",
@@ -28,6 +14,13 @@
   },
   "narrative": {
     "summary": "Michelin 1-star French-Québécois. Chef J-C Poirier's love letter to Québec cuisine — refined but soulful. Exactly John's French bistro pattern but with a unique Canadian twist. Powell Street, walkable from Gastown. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Came here for our first Michelin Star French restaurant experience. We tried the tasting menu plus Escargots. Overall the food was good. The first two courses (crudo and duck), and the escargots were great. Thing started to fall apart with the third course (venison), way too acidic and dark for my personal taste, and the flambéed crepes were not great as a dessert. Service was great as expected, atmosphere was amazing (loved the wall decor). We ended up paying just around $350 ($430 after tips) for two people. It was a good one-time experience if you have never been to a similarly styled restaurant, but nothing overly amazing beyond that.\"\n\n⭐⭐⭐⭐⭐ \"Really wonderful food and service!  The servers and the food couldn't be any better.  The kitchen is open to the dining room, and even the kitchen team have a jolly and positive attitude that contributes to the experience.\n\nI appreciated that in each set if course choices had at least one non-seafood option, though our party had every dish collectively and each was rated top notch.\n\nI also appreciated a wide offering of non-alcohol or de-alchoholed drink choices.\n\nThe venue is tightly packed and quite loud however; and you should plan at least two hours to make it through all the courses.\"\n\n⭐⭐⭐⭐⭐ \"I really really loved this place. I could be biased because I love French food but even compared to other French restaurants the food had a really wonderful complexity the sauces were amazing!  It was a real culinary experience I ordered almost exactly the things I loved and while sitting at the bar the person serving me was very polite well spoken and offered impeccable service. The price according to the quality of the food and service was great aswell. I will definitely come back as I was thinking about how great my time was there for days.\""
+      }
+    ]
   }
 }
