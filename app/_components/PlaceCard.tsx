@@ -47,16 +47,20 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
           <h3 className="place-card-name">{name}</h3>
           <TypeBadge type={type} size="sm" />
         </div>
-        {safeRating != null && (
-          <div className="place-card-rating">
-            {Array.from({ length: 5 }, (_, i) => (
-              <span key={i} className={i < Math.floor(safeRating) ? 'star-filled' : 'star-empty'}>
-                ★
-              </span>
-            ))}
-            <span className="rating-value">{safeRating.toFixed(1)}</span>
-          </div>
-        )}
+        <div className="place-card-rating">
+          {safeRating != null ? (
+            <>
+              {Array.from({ length: 5 }, (_, i) => (
+                <span key={i} className={i < Math.floor(safeRating) ? 'star-filled' : 'star-empty'}>
+                  ★
+                </span>
+              ))}
+              <span className="rating-value">{safeRating.toFixed(1)}</span>
+            </>
+          ) : (
+            <span className="rating-placeholder">&nbsp;</span>
+          )}
+        </div>
       </div>
       <div className="place-card-footer">
         {mapsUrl && (

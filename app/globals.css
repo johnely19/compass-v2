@@ -532,6 +532,11 @@ a:hover {
 .carousel-item {
   flex: 0 0 280px;
   scroll-snap-align: start;
+  height: 280px;
+}
+
+.carousel-item .place-card {
+  height: 100%;
 }
 
 .carousel-arrow {
@@ -1066,6 +1071,7 @@ a:hover {
 .place-card {
   display: flex;
   flex-direction: column;
+  height: 280px;
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
@@ -1104,6 +1110,8 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: var(--space-sm);
+  flex: 1;
+  overflow: hidden;
 }
 
 .place-card-header {
@@ -1118,6 +1126,11 @@ a:hover {
   font-weight: 600;
   color: var(--text-primary);
   line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .place-card-rating {
@@ -1125,6 +1138,7 @@ a:hover {
   align-items: center;
   gap: 2px;
   font-size: 0.85rem;
+  min-height: 1.2em;
 }
 
 .star-filled {
