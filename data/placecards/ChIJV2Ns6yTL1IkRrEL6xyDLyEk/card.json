@@ -51,6 +51,66 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐ \"I came here for brunch today ordered got the Lyon eggs Benedict. The fruit was fresh and the food overall was delicious. I liked the sweetness of the bread that they had the poached eggs on and they gave a hearty portion of the ham on top. The hollandaise was a bit of a lighter, weaker flavor but I still enjoyed it. Their freshly squeezed orange juice tasted like it was storebought though, save your money. Service overall was great and I loved the decor in the restaurant.\"\n\n⭐⭐⭐⭐ \"Lovely dinner at l'Avenue last night. Had the crab cakes, which were nicely presented but a bit too dense, not crispy, and pricey for the quality. Escargot needed a bit more garlic in our view as did the Caesar salad which was creamy but needed a bit more of a kick.\nThe star of the show was their homemade lobster spaghetti which came with a full lobster tail and was made with a lobster bisque sauce...very yummy.\nService was excellent and very attentive!\nWe look forward to brunch there in a few weeks.\"\n\n⭐⭐⭐⭐⭐ \"Our first dinner there was indulgent and worth it. Food is prepared exquisitely. The ambiance is sophisticated but cozy. Had 4 courses for a birthday celebration including fresh oysters, French onion soup, bone in rib eye for 2 (enough for 3 and took the rest home), with dessert soufflé for 2 (was divine; not too sweet and light) in addition to 2 cocktails and a bottle of red wine (medium prices available). Service was attentive, and polite with attention to detail. Was $436 for 2 of us including everything but could pare it down if not wanting to spend as much. Would definitely return and look forward to brunch on their nice patio in the warmer weather.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "STEAKS & GRILLED\n⭐ 32oz USDA Bone In Rib Steak For Two — $115\n⭐ Grilled Australian Lamb Chops — $69\n   1lb\n\nDESSERTS\n⭐ Orange Grand Marnier Soufflé for two — $19.95\n   Please allow 25 minutes for preparation\n• Gâteau au Fromage Classique — $14.95\n• Flourless Chocolate Cake — $14.95\n   with a cherry crème anglais\n• Coconut Crème Pie — $16.95\n   with white chocolate shavings\n• Crème Brûlée — $12.95",
+        "sections": [
+          {
+            "name": "STEAKS & GRILLED",
+            "items": [
+              {
+                "name": "32oz USDA Bone In Rib Steak For Two",
+                "price": "$115",
+                "description": "",
+                "highlight": true
+              },
+              {
+                "name": "Grilled Australian Lamb Chops",
+                "price": "$69",
+                "description": "1lb",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "DESSERTS",
+            "items": [
+              {
+                "name": "Orange Grand Marnier Soufflé for two",
+                "price": "$19.95",
+                "description": "Please allow 25 minutes for preparation",
+                "highlight": true
+              },
+              {
+                "name": "Gâteau au Fromage Classique",
+                "price": "$14.95",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Flourless Chocolate Cake",
+                "price": "$14.95",
+                "description": "with a cherry crème anglais",
+                "highlight": false
+              },
+              {
+                "name": "Coconut Crème Pie",
+                "price": "$16.95",
+                "description": "with white chocolate shavings",
+                "highlight": false
+              },
+              {
+                "name": "Crème Brûlée",
+                "price": "$12.95",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -32,6 +32,31 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"A wonderful addition to the community! I visited Understory recently and am totally in love with it. The owners Rowan and Dani are so warm and welcoming, and the cafe itself is an absolute dream! Inside, the cafe feels like a cross between your friend’s living room, a nice wine bar, and a fairy forest. I love the tiny plant decor, handmade mugs, and thoughtful decor. The seating is ample and comfortable, with great table space for working or enjoying coffee. You can tell that a lot of thought went into the details of creating this new space.\n\nP.S. They have a fully accessible washroom, barrier free entrance, low counter for ordering, and variety of seating options, that all seem very accessible to folks using mobility devices!\"\n\n⭐⭐⭐⭐⭐ \"Had a nice little lunch here. The roast beef on a kind of pretzel like bread was pretty tasty. Great vibe overall.\"\n\n⭐⭐⭐⭐⭐ \"So friendly, sweet and kind. Love the coffee and pastries. Just tried the sandwiches today, and they're so good! Great bread, nice price. Such an amazing addition to the neighbourhood.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "BEVERAGES\n⭐ Coffee\n   Available by day\n⭐ Wine\n   Available by night",
+        "sections": [
+          {
+            "name": "BEVERAGES",
+            "items": [
+              {
+                "name": "Coffee",
+                "price": "",
+                "description": "Available by day",
+                "highlight": true
+              },
+              {
+                "name": "Wine",
+                "price": "",
+                "description": "Available by night",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

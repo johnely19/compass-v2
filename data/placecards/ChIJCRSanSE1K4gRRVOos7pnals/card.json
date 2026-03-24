@@ -28,6 +28,24 @@
     "summary": "Pompette team replaced Vinoteca Pompette with intentional wine-bar concept. 5.0 rating, 18 reviews.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on College Street in Little Italy, in the spot where Vinoteca Pompette used to be. The Pompette team rebuilt it as a proper wine bar—think dim lighting, a focused counter where you can watch bartenders work, and a handful of small tables that fill up fast. It's tight enough that you'll overhear conversations, but the energy feels intentional, not cramped.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is snack-forward Italian bar food—devilled eggs with something sharp and creamy, char-blistered artichokes that arrive glistening, crispy smashed potatoes with enough salt and fat to make you order another cocktail. The menu's small by design, built for grazing between drinks rather than a full meal. Expect plates in the $10-18 range, sized to share or not.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Date night when you want conversation over a long string of drinks and small plates, or when you're catching up with someone you haven't seen in years and need a server who'll notice. The bartenders here pay attention—they'll bring out aged cognac if the moment calls for it.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

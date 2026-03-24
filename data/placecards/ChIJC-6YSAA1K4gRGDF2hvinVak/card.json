@@ -32,6 +32,36 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Service? 10000/10 Matcha? 100000/10! I highly recommend because the vibes were unmatched and the matcha was lowkey life changing. The apple pie one made me want to do a backflip. I love strong flavors and the strong flavors in each of my drinks (white chocolate matcha, apple pie matcha, and hojicha cheesecake) were THERE! 🔥🔥🔥🔥 I will be back damn near every day of my trip!\"\n\n⭐⭐⭐⭐⭐ \"I stopped by Wu Wei in Kensington Market and tried their blueberry matcha, and honestly, it was so good! The flavour was really unique — you still get that earthy matcha taste, but the blueberry adds this light sweetness and fruity twist that works perfectly together. It wasn’t too sweet either, which I really appreciated.\n\nThe place itself is small and tucked away underground, so it feels like a little hidden gem. The vibe matches the artsy energy of Kensington — cozy, chill, and very aesthetic. The staff were super nice too and took their time making the drink, which showed in the quality.\n\nIt’s definitely more of a grab-and-go spot (not much seating), but it’s worth the stop if you’re exploring the area. I’ll definitely be back to try their other flavours — this one totally won me over.\"\n\n⭐⭐⭐⭐⭐ \"We heard the matcha here is superb 👀 tried the matcha coconut latte and black sesame latte. The coconut latte cream foam was absolutely phenomenal and had so much coconut flavour. Same with the black sesame foam; I don't like black sesame but I gave it a taste and it was really good and not too heavy.\n\nThe drinks were good but I'm not a matcha snob so I didn't think their matcha was any more exceptional than other places. It was still really good, and I'd definitely come back to try their other drinks, even the non-matcha ones (which were sold out today 😔), but I can't say whether this is the best in the city haha.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SIGNATURE MENU\n⭐ Cold Foam — $1\n   Light, silky, and irresistibly smooth cold foam to elevate any drink\n\nSTAPLES MENU\n• Classic Coffee\n   Everyday classic, brewed with consistency and care",
+        "sections": [
+          {
+            "name": "SIGNATURE MENU",
+            "items": [
+              {
+                "name": "Cold Foam",
+                "price": "$1",
+                "description": "Light, silky, and irresistibly smooth cold foam to elevate any drink",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "STAPLES MENU",
+            "items": [
+              {
+                "name": "Classic Coffee",
+                "price": "",
+                "description": "Everyday classic, brewed with consistency and care",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

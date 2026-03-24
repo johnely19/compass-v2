@@ -29,10 +29,200 @@
     "summary": "Perfect 5.0 rating; seasonal rotating cookies from a beloved pop-up gone brick-and-mortar; 77 reviews already.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Gerrard East in Cabbagetown, walking into what used to be a pop-up and now feels like someone's well-lit living room with a pastry case. It's small—maybe a handful of tables—with that quiet, almost library-like atmosphere where you notice the hiss of the espresso machine and the sound of your own fork on the plate. The kind of place where the person working behind the counter gives you real recommendations because they actually mean it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The backbone here is seasonal cookies that rotate based on what's good, but the real draw is the mousse cakes—chocolate, tiramisu, blood orange with white chocolate, mango when they have it. Everything runs on the restrained side of sweet, built to sit next to strong coffee rather than fight it. Selection is intentionally tight, a few pastries and cakes each day rather than a sprawling case, with most items in the $6-9 range.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your snowy Saturday afternoon stop or the place you duck into solo with a book when you need somewhere quiet in the neighbourhood. Skip it if you want options—come when you trust someone else to pick for you.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"I visited Bluet Bakery on a beautiful snowy day. The atmosphere of the cafe is quiet and intimate. The staff working was so friendly, giving her recommendations for food and drink (the options looked so good I couldn’t choose!)\n\nI ended up getting the chocolate mousse and the tiramisu with a chai latte and a flat white. The coffee was strong and delicious! The food a perfect level of sweet, complimenting the coffee well.\n\nMy new favourite in the neighborhood!\"\n\n⭐⭐⭐⭐ \"Bluet Bakery caught my attention for the mango mousse cake, but unfortunately it wasn’t available when I visited. I tried the blood orange filling with white chocolate mousse instead, which was quite good and well balanced. That said, the selection of food options was limited, so there wasn’t much variety to try.\"\n\n⭐⭐⭐⭐⭐ \"Had the raspberry cake and it was great! Genuinely way better than the viral ones in the US and LA.\n\nAlso had the honey cake and it was deliciously light with a pleasant sweetness and tang!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "CHUNKY COOKIES\n• Ube Banana Pudding — $5.85\n• Almond Croissant — $5.85\n• Lemon Blueberry — $5.85\n⭐ Pistachio Cream Rose — $5.85\n• Cookies & Cream — $5.85\n• Dubai Chocolate — $5.85\n• Brown Butter Chocolate Chunk Cookie — $3.50\n\nWINTER MOUSSE DESSERTS\n• Vanilla Strawberry Heart — $8.50\n• Orange — $9\n⭐ Coffee Bean — $10\n• Raspberry — $10\n• Mango — $10\n• Horse (Cherry Chocolate) — $10.50\n• Dark Chocolate Raspberry Heart — $9\n\nCLASSIC DESSERTS\n• Tiramisu — $7\n• Carrot Cake Box — $8\n• Banana Pudding — $6\n• Honey Cake — $8\n⭐ Salted Caramel Cheesecake — $9\n• Macarons — $3.80\n• Assorted Cake Slices — $8\n\nBAKED GOODS\n• Quiche Mozzarella & Spinach — $7\n• Quiche Mozzarella & Goat Cheese — $7\n• Cinnamon Buns — $5.50",
+        "sections": [
+          {
+            "name": "CHUNKY COOKIES",
+            "items": [
+              {
+                "name": "Ube Banana Pudding",
+                "price": "$5.85",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Almond Croissant",
+                "price": "$5.85",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Lemon Blueberry",
+                "price": "$5.85",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Pistachio Cream Rose",
+                "price": "$5.85",
+                "description": "",
+                "highlight": true
+              },
+              {
+                "name": "Cookies & Cream",
+                "price": "$5.85",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Dubai Chocolate",
+                "price": "$5.85",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Brown Butter Chocolate Chunk Cookie",
+                "price": "$3.50",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "WINTER MOUSSE DESSERTS",
+            "items": [
+              {
+                "name": "Vanilla Strawberry Heart",
+                "price": "$8.50",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Orange",
+                "price": "$9",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Coffee Bean",
+                "price": "$10",
+                "description": "",
+                "highlight": true
+              },
+              {
+                "name": "Raspberry",
+                "price": "$10",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Mango",
+                "price": "$10",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Horse (Cherry Chocolate)",
+                "price": "$10.50",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Dark Chocolate Raspberry Heart",
+                "price": "$9",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "CLASSIC DESSERTS",
+            "items": [
+              {
+                "name": "Tiramisu",
+                "price": "$7",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Carrot Cake Box",
+                "price": "$8",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Banana Pudding",
+                "price": "$6",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Honey Cake",
+                "price": "$8",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Salted Caramel Cheesecake",
+                "price": "$9",
+                "description": "",
+                "highlight": true
+              },
+              {
+                "name": "Macarons",
+                "price": "$3.80",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Assorted Cake Slices",
+                "price": "$8",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "BAKED GOODS",
+            "items": [
+              {
+                "name": "Quiche Mozzarella & Spinach",
+                "price": "$7",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Quiche Mozzarella & Goat Cheese",
+                "price": "$7",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Cinnamon Buns",
+                "price": "$5.50",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

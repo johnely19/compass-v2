@@ -29,6 +29,24 @@
     "summary": "Legendary Williamsburg pizza",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential stretch of South 2nd Street, where the Williamsburg crowds thin out just enough. Inside, it's a narrow shotgun layout with a few tables along one wall and a counter where you order—nothing precious about it, just white subway tile, overhead pendant lights, and the constant smell of dough hitting a hot oven. The line snakes out the door most nights, everyone watching slices emerge from the pizza window with blistered crusts and puddles of oil catching the light.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The pizza here is thin-crust, New York-style but with a more delicate hand—sturdy enough to fold but never crunchy, with that ideal chew in the middle. The pesto slice is what people line up for: bright green basil sauce under bubbling mozzarella, finished with ricotta dollops and fresh basil. But the fig and bacon and pesto mushroom hold their own, and if you've got room, the olive oil cake is dense, citrusy, and exactly what you want after all that cheese. Slices run around $5-7.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Get there right before they open if you're visiting on a weekend, or come on a weeknight when you want something fast and satisfying without the wait. This is the kind of place that works solo or with a group—order a few slices, stand at the counter, and get out.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

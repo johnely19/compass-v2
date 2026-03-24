@@ -29,6 +29,24 @@
     "summary": "Michelin 1-star. Extraordinary omakase from chef Takeshi Okeya. 4.8 rating on Google. Yaletown location. If Masayoshi is booked, this is the alternative — equally world-class. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Yaletown, that glass-and-concrete stretch where former warehouses meet waterfront condos. Inside, it's an eight-seat hinoki counter facing chef Takeshi Okeya and his team—no tables, no distractions, just blonde wood and close proximity to hands shaping rice. The room is quiet enough to hear the sear of toro, the slice of a yanagiba through fish.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Edomae omakase in the traditional sense—aged fish, warm rice seasoned with red vinegar, each piece shaped by hand and passed directly to you. Okeya works seasonally: bluefin tuna from different cuts, Japanese sea bream, spot prawn when they're running. The fifteen or so courses move through sashimi, nigiri, and maybe a grilled dish or hand roll to finish. Expect to spend around $200-250 per person for dinner, less at lunch.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this when Masayoshi is full or when you want a meal that demands your full attention—no background noise, no splitting focus. It's a Tuesday-night reset or the kind of dinner where you're marking something worth remembering.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

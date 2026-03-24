@@ -27,6 +27,24 @@
     "summary": "Health-focused Mediterranean from chef Hemant Bhagwani with clinical nutritionist, fermented/sprouted ingredients",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West in the Junction, in a stripped-down storefront that feels more like a wellness club café than a sit-down restaurant. Clean white walls, a build-your-own-bowl counter up front, and a handful of tables where post-workout types sit hunched over grain bowls. It's bright, functional, the kind of place where you order at the counter and everything's designed for quick turnover.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Hemant Bhagwani and a clinical nutritionist developed the menu here, which means you're eating sprouted grains, fermented vegetables, and harissa chicken that's been marinated with actual intention. You build your own bowl—choose your base, your protein, pile on the toppings—and everything skews Mediterranean with a health-first backbone. The chickpeas are sprouted, the sauces are house-fermented, and bowls run around $15-18, which feels fair for food this considered.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Post-workout when you're starving and want something that won't undo what you just did to your body. Or a quick solo lunch when you're tired of choosing between healthy and actually good.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

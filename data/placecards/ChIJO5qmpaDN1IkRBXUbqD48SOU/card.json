@@ -34,6 +34,25 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"very solid dishes, fresh seasonal ingredients and prepared with care and lot of fancy presentation. i think nothing stood out particularly but it was just a good meal. the room was private and service was really nice. sparkling hojicha was an amazing drink!\"\n\n⭐⭐⭐⭐⭐ \"The restaurant provided private rooms for each group.  The waitresses wear traditional kimono and warmly greeted us by the door and guided us to our room. Then the the seven course meal was served with a detailed explanation of the ingredients used and uniqueness of each dish.  The peace was slow that enabled us to thoroughly savor the dishes.  We also got to meet the chef and had a delightful conversation about the food and his inspiration. We had a wonderful night.\"\n\n⭐⭐⭐⭐⭐ \"We celebrated my husband’s birthday at Kaiseki Yu-zen Hashimoto, and every course felt like a work of art. This autumn dish especially left us speechless — a breathtaking presentation of seasonal flavors that looked too beautiful to eat. Each bite captured the essence of fall in Japan.\n\nThe evening was made even more special by the warm and graceful service from Kei-san and Mao-san, who made us feel truly cared for. An unforgettable dining experience — elegant, heartfelt, and deeply memorable. 🍁🍶🎂\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "KAISEKI OMAKASE\n⭐ Kaiseki Yu-zen Hashimoto — $350\n   An authentic kaiseki experience featuring a multi-course tasting menu",
+        "sections": [
+          {
+            "name": "KAISEKI OMAKASE",
+            "items": [
+              {
+                "name": "Kaiseki Yu-zen Hashimoto",
+                "price": "$350",
+                "description": "An authentic kaiseki experience featuring a multi-course tasting menu",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

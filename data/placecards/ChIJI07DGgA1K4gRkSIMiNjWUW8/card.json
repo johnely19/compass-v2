@@ -14,6 +14,44 @@
   },
   "narrative": {
     "summary": "Tokyo's cult organic matcha cafe — first North American location. Opened on Ossington strip. Ceremonial-grade matcha, minimal design, Japanese precision. No rating yet (brand new). Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "MATCHA BEVERAGES\n⭐ Morning Matcha\n   Matcha specially prepared for morning enjoyment\n⭐ Matcha Latte\n   Easy to make matcha latte at home\n• At Home Matcha\n   Vibrant green color matcha to add color to your home time\n\nMATCHA ACCESSORIES & KITS\n⭐ Matcha Cup & Spoon Set\n   Convenient cup and spoon for casual matcha enjoyment",
+        "sections": [
+          {
+            "name": "MATCHA BEVERAGES",
+            "items": [
+              {
+                "name": "Morning Matcha",
+                "description": "Matcha specially prepared for morning enjoyment",
+                "highlight": true
+              },
+              {
+                "name": "Matcha Latte",
+                "description": "Easy to make matcha latte at home",
+                "highlight": true
+              },
+              {
+                "name": "At Home Matcha",
+                "description": "Vibrant green color matcha to add color to your home time"
+              }
+            ]
+          },
+          {
+            "name": "MATCHA ACCESSORIES & KITS",
+            "items": [
+              {
+                "name": "Matcha Cup & Spoon Set",
+                "description": "Convenient cup and spoon for casual matcha enjoyment",
+                "highlight": true
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 }

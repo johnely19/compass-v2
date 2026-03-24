@@ -58,6 +58,25 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Sud Forno is a wonderful spot!\nThe café on the first floor is stylish and beautifully designed. The café latte and pastries were both delicious.\nUpstairs, the restaurant is perfect for a relaxed meal with friends. We were able to chat comfortably while enjoying authentic Italian food.\nHighly recommend for both coffee and a leisurely meal!\"\n\n⭐⭐⭐⭐⭐ \"There’s not much to say! A bit of what you fancy does you good! And a stop at Sud Forno on our way to Montreal is a must for our family. Service: superb, wine: excellent and the food: incredibly delicious!\n\nPicture:\nCod with celery puree, Tonnarelli alla Norcina\nitalian black truffle shavings, homemade spicy sausage, pecorino, garlic\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "WINE LIST\n⭐ Italian Wine Selection\n   Curated selection of imported Italian wines",
+        "sections": [
+          {
+            "name": "WINE LIST",
+            "items": [
+              {
+                "name": "Italian Wine Selection",
+                "price": "",
+                "description": "Curated selection of imported Italian wines",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -29,6 +29,24 @@
     "summary": "NEW (Nov 2025). Beloved Tofino Korean spot expanded to Vancouver. Chef Julie Suh + son Dylan Kim. 35-day-aged galbi, gochujang fried chicken, truffle bulgogi. Currently buzzing — 4.7 rating. Perfect affordable-but-excellent lunch. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Main Street in Mount Pleasant, walking into the newest iteration of a Tofino original that's already earned its lines. The dining room feels deliberately pared back—clean lines, natural wood, a kind of West Coast minimalism that lets the food hold focus. It's intimate without feeling cramped, the kind of space where you notice the plating because nothing else is competing for attention.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Julie Suh and her son Dylan Kim are cooking modern Korean with serious technique and zero shortcuts—35-day-aged galbi, gochujang fried chicken with actual crunch, truffle bulgogi that doesn't feel gimmicky. The soondubu arrives with a deep, briny seafood base and the right amount of heat, and the octopus is butter-tender in a way that only happens when someone knows their timing. The wagyu tartare and Sung's style rib show up repeatedly in glowing reviews for good reason. Expect to spend around $20-35 per dish, but the execution makes it feel earned rather than inflated.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Lunch here is the move if you want excellent Korean cooking without the weekend crush—affordable, deliberate, worth clearing your afternoon for. Or bring someone who cares about food and design in equal measure; this is a spot that rewards both types of attention.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

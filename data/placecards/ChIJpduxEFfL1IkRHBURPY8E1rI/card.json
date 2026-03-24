@@ -25,6 +25,25 @@
   },
   "narrative": {
     "summary": "New 2025—tallest mass timber public assembly building in North America. Moriyama & Teshima. Net-zero carbon, wood-forward aesthetic. Visitable as George Brown campus.",
-    "blocks": []
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queens Quay, where the waterfront opens up, and this soaring mass timber building—the tallest of its kind in North America—rises in Douglas fir columns and beams that smell faintly of resin when the sun hits them. Walk into the ground floor and you're surrounded by blonde wood everywhere: cross-laminated timber ceilings, engineered spruce walls, floor-to-ceiling windows that flood the George Brown College dining spaces with lake light. It feels like standing inside a very expensive, very quiet forest that happens to have tables.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a teaching restaurant, which means the menu shifts with what students in the culinary program are learning—sometimes French technique, sometimes contemporary Canadian, always more ambitious than you'd expect from a campus spot. You might find seared arctic char with root vegetable ragout one week, house-made agnolotti the next, all plated with the careful precision of people trying to get it right. Prices are surprisingly gentle for the waterfront, with mains hovering around $18-24, and the service has that earnest attentiveness of people who actually care about feedback.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book a weekday lunch when you want to sit in that wood-and-light cathedral without a crowd, or bring architecture friends who'll spend half the meal staring up at the timber joinery. It's also the rare waterfront spot where you're not paying a view tax—just watching future cooks figure it out in real time.",
+        "id": "block-go-when-2"
+      }
+    ]
   }
 }

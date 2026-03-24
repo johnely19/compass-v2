@@ -34,6 +34,199 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Update 10/2/2025: Great experience here with Hugo and the rest of your amazing staff. Confession time: i have fallen HARD for your Durian Colada (6/5) and am chuffed! Pleased... delighted that its gonna be returning with the Alumni perscriptions on the menu. I have a mental rolladex of good Pina Coladas in town and this was a standout.\n\nAlso... i am very impressed with Northern Keep as a well Vodka... such a clean, flavourful profile in a Vodka soda and one of the best vodka sodas in town 🌈🌈🌈✨️\n_____\n\nUpdate 7/25/2025: nice experience here today!! I tried the Cold Turkey and had a Snowbird (both terrific!!!) From Virginia... great vibe here today. 🍸\n\n---\nGreat drinks & service here from Asya!! Especially like the Fantasy Island and Cool As 😎 👌\n\nHey, one more thing--- you guys were so amazing and sweet to my mom in January when she visited (she was overdue for a hip surgery--- you guys were understanding and sweet and accommodating 💕  Thank you 💕 )\"\n\n⭐⭐⭐⭐⭐ \"Our last stop for the night is Chinese Dim Sum fusion....with the merge being Dum Sum and Hip Funk!   Traditional Dim Sum combined with modern drinks and DJ Dance, a nice glass of House Red and Shrimp Dumplings finished our night strong.   They even took care of our gluten-free needs as one of our party is celiac.  Thank you Keefer Bar!\"\n\n⭐⭐⭐⭐⭐ \"Strong drink that are well made. Got the vodka based ones and all were excellent.\n\nVery red and dark. Felt like an underground venue with Chinese letters and acupuncture pictures everywhere.\n\nFun vibes here and excellent drinks.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "NIGHTLY FEATURES\n• Pineapple Daiquiri — $8\n   Sunday special\n• Night of a Thousand Eyes — $8\n   Monday special\n• Rubi Dream — $8\n   Tuesday special\n• Rosemary Gimlet — $6\n   Wednesday special\n• Antidote — $8\n   Thursday special\n\nSIGNATURE COCKTAILS\n• Golden Sixty — $19\n• Man O' War — $22\n• Pink Pony Club — $19\n• Brooklyn Supreme — $20\n⭐ Overnight Crush — $20\n⭐ Forager's Martini — $26\n• Tokyo Drift — $21\n\nRESERVE CLASSICS\n• Reserve Daiquiri — $25\n• Reserve Sazerac — $35\n• Reserve Rob Roy — $40\n• Reserve Manhattan — $45\n• Reserve Margarita — $44\n⭐ Reserve Old Fashioned — $140\n\nSPIRITS & WINE\n• Rotating Craft Beer — Market Price\n• Hakatsuru Sayuri Nigori — $25\n• Stoneleigh Latitude Sauvignon Blanc — $13/$55\n• Billecart Salmon Brut Rose — $210\n• Dom Perignon Brut 2015 — $475\n\nSMALL PLATES & SNACKS\n• Bar Snack Trio — $12\n• Spring Rolls — $10\n• Ha Gow — $13\n• Sichuan Chicken Baos — $22\n• Brisket Baos — $22\n• Ahi Tuna Ceviche — $19\n• Taiwanese Cauliflower — $15\n• Chinese Churros — $12",
+        "sections": [
+          {
+            "name": "NIGHTLY FEATURES",
+            "items": [
+              {
+                "name": "Pineapple Daiquiri",
+                "price": "$8",
+                "description": "Sunday special",
+                "highlight": false
+              },
+              {
+                "name": "Night of a Thousand Eyes",
+                "price": "$8",
+                "description": "Monday special",
+                "highlight": false
+              },
+              {
+                "name": "Rubi Dream",
+                "price": "$8",
+                "description": "Tuesday special",
+                "highlight": false
+              },
+              {
+                "name": "Rosemary Gimlet",
+                "price": "$6",
+                "description": "Wednesday special",
+                "highlight": false
+              },
+              {
+                "name": "Antidote",
+                "price": "$8",
+                "description": "Thursday special",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SIGNATURE COCKTAILS",
+            "items": [
+              {
+                "name": "Golden Sixty",
+                "price": "$19",
+                "highlight": false
+              },
+              {
+                "name": "Man O' War",
+                "price": "$22",
+                "highlight": false
+              },
+              {
+                "name": "Pink Pony Club",
+                "price": "$19",
+                "highlight": false
+              },
+              {
+                "name": "Brooklyn Supreme",
+                "price": "$20",
+                "highlight": false
+              },
+              {
+                "name": "Overnight Crush",
+                "price": "$20",
+                "highlight": true
+              },
+              {
+                "name": "Forager's Martini",
+                "price": "$26",
+                "highlight": true
+              },
+              {
+                "name": "Tokyo Drift",
+                "price": "$21",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "RESERVE CLASSICS",
+            "items": [
+              {
+                "name": "Reserve Daiquiri",
+                "price": "$25",
+                "highlight": false
+              },
+              {
+                "name": "Reserve Sazerac",
+                "price": "$35",
+                "highlight": false
+              },
+              {
+                "name": "Reserve Rob Roy",
+                "price": "$40",
+                "highlight": false
+              },
+              {
+                "name": "Reserve Manhattan",
+                "price": "$45",
+                "highlight": false
+              },
+              {
+                "name": "Reserve Margarita",
+                "price": "$44",
+                "highlight": false
+              },
+              {
+                "name": "Reserve Old Fashioned",
+                "price": "$140",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "SPIRITS & WINE",
+            "items": [
+              {
+                "name": "Rotating Craft Beer",
+                "price": "Market Price",
+                "highlight": false
+              },
+              {
+                "name": "Hakatsuru Sayuri Nigori",
+                "price": "$25",
+                "highlight": false
+              },
+              {
+                "name": "Stoneleigh Latitude Sauvignon Blanc",
+                "price": "$13/$55",
+                "highlight": false
+              },
+              {
+                "name": "Billecart Salmon Brut Rose",
+                "price": "$210",
+                "highlight": false
+              },
+              {
+                "name": "Dom Perignon Brut 2015",
+                "price": "$475",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SMALL PLATES & SNACKS",
+            "items": [
+              {
+                "name": "Bar Snack Trio",
+                "price": "$12",
+                "highlight": false
+              },
+              {
+                "name": "Spring Rolls",
+                "price": "$10",
+                "highlight": false
+              },
+              {
+                "name": "Ha Gow",
+                "price": "$13",
+                "highlight": false
+              },
+              {
+                "name": "Sichuan Chicken Baos",
+                "price": "$22",
+                "highlight": false
+              },
+              {
+                "name": "Brisket Baos",
+                "price": "$22",
+                "highlight": false
+              },
+              {
+                "name": "Ahi Tuna Ceviche",
+                "price": "$19",
+                "highlight": false
+              },
+              {
+                "name": "Taiwanese Cauliflower",
+                "price": "$15",
+                "highlight": false
+              },
+              {
+                "name": "Chinese Churros",
+                "price": "$12",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

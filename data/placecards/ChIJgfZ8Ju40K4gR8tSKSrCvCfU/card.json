@@ -40,6 +40,142 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Always a great meal and welcoming atmosphere. Love how there is always specials. The lamb rigatoni was so tender and flavourful with a generous portion. Lobster ravioli had lots of lobster in it and the cream sauce wasnt too heavy. Burrata with fresh orange is a nice touch, such a great appetizer! Will come back again for Wine Wednesday- great wine list!\"\n\n⭐⭐⭐⭐⭐ \"Hosted my birthday party (private event) at Sotto Voce. From my initial inquiry email right up to the day of the event, Anita was nothing short of spectacular - warm, genuine, engaged, accommodating, attentive to detail. And her staff reflected these qualities as well. Food and drinks were amazing! Guests had a great time. My husband and I were very impressed. They’ve definitely gained a number of new customers after this event!\"\n\n⭐⭐⭐⭐⭐ \"My Goshhhh, the Welcome by Tatiana reminds me of a 5 💎 Hotel I came from in Barbados 🇧🇧, the Sandy Lane Hotel...\n\nHer level of Service excellence and attention to detail is impeccable..\n\nAlso, she took the order while I was on my way to Sotto Voce, being mindful of the time the kitchen closes...\n\nThe Food was without a fault, flavours amazing and tantalizing to my palate (compliments the Chef)...\n\nAnd the ambience, was an Oasis in a bustling city..\n\nOverall, I rate this small and personalized Restaurant 5 🌟🌟🌟🌟🌟\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SALADS & APPETIZERS\n• Romana\n   hearts of romaine in our house caesar dressing\n• Rustica\n   roasted beets with arugula, pistacchio and goats cheese tossed in a champagne vinaigrette\n• Figaro\n   fresh figs, toasted walnuts, mixed greens and bleu cheese in a walnut oil & balsamic vinaigrette\n• Bruschetta\n   grilled country bread rubbed with garlic and basil, sprinkled with cracked black peppercorns and served with marinated roma tomatoes\n• Crostini\n   chianti-caramelized figs, prosciutto, goats cheese on a toasted baguette\n\nCURED & RAW\n⭐ Carpaccio\n   black peppercorn encrusted seared beef tenderloin with pomegranate seed arugula and shavings of parmigiano reggiano\n• Tuna Crudi\n   thinly sliced yellowfin tuna seasonsed with herbs, lemon and EVOO\n• Cozze\n   P.E.I. mussels steamed in a spicy tomato sauce\n• Sicilian Meatballs\n   three all-beef meatballs made with currants and pine nuts, slow cooked in our own tomato sauce\n\nPASTA & RISOTTO\n• Aglio e Olio\n   spaghettini with chilies, garlic and extra virgin olive oil\n⭐ Spaghettini alla Carbonara\n   with crispy pancetta and parmigiano reggiano\n• Puttanesca Misti\n   spaghettini with mixed seafood, capers, anchovy, chilies and black olives in tomato sauce\n• Dal Mare\n   linguine with black tiger shrimp in a sun-dried tomato and dill vodka rose\n• Campagne\n   potato gnocchi with hot italian sausage, rapini and cherry tomatoes in white wine, garlic, lemon and olive oil\n⭐ Wild Mushroom Risotto\n   shiitake and oyster mushrooms with truffle oil\n\nMAIN COURSES\n• Pesce\n   pan seared fillet of branzino with capers and tomato salsa\n• Carne\n   grilled 6oz grey farms flat iron steak with balsamic caramelized onions\n• Agnello\n   grilled marinated rack of lamb, served with our house gremolata",
+        "sections": [
+          {
+            "name": "SALADS & APPETIZERS",
+            "items": [
+              {
+                "name": "Romana",
+                "price": "",
+                "description": "hearts of romaine in our house caesar dressing",
+                "highlight": false
+              },
+              {
+                "name": "Rustica",
+                "price": "",
+                "description": "roasted beets with arugula, pistacchio and goats cheese tossed in a champagne vinaigrette",
+                "highlight": false
+              },
+              {
+                "name": "Figaro",
+                "price": "",
+                "description": "fresh figs, toasted walnuts, mixed greens and bleu cheese in a walnut oil & balsamic vinaigrette",
+                "highlight": false
+              },
+              {
+                "name": "Bruschetta",
+                "price": "",
+                "description": "grilled country bread rubbed with garlic and basil, sprinkled with cracked black peppercorns and served with marinated roma tomatoes",
+                "highlight": false
+              },
+              {
+                "name": "Crostini",
+                "price": "",
+                "description": "chianti-caramelized figs, prosciutto, goats cheese on a toasted baguette",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "CURED & RAW",
+            "items": [
+              {
+                "name": "Carpaccio",
+                "price": "",
+                "description": "black peppercorn encrusted seared beef tenderloin with pomegranate seed arugula and shavings of parmigiano reggiano",
+                "highlight": true
+              },
+              {
+                "name": "Tuna Crudi",
+                "price": "",
+                "description": "thinly sliced yellowfin tuna seasonsed with herbs, lemon and EVOO",
+                "highlight": false
+              },
+              {
+                "name": "Cozze",
+                "price": "",
+                "description": "P.E.I. mussels steamed in a spicy tomato sauce",
+                "highlight": false
+              },
+              {
+                "name": "Sicilian Meatballs",
+                "price": "",
+                "description": "three all-beef meatballs made with currants and pine nuts, slow cooked in our own tomato sauce",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "PASTA & RISOTTO",
+            "items": [
+              {
+                "name": "Aglio e Olio",
+                "price": "",
+                "description": "spaghettini with chilies, garlic and extra virgin olive oil",
+                "highlight": false
+              },
+              {
+                "name": "Spaghettini alla Carbonara",
+                "price": "",
+                "description": "with crispy pancetta and parmigiano reggiano",
+                "highlight": true
+              },
+              {
+                "name": "Puttanesca Misti",
+                "price": "",
+                "description": "spaghettini with mixed seafood, capers, anchovy, chilies and black olives in tomato sauce",
+                "highlight": false
+              },
+              {
+                "name": "Dal Mare",
+                "price": "",
+                "description": "linguine with black tiger shrimp in a sun-dried tomato and dill vodka rose",
+                "highlight": false
+              },
+              {
+                "name": "Campagne",
+                "price": "",
+                "description": "potato gnocchi with hot italian sausage, rapini and cherry tomatoes in white wine, garlic, lemon and olive oil",
+                "highlight": false
+              },
+              {
+                "name": "Wild Mushroom Risotto",
+                "price": "",
+                "description": "shiitake and oyster mushrooms with truffle oil",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "MAIN COURSES",
+            "items": [
+              {
+                "name": "Pesce",
+                "price": "",
+                "description": "pan seared fillet of branzino with capers and tomato salsa",
+                "highlight": false
+              },
+              {
+                "name": "Carne",
+                "price": "",
+                "description": "grilled 6oz grey farms flat iron steak with balsamic caramelized onions",
+                "highlight": false
+              },
+              {
+                "name": "Agnello",
+                "price": "",
+                "description": "grilled marinated rack of lamb, served with our house gremolata",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

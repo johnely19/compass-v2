@@ -28,6 +28,24 @@
     "summary": "Upscale Yorkville speakeasy with serious cocktails. 4.7 rating, 318 reviews. Open til 2am Sat nights.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You descend into this Cumberland Street speakeasy and hit a wall of candlelight—dozens of them—and the Orient Express fantasy in full effect: velvet banquettes, warm amber light pooling on dark wood, train-car intimacy despite the space extending back further than you'd guess from street level. The bar runs long enough for solo perching, but the real move is one of those tucked-away tables where you can settle in until 2am on a Saturday and lose track of the city above.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar first, and the drinks come with the kind of theatre that justifies Yorkville prices—the Space Mule arrives with smoking cinnamon embers and citrus that announces itself before the glass touches down. They carve ice spheres by hand for whisky drinkers working through the extensive back bar, and the focus stays firmly on what you're drinking, not eating. Expect cocktails in the $18-24 range and a menu built for grazing, not dinner.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is where you take a nightcap seriously—post-dinner somewhere else, or the anchor for a late Saturday when you want craft over volume and a room that rewards staying put. Skip it if you're hungry or in a rush.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -32,6 +32,38 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Love this place! Don't miss out on their breakfast menu, especially their breakfast sandwich (which is topped with a hashbrown and silky delicious Red Leicester queso) and my favourite, their bruleed porridge. The porridge is totally unique to anything I've ever ordered in a restaurant and it's phenomenal! It's a must get. I've also had the masala eggs and can vouch they're also very good.\n\nThe restaurant is beautifully designed and decorated from top to bottom, down to every last detail. The service was also great! Can't wait to come back again soon.\"\n\n⭐⭐⭐⭐⭐ \"Went here for Valentine’s Day. What wonderful staff and meal. They really took care of us the entire night given dietary restrictions.The drinks were novel and tasty. Had the bubbles and bump caviar for a tiny luxury. Ribeye steak melted in your mouth and we shared it. Will definitely come again for special event. Absolute class…\"\n\n⭐⭐⭐⭐⭐ \"We visited General Public for happy hour and were immediately struck by the beautiful interior. The burger was stacked with a hearty patty, melted Red Leicester and cheddar, caramelized onions, and a punch of tangy Branston pickle. The fries were perfectly crisp on the outside, tender inside.\nWe found the service attentive and friendly. Altogether, an enjoyable visit\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "DINNER\n\n\nLUNCH\n\n\nBRUNCH\n\n\nSUNDAY ROAST\n\n\nCOCKTAILS\n\n\nWINE LIST\n",
+        "sections": [
+          {
+            "name": "DINNER",
+            "items": []
+          },
+          {
+            "name": "LUNCH",
+            "items": []
+          },
+          {
+            "name": "BRUNCH",
+            "items": []
+          },
+          {
+            "name": "SUNDAY ROAST",
+            "items": []
+          },
+          {
+            "name": "COCKTAILS",
+            "items": []
+          },
+          {
+            "name": "WINE LIST",
+            "items": []
+          }
+        ]
       }
     ]
   }

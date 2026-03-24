@@ -29,6 +29,24 @@
     "summary": "The 'insanely fun soju spot' per Bon Appétit's March 2026 NYC food guide. Korean-inspired cocktails, soju-forward. 4.8★ (85 reviews). On the Bushwick→Ridgewood walk.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet Bushwick block between Maria Hernandez Park and the Ridgewood border, the kind of stretch that still feels residential until you spot the unmarked door. Inside, low Korean-style tables anchor the room—you're sitting close to the ground on cushions, knees bent, sharing space in a way that makes everything feel immediate. The lighting's dim enough to feel like night even at 7pm, and the music hits exactly right.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a soju bar with serious anju—Korean drinking snacks that are substantial enough to build a meal around. The gochujang fried ribs are sticky and aggressive, the kimchi carbonara somehow works (cream and funk in balance), and the dubu nuggets are better than calling them 'tofu' suggests. Every table starts with banchan that includes a cranberry kimchi you won't find anywhere else. It's all in the $12-18 range, designed for sharing across those low tables with soju-forward cocktails or makgeolli if you want something cloudy and alive.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is for the night when you want to drink well and eat progressively—bring three friends, order too much, and settle in at one of those low tables. It's the kind of spot that works best when you're ready to commit to the vibe for a few hours.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

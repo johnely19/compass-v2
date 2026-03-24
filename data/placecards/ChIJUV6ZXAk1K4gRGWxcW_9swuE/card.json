@@ -27,6 +27,24 @@
     "summary": "BRAND NEW (Feb 2026)—replaced beloved spot, already earning fans. 5.0 rating with only 20 reviews = early-adopter energy.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're at Brock and Dundas in Little Portugal, stepping into the corner spot that just reopened this February. Inside, it's dimmed-down and lived-in already—a proper neighbourhood bar with enough room to breathe but not so much you feel exposed. The music sits at the right volume, and the layout invites you to settle in for more than one drink.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a bar first, which means you're here for the drinks—craft cocktails that lean seasonal (warm spiced numbers for winter) and a curated lineup of canned beers that goes deeper than the usual lineup. The bartenders know what they're pouring and aren't precious about it. It's the kind of place where the menu changes with the mood, not the algorithm.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want a snowy weeknight when you're craving conversation without shouting, or when you need a new regular that doesn't feel like everyone else already claimed it. Early-adopter timing means you're still getting in on the ground floor.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

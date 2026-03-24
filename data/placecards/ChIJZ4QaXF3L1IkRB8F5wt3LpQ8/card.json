@@ -29,6 +29,24 @@
     "summary": "Speakeasy-ish, old-world railcar glamour; strong rating + late-night hours Tue–Sat.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the historic St. Lawrence district, ducking through an unmarked entrance that drops you into what feels like a 1920s Pullman car reimagined as a cocktail den. The lighting is low and amber, all dark wood paneling and jewel-toned velvet banquettes that run along the walls. It's narrow and intimate—maybe a dozen tables max—with a polished bar taking up most of the real estate, the kind of place where everyone's voice drops half an octave the moment they step inside.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar first, so come for the drinks—classic builds done properly, plus a rotating menu of house originals that lean theatrical without tipping into gimmick. Expect to spend $18–22 per cocktail, which tracks for the effort and the setting. They run themed menus (Valentine's Day trios, seasonal specials), and the bartenders know their way around both a Negroni and whatever agave-forward experiment they're testing that week.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a date spot when you want to feel like you've discovered something, or a late-night wind-down on Friday or Saturday when you're done with loud rooms and want two good drinks in low light. It's open Tuesday through Saturday, and the vibe gets mellower as the week goes on.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

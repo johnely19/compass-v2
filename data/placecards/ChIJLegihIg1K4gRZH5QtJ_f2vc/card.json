@@ -28,6 +28,24 @@
     "summary": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're at the northeast corner of College and Spadina, ground floor of a low-rise building in the thick of the student-dense strip. Inside, it's counter-style seating wrapping around the open kitchen, stools close enough to watch steam rise from the pots, plus a few small tables along the wall—think functional, bright-lit, and unpretentious, more workshop than dining room.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Canada's first Yokohama Iekei ramen, the thicker, heavier style that blends tonkotsu with shoyu and finishes with a pool of chicken oil floating on top. The noodles are made in-house, the chashu gets a quick torch for char, and you'll customize firmness, salt level, and oil quantity before your bowl arrives. That broth—milky, porky, deeply savory—is aggressively rich, the kind that coats your lips and makes you question whether you'll finish, then you do anyway. Bowls run around $16-18.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go with your dad, your buddy, or solo at the counter on a cold weeknight when you want something that feels like fuel and comfort in equal measure. This isn't a linger-over-wine spot—you're in, you eat, you leave satisfied.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

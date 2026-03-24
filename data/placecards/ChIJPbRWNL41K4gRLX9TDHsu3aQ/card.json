@@ -27,6 +27,24 @@
     "summary": "Transportive 60s cocktail-bar homage with standout lighting; drinks deliver beyond the gimmick.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Tucked near Kensington and College, you walk into a dimly-lit 60s fever dream where mushroom lamps glow along the bar and moody lighting turns everyone into supporting characters in a Tarantino film. Tiny corridor tables let the overflow crowd start drinking while they wait—this place packs in tight, and the noise level climbs fast. It's a cocktail bar first, with Asian-inflected snacks to keep you anchored.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into playful, elevated bar food with an Asian edge—think stracciatella toast piled with chili oil, soy bean, and dill that soaks into thick sourdough, or the caviar fish filet that's exactly what it sounds like: a bougie Filet-O-Fish that somehow delivers on the promise. The drinks are the real draw here, but the snacks punch above typical cocktail-bar territory. You're looking at small plates in the $12-18 range, meant for sharing or not.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is for a night when you want to drink well in a room that feels like a set piece, not when you're trying to have an intimate conversation. Come with friends who don't mind shouting over each other, or post up solo at the bar to watch the chaos unfold.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

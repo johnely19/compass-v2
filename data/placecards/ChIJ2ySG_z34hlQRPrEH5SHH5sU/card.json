@@ -57,6 +57,148 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"The server was very friendly and the food was out pretty quickly! I asked the server when I ordered if she thought i should have the wrap or kebab. She suggested the kebab and the hot sauce. I quite enjoyed the different flavor profiles and would definitely go back to try different dishes!\"\n\n⭐⭐⭐⭐ \"We went there on a day where there was strong wind hitting Squamish causing power outage. However, the restaurant was kind enough to let us order and dine-in. We ordered the falafel plate with one lamb sausage add-on. It was a phenomenal plate! The falafel was crispy on the outside, soft and warm on the inside - full of texture🧆lamb sausage was hitting just right! We had the tahini sauce on the side. It perfectly complemented the dish. Hummus was great too! Definite recommend to come if you’re in Squamish.\"\n\n⭐⭐⭐⭐ \"Very good Lebanese inspired food located off the main street in Squamish.  They have a pretty decent selection of dishes for both vegans and non-vegans, and with share plates or \"all-in-one\" plates.\n\nWe chose to order separate bowls (although they are presented on a plate). Beef Kefta, chicken kabob, and veggie. The hummus was super creamy and flavourful and the salad was nice and fresh. The pita bread isn't the home made kind but was nice for dipping in the hummus. Deep fried cauliflower had good deep flavour - it wasn't crispy as there wasn't any coating on it before frying. The chicken kabob was juicy and tender. The beef kefta was cooked in a non-traditional form, like hambuger patties rather than the sausage shape around a grill stick. The beef was pretty good and was juicy as well.\n\nIt's a small place, probably only seats about 20 people inside, and there is normally only one server so expect to wait a bit, although it's not too long.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SPECIALITY TEA SELECTION\n⭐ Saha Mint — $5.50\n   China gunpowder green tea and fresh german peppermint, organic\n• Canadian Breakfast — $5.50\n   Traditional black tea breakfast blend, organic\n• Earl Grey Select — $5.50\n   Smooth black teas bathed in cold-pressed bergamot oil, organic\n• Bourbon Vanilla Rooibos — $5.50\n   Vanilla bean with whiskey/bourbon profile, organic, caffeine free\n• Blood Orange Rooibos — $5.50\n   Fresh squeezed blood oranges and honey notes, organic, caffeine free\n• Sweet Sanctum — $5.50\n   Holy basil & turmeric root with liquorice root and mango notes, caffeine free\n\nCOFFEE\n• French Press Full Pot — $14\n   32oz, great for sharing\n• French Press Half Pot — $8\n   16oz\n\nSODAS & TONICS\n• Speed King Craft Cola — $4\n• Cap't Electro's Intergalactic Root Beer — $4\n• Dare Devil Orange Cream — $4\n• Spark Mouth Ginger Ale — $4\n• Artisanal Dry Tonic — $4\n• Cucumber Mint Tonic — $4\n\nKOMBUCHA & BEVERAGES\n⭐ Whistler Elixir Kombucha Blueberry Ginger — $6\n   355ml\n• Whistler Elixir Kombucha Passionfruit Berry — $6\n   355ml\n• Whistler Elixir Kombucha Herbal Ginger — $6\n   355ml\n• Whistler Elixir Kombucha Strawberry Basil — $6\n   355ml\n• Fresh Juice — $3-$4.50\n   Orange, Mango or Cranberry, Small or Large\n⭐ San Pellegrino — $4-$8\n   330ml or 750ml",
+        "sections": [
+          {
+            "name": "SPECIALITY TEA SELECTION",
+            "items": [
+              {
+                "name": "Saha Mint",
+                "price": "$5.50",
+                "description": "China gunpowder green tea and fresh german peppermint, organic",
+                "highlight": true
+              },
+              {
+                "name": "Canadian Breakfast",
+                "price": "$5.50",
+                "description": "Traditional black tea breakfast blend, organic",
+                "highlight": false
+              },
+              {
+                "name": "Earl Grey Select",
+                "price": "$5.50",
+                "description": "Smooth black teas bathed in cold-pressed bergamot oil, organic",
+                "highlight": false
+              },
+              {
+                "name": "Bourbon Vanilla Rooibos",
+                "price": "$5.50",
+                "description": "Vanilla bean with whiskey/bourbon profile, organic, caffeine free",
+                "highlight": false
+              },
+              {
+                "name": "Blood Orange Rooibos",
+                "price": "$5.50",
+                "description": "Fresh squeezed blood oranges and honey notes, organic, caffeine free",
+                "highlight": false
+              },
+              {
+                "name": "Sweet Sanctum",
+                "price": "$5.50",
+                "description": "Holy basil & turmeric root with liquorice root and mango notes, caffeine free",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "COFFEE",
+            "items": [
+              {
+                "name": "French Press Full Pot",
+                "price": "$14",
+                "description": "32oz, great for sharing",
+                "highlight": false
+              },
+              {
+                "name": "French Press Half Pot",
+                "price": "$8",
+                "description": "16oz",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SODAS & TONICS",
+            "items": [
+              {
+                "name": "Speed King Craft Cola",
+                "price": "$4",
+                "highlight": false
+              },
+              {
+                "name": "Cap't Electro's Intergalactic Root Beer",
+                "price": "$4",
+                "highlight": false
+              },
+              {
+                "name": "Dare Devil Orange Cream",
+                "price": "$4",
+                "highlight": false
+              },
+              {
+                "name": "Spark Mouth Ginger Ale",
+                "price": "$4",
+                "highlight": false
+              },
+              {
+                "name": "Artisanal Dry Tonic",
+                "price": "$4",
+                "highlight": false
+              },
+              {
+                "name": "Cucumber Mint Tonic",
+                "price": "$4",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "KOMBUCHA & BEVERAGES",
+            "items": [
+              {
+                "name": "Whistler Elixir Kombucha Blueberry Ginger",
+                "price": "$6",
+                "description": "355ml",
+                "highlight": true
+              },
+              {
+                "name": "Whistler Elixir Kombucha Passionfruit Berry",
+                "price": "$6",
+                "description": "355ml",
+                "highlight": false
+              },
+              {
+                "name": "Whistler Elixir Kombucha Herbal Ginger",
+                "price": "$6",
+                "description": "355ml",
+                "highlight": false
+              },
+              {
+                "name": "Whistler Elixir Kombucha Strawberry Basil",
+                "price": "$6",
+                "description": "355ml",
+                "highlight": false
+              },
+              {
+                "name": "Fresh Juice",
+                "price": "$3-$4.50",
+                "description": "Orange, Mango or Cranberry, Small or Large",
+                "highlight": false
+              },
+              {
+                "name": "San Pellegrino",
+                "price": "$4-$8",
+                "description": "330ml or 750ml",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

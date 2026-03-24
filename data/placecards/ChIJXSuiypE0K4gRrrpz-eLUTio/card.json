@@ -28,6 +28,24 @@
     "summary": "Toronto premiere of Sam Holcroft's 'A Mirror'—award-winning British playwright; ARC production; intimate venue. Runs Mar 11–28.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Bathurst in the Annex, climbing the steps into what used to be a church—those triangular wood-beamed ceilings give it away immediately. The bones are old but kept meticulously clean, sound bouncing off the peaked ceiling in a way that makes even quiet moments feel amplified. It's intimate by design, the kind of venue where you're aware of everyone else in the room but not crowded by them.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—918 Bathurst is a performance and event space, currently staging Sam Holcroft's 'A Mirror' through ARC Theatre from March 11 to 28. You're here for award-winning British playwriting in a room that holds maybe a few dozen people, close enough to see every shift in the actors' faces. There's no dinner service, but the Annex has you covered before or after curtain.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want stripped-down theatre where the writing does the work, not spectacle. Book a mid-run performance when you need something sharper than streaming—live bodies, live voices, that church ceiling holding every word.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

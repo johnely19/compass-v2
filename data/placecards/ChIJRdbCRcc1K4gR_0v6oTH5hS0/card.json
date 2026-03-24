@@ -28,6 +28,24 @@
     "summary": "Named after Eugénie Brazier — first chef to earn 6 Michelin stars. Chef Rebekah Bruce (Alobar alum) does ingredient-driven small plates with Filipino inflections. 36 seats in the old Harbord Room space. Casual fine dining done right. 4.8★ (118 reviews). Participating in Chefs for Change 2026.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential stretch of Harbord Village, a few blocks west of the university, where the old Harbord Room used to be. Inside, 36 seats fill a room that feels maximally laid out without being cramped—bare tables, warm lighting, and an efficiency to the layout that keeps servers moving smoothly between kitchen and floor. The vibe is casually elegant in that way where you could show up in a sweater or a blazer and feel equally right.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Rebekah Bruce (ex-Alobar) runs an ingredient-driven menu with Filipino inflections—think scallop kinilaw with sharp acidity, green peppercorn squid heavy on garlic, or cauliflower that gets texture from pineapple nuts. The kitchen paces small plates efficiently, and while some dishes lean subtle (like a delicate halibut), others hit harder (Argentinian red shrimp over chickpea purée that steals the show). Desserts are serious: a chocolate cake that looks like architecture, a peanut butter pie dense enough to slow you down.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a fun-night-out spot when you want to taste through a menu without the formality—bring someone who'll split six things with you. The energy and pacing make it better for groups than solo, though the bar works if you're comfortable eating alone.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

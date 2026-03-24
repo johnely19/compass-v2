@@ -58,6 +58,74 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"I got the cash and carry (total was only $10!) to try the place out. The service was fast. The katsu was freshly made, and inside even had cheese! The taste is great, the sauce balances out the richness from the cheese. It also came with a miso soup.\"\n\n⭐⭐⭐⭐ \"I really enjoyed my curry tonkatsu, the pork with cheese in the curry is delicious. And the I loved the miso soup perfect for the cold weather. I wish there were more flavor options.\"\n\n⭐⭐⭐⭐⭐ \"Unpretentious and Utterly Satisfying!\n\nOn a chilly Toronto night, stumbling upon Mr. Tonkatsu was a stroke of luck! This unpretentious spot delivers truly solid bites with zero fuss. As a big fan of Japanese-style curry, I opted for their chicken option, and it absolutely hit the spot. The complexity of the ingredients shone through, yet the presentation remained wonderfully simple – a solid 10 in my book!\n\nI also had a taste of their soba noodles, and wow! They were incredibly rich and flavourful, leaving me already planning a return trip just to try a full order.\n\nThe little touches really elevated the experience. The sweet pickles were an unexpected and delightful treat alongside the curry, and the cabbage with vinegar provided a perfect refreshing balance.\n\nThe staff were remarkably attentive, and the food arrived in what felt like mere seconds! This makes Mr. Tonkatsu an excellent choice for a quick and delicious meal. Can't recommend it enough – especially those tempting soba noodles❣️\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "FRIED CHICKEN\n⭐ Crisp Chicken Thigh\n   Korean Style Deep Fried Chicken\n• Karaage Wings\n   Japanese Style Deep Fried Chicken\n• Original Karaage\n   Japanese karaage chicken or spicy crispy chicken in original style\n• Sauced Style Wings\n   Crispy chicken wings or boneless thigh mixed with sweet or spicy sauce\n\nKATSU\n⭐ Original Tonkatsu Set\n   Katsu with homemade fresh panko, served with shredded cabbage, miso soup, steamed rice and homemade tonkatsu sauce\n• Tonkatsu with Soba\n   Tonkatsu set served with soba\n\nDONBURI\n⭐ Katsudon\n   Pork loin katsu, kombu infused soy sauce reduction and poached egg\n• Ebi Don\n   Shrimp, soy sauce reduction and poached egg\n• Karaage Don\n   Boneless chicken thigh, wasabi mayo and soy sauce reduction",
+        "sections": [
+          {
+            "name": "FRIED CHICKEN",
+            "items": [
+              {
+                "name": "Crisp Chicken Thigh",
+                "description": "Korean Style Deep Fried Chicken",
+                "highlight": true
+              },
+              {
+                "name": "Karaage Wings",
+                "description": "Japanese Style Deep Fried Chicken",
+                "highlight": false
+              },
+              {
+                "name": "Original Karaage",
+                "description": "Japanese karaage chicken or spicy crispy chicken in original style",
+                "highlight": false
+              },
+              {
+                "name": "Sauced Style Wings",
+                "description": "Crispy chicken wings or boneless thigh mixed with sweet or spicy sauce",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "KATSU",
+            "items": [
+              {
+                "name": "Original Tonkatsu Set",
+                "description": "Katsu with homemade fresh panko, served with shredded cabbage, miso soup, steamed rice and homemade tonkatsu sauce",
+                "highlight": true
+              },
+              {
+                "name": "Tonkatsu with Soba",
+                "description": "Tonkatsu set served with soba",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "DONBURI",
+            "items": [
+              {
+                "name": "Katsudon",
+                "description": "Pork loin katsu, kombu infused soy sauce reduction and poached egg",
+                "highlight": true
+              },
+              {
+                "name": "Ebi Don",
+                "description": "Shrimp, soy sauce reduction and poached egg",
+                "highlight": false
+              },
+              {
+                "name": "Karaage Don",
+                "description": "Boneless chicken thigh, wasabi mayo and soy sauce reduction",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

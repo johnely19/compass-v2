@@ -28,6 +28,24 @@
     "summary": "New solo exhibition 'Naal-Naal' running March 6–May 1. Free admission. Gallery at 401 Richmond — Toronto's creative nerve centre. 4.9★ (23 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the Fashion District at 401 Richmond, a converted Victorian-era warehouse that's become Toronto's creative hub. You'll navigate hallways lined with artist studios and small galleries before finding Tangled Arts—a gallery designed for touch as much as sight, with braille labels, tactile works, and lighting that accommodates low vision. The Naal-Naal exhibition runs through May 1, and admission is free.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's an art gallery centering disability culture and access. There's a cafe downstairs in the 401 Richmond building where you can grab coffee or a bite before or after you visit, but you're here for the exhibition. Naal-Naal is a solo show exploring artistic expression through an accessibility lens, the kind of work that asks you to interact differently with art itself.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go on a weekday afternoon when you have time to linger and engage with work that demands more than a quick walk-through. The building has wheelchair access, though navigation between floors and studios takes some figuring out—worth it for the gift shops and the sheer density of creative practice under one roof.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

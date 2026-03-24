@@ -58,6 +58,38 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Arrived late for a birthday Jan 28th reso before seeing a play. The host was gracious about seating us. Our server was amazing - can't remember his name but he was from out East. So friendly and lovely. Food was good and the best birthday treat was they dropped off 2 glasses of prosecco and a card signed by the staff. We felt so well treated and welcomed by all the staff. The view is amazing. You should all go.\"\n\n⭐⭐⭐⭐⭐ \"Stratus is truly a standout high-end restaurant in Toronto. The service here is unlike any other; the staff go above and beyond, and the level of customer care is worth every penny. The experience and the incredible skyscraper views alone are enough to make me want to return.\n\nAs for the food, my experience was mixed. I ordered the albacore tuna bowl, and unfortunately the tuna didn’t feel very fresh and didn’t sit well with me afterward. However, my friend had the short rib and said it was amazing, so it may have just been an off plate for me that day.\n\nEven so, I would absolutely go back for the exceptional service and to try something different. It is rare to find a place where the servers make you feel so welcome, and Stratus definitely did not miss in that regard. The atmosphere and views make it a memorable spot worth revisiting.\"\n\n⭐⭐⭐⭐ \"Came here for a group event and want to first point out the atmosphere, view, and services were exceptional. Beautiful city view especially during the sunset and evening. The food, however, was a bit more on the mediocre side. The salad and salmon lacked the flavors I was expecting. The braised short rib, though, was really good. At the start, it was a bit on the bland side, but with a little bit of salt the flavor were significantly elevated. The texture was amazing that it simply melts in your mouth. It was definitely the highlight dish of the evening. The crème brûlée was rather sour, but quickly acquired to be rather tasty. We had an open bar which was great, but the alcohol felt diluted. Overall, great experience and still a wonderful restaurant.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "BREAKFAST MENU\n\n\nMAINS\n\n\nTO ACCOMPANY\n\n\nFRESH JUICES\n\n\nSMOOTHIES\n\n\nBARISTA BAR\n",
+        "sections": [
+          {
+            "name": "BREAKFAST MENU",
+            "items": []
+          },
+          {
+            "name": "MAINS",
+            "items": []
+          },
+          {
+            "name": "TO ACCOMPANY",
+            "items": []
+          },
+          {
+            "name": "FRESH JUICES",
+            "items": []
+          },
+          {
+            "name": "SMOOTHIES",
+            "items": []
+          },
+          {
+            "name": "BARISTA BAR",
+            "items": []
+          }
+        ]
       }
     ]
   },

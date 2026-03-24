@@ -29,6 +29,24 @@
     "summary": "Spice apothecary + olive oil tasting bar under one roof. Walls of jars, experiential shopping. Design-forward space. 4.8★ (205 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queen West, walking into what looks more like a spice apothecary than a shop—floor-to-ceiling walls lined with glass jars, each with a sample you can uncap and smell like you're testing perfume. The design is clean and minimalist, the kind of place where the product does the talking, and one side of the room transitions into an olive oil tasting bar where you can actually try before committing. It smells like toasted cumin and dried lime and something floral you can't quite place.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't about prepared food—it's about the ingredients you take home. The whole spices rotate seasonally and come in screw-top containers that actually stay fresh, from Urfa biber and Aleppo pepper to bay leaves so fragrant you'll understand why everyone raves about them. On the olive oil side, you're tasting single-origin pressings and aged balsamics, the kind that rewrite what you thought grocery store bottles could do. Spices run fair for the quality—a jar will set you back around $8-15 depending on rarity—and the olive oils start around $20.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go on a weekend afternoon when you have time to smell everything, uncap every sample jar, and talk to the staff about what actually makes Tellicherry peppercorns different. Or stop by solo mid-week when you're replacing that stale cinnamon you've been ignoring in your cupboard and need someone to tell you which one to buy.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -58,6 +58,84 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"This bakery has been around for a long time and I can see why.  It is a big space but it feels warm and inviting.  They have a big selection of Pastries to choose from.  The service is good and so are the prices.  I took home the Chocolate Raspberry Rum Bread Pudding and Linzer Tarts and they were delicious 😋.  Lovely Bakery.  If I come to this neighborhood again, I would definitely stop by for more goodies\"\n\n⭐⭐⭐⭐⭐ \"Stopped in today and asked the woman behind the counter if the cannolis were “decent.” She hits me with the most Brooklyn stare imaginable and goes:\n“Decent?! I’ve been in business 91 years. You think people would still be coming here if my cannolis were decent? These are the best cannolis you’ve ever had — you’ll be coming back for these cannolis.”\n\nThen she tells me she doesn’t put chocolate chips on them — and still walks to the back to grab the chocolate chips just for me. Top tier hospitality.\n\nCannoli itself? Perfect shell, perfect filling, zero gimmicks.\n\nShe was absolutely right, truly the best cannolis I’ve had to date. If you are in the area do not pass this up.\"\n\n⭐⭐⭐⭐⭐ \"On first glance, I already fell in love with this pastry shop. It’s a DREAM. I tried their mini chocolate raspberry cake & guava puff pastry and let me tell you they’re a 10/10. It tastes very classic and nostalgic. Will def be back\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "BAKERY\n⭐ Croissants\n   Freshly baked French-style pastries\n• Sourdough Bread\n   Artisanal daily baked loaves\n⭐ Cinnamon Rolls\n   Warm and gooey breakfast favorite\n• Bagels\n   Assorted flavors\n• Muffins\n   Selection of fresh daily flavors\n\nCAFÉ\n• Espresso\n   Rich and bold\n⭐ Cappuccino\n   Creamy and smooth\n• Latte\n   Warm and comforting\n• Coffee\n   Freshly brewed daily\n• Tea\n   Selection of loose leaf varieties",
+        "sections": [
+          {
+            "name": "BAKERY",
+            "items": [
+              {
+                "name": "Croissants",
+                "price": "",
+                "description": "Freshly baked French-style pastries",
+                "highlight": true
+              },
+              {
+                "name": "Sourdough Bread",
+                "price": "",
+                "description": "Artisanal daily baked loaves",
+                "highlight": false
+              },
+              {
+                "name": "Cinnamon Rolls",
+                "price": "",
+                "description": "Warm and gooey breakfast favorite",
+                "highlight": true
+              },
+              {
+                "name": "Bagels",
+                "price": "",
+                "description": "Assorted flavors",
+                "highlight": false
+              },
+              {
+                "name": "Muffins",
+                "price": "",
+                "description": "Selection of fresh daily flavors",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "CAFÉ",
+            "items": [
+              {
+                "name": "Espresso",
+                "price": "",
+                "description": "Rich and bold",
+                "highlight": false
+              },
+              {
+                "name": "Cappuccino",
+                "price": "",
+                "description": "Creamy and smooth",
+                "highlight": true
+              },
+              {
+                "name": "Latte",
+                "price": "",
+                "description": "Warm and comforting",
+                "highlight": false
+              },
+              {
+                "name": "Coffee",
+                "price": "",
+                "description": "Freshly brewed daily",
+                "highlight": false
+              },
+              {
+                "name": "Tea",
+                "price": "",
+                "description": "Selection of loose leaf varieties",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

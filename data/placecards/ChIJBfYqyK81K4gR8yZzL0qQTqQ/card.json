@@ -33,6 +33,37 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Loved my visit to De Mello Coffee. The coffee was excellent, smooth and flavorful, and the almond croissant was a standout: crispy and flaky on the outside, soft inside, and not overly sweet. The prices feel very reasonable for the quality you get. Highly recommended.\"\n\n⭐⭐⭐⭐⭐ \"⸻\n\nI really enjoyed my Americano here — smooth, rich, and perfectly balanced. I’m a sucker for great design, and the tiger on the cup totally won me over (tigers are my favorite!).\n\nThe café is conveniently located in the lobby of the office tower at The Well, making it an easy stop for your morning coffee or mid-day caffeine fix. Seating is limited, but I was lucky enough to grab a table and enjoy my drink in peace.\n\nA stylish little coffee spot with great energy and attention to detail — definitely worth checking out if you’re in the area!\"\n\n⭐⭐⭐⭐ \"Got the matcha latte and it was pretty good. I wish it was mixed a bit more since there were a few clumps. Staff was friendly and efficient. Love the interior design, the place was clean and there were a few tables inside as well.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "FEATURED COFFEES\n⭐ Costa Rica Los Navarro — $26.00\n   Papaya, Maple Syrup, Cantaloupe. Sweetness that lingers after the last sip with balance and quiet complexity.\n• Swiss Water (Ethiopia Decaf) — $23.00\n   Chestnut Spread, Honey, Molasses\n⭐ Decaf Trio — $62.00\n   Chestnut Spread, Honey, Molasses",
+        "sections": [
+          {
+            "name": "FEATURED COFFEES",
+            "items": [
+              {
+                "name": "Costa Rica Los Navarro",
+                "price": "$26.00",
+                "description": "Papaya, Maple Syrup, Cantaloupe. Sweetness that lingers after the last sip with balance and quiet complexity.",
+                "highlight": true
+              },
+              {
+                "name": "Swiss Water (Ethiopia Decaf)",
+                "price": "$23.00",
+                "description": "Chestnut Spread, Honey, Molasses",
+                "highlight": false
+              },
+              {
+                "name": "Decaf Trio",
+                "price": "$62.00",
+                "description": "Chestnut Spread, Honey, Molasses",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -34,6 +34,135 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐ \"The dishes were full of flavor, with a great balance of sweetness, spice, and acidity. The spices and herbs instantly reminded me of Thailand. The banana blossom salad was especially memorable — my first time trying it, and a very interesting experience. The desserts, panna cotta and cashew cake, were also quite good.\n\nThe only drawback is the pricing, which feels a bit high for the seafood quality, could be better or more consistent. Service was excellent and the staff were very friendly, though the space is somewhat cramped and can get noisy, especially near the entrance.\"\n\n⭐⭐⭐⭐⭐ \"Incredible on all fronts. Every dish featured high-quality ingredients and delivered bold, memorable flavors. The cocktail was fun, the service was top-notch, and the restaurant itself is beautifully decorated. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Very friendly staff. The Dine out dinner menu had enough options for us to choose from. You could probably enjoy the same menu more than once.\n\nAtmosphere lost points because there’s a large freezing draft every time the door opens. Not much they can really do about that though.. bring an extra blanket or a coat if you feel cold easily.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "APPETIZERS\n• Tod Mun Goong\n   Prawn cake, makrut lime leaf, shoyu ikura, nahm jim gai, panko\n• Ma Hor\n   Minced chicken, caramelized palm sugar, fried garlic & shallot compressed singo pear\n⭐ Miang Cupcake\n   Hokkaido scallop, crushed peanut, toasted coconut, young ginger, bird's eye chili, miang sauce\n• Namprik Ong\n   Relish of minced pork, charred galangal, shallot & garlic, cherry tomato, served with assorted crudite\n\nSOUPS\n• LK Chicken & Morel Mushroom Soup\n   Loong Kong Chicken, morel mushroom, makrut lime leaf, longleaf coriander, young lemongrass garlic oil\n• Hot & Sour Soup of Clam & Mussel\n   Manila clams & Totten Inlet mussels, local oyster mushroom, lemon basil, galangal, lemongrass & lime leaf infused clear broth\n• Tom Kha of Hedgehog Mushroom\n   Thai aromatic infused coconut milk broth, various local mushrooms, Thai basil, long leaf coriander (V, VG)\n\nSALADS\n⭐ Northern Style Crispy Duck Laab\n   FV confit duck leg, makwen peppercorn laab spice, young lemongrass, crispy shallots, thai herbs\n• Albacore Tuna Crudo Salad\n   BC Albacore tuna, young ginger, coriander, bird's eye chili, soy sesame dressing\n• Delicata Squash Nam Tok\n   Roasted squash, Thai basil, toasted rice powder, lemongrass, fried shallots, vegan nam tok dressing (V, VG)\n\nCURRIES\n• Green Curry of Pork Coppa\n   Grilled Fraser Valley pork collar, baby corn, Thai eggplant, Thai basil, aromatic green curry paste\n⭐ White Gati Curry of Prawn & Smoked BC Sablefish\n   Smoked local sablefish, black tiger prawn, betel leaf, Thai eggplant, southern style white coconut curry\n• Panaeng Curry of Roasted Vegetable\n   Roasted purple yam, fried shallot, crispy sieglinde potato, Thai eggplant, Thai basil (V, VG, contains peanut)\n\nMAINS\n• Kua Kling Beef Picahna SF\n   Sliced sirloin cap, limeleaf, turmeric, galangal, green peppercorn, southern style dry curry paste\n• Humboldt Squid Pad Pong Gari\n   Humboldt squid, Asian celery, sweet peppers, Thai garlic, house curry powder, egg custard sauce\n• Tao Hu Song Kreung\n   Fried silken tofu, baby corn, sweet peppers, Thai Chinese style mushroom white pepper sauce (V, VG)",
+        "sections": [
+          {
+            "name": "APPETIZERS",
+            "items": [
+              {
+                "name": "Tod Mun Goong",
+                "price": "",
+                "description": "Prawn cake, makrut lime leaf, shoyu ikura, nahm jim gai, panko",
+                "highlight": false
+              },
+              {
+                "name": "Ma Hor",
+                "price": "",
+                "description": "Minced chicken, caramelized palm sugar, fried garlic & shallot compressed singo pear",
+                "highlight": false
+              },
+              {
+                "name": "Miang Cupcake",
+                "price": "",
+                "description": "Hokkaido scallop, crushed peanut, toasted coconut, young ginger, bird's eye chili, miang sauce",
+                "highlight": true
+              },
+              {
+                "name": "Namprik Ong",
+                "price": "",
+                "description": "Relish of minced pork, charred galangal, shallot & garlic, cherry tomato, served with assorted crudite",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SOUPS",
+            "items": [
+              {
+                "name": "LK Chicken & Morel Mushroom Soup",
+                "price": "",
+                "description": "Loong Kong Chicken, morel mushroom, makrut lime leaf, longleaf coriander, young lemongrass garlic oil",
+                "highlight": false
+              },
+              {
+                "name": "Hot & Sour Soup of Clam & Mussel",
+                "price": "",
+                "description": "Manila clams & Totten Inlet mussels, local oyster mushroom, lemon basil, galangal, lemongrass & lime leaf infused clear broth",
+                "highlight": false
+              },
+              {
+                "name": "Tom Kha of Hedgehog Mushroom",
+                "price": "",
+                "description": "Thai aromatic infused coconut milk broth, various local mushrooms, Thai basil, long leaf coriander (V, VG)",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SALADS",
+            "items": [
+              {
+                "name": "Northern Style Crispy Duck Laab",
+                "price": "",
+                "description": "FV confit duck leg, makwen peppercorn laab spice, young lemongrass, crispy shallots, thai herbs",
+                "highlight": true
+              },
+              {
+                "name": "Albacore Tuna Crudo Salad",
+                "price": "",
+                "description": "BC Albacore tuna, young ginger, coriander, bird's eye chili, soy sesame dressing",
+                "highlight": false
+              },
+              {
+                "name": "Delicata Squash Nam Tok",
+                "price": "",
+                "description": "Roasted squash, Thai basil, toasted rice powder, lemongrass, fried shallots, vegan nam tok dressing (V, VG)",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "CURRIES",
+            "items": [
+              {
+                "name": "Green Curry of Pork Coppa",
+                "price": "",
+                "description": "Grilled Fraser Valley pork collar, baby corn, Thai eggplant, Thai basil, aromatic green curry paste",
+                "highlight": false
+              },
+              {
+                "name": "White Gati Curry of Prawn & Smoked BC Sablefish",
+                "price": "",
+                "description": "Smoked local sablefish, black tiger prawn, betel leaf, Thai eggplant, southern style white coconut curry",
+                "highlight": true
+              },
+              {
+                "name": "Panaeng Curry of Roasted Vegetable",
+                "price": "",
+                "description": "Roasted purple yam, fried shallot, crispy sieglinde potato, Thai eggplant, Thai basil (V, VG, contains peanut)",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "MAINS",
+            "items": [
+              {
+                "name": "Kua Kling Beef Picahna SF",
+                "price": "",
+                "description": "Sliced sirloin cap, limeleaf, turmeric, galangal, green peppercorn, southern style dry curry paste",
+                "highlight": false
+              },
+              {
+                "name": "Humboldt Squid Pad Pong Gari",
+                "price": "",
+                "description": "Humboldt squid, Asian celery, sweet peppers, Thai garlic, house curry powder, egg custard sauce",
+                "highlight": false
+              },
+              {
+                "name": "Tao Hu Song Kreung",
+                "price": "",
+                "description": "Fried silken tofu, baby corn, sweet peppers, Thai Chinese style mushroom white pepper sauce (V, VG)",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

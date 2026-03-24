@@ -28,6 +28,24 @@
     "summary": "The café/bakery spinoff. Fresh pastries, espresso, grab-and-go gourmet. 4.8★ (228 reviews). Same family, lighter format. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Ripley Avenue in the Junction, next door to the original Cheese Boutique warehouse. Walk into the café and you get clean white tile, a working espresso bar, and glass cases stacked with pastries and prepared foods. There's a small seating area with actual tables now—they added more recently—so you can sit with your cappuccino instead of just grabbing and going.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is the lighter, faster format from the same family that runs the gourmet provisions shop next door. Think hot pressed sandwiches (the crispy ones get called out constantly), fresh-baked morning pastries, and a full grab-and-go selection of prepared meals and cheese plates. The espresso setup is legit, and everything skews toward easy luxury—the kind of lunch or breakfast you'd want on a neighbourhood walk when you're willing to spend a bit more than café standard. Expect $12-18 for sandwiches, pastries around $4-7.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Weekday lunch with a friend when you want good coffee and an actual seat—locals say weekends get slammed. Also smart for a design-district errand run when you need provisions that feel a step up.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

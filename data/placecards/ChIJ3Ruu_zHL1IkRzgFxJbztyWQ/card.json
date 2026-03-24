@@ -33,6 +33,125 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Super fun and delicious food. Tiny portion sizes, cover most nights. They had an 80s night when I went which was cool. Get earplugs bc it will be loud. Flashlight needed to look at menu but still loved\"\n\n⭐⭐⭐⭐⭐ \"you're going to find a very classy and groovy vibe in this jazz bar. what an amazing experience!\n\nwe were there on friday january 9th for shane philips; him and the band are such gems! the music had lots of people joining the dance floor, and it was so refreshing to be somewhere with a crowd that didn't just stand and look at their phones (personal peeve of mine😅). the crowd was very respectful. everyone was dressed well for the venue and you could tell they were really there for the music 😌\n\nthe food and service were a bit lacklustre (it seemed our server had a big section that was quickly sat all at once), but it is not the main event. i did enjoy their oysters though! the drinks were great and my partner really enjoyed their lychee mocktail.\n\ni would 100% recommend making a reservation as it gets busy early on. i received prompt replies to my email request (contacted through their website) and during opening hours i was able to make a phone call to make a change to my reso. be advised there is a cash only cover charge at the door (ours was $15 per person).\n\nthe last time i was here was a couple years ago, and returning on friday night made me realize what i've been missing out on. i will definitely be coming back.\"\n\n⭐⭐⭐⭐ \"While in search of a jazz/blues bar near the Eaton Centre, we came across The Reservoir Lounge. And boy, are we glad we did!\n\nSeating wasn’t available without a reservation, but we got there about 30 mins before the show started and got a great standing spot at the bar.\n\nCover charge at the door (I think it was $15 a person), free coat check was available, and the bar service was pretty good considering how busy it was.\n\nThe drinks were just okay, my old fashioned was weak, but who cares when the music and the atmosphere breaks the scale! Definitely a must-try while in Toronto\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SALAD & APPETIZERS\n• Baby Gem Caesar Salad\n   Aged Asiago, pancetta + sourdough crouton\n• Fresh Ricotta Cheese Crostini — $11.50\n   Confit of assorted cherry tomatoes, fresh basil\n• Chickpea Smash Crostini — $11.50\n   Sauteed chickpeas, roasted red peppers, cherry tomatoes, extra virgin olive oil\n• Roasted Wild Mushroom Crostini\n   Assorted mushrooms, pancetta crumble, asiago au gratin, fresh tarragon\n\nTO SHARE\n⭐ Brasserie-Style Steak Tartare — $18.50\n   Hand-cut filet mignon, Courvoisier, Dijon, cornichons + toasted crostini\n• Albacore Tuna Tacos — $16.50\n   Roasted habanero crema + fresh mango salsa\n• Lemongrass Chicken Skewers — $17.50\n   Sweet & sour cold Asian noodles, English cucumber, black bean glaze\n• Pan Fried Crab Cakes — $17.50\n   Yellow tomato sauce + shiitake corn salsa\n• Chili Lime Scallops + Shrimps — $17.50\n   Papaya cucumber salsa + soy ponzu glaze\n⭐ Black Truffle Sliders — $17.50\n\nPIZZA\n• Marinated Wild Mushrooms\n• Roasted Churrasco Chicken\n• Prosciutto\n• Quattro Formaggi\n⭐ Marinated Crab, Scallops + Shrimp — $23.50\n   Vodka rosé sauce, mozzarella, sundried black olives, zesty arugula + parmigiano\n• Quattro Stagioni — $23.50\n   One pizza with four incredible corners",
+        "sections": [
+          {
+            "name": "SALAD & APPETIZERS",
+            "items": [
+              {
+                "name": "Baby Gem Caesar Salad",
+                "price": "",
+                "description": "Aged Asiago, pancetta + sourdough crouton",
+                "highlight": false
+              },
+              {
+                "name": "Fresh Ricotta Cheese Crostini",
+                "price": "$11.50",
+                "description": "Confit of assorted cherry tomatoes, fresh basil",
+                "highlight": false
+              },
+              {
+                "name": "Chickpea Smash Crostini",
+                "price": "$11.50",
+                "description": "Sauteed chickpeas, roasted red peppers, cherry tomatoes, extra virgin olive oil",
+                "highlight": false
+              },
+              {
+                "name": "Roasted Wild Mushroom Crostini",
+                "price": "",
+                "description": "Assorted mushrooms, pancetta crumble, asiago au gratin, fresh tarragon",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "TO SHARE",
+            "items": [
+              {
+                "name": "Brasserie-Style Steak Tartare",
+                "price": "$18.50",
+                "description": "Hand-cut filet mignon, Courvoisier, Dijon, cornichons + toasted crostini",
+                "highlight": true
+              },
+              {
+                "name": "Albacore Tuna Tacos",
+                "price": "$16.50",
+                "description": "Roasted habanero crema + fresh mango salsa",
+                "highlight": false
+              },
+              {
+                "name": "Lemongrass Chicken Skewers",
+                "price": "$17.50",
+                "description": "Sweet & sour cold Asian noodles, English cucumber, black bean glaze",
+                "highlight": false
+              },
+              {
+                "name": "Pan Fried Crab Cakes",
+                "price": "$17.50",
+                "description": "Yellow tomato sauce + shiitake corn salsa",
+                "highlight": false
+              },
+              {
+                "name": "Chili Lime Scallops + Shrimps",
+                "price": "$17.50",
+                "description": "Papaya cucumber salsa + soy ponzu glaze",
+                "highlight": false
+              },
+              {
+                "name": "Black Truffle Sliders",
+                "price": "$17.50",
+                "description": "",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "PIZZA",
+            "items": [
+              {
+                "name": "Marinated Wild Mushrooms",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Roasted Churrasco Chicken",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Prosciutto",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Quattro Formaggi",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Marinated Crab, Scallops + Shrimp",
+                "price": "$23.50",
+                "description": "Vodka rosé sauce, mozzarella, sundried black olives, zesty arugula + parmigiano",
+                "highlight": true
+              },
+              {
+                "name": "Quattro Stagioni",
+                "price": "$23.50",
+                "description": "One pizza with four incredible corners",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

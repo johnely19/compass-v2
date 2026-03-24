@@ -27,6 +27,24 @@
     "summary": "Brand new natural wine bar + Brazilian-Iberian kitchen from the Babysips team. On Troutman near Bushwick Collective — on Day 2 walking route. Salt cod fritters, house-made sausages, minimal-intervention wines. 5.0★.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Troutman near the Bushwick Collective, surrounded by murals and warehouse conversions. Inside, it's intimate and dimly lit—exposed brick walls, a small bar where the staff walks you through minimal-intervention bottles, maybe a dozen seats total. The vibe skews neighborhood hang more than destination, which is exactly the point.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The Babysips team is running a tight Brazilian-Iberian menu that leans heavily on cured and house-made proteins. You'll find salt cod fritters with just enough crust to hold together, house sausages with long hots (though you might only get one pepper), and sautéed cabbage that guests keep coming back to. There's a bread service with herby butter and a steak that arrives with chimichurri and a spread of sides—shareable portions designed so you can work through half the menu without committing to one thing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your post-work victory lap spot or a low-key date where the bartender actually talks to you. Come when you want someone to guide you through natural wines without the lecture, and you're hungry enough to share three or four plates.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

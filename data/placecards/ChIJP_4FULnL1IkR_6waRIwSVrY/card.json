@@ -23,6 +23,67 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Thank you lovely folks at Java Roasters! I ordered the Madre Maria for delivery to my accommodation, as my host isn’t a coffee drinker (shock horror). After a long haul flight from the UK, it was an absolute delight to wake up to one of the best coffees I’ve ever had in my life! I travel with an Aeropress because I’m such a nightmare when it comes to making my own brew and this was by far the best experience of a local roast. Magic!\"\n\n⭐⭐⭐⭐⭐ \"I’ve known Java Roasters for a while. As a barista, it is one of the coffees I often see in the city.\n\nI've visited their location in Leslieville. I met with Kay who walked me through a coffee tasting experience. She demonstrated great expertise by explaining how the coffee is sourced ethically and resourcefully, what is done to it, why it taste the way it does, among other amazing properties of coffee in general.\n\nThey have good coffee here.\n\nReal. Good. Coffee.\n\nIt taste delicious, smells delicious, and feels great on my body. I can’t wait to wake up tomorrow morning and have a cup of their coffee!\n\nStaff at Java Roasters can better guide you to find the perfect coffee cup! I love their openness and versatility when it comes to people's preferences. I would recommend Java Roasters.\"\n\n⭐⭐⭐⭐⭐ \"If you’re looking for an incredible place to order your freshly roasted coffee beans, look no further! Java roasters offer an incredible selection. Their beans are roasted to perfection.  The flavour profiles, do not disappoint. If you’re looking to make an amazing cup of coffee at home, look no further. Java roasters know how to satisfy your palate.  This is one of my favourite Canadian roasters. Their service is also top-notch. Don’t hesitate- give them a try!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SINGLE ORIGIN COFFEES\n⭐ Finca Quebraditas, Sidra, Thermal Shock Anaerobic — $37.00\n   Colombia\n• Kaizen, Paraiso, Natural Anaerobic — $28.00\n   Brazil\n• Kuyahapa Cluster, Mix Varietals — $26.00\n   Papua New Guinea\n⭐ Lica Torres, Milenio, Red Honey — $27.00\n   Costa Rica\n• Danche, Landrace, Washed — $28.00\n   Ethiopia\n⭐ Worka Sakaro, Heirloom, Natural — $27.00\n   Ethiopia\n• Entre Rios, Natural Anaerobic — $26.00\n   Costa Rica\n• Don Felix Porras, Mixed Varietals, Washed — $27.00\n   Colombia",
+        "sections": [
+          {
+            "name": "SINGLE ORIGIN COFFEES",
+            "items": [
+              {
+                "name": "Finca Quebraditas, Sidra, Thermal Shock Anaerobic",
+                "price": "$37.00",
+                "description": "Colombia",
+                "highlight": true
+              },
+              {
+                "name": "Kaizen, Paraiso, Natural Anaerobic",
+                "price": "$28.00",
+                "description": "Brazil",
+                "highlight": false
+              },
+              {
+                "name": "Kuyahapa Cluster, Mix Varietals",
+                "price": "$26.00",
+                "description": "Papua New Guinea",
+                "highlight": false
+              },
+              {
+                "name": "Lica Torres, Milenio, Red Honey",
+                "price": "$27.00",
+                "description": "Costa Rica",
+                "highlight": true
+              },
+              {
+                "name": "Danche, Landrace, Washed",
+                "price": "$28.00",
+                "description": "Ethiopia",
+                "highlight": false
+              },
+              {
+                "name": "Worka Sakaro, Heirloom, Natural",
+                "price": "$27.00",
+                "description": "Ethiopia",
+                "highlight": true
+              },
+              {
+                "name": "Entre Rios, Natural Anaerobic",
+                "price": "$26.00",
+                "description": "Costa Rica",
+                "highlight": false
+              },
+              {
+                "name": "Don Felix Porras, Mixed Varietals, Washed",
+                "price": "$27.00",
+                "description": "Colombia",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

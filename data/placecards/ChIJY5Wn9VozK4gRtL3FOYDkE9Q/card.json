@@ -52,6 +52,142 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Very nice trattoria, a few minutes walk south of Yonge/St Clair with a cosy and friendly atmosphere. I had the Paccheri salciccia e peperone which was excellent, with a bit of focaccia on the side. The prices were surprisingly reasonable and I'll definitely visit again if I'm in the neighborhood.\"\n\n⭐⭐⭐⭐⭐ \"I definitely think this place is a hidden gem. The patio was very cozy and warm for winter, and the atmosphere was just perfect. The food was excellent. We ordered the fritto di calamari and the pizza diavolina, and the calamari was soooo good. The staff were also friendly and nice.\"\n\n⭐⭐⭐⭐⭐ \"Decided to come here for my 30th birthday with my girlfriend. Really great experience overall. The pizza, pasta, and veal osso buco were all delicious and well prepared, but what stood out most was the service. Jonathan was attentive, professional, and made sure everything ran smoothly without ever feeling intrusive. Couldn’t say enough good things about the overall experience that we had!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "ANTIPASTI\n• Focaccia Toscana — $7\n   housemade rosemary olive oil focaccia\n• Olive Miste Calde — $10\n   warm Cerignola olives\n• Crochette di Patate e Pecorino — $16\n   potato and pecorino cheese croquettes, 'nduja mayo\n⭐ Carpaccio di Manzo — $24\n   thin sliced beef, truffle emulsion, shallots, bread crumbs, wild arugula, cremini mushrooms, parmigiano\n• Fritto di Calamari — $25\n   deep fried calamari, lemon aioli\n⭐ Polipo alla Griglia — $36-66\n   half or whole grilled Moroccan octopus, cherry tomato emulsion, n'duja mayo potatoes, condimento ragusano\n\nINSALATE\n• Verde — $17\n   radicchio treviso, baby gem, boston lettuce, carrot puree, pickled carrots, citrus vinaigrette\n• Cesare — $17\n   baby romaine, pancetta, parmigiano, anchovies, croutons\n• Cavoletti — $19\n   shaved brussel sprouts, pickled red onion, almonds, pecorino\n• Rucola — $20\n   organic arugula, clementines, parmigiano, citrus dressing\n\nPIZZE\n• Margherita — $21\n   tomato, fior di latte, basil\n• Melina — $24\n   tomato, goat cheese, arugula, prosciutto\n• Dante — $26\n   fior di latte, gorgonzola, pears, prosciutto, honey, walnuts\n• Diavolina — $25\n   tomato, provolone, taleggio, soppressata, nduja, honey\n⭐ Piemonte — $26\n   fior di latte, truffle crema, mixed mushrooms, fontina cheese, chives\n• Burrata — $29\n   tomato, fresh burrata, basil\n\nPASTE\n• Orecchiette e Rapini — $23\n   sauteed rapini, chili, basil, anchovies\n• Spaghettone Cacio e Pepe — $24\n   DOP pecorino Toscano, black pepper",
+        "sections": [
+          {
+            "name": "ANTIPASTI",
+            "items": [
+              {
+                "name": "Focaccia Toscana",
+                "price": "$7",
+                "description": "housemade rosemary olive oil focaccia",
+                "highlight": false
+              },
+              {
+                "name": "Olive Miste Calde",
+                "price": "$10",
+                "description": "warm Cerignola olives",
+                "highlight": false
+              },
+              {
+                "name": "Crochette di Patate e Pecorino",
+                "price": "$16",
+                "description": "potato and pecorino cheese croquettes, 'nduja mayo",
+                "highlight": false
+              },
+              {
+                "name": "Carpaccio di Manzo",
+                "price": "$24",
+                "description": "thin sliced beef, truffle emulsion, shallots, bread crumbs, wild arugula, cremini mushrooms, parmigiano",
+                "highlight": true
+              },
+              {
+                "name": "Fritto di Calamari",
+                "price": "$25",
+                "description": "deep fried calamari, lemon aioli",
+                "highlight": false
+              },
+              {
+                "name": "Polipo alla Griglia",
+                "price": "$36-66",
+                "description": "half or whole grilled Moroccan octopus, cherry tomato emulsion, n'duja mayo potatoes, condimento ragusano",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "INSALATE",
+            "items": [
+              {
+                "name": "Verde",
+                "price": "$17",
+                "description": "radicchio treviso, baby gem, boston lettuce, carrot puree, pickled carrots, citrus vinaigrette",
+                "highlight": false
+              },
+              {
+                "name": "Cesare",
+                "price": "$17",
+                "description": "baby romaine, pancetta, parmigiano, anchovies, croutons",
+                "highlight": false
+              },
+              {
+                "name": "Cavoletti",
+                "price": "$19",
+                "description": "shaved brussel sprouts, pickled red onion, almonds, pecorino",
+                "highlight": false
+              },
+              {
+                "name": "Rucola",
+                "price": "$20",
+                "description": "organic arugula, clementines, parmigiano, citrus dressing",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "PIZZE",
+            "items": [
+              {
+                "name": "Margherita",
+                "price": "$21",
+                "description": "tomato, fior di latte, basil",
+                "highlight": false
+              },
+              {
+                "name": "Melina",
+                "price": "$24",
+                "description": "tomato, goat cheese, arugula, prosciutto",
+                "highlight": false
+              },
+              {
+                "name": "Dante",
+                "price": "$26",
+                "description": "fior di latte, gorgonzola, pears, prosciutto, honey, walnuts",
+                "highlight": false
+              },
+              {
+                "name": "Diavolina",
+                "price": "$25",
+                "description": "tomato, provolone, taleggio, soppressata, nduja, honey",
+                "highlight": false
+              },
+              {
+                "name": "Piemonte",
+                "price": "$26",
+                "description": "fior di latte, truffle crema, mixed mushrooms, fontina cheese, chives",
+                "highlight": true
+              },
+              {
+                "name": "Burrata",
+                "price": "$29",
+                "description": "tomato, fresh burrata, basil",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "PASTE",
+            "items": [
+              {
+                "name": "Orecchiette e Rapini",
+                "price": "$23",
+                "description": "sauteed rapini, chili, basil, anchovies",
+                "highlight": false
+              },
+              {
+                "name": "Spaghettone Cacio e Pepe",
+                "price": "$24",
+                "description": "DOP pecorino Toscano, black pepper",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

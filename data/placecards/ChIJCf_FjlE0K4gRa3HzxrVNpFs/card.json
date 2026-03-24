@@ -28,6 +28,24 @@
     "summary": "Japanese ceramics, tea tasting, kokedama. Founded by Mika Sato from Hiroshima — her partner Satoshi Yoshikawa is a trained Japanese potter (studied under Abe in Tokyo). Intimate slow-living ethos. Deep wabi-sabi spirit. 4.8★ (119 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the College strip in Little Italy, but inside MIKA the noise disappears—just handmade Japanese ceramics on open shelves, hanging kokedama moss balls, and the kind of light that makes you want to sit on the floor. Satoshi's wheel-thrown vessels (he studied under Abe in Tokyo) hold orchids and air plants, and there's usually a low wooden table set up for tea tastings. It's small enough that Mika herself might be repotting something when you walk in.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—MIKA is a slow-living concept shop centered around Japanese tea ceremony and botanicals. Mika Sato, who's from Hiroshima, leads intimate tea tastings where you'll spend an hour learning to appreciate the grassy bitterness of sencha or the umami depth of gyokuro, served in cups her partner Satoshi threw by hand. It's about slowing down, not filling up—think ceremonial-grade matcha whisked to order, not a menu. Sessions are by appointment and run around $40-60 depending on the tea selection.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book a tea tasting when you need to reset—Saturday afternoon when you're tired of brunch noise, or a weekday evening when you want to remember what focus feels like. Also solid for finding a birthday gift that isn't another candle.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

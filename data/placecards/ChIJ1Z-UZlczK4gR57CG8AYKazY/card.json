@@ -57,6 +57,90 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Enjoyed and absolutely wonderful evening at this restaurant to celebrate my wife’s birthday. The service was great.  We were greeted by a friendly staff member and taken to our table right away.  The atmosphere was great and decor was fantastic.  Our meals were very flavourful and you definitely have to try the Troublemaker cocktail.  I enjoy it so much that I had to have a second.\n\nWhen booking the restaurant online I mentioned that it was my wife’s birthday. I did not mention it when I got to the restaurant and they did not forget.  Our dessert had a little inscription wishing her a happy birthday.\n\nOverall our evening was fantastic and we also got a chance to chat with Sash.  He was very humble and easy to approach.\n\nWill definitely be visiting this restaurant on our next special event.\"\n\n⭐⭐⭐⭐⭐ \"Incredible night at Sash. The service was flawless — warm, attentive, and truly elevated the entire experience. We made a special request for Alaskan king crab, and the kitchen absolutely delivered. It was spectacular — sweet, fresh, and perfectly prepared.Best Alaskan Crab ever !!!\n\nEvery dish was beautifully plated and full of flavour, and the atmosphere is vibrant yet elegant. Everyone needs to try this place. One of the best dining experiences in Toronto . A MUST !!!\"\n\n⭐⭐⭐⭐⭐ \"Chef Sash delivers a beautiful experience with his unique flavors and beautiful presentation.\n\nI had the tuna starter which was prepared with care and elegance.\n\nThe steak was juicy and cooked to perfection.\n\nService was spot on delivering a calm and comforting experience.\n\nPerfect for special occasions and everything in between.\n\nIf you want to experience first class dining this is the place.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "APPETIZERS\n• Cauliflower Mushroom Puree\n   Burgundy truffles\n• Sash Salad\n   Black plums + tomatoes + cucumbers + mizuna + jalapeño + soy vinaigrette\n⭐ Blue Fin Tuna Tataki\n   Cucumber relish + citrus zest + horseradish + wasabi mayo + soy + coriander\n• Prime Steak Tartare\n   Watercress + cornichons + mustard + toasted baguette\n\nMAINS\n• Sash Smash Burger + Frites\n   Chuck + brisket + cheddar + truffle aioli\n• Chicken Schnitzel Latke\n   Creamy Caesar salad + parmesan dill ranch\n⭐ Pan Seared East Coast Halibut\n   Stew Marzano tomatoes + fingerling potatoes + roasted scallions + lemon butter\n• Spaghettini + Fall Squash\n   Squash + organic carrots + valentine radishes + pecorino\n• Chicken Supreme — $15\n   Wild mushroom + crispy potatoes + truffle jus\n⭐ Day Boat Scallops + Parmesan Risotto — $20\n   Sugar snap peas + cucumber relish + lemon butter + waterborne greens\n• Dover Sole — $30\n   Meunière sauce + orange + parsley",
+        "sections": [
+          {
+            "name": "APPETIZERS",
+            "items": [
+              {
+                "name": "Cauliflower Mushroom Puree",
+                "price": "",
+                "description": "Burgundy truffles",
+                "highlight": false
+              },
+              {
+                "name": "Sash Salad",
+                "price": "",
+                "description": "Black plums + tomatoes + cucumbers + mizuna + jalapeño + soy vinaigrette",
+                "highlight": false
+              },
+              {
+                "name": "Blue Fin Tuna Tataki",
+                "price": "",
+                "description": "Cucumber relish + citrus zest + horseradish + wasabi mayo + soy + coriander",
+                "highlight": true
+              },
+              {
+                "name": "Prime Steak Tartare",
+                "price": "",
+                "description": "Watercress + cornichons + mustard + toasted baguette",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "MAINS",
+            "items": [
+              {
+                "name": "Sash Smash Burger + Frites",
+                "price": "",
+                "description": "Chuck + brisket + cheddar + truffle aioli",
+                "highlight": false
+              },
+              {
+                "name": "Chicken Schnitzel Latke",
+                "price": "",
+                "description": "Creamy Caesar salad + parmesan dill ranch",
+                "highlight": false
+              },
+              {
+                "name": "Pan Seared East Coast Halibut",
+                "price": "",
+                "description": "Stew Marzano tomatoes + fingerling potatoes + roasted scallions + lemon butter",
+                "highlight": true
+              },
+              {
+                "name": "Spaghettini + Fall Squash",
+                "price": "",
+                "description": "Squash + organic carrots + valentine radishes + pecorino",
+                "highlight": false
+              },
+              {
+                "name": "Chicken Supreme",
+                "price": "$15",
+                "description": "Wild mushroom + crispy potatoes + truffle jus",
+                "highlight": false
+              },
+              {
+                "name": "Day Boat Scallops + Parmesan Risotto",
+                "price": "$20",
+                "description": "Sugar snap peas + cucumber relish + lemon butter + waterborne greens",
+                "highlight": true
+              },
+              {
+                "name": "Dover Sole",
+                "price": "$30",
+                "description": "Meunière sauce + orange + parsley",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

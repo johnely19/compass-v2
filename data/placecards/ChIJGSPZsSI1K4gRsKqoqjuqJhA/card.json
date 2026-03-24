@@ -58,6 +58,36 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Came here on a Sunday afternoon with my teenage grandson. We both LOVED the atmosphere of this place!\nWe sat at the bar and watched the chefs at work. The team was very friendly and offered great recommendations while they cooked!\nPizza was very quick and the tiramisu was to die for! Like really!\n5-stars all around. Make sure you visit next time you are in the area and up for some amazing pizza!\nNote that they only take cash or debit cards. No credit cards.\"\n\n⭐⭐⭐⭐⭐ \"Wow! I love myself a perfect pizza, Max was there to assist us in selecting the perfect pizza. We also ordered the pesto pasta and a special spicy parm. It all was so good almost wanted to chew on my fingers after from the flavours. We had also ordered the calamari which came with Deep fried peppers that made the flavours all come together. Excellent food compliments to the chef! The environment was warm and cozy although it was ice cold outside there were no drafts or chilly air very comfortable! We will be back very soon to enjoy more!\"\n\n⭐⭐⭐⭐⭐ \"My fiancé and I had been wanting to go to Sugo/Bar Sugo forever and I’m so glad we finally did!\n\nWe were on a waitlist for Sugo and figured we’d call Bar Sugo and ask about a walk-in and they said to come right away so that was amazing. I wanted to try the pizza anyways so was glad to get the chance.\n\nThe servers here are all so friendly it’s actually crazy. Made us feel super welcome and cozy. I don’t know if it was just because it was New Years Eve but everyone seems to love their jobs which is always a good thing.\n\nThe food was as amazing as the service. The best Cesar Salad I’ve ever had! The dressing tastes like something momma would make, with a mound of cheese on top.\n\nEasily Top 3 pizzas I’ve ever had too. Every bite was full with high quality toppings and amazing flavour! Really cheesy! The garlic dip is incredible as well.\n\nMy fiancé loved her Spaghetti Bolognese and the couple bites I had were super clean and flavourful.\n\nCocktails were tasty and made with care, always nice when our favs are on the menu.\n\nDEFINITELY coming back here many more times!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "FAMILY STYLE SHARING MENU\n⭐ Group Reservations\n   Available for groups of 5 or more\n\nCLASSIC ITALIAN AMERICAN\n⭐ Wood-Fired Pizza\n   Traditional Italian style",
+        "sections": [
+          {
+            "name": "FAMILY STYLE SHARING MENU",
+            "items": [
+              {
+                "name": "Group Reservations",
+                "price": "",
+                "description": "Available for groups of 5 or more",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "CLASSIC ITALIAN AMERICAN",
+            "items": [
+              {
+                "name": "Wood-Fired Pizza",
+                "price": "",
+                "description": "Traditional Italian style",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

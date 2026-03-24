@@ -28,6 +28,24 @@
     "summary": "Izakaya with serious kitchen cred (ex-Momofuku), 4.7 rating, late-night ramen + small plates energy.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the western stretch of Queen, where the storefronts thin out past Roncesvalles. Inside, it's dimly lit with dark wood tables and a compact bar—tight quarters that lean into the late-night izakaya vibe rather than fight it. The energy skews louder as the night goes on, soundtracked by whatever's playing through the speakers and the clatter from the open kitchen.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen's helmed by ex-Momofuku cooks who know how to build flavour without overthinking it. You're here for small plates that come out fast and hit hard—the moto bun stuffed with Japanese curry is a sleeper favourite, rich and sloppy in the best way—plus late-night ramen when you need something restorative around midnight. Portions vary wildly, so you can graze on three plates or commit to five and leave overfed. Expect to spend around $15-25 per dish, with drinks from the Seoul Shakers crew backing it all up.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best for the kind of night that starts at 10pm, when you want to eat well without ceremony and maybe stay for another round. Also solid for a casual date where sharing five plates feels like an event without the pressure.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

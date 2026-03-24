@@ -40,6 +40,166 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Johnny G’s recently renovated into a classy Jazz restaurant. The atmosphere is very classy and relaxing. I love the new design and dim lighting. The Jazz band is excellent. The band isn’t too loud to still hold a conversation, which is a major plus for me. Rocky is a great host, and Natalie is a very sweet and attentive server.  I had the quinoa salad and a cosmo martini. Very good. Highly recommend the restaurant for a relaxing and good vibes night out.\"\n\n⭐⭐⭐⭐⭐ \"Went to see The Stone’s Trio at Johnny G’s Cafe tonight. Service 10/10, Shawn was a joy to be with and always attentive. Chefs were checking on us and the food ALL THE TIME.\nDefinitely recommend.\nMost of the dishes we had were vegan and they were SO GOOD even my non-vegan friends asked for more.\nOh, and needless to say, The Stone’s Trio were so wholesome too, sad to see they didn’t have that much of an audience, though. Will definitely come back in the future!😊\"\n\n⭐⭐⭐⭐⭐ \"Got the chicken club sandwich and grand slam breakfast was great didn't have room for the sandwiches the grand slam filled me up perfect... guna eat the sandwiches in a bit but foood was good and tasted proper and im a picky eater and usually don't get full but u will after eating here :)\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "BREAKFAST\n• English Breakfast — $15.99\n   3 scrambled eggs and 4 sausages served with brown beans.\n⭐ Grand Slam Breakfast — $15.99\n   3 eggs with 2 bacons, 2 sausages, and 2 hams. Extra $4 for peameal bacon.\n⭐ Steak in Breakfast — $20.99\n   3 eggs served with a 6oz steak cooked rare, medium rare, or well done.\n• Veggie Breakfast — $16.99\n   3 eggs with avocado, sautéed mushrooms, bell peppers, spinach, and tomatoes.\n• Five Star Breakfast — $16.99\n   3 eggs with 2 sausages, 2 ham, and 2 slices of peameal bacon.\n• No Meat Breakfast — $11.99\n   3 eggs served with sliced cucumber and tomatoes.\n\nEGGS BENEDICT\n• Peameal Eggs Benedict — $17.99\n   3 poached eggs with peameal bacon and homemade Hollandaise sauce.\n• Meat Benedict — $19.99\n⭐ Egg Neptune Benedict — $17.99\n   3 poached eggs with smoked salmon and Hollandaise sauce.\n• Florentine Benedict — $16.99\n   3 poached eggs served with sautéed spinach and Hollandaise sauce.\n• Ham Benedict — $16.99\n   3 poached eggs served with grilled ham and Hollandaise sauce.\n\nOMELETTES\n• Meat Lover Omelette — $16.99\n   Eggs cooked with chopped ham, bacon, sausages, and corned beef.\n• All-In Omelette — $17.99\n• Smoked Salmon Omelette — $16.99\n   Eggs cooked with smoked salmon.\n• Indian Omelette — $16.99\n   Eggs cooked with Indian spices, bell peppers, onions, and tomatoes.\n• Spinach and Feta Cheese Omelette — $16.99\n   Eggs cooked with sautéed spinach and feta cheese.\n• Western Omelette — $14.99\n   Eggs cooked with chopped ham, bell peppers, and white onions.\n\nPANCAKES, WAFFLES & FRENCH TOAST\n• Combo with Meat and Egg — $16.99\n   Pancakes, French toast, or a whole waffle with 2 meats and 2 eggs.\n• Combo with Meat — $15.99\n   Pancakes, French toast, or a waffle with 2 sausages, 2 ham, and 2 bacon.\n• Combo with Banana and Chocolate Chips — $15.99\n   Pancakes, French toast, or a waffle topped with banana and chocolate chips.\n• Plain Whole Waffle — $10.99\n   Classic whole waffle served with syrup.\n• Plain Pancake — $6.99\n   Traditional pancake served with syrup.",
+        "sections": [
+          {
+            "name": "BREAKFAST",
+            "items": [
+              {
+                "name": "English Breakfast",
+                "price": "$15.99",
+                "description": "3 scrambled eggs and 4 sausages served with brown beans.",
+                "highlight": false
+              },
+              {
+                "name": "Grand Slam Breakfast",
+                "price": "$15.99",
+                "description": "3 eggs with 2 bacons, 2 sausages, and 2 hams. Extra $4 for peameal bacon.",
+                "highlight": true
+              },
+              {
+                "name": "Steak in Breakfast",
+                "price": "$20.99",
+                "description": "3 eggs served with a 6oz steak cooked rare, medium rare, or well done.",
+                "highlight": true
+              },
+              {
+                "name": "Veggie Breakfast",
+                "price": "$16.99",
+                "description": "3 eggs with avocado, sautéed mushrooms, bell peppers, spinach, and tomatoes.",
+                "highlight": false
+              },
+              {
+                "name": "Five Star Breakfast",
+                "price": "$16.99",
+                "description": "3 eggs with 2 sausages, 2 ham, and 2 slices of peameal bacon.",
+                "highlight": false
+              },
+              {
+                "name": "No Meat Breakfast",
+                "price": "$11.99",
+                "description": "3 eggs served with sliced cucumber and tomatoes.",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "EGGS BENEDICT",
+            "items": [
+              {
+                "name": "Peameal Eggs Benedict",
+                "price": "$17.99",
+                "description": "3 poached eggs with peameal bacon and homemade Hollandaise sauce.",
+                "highlight": false
+              },
+              {
+                "name": "Meat Benedict",
+                "price": "$19.99",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Egg Neptune Benedict",
+                "price": "$17.99",
+                "description": "3 poached eggs with smoked salmon and Hollandaise sauce.",
+                "highlight": true
+              },
+              {
+                "name": "Florentine Benedict",
+                "price": "$16.99",
+                "description": "3 poached eggs served with sautéed spinach and Hollandaise sauce.",
+                "highlight": false
+              },
+              {
+                "name": "Ham Benedict",
+                "price": "$16.99",
+                "description": "3 poached eggs served with grilled ham and Hollandaise sauce.",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "OMELETTES",
+            "items": [
+              {
+                "name": "Meat Lover Omelette",
+                "price": "$16.99",
+                "description": "Eggs cooked with chopped ham, bacon, sausages, and corned beef.",
+                "highlight": false
+              },
+              {
+                "name": "All-In Omelette",
+                "price": "$17.99",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Smoked Salmon Omelette",
+                "price": "$16.99",
+                "description": "Eggs cooked with smoked salmon.",
+                "highlight": false
+              },
+              {
+                "name": "Indian Omelette",
+                "price": "$16.99",
+                "description": "Eggs cooked with Indian spices, bell peppers, onions, and tomatoes.",
+                "highlight": false
+              },
+              {
+                "name": "Spinach and Feta Cheese Omelette",
+                "price": "$16.99",
+                "description": "Eggs cooked with sautéed spinach and feta cheese.",
+                "highlight": false
+              },
+              {
+                "name": "Western Omelette",
+                "price": "$14.99",
+                "description": "Eggs cooked with chopped ham, bell peppers, and white onions.",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "PANCAKES, WAFFLES & FRENCH TOAST",
+            "items": [
+              {
+                "name": "Combo with Meat and Egg",
+                "price": "$16.99",
+                "description": "Pancakes, French toast, or a whole waffle with 2 meats and 2 eggs.",
+                "highlight": false
+              },
+              {
+                "name": "Combo with Meat",
+                "price": "$15.99",
+                "description": "Pancakes, French toast, or a waffle with 2 sausages, 2 ham, and 2 bacon.",
+                "highlight": false
+              },
+              {
+                "name": "Combo with Banana and Chocolate Chips",
+                "price": "$15.99",
+                "description": "Pancakes, French toast, or a waffle topped with banana and chocolate chips.",
+                "highlight": false
+              },
+              {
+                "name": "Plain Whole Waffle",
+                "price": "$10.99",
+                "description": "Classic whole waffle served with syrup.",
+                "highlight": false
+              },
+              {
+                "name": "Plain Pancake",
+                "price": "$6.99",
+                "description": "Traditional pancake served with syrup.",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

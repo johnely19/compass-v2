@@ -32,6 +32,43 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Amazing oat latte. Perfect ratio of espresso to oat milk, and the right beans for latte. If you like your lattes foamy, you will love this one. Barista was extremely friendly. Overall just a good experience\"\n\n⭐⭐⭐⭐⭐ \"Recommend:\nPour-over with house vanilla syrup and milk – lovely soy-honey aftertaste, though a bit pricey at around $10.\n\nAlso good:\nCappuccino – balanced and smooth.\n\nSkip:\nCold brew – too bitter for my taste.\"\n\n⭐⭐⭐⭐⭐ \"For those in the Dundas area toward the AGO, The Library is a great place for a good coffee and a quick snack.\n\nThe cafe is small, but offers excellent service and a great selection of coffees and quick snacks, such as cookies, cakes, and more.\n\nIt can be accessed via the St. Patrick subway exit and several subway lines.\n\nThe location is wheelchair-accessible, allowing for entry by customers with disabilities. It also has a spring-operated door.\n\nIt's worth adding to your list of good places for quality coffee.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "PREMIUM COFFEE BEANS\n⭐ El Injerto - Auction Lot EL08 - Geisha - La Calaca - Guatemala — $55.00\n   Single-origin specialty coffee\n⭐ La Palmera - Gesha - Peru — $35.00\n   Premium Gesha varietal\n• San Pablo - Ecuador — $35.00\n   Single-origin Ecuador beans\n⭐ Bella Vista - Geisha - Guatemala — $30.00\n   Geisha varietal from Guatemala",
+        "sections": [
+          {
+            "name": "PREMIUM COFFEE BEANS",
+            "items": [
+              {
+                "name": "El Injerto - Auction Lot EL08 - Geisha - La Calaca - Guatemala",
+                "price": "$55.00",
+                "description": "Single-origin specialty coffee",
+                "highlight": true
+              },
+              {
+                "name": "La Palmera - Gesha - Peru",
+                "price": "$35.00",
+                "description": "Premium Gesha varietal",
+                "highlight": true
+              },
+              {
+                "name": "San Pablo - Ecuador",
+                "price": "$35.00",
+                "description": "Single-origin Ecuador beans",
+                "highlight": false
+              },
+              {
+                "name": "Bella Vista - Geisha - Guatemala",
+                "price": "$30.00",
+                "description": "Geisha varietal from Guatemala",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

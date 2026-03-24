@@ -28,6 +28,24 @@
     "summary": "Named after Juan Manuel Fangio — racing rival of Alberto Ascari, whose namesake restaurant held this exact address for 14 years. Italian classics with Argentine detours. Playful cocktails. The naming backstory alone is worth the visit. 4.7★ (89 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a stretch of Queen East where Leslieville's still got grit under its fingernails. Inside, the room feels like a Roman trattoria filtered through Buenos Aires — warm lighting bounces off white walls and dark wood tables, with just enough breathing room between seats that you can actually hear your dining companion. There's a low-key elegance here, the kind where the wine glasses are good crystal but nobody's precious about it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu works that Italian-Argentine thread harder than you'd expect: you'll find osso buco ladled over saffron risotto alongside carne cruda that gets compared to the city's best. The vongole shows up garlicky and bright, shells cracked open in white wine, while the veal chop — a hefty, milk-fed cut — arrives with the kind of crust that only a ripping-hot pan delivers. This is cooking that respects tradition but doesn't worship it, ingredient-forward and generous without trying to reinvent the wheel. Mains run in the high twenties to mid-thirties, and the wine list pulls its weight.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a date-night spot when you want somewhere that feels like you know something the rest of the city doesn't yet — serious enough for an anniversary, loose enough that you can linger over a second bottle without the room stiffening up around you.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

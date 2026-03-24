@@ -24,6 +24,31 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Amazing restaurant! Food is amazing, each dish has a story and a unique flavor. My favorite was the Rose. The service is stellar, best I've ever experienced. The restaurant decor is upscale and being able to watch the food prepared is always magical. A must visit restaurant. Ask questions, smile and enjoy!\"\n\n⭐⭐⭐⭐ \"Dined at Aburi Hana prior to head chef departing. Food was excellent. Unfortunately, the desserts did not meet the standards of the other dishes. Ordered tea but had to ask repeatedly to have the teapot refilled with hot water…perhaps the hot water kettle should be left for the diners to refill themselves while in a private room.\"\n\n⭐⭐⭐⭐ \"Great service and the menu was very well crafted. The duck and mushroom dish left a bit to be desired and was quite tough. I would say overall the Japanese dishes were extremely well crafted while the more Canadian inspired dishes felt a bit unrefined. Would definitely still come back to try it again.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "MODERN KYŌ-KAISEKI TASTING MENU\n⭐ Signature Kyō-Kaiseki 12-Course Experience — $430\n   Our signature tasting menu experience\n• Introductory Kyō-Kaiseki 8-Course Experience — $300\n   An introduction to our Kyō-Kaiseki offerings",
+        "sections": [
+          {
+            "name": "MODERN KYŌ-KAISEKI TASTING MENU",
+            "items": [
+              {
+                "name": "Signature Kyō-Kaiseki 12-Course Experience",
+                "price": "$430",
+                "description": "Our signature tasting menu experience",
+                "highlight": true
+              },
+              {
+                "name": "Introductory Kyō-Kaiseki 8-Course Experience",
+                "price": "$300",
+                "description": "An introduction to our Kyō-Kaiseki offerings",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

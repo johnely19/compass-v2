@@ -29,6 +29,24 @@
     "summary": "Squamish's star brewery. Great pizza, huge beer selection. 4.7 rating, 1,371 reviews. Buzzing with locals. The essential Squamish brewery stop. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Commercial Way, Squamish's industrial strip where climbing gear shops bleed into breweries. Inside, it's all high ceilings, concrete floors, and long communal tables packed with locals in fleece vests—the kind of place where you can hear the fermentation tanks humming behind the bar. The beer list covers an entire wall, and the energy is more Saturday afternoon tailgate than quiet craft pour-over.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The pizza here is the kind that makes dedicated pizzerias nervous—blistered crusts, quality toppings, the sort of execution that shouldn't be coming out of a brewery kitchen. You'll also find Korean-inflected wings in three rotating flavors, a gochujang chicken burger that regulars order on repeat, and a beet and apple salad that somehow holds its own against the fried stuff. It's gastropub food taken seriously, with most mains landing in the mid-teens.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your post-climb, post-ride, post-whatever victory lap—when you want a table full of pizzas, a flight of beers with names that make you laugh, and zero pretension. Come with a group and order too much.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

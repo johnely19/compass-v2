@@ -27,6 +27,24 @@
     "summary": "Brand-new breakfast sandwich shop, open 2 weeks, already has evangelical fanbase and lines. Middle Eastern-inflected sandwiches, just steps from Bathurst station. 4.8★ (60 reviews). Tue-Sun 9am-3pm. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're steps from Bathurst station, mid-Annex, in a small takeout counter that's only been open two weeks but already draws morning lines. The owner works behind a tight galley setup where you can watch him press dough and crack eggs — this is counter service, a few stools maybe, the kind of place where the architecture is the ritual of assembly. It's spare and functional, all attention on the flatbread baking in real time.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Palestinian breakfast sandwiches built on flatbread that gets baked fresh for every order — you're not eating yesterday's pita. The za'atar & egg and foole & egg are the early hits, Middle Eastern pantry staples layered warm and runny like a flatbread pizza that folds. There are solid veggie and vegan options, which is rare for breakfast sandwiches that actually satisfy, and everything hovers around $8-12. The menu is tight, the flavour is not.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're catching the subway and want something better than a bodega egg sandwich, or you're building a Saturday morning around Annex errands and need fuel that won't weigh you down. Get there before noon on weekends unless you like standing in lines.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

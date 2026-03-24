@@ -20,6 +20,24 @@
     "summary": "Japanese-Italian concept at new boutique hotel Nomas; just opened, no Google rating yet but high-signal pedigree.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Bloor West in the Annex, ground floor of the new Nomas Hotel, where a café by day pulls a swift transformation into a low-lit bar after dark. Padded booths line one wall, there's a compact bar setup, and the whole room feels like someone's well-appointed front room—intimate enough that a group of four fills it with energy. The light shifts with the hours: bright and easy in the morning, moody and close once the cocktails start flowing.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The Japanese-Italian hybrid plays out in small, precise bites—dashi olives that taste like the ocean with a briny funk, duck tataki sliced thin and seared fast. Mornings lean café: lattes and pastries trucked in from Noctua, the kind of butter-heavy, shatteringly crisp stuff that makes you linger. At night, the menu tightens into snacks and small plates built for drinking, a izakaya-meets-enoteca approach that makes more sense with each round.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Grab a booth in the morning if you want a quiet laptop hang with an actually good flat white, then come back after 9pm with two or three friends when the vibe flips and everyone's squeezed in elbow-to-elbow. It's the kind of spot that rewards being a regular—small enough to feel like you're in on something.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

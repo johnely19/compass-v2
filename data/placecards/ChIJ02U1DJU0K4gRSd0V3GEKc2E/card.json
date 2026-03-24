@@ -29,6 +29,24 @@
     "summary": "Kimono, ceramics, calligraphy supplies, ikebana, green tea, incense—old-school Japanese gift shop with wabi-sabi sensibility. 4.6 stars. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find it on Harbord in the tangle of streets between the Annex and Kensington, a residential block that still holds onto a few independent shops. Inside, it's a small, carefully edited room—tatami-lined shelves, low wooden tables displaying lacquerware and ceramic tea bowls, the smell of sandalwood and hinoki. Owner Linda has arranged everything with ikebana-level restraint: silk kimonos hung on one wall, calligraphy brushes in bamboo holders, nothing fighting for your attention.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a gift shop focused on Japanese cultural objects and homeware. You'll find matcha whisks and ceremonial-grade green tea, proper miso bowls and chopsticks that feel balanced in your hand, incense from small makers in Kyoto. Prices reflect the quality: these aren't souvenir-shop versions but the real stuff, sourced with a wabi-sabi sensibility that values craft over abundance. Linda stocks what she'd use herself—bowls, textiles, tools for tea ceremony—and she'll talk you through the provenance if you ask.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Make it a destination stop on a weekend morning when you've got time to linger and talk with Linda, who treats every visit like a minor cultural exchange. Or fold it into a design-focused walk through the neighbourhood—it's the kind of place that recalibrates your eye before you hit the next vintage furniture shop or ceramics studio.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

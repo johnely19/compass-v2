@@ -28,6 +28,24 @@
     "summary": "Hidden behind unmarked door—jazz-influenced atmosphere, culinary-driven cocktails by Le Cordon Bleu-trained bartender. Opened Aug 2025, 4.8 rating. Open NOW til 1am.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on College near Bathurst, looking for an unmarked door that requires an Instagram password to enter—yes, really. Inside, low lighting catches brass fixtures and dark wood, with jazz filling the narrow room and a bar where a Le Cordon Bleu-trained bartender builds drinks like compositions. It's deliberate speakeasy theater, but the hospitality is warm enough that you forget you're playing along.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar first, with a tight menu built to complement the drink program. The pretzel comes with maple butter that's become something of a signature—sweet, salty, worth ordering even if you're not hungry. There's a steakhouse downstairs (a popular pairing according to regulars), but up here it's about small, considered bites that don't compete with the culinary-driven cocktails, many with house-made elements and enough invention to justify the speakeasy hunt.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a post-dinner move, ideally when you want something more considered than Little Italy's wine bar crush. Come late on a weeknight when you can actually talk to the bartender, or after steak downstairs if you're committing to the full ritual.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

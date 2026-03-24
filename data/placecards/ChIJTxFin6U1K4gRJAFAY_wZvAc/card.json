@@ -32,6 +32,129 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Love the drink menu, I feel there's a little bit for everyone. We got the ice and aura, old man, three savouries, a few others. All were amazing but my favorite is the old man.  Truly perfect if you love black tea! They also sell their cocktails by the bottle.\n\nService was good, seating is tight but overall a nice ambiance.\"\n\n⭐⭐⭐⭐⭐ \"A lot of fun at this chic spot for creative cocktails and snacks. Service was on point, lots of bartenders checking in. It was busy but never took too long for drinks.\nIt’s got a speakeasy vibe. I’d recommend reservations.\nThe cocktails were balanced with fun garnishes.\nDefinitely check out the secret menu\"\n\n⭐⭐⭐⭐⭐ \"It was truly the best bar experience I’ve ever had. The cocktail, the atmosphere, the service all exceeded my expectations. Especially the bartenders - Santiago, Eric, and Jacky were amazing:) so hospitable, friendly and professional. I don’t leave reviews often but I had to for this one. We had a great time and it was an unforgettable experience. We got The Heart of Normandy, it was phenomenal.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SUITE 115 CLASSICS\n• The Old Man — $23\n   House Hong Kong Milk Tea blend, Neutral Spirit, Whey\n• Life at Suite — $22\n• Dadar Gulung — $23\n• Eleanor's Reverie #2 — $22\n   Bright and refreshing. A crowd pleaser.\n⭐ 115 Boulevardier — $24\n   Brown Butter, Chocolate, Banana, Bearface Whisky, Campari, Sweet Vermouth\n• … and The Sea — $23\n   Roku Gin, Wasabi, Scallop, Dry Vermouth, Dill, Seaweed\n\nSIGNATURE COCKTAILS\n• Ash & Aura — $22\n   Smoky Brazilian grilled pineapple meets a silky, clarified Pina Colada.\n• Uppa Country — $22\n• H&M — $23\n   Thai Basil (Horapha), Mango (Ma Muang), Milagro Silver Tequila, Genmaicha\n• Terminal 3 Espresso Martini — $18\n   Wyborowa Vodka, Coffee Liqueur, Espresso\n⭐ The Tiny Savouries — $23\n   Three mini savoury cocktails, inspired by three different dishes. Charcuterie Board, Taco Tuesday, Ackee & Saltfish\n\nNON-ALCOHOLIC DRINKS\n• Andes Mountain Fizz — $18\n   Lulo fruit, Cucumber, White Bitter Soda, Chamomile\n• Whispering Grove — $18\n   Lapsang Souchong, Mushroom, Fig Leaf, Whey, Citrus. Smoky, & bright citrus, finished with herbal and umami notes.\n\nSMALL PLATES\n• Bar Cashews — $9\n   Shallots, Thai Basil, Coriander, Cumin, Warmed in Viet Fish Sauce\n• Taro & Sweet Potato Chips — $11\n   Thinly sliced, fried in small batch. Tossed with Furikake\n• Mom's Dumplings — $17\n   Pan-fried Chive & Pork Dumplings, House Chili Oil, Soy Gastrique\n• Corn Cheese Ttoebokki — $16\n   Corn Béchamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions\n• Shrimp Toasty — $19\n   Shrimp smothered Brioche, Carrots, Sesame Oil, Mayo\n⭐ Indo Short Ribs — $25\n   AAA Short Rib slow cooked with Indonesian flavours, Naan bites",
+        "sections": [
+          {
+            "name": "SUITE 115 CLASSICS",
+            "items": [
+              {
+                "name": "The Old Man",
+                "price": "$23",
+                "description": "House Hong Kong Milk Tea blend, Neutral Spirit, Whey"
+              },
+              {
+                "name": "Life at Suite",
+                "price": "$22"
+              },
+              {
+                "name": "Dadar Gulung",
+                "price": "$23"
+              },
+              {
+                "name": "Eleanor's Reverie #2",
+                "price": "$22",
+                "description": "Bright and refreshing. A crowd pleaser."
+              },
+              {
+                "name": "115 Boulevardier",
+                "price": "$24",
+                "description": "Brown Butter, Chocolate, Banana, Bearface Whisky, Campari, Sweet Vermouth",
+                "highlight": true
+              },
+              {
+                "name": "… and The Sea",
+                "price": "$23",
+                "description": "Roku Gin, Wasabi, Scallop, Dry Vermouth, Dill, Seaweed"
+              }
+            ]
+          },
+          {
+            "name": "SIGNATURE COCKTAILS",
+            "items": [
+              {
+                "name": "Ash & Aura",
+                "price": "$22",
+                "description": "Smoky Brazilian grilled pineapple meets a silky, clarified Pina Colada."
+              },
+              {
+                "name": "Uppa Country",
+                "price": "$22"
+              },
+              {
+                "name": "H&M",
+                "price": "$23",
+                "description": "Thai Basil (Horapha), Mango (Ma Muang), Milagro Silver Tequila, Genmaicha"
+              },
+              {
+                "name": "Terminal 3 Espresso Martini",
+                "price": "$18",
+                "description": "Wyborowa Vodka, Coffee Liqueur, Espresso"
+              },
+              {
+                "name": "The Tiny Savouries",
+                "price": "$23",
+                "description": "Three mini savoury cocktails, inspired by three different dishes. Charcuterie Board, Taco Tuesday, Ackee & Saltfish",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "NON-ALCOHOLIC DRINKS",
+            "items": [
+              {
+                "name": "Andes Mountain Fizz",
+                "price": "$18",
+                "description": "Lulo fruit, Cucumber, White Bitter Soda, Chamomile"
+              },
+              {
+                "name": "Whispering Grove",
+                "price": "$18",
+                "description": "Lapsang Souchong, Mushroom, Fig Leaf, Whey, Citrus. Smoky, & bright citrus, finished with herbal and umami notes."
+              }
+            ]
+          },
+          {
+            "name": "SMALL PLATES",
+            "items": [
+              {
+                "name": "Bar Cashews",
+                "price": "$9",
+                "description": "Shallots, Thai Basil, Coriander, Cumin, Warmed in Viet Fish Sauce"
+              },
+              {
+                "name": "Taro & Sweet Potato Chips",
+                "price": "$11",
+                "description": "Thinly sliced, fried in small batch. Tossed with Furikake"
+              },
+              {
+                "name": "Mom's Dumplings",
+                "price": "$17",
+                "description": "Pan-fried Chive & Pork Dumplings, House Chili Oil, Soy Gastrique"
+              },
+              {
+                "name": "Corn Cheese Ttoebokki",
+                "price": "$16",
+                "description": "Corn Béchamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions"
+              },
+              {
+                "name": "Shrimp Toasty",
+                "price": "$19",
+                "description": "Shrimp smothered Brioche, Carrots, Sesame Oil, Mayo"
+              },
+              {
+                "name": "Indo Short Ribs",
+                "price": "$25",
+                "description": "AAA Short Rib slow cooked with Indonesian flavours, Naan bites",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

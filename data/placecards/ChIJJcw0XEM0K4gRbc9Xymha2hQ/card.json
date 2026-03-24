@@ -33,6 +33,130 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Absolutely fantastic beers here and a stellar happy hour with great deals and options. I had their staple IPA and absolutely loved it! I'm not sure why they were so good, but we had an order of fries and they were just the best fries ever? I can't even describe why they were so great. The vibe here is electric and they have a lovely patio for warmer times. Big reccomend!\"\n\n⭐⭐⭐⭐ \"This bar/brewery has a great selection of beers—something for every taste, and definitely worth a visit if you’re a craft beer fan. The atmosphere is lively, and it’s clear they put effort into their brews.\n\nUnfortunately, our experience was a bit overshadowed by the seating arrangement. We were placed in a spot uncomfortably close to the service area, where I kept getting bumped as servers rushed by and handled food orders behind me. It really affected the overall vibe.\n\nWe also waited quite a while for our food, and when the tempura green beans finally arrived, they were underwhelming—mostly tempura batter with a few green beans, and lacking in flavor.\n\nIt’s a solid place for drinks, but I’d recommend choosing your table carefully and tempering expectations when it comes to the food.\"\n\n⭐⭐⭐⭐ \"4.4.\nGo for the beer, stay for the vibes. Have been here a few times for drinks over the past few years and it’s always great. Great lighting, great patio (in the summer), great beers, and a good vibe all around.\nWent recently for dinner- the service was great, and the food was also pretty good. Menu changes but there are some staples.\nDon’t sleep on the French fries or the lemon ricotta doughnuts!\nThey have a rotating kombucha and some zero-proof options as welll!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "FEATURED BEERS\n⭐ Pocket Pilsner — $33.40\n   6-pack\n⭐ Disco Ducks — $33.00\n   6-pack\n• Pizza Beer — $15.95\n   single\n• Double Ducks — $33.00\n   6-pack\n• Triple Ducks — $35.70\n   6-pack\n\nSPECIALTY BREWS\n• Cherry B — $30.60\n   6-pack\n• Lit Pickle — $21.00\n   6-pack\n• Ducks Royale — $29.10\n   6-pack\n• Bears — $27.90\n   6-pack\n• Tuesday — $27.90\n   6-pack\n\nSEASONAL & CRAFT SELECTIONS\n• Tonito Rose — $26.50\n   single\n• Bouvier d'Brusco — $26.50\n   single\n• Blue Oblong — $24.50\n   single\n• Cabo — $12.95\n   single\n\nMIXED PACKS\n⭐ Short Can Mixed Pack — $90.00\n   24-pack\n• Ducks — $27.65\n   6-pack",
+        "sections": [
+          {
+            "name": "FEATURED BEERS",
+            "items": [
+              {
+                "name": "Pocket Pilsner",
+                "price": "$33.40",
+                "description": "6-pack",
+                "highlight": true
+              },
+              {
+                "name": "Disco Ducks",
+                "price": "$33.00",
+                "description": "6-pack",
+                "highlight": true
+              },
+              {
+                "name": "Pizza Beer",
+                "price": "$15.95",
+                "description": "single",
+                "highlight": false
+              },
+              {
+                "name": "Double Ducks",
+                "price": "$33.00",
+                "description": "6-pack",
+                "highlight": false
+              },
+              {
+                "name": "Triple Ducks",
+                "price": "$35.70",
+                "description": "6-pack",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SPECIALTY BREWS",
+            "items": [
+              {
+                "name": "Cherry B",
+                "price": "$30.60",
+                "description": "6-pack",
+                "highlight": false
+              },
+              {
+                "name": "Lit Pickle",
+                "price": "$21.00",
+                "description": "6-pack",
+                "highlight": false
+              },
+              {
+                "name": "Ducks Royale",
+                "price": "$29.10",
+                "description": "6-pack",
+                "highlight": false
+              },
+              {
+                "name": "Bears",
+                "price": "$27.90",
+                "description": "6-pack",
+                "highlight": false
+              },
+              {
+                "name": "Tuesday",
+                "price": "$27.90",
+                "description": "6-pack",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SEASONAL & CRAFT SELECTIONS",
+            "items": [
+              {
+                "name": "Tonito Rose",
+                "price": "$26.50",
+                "description": "single",
+                "highlight": false
+              },
+              {
+                "name": "Bouvier d'Brusco",
+                "price": "$26.50",
+                "description": "single",
+                "highlight": false
+              },
+              {
+                "name": "Blue Oblong",
+                "price": "$24.50",
+                "description": "single",
+                "highlight": false
+              },
+              {
+                "name": "Cabo",
+                "price": "$12.95",
+                "description": "single",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "MIXED PACKS",
+            "items": [
+              {
+                "name": "Short Can Mixed Pack",
+                "price": "$90.00",
+                "description": "24-pack",
+                "highlight": true
+              },
+              {
+                "name": "Ducks",
+                "price": "$27.65",
+                "description": "6-pack",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

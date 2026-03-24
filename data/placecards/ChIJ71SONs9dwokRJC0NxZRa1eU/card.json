@@ -52,6 +52,67 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Incredible wine and food! Such delicious small bites and a great way to start off the evening. The ricotta and honey cicchetti was a particular highlight!\"\n\n⭐⭐⭐⭐⭐ \"We LOVED our first visit to Cicchetti! Its simple space and straightforward menu make for a delightfully tasty night out, and I really liked that I didn't have to choose a wine from an encyclopedia. The owners are frequently there IRL and it really feels like a neighborhood spot where you can trust their recommendation and walk away with deliciousness. I didn't know that \"cicchetti\" is a sort of Italian tapas dish with endless variety, so we have many reasons to go back and try the next variation.\"\n\n⭐⭐⭐⭐⭐ \"Good food and even better cocktails at reasonable prices. The meatball and the rugiada cocktails were true highlights for me. A great place to meet and chill with friends.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "CICCHETTI\n⭐ Venetian Small Plates\n   Rotating selection of vegetarian and non-vegetarian cicchetti with bold flavors\n\nWINES\n⭐ White Wines — $14\n   All whites priced uniformly by the glass\n• Red Wines — $14\n   All reds priced uniformly by the glass\n• Neighborhood Pour — $12\n   Rotating weekly selection\n\nCOCKTAILS & SPIRITS\n⭐ Thoughtfully Crafted Cocktails\n   House cocktails taking you on a journey for the senses\n• Brooklyn Spirits\n   Curated selection of spirits\n\nDESSERT\n• Ice Cream from Lady Moo Moo",
+        "sections": [
+          {
+            "name": "CICCHETTI",
+            "items": [
+              {
+                "name": "Venetian Small Plates",
+                "description": "Rotating selection of vegetarian and non-vegetarian cicchetti with bold flavors",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "WINES",
+            "items": [
+              {
+                "name": "White Wines",
+                "price": "$14",
+                "description": "All whites priced uniformly by the glass",
+                "highlight": true
+              },
+              {
+                "name": "Red Wines",
+                "price": "$14",
+                "description": "All reds priced uniformly by the glass"
+              },
+              {
+                "name": "Neighborhood Pour",
+                "price": "$12",
+                "description": "Rotating weekly selection"
+              }
+            ]
+          },
+          {
+            "name": "COCKTAILS & SPIRITS",
+            "items": [
+              {
+                "name": "Thoughtfully Crafted Cocktails",
+                "description": "House cocktails taking you on a journey for the senses",
+                "highlight": true
+              },
+              {
+                "name": "Brooklyn Spirits",
+                "description": "Curated selection of spirits"
+              }
+            ]
+          },
+          {
+            "name": "DESSERT",
+            "items": [
+              {
+                "name": "Ice Cream from Lady Moo Moo"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

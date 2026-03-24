@@ -32,6 +32,161 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Delicious delicious delicious. I’m so glad we decided to dine here on our trip. The food was phenomenal. I don’t think there is a bad thing on the menu. The tortellini and the lasagna were so good. The fish was fresh and so yummy. The polenta bread with the chili butter was so good and the mortadella was delish as well.\"\n\n⭐⭐⭐⭐ \"I highly highly recommend the leafy greens and herb salad, calabrian chili wood fired polenta bread combined with the house made mortadella, two sheet lasagna, and lastly, the littleneck clam pasta. I personally loved the crispy potatoes \"war style\" but do think the pungent lemongrass dip can be polarizing.\nThe fluke crudo was so unfresh that it made me lose my usually robust appetite (and taste-wise was very disappointing compared to other crudos), but the server was hospitable and took it off the cheque. The pork t-bone was tasty but not as remarkable as the other dishes.\nRolo's is very ingredient-forward and works with flavors in a unique way.\n\nMinus the fluke crudo, 5/5 dining experience.\"\n\n⭐⭐⭐⭐⭐ \"Made reservations walked in and was pleasantly surprised..this is a busy establishment reservations are recommended..Natalie who was our waitress was an absolute doll. So informative with a wealth of knowledge about the food. The food hands down was a ten out of ten. We ordered the crispy potatoes for the table, yum and yum. A second order was made immediately don't judge. I ordered the eggs with the polenta bread sooo good.my friend ordered the French toast which was to die for..need I say more. The food is very filling and so very delicious.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "WOOD-FIRED BREADS\n• Polenta Bread — $8\n   olive oil & flaky salt\n• Sesame & Wild Oregano Bread — $10\n• Calabrian Chili Butter Bread — $13\n\nDELI & CHEESE\n• Housemade Mortadella — $15\n• Prosciutto di Parma — $18\n• Fennel Salami — $12\n• Stracciatella Cheese — $13\n   silk, chili, sumac\n\nSMALL PLATES\n• Pickled Carrots — $7\n   orange, coriander\n• Tahini Chickpeas — $9\n• Grilled Cauliflower — $20\n   crispy shallots, verjus raisins, vadouvan\n• Leafy Greens & Herb Salad — $15\n• Spring Peas & Mint Salad — $18\n   serrano, pistachio zhoug\n⭐ Scallop Carpaccio — $26\n   strawberry, black pepper, thai basil\n• Grilled Salt & Pepper Head-On Shrimp — $18\n\nPASTAS\n• Mafaldine — $25\n   walnut & broccoli rabe pesto, fennel pollen\n• Littleneck Clam Spaghetti — $28\n   calabrian chili butter, garlic breadcrumbs\n• Asparagus & Ricotta Ravioli — $27\n   lemon, bottarga\n\nLARGE PLATES\n• Sheet Lasagna Verde Bolognese — $32\n   beef & pork\n• Grilled Branzino — $35\n   sunchoke & almond romesco, aleppo\n⭐ Wagyu Beef Skirt Steak — $48\n⭐ Wood-Fired Whole Trout Amandine for Two — $58\n   brown butter, parsley, lemon\n\nSIDES\n• Crispy Potatoes — $8\n• Crispy Potatoes War Style — $12\n• Grilled Pea Greens — $13\n   garlic, confit, lemon\n• Double Cheeseburger — $20\n   grilled onions, dijonnaise, pickled long hot",
+        "sections": [
+          {
+            "name": "WOOD-FIRED BREADS",
+            "items": [
+              {
+                "name": "Polenta Bread",
+                "price": "$8",
+                "description": "olive oil & flaky salt"
+              },
+              {
+                "name": "Sesame & Wild Oregano Bread",
+                "price": "$10"
+              },
+              {
+                "name": "Calabrian Chili Butter Bread",
+                "price": "$13"
+              }
+            ]
+          },
+          {
+            "name": "DELI & CHEESE",
+            "items": [
+              {
+                "name": "Housemade Mortadella",
+                "price": "$15"
+              },
+              {
+                "name": "Prosciutto di Parma",
+                "price": "$18"
+              },
+              {
+                "name": "Fennel Salami",
+                "price": "$12"
+              },
+              {
+                "name": "Stracciatella Cheese",
+                "price": "$13",
+                "description": "silk, chili, sumac"
+              }
+            ]
+          },
+          {
+            "name": "SMALL PLATES",
+            "items": [
+              {
+                "name": "Pickled Carrots",
+                "price": "$7",
+                "description": "orange, coriander"
+              },
+              {
+                "name": "Tahini Chickpeas",
+                "price": "$9"
+              },
+              {
+                "name": "Grilled Cauliflower",
+                "price": "$20",
+                "description": "crispy shallots, verjus raisins, vadouvan"
+              },
+              {
+                "name": "Leafy Greens & Herb Salad",
+                "price": "$15"
+              },
+              {
+                "name": "Spring Peas & Mint Salad",
+                "price": "$18",
+                "description": "serrano, pistachio zhoug"
+              },
+              {
+                "name": "Scallop Carpaccio",
+                "price": "$26",
+                "description": "strawberry, black pepper, thai basil",
+                "highlight": true
+              },
+              {
+                "name": "Grilled Salt & Pepper Head-On Shrimp",
+                "price": "$18"
+              }
+            ]
+          },
+          {
+            "name": "PASTAS",
+            "items": [
+              {
+                "name": "Mafaldine",
+                "price": "$25",
+                "description": "walnut & broccoli rabe pesto, fennel pollen"
+              },
+              {
+                "name": "Littleneck Clam Spaghetti",
+                "price": "$28",
+                "description": "calabrian chili butter, garlic breadcrumbs"
+              },
+              {
+                "name": "Asparagus & Ricotta Ravioli",
+                "price": "$27",
+                "description": "lemon, bottarga"
+              }
+            ]
+          },
+          {
+            "name": "LARGE PLATES",
+            "items": [
+              {
+                "name": "Sheet Lasagna Verde Bolognese",
+                "price": "$32",
+                "description": "beef & pork"
+              },
+              {
+                "name": "Grilled Branzino",
+                "price": "$35",
+                "description": "sunchoke & almond romesco, aleppo"
+              },
+              {
+                "name": "Wagyu Beef Skirt Steak",
+                "price": "$48",
+                "highlight": true
+              },
+              {
+                "name": "Wood-Fired Whole Trout Amandine for Two",
+                "price": "$58",
+                "description": "brown butter, parsley, lemon",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "SIDES",
+            "items": [
+              {
+                "name": "Crispy Potatoes",
+                "price": "$8"
+              },
+              {
+                "name": "Crispy Potatoes War Style",
+                "price": "$12"
+              },
+              {
+                "name": "Grilled Pea Greens",
+                "price": "$13",
+                "description": "garlic, confit, lemon"
+              },
+              {
+                "name": "Double Cheeseburger",
+                "price": "$20",
+                "description": "grilled onions, dijonnaise, pickled long hot"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

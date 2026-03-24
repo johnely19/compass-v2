@@ -48,6 +48,83 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Too hotel with a chic and charming bar and dining area. Sat at the bar and had a dedicated server who was on the move to serve his guests. Enjoyed truffle fries, Rose and a non-traditional French onion soup.  It had a hint of tarragon and was delicious. Loved the design with dogs motif through the hotel lobby.\"\n\n⭐⭐⭐⭐⭐ \"I love tea time. I try to search this out whenever I travel. The Crosby did not disappoint. Stunning decor, friendly and attentive wait staff, Central location. Also, they did not rush us out! I did a few afternoon teas during this trip to New York and this was the best experience.\"\n\n⭐⭐⭐⭐⭐ \"Make reservations because it gets very busy. Came here for tea party service and loved it. The sandwiches and desserts were delicious. I had mint tea while my friends had the hot chocolate. Which they both said was thick hot coco. Will come again\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "BREAKFAST\n• Continental Breakfast — $28\n   Your choice of items from the buffet\n• Continental Breakfast with Entrée — $47\n   Buffet items supplemented with an entrée\n⭐ English Breakfast — $34\n   Free range eggs any style, sautéed mushrooms, roasted tomatoes, Cumberland sausage and bacon\n• Vegetarian Breakfast — $30\n   Free range eggs any style, sautéed mushrooms, kale, roasted tomatoes, spinach, zucchini\n\nBEVERAGES\n• Matcha Almond Latte — $12\n• Turmeric Almond Latte — $12\n\nJUICES & SHOTS\n• Detox — $15\n   Kale, spinach, celery, apple\n• Energize — $15\n   Beet, apple, carrot, lemon\n⭐ Immunity — $8\n   Ginger, lemon, cayenne pepper shot",
+        "sections": [
+          {
+            "name": "BREAKFAST",
+            "items": [
+              {
+                "name": "Continental Breakfast",
+                "price": "$28",
+                "description": "Your choice of items from the buffet",
+                "highlight": false
+              },
+              {
+                "name": "Continental Breakfast with Entrée",
+                "price": "$47",
+                "description": "Buffet items supplemented with an entrée",
+                "highlight": false
+              },
+              {
+                "name": "English Breakfast",
+                "price": "$34",
+                "description": "Free range eggs any style, sautéed mushrooms, roasted tomatoes, Cumberland sausage and bacon",
+                "highlight": true
+              },
+              {
+                "name": "Vegetarian Breakfast",
+                "price": "$30",
+                "description": "Free range eggs any style, sautéed mushrooms, kale, roasted tomatoes, spinach, zucchini",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "BEVERAGES",
+            "items": [
+              {
+                "name": "Matcha Almond Latte",
+                "price": "$12",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Turmeric Almond Latte",
+                "price": "$12",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "JUICES & SHOTS",
+            "items": [
+              {
+                "name": "Detox",
+                "price": "$15",
+                "description": "Kale, spinach, celery, apple",
+                "highlight": false
+              },
+              {
+                "name": "Energize",
+                "price": "$15",
+                "description": "Beet, apple, carrot, lemon",
+                "highlight": false
+              },
+              {
+                "name": "Immunity",
+                "price": "$8",
+                "description": "Ginger, lemon, cayenne pepper shot",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

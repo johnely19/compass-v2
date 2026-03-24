@@ -33,6 +33,48 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Great spot for small plates and drinks!\n\nLove the vibes here. It really does remind me of Japanese izakaya. Their pressed sushi is a signature! Dont skip on the karaage cuz the sauce with a onsen egg is bomb!\n\nIt can get busy and its a small place. So go early!\"\n\n⭐⭐⭐⭐⭐ \"Finally tried Yuugi Izakaya and really enjoyed it.\nThe fried dishes were excellent, the wagyu fried rice was generous, and the age pan ice cream was a standout. Great service and a fun spot for comfort food — would come back.\"\n\n⭐⭐⭐⭐⭐ \"Went here on a weekend evening and even though it was busy, the service was amazing. There was a tall Korean server who was incredibly friendly! She greeted us with a smile right when we walked in. We ordered the karaage and she explained what's in the sauce and how to eat it really well. We also had the omurice and it was one of the best Japanese dish I had in Toronto!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SUSHI\n⭐ Yuugi Sushi\n   Pressed and torched sushi\n• Ebi Sushi\n   Shrimp sushi\n⭐ Wagyu Sushi\n   Premium wagyu sushi\n\nDRINKS\n⭐ Highball\n   Whiskey + Soda. Classic Japanese izakaya drink",
+        "sections": [
+          {
+            "name": "SUSHI",
+            "items": [
+              {
+                "name": "Yuugi Sushi",
+                "price": "",
+                "description": "Pressed and torched sushi",
+                "highlight": true
+              },
+              {
+                "name": "Ebi Sushi",
+                "price": "",
+                "description": "Shrimp sushi",
+                "highlight": false
+              },
+              {
+                "name": "Wagyu Sushi",
+                "price": "",
+                "description": "Premium wagyu sushi",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "DRINKS",
+            "items": [
+              {
+                "name": "Highball",
+                "price": "",
+                "description": "Whiskey + Soda. Classic Japanese izakaya drink",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   }

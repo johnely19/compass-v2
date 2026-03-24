@@ -27,10 +27,100 @@
     "summary": "Anti-pretentious 'wine dive bar.' Named after a Bob's Burgers episode. Anonymous owner, ex-Momofuku alum. Wine by the ounce, no-frills romantic space. Opened early 2026, already a local staple. 5.0★ (23 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West, just past the Portuguese bakeries and vintage shops, ducking into what looks like it could be someone's living room if their living room had dim Edison bulbs and wine bottles lining every available surface. It's tight—maybe a dozen seats total between mismatched stools at the bar and a couple of small tables—with that worn-in, nothing-polished vibe that makes you forget you walked in off a Toronto street. The lighting is low enough that you'll squint at the handwritten wine list, which is exactly the point.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a wine bar in the truest sense: the food is here to support what you're drinking, not compete with it. The menu leans into bar snacks—think things you can eat with your hands while working through a few ounces each of natural wines you've never heard of. The real draw is the by-the-ounce pricing system, which means you can taste your way through Slovenian orange wine, a funky Beaujolais, and whatever the ex-Momofuku owner is excited about this week without committing to a full glass. They also pour a mean cocktail and what regulars swear is the crispest beer in the city.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Date night when you want somewhere that feels like a secret, even though it's not anymore. Or alone on a weeknight when you need to talk wine with someone who actually knows their stuff and won't make you feel like an idiot for asking questions.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Such a cool little spot. Rotating wine list, bar snacks, super knowledgeable staff, and they price by the ounce so you can try a bunch of different things. Dim lighting, cozy, and feels like a dive wine bar you’d stumble into in France. Easy to hang out here for way longer than planned.\"\n\n⭐⭐⭐⭐⭐ \"a rustic and chill wine bar that also has some of my favourite cocktails and music in the city. it’s only downfall is that now I don’t want to go anywhere else\"\n\n⭐⭐⭐⭐⭐ \"the coziest little wine bar with a great wine selection and a super crispy beer. the staff are super friendly and helpful\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "WINE\n• House Red\n   Daily rotating selection\n• House White\n   Daily rotating selection\n⭐ House Sparkling\n   Daily rotating selection\n• Wine by the Glass\n   Offerings change daily\n• Wine by the Bottle\n   Curated selection\n\nSMALL PLATES\n⭐ Daily Selection\n   Chef's choice offerings\n• Cheese Board\n   Rotating selection\n• Charcuterie\n   Cured meats and accompaniments\n• Seasonal Vegetables\n   Market fresh daily",
+        "sections": [
+          {
+            "name": "WINE",
+            "items": [
+              {
+                "name": "House Red",
+                "price": "",
+                "description": "Daily rotating selection",
+                "highlight": false
+              },
+              {
+                "name": "House White",
+                "price": "",
+                "description": "Daily rotating selection",
+                "highlight": false
+              },
+              {
+                "name": "House Sparkling",
+                "price": "",
+                "description": "Daily rotating selection",
+                "highlight": true
+              },
+              {
+                "name": "Wine by the Glass",
+                "price": "",
+                "description": "Offerings change daily",
+                "highlight": false
+              },
+              {
+                "name": "Wine by the Bottle",
+                "price": "",
+                "description": "Curated selection",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SMALL PLATES",
+            "items": [
+              {
+                "name": "Daily Selection",
+                "price": "",
+                "description": "Chef's choice offerings",
+                "highlight": true
+              },
+              {
+                "name": "Cheese Board",
+                "price": "",
+                "description": "Rotating selection",
+                "highlight": false
+              },
+              {
+                "name": "Charcuterie",
+                "price": "",
+                "description": "Cured meats and accompaniments",
+                "highlight": false
+              },
+              {
+                "name": "Seasonal Vegetables",
+                "price": "",
+                "description": "Market fresh daily",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

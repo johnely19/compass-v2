@@ -23,6 +23,31 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Actually good customer service. They really do read your reviews and take your feedback into consideration which seems pretty rare these days.\"\n\n⭐⭐⭐⭐⭐ \"Had an afternoon reservation for the coffee tasting at The Roasters Pack Lab and had an amazing experience. The baristas are very talented and knowledgeable, and helpful in understanding the differences between the flight options available. This was a very unique and fun experience that I would highly recommend trying.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "COFFEE SUBSCRIPTIONS\n⭐ Monthly Coffee Subscription — $28.95\n   Three new Canadian specialty small batch coffees delivered every four weeks. Freshly roasted and curated to your taste profile.\n• Brew Guides & Recipes\n   Included with every coffee shipment. Learn brewing techniques and the story behind each bean.",
+        "sections": [
+          {
+            "name": "COFFEE SUBSCRIPTIONS",
+            "items": [
+              {
+                "name": "Monthly Coffee Subscription",
+                "price": "$28.95",
+                "description": "Three new Canadian specialty small batch coffees delivered every four weeks. Freshly roasted and curated to your taste profile.",
+                "highlight": true
+              },
+              {
+                "name": "Brew Guides & Recipes",
+                "price": "",
+                "description": "Included with every coffee shipment. Learn brewing techniques and the story behind each bean.",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

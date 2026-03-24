@@ -28,6 +28,24 @@
     "summary": "NEW Michelin 1-star (Oct 2025). Chef Pete Ho's intimate yakitori bar. Charcoal-grilled Japanese perfection. Opened early 2025 and already starred — that's the real signal. Mount Pleasant location. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Main Street in Mount Pleasant, pushing past the breweries and pho shops to a narrow yakitori counter where eight seats face Chef Pete Ho and his binchōtan charcoal grill. The room is stripped back—pale wood, focused task lighting, smoke curling up toward the ventilation hood. It's designed to make you watch: the grill, the hands, the char forming on each skewer.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is omakase yakitori, which means you're here for whatever Ho pulls from the charcoal that night—chicken heart with its dense chew, gloriously fatty chicken artery, a thick-cut thigh steak that eats like beef. The menu moves through the whole bird, each skewer timed to the second, plus an oyster add-on that somehow makes sense, hand-pulled noodles to close, and a broth you'll want to drink from the bowl. Expect to spend around $100-120 for the full procession.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this for a solo seat at the counter when you want to be fully locked in—no conversation competing with the choreography of the grill. Or bring one other person who understands that dinner here is participatory, not background.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

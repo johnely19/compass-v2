@@ -28,6 +28,24 @@
     "summary": "New contemporary Italian with hidden speakeasy in back. Chef Andrew Capone. Replaced 25-yr Piri Piri Grill. 4.9 rating early. Weekend brunch + dinner.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the Junction Triangle, on a corner that held a 25-year Portuguese grill until Andrew Capone turned it into this sleek Italian wine bar. Inside, it's all warm wood, cream-colored walls, and a bar lined with bottles that lead back to a speakeasy tucked behind the main room. The lighting is low enough to feel like evening even at brunch, and tables are spaced wide enough that you're not listening to anyone else's conversation.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Capone's cooking is contemporary Italian with real restraint—nothing overworked, nothing trying to prove itself. The branzino comes on a bed of couscous, the arancini with a tomato sauce that tastes like someone's nonna made it yesterday, and the gnocchi arrives braised with rabbit instead of the expected bolognese. His cacio e pepe is getting a reputation already. Mains run in the mid-twenties, which feels fair for cooking this confident.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book it for a Friday or Saturday dinner when you want somewhere that feels like a find before everyone else catches on. Or go for weekend brunch with someone you actually want to talk to—the space doesn't rush you out.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

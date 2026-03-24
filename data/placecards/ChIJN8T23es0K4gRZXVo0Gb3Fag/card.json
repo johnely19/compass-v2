@@ -65,6 +65,124 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐ \"Just came back from Japan less than a week ago and was missing/craving ramen so we thought we would give Ramen Isshin a try.   The ramen had a good springy chew to it, the broth had good flavour depth, and the chicken karaage and age tofu were very tasty though the prices is not cheap.   The night we went, the place was staffed with all Japanese staff so that reminded us of our time in Japan however the restaurant was extremely, beyond loud…so loud that I could barely hear the conversation at my own table!  For that reason, I can only give 4/5\"\n\n⭐⭐⭐⭐ \"I like their tsukemen and karaage. Tsukemen came with a thick dipping broth on the side, it was hot and rich and you can dip your noodles into the steaming hot broth and eat. Karaage was juicy and hot every time I ordered.\"\n\n⭐⭐⭐⭐⭐ \"I have eaten ramen at so many different restaurants in the GTA and abroad that I have lost count.  I do however remember the most memorable ramen soups I have eaten.  The “Red Dragon” made by Ramen Isshin is absolutely magnificently delicious.  I added a bunch of extras like I do with most ramen restaurants.  The “Red Dragon” is in my top 3 ramen soups, I love it!.  Super spicy with pork and chicken chashu, bean sprouts, bamboo, seaweed, scallions, eggs etc.  All I can say is WOW.  Thank you so much for offering a ramen soup with such a complex flavour profile.  If you love spicy then you will love the “Red Dragon”.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "RAMEN\n• Ramen Isshin Red Miso\n• Ramen Isshin Vegetarian\n• Ramen Isshin Shio (Salt)\n⭐ Ramen Isshin Shoyu\n\nRICE BOWLS\n⭐ Chicken Karaage Don — $9.99 - $18.20\n   Small or Large\n• Cha Shu Don — $9.99 - $18.20\n   Small or Large\n\nDESSERTS\n• Lemon Jelly — $4.50\n   Topped with ice cream. Super refreshing palate cleanser!\n• Black Sesame Ice Cream — $4.80\n   3 Scoops\n⭐ Mochi Ice Cream — $4.80\n   Japanese Mochi with an ice cream filling\n• Green Tea Ice Cream — $4.80\n   3 Scoops\n\nEXTRA TOPPINGS & NOODLES\n• Thick Twisty Ramen Noodle — $2.80\n• Thin Wavy Ramen Noodle — $2.80\n• Kale Noodles (Vegan) — $2.00\n   Change from regular noodles\n• Tsukemen Noodles — $3.20\n• Fresh Bowl of Rice — $2.80\n   Fresh cooked premium Japanese rice",
+        "sections": [
+          {
+            "name": "RAMEN",
+            "items": [
+              {
+                "name": "Ramen Isshin Red Miso",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Ramen Isshin Vegetarian",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Ramen Isshin Shio (Salt)",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Ramen Isshin Shoyu",
+                "price": "",
+                "description": "",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "RICE BOWLS",
+            "items": [
+              {
+                "name": "Chicken Karaage Don",
+                "price": "$9.99 - $18.20",
+                "description": "Small or Large",
+                "highlight": true
+              },
+              {
+                "name": "Cha Shu Don",
+                "price": "$9.99 - $18.20",
+                "description": "Small or Large",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "DESSERTS",
+            "items": [
+              {
+                "name": "Lemon Jelly",
+                "price": "$4.50",
+                "description": "Topped with ice cream. Super refreshing palate cleanser!",
+                "highlight": false
+              },
+              {
+                "name": "Black Sesame Ice Cream",
+                "price": "$4.80",
+                "description": "3 Scoops",
+                "highlight": false
+              },
+              {
+                "name": "Mochi Ice Cream",
+                "price": "$4.80",
+                "description": "Japanese Mochi with an ice cream filling",
+                "highlight": true
+              },
+              {
+                "name": "Green Tea Ice Cream",
+                "price": "$4.80",
+                "description": "3 Scoops",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "EXTRA TOPPINGS & NOODLES",
+            "items": [
+              {
+                "name": "Thick Twisty Ramen Noodle",
+                "price": "$2.80",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Thin Wavy Ramen Noodle",
+                "price": "$2.80",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Kale Noodles (Vegan)",
+                "price": "$2.00",
+                "description": "Change from regular noodles",
+                "highlight": false
+              },
+              {
+                "name": "Tsukemen Noodles",
+                "price": "$3.20",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Fresh Bowl of Rice",
+                "price": "$2.80",
+                "description": "Fresh cooked premium Japanese rice",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

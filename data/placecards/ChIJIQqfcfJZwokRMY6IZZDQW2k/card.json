@@ -52,6 +52,25 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"The chef curated each course with such care — every piece was perfectly balanced, fresh, and beautifully presented.\"\n\n⭐⭐⭐⭐⭐ \"Excellent service, fantastic sake, clean and fresh fish with unique combinations of flavor. Truly excellent. Could have larger slices of fish, but doesn’t leave you needing more food.\"\n\n⭐⭐⭐⭐⭐ \"In a city flooded with new omakase openings, it’s rare to find one that feels this dialed-in from day one.\n\nThe food is outstanding— exceptionally fresh and beautifully executed. Each piece is delicately layered with flavor—just enough to enhance the fish, not mask it. The warm and polished service elevates the dining experience. The space is chic and sophisticated, with a NYC-meets-Tokyo aesthetic. Perfect for a date night.\n\nIt's an incredible value for omakase (I’ve tried more than my fair share across all price points.) I don't write reviews often, but I had to share this standout debut. I’m already looking forward to returning.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "OMAKASE\n⭐ Chef's Seasonal Tasting — $89\n   15 Courses",
+        "sections": [
+          {
+            "name": "OMAKASE",
+            "items": [
+              {
+                "name": "Chef's Seasonal Tasting",
+                "price": "$89",
+                "description": "15 Courses",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

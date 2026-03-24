@@ -59,6 +59,142 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Dined here tonight with my whole family—husband, parents, in-laws—and we were all blown away by this meal! Love that the ambiance is very lowkey, well lit, family owned and run. We had high hopes based on the reviews, and everything was truly exceptional. From the salads to the soup, to the bruschetta, to an array of mains (pasta, meatballs, lasagna). The produce tasted fresh, high quality, authentic. We are non-pork eaters and so we truly appreciated the ability to be able to order lasagna and meatballs worry free as the menu indicated that they were made entirely from beef vs. the traditional blend with ground pork. The menu is just long enough with all of the key Italian delicacies. My husband and I live just around the corner and we cannot wait to start to make this place our regular dining choice. Highly recommend; worth giving this place a try.\"\n\n⭐⭐⭐⭐⭐ \"We had a wonderful experience at Portico! The food was delicious, beautifully presented, and full of flavor. The service was amazing — our host was so warm, attentive, and helpful throughout. We truly loved the overall vibe and can’t wait to visit again. Also to mention we had kids along and they were given small activities for good engagement. Appreciate it.\"\n\n⭐⭐⭐⭐⭐ \"Please take the time to enjoy the delicious food made at portici. I ordered way to much for one person, but thanks okay, I definitely look forward to eating whag I ordered later. It was that tasty, and flavorful. I ordered the eggplant dip with side salad, the mushroom risotto, and lastly their seasonal pumpkin pudding.\n\nThe eggplant dip had wonderful kick to it, like a good char and smokey heat. It wasn't spicy at all, would recommend if you like eggplant. The mushroom risotto was so creamy and seasoned so well. I also would recommend if you like mushrooms.\n\nIf I ever make it back to toronto this will be my first stop. Oh yes the service was wonderful. I was by myself and came at slower time. But my server was kind attentive, and fun.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "PINSA\n• Margarita\n   Tomato sauce, basil, Mozzarella\n• Hot Pinsa\n   Tomato sauce, hot pepper, chorizo, mozzarella, red onion\n• Pinsa Hawaiian\n   Tomato sauce, bacon, pineapple, mozzarella\n⭐ Pinsa Vodka\n   Vodka red sauce, parmesan, fior di latte\n• Pinsa Contadina\n   Pesto sauce, mozzarella, zucchini, bell peppers, mushrooms, burrata cheese\n⭐ Pinsa Yorkville\n   Olive oil base, arugula, prosciutto, burrata cheese, pistachios\n\nPASTA\n• Ravioli Spinach\n   Ravioli, cream, parmesan, spinach, garlic\n• Penne Creamy Pesto Chicken\n   Chicken breast, homemade pesto sauce, garlic, cream, parmesan\n⭐ Spaghetti Frutti Di Mare\n   Shrimps, scallops, mussels, wine, rose sauce, parmesan, garlic\n• Spaghetti Bolognese\n   Ground beef homemade San Marzano tomato sauce\n• Alfredo Fettuccine with Shrimps\n   Shrimps, parmesan, garlic, cream, wine\n• Linguine al Salmone\n\nSPECIALS\n• Nonna's Meatballs\n   Meatballs, homemade San Marzano tomato sauce (served with bread)\n• Beef Lasagna\n   Ground beef, San Marzano tomato sauce, mozzarella, béchamel sauce\n• Veg Lasagna\n   Mixed vegetables, San Marzano tomato sauce, mozzarella, béchamel sauce\n• Saffron Mushroom Risotto\n   Arborio, mushrooms, parmesan, saffron, cream\n\nSANDWICHES\n• Veggie's\n   Eggplant, zucchini, bell pepper, goat cheese, cup salad\n• Chicken Pesto\n   Chicken breast, pesto, caramelized onion, cup salad",
+        "sections": [
+          {
+            "name": "PINSA",
+            "items": [
+              {
+                "name": "Margarita",
+                "price": "",
+                "description": "Tomato sauce, basil, Mozzarella",
+                "highlight": false
+              },
+              {
+                "name": "Hot Pinsa",
+                "price": "",
+                "description": "Tomato sauce, hot pepper, chorizo, mozzarella, red onion",
+                "highlight": false
+              },
+              {
+                "name": "Pinsa Hawaiian",
+                "price": "",
+                "description": "Tomato sauce, bacon, pineapple, mozzarella",
+                "highlight": false
+              },
+              {
+                "name": "Pinsa Vodka",
+                "price": "",
+                "description": "Vodka red sauce, parmesan, fior di latte",
+                "highlight": true
+              },
+              {
+                "name": "Pinsa Contadina",
+                "price": "",
+                "description": "Pesto sauce, mozzarella, zucchini, bell peppers, mushrooms, burrata cheese",
+                "highlight": false
+              },
+              {
+                "name": "Pinsa Yorkville",
+                "price": "",
+                "description": "Olive oil base, arugula, prosciutto, burrata cheese, pistachios",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "PASTA",
+            "items": [
+              {
+                "name": "Ravioli Spinach",
+                "price": "",
+                "description": "Ravioli, cream, parmesan, spinach, garlic",
+                "highlight": false
+              },
+              {
+                "name": "Penne Creamy Pesto Chicken",
+                "price": "",
+                "description": "Chicken breast, homemade pesto sauce, garlic, cream, parmesan",
+                "highlight": false
+              },
+              {
+                "name": "Spaghetti Frutti Di Mare",
+                "price": "",
+                "description": "Shrimps, scallops, mussels, wine, rose sauce, parmesan, garlic",
+                "highlight": true
+              },
+              {
+                "name": "Spaghetti Bolognese",
+                "price": "",
+                "description": "Ground beef homemade San Marzano tomato sauce",
+                "highlight": false
+              },
+              {
+                "name": "Alfredo Fettuccine with Shrimps",
+                "price": "",
+                "description": "Shrimps, parmesan, garlic, cream, wine",
+                "highlight": false
+              },
+              {
+                "name": "Linguine al Salmone",
+                "price": "",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SPECIALS",
+            "items": [
+              {
+                "name": "Nonna's Meatballs",
+                "price": "",
+                "description": "Meatballs, homemade San Marzano tomato sauce (served with bread)",
+                "highlight": false
+              },
+              {
+                "name": "Beef Lasagna",
+                "price": "",
+                "description": "Ground beef, San Marzano tomato sauce, mozzarella, béchamel sauce",
+                "highlight": false
+              },
+              {
+                "name": "Veg Lasagna",
+                "price": "",
+                "description": "Mixed vegetables, San Marzano tomato sauce, mozzarella, béchamel sauce",
+                "highlight": false
+              },
+              {
+                "name": "Saffron Mushroom Risotto",
+                "price": "",
+                "description": "Arborio, mushrooms, parmesan, saffron, cream",
+                "highlight": false
+              }
+            ]
+          },
+          {
+            "name": "SANDWICHES",
+            "items": [
+              {
+                "name": "Veggie's",
+                "price": "",
+                "description": "Eggplant, zucchini, bell pepper, goat cheese, cup salad",
+                "highlight": false
+              },
+              {
+                "name": "Chicken Pesto",
+                "price": "",
+                "description": "Chicken breast, pesto, caramelized onion, cup salad",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   },

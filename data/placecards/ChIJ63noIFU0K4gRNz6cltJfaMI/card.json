@@ -34,6 +34,49 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Delicious coffee and snacks in a charming location. I particularly like their vegan BLT.\nEveryone who works there is incredibly nice.\nA little pricier, but I really appreciate that they pay their employees a living wage instead of asking for tips. And the coffee stamp card/club makes it less expensive the more you go.\"\n\n⭐⭐⭐⭐⭐ \"I came by to buy some matcha and I received amazing customer service and the guy helping me (could be the owner I am not sure) was very very kind. He gave me their vegan coconut cookie and it was DELICIOUS!! I have allergies to dairy and eggs so having something vegan be so delicious was a delight. Would love to come back :)\"\n\n⭐⭐⭐⭐⭐ \"I 100% recommend this place for bike repairs in Toronto especially if you live in the west end.\n\nI brought my bike in for an assessment because the gear cable almost snapped and they replaced my rear derailleur and tuned up my bike same day. Gears work SO well now and my bike rides like new. Genuinely efficient and beautiful service.\n\nThe process:\n- you book a mandatory assessment where you bring your bike in and they evaluate the problems\n- if there is a safety issue it’s mandatory for them to fix it just so you know (makes sense)\n- they provide an ITEMIZED work order ie they give you a line by line document that tells you what each part, problem, labour etc will cost, and then\n- *you choose what you want to do* (minus mandatory safety things if there are any — there were none for mine)\n\nWhat I like about this process is it’s very transparent, you’re involved from start to finish, and they don’t do anything without your consent. They also raised my seat up to the perfect height without me even telling them they just knew and I love that.\n\nGreat workmanship, very kind and transparent people, and frankly my bike runs like new. Attaching before and after pics. Would 100% come back here whenever my bike needs repairs! Thank you so much!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "COFFEE & BEVERAGES\n• Espresso\n   Classic espresso shot\n• Americano\n   Espresso with hot water\n⭐ Cappuccino\n   Espresso with steamed milk and foam\n• Latte\n   Espresso with steamed milk\n• Flat White\n   Espresso with velvety microfoam",
+        "sections": [
+          {
+            "name": "COFFEE & BEVERAGES",
+            "items": [
+              {
+                "name": "Espresso",
+                "price": "",
+                "description": "Classic espresso shot",
+                "highlight": false
+              },
+              {
+                "name": "Americano",
+                "price": "",
+                "description": "Espresso with hot water",
+                "highlight": false
+              },
+              {
+                "name": "Cappuccino",
+                "price": "",
+                "description": "Espresso with steamed milk and foam",
+                "highlight": true
+              },
+              {
+                "name": "Latte",
+                "price": "",
+                "description": "Espresso with steamed milk",
+                "highlight": false
+              },
+              {
+                "name": "Flat White",
+                "price": "",
+                "description": "Espresso with velvety microfoam",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

@@ -29,6 +29,24 @@
     "summary": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Seymour in the thick of downtown, tucked into a narrow storefront that feels more Mexico City side street than Vancouver high-rise district. Inside it's compact and unfussy—tiled walls, a counter where you order, maybe a handful of stools if you're lucky. The energy is quick-service but not assembly line: someone calls your name when your tacos are up, and on a grey afternoon, the bright citrus and char smells cut through the Pacific Northwest gloom.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Mexican street food done right—corn tortillas pressed to order, fillings like al pastor with pineapple, carne asada, and baja-style beer-battered fish. The balance is what gets you: the bite of lime, the heat from salsa verde, the freshness of cilantro and white onion that tastes like it was chopped five minutes ago. Tacos run about $5-6 each, which means you can eat well and still have money left for whatever you're doing next.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your midday reset between meetings or museum visits—the kind of place that feeds you fast but doesn't feel rushed. Come when you want real food without the ceremony, and when a proper taco sounds better than another sad desk lunch.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

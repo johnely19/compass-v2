@@ -65,6 +65,139 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Very tasty ramen and appetisers. We ordered original shoyu & Spicy. The spicy ramen is not very spicy but very flavourful with burnt garlic chilly oil. The broth is creamy and tasty. Noodles are thin hand made!\nWe also orders mini chashu and Deep Fried King Mushrooms both were delicious.\nService is excellent and staff is friendly.\nThey have vegetarian options available. They have option to substitute the Pork chashu with Chicken but the broth is pork or seafood based. We ordered regular size and it’s perfect for a meal. You can also order super size if you want.\"\n\n⭐⭐⭐⭐⭐ \"Got a chance to try this ramen place. Friendly staff, and the food was really good. I had a bowl of Smokey Black Tonkotsu Ramen and a side of truffle gyoza. The gyoza’s didn’t come in time so they didn’t charge me for them! I appreciated that!  I will be back for sure!\"\n\n⭐⭐⭐⭐⭐ \"This place is definitely worth a visit for ramen lovers. I had the wagyu ramen and it was absolutely delicious. The flavors were so rich and satisfying. The service was also quite good, adding to the overall pleasant experience. I would highly recommend trying this dish. Of all the places I've visited for Ramen, this ranks the best as far as tastes goes.\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "FROZEN RAMEN KITS\n• Ramen Kit A — $30.00\n   3 ramen noodles and 3 soups with Tonkotsu varieties and choice of frozen toppings\n• Ramen Kit B — $30.00\n   3 ramen noodles and 3 soups featuring Spicy Miso and Tonkotsu varieties\n⭐ Premium Kit — $36.00\n   3 ramen noodles and 3 soups with Clam and Wagyu & Angus Beef varieties\n\nRAMEN\n⭐ Premium Wagyu Ramen — $38.00\n   Limited quantity\n• Signature Clam Intense Shoyu Ramen — $18.50\n⭐ Lobster Ramen — $34.00\n   Limited Quantity\n• Spicy Miso Ramen — $18.00\n   Choose from Mild, Medium, Hot, Madness Spicy\n• Original Shoyu Tonkotsu Ramen — $17.50\n• Smokey Black Tonkotsu Ramen — $18.00\n• Avocado Vegetarian Ramen — $18.50\n\nAPPETIZERS\n• Braised Pork Belly — $10.40\n   House braised pork belly appetizer plate with soft boiled egg\n• Takoyaki — $9.40\n   Traditional 6pc Japanese fried octopus balls\n• Chicken Karaage — $8.40\n   5pc marinated deep fried chicken with spicy mustard sauce\n• Lobster Gyoza — $10.30\n• Gyoza — $7.40\n   6pcs\n• Edamame — $5.20\n   Steam boiled salted edamame. Vegetarian\n\nDONBURI\n• Katsudon — $18.50\n   Pork cutlet with Japanese egg sauce and steamed rice\n• Mini Beef Gyu-Don — $18.00\n• Oyako Don — $16.50\n   Chicken & egg with soy sauce and rice\n• Mini Pork Belly Don — $11.50\n   Rice topped with braised pork belly, pickled ginger and scallions\n• Mini Chashu Don — $10.00\n   Rice topped with sous-vide pork chashu, pickled takana, and green scallions",
+        "sections": [
+          {
+            "name": "FROZEN RAMEN KITS",
+            "items": [
+              {
+                "name": "Ramen Kit A",
+                "price": "$30.00",
+                "description": "3 ramen noodles and 3 soups with Tonkotsu varieties and choice of frozen toppings",
+                "highlight": false
+              },
+              {
+                "name": "Ramen Kit B",
+                "price": "$30.00",
+                "description": "3 ramen noodles and 3 soups featuring Spicy Miso and Tonkotsu varieties",
+                "highlight": false
+              },
+              {
+                "name": "Premium Kit",
+                "price": "$36.00",
+                "description": "3 ramen noodles and 3 soups with Clam and Wagyu & Angus Beef varieties",
+                "highlight": true
+              }
+            ]
+          },
+          {
+            "name": "RAMEN",
+            "items": [
+              {
+                "name": "Premium Wagyu Ramen",
+                "price": "$38.00",
+                "description": "Limited quantity",
+                "highlight": true
+              },
+              {
+                "name": "Signature Clam Intense Shoyu Ramen",
+                "price": "$18.50",
+                "highlight": false
+              },
+              {
+                "name": "Lobster Ramen",
+                "price": "$34.00",
+                "description": "Limited Quantity",
+                "highlight": true
+              },
+              {
+                "name": "Spicy Miso Ramen",
+                "price": "$18.00",
+                "description": "Choose from Mild, Medium, Hot, Madness Spicy"
+              },
+              {
+                "name": "Original Shoyu Tonkotsu Ramen",
+                "price": "$17.50"
+              },
+              {
+                "name": "Smokey Black Tonkotsu Ramen",
+                "price": "$18.00"
+              },
+              {
+                "name": "Avocado Vegetarian Ramen",
+                "price": "$18.50"
+              }
+            ]
+          },
+          {
+            "name": "APPETIZERS",
+            "items": [
+              {
+                "name": "Braised Pork Belly",
+                "price": "$10.40",
+                "description": "House braised pork belly appetizer plate with soft boiled egg"
+              },
+              {
+                "name": "Takoyaki",
+                "price": "$9.40",
+                "description": "Traditional 6pc Japanese fried octopus balls"
+              },
+              {
+                "name": "Chicken Karaage",
+                "price": "$8.40",
+                "description": "5pc marinated deep fried chicken with spicy mustard sauce"
+              },
+              {
+                "name": "Lobster Gyoza",
+                "price": "$10.30"
+              },
+              {
+                "name": "Gyoza",
+                "price": "$7.40",
+                "description": "6pcs"
+              },
+              {
+                "name": "Edamame",
+                "price": "$5.20",
+                "description": "Steam boiled salted edamame. Vegetarian"
+              }
+            ]
+          },
+          {
+            "name": "DONBURI",
+            "items": [
+              {
+                "name": "Katsudon",
+                "price": "$18.50",
+                "description": "Pork cutlet with Japanese egg sauce and steamed rice"
+              },
+              {
+                "name": "Mini Beef Gyu-Don",
+                "price": "$18.00"
+              },
+              {
+                "name": "Oyako Don",
+                "price": "$16.50",
+                "description": "Chicken & egg with soy sauce and rice"
+              },
+              {
+                "name": "Mini Pork Belly Don",
+                "price": "$11.50",
+                "description": "Rice topped with braised pork belly, pickled ginger and scallions"
+              },
+              {
+                "name": "Mini Chashu Don",
+                "price": "$10.00",
+                "description": "Rice topped with sous-vide pork chashu, pickled takana, and green scallions"
+              }
+            ]
+          }
+        ]
       }
     ]
   },

@@ -52,6 +52,31 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Very nice location. A beautiful hall with beer garden tables and of course a huge beer selection.\n\nThere's a brewery tour that shares a lot of expert knowledge about brewing. There are nice murals outside the building.\n\nHighly recommended (from an Bavarian [Munich] gentleman who has quite much beer experience).\"\n\n⭐⭐⭐⭐⭐ \"great space, was there for the nyc brewers guild event and had a great time. pleny of space for all the vendors that were there. would love to go back during normal business hours at some point to check out what it's like on a day-to-day basis.\"\n\n⭐⭐⭐⭐⭐ \"Anyway, it's the best! From the moment I stepped into the store, I felt happy wrapped in the smell of craft beer.\n\nEvery beer is unique and has a world-class taste.\n\nIf you go to New York, don't miss this place!\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "SIGNATURE BEERS\n⭐ Brooklyn Lager\n   Flagship lager brewed to support vibrant communities\n⭐ Brooklyn Brewery Limited-Edition Collection\n   The New Yorker special release",
+        "sections": [
+          {
+            "name": "SIGNATURE BEERS",
+            "items": [
+              {
+                "name": "Brooklyn Lager",
+                "price": "",
+                "description": "Flagship lager brewed to support vibrant communities",
+                "highlight": true
+              },
+              {
+                "name": "Brooklyn Brewery Limited-Edition Collection",
+                "price": "",
+                "description": "The New Yorker special release",
+                "highlight": true
+              }
+            ]
+          }
+        ]
       }
     ]
   },

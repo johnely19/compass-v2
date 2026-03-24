@@ -28,6 +28,24 @@
     "summary": "Bookstore + cafe with exceptional curation—4.9 rating (highest in category). Cozy, browseable, perfect Sunday drop-in.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West near Trinity Bellwoods, where the storefront glows with what regulars call a spectral light—dim enough to feel like a secret, bright enough to read spine titles from across the room. Inside, dark wood shelving runs floor to ceiling, packed tight with horror and paranormal titles that spill onto small tables where a cafe counter serves coffee between stacks of paperbacks. It's small, densely packed, the kind of place where you edge sideways past other browsers and end up staying two hours without noticing.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The cafe side is minimal—think coffee, pastries, the occasional sandwich—but it's good enough to anchor a long browsing session without feeling like an afterthought. You're here for a cortado and a croissant while you flip through a first edition ghost story, not a full meal. Prices are standard Toronto cafe: a coffee and pastry will run you under $10, which buys you as much reading time as you want.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Sunday afternoon when you need to disappear into someone else's nightmares for a while, or solo on a weekday morning when the shop is quiet and you can actually hear yourself think. This is a one-person, one-book, one-coffee kind of place—not a group hang.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

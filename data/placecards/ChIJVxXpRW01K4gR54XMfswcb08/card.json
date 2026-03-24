@@ -32,6 +32,49 @@
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Very cool spot! A hidden gem in Toronto. Love the concept. They are licensed and also have great coffee. Two storey vinyl shop. I was there on a Sunday and they had live music which was a nice touch. Great selection of hip hop. I asked them if could hunt down a album for me and they found it within a week. Very helpful staff!\"\n\n⭐⭐⭐⭐⭐ \"Finally had a chance to stop by and was so impressed by how clean and tidy this little shop was. The selection of records are well curated, and they also have caffeine to help fuel your shopping experience! Ryan, one of the owners, was so lovely, greeted us and made us our coffees. They’ve got a great little nook by the front of the shop for you to sip your cuppa and watch the streetcars go by. Overall, great vibe and such a welcome addition to our neighborhood. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Amazing Space.  Can get lost in there for hours.   The staff and management are awesome human beings.   Never a dull convo (I don’t talk to much people). Helene and Nicola make the visits priceless.  Looking for a nice beverage or nice fresh baked goods. With the option to dig for records. Priceless. Go Visit\""
+      },
+      {
+        "id": "block-menu",
+        "type": "menu",
+        "title": "The Menu",
+        "body": "COFFEE\n• Espresso\n   Consciousness for everyone with each sip\n• Americano\n• Cappuccino\n⭐ Latte\n• Macchiato",
+        "sections": [
+          {
+            "name": "COFFEE",
+            "items": [
+              {
+                "name": "Espresso",
+                "price": "",
+                "description": "Consciousness for everyone with each sip",
+                "highlight": false
+              },
+              {
+                "name": "Americano",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Cappuccino",
+                "price": "",
+                "description": "",
+                "highlight": false
+              },
+              {
+                "name": "Latte",
+                "price": "",
+                "description": "",
+                "highlight": true
+              },
+              {
+                "name": "Macchiato",
+                "price": "",
+                "description": "",
+                "highlight": false
+              }
+            ]
+          }
+        ]
       }
     ]
   }

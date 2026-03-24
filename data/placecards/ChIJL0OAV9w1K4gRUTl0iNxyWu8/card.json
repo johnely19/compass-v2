@@ -29,6 +29,24 @@
     "summary": "Coffee roastery + wine bar on the arts corridor; great pairing with a MOCA/gallery day.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Sterling Road in the Junction Triangle, Toronto's industrial arts corridor where warehouses became galleries. Inside, the high ceilings and exposed brick still hold onto the factory bones, softened by wooden tables and enough seating that even on a packed Saturday you'll find a spot. Art books line the shelves, and the whole operation—roasting equipment visible, bags of beans stacked near the counter—feels more like a working studio than a café trying to look like one.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a roastery first, so the coffee is the point—single-origin beans they'll walk you through, often bright and fragrant Central or South American lots that change with the season. Buy a bag and they'll pull you a complimentary cup from whatever they're featuring that day. It's also a wine bar, which makes sense for the gallery-hopping crowd who drift in after MOCA and want to stay through the afternoon.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Pair it with a MOCA visit or a Saturday spent wandering the Sterling Road galleries, then settle in with a glass of wine and one of their art books. It's also the kind of place where you can actually work for hours without feeling rushed.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
