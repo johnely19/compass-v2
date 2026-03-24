@@ -16,6 +16,24 @@
     "summary": "Vancouver legend. Cambodian-Vietnamese. Reddit locals call it 'the best restaurant in Vancouver' — the butter beef and chicken wings are iconic. Affordable, no-frills, absolutely essential Chinatown experience. 5,300+ reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on East Georgia Street in Chinatown, walking into a fluorescent-lit dining room with laminate tables and zero pretense. The open kitchen runs along one wall, servers move at Olympic speed, and the line out the door tells you everything about what matters here—which isn't the decor. This is the kind of place where the Formica shines from decades of wiping down, and you're shoulder-to-shoulder with people who've been coming since 1985.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The cooking is Cambodian-Vietnamese by way of Vancouver legend—techniques and flavors that haven't changed because they're already perfect. You're here for two things: the chicken wings, fried shatteringly crisp with a garlic-lemongrass batter that makes every other wing taste boring, and the butter beef, wok-tossed cubes that dissolve on your tongue in a slick of caramelized marinade. Both dishes clock in under $15 and will ruin you for anywhere else. The menu runs deep with rice plates and noodle soups, but everyone orders those two.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're hungry enough to order both the wings and beef for yourself, or you're bringing someone who needs to understand what Vancouver tastes like. Come early or accept the wait—this isn't a reservation kind of place.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -16,6 +16,24 @@
     "summary": "Canadian-grain-only bakery; 4.9 rating; took over the Glory Hole Doughnuts space—strong local lineage.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Gerrard East strip in Little India, stepping into what Glory Hole Doughnuts used to call home. Inside, it's bright and packed—a small bakery counter where you can watch the staff wrap loaves in paper, a few shelves lined with naturally leavened rounds, and a lineup that snakes toward the door most mornings. The energy is neighbourhood bakery, not cafe: people grab their sourdough and go.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Everything here starts with Canadian grain, stone-milled and fermented into sourdough with proper structure—open crumb, blistered crust, the kind of bread that tastes like time. The olive fougasse has the salt and chew you want from French flatbread, and the truffle manchego danish is a savoury-sweet hit that locals return for obsessively. You'll also find baguettes, pretzels with varying commitment to salt, and a rotating lineup of pastries. Loaves run $8-12, pastries $5-8.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go early on a weekday if you want first pick of the fougasse and don't want to wait. Otherwise, embrace the weekend crowd—it's part of the ritual now, and the staff moves fast enough that the line feels worth it.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

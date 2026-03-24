@@ -29,223 +29,28 @@
     "summary": "Michelin 1-star, #28 North America's 50 Best. Chef Gus Stieffenhofer-Brandson's contemporary Canadian tasting menu with foraged BC ingredients. Elderflower symbol. This is THE dinner of the trip. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Main Street in Mount Pleasant, Vancouver's corridor of vintage shops and coffee roasters. Inside, the room is quiet and deliberate—blonde wood tables spaced far enough apart that conversations stay private, low-slung pendant lights casting pools of warm glow, and an open kitchen where you can watch Stieffenhofer-Brandson's team plate with tweezers. The design leans minimal and considered, the kind of place where nothing competes with what's on the plate.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is contemporary Canadian cooking at its most precise—a tasting menu built on foraged BC ingredients like coastal seaweeds, forest mushrooms, and whatever's been pulled from the province that week. Expect dishes like buttery foie gras layered with tart preserves and crisp tuiles, or chicken wrapped in its own skin until it's impossibly tender, the meat practically dissolving on your tongue. Sauces run aggressive and saline—bold enough that you'll want bread to mop them up (ask for it). The elderflower symbol marks Michelin's one-star nod, and the menu runs around $200-250 per person for the full experience.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this for the deliberate dinner of your trip—the night you're ready to sit for three hours and pay attention. Come with someone who cares about plating and provenance, or solo if you want to watch the kitchen work without distraction.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"The cuisine here is truly phenomenal. I was especially impressed by the foie gras, which showcased a thoughtful balance of flavors and textures—rich yet nuanced, indulgent yet carefully composed. The chicken was equally astonishing. Although the wait exceeded 30 minutes, it proved worthwhile. The way the chicken was wrapped and prepared created beautiful layers of flavor, and the meat itself was exceptionally tender and succulent.\n\nThat said, the sauces across several dishes leaned slightly too salty. We ended up ordering bread to soak them up, which felt like something that could have been offered complimentary to better complete the experience.\n\nService was adequate but did not rise to Michelin-level polish. While generally attentive, one server lacked warmth, even neglecting a simple smile while clearing our plates. On a brighter note, the cocktails were surprisingly excellent—well-balanced and thoughtfully crafted.\n\nOverall, the food alone makes this restaurant worth revisiting. I look forward to returning and hope the service will match the high standard set by the kitchen next time.\"\n\n⭐⭐⭐⭐⭐ \"We have put off visiting the restaurant for almost 3 years since moving back to Vancouver after an absence of 10 years so we decided it would be time to pay a visit for our anniversary a week before Christmas.\n\nService was exceptional.  Both the maître d’ and our server were friendly and helpful.\n\nWe opted to order from the regular and seasonal à la carte menus for dinner:\n\n- Brezeln - The pretzel buns were soft and warm and we could not resist putting a big glob of the honey cultured butter on every bite.\n\n- Octopus - The tentacles were tender and springy at the same time.  The slight heat from the sauce was perfect in cutting through the richness of the meat.\n\n- Chicken fried maitake - The coating was very flavourful but we found the the seasoning a bit too heavy.\n\n- Scallops - They were fresh and sinfully delicious with the sauce.\n\n- Sunchoke Dumplings - A dish with simple ingredients but it was easily the most flavour rich and balanced dish of the evening.\n\n- Hunters Chicken - I like that both dark and white meats were served on the dish. Although I generally stay away from white poultry meat but all the pieces were tender and juicy.  The seasoning was a bit on the saltier side for us though.\n\n- Hay - The custard dish was interesting and we were told it’s been the most popular dessert offering since the restaurant doors opened.  It reminds me of a deconstructed tres leches cake from a restaurant on the North Shore years agar when I was hoping for a good piece of cake.\"\n\n⭐⭐⭐⭐⭐ \"Birthday dinner with family. Came highly recommended and did not disappoint, from the very beginning to the end, it was really on point. The room was understated but very nice, service was amazing and the food was next level. We loved Bar Susu and were sad to see it close but we learned that Published was affiliated so very happy we get to have the KFC fried matsutake mushroom. Everything was delicious but highlights were the gnocchi, strip loin and scallop. The staff were very attentive and even gave my wife a nice birthday parting gift.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "SMALL PLATES\n• Aebleskiver — $14\n   stewed herbs, kaluga caviar\n• Deer + Almond — $9\n   venison tartare, almond cannoli\n• Sourdough Fougasse — $12\n   cultured yeast garum butter\n• Chips & Dip — $14\n   sturdy potato, onion, smoky fish\n• Foie Gras NRG Bar — $11\n   strawberry, rose, cashew\n• Smoked and Candied Steelhead — $9\n   burnt nori, kelp croustade\n\nSEAFOOD & PROTEINS\n• Side Stripe Prawn — $29\n   cucumber, apple, horseradish\n• Dungeness Crab — $36\n   almond, kohlrabi, black currant wood oil\n• Cured Hamachi — $33\n   published ponzu, winter radish, green tea gelee\n• Roasted Scallop — $36\n   rutabaga, bonito, brown butter\n• Smoky Steelhead Trout — $49\n   turbo seaweed sauce, roes, confit tubers\n⭐ Golden Eagle Sablefish — $59\n   prawn toast, aromatic broth\n• Octopus — $35\n   duelling harissas, pine nut romesco, heritage cassoulet\n\nVEGETABLES & SPECIALTIES\n• Charred Winter King Cabbage — $29\n   hazelnut mole, mucho macha\n• Badger Flame Beets — $29\n   sunflower, shiso\n• Celeriac Shawarma — $46\n   the usual suspects\n• Kentucky Fried Maitake — $19\n   garlic scape ranch\n• Winter Squash — $35\n   pepita miso, fermented currant, koji butter\n• Stinging Nettle Goma-Ae — $26\n   toasted yeast, buckwheat, nettle peas\n\nMEAT & PASTAS\n⭐ GBP Gnocchi — $55\n   2025 morels, moon bay kelp, black truffle\n• All Dressed Pork Ribs — $46\n   maggi winter slaw, crispy heritage corn\n• Hunters Chicken — $55\n   schupfnudeln, wild mushrooms, salsify\n• Wagyu Beef Tartare — $36\n   allium, published pantry, malted barley\n• Fraser Valley Duck — $69\n   a colour study of red\n⭐ 2GR Wagyu Striploin — $139\n   umami puree, crispy potato, mega broccolini\n\nDESSERTS\n• Hay — $16\n   hay custard, apple, chamomile\n• Chocolate — $16\n   chocolate, peanut butter, banana\n• Black Currant — $16\n   black currant leaf, black currant wood\n• Walk Through the Forest — $16\n   candy cap, porcini, fir, mountain berries\n• Too Many Plums — $16\n   plum kernel, sumac kombucha",
-        "sections": [
-          {
-            "name": "SMALL PLATES",
-            "items": [
-              {
-                "name": "Aebleskiver",
-                "price": "$14",
-                "description": "stewed herbs, kaluga caviar",
-                "highlight": false
-              },
-              {
-                "name": "Deer + Almond",
-                "price": "$9",
-                "description": "venison tartare, almond cannoli",
-                "highlight": false
-              },
-              {
-                "name": "Sourdough Fougasse",
-                "price": "$12",
-                "description": "cultured yeast garum butter",
-                "highlight": false
-              },
-              {
-                "name": "Chips & Dip",
-                "price": "$14",
-                "description": "sturdy potato, onion, smoky fish",
-                "highlight": false
-              },
-              {
-                "name": "Foie Gras NRG Bar",
-                "price": "$11",
-                "description": "strawberry, rose, cashew",
-                "highlight": false
-              },
-              {
-                "name": "Smoked and Candied Steelhead",
-                "price": "$9",
-                "description": "burnt nori, kelp croustade",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "SEAFOOD & PROTEINS",
-            "items": [
-              {
-                "name": "Side Stripe Prawn",
-                "price": "$29",
-                "description": "cucumber, apple, horseradish",
-                "highlight": false
-              },
-              {
-                "name": "Dungeness Crab",
-                "price": "$36",
-                "description": "almond, kohlrabi, black currant wood oil",
-                "highlight": false
-              },
-              {
-                "name": "Cured Hamachi",
-                "price": "$33",
-                "description": "published ponzu, winter radish, green tea gelee",
-                "highlight": false
-              },
-              {
-                "name": "Roasted Scallop",
-                "price": "$36",
-                "description": "rutabaga, bonito, brown butter",
-                "highlight": false
-              },
-              {
-                "name": "Smoky Steelhead Trout",
-                "price": "$49",
-                "description": "turbo seaweed sauce, roes, confit tubers",
-                "highlight": false
-              },
-              {
-                "name": "Golden Eagle Sablefish",
-                "price": "$59",
-                "description": "prawn toast, aromatic broth",
-                "highlight": true
-              },
-              {
-                "name": "Octopus",
-                "price": "$35",
-                "description": "duelling harissas, pine nut romesco, heritage cassoulet",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "VEGETABLES & SPECIALTIES",
-            "items": [
-              {
-                "name": "Charred Winter King Cabbage",
-                "price": "$29",
-                "description": "hazelnut mole, mucho macha",
-                "highlight": false
-              },
-              {
-                "name": "Badger Flame Beets",
-                "price": "$29",
-                "description": "sunflower, shiso",
-                "highlight": false
-              },
-              {
-                "name": "Celeriac Shawarma",
-                "price": "$46",
-                "description": "the usual suspects",
-                "highlight": false
-              },
-              {
-                "name": "Kentucky Fried Maitake",
-                "price": "$19",
-                "description": "garlic scape ranch",
-                "highlight": false
-              },
-              {
-                "name": "Winter Squash",
-                "price": "$35",
-                "description": "pepita miso, fermented currant, koji butter",
-                "highlight": false
-              },
-              {
-                "name": "Stinging Nettle Goma-Ae",
-                "price": "$26",
-                "description": "toasted yeast, buckwheat, nettle peas",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "MEAT & PASTAS",
-            "items": [
-              {
-                "name": "GBP Gnocchi",
-                "price": "$55",
-                "description": "2025 morels, moon bay kelp, black truffle",
-                "highlight": true
-              },
-              {
-                "name": "All Dressed Pork Ribs",
-                "price": "$46",
-                "description": "maggi winter slaw, crispy heritage corn",
-                "highlight": false
-              },
-              {
-                "name": "Hunters Chicken",
-                "price": "$55",
-                "description": "schupfnudeln, wild mushrooms, salsify",
-                "highlight": false
-              },
-              {
-                "name": "Wagyu Beef Tartare",
-                "price": "$36",
-                "description": "allium, published pantry, malted barley",
-                "highlight": false
-              },
-              {
-                "name": "Fraser Valley Duck",
-                "price": "$69",
-                "description": "a colour study of red",
-                "highlight": false
-              },
-              {
-                "name": "2GR Wagyu Striploin",
-                "price": "$139",
-                "description": "umami puree, crispy potato, mega broccolini",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "DESSERTS",
-            "items": [
-              {
-                "name": "Hay",
-                "price": "$16",
-                "description": "hay custard, apple, chamomile",
-                "highlight": false
-              },
-              {
-                "name": "Chocolate",
-                "price": "$16",
-                "description": "chocolate, peanut butter, banana",
-                "highlight": false
-              },
-              {
-                "name": "Black Currant",
-                "price": "$16",
-                "description": "black currant leaf, black currant wood",
-                "highlight": false
-              },
-              {
-                "name": "Walk Through the Forest",
-                "price": "$16",
-                "description": "candy cap, porcini, fir, mountain berries",
-                "highlight": false
-              },
-              {
-                "name": "Too Many Plums",
-                "price": "$16",
-                "description": "plum kernel, sumac kombucha",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   }

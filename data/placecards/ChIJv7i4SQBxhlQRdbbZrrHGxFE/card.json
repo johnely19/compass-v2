@@ -16,6 +16,24 @@
     "summary": "From the Published on Main team. Natural wine + small plates. Whimsical, buzzy. Local ingredients made revelatory. Always something interesting to drink. If you're at Published on Main for dinner, this is pre/post-dinner drinks. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Mount Pleasant, a few blocks from Published on Main, which makes sense once you step inside and see the same exacting eye for design. High ceilings pull your gaze up, and the room has that specific kind of buzz—packed but not loud, everyone leaning in over small plates and wine stems. It's whimsical without being precious, the kind of place where the architecture does enough work that they don't need to overdo the rest.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu is small plates built around whatever's good right now, the kind of cooking that makes local ingredients feel like discoveries instead of obligations. The crudo shows up in nearly every review for a reason—pristine fish, clean cuts, just enough citrus or oil to let it shine. Same with the steak, which people come back for two nights in a row. Desserts like strawberry tart and sorbet finish things off without weighing you down, and the whole meal pairs with whatever natural wine the staff steers you toward.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your pre- or post-dinner stop if you're eating at Published on Main, but it's also worth the trip on its own when you want somewhere buzzy without the commitment of a full tasting menu. Come for an anniversary, or just because you want to try three wines you've never heard of and eat raw fish under high ceilings.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

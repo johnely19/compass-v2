@@ -29,6 +29,24 @@
     "summary": "Hidden behind pink bodega facade on Dundas W; tiki-adjacent cocktails, playful vibe, 4.2 rating.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You walk past a pink bodega facade on Dundas West, push through the door, and drop into a tiki-adjacent fever dream. Red lighting, DJ booth humming in the corner, bartenders working fast behind a packed bar while groups huddle around low tables. After dark, the whole room tilts into club mode—louder, sweatier, more sour drop shots than you'd expect from a place with mahjong tiles on the wall.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu shifts depending when you show up—daytime is one thing, club hours another. Late night, you're looking at curly fries, salads sized for one, shareable plates that make sense with a coconut mojito in your hand. Chef Phil runs a tight kitchen that can pivot from a Valentine's prix fixe (eight dishes, everything reportedly worth eating) to drunk food that actually tastes good. It's playful without being precious, priced to keep you drinking.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go late on a weekend when you want a DJ who reads the room, cocktails that lean tropical without the thatched-roof commitment, and food that won't slow you down. Also: apparently strong for Valentine's Day if you're into the prix fixe route.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

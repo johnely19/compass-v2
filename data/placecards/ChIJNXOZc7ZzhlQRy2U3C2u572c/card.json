@@ -30,35 +30,28 @@
     "summary": "Farm-to-table Kitsilano gem right next door to Maenam. Local, seasonal BC ingredients. Rustic-cozy atmosphere. Great brunch option for Saturday morning. Rating 4.4/5 (1,478 reviews). Good casual-but-quality pick.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on West 4th in Kitsilano, right next door to Maenam, in a narrow storefront that feels more farmhouse than Vancouver dining room. Inside, reclaimed wood tables sit close together under Edison bulbs, with an open kitchen at the back where you can watch cooks plate everything that comes out. It's the kind of room where you hear other tables' conversations but don't mind—everyone's leaning in over their plates anyway.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is BC farm-to-table cooking that changes with what's actually in season—think kale salad that regulars come back for specifically, chickpea fritters, house-made pastas, and mains like duck breast that arrive simple and centered on the plate. The tasting menu pulls together the kitchen's best ideas if you want the full range, though some dishes lean minimal where you might want more going on. Expect to spend around $18-32 for mains, with brunch on weekends running lighter and cheaper.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Saturday morning brunch when you want something more thoughtful than eggs benedict but still relaxed enough to linger over coffee. Also solid for a weeknight dinner that feels special without the formality—the kind of place where a birthday celebration doesn't require a speech.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"We tried the December Tasting Menu, the Duck breast, and the wine.\n\nThe tasting menu is so great and we enjoyed it. The duck breast is also great however we feel it’s a bit plain, there’s no garnish or complementary dishes around it. Our server had kindly warned us about this tho which we appreciate but still.\n\nThe dessert and appetizer are amazing. We bought a glass of pinot noir and it tastes great too. Great ambience, and great service overall!\"\n\n⭐⭐⭐⭐⭐ \"Came here to celebrate my friend’s birthday 🎂 Absolutely love the farm to table concept and overall really had a wonderful dining experience.\n\nWe ordered the kale salad to start an I must say that was my favorite dish of the night!!! I would come back just for that kale salad too 🥬 We also ordered the chickpea fritters, a pasta and mussels. All the dishes were really tasty but my favorite is the night was hands down the kale salad 🙌🏻\n\nService and ambiance were excellent and would consider dining here again :)\"\n\n⭐⭐⭐⭐⭐ \"boyfie and i got a last minute reservation here in december\n\nextremely happy there is no dresscode cos we looked like bums for date night lmfao\n\nwine recommendation was great, staff were super pleasant and lovely to talk too, had great recommendations as well for other local businesses.\nfood was fabulous, definitely more sharey but hey, food is meant to be shared anyways.\ni take horrible photos but the food was really good and u just need to trust me.\n\nalso get the cheese platter. dont be a skimp. just get it. finish off slowly. enjoy the ambiance. i think it was my favourite part of the meal, simply because it was the perfect ending to a wonderful night & bottle of wine.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "FABLE BRUNCH\n• Lemonades\n   add an ounce of ampersand gin or vodka +4\n• Breakfast Potatoes\n   or upgrade to Rosti +1.25 or Salad +2.50",
-        "sections": [
-          {
-            "name": "FABLE BRUNCH",
-            "items": [
-              {
-                "name": "Lemonades",
-                "price": "",
-                "description": "add an ounce of ampersand gin or vodka +4",
-                "highlight": false
-              },
-              {
-                "name": "Breakfast Potatoes",
-                "price": "",
-                "description": "or upgrade to Rosti +1.25 or Salad +2.50",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   },

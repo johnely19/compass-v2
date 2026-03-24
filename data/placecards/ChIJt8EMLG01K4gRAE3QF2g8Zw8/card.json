@@ -15,6 +15,24 @@
     "summary": "Dinner AND dancing with natural wine - Saturday DJ nights, neighborhood fixture on College St",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on College Street in Little Italy, walking into a room that shifts from dinner service to dance floor as the night unfolds. Low-slung pendant lights hang over closely-set tables, the kind of setup where you're half-listening to your neighbor's conversation whether you want to or not. By late evening, someone's behind the turntables spinning vinyl through a sound system that pulls in artists and regulars who come for the music as much as the wine.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into small plates built for sharing and picking at between glasses of natural wine. Tuna tartare arrives with roasted nori and seaweed salad, while the calamari gets tossed in a sweetish sauce that cuts against expectations. Duck confit comes tender enough to pull apart with a fork, and there's usually a beef tartare on offer alongside nightly specials worth asking about. It's light, ingredient-forward cooking that doesn't weigh you down before dancing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Saturday nights when you want dinner to dissolve into dancing without changing venues, or any evening when you're hunting for natural wine and don't want the precious wine bar treatment. Come for the tartare, stay because someone just put on a record you haven't heard in years.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

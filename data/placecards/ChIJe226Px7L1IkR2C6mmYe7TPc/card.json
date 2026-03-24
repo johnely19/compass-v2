@@ -15,6 +15,24 @@
     "summary": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Yonge Street corridor between King and Adelaide, where the financial district starts to blur into club land. Inside, the room skews intimate and dimly lit—the kind of place where candlelight bounces off wine glasses and conversations stay close. It's the newer breed of Toronto dining room: good-looking without making a production of it, buzzy enough for a Friday but still feels like a secret on weeknights.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen pulls from French and Italian technique with the kind of plating that photographs well but doesn't feel fussy on the fork. Starters lean refined—fig salad, other composed greens—then mains get serious: duck confit over risotto, slow-braised veal osso buco, the kind of cooking that takes time. Expect three courses around $65 at dinner, less at lunch, and a wine list that shows someone's paying attention. During Winterlicious, the $48 lunch and $65 dinner prix-fixe menus make it an obvious move.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is date night when you want something that feels like a find—dressed up but not stuffy, impressive without the downtown pomp. Also strong for a client dinner where you'd rather not default to another steakhouse.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

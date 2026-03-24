@@ -33,24 +33,22 @@
     "summary": "The Watershed Grill is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
     "blocks": [
       {
-        "id": "arrival",
-        "title": "Arrival",
-        "body": "Address: 41101 Government Rd, Brackendale, BC V0N 1H0, Canada."
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Brackendale, just north of Squamish proper, where Government Road runs along the river and the parking lot fits maybe five cars if everyone's polite. Inside, it's the kind of neighborhood spot where locals know to arrive early—wooden tables, windows that frame the water, and a laid-back room that fills up fast on weekends.",
+        "id": "block-the-space-0"
       },
       {
-        "id": "room",
-        "title": "Room",
-        "body": "Expect a lively local crowd with mountain-town energy."
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into comfort territory—thick lasagna with meat sauce, chicken pot pie (though it's more of a bowl situation with puff pastry on top than a fully encased pie), and a chicken brie burger that consistently lands. Daily specials rotate through roast beef and soup-and-salad combos, and the fries get mentioned often enough that you should order them. It's hearty, unfussy cooking that occasionally looks better on Instagram than it does on your plate.",
+        "id": "block-the-food-1"
       },
       {
-        "id": "food",
-        "title": "Food & Drinks",
-        "body": "See photo gallery sections for food, drinks, and atmosphere references."
-      },
-      {
-        "id": "ops",
-        "title": "Operational snapshot",
-        "body": "Google rating 4.5 from 3688 reviews."
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best for a post-hike meal when you want a river view and a beer, or when you're craving something substantial without the drive into town. Weekday lunches are your safest bet for snagging a table without the wait.",
+        "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",

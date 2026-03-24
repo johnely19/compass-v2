@@ -15,6 +15,24 @@
     "summary": "Cafe + yoga studio + flower workshop hybrid - quirky concept, quality coffee",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this hybrid cafe-yoga studio-flower workshop just north of the main Roncesvalles strip, occupying a corner that feels deliberately removed from the bustle. Walk in and you're hit with low soul music, light wood surfaces, and an unexpectedly calm layout that reveals a meditation area in back—the yoga mats aren't just decoration. It's the kind of place designed to slow you down, with flowers arranged in deliberate clusters and enough breathing room between tables that you're not overhearing anyone's conversation.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The focus here is on precision espresso drinks made with lighter-roasted beans—cortados and lattes that look almost too pretty to drink, executed with the kind of attention you'd expect from baristas who actually care about their craft. The chia pudding shows up repeatedly in reviews for good reason, plated with the same care as the coffee. This isn't a full breakfast menu operation; think quality cafe fare where a latte and something light will run you under $15, and that's the point.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your weekday morning reset when you need to recalibrate before the day starts, or a solo afternoon when you want to sit with a book and not feel rushed. Skip it if you're looking for weekend brunch energy or anywhere to linger over laptops—the vibe discourages camping.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

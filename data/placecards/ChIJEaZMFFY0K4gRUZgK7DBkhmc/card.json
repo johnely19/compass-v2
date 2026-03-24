@@ -29,6 +29,24 @@
     "summary": "Thoughtful Japanese cooking in a charming room; 4.5 rating, good for a late weeknight bite.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Little Portugal, west along Dundas past the vintage shops and Portuguese cafés. Inside, it's a compact room with warm wood surfaces and low lighting—the kind of minimal Japanese aesthetic that feels deliberate but not sterile. A small bar anchors one side, a handful of tables fill the rest.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu skews izakaya-style—small plates meant for sharing, though the portions lean genuinely small. Tokyo toast arrives as thick-cut deep-fried bread topped with taro ice cream and crunchy toasted soba, a textural hit that justifies its cult following. The karaage ribs come tender and well-seasoned, while rotating specials like deep-fried octopus can be hit-or-miss. Shochu highballs pack serious punch, and cocktails like the Kuchibeni (vodka, calpico, strawberry) show more finesse than the food sometimes does.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your late weeknight spot when you want a drink and a few bites without commitment. Come on a Tuesday or Wednesday, order the Tokyo toast and whatever sounds good, and don't expect to leave full.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

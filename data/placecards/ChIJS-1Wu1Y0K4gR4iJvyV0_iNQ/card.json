@@ -28,6 +28,24 @@
     "summary": "Quirky general store vibes with curated home goods, pantry items, and gifts; playful but tasteful selection.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "On Dundas West where Trinity Bellwoods starts to blur into residential streets, you'll find a compact storefront that feels more like a friend's well-edited apartment than a shop. Inside, clean white shelves hold stacks of Baggu bags in solid blocks of color, small-batch incense, and ceramics with that matte-glaze minimalism you see all over design Instagram. There's a coffee bar tucked in one corner, and the whole place has that bright, airy restraint where every object looks like it earned its spot.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a lifestyle shop with a small coffee program. You're here for the browse, maybe a cortado while you decide between a geometric candle holder or locally made jewelry. The pantry section leans into specialty oils, tinned fish, and the kind of artisan crackers that cost $12 but photograph beautifully. Think gift shopping for people with taste, not a meal.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Saturday morning when you need a birthday gift that says you actually paid attention, or a weekday afternoon when you want to kill twenty minutes wandering through things you don't need but suddenly want. Bring your own tote—everything here deserves better than a plastic bag.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

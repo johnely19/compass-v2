@@ -28,85 +28,28 @@
     "summary": "Natural wine imports (Keep6 agency) + craft beer from their hidden in-house brewery. Coffee bar too. Triple-threat: café, bottle shop, nano-brewery. 4.4★ (68 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "On College just west of Grace, you're walking into an old cinema that's been gutted but not sanitized—original bones, high ceilings, rows of bottles lining shelves where film reels once sat. The front is all coffee bar and retail, natural wines stacked like a collector's library, then it opens into a dining room with wooden tables and a view straight back to the nano-brewery tanks. It's part European bottle shop, part neighbourhood hang, lit warm enough that you want to settle in.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu skews Italian but stays loose—fresh pasta, seasonal small plates, whatever Julian and the kitchen are excited about that week. Expect things like house-made focaccia still hot from the oven, crudo with good olive oil, something grilled and simple that lets the ingredients speak. The real draw is pairing it all with natural wines from their Keep6 imports or a house-brewed beer you won't find anywhere else. Plates run reasonable for what you're getting, and the whole point is to linger and try a few things.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your spot when you want to eat well without the ceremony—a weeknight dinner where you're just as interested in the wine list as the menu, or when you're introducing someone to natural wines and need food that won't compete. Also ideal for a solo meal at the bar with a book and a bottle you've been curious about.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Three of us ladies decided to indulge in a delightful dinner at Bottega Volo on College Street, and it was truly an unforgettable experience. Julian, the owner, graciously introduced himself and his warmth and professionalism added to the charm of the evening. He recommended several dishes, and we eagerly tried them all. The food was exceptionally fresh, piping hot, and absolutely delicious. The atmosphere was inviting, and the service was impeccable. We had such a wonderful time that we’re already looking forward to exploring more exciting options from their menu!\"\n\n⭐⭐⭐⭐⭐ \"Amazing spot. If you’re looking for special wines, beer and food that you can’t find anywhere else, this is the place. Love that they’ve taken over the old cinema and kept it authentic. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Favourite spot in little Italy hands down. Coffee and Italian pastries in the morning, amazing sandwiches for lunch, and arguably one of the best pantries in the city. The staff is always kind and helpful when trying to choose something from their massive wine selection.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "BEER\n⭐ Cask Ales\n   House specialty from Volo Brews\n⭐ Crisp Lagers\n   House specialty from Volo Brews\n⭐ Hop-Forward Beers\n   Limited quantity hand-bottled selections\n• Imported Craft Beers\n   From Keep6 artisanal brewery partners\n\nWINE\n• Natural Wine Selection\n   Low-intervention producers from Keep6 imports\n• European Wines\n   From distinctive regions worldwide\n• Boutique Wine Collection\n   Curated by Keep6 import agency\n\nSPIRITS\n• Spirits Selection\n   Premium spirits available in-store\n\nGROCERY & SNACKS\n• Fish Tins\n   Specialty tinned fish products\n• Candy\n   Sweet treats and confections\n• Gourmet Groceries\n   Artisanal food items and provisions",
-        "sections": [
-          {
-            "name": "BEER",
-            "items": [
-              {
-                "name": "Cask Ales",
-                "description": "House specialty from Volo Brews",
-                "highlight": true
-              },
-              {
-                "name": "Crisp Lagers",
-                "description": "House specialty from Volo Brews",
-                "highlight": true
-              },
-              {
-                "name": "Hop-Forward Beers",
-                "description": "Limited quantity hand-bottled selections",
-                "highlight": true
-              },
-              {
-                "name": "Imported Craft Beers",
-                "description": "From Keep6 artisanal brewery partners"
-              }
-            ]
-          },
-          {
-            "name": "WINE",
-            "items": [
-              {
-                "name": "Natural Wine Selection",
-                "description": "Low-intervention producers from Keep6 imports"
-              },
-              {
-                "name": "European Wines",
-                "description": "From distinctive regions worldwide"
-              },
-              {
-                "name": "Boutique Wine Collection",
-                "description": "Curated by Keep6 import agency"
-              }
-            ]
-          },
-          {
-            "name": "SPIRITS",
-            "items": [
-              {
-                "name": "Spirits Selection",
-                "description": "Premium spirits available in-store"
-              }
-            ]
-          },
-          {
-            "name": "GROCERY & SNACKS",
-            "items": [
-              {
-                "name": "Fish Tins",
-                "description": "Specialty tinned fish products"
-              },
-              {
-                "name": "Candy",
-                "description": "Sweet treats and confections"
-              },
-              {
-                "name": "Gourmet Groceries",
-                "description": "Artisanal food items and provisions"
-              }
-            ]
-          }
-        ]
       }
     ]
   }

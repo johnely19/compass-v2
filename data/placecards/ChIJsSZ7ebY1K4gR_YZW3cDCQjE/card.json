@@ -15,6 +15,24 @@
     "summary": "New hidden alleyway location, established local brand, excellent bagels + coffee",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this outpost tucked down a Little Italy alley, unassuming from the street until you step inside. The nondescript exterior gives way to three distinct seating areas—light wood, clean lines, the kind of setup where you could disappear into a corner with a book or camp out with your laptop for hours. It's the Boxcar aesthetic translated to a hideaway: stylish without trying, the kind of place that fills up with regulars who know what they're here for.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The bagels are the move—proper chewy rounds topped with things like garlic and herb cream cheese that actually tastes like both garlic and herbs. The coffee program is serious: oat cortados pull smooth and balanced, Americanos come out clean and strong. Chocolate croissants show up too, though they play second fiddle to the bagel operation. You're looking at under $15 for bagel and coffee, the kind of pricing that makes this a regular habit rather than an occasion.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your weekday sanctuary—come solo on a Tuesday morning when you need to think, or bring someone who appreciates a good hideaway over a scene. It's built for lingering, not rushing.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

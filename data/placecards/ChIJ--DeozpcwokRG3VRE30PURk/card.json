@@ -29,6 +29,24 @@
     "summary": "16,000 sq ft indoor/outdoor space — part beer garden, part dance venue, part chill backyard with hammocks. Beloved Mister Sunday parties. Spring opening means the garden is back. 4.3★ (1846 reviews). Perfect for a warm-weather visit with Dessa.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential block in Ridgewood where Queens bleeds into Glendale, and then you step through the door into 16,000 square feet that unfolds like a secret compound. There's an actual dance floor with festival-grade sound, a sprawling beer garden strung with lights, and hammocks tucked into corners where you can collapse between sets. They give you a little speech at the entrance about phones staying in your pocket—it works, the crowd's here to move, not to document.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a venue with a bar program and the kind of snacks that make sense at 1 AM when you've been dancing for four hours. Expect drinks that run the full spectrum, from beer-garden basics to cocktails that hold up through a long night. The kitchen keeps it simple: the kind of bites you can eat standing up between DJs, priced so you can stay all day without thinking about it.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Spring through fall when the garden reopens and you want to spend an entire Saturday outside, maybe catching Mister Sunday or one of the European DJs who treat this place like a homebase. Best with someone like Dessa who'll actually dance, not just stand around holding a drink.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

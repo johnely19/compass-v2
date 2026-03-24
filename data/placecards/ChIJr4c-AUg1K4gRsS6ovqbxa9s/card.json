@@ -16,6 +16,24 @@
     "summary": "Day-to-night hybrid (coffee + cocktails) with strong music/vinyl 'listening bar' vibe; consistently high ratings and late hours.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a transitional stretch of Dupont where the Junction Triangle blurs into something not-quite-anything, and Rooms sits in a low-slung building that could've been a garage in another life. Inside, it's darker than you expect—low ceilings, warm wood, speakers positioned like they mean it, and a compact bar where vinyl sleeves lean against bottles. The layout shifts depending on when you arrive: cafe by day, listening bar after dark, with just enough tables that it never feels like a lounge pretending to be intimate.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen runs lean and smart, leaning into occasional collaborations rather than a static menu—like the 'Do Me Nice' dinner series with Chef FT Funmilade Taiwo, where Afro-Caribbean flavours meet the room's music-forward energy. When it's not hosting pop-ups, expect shareable plates and the kind of snacks that make sense with cocktails or a cortado, depending on the hour. This isn't a place you come to for a three-course progression; it's about what tastes right in the moment, with the soundtrack doing half the work.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late on a Friday when you want music you can actually hear—not just feel—and a drink that wasn't batched three hours ago. Or catch one of the monthly chef collabs if they keep the series going, ideally with a group who'll split plates and stay past midnight.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

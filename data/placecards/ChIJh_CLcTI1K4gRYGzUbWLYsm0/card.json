@@ -15,6 +15,24 @@
     "summary": "Frankie Solarik's (BarChef) experiential cocktail concept styled like 1800s Paris pharmacy; 4.6 rating, open til 2am weekends.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queen West, past the vintage shops and into the stretch where things get a bit more polished. Inside, Frankie Solarik styled this like an 1800s Parisian pharmacy—glass apothecary bottles line dark wood shelves, low lighting catches on brass fixtures, and there are velvet couches near the back where you can tuck in for hours. It's theatrical without tipping into theme park, the kind of place where the bartenders wear vests and actually know what they're doing.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Solarik's experiential cocktail concept, so drinks lead—think Kyoto Foret with its layered botanicals, or champagne cut with absinthe, cucumber, and basil that drinks lighter than it sounds. The food menu exists to keep you anchored: truffle lobster rolls, dry-aged duck, things rich enough to justify another round. You're here for the bar program first, but the kitchen knows how to make you stay past one drink.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a date spot, especially if you want somewhere dark and a little dramatic after dinner on the Ossington strip. Come late—they're open until 2am on weekends—and claim one of those back couches when you're ready to settle in properly.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

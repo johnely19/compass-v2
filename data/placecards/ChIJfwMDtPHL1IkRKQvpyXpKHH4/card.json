@@ -15,6 +15,24 @@
     "summary": "12th annual architectural art installation on the beach. Five artist/architect-designed follies responding to the theme 'mirage.' Covered by Azure Magazine. Free, outdoor. Through March 30.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Out on the wide sand expanse of Woodbine Beach in The Beaches, five temporary structures rise against the lake horizon—angular wood frames, fabric canopies, reflective surfaces that shift with the light. You walk the shoreline from one folly to the next, each one commissioned for this year's theme and built to weather wind and snow through the tail end of winter. The installations sit scattered along the waterfront, some perched on the sand, others anchored near the boardwalk where joggers and dog-walkers stop to circle them.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a dining destination—it's an outdoor art crawl along the lake. You'll want to grab coffee before you come or hit one of the food trucks that park outside the beach area during weekends. The point here is the architecture itself: five distinct responses to 'mirage' from different design teams, documented by Azure Magazine and free to the public. Bring your own provisions if you're planning to linger.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best on a crisp late-winter afternoon when the beach is mostly empty and you can take your time photographing each structure without crowds. Come before March 30 when they dismantle everything until next year.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

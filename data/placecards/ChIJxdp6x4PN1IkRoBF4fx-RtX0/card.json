@@ -16,6 +16,24 @@
     "summary": "Modern Indonesian bistro; 4.7 rating with 202 reviews; chef-recommended—authentic and consistently tasty per local chefs.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Danforth a few blocks east of Chester, where Indonesian cooking is still rare enough to feel like a find. Inside, it's a small bistro setup—compact tables, warm overhead lighting, and a kitchen you can glimpse from the dining room. The vibe runs casual but deliberate, the kind of place where you can hear the sizzle and smell the sambal before your plate lands.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is modern Indonesian cooking with the fundamentals intact—sambals that actually bite, rendang that's been cooked down long enough to matter, proper nasi uduk with all the aromatics. The sate ayam gets consistent praise for good reason, charred and punchy with its peanut sauce, and the kitchen clearly knows how to balance heat and sweetness. Desserts like gula aren panna cotta and es teler sundae are worth ordering, especially if the cocktails skew too sweet for your taste. Portions can feel modest on dishes like the beef rendang, so plan accordingly.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book ahead for weekend dinner—this is a small room that fills fast, and the staff will let you know it. Best for a date or a meal with friends who actually want to talk about what they're eating, not just post it.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -31,34 +31,22 @@
     "summary": "Ramen-focused Toronto spot with strong local following and dependable bowls.",
     "blocks": [
       {
-        "id": "b1",
-        "title": "Map + Practicals",
-        "body": "Start with map and practicals first."
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Elm Street in the downtown core, steps from Yonge-Dundas Square's chaos but worlds away once you step inside. The room is compact and functional—a counter where you can watch steam rise from pots, a handful of tables where regulars lean in close over their bowls. It's bright, efficient, the kind of place where the focus is squarely on what's in front of you, not the décor.",
+        "id": "block-the-space-0"
       },
       {
-        "id": "b2",
-        "title": "Outside",
-        "body": "Streetfront + arrival context."
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is tonkotsu-style ramen done with care: creamy pork-based broths, thin handmade noodles, and toppings that actually matter. The original shoyu is clean and dependable, while the Smokey Black Tonkotsu leans into burnt garlic chilli oil for depth without overwhelming heat. Order the mini chashu if you want extra pork belly, or go for the deep-fried king mushrooms if you need something crisp to break up all that richness. Bowls run around $16-20, with the option to upsize if you're genuinely hungry.",
+        "id": "block-the-food-1"
       },
       {
-        "id": "b3",
-        "title": "Interior vibe",
-        "body": "Wide room views and atmosphere."
-      },
-      {
-        "id": "b4",
-        "title": "Detailed interior",
-        "body": "Close-up design and counter details."
-      },
-      {
-        "id": "b5",
-        "title": "Food + drinks",
-        "body": "Ramen bowls, sides, and drinks where available."
-      },
-      {
-        "id": "b6",
-        "title": "Check",
-        "body": "Estimated check for two using Toronto tax logic."
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your midweek solo dinner at the counter, or a quick post-work meal when you want something warming and satisfying without ceremony. Skip it on a rushed lunch—you want time to finish the broth.",
+        "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",

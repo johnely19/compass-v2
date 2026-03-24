@@ -16,6 +16,24 @@
     "summary": "Michelin Recommended. Avant-garde Japanese izakaya at 2 Water Street in Gastown. 4.8 rating. Top 100 Restaurants 2025. Wine Spectator Award. Exquisite sushi + creative Japanese. Right in Gastown for Friday arrival night. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Water Street in Gastown, where the cobblestones meet polished concrete and dark wood interiors. Inside, it's moody and deliberate—low lighting, clean lines, the kind of minimalist Japanese aesthetic that makes you notice the grain in the counter and the weight of the ceramic. The room feels intimate without being cramped, designed for lingering over sake and small plates.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is izakaya cooking with a Michelin eye—thick-cut sashimi that fills your mouth, karaage so well-seasoned you'll understand why everyone mentions it, and beef tongue charred crispy outside while staying almost indecently tender within. The sushi is generous, not precious, each slice thick enough to feel substantial. It's the kind of place that earned a Wine Spectator award because they take the pairing as seriously as the fish, and made Canada's Top 100 because they're doing something more ambitious than your neighborhood Japanese spot.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Friday night after you've landed and want something that rewards the trip—good enough to feel like an occasion, relaxed enough that you're not performing. Or for a date when you both actually care about what you're eating.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

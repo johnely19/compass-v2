@@ -28,6 +28,24 @@
     "summary": "Korean-fusion with cool-kid Ossington energy; late hours and solid bar program.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Ossington, where the streetcar rattles past and the cool-kid restaurants pack in shoulder-to-shoulder. Inside, it's dimly lit with a bar that anchors the room—always a bartender holding down the front while the kitchen works behind. The space feels comfortably full most nights, not precious, just a neighbourhood spot where people actually go more than once.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans into Korean-fusion comfort food—the kind that sounds better after a couple drinks and tastes even better when it arrives. The Philly sandwich and kimchi poutine are mainstays, both rich and a little irreverent in that Ossington way. It's late-night-friendly food that doesn't feel like an afterthought, though the cocktails can pour light depending on who's working the bar. Expect to spend around $18-25 for mains, less if you're just grazing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your spot when you want something casual with a bit of edge—a weeknight dinner that doesn't require a reservation three weeks out, or late hours when most kitchens have already closed. It's the place you end up at once a year and remember why you keep coming back.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

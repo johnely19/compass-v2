@@ -15,6 +15,24 @@
     "summary": "Specialist cheese + natural wine shop. Intimate, curated, serious about product. The kind of place where the person behind the counter knows every wheel. 4.8★ (277 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Gerrard East where Leslieville starts to feel residential, and Good Cheese sits in a compact storefront that functions more like a European cave d'affinage than a shop. Inside, there's a refrigerated case running along one wall, wooden shelving stacked with natural wines, and just enough room for two people to stand at the counter while someone talks you through what's aging on the back racks. The lighting is bright enough to see the bloomy rinds properly, and the whole setup tells you this is about the product, not the Instagram.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a buying experience, not a restaurant—wheels from small producers, the kind of stuff you won't find shrink-wrapped. Their Cheese Club boxes rotate through funk-forward picks with actual tasting notes that explain terroir and milk type, and they'll pack olives that convert people who claim to hate olives. The natural wine selection follows the same logic: low-intervention bottles chosen to pair with whatever stinky, washed-rind situation you're walking out with. Expect to spend $40-70 on a proper cheese haul, more if you're stocking up on bottles.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're planning a dinner party and refuse to show up with supermarket brie, or it's Saturday afternoon and you want someone who actually knows the difference between a Comté aged 18 months versus 24 to build you a board. Also solid for a weekend browse when you want to taste before committing.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

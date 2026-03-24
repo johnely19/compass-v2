@@ -15,6 +15,24 @@
     "summary": "Opened May 2025 inside a stunning 1902 heritage post office building. Butcher + artisan pantry. The building alone is worth the visit — architecture meets food. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on West Queen West, just past the Gladstone, in a 1902 heritage post office building that makes most new constructions look like cardboard. Inside, it's butcher counter and market stalls—the kind of layout where century-old bones meet refrigerated cases full of dry-aged ribeyes and Mennonite eggs. The architecture does half the work: high ceilings, original details, and a tight produce section that feels more curated pantry than grocery aisle.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a butcher shop first—serious cuts you won't find at the chains, priced shockingly fair for the quality—but the play is in what they're making in-house. Fresh pasta, sandwiches built to order, and a frozen section that goes deeper than you'd expect from a neighbourhood spot. The meat selection runs from everyday steaks to the stuff you'd normally need a dedicated butcher for, and the pantry items skew artisan without the usual markups. It's provisioning, not dining, but the prepared food proves they know what to do with what they're selling.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Stop in when you're stocking up for the week and want to actually look forward to cooking—or when you need a fast lunch and the house-made sandwiches sound better than another sad desk salad. Also worth a deliberate visit if you care about architecture and want to see a heritage building put to proper use.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

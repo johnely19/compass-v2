@@ -29,6 +29,24 @@
     "summary": "Moody east-end speakeasy with theatrical religious kitsch decor; open W-Sat til 2am, 4.4 rating.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Gerrard East in Leslieville, past the vintage shops and brunch spots, looking for a door that doesn't advertise itself. Inside, it's all velvet pews, gilded saints watching from the walls, and votive candles throwing shadows across dark wood booths—a speakeasy built like a fallen cathedral. The bar glows against the religious kitsch, and by midnight on weekends, bodies pack in close enough that you're shoulder-to-shoulder with strangers under plastic cherubs.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a bar that happens to sling pizza. The slices come hot from the kitchen all night, sometimes handed out free at coat check or when the staff feels generous, the kind of thin, greasy wedges that taste perfect at 1am when you've had three cocktails. You're here for the drinks and the scene, but the pizza is better than it needs to be, which is exactly what makes it work. Think of it as fuel, not a meal.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want a late night that feels like a secret—Thursday through Saturday after 11pm, when the DJ's going and the crowd's loose enough to dance between the pews. Book ahead if you need a table, or just show up ready to stand and see where the night takes you.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -16,6 +16,24 @@
     "summary": "NEW (Sep 2025). Japanese snack bar with creative edge. Prawn toast on Chinese doughnut, Ibérico tomahawk. Outstanding cocktail program. Late-night-friendly. The kind of playful, inventive spot John loves. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Commercial Drive, walking into a narrow room that feels more Tokyo snack bar than Vancouver casual. Low lighting, a compact bar running one side where you can watch hands moving quickly, maybe a dozen tables total. The vibe skews late-night even at 7pm—music's on, energy's up, and the design choices feel intentional without announcing themselves.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Japanese cooking with a generous sense of play—prawn toast mounted on Chinese doughnut, an Ibérico tomahawk that's somehow both unexpected and exactly right for a place like this. The kitchen clearly wants you to have fun without losing the thread of technique. Cocktails are on par with the food, calibrated and creative, and they're churning housemade gelato that guests keep mentioning unprompted.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late enough that you're eating dinner at 9 or 10, maybe after a gallery opening or when you want the night to keep unfolding. Also strong for a birthday or an anniversary where you don't want white tablecloths—just energy, care, and a kitchen that's clearly awake.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

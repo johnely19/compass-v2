@@ -15,6 +15,24 @@
     "summary": "Minimalist cycling apparel + coffee shop. Design-forward retail/café hybrid. 5.0★ (29 reviews). Near John's area. Soft-opened March 2026.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find it below street level at Avenue and Davenport, tucked into the lower level where minimalist cycling apparel hangs on clean white walls alongside an espresso bar. The studio feels deliberately spare—polished concrete, carefully curated bike kits from MAAP and ASSOS displayed like gallery pieces, a few stools where you can sip espresso while running your hand over Italian chamois pads. It's half retail shrine to cycling culture, half café, all designed with the kind of restraint that makes you notice every stitch.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a café menu—it's espresso, full stop, pulled by owners Mitch and Henry who know as much about extraction as they do about gear ratios. The coffee program is tight and serious, the kind of place where your cortado arrives with actual latte art and tastes like they give a damn. Expect to pay café prices (espresso drinks around $4-6), but you're here for the vibe as much as the caffeine, browsing $300 bib shorts between sips.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Stop by on a Saturday morning before or after a ride, when you want to talk cadence with people who actually understand, or on a weekday afternoon when you need to justify buying gear you don't need with excellent coffee you do.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

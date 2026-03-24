@@ -16,6 +16,24 @@
     "summary": "Neighborhood gem that punches way above its weight. Intimate, affordable, ingredient-driven. Reddit's FoodToronto crowd rates it as a top date-night pick that's 'not mid.' 4.6★ (1324 reviews). $$",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet stretch of Gerrard East in Leslieville, past the vintage shops and cafés. Inside, it's intimate—close-set tables, warm lighting that softens the room without dimming it, and a back patio they tease as 'mystery' for good reason. The space feels like someone's very confident dining room, not a restaurant trying to be one.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu here is ingredient-obsessed but playful—shawarma carpaccio with bread so good you'll scrape the butter dish, pork belly riffing on A&W road food, miso cod that tastes like careful technique without the fuss. They're cooking with a wandering eye: Middle Eastern spices, French pastry (mushroom puff pie), whatever makes sense for the season. It's affordable for what you're getting—mains in the low-to-mid twenties—and nothing feels like it's coasting.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is date night when you want to impress without the formality—somewhere you can actually talk and eat something memorable. Book ahead, especially for weekends, because the room fills fast and the regulars know what they've got.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

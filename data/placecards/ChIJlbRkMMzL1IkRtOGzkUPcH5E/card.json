@@ -16,6 +16,24 @@
     "summary": "Non-alcoholic cocktail program with a tasting-room + bottle-shop angle; good ratings and open now (easy weeknight).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet Carlton stretch in the Garden District, and ZERO looks more like someone's well-stocked living room than a bar. Inside, it's part tasting counter, part retail shelves lined with non-alcoholic spirits and mixers, part dining setup where Chef Ling runs a tight operation. Gail holds court here, walking you through samples with the ease of a sommelier who's actually interested in what you think.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans Caribbean and pan-Asian, with Chef Ling turning out sharply executed plates that don't announce themselves as 'health food' just because the drinks are booze-free. The shark and bake—fried fish on pillowy fry bread—lands crispy and hot, while shrimp dumplings come properly translucent and delicate. Save room for the coconut mango crème brûlée, which cracks under your spoon like it should. It's dinner for two with cocktails, not a quick bite—plan on settling in.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book a weeknight when you want something different but don't want to feel like you're making a statement about not drinking. Or come solo on a slower evening and let Gail walk you through the bottle shop—you'll leave with something good and an hour's worth of stories you didn't expect.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -28,6 +28,24 @@
     "summary": "In-house roasting, minimalist industrial space; newer but getting serious buzz from coffee nerds.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Queen West strip where Wales cuts through, in a high-ceilinged room stripped down to concrete floors, white walls, and the kind of industrial minimalism that lets you focus on what's in your cup. The roaster sits visible near the back—a hulking piece of equipment that fills the space with the smell of beans going dark and oily. A few blonde wood tables, steel chairs, enough natural light to read by.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "They roast their own beans here, and the coffee nerds have already caught on—expect espresso pulled with the kind of precision that makes you actually taste the fruit notes they're talking about. The toasted banana bread is dense and slick with oil, studded with melting chocolate and aggressively salted on top, the kind of texture that's more compact and sticky than cakey. The SEC breakfast sandwich arrives steaming, cross-sectioned to show off sausage, egg, and cheese in nostalgic, salty layers that feel like someone's idealised childhood breakfast. Everything's under $15.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want a weekday morning when you can sit with a proper cortado and that banana bread without fighting for a table. Or when you need to reset mid-afternoon and remember what coffee is supposed to taste like.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

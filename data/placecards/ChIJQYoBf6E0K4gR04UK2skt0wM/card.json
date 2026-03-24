@@ -28,6 +28,24 @@
     "summary": "5-building design complex with 20+ showrooms - Kravet, Lee Jofa, Primavera - open to public",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Tucked in the Annex between Dupont and Davenport, you'll find this sprawling five-building complex of fabric showrooms and design studios—Kravet's velvets, Lee Jofa's wallpapers, Primavera's textiles spread across 20+ trade rooms. Wander through bolts of linen and leather samples until you hit Le Paradis, the French café hidden inside, where bistro chairs and white tablecloths sit surrounded by chandeliers you can actually order. It feels like eating lunch inside a very elegant hardware store for people who upholster sofas.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Le Paradis runs a tight traditional French menu—think pâté de campagne, duck confit, steak frites with proper shallot butter. Everything's made in-house, from the terrines to the pastry, and the prices sit shockingly low for what you're getting (most mains under $25). It's the kind of cooking that doesn't announce itself, just shows up correct: a proper beurre blanc, a tart crust that shatters, a cassoulet that tastes like someone's grand-mère is back there. You're eating surrounded by interior designers on deadline, which means the food needs to be fast, reliable, and good enough that they keep coming back.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Weekday lunch when you need to feel like an adult with taste but don't want to spend $60 on it. Also good for a quiet early dinner before you've got tickets to something—the designers clear out by 5:30.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -16,6 +16,24 @@
     "summary": "Bar/restaurant that frequently hosts jazz/sets; good “music + dinner” anchor west end.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the Junction, where Dundas West still feels like a neighbourhood rather than a scene. Inside, the room doubles as a proper listening venue—there's a stage setup that anchors the space, tables arranged so you can actually watch a set without craning your neck, and lighting that shifts from dinner service to performance mode without feeling gimmicky.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen here runs as a support act to the main event, but that doesn't mean it's an afterthought. You're getting shareable plates and mains built for groups who want to eat well without missing the music—think Mediterranean-leaning dishes that don't require a knife and your full attention. The owners, Evrim and Bilge, clearly know how to feed a room, whether it's a regular dinner service or a private event with custom menus and your high school logo at the door.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this when you want live jazz with your dinner, not background music piped through ceiling speakers. It's also the rare west-end spot that'll actually help you host a group event without making you feel like you're renting a bland private room.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

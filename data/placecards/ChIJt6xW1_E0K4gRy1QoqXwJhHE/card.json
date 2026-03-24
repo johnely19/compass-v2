@@ -15,6 +15,24 @@
     "summary": "Larger 400-seat venue with eclectic programming—genre nights, premieres, cult classics. Good backup when Revue is sold out. Strong 4.6 rating.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on College Street in Little Italy, walking into a 400-seat cinema with actual leg room and rocking seats that feel closer to a midcentury rec room than a sticky-floored multiplex. The lobby opens up to an artisan bar area where you can grab wine or cocktails before the show, and there's a full concession stand inside with the usual plus actual drinks worth ordering. It's bigger than you expect, with acoustics that make cult classics and genre nights feel like events.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cinema, so you're working with concession stand snacks—popcorn, candy, the usual—but the real draw is the drinks program. The artisan area up front pours wine and cocktails that go beyond the standard beer-in-a-plastic-cup situation, and the full bar inside means you can actually settle in with something decent during a double feature. Expect to spend around $10-15 on drinks, with snacks running standard concession pricing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "When the Revue is sold out, or when you want to catch a Hallmark parody, cult classic marathon, or one of their genre nights without fighting for a seat. The eclectic programming means there's always something weird and worth seeing, especially on weeknights when the 400 seats give you space to spread out.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

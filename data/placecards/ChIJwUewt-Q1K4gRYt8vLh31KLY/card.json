@@ -15,6 +15,24 @@
     "summary": "Second-floor wine bar with DJ nights - the cool Geary corridor play, events-driven",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You climb the stairs off Geary Ave—Toronto's industrial strip turned art-studio colony—and hit a second-floor room that's all minimalist intention: low lighting that got upgraded after enough complaints, a dance floor now properly lit for bodies in motion, and a back room they've opened up to handle overflow when the DJ pulls a crowd. The bar runs efficient, coat check moves fast, but there's nowhere to escape the bass when you need a breather—the seating area sits at the same volume as the floor.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a wine bar built for dancing, not dining. You're here for the sound system—which reviewers rate as acceptable, nothing audiophile-grade, though the bass hits hard when the headliner takes over—and whatever natural wine they're pouring that week. Expect small bites at best, the kind of thing you can eat standing up between sets.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You show up for DJ nights when you want something looser than a proper club but more committed than a bar with a playlist. Come early if you want to actually talk, stay late when you've stopped caring about conversation.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

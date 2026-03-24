@@ -16,6 +16,24 @@
     "summary": "Swedish-inspired in turquoise bay-and-gable; owner (2017 TO AeroPress champ) now roasting in-house as Lycka Coffee Roasters.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll spot the turquoise bay-and-gable Victorian from a block away on one of Kensington's quieter residential edges. Inside, natural light floods through tall windows onto blonde wood tables, and there's that rare thing—a back patio that actually feels removed from the chaos. The front fills with laptop people; the back patio is where you can hear yourself think.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is proper Swedish fika: coffee and something sweet to break up your day, not a full meal service. The owner won Toronto's AeroPress championship in 2017 and now roasts in-house under the name Lycka Coffee Roasters, so the espresso pulls are dialed in. You'll find a walnut-hazelnut brownie that reviewers loop back for, seasonal drinks like strawberry matcha, and fika iced lattes that balance milk and acidity without getting syrupy. They do have savoury options, but the draw here is the coffee program.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Mid-morning on a weekday when you need to reset between errands, or a slow weekend afternoon on the back patio with a book. This isn't a workspace or a hangout spot—it's for the deliberate pause the Swedes built into their day.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

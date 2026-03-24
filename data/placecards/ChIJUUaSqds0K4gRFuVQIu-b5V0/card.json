@@ -28,6 +28,24 @@
     "summary": "Toronto's premier architecture + design bookstore. City's largest selection of architecture, urbanism, and graphic design books. Independent. Inside 401 Richmond — the creative nerve centre. Book launches, design objects. 4.6★ (92 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're inside 401 Richmond, that converted industrial building that houses half of Toronto's creative class. Swipe occupies a ground-floor corner where white walls meet polished concrete, shelves arranged in precise grids holding stacked spines and deliberate objects—minimalist planters, Japanese stationery, sculptural bookends. The lighting's gallery-bright, and everything's displayed like it matters, because here it does.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Collection",
+        "body": "This is where architects and designers come to find what Amazon doesn't stock—monographs on Brutalism, limited-run journals from Tokyo, heavyweight books on urban planning that cost what they weigh. Beyond the books, you'll find Muji-adjacent desk objects, graphic design posters, and houseware that looks like it belongs in a Kinfolk spread. Prices reflect the curation: books run $30-80, objects higher, but you're paying for what you won't see anywhere else in the city.",
+        "id": "block-the-collection-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Weekday afternoons when you need to buy a gift for someone whose taste intimidates you, or when you want to lose an hour browsing without small talk. Also smart before a book launch here—they host them regularly, and you'll want to scope the space first.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

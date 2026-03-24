@@ -30,6 +30,24 @@
     "summary": "Michelin 1-star Japanese-Italian fusion in a gorgeous second-floor Chinatown space. Jazz-bar atmosphere meets izakaya meets Italian trattoria. Architecture-obsessed John will love the room. One of Canada's most celebrated restaurants. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You climb a narrow staircase in Chinatown to find a jewel-box second floor that shouldn't exist—curved banquettes in oxblood leather, art deco brass fixtures, and a long bar backlit like a 1960s Tokyo jazz club. The room splits the difference between izakaya and Italian supper club, all warm wood and dim pendant lights, with enough architectural detail to keep you scanning the ceiling between courses. It's the kind of space where the design does as much work as the kitchen.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The Japanese-Italian fusion here isn't gimmick—it's decades of immigrant cooking logic made Michelin-official. You'll find things like truffle pasta that leans more Piedmont than Tokyo, octopus salad with citrus and olive oil, and pork dishes that pull from both larders without announcing it. The omakase gives you the range family-style, though portions run small and prices run high for what lands on the plate. Expect hits and occasional misses—whole fish can skew dry, but when the kitchen nails it, you see why this place has the reputation it does.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this for a night when you want to sit in a beautiful room as much as you want to eat—ideally with someone who'll appreciate the architecture between bites. The omakase makes sense for a group dinner where you're sharing and sampling, though solo at the bar with a couple of plates and a drink works just as well if you're here for the vibe.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

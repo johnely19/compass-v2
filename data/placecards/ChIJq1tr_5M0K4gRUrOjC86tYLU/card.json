@@ -15,6 +15,24 @@
     "summary": "Operating since 1978—esoteric, spiritual, philosophy, counterculture. 4.8 rating, 634 reviews. Late hours (til 9pm daily) make it great for evening browsing.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Bloor West in the Annex, where the storefronts still feel lived-in rather than curated. Inside, floor-to-ceiling shelves crowd the narrow aisles with decades of accumulated esoterica—Jung next to Tarot decks, philosophy bleeding into occult, all presided over by Churchill, an orange cat who treats the stacks like his personal kingdom. Patrick, who's run this place since 1978, knows exactly where everything is and will talk you through Gnosticism or Tolkien with equal enthusiasm.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Books",
+        "body": "This isn't a bookstore trying to be a lifestyle brand—it's the real thing, stocked deep in metaphysics, counterculture, spirituality, and philosophy that's impossible to find anywhere else in the city. You'll turn up pristine copies of things you've been hunting for years (one customer finally found their Silmarillion here after searching across the GTA), plus shelves of hermetic texts, Buddhist philosophy, and whatever Patrick's deemed worth carrying. Open until 9pm every night, which means you can actually browse after work instead of racing against a 6pm close.",
+        "id": "block-the-books-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Evening, when the late hours let you wander the stacks without rushing, maybe strike up a conversation with Patrick if he's around. Also: when you need to find something obscure that Amazon's algorithm will never surface.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

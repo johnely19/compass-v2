@@ -15,6 +15,24 @@
     "summary": "Exceptional 4.9★ rating; French pastry; off-the-beaten-path location adds discovery appeal.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this tiny French pâtisserie tucked into the Junction near Sousa Mendes, the kind of spot you stumble onto and feel like you've discovered something. Inside, it's just a display case and the owner greeting you like you've made her day—no seating, no fuss, just pastries lined up under glass and that immediate warmth of a place run by someone who actually cares. Everything about it says neighbourhood gem that somehow flew under the radar.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is proper French pastry work—the kind where technique shows up in texture, not just looks. The chocolate cake has a cult following (reserve ahead or you'll miss it), but regulars know the chocolate cupcake might be the real move: dense crumb, grown-up sweetness, frosting that doesn't quit halfway through. The display rotates with whatever the owner's baking that day, and if it's there, it's worth trying. Pastries run a few dollars each; a whole cake will set you back maybe $30-40.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your Saturday morning detour or your weekday afternoon pick-me-up when you need something that feels like a treat, not a transaction. Grab something for yourself, or show up with a friend who thinks they've tried every good bakery in Toronto.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

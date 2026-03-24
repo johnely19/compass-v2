@@ -16,6 +16,24 @@
     "summary": "Danish-founded craft brewery taproom in Ridgewood. Industrial cool space, rotating taps, food-friendly. 4.6★ (443 reviews). A Ridgewood anchor — TimeOut recommends it as part of a food-tour trifecta with Rolo's and Rudy's Bakery.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet Ridgewood block, just past the M train, where warehouse bones meet brewery function. Inside, it's all high ceilings and open floor plan—concrete floors, long communal tables, industrial lighting hanging over a serious tap wall. The vibe skews more Copenhagen beer hall than Brooklyn hustle, and the staff actually seem like they want to be here.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a taproom first—rotating craft beers from hazy IPAs to foeder-aged lagers poured through Lukr faucets—but the food situation has evolved beyond the usual bring-your-own setup. There's pizza available, and a newer burger cart that's turning out thick, fresh patties with crispy fries that pair exactly right with a triple IPA. It's casual, unfussy stuff that knows its role: soak up the beer, taste good, don't complicate things.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're doing the Ridgewood trifecta—Rolo's for lunch, Rudy's for pastries, this for late afternoon when you want to sit with a sour ale and not think too hard. Also: any time you need a place where bringing your own takeout won't get you side-eye.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

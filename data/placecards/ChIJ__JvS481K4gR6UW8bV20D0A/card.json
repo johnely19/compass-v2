@@ -16,6 +16,24 @@
     "summary": "Izakaya + sake bar + bottle shop hybrid on Dundas W. Intimate, 4.4 stars, Thu-Sat evenings only. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Dundas strip near Dufferin, where the storefronts toggle between Portuguese bakeries and new-wave Japanese joints. Inside, Sakai squeezes an izakaya, sake bar, and bottle shop into one narrow room—think close-set tables, a compact counter where you can watch the cooks work, and shelves lined with bottles you can drink now or take home.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is izakaya cooking with a chef who's unafraid of Western technique—the hambagu steak arrives under a panko crust that shatters, its interior soaked in demi-glace and topped with molten egg yolk and grated cheese. You'll also find chicken with morels plated with fine-dining precision, the kind of dish that signals ambition beyond yakitori-and-beer. It's Japanese ingredients filtered through a kitchen that knows French foundations, open Thursday through Saturday evenings only.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book ahead for a Friday or Saturday when you want somewhere off the downtown circuit—intimate enough for a date, focused enough that the food demands your full attention. Skip this if you need a quick bite; the limited hours mean people come here on purpose.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

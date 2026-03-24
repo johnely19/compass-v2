@@ -15,6 +15,24 @@
     "summary": "Fine dining institution reopening March 2026 after renos + Gallery test-kitchen chapter. Patrick Kriss sharpened and evolved. Hardest resi in the city.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a scrappy stretch of Spadina near Queen, climbing stairs to a room that Patrick Kriss has been rethinking since 2024. The renovated space keeps the open kitchen and counter seating—where you watch chefs torch and tweeze through fifteen courses—but everything's been stripped back and sharpened. It's quiet, focused, maybe twenty seats total, the kind of room where you hear the sizzle before the explanation.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Kriss came back from running the Gallery test kitchen with a tighter, more precise version of the cooking that made Alo untouchable in the first place. The tasting menu is the only option—expect things like eggs so rich they taste like they've been finished in bone marrow, steak with a buttery weight that lingers, bread you'll think about weeks later. Even the small bites hit with layered, unfamiliar flavors that feel both cerebral and completely satisfying. It's a three-hour commitment and the hardest reservation in the city for a reason.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is the dinner you book when you want to be undone by food—an anniversary, a milestone, or just because you're ready to spend three hours at the counter watching craft at the highest level. Go hungry, go early in the booking cycle, and sit at the kitchen if you can get it.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

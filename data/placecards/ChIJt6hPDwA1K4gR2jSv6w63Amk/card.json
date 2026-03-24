@@ -15,6 +15,24 @@
     "summary": "Second location of cult-favorite Côte de Boeuf — French bistro, steak frites, Chef Teo Paul. Soft-opened March 6. 5.0 rating.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Bloor West in the Annex, walking into the younger sibling of Côte de Boeuf with the same Chef Teo Paul calling shots. There's a bar where you'll want to sit—pressed tight enough that you can hear the couple next to you debating whether to order a second round of croquettes. The room hums with that just-opened energy, all walk-ins and three-hour waits that somehow collapse to 90 minutes if you're willing to perch.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is French bistro cooking stripped to its best parts: steak frites, soppressata croquettes with a slick of béarnaise that cuts through the cream, the kind of food that makes you understand why people line up. Teo Paul knows how to work butter and acid, and the portions don't make you feel like you're paying for the idea of Paris. Pricing stays reasonable—you're not going to wince at the bill, which is rare for steak done this well.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Show up early—5:30 pm if you're smart—or be prepared to kill time in the neighbourhood and hope for a bar seat callback. This is the spot when you want French bistro cooking without the fuss of a reservation system that doesn't exist yet.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

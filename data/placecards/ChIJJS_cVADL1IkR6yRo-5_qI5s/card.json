@@ -15,6 +15,25 @@
   },
   "narrative": {
     "summary": "310-seat intimate venue inside Daniels Spectrum arts hub — excellent acoustics, under-the-radar",
-    "blocks": []
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Regent Park, inside the Daniels Spectrum arts hub—a modern cultural complex that's reshaped this corner of the city. Ada Slaight Hall is the 310-seat performance venue here, all clean architectural lines and tiered seating wrapped in warm wood paneling. The acoustics are legitimately excellent, engineered for chamber music and contemporary performance, which means every sound—whether it's a cello or someone whispering three rows back—carries with startling clarity.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a performance venue. There's no kitchen, no menu, nothing to order beyond what you'd find at a theatre concession during intermission. If you're coming for a show, grab dinner beforehand somewhere else in the neighborhood. The draw here is what's happening on stage, not what's on a plate.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Check the programming schedule and go when there's a performance you actually want to see—indie theatre, contemporary dance, or one of the intimate music series that takes full advantage of the acoustics. This is an under-the-radar venue that punches above its weight for what ends up on its stage.",
+        "id": "block-go-when-2"
+      }
+    ]
   }
 }

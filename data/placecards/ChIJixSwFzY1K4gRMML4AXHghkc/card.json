@@ -16,6 +16,24 @@
     "summary": "Vietnamese-inflected French/Italian pastries; rotating menu; 4.8 rating. Tiny gem, no seating.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll walk past it on Bloor West near Christie Pits if you're not looking carefully—there's barely a sign. Inside, it's a takeaway counter operation with pastries arranged in the case and nothing else: no tables, no chairs, just a small room where you point at what you want and leave. The whole transaction takes two minutes, which is exactly the point.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu rotates, but the through-line is Vietnamese technique meeting French and Italian pastry traditions—think tomato focaccia that's airy and almost too soft, char siu bao with housemade filling, and coconut buns that sell out by mid-morning. You'll also find butter tarts (proper sweet ones), apple crumble pastries, and a shifting lineup of savory options that changes based on what they're feeling that week. Everything's under $10, and by 10:30 a.m. on weekends, half the case is already gone.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go early on a Saturday morning when you want something better than a coffee shop croissant but don't want to sit anywhere. Grab a few things, walk to Christie Pits, and eat them on a bench before the park fills up.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

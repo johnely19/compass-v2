@@ -15,6 +15,24 @@
     "summary": "Whole-animal butchery, ethically sourced Ontario farms. The institution. Sausages, charcuterie, bone broth — everything made in-house. 4.7★ (470 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Baldwin Street in Kensington Market, where Sanagan's still anchors the block in its original storefront. Inside, you face refrigerated cases running the length of the shop, hung with whole cuts and house-made charcuterie, while butchers work behind thick wooden blocks in white aprons. The smell hits immediately—aged meat, smoke from the house sausages, that particular cold-locker chill.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is whole-animal butchery from small Ontario farms, the kind where they break down entire carcasses and nothing gets wasted. You'll find house-made sausages coiled in the case, jerk-marinated cuts ready for the grill, and their bone broth simmering low in the back. They vacuum-pack anything you want—wings, ground meat in one-pound portions—and the ready-made section runs from rotisserie chickens to meat pies you can take home. Expect to spend around $15-30 per pound depending on the cut, less for their prepared foods.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Saturday mornings before you cook for the week, when you can talk through cuts with Claire or Angelique and leave with enough vacuum-sealed packages to fill your freezer. Or swing by on a weeknight when you don't feel like cooking but want something better than takeout—grab a rotisserie chicken and one of their meat pies.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

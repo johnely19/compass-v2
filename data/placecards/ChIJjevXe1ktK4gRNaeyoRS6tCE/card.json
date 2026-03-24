@@ -15,6 +15,24 @@
     "summary": "Second-floor balcony cafe, ethically sourced beans, baked goods, hidden gem vibe",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this second-floor hideaway on a stretch of North York's Yonge Street that doesn't advertise much beyond cell phone shops and convenience stores. Climb the stairs and you're in a spare, well-lit room with a balcony that overlooks the street—enough seats to feel unhurried, not so many that you're sitting in someone's laptop glow. The owner, Hong, works the counter herself, and the whole setup has that unforced quiet of a place that doesn't need to convince you it's worth staying.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The draw here is ethically sourced coffee and a tight lineup of house-baked goods, anchored by a homemade cheesecake that regulars mention by name. Seasonal drinks rotate through—right now it's a peppermint latte with oat milk and marshmallows, the kind of sweet, comforting thing you actually want when it's cold out. Expect straightforward cafe pricing, a proper tea selection, and the sense that everything's made in small, considered batches rather than pulled from a supplier's freezer.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a weekday refuge—come mid-morning or early afternoon when you need a few hours to work or read without pressure to clear your table. It's quiet enough to think, which on weekends might shift, but on a Tuesday it's exactly where you want to be.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -30,40 +30,28 @@
     "summary": "Beloved Gastown brunch spot by day, transforms into Breeze cocktail bar Wed-Sun evenings. French-inspired comfort food. Heritage Carrall Street location. Perfect for Friday arrival brunch or dinner. Rating 4.5/5 (1,982 reviews). $$. Featured in Eater Vancouver's 38 Best.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the heritage end of Carrall Street in Gastown, where the brick buildings still have some grit. Inside, repurposed kitchen tools hang as art—a KitchenAid mixer planted with greenery doubles as a room divider—and tables pack in tight under industrial lighting that bounces off white walls and exposed ductwork. It's the kind of room that reads downtown café by morning, cocktail spot by nightfall.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans French-inflected comfort—think baked eggs with Gouda, house-made sourdough that arrives still warm, and a hot sauce they bottle in-house. Everything skews rich and satisfying, the kind of cooking that fills you up without feeling heavy-handed. Prices sit in the mid-range (mains around $$), reasonable for Gastown. Come Wednesday through Sunday evening and the place pivots entirely into Breeze, a cocktail bar with a different mood altogether.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Friday morning when you've just landed and need a proper meal after airport coffee, or weekend brunch when you're willing to wait a bit for scrambled eggs that actually taste like something. If you're staying through evening, circle back Wednesday or later for cocktails at the Breeze transformation.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"We found this amazing brunch spot and we loved it. The food was amazing including the house made sourdough and hot sauce. I got the baked eggs with Gouda. Their cocktails are also tasty. The decor is cute with modern art made from cooking utensils. Vivian was the best server. Def recommend this place.\"\n\n⭐⭐⭐⭐⭐ \"Another popular brunch spot in Vancouver. Trendy decor, with quirky art work and uses for discarded kitchen utensils and appliances (especially the KitchenAid turned planter, that also acts as a table divider).\nExcellent brunch menu. The staff do a great job of managing the short influx of weekend brunchers.\"\n\n⭐⭐⭐⭐⭐ \"I stumbled upon this super unique and cozy spot while needing some breakfast. I had the scrambled eggs which were super filling and filled with new flavors you don't traditionally get in a scramble. The hot sauce I was given were both amazing! I highly recommend this place for the breakfast lover. Thanks for being so casual and kind twisted fork staff!\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "BRUNCH\n⭐ Twisted Fork Signature Brunch\n   Available daily\n\nBREEZE BAR\n• Brunch Cocktails\n   Available during brunch hours",
-        "sections": [
-          {
-            "name": "BRUNCH",
-            "items": [
-              {
-                "name": "Twisted Fork Signature Brunch",
-                "price": "",
-                "description": "Available daily",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "BREEZE BAR",
-            "items": [
-              {
-                "name": "Brunch Cocktails",
-                "price": "",
-                "description": "Available during brunch hours",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   },

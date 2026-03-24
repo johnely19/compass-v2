@@ -28,47 +28,28 @@
     "summary": "Top-tier pour-over specialists, excellent light roasts, central location",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're steps from the AGO on Dundas West, exiting St. Patrick station into a neighbourhood that toggles between gallery crowds and locals. Inside, it's compact—the kind of small where you'll wait for your pour-over watching the barista work an arm's length away, maybe claiming one of the few seats along the window if you're lucky. The counter dominates, and everything feels deliberate and clean, built for coffee first, lingering second.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a pour-over shop that takes its light roasts seriously—each cup brewed individually with the precision you'd expect from somewhere that charges around $10 for a pour-over with house vanilla syrup and milk. The oat lattes hit that sweet spot of foam and espresso balance, made with beans actually chosen for milk drinks rather than fighting against it. You'll find cappuccinos that don't scald your tongue, plus cookies and cakes if you need something solid, though you're really here for what's in the cup.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You've got an hour before the AGO opens, or you need a reset between galleries and wherever you're headed next. This is your solo coffee pilgrimage spot, not your laptop camp-out.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Amazing oat latte. Perfect ratio of espresso to oat milk, and the right beans for latte. If you like your lattes foamy, you will love this one. Barista was extremely friendly. Overall just a good experience\"\n\n⭐⭐⭐⭐⭐ \"Recommend:\nPour-over with house vanilla syrup and milk – lovely soy-honey aftertaste, though a bit pricey at around $10.\n\nAlso good:\nCappuccino – balanced and smooth.\n\nSkip:\nCold brew – too bitter for my taste.\"\n\n⭐⭐⭐⭐⭐ \"For those in the Dundas area toward the AGO, The Library is a great place for a good coffee and a quick snack.\n\nThe cafe is small, but offers excellent service and a great selection of coffees and quick snacks, such as cookies, cakes, and more.\n\nIt can be accessed via the St. Patrick subway exit and several subway lines.\n\nThe location is wheelchair-accessible, allowing for entry by customers with disabilities. It also has a spring-operated door.\n\nIt's worth adding to your list of good places for quality coffee.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "PREMIUM COFFEE BEANS\n⭐ El Injerto - Auction Lot EL08 - Geisha - La Calaca - Guatemala — $55.00\n   Single-origin specialty coffee\n⭐ La Palmera - Gesha - Peru — $35.00\n   Premium Gesha varietal\n• San Pablo - Ecuador — $35.00\n   Single-origin Ecuador beans\n⭐ Bella Vista - Geisha - Guatemala — $30.00\n   Geisha varietal from Guatemala",
-        "sections": [
-          {
-            "name": "PREMIUM COFFEE BEANS",
-            "items": [
-              {
-                "name": "El Injerto - Auction Lot EL08 - Geisha - La Calaca - Guatemala",
-                "price": "$55.00",
-                "description": "Single-origin specialty coffee",
-                "highlight": true
-              },
-              {
-                "name": "La Palmera - Gesha - Peru",
-                "price": "$35.00",
-                "description": "Premium Gesha varietal",
-                "highlight": true
-              },
-              {
-                "name": "San Pablo - Ecuador",
-                "price": "$35.00",
-                "description": "Single-origin Ecuador beans",
-                "highlight": false
-              },
-              {
-                "name": "Bella Vista - Geisha - Guatemala",
-                "price": "$30.00",
-                "description": "Geisha varietal from Guatemala",
-                "highlight": true
-              }
-            ]
-          }
-        ]
       }
     ]
   }

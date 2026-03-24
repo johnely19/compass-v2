@@ -28,6 +28,24 @@
     "summary": "Artisan-focused design market with modern textiles, floor pillows, and kilim-inspired goods; current installation features fish-scale patterns.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "On a residential stretch of Roncesvalles, you'll find a storefront packed floor-to-ceiling with textiles and home goods that demand your attention all at once. The current installation features fish-scale patterned pieces alongside stacks of kilim-inspired floor pillows, woven storage crates in saturated colors, and modern textiles draped across fixtures. Your eyes won't know where to land first—it's deliberately overstuffed in the best way, more curated chaos than minimalist showroom.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—313 Design Market is an artisan-focused home goods store specializing in textiles, storage solutions, and decorative objects. You'll find colorful crates perfect for corralling clutter, photo frame accessories, incense (though staff knowledge on burn times can be hit-or-miss), and kilim-inspired pillows and throws. Prices lean higher for what appear to be artisan-quality pieces, so ask questions and do your research before committing to pricier items.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're furnishing a new place or finally ready to replace that sad IKEA storage bin with something that actually looks intentional. Come when you have time to browse without rushing—this isn't an in-and-out errand situation.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

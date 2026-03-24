@@ -15,6 +15,24 @@
     "summary": "Contemporary paintings celebrating women. March 4–April 28. Boutique gallery, 5.0★ (18 reviews). Off the beaten path but well-reviewed. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in South Etobicoke's industrial stretch on Evans Avenue, far from the gallery districts most people know. Inside, white walls and natural light create the kind of clean, focused atmosphere where Magdalena Morey's contemporary paintings of women can breathe—intimate enough that the 18 five-star reviews make sense, spare enough that couples have used it as a wedding venue.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Art",
+        "body": "The Magdalena Morey exhibition runs March 4 through April 28, centering women through contemporary painting in a way that clearly resonates—this isn't a quick browse-and-leave spot. Donna Child has built something rare: a boutique gallery that functions as both serious art space and flexible venue, handling everything from rotating exhibitions to private events with the kind of attention that turns first-time visitors into repeat clients.",
+        "id": "block-the-art-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Make the deliberate trip when you want art without the Queen West crowds, or when you're chasing something for your own walls and want a gallerist who actually talks you through the work. It's the kind of place that rewards showing up with intention.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

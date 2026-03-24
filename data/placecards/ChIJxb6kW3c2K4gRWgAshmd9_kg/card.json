@@ -16,6 +16,24 @@
     "summary": "Toronto's legendary cheese & gourmet destination. 4.8★ (2708 reviews). Best-in-city cheese selection, premium meats, fish, and specialty items. The Bottega next door adds bakery/café. Small Talk jazz bar does a Cheese Boutique collab menu. Worth the trip from midtown. $$$",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're driving to South Etobicoke, to a stretch of Ripley Avenue that feels more industrial than gourmet, until you step inside and see bay leaf trees flanking the entrance like sentries. The space opens up into what feels like a European market hall—refrigerated glass cases run the length of the room, a temperature-controlled cheese cave sits behind thick doors, and the aged meat section occupies its own dedicated corner. It's bright, busy, and unapologetically packed with product, the kind of place where tasting before buying isn't just allowed, it's expected.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Toronto's most serious cheese destination, the kind of place where you'll find proper Wensleydale and aged Stilton that other shops don't bother stocking. The selection spans continents—French comté, Italian pecorino, Canadian raw-milk wheels—and the staff will walk you through rinds and ages until you find exactly what you want. Beyond cheese, there's a full charcuterie counter with house-aged meats, fresh fish, extra-aged balsamic vinegars, prepared dishes to take home, and a produce section that carries the kind of fruit you actually want to eat. The adjoining Bottega handles fresh-baked bread and café service, while Small Talk jazz bar next door runs a collaboration menu built around Cheese Boutique provisions.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're building a proper cheese board for people you want to impress, or you need that one specific ingredient midtown shops don't carry. Christmas week turns the place into controlled chaos—energizing if you're into it, overwhelming if you're not—so visit on a weekday afternoon when you can linger in the cheese cave and taste without elbowing through crowds.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

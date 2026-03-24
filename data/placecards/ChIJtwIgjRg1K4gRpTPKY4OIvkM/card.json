@@ -16,6 +16,24 @@
     "summary": "Urban winery making wine on-site + natty wine bar; late-night hours Wed–Sat, industrial-cool Geary Ave corridor. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Geary just west of Lansdowne, in that industrial corridor where galleries and fabrication studios share loading docks. Inside Paradise Grapevine, steel fermentation tanks sit behind glass like art installations, and the room opens up into high ceilings, raw concrete, and enough natural light that it never feels like a cave. There's a patio out back that fills up fast, and the whole place has that rare combination of serious winemaking equipment and somewhere you actually want to spend three hours.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a natural wine bar first—low-intervention bottles, lots of skin-contact whites, a rotating glass list that leans funky and European. They make wine on-site, so you can taste what's fermenting in those tanks, and the frozen rosé is a summer fixture that's more slushy than frosé. The food is meant to accompany the wine—think snacks and small plates rather than full dinners—and cocktails round out the menu if you're not in a wine mood.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late-night Wednesday through Saturday when most wine bars have already flipped their chairs, or during a Geary Art Crawl when you can wander between studios with a glass in hand. It's also the kind of place that rewards a solo visit at the bar if you want to talk through the list with someone who actually knows the winemakers.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

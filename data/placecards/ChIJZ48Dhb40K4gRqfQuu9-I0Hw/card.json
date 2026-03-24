@@ -27,6 +27,24 @@
     "summary": "Brutalist icon aka Fort Book - one of Toronto's best modernist spaces, recently upgraded with 1,200 new study spaces",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on St. George Street in the heart of U of T's campus, facing a fourteen-storey concrete fortress that locals call Fort Book—all raw cement, triangular projections, and that uncompromising geometric brutalism that makes you either gawk or recoil. Inside, you'll find 1,200 study spaces across warren-like floors: individual carrels tucked into concrete alcoves, long tables under fluorescent light, and those signature triangular windows that slice the daylight into strange angles. Spring softens the severity—cherry blossoms ring the building's perimeter, turning the brutalist monument unexpectedly tender.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a research library, not a restaurant—you're here for books, silence, and one of Toronto's most divisive architectural landmarks. There's no kitchen, no menu, just the kind of focused energy that comes from hundreds of students grinding through problem sets and dissertations. Bring your own coffee and snacks if you're planning to stay, or hit one of the campus cafés nearby when you need fuel.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Come in late April when the cherry blossoms hit their peak and you want the Instagram shot without fighting the High Park crowds. Or visit on a quiet afternoon when you're curious about brutalism and want to wander a building that's been polarizing Torontonians since 1973.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

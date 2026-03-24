@@ -15,6 +15,24 @@
     "summary": "Near John's hood; specialty foods + bakery combo; solid neighborhood staple.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "On a residential stretch of St Clair West, Mabel's doubles as both bakery counter and neighborhood grocery, with enough tables inside to settle in with your coffee. You walk in past shelves stocked with farm eggs and house-made sausages, the smell of whatever's baking cutting through the morning light. It's the kind of place designed for dailies—regulars reading the paper, someone picking up bread on their way home.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a bakery that takes its savory as seriously as its sweets—think walnut and lentil hand pies that want ketchup, proper sausage rolls with flaky pastry, loaves you'll actually finish by Thursday. The grocery side skews farm-to-table staples: those sausages come from somewhere specific, the eggs have provenance. Coffee's consistently good, and there's more for vegans and vegetarians than the usual afterthought muffin. Expect bakery prices—a few dollars for pastries, under $10 for the substantial stuff.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your new morning errand, the place you fold into your routine until stopping by feels automatic. Come for coffee and a sausage roll on a weekday, or when you need to pick up actually good bread and eggs without making it a whole thing.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

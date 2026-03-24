@@ -29,6 +29,24 @@
     "summary": "Cafe by day, speakeasy by night via hidden Graffiti Alley entrance (Wed-Sun 5pm+); opened Oct 2025.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the edge of the Fashion District where Richmond curves west, in a clean-lined space that opened in October 2025. Inside, it's all modern minimalism—white walls, natural light through street-facing windows, enough breathing room between tables that you can settle in with a laptop for hours. Come Wednesday through Sunday after 5pm, though, and there's a second act: a speakeasy entrance hidden off Graffiti Alley that transforms the whole operation.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "By day, you're here for the pastry case and the matcha program—the latter light enough that it doesn't taste like sweetened grass clippings. The lemon scones come out properly baked, with that crucial balance between crumbly andStructureException. The menu runs deeper than most new cafes bother with, enough options that you're not stuck choosing between a croissant or a muffin. After dark, the speakeasy menu takes over, though the focus stays on drinks done with the same attention to detail.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Weekday afternoons when you need to actually get work done somewhere that won't hover or rush you out after an hour. The speakeasy side is for weekend evenings when you want to feel like you're in on something, especially if you're the type who likes telling people about the Graffiti Alley entrance.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

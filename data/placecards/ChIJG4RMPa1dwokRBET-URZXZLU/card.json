@@ -14,6 +14,25 @@
   },
   "narrative": {
     "summary": "Innovative Mexican food in Ridgewood, called out by Bon Appétit in March 2026 as a 'must-stop' on the Bushwick→Ridgewood corridor. Cocktails + creative menu. 4.3★ (419 reviews). Walking distance from Dessa & Dean's place.",
-    "blocks": []
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet stretch of Forest Avenue in Ridgewood, past the dollar stores and bodegas, where the Queens blocks start to breathe a little wider. Inside, you'll find a narrow room with dark wood tables, low Edison bulbs hanging from the ceiling, and a compact bar that runs along one wall—the kind of place that feels considered without being precious, with maybe a dozen seats total and mezcal bottles lining the back shelf.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Mexican cooking that's been pulled apart and reassembled—not fusion, exactly, but willing to follow an idea wherever it leads. The menu shifts, but you're looking at things like duck carnitas with fermented pineapple, or tlayudas topped with ingredients that never saw Oaxaca but somehow make sense. Cocktails lean into agave spirits and house-made shrubs, and you'll spend around $18-26 for mains. Bon Appétit flagged it as essential eating on the Bushwick-Ridgewood crawl for good reason.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best for a Friday night when you want to feel like you discovered something, or when you're already in the neighborhood and need a place that rewards the trip out. It's close enough to walk from Dessa & Dean's if you're crashing nearby.",
+        "id": "block-go-when-2"
+      }
+    ]
   }
 }

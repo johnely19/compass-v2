@@ -33,24 +33,22 @@
     "summary": "Saha Eatery is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
     "blocks": [
       {
-        "id": "arrival",
-        "title": "Arrival",
-        "body": "Address: 38128 2 Ave, Squamish, BC V8B 0A6, Canada."
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find Saha on 2nd Avenue in downtown Squamish, the kind of casual counter-service spot where you order at the front and grab a seat wherever you like. The setup is straightforward—bright overhead lighting, simple tables, and an open kitchen where you can watch the kebabs come together. It's a post-hike, pre-climbing-session kind of place that draws locals who know exactly what they're ordering.",
+        "id": "block-the-space-0"
       },
       {
-        "id": "room",
-        "title": "Room",
-        "body": "Expect a lively local crowd with mountain-town energy."
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Middle Eastern comfort food with crispy-edged falafel, char-grilled kebabs, and lamb sausages that taste like they've been properly seasoned and actually seared. The falafel plates come with tahini and hummus on the side—the kind of textures that make you alternate bites, crunchy exterior against smooth, nutty sauce. Servers will steer you toward the kebabs with hot sauce if you ask, and they're usually right. Plates run around $15-20, wraps less.",
+        "id": "block-the-food-1"
       },
       {
-        "id": "food",
-        "title": "Food & Drinks",
-        "body": "See photo gallery sections for food, drinks, and atmosphere references."
-      },
-      {
-        "id": "ops",
-        "title": "Operational snapshot",
-        "body": "Google rating 4.5 from 963 reviews."
+        "type": "prose",
+        "title": "Go When",
+        "body": "You've just come down from the Chief or you're between outdoor plans and need something fast but better than a food truck. It's the kind of place that'll keep serving even when the power's out, which tells you something about how it fits into the town.",
+        "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",

@@ -16,6 +16,24 @@
     "summary": "Korean-style cake café with cloud-like confections; 4.8 rating with early fans. Quiet gem on Dundas W for soft pastry lovers.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find this Korean-style cake café on a quiet stretch of Dundas West, just west of Trinity Bellwoods. Inside, it's all clean lines and pale wood—minimalist tables spaced generously enough that you could actually open a laptop, soft instrumental music threading through the room. The aesthetic leans fully into that Seoul café vibe: white walls, simple chairs, nothing competing with the cakes under glass at the counter.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a place built around cloud-like Korean pastries—the kind that look almost too delicate to cut into. The Matcha Brownie Basque Cheesecake shows up in nearly every review, dense and creamy with that signature burnt top, while the Earl Grey cake and seasonal strawberry offerings rotate through the case. Pair any slice with their Strawberry Matcha Latte, which comes out creamy and not-too-sweet. Expect to spend around $8-12 for cake, a few dollars more for drinks.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best on a weekday afternoon when you need a quiet corner to work through something, or when you want to linger over tea and cake without rushing. Skip weekend afternoons unless you're prepared to wait—word's gotten out fast.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

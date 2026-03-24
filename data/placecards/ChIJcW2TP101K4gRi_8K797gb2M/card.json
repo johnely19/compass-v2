@@ -16,6 +16,24 @@
     "summary": "Dedicated listening bar—music-first room, late-night hang; feels like the “go for the system” spot.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the grittier stretch of West Queen West past Gladstone, where the storefronts still feel lived-in. Inside, the room is small and deliberate—a proper sound system mounted where other bars would hang art, low seating that makes you settle in, dim enough that the music becomes the architecture. This isn't a place with a DJ booth as decoration; the system is the point, and everyone here knows it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Boogie is a listening bar, not a restaurant—you come for the sound system and whatever the bartender pours. There's no kitchen, no menu to speak of, just drinks to keep your hands occupied while the music does the work. Think of it as the late-night endpoint, not the dinner destination.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go late—after 11 when the crowd that knows shows up and the room fills with underground scene regulars who've been chasing good sound for decades. This is where you end the night when you actually want to hear the music, not just feel the bass.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

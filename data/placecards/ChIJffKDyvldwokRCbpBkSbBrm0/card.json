@@ -15,6 +15,24 @@
     "summary": "Thai noodle shop just landed on Eater's Brooklyn Heatmap for March 2026. Small counter-service spot doing curries and noodles with intention. 5.0★ (83 reviews) — perfect score is rare. Dessa's neighborhood-adjacent, easy walk from Ridgewood. A clean Williamsburg–Bushwick–Ridgewood corridor add, right in John’s preferred orbit.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet Bushwick block that still feels residential, just where the neighborhood bleeds into Ridgewood. Inside, it's a small counter-service setup—order at the register, grab a seat at one of the handful of tables. The space runs narrow and unfussy, the kind of spot where you're there for what's in the bowl, not the decor.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Thai cooking with a tight menu and clear point of view—curries and noodles done right, nothing more. The GiGi curry shows up in bowls with fried tofu or your protein of choice, rich and balanced enough that people keep coming back for it. The beef noodle soup has a broth that actually tastes like something, deep and full-bodied, the kind that makes you understand why it's called comforting. Massaman curry, shrimp and chicken wontons, and a Thai tea matcha round out a menu that's well-priced and clearly made by someone who knows what they're doing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You're in Ridgewood or the Bushwick-Williamsburg stretch and want something good without the scene—an easy weeknight dinner or a solo lunch where you can sit with a bowl of noodles and not think too hard.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -15,6 +15,24 @@
     "summary": "Basement cocktail bar with evolving design, creative takes on classics. Bartender Atlas pick. 4.7 rating, 59 reviews.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West, descending into a sprawling basement that manages to feel like a '70s rec room designed by someone with excellent taste. The lighting is low and intentional, jazz plays at a volume that lets you actually talk, and there are massive booths upholstered in something plush enough for groups of six or more. It's vast without feeling empty—more luxe laboratory than dungeon, though the subterranean thing does add a certain remove-from-the-world appeal.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar, not a kitchen, and the menu is built around creative riffs on classics. You'll find things like the Uh Negroni ($23), which skews fruitier than the original, whiskey highballs, and a rotating list of off-menu specials that the bartenders will walk you through. The danger here is how easy these drinks go down—you won't taste the alcohol until you stand up. Expect cocktails in the low-to-mid twenties.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is date night territory, especially if you arrive early—think 8:15 on a Saturday before the rush—and want somewhere moody without being sceney. Solo drinkers will also feel at home posted up with a highball and the jazz.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

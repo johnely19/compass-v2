@@ -19,6 +19,24 @@
     "summary": "World premiere Afrofusion dance-theatre epic. Mensah is a Dora-nominated choreographer who's worked with National Ballet School. Fuses West African movement, modern dance, theatre. March 13–15 (just concluded but reviews emerging — artist to watch).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in North York at the Meridian Arts Centre, a purpose-built theatre complex where institutional hallways give way to intimate performance halls with excellent sightlines from every seat. The house lights stay dimmed except for strips along the side walls—a quirk that reminds you this is a working arts venue, not a precious black box. What matters is the stage, where Esie Mensah's dancers move through Afrofusion choreography that fuses West African grounded movement with the lifted suspension of modern dance.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a dance-theatre experience that feeds you in a different way. Mensah, a Dora-nominated choreographer who's shaped dancers at the National Ballet School, creates work that layers contemporary technique over traditional West African forms, building stories through bodies in motion. ZAYO is her world premiere, a full-evening piece that treats dance like narrative cuisine: each section building on the last, physical vocabularies colliding and merging. Tickets run theatre prices, not dinner prices, but you leave full.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Catch Mensah's next premiere the moment it's announced—choreographers this good at bridging cultural movement languages don't stay under the radar long. If you missed ZAYO's March run, keep your eye on the Meridian's dance programming and follow her company's schedule.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

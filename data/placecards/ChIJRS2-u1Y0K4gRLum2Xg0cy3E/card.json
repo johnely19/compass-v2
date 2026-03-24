@@ -29,6 +29,24 @@
     "summary": "Relaxed vibe, cheese and charcuterie focus, always-changing interesting wine list - casual neighborhood anchor",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a residential stretch of Dundas West where wine bars outnumber banks. Inside, bottles line the walls from floor to ceiling, plants hang in the windows catching afternoon light, and there's a lived-in feeling to the wooden tables and mismatched seating that makes you want to settle in for a second bottle.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu changes with whatever's good, but it's built around the kind of food that makes sense with natural wine—kampachi crudo with nori jam, roasted squash that tastes like the season, market fish that shifts weekly. There's always cheese and charcuterie if you're keeping it simple, but the kitchen surprises with how much flavor they coax from a short, focused menu. Expect to spend around $15-20 for smaller plates, more for the fish.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your neighborhood anchor when you want good wine without the ceremony—a weeknight with a friend when you're both too tired to cook but want something better than takeout. Come solo on a Tuesday and post up with a book if you need to remember what it feels like to unwind.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

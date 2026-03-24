@@ -15,6 +15,24 @@
     "summary": "Imported Spanish olive oils, vinegars, tinned seafood, cured meats. The conservas trend in a dedicated shop. Niche, passionate, anti-generic. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Mid-Danforth, tucked between the Greek restaurants and coffee shops that define this stretch. You walk into what feels more like someone's carefully curated pantry than a retail space—shelves lined floor-to-ceiling with tins of conservas, bottles of Spanish olive oil catching afternoon light, bags of yerba mate, and vacuum-sealed packages of jamón. Sandra's usually behind the counter, and the whole place hums with the energy of someone who actually travels for this stuff, not a buyer flipping through catalogues.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is where you come when you're done with generic grocery store \"imports.\" The conservas selection runs deep—proper Spanish tinned seafood, the kind that costs what it should. Shelves hold imported olive oils and vinegars you won't find at the LCBO, cured meats sliced to order, and prepared foods like empanadas, tamales, and paella you can take home. Sandra will also make tres leches cakes and churros on request if you ask a few days ahead. It's a shop, not a restaurant, but the prices reflect actual sourcing—you're paying for the real thing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You need to stock your pantry with things that actually taste like where they're from, or you're planning a dinner party and refuse to serve mediocre charcuterie. Also: when you want to talk to someone who knows why one tin of anchovies costs $8 and another costs $24.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

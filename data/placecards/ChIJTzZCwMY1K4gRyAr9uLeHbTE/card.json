@@ -29,6 +29,24 @@
     "summary": "Italian-American red-sauce joint from Giulietta alum in former Cubana space, from-scratch pasta",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Roncesvalles in the old Cubana spot, and the transformation is total. Inside, it's red sauce theater: checkered floors, dark wood booths, the kind of low lighting that makes everyone look good and feel like a regular. There's energy here—tables packed close enough that you catch fragments of other conversations, the open kitchen throwing heat and noise into the room.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Italian-American done right by a Giulietta alum who knows how to work pasta from scratch. The menu leans into red-sauce classics—think veal parm, beef tartare, tagliatelle with ragu that clings to every ribbon. The garlic bread arrives drenched in butter and herbs, the kind that makes you order a second round before your mains hit. Mozzarella sticks get made in-house, calamari comes properly tender, and everything tastes like someone actually cares.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your Friday night spot when you want the energy of a full room and don't mind waiting for a table. Come with a group that orders half the menu and shares everything, or bring a date who appreciates that sometimes chicken parm is exactly the right move.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

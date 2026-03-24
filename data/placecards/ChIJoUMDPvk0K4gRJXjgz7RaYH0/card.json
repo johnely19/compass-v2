@@ -15,6 +15,24 @@
     "summary": "Recently relocated to larger space, bright and airy, extensive low-intervention and natural wines by glass/bottle - modern classic",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Ossington, mid-strip between the vintage shops and late-night spots. Paris Paris just moved into a bigger space, and you feel it immediately—high ceilings, natural light flooding through tall windows, enough room between tables that you're not listening to your neighbor's date. The aesthetic skews modern and minimal, the kind of place that lets the wine bottles and actual humans provide the warmth.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu reads modern French-leaning with enough restraint to let ingredients speak. That octopus everyone mentions comes tender with char, plated like they actually care how it looks. The kitchen knows how to finish strong—the lava cake is the molten-centered kind that requires actual timing, not a freezer trick. Pair everything with their serious natural wine list, available by the glass or bottle, which means you can get weird without committing to 750ml of funk.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your date spot when you want something polished without the stuffiness, or when you're trying to impress someone who actually knows wine. Grab a seat at the bar if you're solo and want Camila or whoever's behind the stick to steer you toward something good.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

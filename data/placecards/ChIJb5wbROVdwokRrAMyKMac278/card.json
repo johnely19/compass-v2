@@ -16,6 +16,24 @@
     "summary": "From the Daphne's team — Italian sandwich shop by day, 25-seat restaurant by night. Chef Paul Cacici's pasta and Italian plates. 4.8★ (131 reviews). Eater Queens and The Infatuation both list it as a Ridgewood standout.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Fresh Pond Road in Ridgewood, where the storefronts still have hand-painted signs and the rent hasn't been obscene for decades. Inside, twenty-five seats fill a narrow room that shifts from daytime sandwich counter to evening restaurant—a few small tables, close enough that you'll overhear your neighbors' conversation, with the kind of lighting that makes everyone look like they're having a better time than they probably are.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Paul Cacici runs an Italian sandwich operation during lunch, then flips to full pasta service at night—the kind of cooking that leans into fat and acid without apologizing for it. The same team behind Daphne's is here, so expect hand-rolled pastas with the texture that only comes from someone who's done it a thousand times, and plates built around whatever's actually good that week. It's neighborhood Italian that doesn't need to announce itself as 'elevated' because the food already does the talking.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Dinner with someone you've known long enough that you don't need to fill every silence, or when you want to eat something that reminds you why pasta matters. Skip it if you need a quiet conversation—the room's too small for secrets.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

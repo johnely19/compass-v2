@@ -28,6 +28,24 @@
     "summary": "Montreal transplant; vintage + industrial vibe; great eye-catching window displays and eclectic mix.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Dundas West strip near Trinity Bellwoods, where VdeV's windows stop you mid-stride with curated vignettes that change like gallery installations. Inside, vintage French schoolhouse chairs sit alongside industrial metal shelving, everything arranged with the kind of precision that makes browsing feel intentional. The Montreal aesthetic is evident—concrete floors, white walls, and that edited mix of old and new where a ceramic vase costs what it should and feels worth it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Goods",
+        "body": "This isn't a restaurant—it's a home goods shop that solves the problem of where to find furniture and objects that don't look like everyone else's apartment. You'll find French linens, handmade ceramics, vintage glassware, and furniture pieces that split the difference between investment and impulse buy. The selection leans heavily into natural materials and muted tones, with enough personality (sculptural candles, quirky matchboxes, unexpected textiles) that gift shopping doesn't feel like a chore. Expect to leave with something you didn't know you needed, priced fairly for the curation.",
+        "id": "block-the-goods-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Come on a weekday afternoon when you can browse without crowds and actually talk to the staff, who know their inventory well enough to steer you toward something specific. It's ideal for last-minute gift runs when you need something that looks considered, not panicked.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -29,193 +29,28 @@
     "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto — next-gen artists, eclectic programming. 4.4★ (876 reviews). $$",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queen West, past the chain shops, where the street still has some edge. Inside, it's a narrow room with dim lighting that leads to a back performance space—the kind of place where the stage feels close enough to see the spit valves empty. The entrance fee ($10-15) gets you past the front bar into that back room where experimental jazz and spoken word happen inches from your drink.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "There isn't any. This is a listening room with a drinks menu—beer, wine, cocktails at reasonable prices for a venue that actually pays musicians. You're here for the next-gen jazz artists and unscripted collaborations, not dinner. Grab food before you come or after the set ends.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go on a night when you actually want to hear something you've never heard before—smash jams, experimental sets, spoken word that doesn't play it safe. This isn't background music for conversation; it's a proper listening room where the programming takes risks.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Had a fantastic time coming here for a jazz night. Inspiring music and stories.  Owner Shawn was great to give a tour of the back room as well. Has a drinks menu. No food. Looking forward to coming back. $15 entrance fee.\"\n\n⭐⭐⭐⭐⭐ \"Funky place for Jazz! I was here for a smash jam of Local Jazz artists that decided to collaborate together unscripted! Super fun and different. Great service too and alcohol price was reasonable. $10 dollars entry fee to the back stage room.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "THE POETRY COCKTAILS\n⭐ BITCHES BREW — $16\n   Aged dark Caribbean rum & tequila with grapefruit nectar, lime & spice\n• SPANISH FLY — $16\n   Caribbean rum, mint liquor & lime\n• BACK TO BLACK — $16\n   Kentucky bourbon & spice with fresh lime & bitters\n• COCOA CURE — $15\n   Baileys & crème de cacao with dark chocolate & nutmeg\n• GINGER LYNN — $16\n   Gin, amaro & ginger beer\n⭐ POETRY ESPRESSO MARTINI — $16\n   Premium vodka, Kahlúa & espresso\n\nTHE CLASSICS\n• OLD FASHIONED — $16\n   Bourbon, orange zest, ginger & bitters\n• MANHATTAN — $16\n   Premium whiskey, sweet vermouth & angostura bitters\n• THE FRENCH 75 — $16\n   Gin, lime juice & prosecco\n• COSMOPOLITAN — $15\n   Premium vodka, cointreau & cranberry\n• NEGRONI POETRY — $16\n   Sweet vermouth, campari & gin\n\nWINES & SPARKLING\n• MALBEC (ARGENTINA) — $14/$30/$50\n   5oz / half litre / 750ml bottle\n• NERO D'AVOLA (SICILY) — $14/$35/$60\n   5oz / half litre / 750ml bottle\n• ROSÉ (CANADA) — $14/$35/$60\n   5oz / half litre / 750ml bottle\n• PROSECCO — $14/$65\n   5oz / bottle\n⭐ CHAMPAGNE — from $250\n   Not sold by the glass\n\nPREMIUM SPIRITS & BOTTLE SERVICE\n• CASAMIGOS BLANCO — $300\n   Premium tequila\n• VODKA GREY GOOSE — $300\n   Premium vodka\n• GIN HENDRICK'S — $300\n   Premium gin\n• COGNAC HENNESSY VS — $300\n   Premium cognac\n• CHAMPAGNE VERVE CLICQUOT — $250\n   Premium champagne\n\nMOCKTAILS & NON-ALCOHOLIC\n• THE POETRY MOCKTAILS — $15\n   Choice of lychee, passion fruit & ginger beer flavour\n• HEINEKEN — from $10\n   Non-alcoholic beer option\n• SAPPORO — from $10\n   Non-alcoholic beer option\n• GUINNESS — from $10\n   Non-alcoholic beer option",
-        "sections": [
-          {
-            "name": "THE POETRY COCKTAILS",
-            "items": [
-              {
-                "name": "BITCHES BREW",
-                "price": "$16",
-                "description": "Aged dark Caribbean rum & tequila with grapefruit nectar, lime & spice",
-                "highlight": true
-              },
-              {
-                "name": "SPANISH FLY",
-                "price": "$16",
-                "description": "Caribbean rum, mint liquor & lime",
-                "highlight": false
-              },
-              {
-                "name": "BACK TO BLACK",
-                "price": "$16",
-                "description": "Kentucky bourbon & spice with fresh lime & bitters",
-                "highlight": false
-              },
-              {
-                "name": "COCOA CURE",
-                "price": "$15",
-                "description": "Baileys & crème de cacao with dark chocolate & nutmeg",
-                "highlight": false
-              },
-              {
-                "name": "GINGER LYNN",
-                "price": "$16",
-                "description": "Gin, amaro & ginger beer",
-                "highlight": false
-              },
-              {
-                "name": "POETRY ESPRESSO MARTINI",
-                "price": "$16",
-                "description": "Premium vodka, Kahlúa & espresso",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "THE CLASSICS",
-            "items": [
-              {
-                "name": "OLD FASHIONED",
-                "price": "$16",
-                "description": "Bourbon, orange zest, ginger & bitters",
-                "highlight": false
-              },
-              {
-                "name": "MANHATTAN",
-                "price": "$16",
-                "description": "Premium whiskey, sweet vermouth & angostura bitters",
-                "highlight": false
-              },
-              {
-                "name": "THE FRENCH 75",
-                "price": "$16",
-                "description": "Gin, lime juice & prosecco",
-                "highlight": false
-              },
-              {
-                "name": "COSMOPOLITAN",
-                "price": "$15",
-                "description": "Premium vodka, cointreau & cranberry",
-                "highlight": false
-              },
-              {
-                "name": "NEGRONI POETRY",
-                "price": "$16",
-                "description": "Sweet vermouth, campari & gin",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "WINES & SPARKLING",
-            "items": [
-              {
-                "name": "MALBEC (ARGENTINA)",
-                "price": "$14/$30/$50",
-                "description": "5oz / half litre / 750ml bottle",
-                "highlight": false
-              },
-              {
-                "name": "NERO D'AVOLA (SICILY)",
-                "price": "$14/$35/$60",
-                "description": "5oz / half litre / 750ml bottle",
-                "highlight": false
-              },
-              {
-                "name": "ROSÉ (CANADA)",
-                "price": "$14/$35/$60",
-                "description": "5oz / half litre / 750ml bottle",
-                "highlight": false
-              },
-              {
-                "name": "PROSECCO",
-                "price": "$14/$65",
-                "description": "5oz / bottle",
-                "highlight": false
-              },
-              {
-                "name": "CHAMPAGNE",
-                "price": "from $250",
-                "description": "Not sold by the glass",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "PREMIUM SPIRITS & BOTTLE SERVICE",
-            "items": [
-              {
-                "name": "CASAMIGOS BLANCO",
-                "price": "$300",
-                "description": "Premium tequila",
-                "highlight": false
-              },
-              {
-                "name": "VODKA GREY GOOSE",
-                "price": "$300",
-                "description": "Premium vodka",
-                "highlight": false
-              },
-              {
-                "name": "GIN HENDRICK'S",
-                "price": "$300",
-                "description": "Premium gin",
-                "highlight": false
-              },
-              {
-                "name": "COGNAC HENNESSY VS",
-                "price": "$300",
-                "description": "Premium cognac",
-                "highlight": false
-              },
-              {
-                "name": "CHAMPAGNE VERVE CLICQUOT",
-                "price": "$250",
-                "description": "Premium champagne",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "MOCKTAILS & NON-ALCOHOLIC",
-            "items": [
-              {
-                "name": "THE POETRY MOCKTAILS",
-                "price": "$15",
-                "description": "Choice of lychee, passion fruit & ginger beer flavour",
-                "highlight": false
-              },
-              {
-                "name": "HEINEKEN",
-                "price": "from $10",
-                "description": "Non-alcoholic beer option",
-                "highlight": false
-              },
-              {
-                "name": "SAPPORO",
-                "price": "from $10",
-                "description": "Non-alcoholic beer option",
-                "highlight": false
-              },
-              {
-                "name": "GUINNESS",
-                "price": "from $10",
-                "description": "Non-alcoholic beer option",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   }

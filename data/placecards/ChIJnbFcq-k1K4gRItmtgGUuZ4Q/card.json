@@ -15,6 +15,24 @@
     "summary": "Elite light roast specialty roaster, competition-level quality, cited as top Toronto roaster",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're at the corner of Junction and Bloor West, in a stripped-down roastery with bleacher seating that looks down onto the coffee bar like you're watching theatre. Most of the room is tall bar stools and a few booths, plus shelves stocked with beans and brewing gear for sale. The vibe skews serious about coffee but loose about everything else—people settle in to talk for hours.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is one of Toronto's elite light roast specialists, the kind of place pulling competition-level shots and rotating through single origins you won't find at the café down the street. The baristas will walk you through pour-over options with actual enthusiasm, executing each brew with the precision of someone who cares whether you taste the stone fruit or the bergamot. Expect to pay café prices, but the pour-overs are surprisingly affordable for this calibre.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want to actually taste what elite coffee can do, not just grab fuel on your way somewhere else. Or when you need a place to sit at the bar and work through something—alone or with a friend who also likes to talk through things slowly.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

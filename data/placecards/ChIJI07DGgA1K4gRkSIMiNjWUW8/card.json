@@ -16,41 +16,22 @@
     "summary": "Tokyo's cult organic matcha cafe — first North American location. Opened on Ossington strip. Ceremonial-grade matcha, minimal design, Japanese precision. No rating yet (brand new). Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "MATCHA BEVERAGES\n⭐ Morning Matcha\n   Matcha specially prepared for morning enjoyment\n⭐ Matcha Latte\n   Easy to make matcha latte at home\n• At Home Matcha\n   Vibrant green color matcha to add color to your home time\n\nMATCHA ACCESSORIES & KITS\n⭐ Matcha Cup & Spoon Set\n   Convenient cup and spoon for casual matcha enjoyment",
-        "sections": [
-          {
-            "name": "MATCHA BEVERAGES",
-            "items": [
-              {
-                "name": "Morning Matcha",
-                "description": "Matcha specially prepared for morning enjoyment",
-                "highlight": true
-              },
-              {
-                "name": "Matcha Latte",
-                "description": "Easy to make matcha latte at home",
-                "highlight": true
-              },
-              {
-                "name": "At Home Matcha",
-                "description": "Vibrant green color matcha to add color to your home time"
-              }
-            ]
-          },
-          {
-            "name": "MATCHA ACCESSORIES & KITS",
-            "items": [
-              {
-                "name": "Matcha Cup & Spoon Set",
-                "description": "Convenient cup and spoon for casual matcha enjoyment",
-                "highlight": true
-              }
-            ]
-          }
-        ]
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Ossington strip, where Tokyo's cult matcha brand just opened its first North American outpost. Inside, it's all pale wood, white walls, and the kind of minimal restraint that only comes from actual Japanese design—not the Instagram version. A few small tables, clean lines, and light that makes the green tea look even greener.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a cafe that happens to serve matcha—it's ceremonial-grade organic matcha flown in from Tokyo, prepared with the precision you'd expect from a place that built its reputation in Japan. The drinks are the point: traditional matcha whisked to order, matcha lattes made properly, seasonal specials that follow what's happening in the Tokyo locations. There's minimal food, mostly Japanese pastries and small sweets designed to complement the tea, with drinks running $6-12.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is for a deliberate mid-afternoon break when you want something that actually tastes like what it's supposed to be. Come solo with a notebook, or bring someone who cares about the difference between ceremonial and culinary grade.",
+        "id": "block-go-when-2"
       }
     ]
   }

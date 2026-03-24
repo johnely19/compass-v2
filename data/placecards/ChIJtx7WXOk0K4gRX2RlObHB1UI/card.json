@@ -15,6 +15,24 @@
     "summary": "Underground 30-seat screening room, only 33 Google reviews—the insider's arthouse pick. International cinema, experimental programming. True hidden gem.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in a residential pocket where Kensington bleeds into Bathurst, walking past a house you've probably passed a hundred times without noticing. Inside, owner Regg Hart has built a 30-seat underground screening room lined with vintage horror masks, movie posters floor-to-ceiling, and collectibles that feel more like a cinematic cabinet of curiosities than a theatre. The light is dim, the seats are close, and you're surrounded by decades of film obsession made physical.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't about food—Cineforum is a screening room, not a restaurant. You come for international and experimental cinema programming that shifts weekly: golden-age horror one weekend, silent classics like Metropolis or a remastered Nosferatu synced to Radiohead the next. Hart introduces each film himself, bookending screenings with context and passion that makes every night feel curated for the 33 people who know this place exists.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want a weekend screening that reminds you cinema can still feel like a secret—horror fanatics on Friday, silent film devotees on Wednesday, anyone tired of multiplex sameness any night Hart's programming something strange and perfect.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

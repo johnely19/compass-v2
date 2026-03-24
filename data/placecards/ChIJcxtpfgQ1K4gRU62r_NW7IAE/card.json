@@ -15,6 +15,24 @@
     "summary": "Former Momofuku Shoto crew. All-day spot with seasonal shared plates and maybe the best sandwich program in the west end. Sunday roast has become the neighbourhood's open secret. 4.7★ (622 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet stretch of Lansdowne in Wallace Emerson, the kind of block where corner stores outnumber cafés. Inside, the room is clean-lined and bright—white walls, blond wood tables, and enough natural light that you notice the plants on the windowsill. The space feels more daytime café than dinner destination, with an open kitchen you can watch from almost anywhere you sit.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The Momofuku Shoto alums behind Donna's cook with that same confidence—seasonal, produce-forward shared plates that shift with what's good, and a sandwich program that's quietly become legendary in the west end. You'll find things like duck rillette on perfect bread, roasted vegetables that taste like themselves, and whatever pasta they're running that week. Come Sunday, the roast—a proper, multi-component feast—draws regulars who book ahead. Plates run in the mid-twenties, sandwiches closer to fifteen.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Lunch on a weekday when you want one of those sandwiches and a glass of natural wine without the weekend crowds. Or Sunday for the roast, which has the feel of a ritual you're lucky to be in on.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

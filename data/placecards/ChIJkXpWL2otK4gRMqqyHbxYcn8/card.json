@@ -15,6 +15,24 @@
     "summary": "Canada's biggest contemporary art fair returns March 26-29. 250+ juried Canadian artists. Opening Night Party Thu Mar 26 6-10pm. Buy directly from artists. Enercare Centre. 4.3★ (6006 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Exhibition grounds near the lake, in the vast hangar-like Enercare Centre where concrete floors and industrial ceiling beams span what feels like acres. During Artist Project, that enormous shell transforms into a grid of white-walled booths where over 250 Canadian artists hang work, set up pedestals, and stand ready to talk you through every piece. The light is overhead fluorescent softened by spotlights on individual canvases, and you navigate wide aisles that stretch far enough you'll want comfortable shoes.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's Canada's largest contemporary art fair, four days of buying directly from the artists who made the work. You're walking booth to booth looking at paintings, sculpture, photography, textiles, all juried, all for sale, with price tags that range from accessible prints to investment pieces. The Opening Night Party on Thursday runs 6-10pm if you want first pick and a glass of wine in hand while you browse. Admission gets you the full run of the fair, plus whatever conversations you fall into with the people who actually made what's on the walls.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Opening night Thursday if you're serious about buying before the good stuff disappears, or Sunday afternoon when the crowds thin and artists are more willing to negotiate. Weekday mornings if you want space to actually see the work without getting jostled.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -29,6 +29,24 @@
     "summary": "The romantic hum of this Spanish-inflected restaurant makes it a perennial chef pick for date night — featured in Toronto Star's 2026 list. Late-night energy, adventurous small plates, great wine list. 4.5★ (2913 reviews). $$$$. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on College West, where Little Italy bleeds into the residential blocks past Ossington. Inside, the room runs long and narrow—dim Edison bulbs hang low over dark wood tables packed close enough that you catch fragments of neighboring conversations, and there's a small bar up front where walk-ins perch on stools hoping for a table to open up. The energy ticks up as the night goes on, that packed-in hum that makes you lean closer across the table.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu leans Spanish with the kind of confidence that doesn't announce itself—jamón ibérico sliced to order, jamón croquetas that crack open creamy, Brussels sprout salad that people remember weeks later. You're ordering multiple small plates and splitting everything, though the patatas bravas are apparently skippable. The wine list runs deep, and at this price point (high side of $$$$) you're paying for the curation as much as the food. Fair warning: they fire everything at once, so your table becomes a crowded still life unless you explicitly ask them to pace it.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a date spot, full stop—the kind where you're deciding between a third plate or another glass of wine at 10 p.m. If you can snag the Saturday lunch prix fixe (noon to 4 p.m.), it's the same kitchen with breathing room and daylight, which changes the whole mood.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

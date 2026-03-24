@@ -16,6 +16,24 @@
     "summary": "Former Vela chef Marvin Palomo. Asian-Italian fusion with fully halal-certified meat program — a first for this stretch of Queen. Szechuan demi, umeboshi, dashi vinaigrette alongside Italian staples. 4.9★ (214 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Parkdale edge of Queen West, where the strip still feels a little raw around the edges. Inside, the room runs narrow with tables lined close enough that you catch fragments of neighboring conversations, warm lighting pooling over white tablecloths that signal something more formal than the storefront suggests.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Marvin Palomo, who cooked at Vela, is running an Italian menu threaded with Asian technique—Szechuan demi-glace, umeboshi, dashi vinaigrette showing up where you don't expect them. The beef carpaccio hits with chili aioli, octopus gets worked over with those cross-cultural instincts, and the mushroom pappardelle leans traditional. It's Toronto's first fully halal-certified Italian program on this stretch, which matters if it matters to you, and the kitchen doesn't apologize for the fusion moves even when diners wish it would stay closer to the canon.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Date night when you want something new without the newness being the whole point. It's polished enough to feel like an occasion, familiar enough that no one's going to get precious about explaining the menu to you.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -15,6 +15,24 @@
     "summary": "De La Espada and Carl Hansen - studio-created works and limited editions, 5-star rating",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the Annex near Davenport, stepping into what feels more like a Copenhagen design atelier than a Toronto showroom. Clean white walls frame pieces you recognize from design magazines—De La Espada's walnut tables, Carl Hansen's Wishbone chairs—each positioned with gallery-level precision. Light pours through tall windows onto concrete floors, and everything you touch is studio-quality: limited editions, grain you can actually feel, furniture as considered objects.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—Hollace Cluny is a furniture showroom specializing in high-end Danish and Portuguese modern design. You're here to source a walnut dining table for a renovation project or finally buy that Hans Wegner lounge chair you've been eyeing. The team, led by Alistair, walks you through provenance and construction details like sommeliers discussing terroir, and everything ships directly for your residential or commercial space.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book an appointment when you're serious about investing in furniture that'll outlast your lease—or your mortgage. This is for designers sourcing client projects or anyone ready to graduate from flat-pack particleboard to pieces with actual joinery.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

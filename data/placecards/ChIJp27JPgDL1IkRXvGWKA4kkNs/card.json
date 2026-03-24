@@ -15,6 +15,24 @@
     "summary": "New tropical-leaning cocktail bar from industry heavyweights. Just opened 2026. Intimate, design-forward. 5.0★ (6 reviews — brand new). Cocktail-first, stylish.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on a quiet stretch of Gerrard East in Leslieville, where the streetcar tracks catch the light. Inside, the space is small and deliberate—maybe a dozen seats at most, with a backlit bar where you can watch bartenders work through their ten-day infusions and in-house carbonation setups. The soundtrack leans into the tropical cocktail program without tipping into tiki kitsch, and the design feels considered without being precious.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a cocktail bar first, but the kitchen isn't an afterthought. The menu is tight and unfussy—scallops that consistently steal the show, plus a burger and fried chicken that photograph well and apparently taste better. Everything's meant to keep you drinking through a second or third round. Expect small plates in the mid-teens, mains hovering around the low-twenties.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book this for the night you want to try everything on a short cocktail menu with friends who care about what's in the glass. It's new enough that you'll feel like you're in on something, intimate enough that the bartender will remember your order by round two.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

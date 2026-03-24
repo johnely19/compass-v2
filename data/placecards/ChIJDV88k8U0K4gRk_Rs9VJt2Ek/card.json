@@ -28,6 +28,24 @@
     "summary": "1960s-inspired speakeasy inside AGO's Grange House. Craft cocktails + cultural rebellion theme. Opens THIS WEDNESDAY Mar 18, runs through Jun 5. Pairs perfectly with Edna Taçon exhibition. 4.5★.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're inside the AGO's historic Grange House, where a members-only salon has been transformed into a 1960s-inspired speakeasy through June 5th. The rooms unfold with the intimacy of a house party—low lighting, vintage furniture, walls that still carry the weight of 19th-century architecture now reimagined through a cultural rebellion lens. It's small, hushed, deliberately hidden from the gallery crowds outside.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The draw here is craft cocktails calibrated to the '60s counterculture theme—think ingredients and glassware that nod to the era's aesthetic rebellion. There's that chocolate cake mentioned in reviews, rich and satisfying enough to make membership feel like more than just gallery access. The menu leans toward shareable desserts and small plates designed to complement the drinks, not compete with them. This is sipping and grazing territory, not a full dinner.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Come after wandering the Edna Taçon exhibition upstairs—the speakeasy was designed to pair with it—when you want a drink that feels like part of the art experience, not an afterthought. Best on a weeknight when the gallery empties out and you can claim a corner of the room like you've discovered it yourself.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

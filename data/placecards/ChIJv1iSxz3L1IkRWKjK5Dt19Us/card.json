@@ -15,6 +15,24 @@
     "summary": "Original Soulpepper production about the collapse and rebirth of Detroit through Motown, jazz, hip hop, and Detroit rock. Sold out in 2023 run, returning March 19–29. Physically dynamic, movement-driven theatre.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the Distillery District on Tank House Lane, walking into one of the Victorian-era industrial buildings where brick walls still hold the cold from a century of storage. The theatre seats wrap around the stage in tight rows—this is the kind of room where you feel the performers' sweat and breath, where a whispered line carries. Before the show, there's a cafe with wooden tables and big windows looking out onto cobblestones, open until 7:30 if you need to grab something quick.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a theatre, not a restaurant—the cafe serves pre-show snacks and light dinner options to get you fed before curtain. Think sandwiches, salads, maybe a soup, the kind of reasonable grab-and-go that keeps you from scrambling for dinner in the hour before an 8pm show. It's functional, priced to not gouge you, and designed to get you seated with twenty minutes to spare.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book for the March 19–29 run of Detroit: Music of the Motor City if you want theatre that moves—literally, bodies in motion, sweat and sound filling that tight brick room. Last year's run sold out, so don't wait on this one.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

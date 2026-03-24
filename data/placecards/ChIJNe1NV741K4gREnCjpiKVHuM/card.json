@@ -28,6 +28,24 @@
     "summary": "Reopened Feb 6 with redesigned room (white tablecloths, chrome details), expanded menu. One of Toronto's most talked-about since 2021, now elevated.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in Yorkville, a few blocks from the museum strip, where the February refresh swapped moody red lighting for white tablecloths and chrome accents that catch the light. The room still hums with energy—high ceilings, close-set tables, enough noise that you lean in to hear each other. They cut those four-foot belt noodles tableside, which means you're watching someone's dinner get made while you eat yours.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Cantonese cooking shot through with technique and theater—the kind of place that takes General Tao chicken seriously enough to make it a must-order, and backs it up with strip loin and green scallion fried rice that reviewers name-check unprompted. The expanded menu leans into both showstoppers (those belt noodles, cut fresh at your table) and meticulously executed classics, with crispy chicken that arrives golden and crackling. Expect to spend more than your usual Chinese spot—this is special-occasion pricing for cooking that earns it.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is a Friday night reservation with friends who care about food, or the kind of date where you want the room to do half the work. The energy runs high and the tables are packed close, so save your quiet catch-ups for somewhere else.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

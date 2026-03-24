@@ -18,6 +18,24 @@
     "summary": "Free immersive Japanese culture pop-up: tea ceremonies, wagashi making, kimono dressing, knife demos, curated marketplace of rare Japanese brands. THIS WEEKEND March 20-22. Aligns perfectly with John's Japanese aesthetics interest.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the middle of Queen West's gallery strip, where 938 sits as a rotating pop-up hub. This weekend it transforms into a Japanese cultural experience—tatami mats for tea ceremonies, demo tables where you'll watch knife sharpening and wagashi shaping, and a curated marketplace of rare Japanese brands you won't find at the usual spots. The layout shifts between demonstration zones and vendor tables displaying everything from vintage textiles to handmade ceramics.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a free immersive pop-up running March 20-22 that brings traditional Japanese culture into tactile focus. You'll see wagashi (traditional sweets) being made by hand, participate in actual tea ceremonies, and watch knife demonstrations that show why Japanese blade craft matters. The marketplace carries rare Japanese brands and artisan goods you'd normally need a flight to Kyoto to access, all curated by people who know the difference between tourist kitsch and the real thing.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Block out Saturday or Sunday afternoon when you can actually linger through the tea ceremony and watch the full wagashi demo without rushing. This aligns perfectly if you're into Japanese aesthetics—it's the kind of thing where you show up for one demonstration and leave three hours later with a hand-forged knife and newfound opinions about matcha.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

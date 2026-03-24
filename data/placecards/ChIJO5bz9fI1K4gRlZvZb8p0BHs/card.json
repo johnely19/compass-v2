@@ -19,35 +19,28 @@
     "summary": "8-seat reservations-only coffee bar with $68 Panama Gesha; fine-coffee gallery concept; opened late Feb 2026.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're deep in the Junction Triangle on Wade Ave, inside what looks more like a private tasting room than a café. Eight seats face a clean counter where two baristas work through your reservation like sommeliers—scales, timers, precise pours. The whole thing feels like a gallery dedicated to coffee: minimal, focused, nowhere to hide sloppy technique.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is coffee as a tasting menu. You're booking flights that walk you through rare single-origins—including a $68 Panama Gesha that tastes like bergamot and jasmine if the barista gets the water temp right. They do. Each cup comes with tasting notes, context on the farm, why this bean costs what a decent bottle of wine costs. It's not casual coffee; it's the kind of thing where you actually taste the difference and understand why people get obsessed.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book an afternoon slot when you want to learn something instead of just caffeinate. This works for a low-key date with someone who actually cares about craft, or solo when you're tired of pretending all specialty coffee tastes the same.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Actually good customer service. They really do read your reviews and take your feedback into consideration which seems pretty rare these days.\"\n\n⭐⭐⭐⭐⭐ \"Had an afternoon reservation for the coffee tasting at The Roasters Pack Lab and had an amazing experience. The baristas are very talented and knowledgeable, and helpful in understanding the differences between the flight options available. This was a very unique and fun experience that I would highly recommend trying.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "COFFEE SUBSCRIPTIONS\n⭐ Monthly Coffee Subscription — $28.95\n   Three new Canadian specialty small batch coffees delivered every four weeks. Freshly roasted and curated to your taste profile.\n• Brew Guides & Recipes\n   Included with every coffee shipment. Learn brewing techniques and the story behind each bean.",
-        "sections": [
-          {
-            "name": "COFFEE SUBSCRIPTIONS",
-            "items": [
-              {
-                "name": "Monthly Coffee Subscription",
-                "price": "$28.95",
-                "description": "Three new Canadian specialty small batch coffees delivered every four weeks. Freshly roasted and curated to your taste profile.",
-                "highlight": true
-              },
-              {
-                "name": "Brew Guides & Recipes",
-                "price": "",
-                "description": "Included with every coffee shipment. Learn brewing techniques and the story behind each bean.",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   }

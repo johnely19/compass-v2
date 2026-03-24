@@ -15,6 +15,24 @@
     "summary": "EVENT: March 26-29 — 250+ independent artists, great for discovering emerging talent",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're at Exhibition Place, the sprawling fairgrounds on Toronto's waterfront where convention halls and arenas spread across acres of pavement. Artist Project takes over the Better Living Centre each March—white walls, industrial ceilings, rows of booth dividers creating a maze of emerging painters, sculptors, and photographers. It's fluorescent-lit and purpose-built, the kind of space that exists to disappear behind what's hanging on the walls.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't about the food—it's about the art. You're here March 26-29 to walk past 250+ independent artists' booths, stopping when something catches your eye, talking directly to the people who made it. The Food Building nearby has options if you need fuel, including that oddly beloved $1.99 spaghetti everyone mentions. Bring a refillable water bottle; bottled water runs close to $6-7.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Show up early on a weekday if you want to browse without shoulder-to-shoulder crowds and actually have conversations with artists. It's the move when you're hunting for something specific to hang above your couch, or when you want to see what's happening outside the gallery system.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

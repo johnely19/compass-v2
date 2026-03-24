@@ -15,6 +15,24 @@
     "summary": "Hanoi-born Vietnamese coffee brand. Military-green aesthetic, reclaimed wood, vintage memorabilia — anti-clean-girl café. Signature Bac Xiu (coconut white coffee) and coconut green rice smoothie. 4.5★ (582 reviews). Global chain but culturally interesting. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the Annex stretch of Bloor, where the student bars thin out and the bookstores linger. Inside, it's all military green paint, reclaimed wood benches, and Vietnamese war-era propaganda posters layered with vintage enamel signage—deliberate, moody, nothing like the millennial-pink wave that hit coffee shops a few years back. The aesthetic leans into nostalgia for a 1940s Hanoi you've probably never seen, and it works because they commit fully to the bit.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is Hanoi coffee-shop culture transplanted: strong, sweet Vietnamese coffee built on French colonial foundations, not third-wave pour-overs. The signature Bac Xiu flips the usual cà phê sữa ratio—mostly coconut milk cut with a shot of espresso, served over ice—and the coconut green rice smoothie tastes like neither a smoothie nor a dessert, somewhere in between with chewy rice grains at the bottom. It's a café menu, not a meal: banh mi, some sweets, but you're here for the drinks. Expect to spend under $10 for coffee and a snack.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Go mid-afternoon when you need to reset between meetings or gallery visits, or when you want to sit somewhere that feels designed without feeling precious. It's better as a deliberate stop than a grab-and-go—the kind of place where the interior is half the reason you came.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

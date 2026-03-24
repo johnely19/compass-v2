@@ -15,6 +15,24 @@
     "summary": "Heritage building (1932 waterworks) housing 15+ artisanal vendors + 3 bars; open 7 days, Sunday-friendly; good Bello Pizza + new vendors in 2026.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on King West, inside an 88-year-old former waterworks building that's been gutted and filled with vendor stalls circling a massive communal lounge. Fifteen or so counters line the perimeter—pizza ovens glowing, griddles sizzling, soft-serve machines whirring—while the center holds low seating where groups sprawl with trays from different vendors. The bones are industrial brick and steel, but the vibe skews social and Sunday-casual, not precious.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is choose-your-own-adventure eating: your friend orders jerk chicken on a coco bun from Rasta Pasta while you grab steak frites from Tantxo or a burger from Harry's Charbroiled. Bello Pizza draws a crowd, and there's a falafel counter where the guy behind it might hand you samples while you wait. Prices hover in the reasonable range—most mains land between $12 and $22—and three bars mean you can pair it all with something cold. New vendors rotate in, so the lineup keeps shifting.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You need to feed a group that can't agree on what they want, or it's Sunday and everywhere else feels like too much effort. Also solid for a solo wander when you want options and don't mind eating surrounded by other people's conversations.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
