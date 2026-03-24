@@ -13,6 +13,7 @@ interface HomeClientProps {
   userId: string;
   contexts: Context[];
   discoveryMap: Record<string, Discovery[]>;
+  contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -97,6 +98,7 @@ export default function HomeClient({
   userId,
   contexts,
   discoveryMap,
+  contextMeta = {},
 }: HomeClientProps) {
   if (contexts.length === 0) {
     return (
@@ -175,7 +177,13 @@ export default function HomeClient({
             </div>
 
             {ctx.type === 'trip' && (
-              <TripPlanningWidget userId={userId} contextKey={ctx.key} />
+              <TripPlanningWidget
+                userId={userId}
+                contextKey={ctx.key}
+                travel={contextMeta[ctx.key]?.travel as never}
+                accommodation={contextMeta[ctx.key]?.accommodation as never}
+                bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+              />
             )}
 
             {discoveries.length > 0 ? (

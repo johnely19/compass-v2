@@ -112,11 +112,26 @@ export default async function HomePage() {
     );
   }
 
+    // Build contextMeta — structured trip data for widgets
+  const contextMeta = Object.fromEntries(
+    contexts
+      .filter(c => c.type === 'trip')
+      .map(c => {
+        const raw = c as unknown as Record<string, unknown>;
+        return [c.key, {
+          travel: raw.travel,
+          accommodation: raw.accommodation,
+          bookingStatus: raw.bookingStatus as string | undefined,
+        }];
+      })
+  );
+
   return (
     <HomeClient
       userId={user.id}
       contexts={contexts}
       discoveryMap={Object.fromEntries(byContext)}
+      contextMeta={contextMeta}
     />
   );
 }

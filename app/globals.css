@@ -2894,6 +2894,120 @@ body {
   margin-bottom: var(--space-md);
 }
 
+.flight-cards {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-sm);
+}
+
+.flight-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+}
+
+.flight-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.flight-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.flight-number {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.flight-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+
+.flight-route {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.flight-endpoint {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.flight-time {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.flight-airport {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.flight-terminal {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+}
+
+.flight-middle {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.flight-duration {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.flight-line {
+  font-size: 1rem;
+}
+
+.flight-meta {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: var(--space-xs);
+}
+
+.accom-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: var(--space-xs);
+}
+
+.accom-name {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.accom-address {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
 .trip-planning-header {
   display: flex;
   justify-content: space-between;
