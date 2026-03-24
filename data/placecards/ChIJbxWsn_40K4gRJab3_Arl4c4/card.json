@@ -6,7 +6,20 @@
     "name": "Small Talk",
     "city": "Toronto",
     "address": "Ossington (110 Ossington Ave)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "rating": 4.5,
+    "review_count": 210,
+    "phone": "(437) 476-5475",
+    "website": "https://www.smalltalkjazz.com/"
   },
   "discovery": {
     "text": "Discovered via toronto.com"

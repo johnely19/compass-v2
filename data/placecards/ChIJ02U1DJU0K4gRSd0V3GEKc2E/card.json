@@ -6,7 +6,20 @@
     "name": "Things Japanese",
     "city": "Toronto",
     "address": "Harbord Village / South Annex",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 4:00 PM",
+      "Wednesday: 12:00 – 5:00 PM",
+      "Thursday: 12:00 – 5:00 PM",
+      "Friday: 12:00 – 5:00 PM",
+      "Saturday: 12:00 – 4:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 76,
+    "phone": "(416) 967-9797",
+    "website": "http://www.thingsjapanese.ca/"
   },
   "discovery": {
     "text": "https://www.thingsjapanese.ca/",
@@ -14,6 +27,13 @@
   },
   "narrative": {
     "summary": "Kimono, ceramics, calligraphy supplies, ikebana, green tea, incense—old-school Japanese gift shop with wabi-sabi sensibility. 4.6 stars. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Stopped by Things Japanese on Harbord and had such a great experience. Linda, the owner, is incredibly kind—we ended up chatting for a while, and she shared so much about Japanese culture. You can tell she’s truly passionate and knowledgeable.\n\nThe shop isn’t big, but it’s full of a nice variety of authentic Japanese items—incense, kimonos, kitchenware like miso bowls, and more. Not packed with tons of stuff, but everything there feels carefully chosen and well-made. Prices aren’t cheap, but fair for the quality.\n\nOverall, it felt more like a cultural experience than just shopping. Definitely worth a visit if you’re in the area. The only downside is the street’s under construction and parking can be a bit tricky—but it’s a lovely little spot worth checking out.\"\n\n⭐⭐⭐⭐⭐ \"Came here to find a matcha bowl! It was a very nice small and quaint store but had a lot of beautiful Japanese items ☺️ there was a small selection of matcha bowls but they were very beautiful and unique - handmade from Japan. I found the bowl of my dreams and very happy with it 😊\"\n\n⭐⭐⭐⭐⭐ \"What a wonderful little store!\n\nI had the pleasure of visiting Things Japanese, and it was a lovely experience.\n\nAs I shopped, I chatted with the owner about my trip to Japan in the spring. She was so thoughtful and informative about Japanese culture. She made me feel very welcome and open to ask questions about various items in the shop.\n\nThere are a wide variety of things to choose from, including stationary, stickers, notebooks and journals, incense and holders, ceramics, cookware and chopsticks, books, Japanese clothing, women's accessories, textiles, and much more.\n\nThe prices to me seem to be comparable to buying things directly from Japan online. You have to consider shipping and customs fees as part of the final price. Bringing anything to Canada from Japan is not cheap.\n\nIf you love Japan or are feeling nostalgic from your last visit, you will not leave this store empty handed!\""
+      }
+    ]
   }
 }

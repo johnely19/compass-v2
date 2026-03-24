@@ -1,1 +1,32 @@
-{"place_id":"ChIJQ-hJIuBbwokRRUdquw_5w5U","source":"disco-sync","identity":{"place_id":"ChIJQ-hJIuBbwokRRUdquw_5w5U","name":"L'industrie Pizzeria - Williamsburg","city":"Brooklyn","address":"254 S 2nd St, Brooklyn, NY 11211","type":"restaurant"},"discovery":{"text":"Legendary Williamsburg pizza. 4.7★, 5,482 reviews."},"narrative":{"summary":"Legendary Williamsburg pizza","blocks":[]}}
+{
+  "place_id": "ChIJQ-hJIuBbwokRRUdquw_5w5U",
+  "source": "disco-sync",
+  "identity": {
+    "place_id": "ChIJQ-hJIuBbwokRRUdquw_5w5U",
+    "name": "L'industrie Pizzeria - Williamsburg",
+    "city": "Brooklyn",
+    "address": "254 S 2nd St, Brooklyn, NY 11211",
+    "type": "restaurant",
+    "hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 5495,
+    "price_level": 1,
+    "phone": "(718) 599-0002",
+    "website": "http://www.lindustriebk.com/"
+  },
+  "discovery": {
+    "text": "Legendary Williamsburg pizza. 4.7★, 5,482 reviews."
+  },
+  "narrative": {
+    "summary": "Legendary Williamsburg pizza",
+    "blocks": []
+  }
+}

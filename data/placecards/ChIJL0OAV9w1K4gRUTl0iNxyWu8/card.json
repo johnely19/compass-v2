@@ -6,7 +6,20 @@
     "name": "Ethica Coffee Roasters",
     "city": "Toronto",
     "address": "Junction Triangle / Sterling Rd (MOCA corridor)",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:00 AM – 5:00 PM",
+      "Tuesday: 8:00 AM – 5:00 PM",
+      "Wednesday: 8:00 AM – 5:00 PM",
+      "Thursday: 8:00 AM – 5:00 PM",
+      "Friday: 8:00 AM – 5:00 PM",
+      "Saturday: 8:00 AM – 6:00 PM",
+      "Sunday: 8:00 AM – 6:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 686,
+    "phone": "(416) 516-0009",
+    "website": "https://ethicaroasters.com/"
   },
   "discovery": {
     "text": "Discovered via https://sprudge.com/",

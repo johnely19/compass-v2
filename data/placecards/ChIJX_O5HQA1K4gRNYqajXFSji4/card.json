@@ -3,10 +3,14 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJX_O5HQA1K4gRNYqajXFSji4",
-    "name": "Bellis Caf\u00e9 & Bar",
+    "name": "Bellis Café & Bar",
     "city": "Toronto",
     "address": "The Annex / Bloor W (Nomas Hotel)",
-    "type": "cafe"
+    "type": "cafe",
+    "rating": 5,
+    "review_count": 4,
+    "phone": "(647) 930-9790",
+    "website": "https://www.instagram.com/bellis.toronto?igsh=MWRjMmY4cGtza2Rrbg=="
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/eat_drink/2026/02/bellis-nomas-hotel-toronto/",

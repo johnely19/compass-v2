@@ -6,7 +6,20 @@
     "name": "Barcelona Gourmet",
     "city": "Toronto",
     "address": "Danforth (777 Danforth Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: 10:00 AM – 3:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 73,
+    "phone": "(416) 778-8557",
+    "website": "http://barcelonagourmet.ca/"
   },
   "discovery": {
     "text": "hungry416.com"

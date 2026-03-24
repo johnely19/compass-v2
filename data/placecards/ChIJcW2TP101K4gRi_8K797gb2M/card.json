@@ -6,7 +6,20 @@
     "name": "Boogie",
     "city": "Toronto",
     "address": "West Queen West (Queen & Gladstone)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 7:00 PM – 2:00 AM",
+      "Thursday: 7:00 PM – 2:00 AM",
+      "Friday: 7:00 PM – 3:00 AM",
+      "Saturday: 7:00 PM – 3:00 AM",
+      "Sunday: 5:00 PM – 2:00 AM"
+    ],
+    "rating": 4.6,
+    "review_count": 71,
+    "phone": "(416) 992-4039",
+    "website": "http://www.boogieonqueen.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.boogieonqueen.com/",

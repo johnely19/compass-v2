@@ -6,13 +6,17 @@
     "name": "Glad Day Bookshop",
     "city": "Toronto",
     "address": "Church & Wellesley (Village)",
-    "type": "shop"
+    "type": "shop",
+    "rating": 4.7,
+    "review_count": 1372,
+    "phone": "(416) 901-6600",
+    "website": "https://www.gladdaybookshop.com/"
   },
   "discovery": {
     "text": "Discovered via LSE Review of Books"
   },
   "narrative": {
-    "summary": "World's oldest LGBTQ+ bookshop (est. 1970); now bookshop + bar + caf\u00e9 + event venue\u2014cultural landmark, 4.7 rating.",
+    "summary": "World's oldest LGBTQ+ bookshop (est. 1970); now bookshop + bar + café + event venue—cultural landmark, 4.7 rating.",
     "blocks": []
   }
 }

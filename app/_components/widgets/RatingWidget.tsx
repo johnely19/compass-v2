@@ -1,33 +1,55 @@
 interface RatingWidgetProps {
   rating?: number;
   reviewCount?: number;
+  priceLevel?: number;
 }
 
-export default function RatingWidget({ rating, reviewCount }: RatingWidgetProps) {
-  if (rating === undefined || rating === null) return null;
+const PRICE_LABELS: Record<number, string> = {
+  1: '$',
+  2: '$$',
+  3: '$$$',
+  4: '$$$$',
+};
 
-  const fullStars = Math.floor(rating);
-  const hasHalfStar = rating % 1 >= 0.5;
-  const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
+function Stars({ rating }: { rating: number }) {
+  // Render 5 stars with filled/half/empty using SVG-free approach
+  const stars = [];
+  for (let i = 1; i <= 5; i++) {
+    const fill = rating >= i ? 'full' : rating >= i - 0.5 ? 'half' : 'empty';
+    stars.push(
+      <span key={i} className={`rw-star rw-star-${fill}`}>
+        {fill === 'half' ? '★' : '★'}
+      </span>
+    );
+  }
+  return <span className="rw-stars">{stars}</span>;
+}
+
+export default function RatingWidget({ rating, reviewCount, priceLevel }: RatingWidgetProps) {
+  const hasRating = rating !== undefined && rating !== null && rating > 0;
+  const hasPrice = priceLevel !== undefined && priceLevel !== null && priceLevel > 0;
+
+  if (!hasRating && !hasPrice) return null;
 
   return (
-    <div className="widget">
-      <h3 className="widget-title">Rating</h3>
-      <div className="rating-display">
-        <div className="rating-stars">
-          {[...Array(fullStars)].map((_, i) => (
-            <span key={`full-${i}`} className="star-filled">★</span>
-          ))}
-          {hasHalfStar && <span className="star-half">★</span>}
-          {[...Array(emptyStars)].map((_, i) => (
-            <span key={`empty-${i}`} className="star-empty">★</span>
-          ))}
+    <div className="rw-bar">
+      {hasRating && (
+        <div className="rw-rating">
+          <Stars rating={rating!} />
+          <span className="rw-score">{rating!.toFixed(1)}</span>
+          {reviewCount !== undefined && reviewCount > 0 && (
+            <span className="rw-count">({reviewCount.toLocaleString()})</span>
+          )}
         </div>
-        <span className="rating-value">{rating.toFixed(1)}</span>
-        {reviewCount !== undefined && (
-          <span className="rating-count">({reviewCount} reviews)</span>
-        )}
-      </div>
+      )}
+      {hasRating && hasPrice && (
+        <span className="rw-divider">·</span>
+      )}
+      {hasPrice && (
+        <span className="rw-price" title={['', 'Inexpensive', 'Moderate', 'Expensive', 'Very Expensive'][priceLevel!]}>
+          {PRICE_LABELS[priceLevel!]}
+        </span>
+      )}
     </div>
   );
 }

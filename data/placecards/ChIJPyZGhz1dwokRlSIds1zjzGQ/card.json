@@ -5,7 +5,20 @@
     "place_id": "ChIJPyZGhz1dwokRlSIds1zjzGQ",
     "name": "Unknown Place (ChIJPyZGhz1dwokRlSIds1zjzGQ)",
     "address": "Address pending",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 4:00 PM – 2:00 AM",
+      "Tuesday: 4:00 PM – 2:00 AM",
+      "Wednesday: 4:00 PM – 2:00 AM",
+      "Thursday: 4:00 PM – 1:30 AM",
+      "Friday: 4:00 PM – 4:00 AM",
+      "Saturday: 4:00 PM – 4:00 AM",
+      "Sunday: 5:00 PM – 2:00 AM"
+    ],
+    "rating": 4.5,
+    "review_count": 262,
+    "phone": "(347) 365-9861",
+    "website": "https://www.thebroadway.nyc/"
   },
   "discovery": {
     "text": "Disco discovery"

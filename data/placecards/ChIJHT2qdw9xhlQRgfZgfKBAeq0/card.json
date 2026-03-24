@@ -6,7 +6,19 @@
     "name": "Sumibiyaki Arashi",
     "city": "Vancouver",
     "address": "Mount Pleasant",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:30 – 10:00 PM",
+      "Wednesday: 5:30 – 10:00 PM",
+      "Thursday: 5:30 – 10:00 PM",
+      "Friday: 5:30 – 10:00 PM",
+      "Saturday: 5:30 – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 107,
+    "website": "https://www.sumibiyakiarashi.com/"
   },
   "discovery": {
     "text": "cbc.ca",

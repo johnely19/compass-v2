@@ -14,13 +14,13 @@
     "phone": "(604) 567-5888",
     "website": "https://sahaeatery.ca/",
     "hours": [
-      "Monday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Tuesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Wednesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Thursday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Friday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Saturday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
-      "Sunday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM"
+      "Monday: 11:30 AM – 8:00 PM",
+      "Tuesday: 11:30 AM – 8:00 PM",
+      "Wednesday: 11:30 AM – 8:00 PM",
+      "Thursday: 11:30 AM – 8:00 PM",
+      "Friday: 11:30 AM – 9:00 PM",
+      "Saturday: 11:30 AM – 9:00 PM",
+      "Sunday: 11:30 AM – 8:00 PM"
     ],
     "price_level": 2,
     "rating": 4.5,
@@ -51,6 +51,12 @@
         "id": "ops",
         "title": "Operational snapshot",
         "body": "Google rating 4.5 from 963 reviews."
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The server was very friendly and the food was out pretty quickly! I asked the server when I ordered if she thought i should have the wrap or kebab. She suggested the kebab and the hot sauce. I quite enjoyed the different flavor profiles and would definitely go back to try different dishes!\"\n\n⭐⭐⭐⭐ \"We went there on a day where there was strong wind hitting Squamish causing power outage. However, the restaurant was kind enough to let us order and dine-in. We ordered the falafel plate with one lamb sausage add-on. It was a phenomenal plate! The falafel was crispy on the outside, soft and warm on the inside - full of texture🧆lamb sausage was hitting just right! We had the tahini sauce on the side. It perfectly complemented the dish. Hummus was great too! Definite recommend to come if you’re in Squamish.\"\n\n⭐⭐⭐⭐ \"Very good Lebanese inspired food located off the main street in Squamish.  They have a pretty decent selection of dishes for both vegans and non-vegans, and with share plates or \"all-in-one\" plates.\n\nWe chose to order separate bowls (although they are presented on a plate). Beef Kefta, chicken kabob, and veggie. The hummus was super creamy and flavourful and the salad was nice and fresh. The pita bread isn't the home made kind but was nice for dipping in the hummus. Deep fried cauliflower had good deep flavour - it wasn't crispy as there wasn't any coating on it before frying. The chicken kabob was juicy and tender. The beef kefta was cooked in a non-traditional form, like hambuger patties rather than the sausage shape around a grill stick. The beef was pretty good and was juicy as well.\n\nIt's a small place, probably only seats about 20 people inside, and there is normally only one server so expect to wait a bit, although it's not too long.\""
       }
     ]
   },

@@ -6,7 +6,10 @@
     "name": "Next Stop Japan Marketplace",
     "city": "Toronto",
     "address": "Queen West (938 Queen St W — Welcome Market)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.4,
+    "review_count": 33,
+    "website": "https://thewelcomemarket.ca/"
   },
   "discovery": {
     "text": "Discovered via toronto.com"

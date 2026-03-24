@@ -6,13 +6,33 @@
     "name": "ODDSEOUL",
     "city": "Toronto",
     "address": "Ossington",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 6:00 PM – 1:00 AM",
+      "Tuesday: Closed",
+      "Wednesday: 6:00 PM – 1:00 AM",
+      "Thursday: 6:00 PM – 1:00 AM",
+      "Friday: 6:00 PM – 2:00 AM",
+      "Saturday: 6:00 PM – 2:00 AM",
+      "Sunday: 6:00 PM – 1:00 AM"
+    ],
+    "rating": 4.3,
+    "review_count": 1053,
+    "price_level": 2,
+    "website": "https://resy.com/cities/toronto-on/venues/odd-seoul?date=2026-02-05&seats=2"
   },
   "discovery": {
     "text": "Discovered via yelp late-night Toronto"
   },
   "narrative": {
     "summary": "Korean-fusion with cool-kid Ossington energy; late hours and solid bar program.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"We usually go to this little neighbourhood spot when we want a casual bite and a drink, but with a bit of a twist. Oddseul is always comfortably full and almost always has two heroes working, one in the front and one in the back.\n\nThis time, we tried the philly sandwich and the kimchi poutine. Both were delicious and very comforting. The drink I ordered wasn’t very strong, which I’ve noticed with their cocktails before, sometimes I like that, sometimes I don’t.\n\nAlthough I slightly prefer its sister spot, we somehow end up here at least once a year. And it’s always nice.\"\n\n⭐⭐⭐⭐ \"Our group was in the area and decided on some takeout. We ordered from here as it was clearly able to take orders. What we did discover when arriving for the pickup is that the order was a little big for the kitchen to put together. We ended up waiting around 20 minutes more then expected. The restraunt was not full but steady. The food was all decent and broken down into individual portions.\""
+      }
+    ]
   }
 }

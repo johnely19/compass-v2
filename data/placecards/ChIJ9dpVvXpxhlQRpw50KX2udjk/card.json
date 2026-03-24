@@ -6,7 +6,21 @@
     "name": "The Keefer Bar",
     "city": "Vancouver",
     "address": "Chinatown",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 4:00 PM – 1:00 AM",
+      "Tuesday: 4:00 PM – 1:00 AM",
+      "Wednesday: 4:00 PM – 1:00 AM",
+      "Thursday: 4:00 PM – 1:00 AM",
+      "Friday: 4:00 PM – 2:00 AM",
+      "Saturday: 4:00 PM – 2:00 AM",
+      "Sunday: 4:00 PM – 1:00 AM"
+    ],
+    "rating": 4.5,
+    "review_count": 1806,
+    "price_level": 3,
+    "phone": "(604) 688-1961",
+    "website": "http://www.thekeeferbar.com/"
   },
   "discovery": {
     "text": "theworlds50best.com",
@@ -14,6 +28,13 @@
   },
   "narrative": {
     "summary": "#28 on North America's 50 Best Bars 2025. Apothecary-themed cocktail bar in Chinatown. TCM-inspired cocktails, exotic spices, intimate space. Industry crowd favourite. Craft + intention personified. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Update 10/2/2025: Great experience here with Hugo and the rest of your amazing staff. Confession time: i have fallen HARD for your Durian Colada (6/5) and am chuffed! Pleased... delighted that its gonna be returning with the Alumni perscriptions on the menu. I have a mental rolladex of good Pina Coladas in town and this was a standout.\n\nAlso... i am very impressed with Northern Keep as a well Vodka... such a clean, flavourful profile in a Vodka soda and one of the best vodka sodas in town 🌈🌈🌈✨️\n_____\n\nUpdate 7/25/2025: nice experience here today!! I tried the Cold Turkey and had a Snowbird (both terrific!!!) From Virginia... great vibe here today. 🍸\n\n---\nGreat drinks & service here from Asya!! Especially like the Fantasy Island and Cool As 😎 👌\n\nHey, one more thing--- you guys were so amazing and sweet to my mom in January when she visited (she was overdue for a hip surgery--- you guys were understanding and sweet and accommodating 💕  Thank you 💕 )\"\n\n⭐⭐⭐⭐⭐ \"Our last stop for the night is Chinese Dim Sum fusion....with the merge being Dum Sum and Hip Funk!   Traditional Dim Sum combined with modern drinks and DJ Dance, a nice glass of House Red and Shrimp Dumplings finished our night strong.   They even took care of our gluten-free needs as one of our party is celiac.  Thank you Keefer Bar!\"\n\n⭐⭐⭐⭐⭐ \"Strong drink that are well made. Got the vodka based ones and all were excellent.\n\nVery red and dark. Felt like an underground venue with Chinese letters and acupuncture pictures everywhere.\n\nFun vibes here and excellent drinks.\""
+      }
+    ]
   }
 }

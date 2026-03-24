@@ -6,7 +6,20 @@
     "name": "Petite Thuet & Co.",
     "city": "Toronto",
     "address": "Leslieville (181A Carlaw Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 7:30 AM – 5:00 PM",
+      "Tuesday: 7:30 AM – 5:00 PM",
+      "Wednesday: 7:30 AM – 5:00 PM",
+      "Thursday: 7:30 AM – 5:00 PM",
+      "Friday: 7:30 AM – 5:00 PM",
+      "Saturday: 7:30 AM – 5:00 PM",
+      "Sunday: 8:00 AM – 5:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 22,
+    "phone": "(647) 265-9034",
+    "website": "https://petitethuet.com/"
   },
   "discovery": {
     "text": "Discovered via stephaniedickison.com"

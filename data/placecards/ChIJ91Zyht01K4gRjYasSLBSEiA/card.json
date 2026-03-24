@@ -6,13 +6,32 @@
     "name": "Pinot Grouchio's",
     "city": "Toronto",
     "address": "Dundas West (1609 Dundas St W)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 6:00 PM – 1:00 AM",
+      "Tuesday: 6:00 PM – 1:00 AM",
+      "Wednesday: 6:00 PM – 2:00 AM",
+      "Thursday: 6:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: 6:00 PM – 1:00 AM"
+    ],
+    "rating": 5,
+    "review_count": 25,
+    "website": "https://www.pinotgrouchios.com/"
   },
   "discovery": {
     "text": "Discovered via blogto.com"
   },
   "narrative": {
     "summary": "Anti-pretentious 'wine dive bar.' Named after a Bob's Burgers episode. Anonymous owner, ex-Momofuku alum. Wine by the ounce, no-frills romantic space. Opened early 2026, already a local staple. 5.0★ (23 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Such a cool little spot. Rotating wine list, bar snacks, super knowledgeable staff, and they price by the ounce so you can try a bunch of different things. Dim lighting, cozy, and feels like a dive wine bar you’d stumble into in France. Easy to hang out here for way longer than planned.\"\n\n⭐⭐⭐⭐⭐ \"a rustic and chill wine bar that also has some of my favourite cocktails and music in the city. it’s only downfall is that now I don’t want to go anywhere else\"\n\n⭐⭐⭐⭐⭐ \"the coziest little wine bar with a great wine selection and a super crispy beer. the staff are super friendly and helpful\""
+      }
+    ]
   }
 }

@@ -6,7 +6,20 @@
     "name": "Backcountry Brewing",
     "city": "Squamish",
     "address": "Commercial Way",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 1379,
+    "phone": "(604) 567-2739",
+    "website": "http://www.backcountrybrewing.com/"
   },
   "discovery": {
     "text": "bcaletrail.ca",

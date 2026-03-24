@@ -6,13 +6,26 @@
     "name": "Unboxed Market",
     "city": "Toronto",
     "address": "Dundas West / Trinity Bellwoods",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 7:00 PM",
+      "Tuesday: 10:00 AM – 7:00 PM",
+      "Wednesday: 10:00 AM – 7:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: 10:00 AM – 6:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 275,
+    "phone": "(416) 533-9017",
+    "website": "http://www.unboxedmarket.com/"
   },
   "discovery": {
     "text": "Discovered via unboxedmarket.com"
   },
   "narrative": {
-    "summary": "Toronto's first zero-waste grocery. Bulk bins, refill stations, butcher counter, cheese counter, in-store caf\u00e9. Concept-driven retail that actually works. 4.6\u2605 (275 reviews).",
+    "summary": "Toronto's first zero-waste grocery. Bulk bins, refill stations, butcher counter, cheese counter, in-store café. Concept-driven retail that actually works. 4.6★ (275 reviews).",
     "blocks": []
   }
 }

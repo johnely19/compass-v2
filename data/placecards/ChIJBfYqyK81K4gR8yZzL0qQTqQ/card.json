@@ -6,7 +6,20 @@
     "name": "De Mello Coffee (The Well)",
     "city": "Toronto",
     "address": "The Well / King West",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 7:30 AM – 5:00 PM",
+      "Tuesday: 7:30 AM – 5:00 PM",
+      "Wednesday: 7:30 AM – 5:00 PM",
+      "Thursday: 7:30 AM – 5:00 PM",
+      "Friday: 7:30 AM – 5:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.2,
+    "review_count": 433,
+    "phone": "(416) 556-5393",
+    "website": "https://hellodemello.com/"
   },
   "discovery": {
     "text": "Discovered via https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html",

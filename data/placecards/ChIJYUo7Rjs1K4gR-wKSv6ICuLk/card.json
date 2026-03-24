@@ -5,7 +5,20 @@
     "city": "Toronto",
     "address": "Harbord Village (96 Harbord St)",
     "type": "restaurant",
-    "place_id": "ChIJYUo7Rjs1K4gR-wKSv6ICuLk"
+    "place_id": "ChIJYUo7Rjs1K4gR-wKSv6ICuLk",
+    "hours": [
+      "Monday: 5:30 – 10:00 PM",
+      "Tuesday: 5:30 – 10:00 PM",
+      "Wednesday: 5:30 – 10:00 PM",
+      "Thursday: 5:30 – 10:00 PM",
+      "Friday: 5:30 – 10:30 PM",
+      "Saturday: 5:30 – 10:30 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 581,
+    "phone": "(416) 323-1385",
+    "website": "http://dreyfustoronto.com/"
   },
   "discovery": {
     "text": "Toronto Star: Best Date Night Restaurants (Feb 2026)",

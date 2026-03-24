@@ -3,17 +3,29 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJNVuaEwA1K4gRgda7Mfki9DU",
-    "name": "Understory Caf\u00e9",
+    "name": "Understory Café",
     "city": "Toronto",
     "address": "Church St (The Village)",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:00 AM – 6:00 PM",
+      "Tuesday: 8:00 AM – 6:00 PM",
+      "Wednesday: 8:00 AM – 6:00 PM",
+      "Thursday: 8:00 AM – 6:00 PM",
+      "Friday: 8:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 103,
+    "website": "https://www.understorycafe.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.gaycities.com/articles/103738/",
     "url": "https://www.gaycities.com/articles/103738/"
   },
   "narrative": {
-    "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already\u2014strong early signal.",
+    "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already—strong early signal.",
     "blocks": []
   }
 }

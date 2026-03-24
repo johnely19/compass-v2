@@ -6,7 +6,20 @@
     "name": "520 Cafe Bar",
     "city": "Toronto",
     "address": "Fashion District / Richmond W",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 7:30 AM – 5:00 PM",
+      "Tuesday: 7:30 AM – 5:00 PM",
+      "Wednesday: 7:30 AM – 5:00 PM",
+      "Thursday: 7:30 AM – 5:00 PM",
+      "Friday: 7:30 AM – 5:00 PM",
+      "Saturday: 8:00 AM – 5:00 PM",
+      "Sunday: 8:00 AM – 5:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 37,
+    "phone": "(416) 361-0845",
+    "website": "https://520cafebar.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/eat_drink/2026/01/520-cafe-toronto/",

@@ -6,7 +6,20 @@
     "name": "Bar Cart",
     "city": "Toronto",
     "address": "St. Lawrence / The Esplanade",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 2:00 AM",
+      "Wednesday: 5:00 PM – 2:00 AM",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 72,
+    "phone": "(416) 900-1438",
+    "website": "https://barcart.to/"
   },
   "discovery": {
     "text": "Discovered via https://www.google.com/maps/place/?q=place_id:ChIJZ4QaXF3L1IkRB8F5wt3LpQ8",

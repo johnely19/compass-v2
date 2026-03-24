@@ -5,7 +5,21 @@
     "place_id": "ChIJYThlkFczK4gRH4_Sb0wcOlY",
     "name": "Unknown Place (ChIJYThlkFczK4gRH4_Sb0wcOlY)",
     "address": "Address pending",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 9:00 AM – 7:00 PM",
+      "Tuesday: 9:00 AM – 7:00 PM",
+      "Wednesday: 9:00 AM – 7:00 PM",
+      "Thursday: 9:00 AM – 7:00 PM",
+      "Friday: 9:00 AM – 7:00 PM",
+      "Saturday: 9:00 AM – 7:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 3.8,
+    "review_count": 191,
+    "price_level": 3,
+    "phone": "(416) 923-7542",
+    "website": "http://www.harvestwagon.com/"
   },
   "discovery": {
     "text": "Disco discovery"

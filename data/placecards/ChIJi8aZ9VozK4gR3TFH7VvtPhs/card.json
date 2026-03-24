@@ -10,7 +10,19 @@
     "type": "restaurant",
     "phone": "(416) 925-4020",
     "website": "https://www.terroni.com/locations/terroni-price",
-    "location": "1095 Yonge St, Toronto, ON M4W 2L8, Canada"
+    "location": "1095 Yonge St, Toronto, ON M4W 2L8, Canada",
+    "hours": [
+      "Monday: 11:30 AM – 9:00 PM",
+      "Tuesday: 11:30 AM – 9:00 PM",
+      "Wednesday: 11:30 AM – 9:00 PM",
+      "Thursday: 11:30 AM – 9:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 9:00 PM"
+    ],
+    "rating": 4.2,
+    "review_count": 3782,
+    "price_level": 2
   },
   "narrative": {
     "summary": "📍 Terroni Price\n1095 Yonge St, Toronto, ON M4W 2L8, Canada",

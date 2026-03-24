@@ -6,7 +6,19 @@
     "name": "Bà Nội",
     "city": "Toronto",
     "address": "Bloor West (Christie Pits area)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 9:00 AM – 4:00 PM",
+      "Wednesday: 9:00 AM – 4:00 PM",
+      "Thursday: 9:00 AM – 4:00 PM",
+      "Friday: 9:00 AM – 4:00 PM",
+      "Saturday: 9:00 AM – 4:00 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 399,
+    "website": "https://ba-noi.myshopify.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.chuonthis.ca/best-bakeries-toronto/",

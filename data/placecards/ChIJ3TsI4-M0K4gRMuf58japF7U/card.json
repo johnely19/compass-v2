@@ -6,13 +6,34 @@
     "name": "The Spice Trader & The Olive Pit",
     "city": "Toronto",
     "address": "Queen West",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 10:00 AM – 6:00 PM",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 10:00 AM – 6:00 PM",
+      "Friday: 10:00 AM – 6:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 206,
+    "price_level": 3,
+    "phone": "(647) 430-7085",
+    "website": "https://thespicetrader.ca/"
   },
   "discovery": {
     "text": "Discovered via yelp.ca"
   },
   "narrative": {
     "summary": "Spice apothecary + olive oil tasting bar under one roof. Walls of jars, experiential shopping. Design-forward space. 4.8★ (205 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Easily my favourite spice shop in the city. The spices are fresh and fragrant with stock rotating regularly. You can immediately taste the difference, and it is not subtle – even the bay leaves are shockingly good. Respectable selection of dried chilis and the pricing is fair for the quality offered. I am pleased they have finally settled on the screw top container, the objectively better design (I will die on this hill). Highly recommended!\"\n\n⭐⭐⭐⭐⭐ \"the highest quality spices you can find in the city. they have a sample jar for each of their spices, just like a candle store, to make sure you can get a good whiff of each spice before purchasing.\n\nslowly need to replace all my bland, previously bought spices with The Spice Trader spices.\"\n\n⭐⭐⭐⭐⭐ \"Smashing IT!\n\nThis store has everything that you need to enhance your culinary talents and tickle your taste buds.\n\nGreat customer service and amazing range of delectable STUFF to make that special dish that much special.\n\nIf you're a bread dunker like me, then you're going to want to pick up one of their amazing wide selections of balsamic vinegars.\n\nFrom spices to finishing salts, the variety and choices are many.\n\nThe staff are also extremely knowledgeable, which is an advantage if you're not sure which item to pick from regarding what it is that you're preparing etc.\n\nThe Spice Trader & The Olive Pit is unique and rare gem in the city and you owe it to your taste buds to give it a visit.\n\nCheck them out, you'll be very happy that you did.\""
+      }
+    ]
   }
 }

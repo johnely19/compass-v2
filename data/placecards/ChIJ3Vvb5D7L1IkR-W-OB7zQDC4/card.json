@@ -6,7 +6,20 @@
     "name": "Kiosk Design",
     "city": "Toronto",
     "address": "King East Design District",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 5:00 PM",
+      "Tuesday: 10:00 AM – 5:00 PM",
+      "Wednesday: 10:00 AM – 5:00 PM",
+      "Thursday: 10:00 AM – 5:00 PM",
+      "Friday: 10:00 AM – 5:00 PM",
+      "Saturday: 11:00 AM – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 31,
+    "phone": "(416) 539-9665",
+    "website": "http://www.kioskdesign.ca/"
   },
   "discovery": {
     "text": "Discovered via designlinesmagazine.com"

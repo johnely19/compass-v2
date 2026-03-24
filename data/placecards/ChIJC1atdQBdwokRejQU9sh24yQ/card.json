@@ -6,7 +6,20 @@
     "name": "Orion Bar",
     "city": "NYC",
     "address": "Bushwick (157 Suydam St)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 1:00 AM",
+      "Saturday: 2:00 PM – 1:00 AM",
+      "Sunday: 2:00 PM – 12:00 AM"
+    ],
+    "rating": 4.8,
+    "review_count": 85,
+    "phone": "(201) 822-5659",
+    "website": "https://www.orion-bar.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers",

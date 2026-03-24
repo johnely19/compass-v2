@@ -3,16 +3,29 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJe3RA5fE1K4gRQvD6x-3d1ho",
-    "name": "Petite Bouch\u00e9e Patisserie",
+    "name": "Petite Bouchée Patisserie",
     "city": "Toronto",
     "address": "Junction / Sousa Mendes",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:00 AM – 9:00 PM",
+      "Wednesday: 10:00 AM – 9:00 PM",
+      "Thursday: 10:00 AM – 9:00 PM",
+      "Friday: 10:00 AM – 9:00 PM",
+      "Saturday: 10:00 AM – 9:00 PM",
+      "Sunday: 10:00 AM – 9:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 353,
+    "phone": "(416) 588-8882",
+    "website": "https://www.instagram.com/petite__bouchee_patisserie/"
   },
   "discovery": {
     "text": "Discovered via Yelp"
   },
   "narrative": {
-    "summary": "Exceptional 4.9\u2605 rating; French pastry; off-the-beaten-path location adds discovery appeal.",
+    "summary": "Exceptional 4.9★ rating; French pastry; off-the-beaten-path location adds discovery appeal.",
     "blocks": []
   }
 }

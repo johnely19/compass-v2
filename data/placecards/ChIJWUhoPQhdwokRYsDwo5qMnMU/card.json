@@ -5,7 +5,20 @@
     "city": "NYC",
     "address": "Ridgewood (8-53 Onderdonk Ave)",
     "type": "restaurant",
-    "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU"
+    "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU",
+    "hours": [
+      "Monday: 5:00 – 10:00 PM",
+      "Tuesday: 5:00 – 10:00 PM",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
+      "Sunday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1795,
+    "price_level": 2,
+    "website": "http://www.rolosnyc.com/"
   },
   "discovery": {
     "text": "NYC Tourism Local Guide",

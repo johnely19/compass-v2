@@ -6,13 +6,25 @@
     "name": "Stackt Market",
     "city": "Toronto",
     "address": "Bathurst/Front (28 Bathurst St)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 9:00 AM – 11:00 PM",
+      "Wednesday: 9:00 AM – 11:00 PM",
+      "Thursday: 9:00 AM – 11:00 PM",
+      "Friday: 9:00 AM – 11:00 PM",
+      "Saturday: 9:00 AM – 11:00 PM",
+      "Sunday: 9:00 AM – 11:00 PM"
+    ],
+    "rating": 4.2,
+    "review_count": 958,
+    "website": "http://stacktmarket.com/"
   },
   "discovery": {
     "text": "Discovered via stacktmarket.com"
   },
   "narrative": {
-    "summary": "Shipping container market \u2014 architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2\u2605 (958 reviews).",
+    "summary": "Shipping container market — architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2★ (958 reviews).",
     "blocks": []
   }
 }

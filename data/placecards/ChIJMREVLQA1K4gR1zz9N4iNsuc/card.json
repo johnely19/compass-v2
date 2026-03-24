@@ -6,7 +6,10 @@
     "name": "Sounds Good",
     "city": "Toronto",
     "address": "Dundas West (Little Portugal/West End)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.6,
+    "review_count": 144,
+    "website": "http://www.soundsgoodtoronto.com/"
   },
   "discovery": {
     "text": "Discovered via http://www.soundsgoodtoronto.com/",

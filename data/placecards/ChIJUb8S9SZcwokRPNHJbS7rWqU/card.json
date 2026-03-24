@@ -13,7 +13,17 @@
     "price_level": 2,
     "rating": 4.6,
     "user_rating_count": 743,
-    "location": "9-05 Seneca Ave, Ridgewood, NY 11385, USA"
+    "location": "9-05 Seneca Ave, Ridgewood, NY 11385, USA",
+    "hours": [
+      "Monday: 6:00 AM – 4:00 PM",
+      "Tuesday: 6:00 AM – 4:00 PM",
+      "Wednesday: 6:00 AM – 7:00 PM",
+      "Thursday: 6:00 AM – 7:00 PM",
+      "Friday: 6:00 AM – 7:00 PM",
+      "Saturday: 7:00 AM – 7:00 PM",
+      "Sunday: 7:00 AM – 5:00 PM"
+    ],
+    "review_count": 749
   },
   "narrative": {
     "summary": "📍 Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA",

@@ -12,7 +12,17 @@
     "website": "https://www.sozo-nyc.com/",
     "rating": 5,
     "user_rating_count": 7,
-    "location": "319 Bowery, New York, NY 10003, USA"
+    "location": "319 Bowery, New York, NY 10003, USA",
+    "hours": [
+      "Monday: 4:00 – 10:30 PM",
+      "Tuesday: 4:00 – 10:30 PM",
+      "Wednesday: 4:00 – 10:30 PM",
+      "Thursday: 4:00 – 10:30 PM",
+      "Friday: 4:00 – 11:30 PM",
+      "Saturday: 12:00 – 11:30 PM",
+      "Sunday: 12:00 – 10:30 PM"
+    ],
+    "review_count": 10
   },
   "narrative": {
     "summary": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA",

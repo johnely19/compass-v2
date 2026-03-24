@@ -6,7 +6,8 @@
     "name": "The Matcha Tokyo",
     "city": "Toronto",
     "address": "Ossington (139 Ossington Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "website": "https://www.the-matcha.tokyo/"
   },
   "discovery": {
     "text": "streetsoftoronto.com"

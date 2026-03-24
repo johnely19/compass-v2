@@ -1533,6 +1533,77 @@ a:hover {
   font-size: 0.85rem;
 }
 
+/* ── Rating Widget (new compact bar) ── */
+.rw-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  flex-wrap: wrap;
+}
+
+.rw-rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rw-stars {
+  display: inline-flex;
+  gap: 1px;
+  line-height: 1;
+}
+
+.rw-star {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.rw-star-full {
+  color: #f59e0b;
+}
+
+.rw-star-half {
+  color: #f59e0b;
+  opacity: 0.6;
+}
+
+.rw-star-empty {
+  color: var(--text-muted);
+  opacity: 0.35;
+}
+
+.rw-score {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.rw-count {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.rw-divider {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  opacity: 0.5;
+}
+
+.rw-price {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.03em;
+  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 15%, transparent);
+  border-radius: 4px;
+  padding: 1px 6px;
+  cursor: default;
+}
+
 
 /* ---- 24. Hours Widget ---- */
 

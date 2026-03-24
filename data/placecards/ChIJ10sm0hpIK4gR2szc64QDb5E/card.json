@@ -6,7 +6,20 @@
     "name": "Sandown Market",
     "city": "Toronto",
     "address": "Browns Line / South Etobicoke",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 10:00 AM – 6:00 PM",
+      "Friday: 10:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 6:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 372,
+    "phone": "(416) 259-8260",
+    "website": "https://www.sandownmarket.com/"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"

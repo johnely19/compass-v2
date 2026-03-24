@@ -6,7 +6,20 @@
     "name": "Enoteca Rossio",
     "city": "Toronto",
     "address": "Junction Triangle",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 1:00 AM",
+      "Saturday: 9:00 AM – 3:00 PM, 5:00 PM – 1:00 AM",
+      "Sunday: 9:00 AM – 3:00 PM, 5:00 PM – 12:00 AM"
+    ],
+    "rating": 4.8,
+    "review_count": 34,
+    "phone": "(416) 536-5100",
+    "website": "https://www.enotecarossio.com/"
   },
   "discovery": {
     "text": "Discovered via blogto.com"

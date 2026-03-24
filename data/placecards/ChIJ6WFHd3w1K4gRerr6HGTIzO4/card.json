@@ -6,7 +6,19 @@
     "name": "MADE RITE COFFEE",
     "city": "Toronto",
     "address": "Wales Ave / Queen West",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:00 AM – 4:00 PM",
+      "Tuesday: 8:00 AM – 4:00 PM",
+      "Wednesday: 8:00 AM – 4:00 PM",
+      "Thursday: 8:00 AM – 4:00 PM",
+      "Friday: 8:00 AM – 4:00 PM",
+      "Saturday: 8:00 AM – 4:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 192,
+    "phone": "(647) 996-3719"
   },
   "discovery": {
     "text": "Discovered via https://www.hungry416.com/new-cafes-in-toronto/",
@@ -14,6 +26,13 @@
   },
   "narrative": {
     "summary": "In-house roasting, minimalist industrial space; newer but getting serious buzz from coffee nerds.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"i loveddddd the toasted banana bread , especially warmed up & with a nice cup of steamed milk. it had a nice natural sweetness from the banana (not overly so or artificial tasting) and bits of melting milky chocolate, but it was the sharp saltiness from the sea salt sprinkled all over, permeating and piercing every bite that really set it apart. the banana bread was also moist, quite oily, and hefty — i really loved the texture, and how it wasn’t crumbly and cakey like other banana breads, but more like congealed???\n\nthe SEC was also a really yummy breakfast sandwich (large and filling too). it was steaming when you revealed the STUNNING cross section, fresh, and comforting on a cold day. it was full of the classic, nostalgic savoury sausage flavour, along with the saltiness of the melted kraft cheese, and i LOVEDDD how the sweet and slightly tangy ketchup mingled and paired with the egg flavour. the bread had a slightly toasted crispy bottom, but was thick so could be slightly too bready/dry in some parts. i don’t even like ketchup, but it was delicious in this sandwich.\n\ni had the banana chocolate chip cookie RIGHT out of the oven, so it was kind of falling apart (hadn’t cooled yet), but i’d say the taste was very similar to the banana bread, but in cookie form. again, the sweetness of the banana was infused with saltiness, but there was also a subtle brown sugar flavour in the cookie too. the cookie itself had crunchy, crispy edges, and a chewy center.\"\n\n⭐⭐⭐⭐⭐ \"Braved a winter storm to make our way here and it was worth the trek. Tucked away in a residential area. The coffee was delicious and the egg and mortadella breakfast sandwhich lived up to the hype. We also tried the 50/Fifty (half chicken salad, half egg salad) and fell in love. Grateful for the bad weather so we could enjoy a slow morning in such a warm, friendly spot.\"\n\n⭐⭐⭐⭐⭐ \"Simply the BEST breakfast sandwhich in Toronto - Kevin, Nick & Grace simply know cafe culture at its finest. The best flat white we had all week & the SECw/M was built to perfection. We came on the first day of our trip, came back on the last day of our trip, cause nothing beat it! ENJOY 🤤\""
+      }
+    ]
   }
 }

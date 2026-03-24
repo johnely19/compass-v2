@@ -6,7 +6,20 @@
     "name": "Cassette",
     "city": "Toronto",
     "address": "Queen West / Gladstone (1214 Queen St W)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 4:00 – 11:00 PM",
+      "Wednesday: 4:00 – 11:00 PM",
+      "Thursday: 4:00 – 11:00 PM",
+      "Friday: 4:00 PM – 12:00 AM",
+      "Saturday: 4:00 PM – 12:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 32,
+    "phone": "(416) 531-4635",
+    "website": "https://www.cassetteto.com/"
   },
   "discovery": {
     "text": "Discovered via streetsoftoronto.com"

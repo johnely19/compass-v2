@@ -6,7 +6,20 @@
     "name": "Neurotica Records",
     "city": "Toronto",
     "address": "Little Italy (College/Manning)",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: 12:00 – 7:00 PM",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: 12:00 – 7:00 PM",
+      "Sunday: 1:00 – 7:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 142,
+    "phone": "(416) 603-7796",
+    "website": "http://www.neurotica.ca/"
   },
   "discovery": {
     "text": "Discovered via https://vinylmapper.com/city-guides/toronto-best-record-stores/",

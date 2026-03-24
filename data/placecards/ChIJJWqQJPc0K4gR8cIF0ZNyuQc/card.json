@@ -5,7 +5,21 @@
     "city": "Toronto",
     "address": "Little Italy (797 College St)",
     "type": "restaurant",
-    "place_id": "ChIJJWqQJPc0K4gR8cIF0ZNyuQc"
+    "place_id": "ChIJJWqQJPc0K4gR8cIF0ZNyuQc",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 5:00 – 11:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 2916,
+    "price_level": 4,
+    "phone": "(416) 532-2222",
+    "website": "http://barisabel.com/"
   },
   "discovery": {
     "text": "Toronto Star: Best Date Night Restaurants (Feb 2026)",

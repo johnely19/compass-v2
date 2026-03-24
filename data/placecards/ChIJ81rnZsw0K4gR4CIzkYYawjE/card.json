@@ -6,7 +6,20 @@
     "name": "Toronto City Hall",
     "city": "Toronto",
     "address": "Downtown (Queen & Bay)",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 8:00 AM – 8:00 PM",
+      "Tuesday: 8:00 AM – 8:00 PM",
+      "Wednesday: 8:00 AM – 8:00 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 6:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 1123,
+    "phone": "(416) 392-2489",
+    "website": "https://www.toronto.ca/services-payments/venues-facilities-bookings/booking-city-facilities/civic-centres/city-hall/"
   },
   "discovery": {
     "text": "Discovered via re-thinkingthefuture.com"

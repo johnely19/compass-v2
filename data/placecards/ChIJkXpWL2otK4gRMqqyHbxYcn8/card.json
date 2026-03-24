@@ -6,7 +6,11 @@
     "name": "Artist Project 2026",
     "city": "Toronto",
     "address": "Exhibition Place / Enercare Centre",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.3,
+    "review_count": 6020,
+    "phone": "(416) 263-3000",
+    "website": "http://www.enercarecentre.com/"
   },
   "discovery": {
     "text": "Discovered via blogto.com"

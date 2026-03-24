@@ -6,7 +6,20 @@
     "name": "C Suite",
     "city": "Toronto",
     "address": "Yorkville (Cumberland St)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 1:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "rating": 4.7,
+    "review_count": 320,
+    "phone": "(416) 386-4611",
+    "website": "https://www.instagram.com/barcsuite/"
   },
   "discovery": {
     "text": "Discovered via yelp speakeasy list"

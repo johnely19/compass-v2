@@ -12,7 +12,17 @@
     "website": "https://cicchettibk.com/",
     "rating": 5,
     "user_rating_count": 2,
-    "location": "185 Howard Ave, Brooklyn, NY 11233, USA"
+    "location": "185 Howard Ave, Brooklyn, NY 11233, USA",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 5:00 PM – 12:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "review_count": 13
   },
   "narrative": {
     "summary": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA",
@@ -36,6 +46,12 @@
         "id": "block-4",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 185 Howard Ave, Brooklyn, NY 11233, USA\n\n• walking: 2 hours 0 mins • 5.3 mi\n• transit: 42 mins • 8.1 mi\n• driving: 39 mins • 6.5 mi (traffic: 32 mins)\n• bicycling: 44 mins • 6.6 mi\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (42 mins vs 39 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Incredible wine and food! Such delicious small bites and a great way to start off the evening. The ricotta and honey cicchetti was a particular highlight!\"\n\n⭐⭐⭐⭐⭐ \"We LOVED our first visit to Cicchetti! Its simple space and straightforward menu make for a delightfully tasty night out, and I really liked that I didn't have to choose a wine from an encyclopedia. The owners are frequently there IRL and it really feels like a neighborhood spot where you can trust their recommendation and walk away with deliciousness. I didn't know that \"cicchetti\" is a sort of Italian tapas dish with endless variety, so we have many reasons to go back and try the next variation.\"\n\n⭐⭐⭐⭐⭐ \"Good food and even better cocktails at reasonable prices. The meatball and the rugiada cocktails were true highlights for me. A great place to meet and chill with friends.\""
       }
     ]
   },

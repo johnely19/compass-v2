@@ -6,7 +6,20 @@
     "name": "Tangled Art + Disability — Naal-Naal exhibition",
     "city": "Toronto",
     "address": "Fashion District (401 Richmond St W)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 12:00 – 5:00 PM",
+      "Thursday: 12:00 – 5:00 PM",
+      "Friday: 12:00 – 5:00 PM",
+      "Saturday: 12:00 – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.9,
+    "review_count": 23,
+    "phone": "(647) 725-5064",
+    "website": "http://tangledarts.org/"
   },
   "discovery": {
     "text": "Discovered via streetsoftoronto.com"

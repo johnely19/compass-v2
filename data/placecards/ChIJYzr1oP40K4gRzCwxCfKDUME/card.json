@@ -6,7 +6,20 @@
     "name": "VdeV",
     "city": "Toronto",
     "address": "Dundas West / Trinity Bellwoods",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:00 AM – 6:00 PM",
+      "Tuesday: 11:00 AM – 6:00 PM",
+      "Wednesday: 11:00 AM – 6:00 PM",
+      "Thursday: 11:00 AM – 6:00 PM",
+      "Friday: 11:00 AM – 6:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 5:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 139,
+    "phone": "(647) 348-3381",
+    "website": "https://www.vdevmaison.com/"
   },
   "discovery": {
     "text": "Discovered via vdevmaison.com"

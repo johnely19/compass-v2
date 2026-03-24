@@ -6,7 +6,20 @@
     "name": "Muddy George",
     "city": "Toronto",
     "address": "Bloor West Village / Bloordale",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 5:00 PM",
+      "Wednesday: 12:00 – 5:00 PM",
+      "Thursday: 12:00 – 7:00 PM",
+      "Friday: 12:00 – 7:00 PM",
+      "Saturday: 12:00 – 5:00 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 102,
+    "phone": "(647) 748-9000",
+    "website": "http://www.muddygeorge.com/"
   },
   "discovery": {
     "text": "Discovered via muddygeorge.com"

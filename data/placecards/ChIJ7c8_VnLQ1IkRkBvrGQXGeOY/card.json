@@ -6,7 +6,20 @@
     "name": "Cedar Ridge Creative Centre",
     "city": "Toronto",
     "address": "Scarborough (Cedar Ridge Park)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 9:00 PM",
+      "Tuesday: 9:00 AM – 9:00 PM",
+      "Wednesday: 9:00 AM – 9:00 PM",
+      "Thursday: 9:00 AM – 9:00 PM",
+      "Friday: 9:00 AM – 4:00 PM",
+      "Saturday: 9:00 AM – 4:00 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 186,
+    "phone": "(416) 396-4026",
+    "website": "http://toronto.ca/cedarridge/gallery"
   },
   "discovery": {
     "text": "Discovered via https://streetsoftoronto.com/toronto-culture/5-art-exhibitions-we-cant-wait-to-see-in-toronto/",
@@ -14,6 +27,13 @@
   },
   "narrative": {
     "summary": "Free ‘Porcelain Narratives’ (Feb 28–Mar 23, 2026) — porcelain installations (cobalt/gold lustre) on memory/transformation.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"A hub for creativity - a fun happy place.  A variety of art classes and workshops including pottery and sculpture .  They have a seperate studio for clay classes and workshops.\nThey have adult and children programs .\nI have been going there on and off  for over 15 years.  Check them out  the admin staff  are great and helpful.  Definitely great value for money.\nRuns as part of  City of Toronto Parks and Rec programming.\"\n\n⭐⭐⭐⭐⭐ \"Great place to host a small, intimate event. Hosted an event here for about 70 people and it was the perfect size. Feels a little but stuffy (hot), small, and floors are creaky at places, but it's a beautiful, intimate location with lots of green space outside and plenty of parking space! A bit hard to get to without car.\"\n\n⭐⭐⭐⭐⭐ \"Cedar Ridge Creative Centre is nestled within beautiful gardens enjoyed by the public and available for weddings and special events. Quiet and serene area and a place where you can enroll in art classes. I sometimes see that they will have an art show there also. Parking on site and the area is clean and maintained well.\""
+      }
+    ]
   }
 }

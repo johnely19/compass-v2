@@ -6,7 +6,20 @@
     "name": "Sanagan's Meat Locker",
     "city": "Toronto",
     "address": "Kensington Market",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 10:00 AM – 6:00 PM",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 10:00 AM – 6:00 PM",
+      "Friday: 10:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 5:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 474,
+    "phone": "(416) 593-9747",
+    "website": "http://www.sanagansmeatlocker.com/"
   },
   "discovery": {
     "text": "Discovered via torontolife.com"

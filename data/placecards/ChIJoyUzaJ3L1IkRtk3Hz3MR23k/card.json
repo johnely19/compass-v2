@@ -6,7 +6,20 @@
     "name": "GUFF",
     "city": "Toronto",
     "address": "Riverside/Leslieville",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 11:00 AM – 5:00 PM",
+      "Tuesday: 11:00 AM – 5:00 PM",
+      "Wednesday: 11:00 AM – 5:00 PM",
+      "Thursday: 11:00 AM – 5:00 PM",
+      "Friday: 11:00 AM – 5:00 PM",
+      "Saturday: 11:00 AM – 5:00 PM",
+      "Sunday: 11:00 AM – 3:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 134,
+    "phone": "(416) 913-8025",
+    "website": "http://www.gufffurniture.com/"
   },
   "discovery": {
     "text": "Discovered via designlinesmagazine.com"

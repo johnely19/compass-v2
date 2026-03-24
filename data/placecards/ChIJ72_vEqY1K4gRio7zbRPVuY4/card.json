@@ -6,7 +6,19 @@
     "name": "Bitters & Bloom",
     "city": "Toronto",
     "address": "Little Italy (College St near Bathurst)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 1:00 AM",
+      "Saturday: 5:00 PM – 1:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.8,
+    "review_count": 22,
+    "website": "https://www.bittersandbloom.bar/"
   },
   "discovery": {
     "text": "Discovered via https://www.toronto.com/things-to-do/food-and-drink/this-new-speakeasy-style-cocktail-bar-in-toronto-is-hidden-behind-an-unmarked-door/",
@@ -14,6 +26,13 @@
   },
   "narrative": {
     "summary": "Hidden behind unmarked door—jazz-influenced atmosphere, culinary-driven cocktails by Le Cordon Bleu-trained bartender. Opened Aug 2025, 4.8 rating. Open NOW til 1am.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"A hidden gem with a speakeasy ambiance. The hospitality is welcoming, and the cocktail program is thoughtful and inventive.\n\nHaving great steak downstairs and finished the night upstairs with delicious, well-crafted cocktails. Definitely recommend this combo!\"\n\n⭐⭐⭐⭐⭐ \"Great little hideaway - be sure to check their Instagram for that night's code!\n\nFantastic cocktails, exceptionally well-made, friendly service. The pretzel with the maple butter was delightful. Will definitely be back when I'm next in the area!\"\n\n⭐⭐⭐⭐⭐ \"This cocktail bar has only been open for a month, I anticipate it will get more busy given how great the cocktails are (Little Italy has no shortage of cocktail bars). Really inventive cocktails, a lot of elements made in-house. I also ordered a custom cocktail which I really liked.\nThey have expensive champagne bottles if that's your thing 🤑\nVery chic lounge atmosphere.\nFood wise, there's mostly sweet items (they have a pastry chef!) so wouldn't recommend this if you're looking for bar bites too.\""
+      }
+    ]
   }
 }

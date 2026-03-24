@@ -6,7 +6,18 @@
     "name": "Rooms | 17 Baldwin",
     "city": "Toronto",
     "address": "Baldwin Village / Chinatown edge",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 8:00 AM – 6:00 PM",
+      "Tuesday: 8:00 AM – 6:00 PM",
+      "Wednesday: 8:00 AM – 6:00 PM",
+      "Thursday: 8:00 AM – 6:00 PM",
+      "Friday: 8:00 AM – 6:00 PM",
+      "Saturday: 8:00 AM – 6:00 PM",
+      "Sunday: 8:00 AM – 6:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 286
   },
   "discovery": {
     "text": "Discovered via https://sprudge.com/the-sprudge-guide-to-coffee-in-toronto-for-2025-332251.html",

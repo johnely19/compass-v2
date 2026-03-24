@@ -5,7 +5,20 @@
     "place_id": "ChIJjzr6ipnTKk0R0ckCnujX1Y0",
     "name": "Unknown Place (ChIJjzr6ipnTKk0R0ckCnujX1Y0)",
     "address": "Address pending",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "rating": 4.6,
+    "review_count": 178,
+    "phone": "(705) 322-8888",
+    "website": "http://www.georgianbaypark.com/"
   },
   "discovery": {
     "text": "Disco discovery"

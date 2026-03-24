@@ -6,7 +6,20 @@
     "name": "Bar Eugenie",
     "city": "Toronto",
     "address": "Harbord Village (89 Harbord St)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 10:30 PM",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 5:00 – 10:30 PM",
+      "Friday: 5:00 – 10:30 PM",
+      "Saturday: 5:00 – 10:30 PM",
+      "Sunday: 5:00 – 9:30 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 123,
+    "phone": "(416) 923-6444",
+    "website": "https://bareugenie.com/"
   },
   "discovery": {
     "text": "Discovered via blogto.com"

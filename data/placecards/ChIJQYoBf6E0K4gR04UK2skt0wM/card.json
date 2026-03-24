@@ -6,7 +6,20 @@
     "name": "Designers Walk",
     "city": "Toronto",
     "address": "Annex/Bedford",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 9:00 AM – 5:00 PM",
+      "Tuesday: 9:00 AM – 5:00 PM",
+      "Wednesday: 9:00 AM – 5:00 PM",
+      "Thursday: 9:00 AM – 5:00 PM",
+      "Friday: 9:00 AM – 5:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "rating": 4.4,
+    "review_count": 9,
+    "phone": "(416) 961-1211",
+    "website": "https://www.designerswalk.com/"
   },
   "discovery": {
     "text": "Discovered via designerswalk.com"

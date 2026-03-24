@@ -6,13 +6,26 @@
     "name": "High Notes Coffee + Vinyl",
     "city": "Toronto",
     "address": "Roncesvalles / Dundas West (2057 Dundas St W)",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:30 AM – 6:00 PM",
+      "Tuesday: 8:30 AM – 6:00 PM",
+      "Wednesday: 8:30 AM – 6:00 PM",
+      "Thursday: 8:30 AM – 6:00 PM",
+      "Friday: 8:30 AM – 6:00 PM",
+      "Saturday: 9:30 AM – 9:00 PM",
+      "Sunday: 9:30 AM – 6:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 208,
+    "phone": "(647) 368-8581",
+    "website": "http://www.highnotes.ca/"
   },
   "discovery": {
     "text": "highnotes.ca"
   },
   "narrative": {
-    "summary": "Coffee-by-day, vinyl-bar-by-evening. Neighbourhood listening room with a 4.9\u2605 rating from 208 reviews. Curated record selection. Quieter, more contemplative than the nightlife spots. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "Coffee-by-day, vinyl-bar-by-evening. Neighbourhood listening room with a 4.9★ rating from 208 reviews. Curated record selection. Quieter, more contemplative than the nightlife spots. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": []
   }
 }

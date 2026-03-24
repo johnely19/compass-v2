@@ -6,7 +6,20 @@
     "name": "Montauk Sofa",
     "city": "Toronto",
     "address": "King East Design District",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 5:00 PM",
+      "Wednesday: 11:00 AM – 5:00 PM",
+      "Thursday: 11:00 AM – 5:00 PM",
+      "Friday: 11:00 AM – 5:00 PM",
+      "Saturday: 11:00 AM – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 3.9,
+    "review_count": 18,
+    "phone": "(416) 361-0331",
+    "website": "http://www.montauksofa.com/"
   },
   "discovery": {
     "text": "Discovered via canadianinteriors.com"

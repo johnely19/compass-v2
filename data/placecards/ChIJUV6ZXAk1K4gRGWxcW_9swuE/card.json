@@ -6,7 +6,19 @@
     "name": "The Bad Angel",
     "city": "Toronto",
     "address": "Dundas West / Little Portugal",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 2:00 PM – 12:00 AM",
+      "Sunday: 2:00 PM – 12:00 AM"
+    ],
+    "rating": 5,
+    "review_count": 21,
+    "website": "https://www.badangelbar.com/"
   },
   "discovery": {
     "text": "Discovered via blogto Feb 2026"

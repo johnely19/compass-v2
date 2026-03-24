@@ -13,7 +13,17 @@
     "price_level": 3,
     "rating": 4.4,
     "user_rating_count": 485,
-    "location": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"
+    "location": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
+    "hours": [
+      "Monday: 7:00 AM – 9:00 PM",
+      "Tuesday: 7:00 AM – 9:00 PM",
+      "Wednesday: 7:00 AM – 9:00 PM",
+      "Thursday: 7:00 AM – 9:00 PM",
+      "Friday: 7:00 AM – 9:00 PM",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "review_count": 488
   },
   "narrative": {
     "summary": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",

@@ -6,7 +6,20 @@
     "name": "Bar Gobo",
     "city": "Vancouver",
     "address": "Strathcona",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 5:00 – 11:00 PM",
+      "Sunday: 5:00 – 11:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 178,
+    "phone": "(604) 423-5400",
+    "website": "http://www.bargobo.com/"
   },
   "discovery": {
     "text": "bargobo.com",

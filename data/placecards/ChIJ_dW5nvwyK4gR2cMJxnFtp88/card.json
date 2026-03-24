@@ -10,7 +10,19 @@
     "type": "grocery",
     "phone": "(416) 785-9100",
     "website": "https://www.pusateris.com/",
-    "location": "1539 Avenue Rd, Toronto, ON M5M 3X4, Canada"
+    "location": "1539 Avenue Rd, Toronto, ON M5M 3X4, Canada",
+    "hours": [
+      "Monday: 7:00 AM – 7:00 PM",
+      "Tuesday: 7:00 AM – 7:00 PM",
+      "Wednesday: 7:00 AM – 7:00 PM",
+      "Thursday: 7:00 AM – 7:00 PM",
+      "Friday: 7:00 AM – 7:00 PM",
+      "Saturday: 7:00 AM – 7:00 PM",
+      "Sunday: 7:00 AM – 7:00 PM"
+    ],
+    "rating": 4,
+    "review_count": 570,
+    "price_level": 4
   },
   "narrative": {
     "summary": "📍 Pusateri's Fine Foods\n1539 Avenue Rd, Toronto, ON M5M 3X4, Canada",

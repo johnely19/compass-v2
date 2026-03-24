@@ -6,7 +6,19 @@
     "name": "Franz Kaka",
     "city": "Toronto",
     "address": "Dupont / Symington",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 12:00 – 5:00 PM",
+      "Friday: 12:00 – 5:00 PM",
+      "Saturday: 12:00 – 5:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 10,
+    "website": "http://www.franzkaka.com/"
   },
   "discovery": {
     "text": "Discovered via http://www.franzkaka.com/",

@@ -6,7 +6,21 @@
     "name": "Burdock Brewery & Music Hall",
     "city": "Toronto",
     "address": "Bloordale (1184 Bloor St W)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 11:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1419,
+    "price_level": 2,
+    "phone": "(416) 546-4033",
+    "website": "http://www.burdockbrewery.com/"
   },
   "discovery": {
     "text": "burdockbrewery.com"

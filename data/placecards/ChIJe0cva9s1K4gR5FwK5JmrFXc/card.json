@@ -6,14 +6,27 @@
     "name": "Castle & Coal",
     "city": "Toronto",
     "address": "Dovercourt / Queen W",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 9:00 AM – 6:00 PM",
+      "Thursday: 9:00 AM – 6:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 4:00 PM",
+      "Sunday: 10:00 AM – 4:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 372,
+    "phone": "(437) 880-8410",
+    "website": "https://www.castleandcoal.ca/"
   },
   "discovery": {
     "text": "Discovered via https://www.chuonthis.ca/best-bakeries-toronto/",
     "url": "https://www.chuonthis.ca/best-bakeries-toronto/"
   },
   "narrative": {
-    "summary": "Canel\u00e9s as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
+    "summary": "Canelés as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
     "blocks": []
   }
 }

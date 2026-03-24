@@ -6,7 +6,19 @@
     "name": "Bar Etc.",
     "city": "Toronto",
     "address": "Leslieville / Gerrard East (1036 Gerrard St E)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:30 PM – 12:00 AM",
+      "Thursday: 5:30 PM – 12:00 AM",
+      "Friday: 5:30 PM – 1:00 AM",
+      "Saturday: 5:30 PM – 1:00 AM",
+      "Sunday: 5:30 – 11:00 PM"
+    ],
+    "rating": 5,
+    "review_count": 10,
+    "website": "http://baretc.ca/"
   },
   "discovery": {
     "text": "Discovered via blogto.com"

@@ -6,7 +6,21 @@
     "name": "Mahjong Bar",
     "city": "Toronto",
     "address": "Dundas West / Little Portugal",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 7:00 PM – 1:00 AM",
+      "Friday: 7:00 PM – 2:00 AM",
+      "Saturday: 7:00 PM – 2:00 AM",
+      "Sunday: 7:00 PM – 12:00 AM"
+    ],
+    "rating": 4.2,
+    "review_count": 758,
+    "price_level": 2,
+    "phone": "(416) 551-7756",
+    "website": "http://mahjongbar.com/"
   },
   "discovery": {
     "text": "Discovered via foodism speakeasies"

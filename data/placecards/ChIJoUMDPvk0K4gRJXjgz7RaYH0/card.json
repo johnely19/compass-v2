@@ -6,7 +6,21 @@
     "name": "Paris Paris",
     "city": "Toronto",
     "address": "Ossington",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 11:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 PM – 2:00 AM",
+      "Friday: 12:00 PM – 2:00 AM",
+      "Saturday: 11:00 AM – 2:00 AM",
+      "Sunday: 11:00 AM – 11:00 PM"
+    ],
+    "rating": 3.9,
+    "review_count": 1240,
+    "price_level": 2,
+    "phone": "(437) 983-8774",
+    "website": "http://www.parisparis.ca/"
   },
   "discovery": {
     "text": "Discovered via starwinelist.com"

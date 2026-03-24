@@ -6,7 +6,18 @@
     "name": "Lonely Diner",
     "city": "Toronto",
     "address": "Kensington / College",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:30 PM – 12:00 AM",
+      "Thursday: 5:30 PM – 12:00 AM",
+      "Friday: 5:30 PM – 2:00 AM",
+      "Saturday: 5:30 PM – 2:00 AM",
+      "Sunday: 5:30 PM – 12:00 AM"
+    ],
+    "rating": 4.8,
+    "review_count": 137
   },
   "discovery": {
     "text": "Discovered via https://bartenderatlas.com/features/bars/where-were-drinking-in-toronto-the-new-bars/",

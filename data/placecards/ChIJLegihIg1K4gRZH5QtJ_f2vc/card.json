@@ -6,7 +6,20 @@
     "name": "Machida Shoten",
     "city": "Toronto",
     "address": "College & Spadina (326 College St)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 827,
+    "phone": "(416) 972-1717",
+    "website": "https://www.machidashoten.ca/"
   },
   "discovery": {
     "text": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe."

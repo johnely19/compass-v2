@@ -12,7 +12,8 @@
     "price_level": 2,
     "rating": 4.6,
     "user_rating_count": 153,
-    "location": "135 Graham Ave, Brooklyn, NY 11206, USA"
+    "location": "135 Graham Ave, Brooklyn, NY 11206, USA",
+    "review_count": 153
   },
   "narrative": {
     "summary": "📍 Featherweight\n135 Graham Ave, Brooklyn, NY 11206, USA",

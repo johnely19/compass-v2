@@ -12,7 +12,17 @@
     "website": "https://www.sipshucksip.com/",
     "rating": 4.5,
     "user_rating_count": 1318,
-    "location": "214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada"
+    "location": "214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "review_count": 1320
   },
   "narrative": {
     "summary": "📍 À Toi\n214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada",

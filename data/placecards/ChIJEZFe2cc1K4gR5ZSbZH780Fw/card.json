@@ -6,7 +6,12 @@
     "name": "Aburi Hana",
     "city": "Toronto",
     "address": "Yorkville (102 Yorkville Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.6,
+    "review_count": 283,
+    "price_level": 4,
+    "phone": "(647) 343-8887",
+    "website": "http://aburihana.com/"
   },
   "discovery": {
     "text": "aburihana.com"

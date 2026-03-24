@@ -6,7 +6,20 @@
     "name": "Mimi Chinese (refreshed)",
     "city": "Toronto",
     "address": "Yorkville/Annex",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 – 10:30 PM",
+      "Wednesday: 5:00 – 10:30 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 5:00 PM – 12:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.4,
+    "review_count": 817,
+    "phone": "(416) 505-0799",
+    "website": "https://www.mimichinese.com/?utm_source=extnet&utm_medium=yext"
   },
   "discovery": {
     "text": "Discovered via toronto.com"

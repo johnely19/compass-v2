@@ -10,7 +10,19 @@
     "type": "grocery",
     "phone": "(416) 444-6262",
     "website": "https://www.mcewanfoods.com/?utm_source=Google&utm_medium=GoogleBusiness&utm_campaign=Organic",
-    "location": "38 Karl Fraser Rd, North York, ON M3C 0H7, Canada"
+    "location": "38 Karl Fraser Rd, North York, ON M3C 0H7, Canada",
+    "hours": [
+      "Monday: 8:00 AM – 7:30 PM",
+      "Tuesday: 8:00 AM – 7:30 PM",
+      "Wednesday: 8:00 AM – 7:30 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 8:00 PM",
+      "Saturday: 8:00 AM – 7:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.3,
+    "review_count": 1195,
+    "price_level": 4
   },
   "narrative": {
     "summary": "📍 McEwan Fine Foods\n38 Karl Fraser Rd, North York, ON M3C 0H7, Canada",

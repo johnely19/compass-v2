@@ -6,7 +6,19 @@
     "name": "No Vacancy",
     "city": "Toronto",
     "address": "Ossington",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 PM – 1:00 AM",
+      "Wednesday: 6:00 PM – 1:00 AM",
+      "Thursday: 6:00 PM – 2:00 AM",
+      "Friday: 6:00 PM – 2:00 AM",
+      "Saturday: 6:00 PM – 2:00 AM",
+      "Sunday: 6:00 PM – 1:00 AM"
+    ],
+    "rating": 4.6,
+    "review_count": 301,
+    "website": "https://novacancybar.ca/"
   },
   "discovery": {
     "text": "Discovered via bartenderatlas.com"

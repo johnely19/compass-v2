@@ -6,7 +6,20 @@
     "name": "LOOPLINE | bottle shop & wine bar",
     "city": "Toronto",
     "address": "Dupont / Annex",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 12:00 – 8:00 PM",
+      "Tuesday: 12:00 – 8:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 8:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 79,
+    "phone": "(416) 516-8059",
+    "website": "http://www.looplinewine.com/"
   },
   "discovery": {
     "text": "Discovered via naturallywine.substack.com"

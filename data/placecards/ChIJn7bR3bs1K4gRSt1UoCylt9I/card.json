@@ -6,7 +6,20 @@
     "name": "Cong Caphe (Annex)",
     "city": "Toronto",
     "address": "Annex (424 Bloor St W)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 8:00 AM – 10:00 PM",
+      "Tuesday: 8:00 AM – 10:00 PM",
+      "Wednesday: 8:00 AM – 10:00 PM",
+      "Thursday: 8:00 AM – 10:00 PM",
+      "Friday: 8:00 AM – 10:00 PM",
+      "Saturday: 9:00 AM – 10:00 PM",
+      "Sunday: 9:00 AM – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 585,
+    "phone": "(416) 925-1336",
+    "website": "http://www.congcaphe.ca/"
   },
   "discovery": {
     "text": "streetsoftoronto.com"

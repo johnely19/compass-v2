@@ -6,7 +6,11 @@
     "name": "ZAYO by Esie Mensah / dance Immersion",
     "city": "Toronto",
     "address": "North York (Meridian Arts Centre)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.6,
+    "review_count": 2012,
+    "phone": "(416) 733-9388",
+    "website": "https://tolive.com/Meridian-Arts-Centre"
   },
   "discovery": {
     "text": "Discovered via esiemensah.com"

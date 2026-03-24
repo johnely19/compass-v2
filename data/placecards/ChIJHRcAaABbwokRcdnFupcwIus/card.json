@@ -4,7 +4,7 @@
   "source": "workspace-sync",
   "identity": {
     "place_id": "ChIJHRcAaABbwokRcdnFupcwIus",
-    "name": "Dilj\u0101n Bakery",
+    "name": "Diljān Bakery",
     "city": "Brooklyn",
     "address": "330 Hicks St, Brooklyn, NY 11201, USA",
     "website": "https://www.instagram.com/diljanbakery",
@@ -12,35 +12,46 @@
     "location": "330 Hicks St, Brooklyn, NY 11201, USA",
     "lat": 40.691532,
     "lng": -73.99788699999999,
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:00 AM – 4:00 PM",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 8:00 AM – 4:00 PM",
+      "Friday: 8:00 AM – 4:00 PM",
+      "Saturday: 8:00 AM – 4:00 PM",
+      "Sunday: 8:00 AM – 4:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 87
   },
   "narrative": {
-    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nHicks St in Brooklyn Heights \u2014 a tiny bakery that sells out daily.\n\nAfghan baked goods and breads from the team behind Astoria's Little Flower Cafe, with skilled baker Bryan Ford. Opened December 2025. Rating: 4.9 stars.",
+    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nHicks St in Brooklyn Heights — a tiny bakery that sells out daily.\n\nAfghan baked goods and breads from the team behind Astoria's Little Flower Cafe, with skilled baker Bryan Ford. Opened December 2025. Rating: 4.9 stars.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nHicks St, Brooklyn Heights \u2014 a tiny storefront that you'd walk right past if you didn't know.\n\nYou arrive and the line is already forming. Dilj\u0101n is the passion project of Ali Zaman and Mohamed Ghiasi (of Little Flower Cafe in Astoria) and baker Bryan Ford \u2014 Afghan Americans who wanted to bring the traditional breads and pastries they grew up with to Brooklyn. Open since December 2025, already selling out daily. The name means 'sweetheart' in Farsi."
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nHicks St, Brooklyn Heights — a tiny storefront that you'd walk right past if you didn't know.\n\nYou arrive and the line is already forming. Diljān is the passion project of Ali Zaman and Mohamed Ghiasi (of Little Flower Cafe in Astoria) and baker Bryan Ford — Afghan Americans who wanted to bring the traditional breads and pastries they grew up with to Brooklyn. Open since December 2025, already selling out daily. The name means 'sweetheart' in Farsi."
       },
       {
         "id": "block-2",
         "title": "Space",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nTiny. A counter, a few shelves, the scent of saffron and cardamom. This is a bakery, not a caf\u00e9 \u2014 you're here to buy and go. The intimacy is part of the charm. You can see Bryan's fingerprints \u2014 literally \u2014 in every piece of bread."
+        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nTiny. A counter, a few shelves, the scent of saffron and cardamom. This is a bakery, not a café — you're here to buy and go. The intimacy is part of the charm. You can see Bryan's fingerprints — literally — in every piece of bread."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd5\ud835\uddd4\ud835\uddde\ud835\uddd8\ud835\uddd7 \ud835\uddda\ud835\udde2\ud835\udde2\ud835\uddd7\ud835\udde6\n\n\ud835\udde3\ud835\uddee\ud835\ude00\ud835\ude01\ud835\uddff\ud835\uddf6\ud835\uddf2\ud835\ude00\n\u2022 Saffron Shah \u2014 crescent-shaped, stuffed with saffron pastry cream, dipped in saffron white chocolate. The Islamic crescent symbol. Saffron-forward, the white chocolate breaks it up beautifully \u2b50\n\u2022 Halwa Sticky Bun \u2014 sweet roll with semolina pudding (halwa), jaggery, butter, almonds, walnuts, pistachio. Ooey-gooey like a cinnamon bun with Afghan soul \u2b50\n\u2022 Sheer Pira \u2014 flaky dough, pistachio frangipane, Afghan milk fudge, vanilla diplomat cream. Dense but light, with cardamom, rose water, sugar syrup \u2b50\n\n\ud835\uddd5\ud835\uddff\ud835\uddf2\ud835\uddee\ud835\uddf1\ud835\ude00\n\u2022 Afghan Naan e Panja \u2014 sourdough flatbread with stone-ground flour (Cairnsprings Mills), you can see Bryan's fingerprints in each one. Whole wheat with a crispy bottom \u2b50\n\u2022 Roghani \u2014 \"oily bread\" in Farsi, 18% more olive oil than the panja. Rich, rippable, perfect\n\nNote: Everything sells out. Go early. The saffron shah and the naan are non-negotiable."
+        "body": "𝗧𝗛𝗘 𝗕𝗔𝗞𝗘𝗗 𝗚𝗢𝗢𝗗𝗦\n\n𝗣𝗮𝘀𝘁𝗿𝗶𝗲𝘀\n• Saffron Shah — crescent-shaped, stuffed with saffron pastry cream, dipped in saffron white chocolate. The Islamic crescent symbol. Saffron-forward, the white chocolate breaks it up beautifully ⭐\n• Halwa Sticky Bun — sweet roll with semolina pudding (halwa), jaggery, butter, almonds, walnuts, pistachio. Ooey-gooey like a cinnamon bun with Afghan soul ⭐\n• Sheer Pira — flaky dough, pistachio frangipane, Afghan milk fudge, vanilla diplomat cream. Dense but light, with cardamom, rose water, sugar syrup ⭐\n\n𝗕𝗿𝗲𝗮𝗱𝘀\n• Afghan Naan e Panja — sourdough flatbread with stone-ground flour (Cairnsprings Mills), you can see Bryan's fingerprints in each one. Whole wheat with a crispy bottom ⭐\n• Roghani — \"oily bread\" in Farsi, 18% more olive oil than the panja. Rich, rippable, perfect\n\nNote: Everything sells out. Go early. The saffron shah and the naan are non-negotiable."
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $\n\nMost items $4-8. Naan under $10.\n\n\ud83c\udf10 @diljanbakery on Instagram\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon: 8:00 AM \u2013 4:00 PM\nTue\u2013Wed: Closed\nThu\u2013Sun: 8:00 AM \u2013 4:00 PM\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Morning opening (8am): Best selection before things sell out\n\u2022 Thursday/Friday: Fewer crowds than weekends\n\u2022 Go early or miss the saffron shah \u2014 there is no other option"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $\n\nMost items $4-8. Naan under $10.\n\n🌐 @diljanbakery on Instagram\n\n𝗛𝗢𝗨𝗥𝗦\nMon: 8:00 AM – 4:00 PM\nTue–Wed: Closed\nThu–Sun: 8:00 AM – 4:00 PM\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Morning opening (8am): Best selection before things sell out\n• Thursday/Friday: Fewer crowds than weekends\n• Go early or miss the saffron shah — there is no other option"
       }
     ]
   },
   "discovery": {
-    "text": "Eater NY \u2014 'giant naan worth the trip'",
+    "text": "Eater NY — 'giant naan worth the trip'",
     "url": "https://ny.eater.com/maps/best-bakeries-brooklyn"
   }
 }

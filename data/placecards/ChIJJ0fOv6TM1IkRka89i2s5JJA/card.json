@@ -6,7 +6,20 @@
     "name": "Evergreen Brick Works",
     "city": "Toronto",
     "address": "Don Valley (Bayview)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 5:00 PM",
+      "Tuesday: 9:00 AM – 5:00 PM",
+      "Wednesday: 9:00 AM – 5:00 PM",
+      "Thursday: 9:00 AM – 5:00 PM",
+      "Friday: 9:00 AM – 5:00 PM",
+      "Saturday: 9:00 AM – 5:00 PM",
+      "Sunday: 9:00 AM – 5:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 9788,
+    "phone": "(416) 596-7670",
+    "website": "https://www.evergreen.ca/evergreen-brick-works/"
   },
   "discovery": {
     "text": "Discovered via frommers.com"

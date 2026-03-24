@@ -6,7 +6,21 @@
     "name": "hanamaru market and bento",
     "city": "Toronto",
     "address": "Pape / East York",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 6:00 PM",
+      "Wednesday: 11:00 AM – 6:00 PM",
+      "Thursday: 11:00 AM – 6:00 PM",
+      "Friday: 11:00 AM – 6:00 PM",
+      "Saturday: 11:00 AM – 6:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.9,
+    "review_count": 325,
+    "price_level": 2,
+    "phone": "(416) 901-8862",
+    "website": "https://hanamarupape.wixsite.com/pape"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"

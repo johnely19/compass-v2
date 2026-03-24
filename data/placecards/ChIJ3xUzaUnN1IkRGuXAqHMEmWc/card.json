@@ -6,7 +6,20 @@
     "name": "Bluet Bakery",
     "city": "Toronto",
     "address": "Cabbagetown (Gerrard E)",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:00 AM – 6:00 PM",
+      "Wednesday: 10:00 AM – 6:00 PM",
+      "Thursday: 9:00 AM – 6:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "rating": 5,
+    "review_count": 78,
+    "phone": "(647) 865-9724",
+    "website": "https://bluetbakery.ca/"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/bakery/bluet-bakery-toronto/",
@@ -14,6 +27,13 @@
   },
   "narrative": {
     "summary": "Perfect 5.0 rating; seasonal rotating cookies from a beloved pop-up gone brick-and-mortar; 77 reviews already.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I visited Bluet Bakery on a beautiful snowy day. The atmosphere of the cafe is quiet and intimate. The staff working was so friendly, giving her recommendations for food and drink (the options looked so good I couldn’t choose!)\n\nI ended up getting the chocolate mousse and the tiramisu with a chai latte and a flat white. The coffee was strong and delicious! The food a perfect level of sweet, complimenting the coffee well.\n\nMy new favourite in the neighborhood!\"\n\n⭐⭐⭐⭐ \"Bluet Bakery caught my attention for the mango mousse cake, but unfortunately it wasn’t available when I visited. I tried the blood orange filling with white chocolate mousse instead, which was quite good and well balanced. That said, the selection of food options was limited, so there wasn’t much variety to try.\"\n\n⭐⭐⭐⭐⭐ \"Had the raspberry cake and it was great! Genuinely way better than the viral ones in the US and LA.\n\nAlso had the honey cake and it was deliciously light with a pleasant sweetness and tang!\""
+      }
+    ]
   }
 }

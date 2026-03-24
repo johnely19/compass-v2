@@ -6,7 +6,20 @@
     "name": "Library Coffee",
     "city": "Toronto",
     "address": "Dundas West/AGO",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 8:00 AM – 6:00 PM",
+      "Tuesday: 8:00 AM – 6:00 PM",
+      "Wednesday: 8:00 AM – 6:00 PM",
+      "Thursday: 8:00 AM – 6:00 PM",
+      "Friday: 8:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 960,
+    "phone": "(647) 350-8839",
+    "website": "http://librarycoffee.ca/"
   },
   "discovery": {
     "text": "Discovered via Reddit r/askTO"

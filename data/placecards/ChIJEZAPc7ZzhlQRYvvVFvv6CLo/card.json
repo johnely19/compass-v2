@@ -6,7 +6,21 @@
     "name": "Maenam",
     "city": "Vancouver",
     "address": "Kitsilano",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 9:30 PM",
+      "Tuesday: 5:00 – 9:30 PM",
+      "Wednesday: 12:00 – 2:00 PM, 5:00 – 9:30 PM",
+      "Thursday: 12:00 – 2:00 PM, 5:00 – 9:30 PM",
+      "Friday: 12:00 – 2:00 PM, 5:00 – 10:00 PM",
+      "Saturday: 12:00 – 2:00 PM, 5:00 – 10:00 PM",
+      "Sunday: 5:00 – 9:30 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 1293,
+    "price_level": 3,
+    "phone": "(604) 730-5579",
+    "website": "http://www.maenam.ca/"
   },
   "discovery": {
     "text": "Elevated Thai by chef Angus An — West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",

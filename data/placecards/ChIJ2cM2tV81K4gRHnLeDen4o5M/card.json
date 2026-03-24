@@ -6,7 +6,20 @@
     "name": "Grape Witches",
     "city": "Toronto",
     "address": "Dundas West (Trinity Bellwoods)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 – 11:00 PM",
+      "Saturday: 12:00 – 11:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 234,
+    "phone": "(416) 546-2151",
+    "website": "http://grapewitches.com/"
   },
   "discovery": {
     "text": "https://grapewitches.com/",
@@ -14,6 +27,13 @@
   },
   "narrative": {
     "summary": "OG Toronto natty wine shop + bar; 250+ organic/biodynamic/natural bottles, educational tastings, second location at Waterworks. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The grape witch subscription box is SO GOOD. It brings me so much joy. It’s so fun reading about the wines and trying ones I likely wouldn’t have otherwise. Have found so many new favourites this way. Delivery is super convenient. Everything is perfect. 1000/10.\"\n\n⭐⭐⭐⭐⭐ \"wow. thanks for single-handedly carrying the Ontario natural wine importing game. found my favorite elusive wine producer here by a stroke of luck (I was just visiting Toronto) and I could’ve cried!\n\nthe patio is beautiful but the flights left something to crave. it was ok, i think i just had a weird day (as a big natural wine person!). truly some spectacular selection, great vibes, the food looked nice for snacks - and i especially appreciated the grape fountain. thx for existing!\"\n\n⭐⭐⭐⭐⭐ \"What a delicious natural wine bar. So many options and a diverse price range offers in new comers to natural wine for questions which are happily answered by staff. Upbeat and happy is everyone who is working there, and the front outdoor patio is lovely. Sign their petition on their site so they can open their back one!\""
+      }
+    ]
   }
 }

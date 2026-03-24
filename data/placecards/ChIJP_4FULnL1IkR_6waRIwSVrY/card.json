@@ -6,7 +6,11 @@
     "name": "Java Roasters",
     "city": "Toronto",
     "address": "Carlaw/Leslieville",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.8,
+    "review_count": 29,
+    "phone": "(647) 807-7000",
+    "website": "http://javaroasters.ca/"
   },
   "discovery": {
     "text": "Discovered via Sprudge 2025"

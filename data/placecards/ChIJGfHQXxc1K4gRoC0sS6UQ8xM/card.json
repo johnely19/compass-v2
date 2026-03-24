@@ -6,7 +6,20 @@
     "name": "Yuugi Izakaya",
     "city": "Toronto",
     "address": "Baldwin Village / Downtown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:30 AM – 2:00 AM",
+      "Tuesday: 11:30 AM – 2:00 AM",
+      "Wednesday: 11:30 AM – 2:00 AM",
+      "Thursday: 11:30 AM – 2:00 AM",
+      "Friday: 11:30 AM – 2:00 AM",
+      "Saturday: 11:30 AM – 2:00 AM",
+      "Sunday: 11:30 AM – 2:00 AM"
+    ],
+    "rating": 4.6,
+    "review_count": 851,
+    "phone": "(647) 343-8282",
+    "website": "http://www.yuugiizakaya.com/"
   },
   "discovery": {
     "text": "https://www.yuugiizakaya.com/",

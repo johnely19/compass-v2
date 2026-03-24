@@ -6,7 +6,20 @@
     "name": "Published on Main",
     "city": "Vancouver",
     "address": "Mount Pleasant",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 5:00 – 11:00 PM",
+      "Sunday: 5:00 – 11:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 1729,
+    "phone": "(604) 423-4840",
+    "website": "http://www.publishedonmain.com/"
   },
   "discovery": {
     "text": "guide.michelin.com",

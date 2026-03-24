@@ -6,13 +6,27 @@
     "name": "Spacing Store",
     "city": "Toronto",
     "address": "401 Richmond (Fashion District)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 6:00 PM",
+      "Wednesday: 11:00 AM – 6:00 PM",
+      "Thursday: 11:00 AM – 6:00 PM",
+      "Friday: 11:00 AM – 6:00 PM",
+      "Saturday: 11:00 AM – 6:00 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 238,
+    "price_level": 2,
+    "phone": "(416) 644-1017",
+    "website": "http://spacingstore.ca/"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"
   },
   "narrative": {
-    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6\u2605, 238 reviews. Same building as Swipe\u2014pair them.",
+    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6★, 238 reviews. Same building as Swipe—pair them.",
     "blocks": []
   }
 }

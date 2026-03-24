@@ -6,7 +6,19 @@
     "name": "Jupiter Bakehouse",
     "city": "Toronto",
     "address": "Little India (Gerrard E)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 9:00 AM – 5:00 PM",
+      "Thursday: 9:00 AM – 5:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 5:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 87,
+    "phone": "(647) 352-1505"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/bakery/jupiter-bakehouse-toronto/",

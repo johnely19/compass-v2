@@ -6,13 +6,34 @@
     "name": "The Reservoir Lounge",
     "city": "Toronto",
     "address": "St. Lawrence / Wellington (52 Wellington St E)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 7:30 PM – 2:00 AM",
+      "Wednesday: 7:30 PM – 2:00 AM",
+      "Thursday: 7:30 PM – 2:00 AM",
+      "Friday: 7:30 PM – 2:00 AM",
+      "Saturday: 7:30 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 1392,
+    "price_level": 2,
+    "phone": "(416) 955-0887",
+    "website": "http://reservoirlounge.com/"
   },
   "discovery": {
     "text": "Discovered via reservoirlounge.com"
   },
   "narrative": {
     "summary": "Basement speakeasy near Flatiron. Swing-jazz 5 nights a week. Where Bublé played before fame. The vibe is real — dark, intimate, the musicians are right there. 4.5★ (1391 reviews). $$",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Super fun and delicious food. Tiny portion sizes, cover most nights. They had an 80s night when I went which was cool. Get earplugs bc it will be loud. Flashlight needed to look at menu but still loved\"\n\n⭐⭐⭐⭐⭐ \"you're going to find a very classy and groovy vibe in this jazz bar. what an amazing experience!\n\nwe were there on friday january 9th for shane philips; him and the band are such gems! the music had lots of people joining the dance floor, and it was so refreshing to be somewhere with a crowd that didn't just stand and look at their phones (personal peeve of mine😅). the crowd was very respectful. everyone was dressed well for the venue and you could tell they were really there for the music 😌\n\nthe food and service were a bit lacklustre (it seemed our server had a big section that was quickly sat all at once), but it is not the main event. i did enjoy their oysters though! the drinks were great and my partner really enjoyed their lychee mocktail.\n\ni would 100% recommend making a reservation as it gets busy early on. i received prompt replies to my email request (contacted through their website) and during opening hours i was able to make a phone call to make a change to my reso. be advised there is a cash only cover charge at the door (ours was $15 per person).\n\nthe last time i was here was a couple years ago, and returning on friday night made me realize what i've been missing out on. i will definitely be coming back.\"\n\n⭐⭐⭐⭐ \"While in search of a jazz/blues bar near the Eaton Centre, we came across The Reservoir Lounge. And boy, are we glad we did!\n\nSeating wasn’t available without a reservation, but we got there about 30 mins before the show started and got a great standing spot at the bar.\n\nCover charge at the door (I think it was $15 a person), free coat check was available, and the bar service was pretty good considering how busy it was.\n\nThe drinks were just okay, my old fashioned was weak, but who cares when the music and the atmosphere breaks the scale! Definitely a must-try while in Toronto\""
+      }
+    ]
   }
 }

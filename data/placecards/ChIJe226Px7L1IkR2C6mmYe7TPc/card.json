@@ -6,7 +6,20 @@
     "name": "Convivium Dining Community",
     "city": "Toronto",
     "address": "Downtown (83 Yonge St)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:30 AM – 10:00 PM",
+      "Tuesday: 11:30 AM – 10:00 PM",
+      "Wednesday: 11:30 AM – 10:00 PM",
+      "Thursday: 11:30 AM – 10:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 158,
+    "phone": "(416) 913-1577",
+    "website": "https://myconvivium.com/"
   },
   "discovery": {
     "text": "European fusion fine dining generating buzz as Toronto newest vibey date-night spot. French-Italian focus, beautiful plating, great wine list. 4.6★ (156 reviews)."

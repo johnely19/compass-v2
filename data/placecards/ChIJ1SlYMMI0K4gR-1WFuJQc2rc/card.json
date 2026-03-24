@@ -6,13 +6,34 @@
     "name": "Blackbird Baking Co.",
     "city": "Toronto",
     "address": "Kensington Market",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 6:00 PM",
+      "Tuesday: 9:00 AM – 6:00 PM",
+      "Wednesday: 9:00 AM – 6:00 PM",
+      "Thursday: 9:00 AM – 6:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 5:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 840,
+    "price_level": 2,
+    "phone": "(416) 546-2280",
+    "website": "http://blackbirdbakingco.com/"
   },
   "discovery": {
     "text": "Discovered via Yelp/TripAdvisor consensus"
   },
   "narrative": {
     "summary": "Serious bread bakery; crusty loaves and excellent croissants; also has Riverside location.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Delicious baked goods in an interesting neighborhood! I had a drip coffee and a kouign-amann. As soon as I finished my pastry I wanted another. Definitely stop by if you are in Toronto and take a stroll around Kensington Market. Seating is limited but was no problem for us when we arrived shortly after opening on a Saturday.\"\n\n⭐⭐⭐⭐⭐ \"This bakery is special.   You can tell it is loved by the locals for the wide selection of fresh breads but it’s worth a stop as a visitor for the pastries.   The buckwheat financiers are exceptional.  An excellent lemon tart, and viennoiserie as well.\"\n\n⭐⭐⭐⭐⭐ \"Very fresh daily baked bread 🥖 with love and kindness.  The sourdough breads must have to go!  Next time I’ll come back to get croissants 🥐\""
+      }
+    ]
   }
 }

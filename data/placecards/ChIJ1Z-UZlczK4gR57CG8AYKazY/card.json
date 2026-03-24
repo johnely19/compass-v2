@@ -12,7 +12,17 @@
     "website": "http://sash.ca/",
     "rating": 4.6,
     "user_rating_count": 199,
-    "location": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada"
+    "location": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 5:00 – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "review_count": 198
   },
   "narrative": {
     "summary": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
@@ -41,6 +51,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1133 Yonge St, Toronto, ON M4T 2Y7, Canada\n\n• walking: 10 mins • 0.8 km\n• transit: 7 mins • 0.9 km\n• driving: 3 mins • 0.8 km (traffic: 2 mins)\n• bicycling: 2 mins • 0.8 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (10 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Enjoyed and absolutely wonderful evening at this restaurant to celebrate my wife’s birthday. The service was great.  We were greeted by a friendly staff member and taken to our table right away.  The atmosphere was great and decor was fantastic.  Our meals were very flavourful and you definitely have to try the Troublemaker cocktail.  I enjoy it so much that I had to have a second.\n\nWhen booking the restaurant online I mentioned that it was my wife’s birthday. I did not mention it when I got to the restaurant and they did not forget.  Our dessert had a little inscription wishing her a happy birthday.\n\nOverall our evening was fantastic and we also got a chance to chat with Sash.  He was very humble and easy to approach.\n\nWill definitely be visiting this restaurant on our next special event.\"\n\n⭐⭐⭐⭐⭐ \"Incredible night at Sash. The service was flawless — warm, attentive, and truly elevated the entire experience. We made a special request for Alaskan king crab, and the kitchen absolutely delivered. It was spectacular — sweet, fresh, and perfectly prepared.Best Alaskan Crab ever !!!\n\nEvery dish was beautifully plated and full of flavour, and the atmosphere is vibrant yet elegant. Everyone needs to try this place. One of the best dining experiences in Toronto . A MUST !!!\"\n\n⭐⭐⭐⭐⭐ \"Chef Sash delivers a beautiful experience with his unique flavors and beautiful presentation.\n\nI had the tuna starter which was prepared with care and elegance.\n\nThe steak was juicy and cooked to perfection.\n\nService was spot on delivering a calm and comforting experience.\n\nPerfect for special occasions and everything in between.\n\nIf you want to experience first class dining this is the place.\""
       }
     ]
   },

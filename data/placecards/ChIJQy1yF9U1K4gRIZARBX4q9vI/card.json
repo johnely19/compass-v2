@@ -6,7 +6,20 @@
     "name": "Bottega Volo",
     "city": "Toronto",
     "address": "Little Italy / College",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 8:00 AM – 10:00 PM",
+      "Tuesday: 8:00 AM – 10:00 PM",
+      "Wednesday: 8:00 AM – 10:00 PM",
+      "Thursday: 8:00 AM – 10:00 PM",
+      "Friday: 8:00 AM – 10:00 PM",
+      "Saturday: 8:00 AM – 10:00 PM",
+      "Sunday: 8:00 AM – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 68,
+    "phone": "(416) 531-8818",
+    "website": "http://bottegavolo.com/"
   },
   "discovery": {
     "text": "Discovered via bottegavolo.com"

@@ -6,7 +6,19 @@
     "name": "Winter Stations 2026: Mirage",
     "city": "Toronto",
     "address": "Woodbine Beach (The Beaches)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Open 24 hours",
+      "Tuesday: Open 24 hours",
+      "Wednesday: Open 24 hours",
+      "Thursday: Open 24 hours",
+      "Friday: Open 24 hours",
+      "Saturday: Open 24 hours",
+      "Sunday: Open 24 hours"
+    ],
+    "rating": 4.6,
+    "review_count": 13893,
+    "website": "https://www.toronto.ca/data/parks/prd/facilities/complex/311/index.html"
   },
   "discovery": {
     "text": "Discovered via azuremagazine.com"

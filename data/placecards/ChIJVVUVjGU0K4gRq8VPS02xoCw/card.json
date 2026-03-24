@@ -6,14 +6,27 @@
     "name": "Invisible City Record Shop",
     "city": "Toronto",
     "address": "Chinatown Centre (Spadina)",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 1:00 – 6:00 PM",
+      "Tuesday: 1:00 – 6:00 PM",
+      "Wednesday: 1:00 – 6:00 PM",
+      "Thursday: 1:00 – 8:00 PM",
+      "Friday: 1:00 – 8:00 PM",
+      "Saturday: 1:00 – 8:00 PM",
+      "Sunday: 1:00 – 6:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 174,
+    "phone": "(416) 414-1781",
+    "website": "http://invisiblecityeditions.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.thevinylfactory.com/features/toronto-best-record-shops-guide",
     "url": "https://www.thevinylfactory.com/features/toronto-best-record-shops-guide"
   },
   "narrative": {
-    "summary": "Meticulously curated Caribbean funk, soca, island soul\u2014legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
+    "summary": "Meticulously curated Caribbean funk, soca, island soul—legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
     "blocks": []
   }
 }

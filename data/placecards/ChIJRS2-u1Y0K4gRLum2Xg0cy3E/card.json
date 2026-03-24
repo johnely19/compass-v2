@@ -6,7 +6,21 @@
     "name": "Midfield Wine Bar",
     "city": "Toronto",
     "address": "Dundas West",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 6:00 PM – 12:00 AM",
+      "Friday: Closed",
+      "Saturday: Closed",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 315,
+    "price_level": 2,
+    "phone": "(647) 345-7005",
+    "website": "http://www.midfieldwine.com/"
   },
   "discovery": {
     "text": "Discovered via starwinelist.com"

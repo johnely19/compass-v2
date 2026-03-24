@@ -6,7 +6,19 @@
     "name": "Wu Wei Coffee",
     "city": "Toronto",
     "address": "Kensington Market",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: 10:30 AM – 7:30 PM",
+      "Tuesday: 10:45 AM – 7:30 PM",
+      "Wednesday: 10:30 AM – 7:30 PM",
+      "Thursday: 10:30 AM – 7:30 PM",
+      "Friday: 10:30 AM – 8:00 PM",
+      "Saturday: 10:30 AM – 8:00 PM",
+      "Sunday: 10:30 AM – 7:30 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 368,
+    "website": "http://www.wuweicoffee.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.hungry416.com/new-cafes-in-toronto/",

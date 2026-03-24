@@ -6,7 +6,20 @@
     "name": "Emmer",
     "city": "Toronto",
     "address": "Harbord Village (Annex edge)",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 9:00 AM – 4:00 PM",
+      "Thursday: 9:00 AM – 4:00 PM",
+      "Friday: 9:00 AM – 4:00 PM",
+      "Saturday: 9:00 AM – 4:00 PM",
+      "Sunday: 9:00 AM – 4:00 PM"
+    ],
+    "rating": 4.2,
+    "review_count": 722,
+    "phone": "(416) 922-1626",
+    "website": "https://www.emmertoronto.ca/"
   },
   "discovery": {
     "text": "Discovered via https://www.emmertoronto.ca/",

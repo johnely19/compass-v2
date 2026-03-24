@@ -6,7 +6,21 @@
     "name": "PREQUEL & CO. APOTHECARY",
     "city": "Toronto",
     "address": "Queen West",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 6:00 PM – 1:00 AM",
+      "Tuesday: 6:00 PM – 1:00 AM",
+      "Wednesday: 6:00 PM – 1:00 AM",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 4:00 PM – 2:00 AM",
+      "Saturday: 4:00 PM – 2:00 AM",
+      "Sunday: 6:00 PM – 1:00 AM"
+    ],
+    "rating": 4.6,
+    "review_count": 1142,
+    "price_level": 3,
+    "phone": "(647) 368-6630",
+    "website": "http://www.barprequel.com/"
   },
   "discovery": {
     "text": "Discovered via foodism speakeasies"

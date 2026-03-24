@@ -6,7 +6,9 @@
     "name": "Ada Slaight Hall",
     "city": "Toronto",
     "address": "Regent Park",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.5,
+    "review_count": 2
   },
   "discovery": {
     "text": "Discovered via destinationtoronto.com"

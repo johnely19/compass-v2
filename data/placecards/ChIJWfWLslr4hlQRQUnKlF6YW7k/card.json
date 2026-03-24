@@ -6,7 +6,20 @@
     "name": "A-FRAME Brewing Co",
     "city": "Squamish",
     "address": "Squamish",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 12:00 – 9:00 PM",
+      "Tuesday: 12:00 – 9:00 PM",
+      "Wednesday: 12:00 – 9:00 PM",
+      "Thursday: 12:00 – 9:00 PM",
+      "Friday: 12:00 – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: 12:00 – 9:00 PM"
+    ],
+    "rating": 4.3,
+    "review_count": 396,
+    "phone": "(604) 892-0777",
+    "website": "http://www.aframebrewing.com/"
   },
   "discovery": {
     "text": "Small-batch craft brewery with a cozy tasting room. Great complement to Backcountry if doing a Squamish brewery crawl with Seb. Rating 4.3/5 (396 reviews). Local favourite.",

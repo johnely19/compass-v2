@@ -6,7 +6,19 @@
     "name": "Masayoshi",
     "city": "Vancouver",
     "address": "Fraserhood",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 – 10:00 PM",
+      "Wednesday: 6:00 – 10:00 PM",
+      "Thursday: 6:00 – 10:00 PM",
+      "Friday: 6:00 – 10:00 PM",
+      "Saturday: 6:00 – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.3,
+    "review_count": 451,
+    "website": "http://www.masayoshi.ca/"
   },
   "discovery": {
     "text": "guide.michelin.com",

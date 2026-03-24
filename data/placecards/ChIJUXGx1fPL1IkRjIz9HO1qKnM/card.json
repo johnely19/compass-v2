@@ -6,7 +6,20 @@
     "name": "Fangio Trattoria",
     "city": "Toronto",
     "address": "Leslieville (1111 Queen St E)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 9:00 PM",
+      "Tuesday: 5:00 – 9:00 PM",
+      "Wednesday: 5:00 – 9:00 PM",
+      "Thursday: 5:00 – 9:00 PM",
+      "Friday: 5:00 – 10:00 PM",
+      "Saturday: 5:00 – 10:00 PM",
+      "Sunday: 5:00 – 9:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 92,
+    "phone": "(416) 465-6363",
+    "website": "https://www.fangio.ca/"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"

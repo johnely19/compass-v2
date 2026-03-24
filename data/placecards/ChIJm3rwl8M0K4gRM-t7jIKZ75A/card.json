@@ -5,7 +5,21 @@
     "place_id": "ChIJm3rwl8M0K4gRM-t7jIKZ75A",
     "name": "Unknown Place (ChIJm3rwl8M0K4gRM-t7jIKZ75A)",
     "address": "Address pending",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 8:00 AM – 7:00 PM",
+      "Tuesday: 8:00 AM – 7:00 PM",
+      "Wednesday: 8:00 AM – 7:00 PM",
+      "Thursday: 8:00 AM – 7:00 PM",
+      "Friday: 8:00 AM – 7:00 PM",
+      "Saturday: 8:00 AM – 7:00 PM",
+      "Sunday: 8:00 AM – 7:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1061,
+    "price_level": 1,
+    "phone": "(416) 599-4625",
+    "website": "https://nguyenhuong.ca/"
   },
   "discovery": {
     "text": "Disco discovery"

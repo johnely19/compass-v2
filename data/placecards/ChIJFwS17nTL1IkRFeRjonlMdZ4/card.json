@@ -6,7 +6,21 @@
     "name": "Vatican Gift Shop",
     "city": "Toronto",
     "address": "Leslieville (Gerrard East)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 6:00 PM – 2:00 AM",
+      "Thursday: 6:00 PM – 2:00 AM",
+      "Friday: 6:00 PM – 2:00 AM",
+      "Saturday: 6:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.4,
+    "review_count": 578,
+    "price_level": 2,
+    "phone": "(416) 462-2682",
+    "website": "https://www.vaticangiftshopto.com/"
   },
   "discovery": {
     "text": "Discovered via foodism speakeasies"

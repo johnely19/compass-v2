@@ -6,13 +6,33 @@
     "name": "Hanmoto",
     "city": "Toronto",
     "address": "Queen West / Lakeview Ave",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 6:00 PM – 2:00 AM",
+      "Saturday: 6:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 1258,
+    "price_level": 2,
+    "website": "http://www.instagram.com/hanm0t0"
   },
   "discovery": {
     "text": "Discovered via yelp late-night Toronto"
   },
   "narrative": {
     "summary": "Izakaya with serious kitchen cred (ex-Momofuku), 4.7 rating, late-night ramen + small plates energy.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had an amazing experience here. It felt like a mini tasting experience. We shared 5 plates between the two of us and it was a lot of food and it all tasted great. Creativity was popping in the dishes and the presentation. Very cool vibes and atmosphere too. Good drinks selection. Prices are ok for what you get. You can go high or low portions vary but you will be satisfied regardless I think.\"\n\n⭐⭐⭐⭐⭐ \"what an impressive place and honestly not surprising given it’s the same owners as seoul shakers and shakers club. drinks were amazing. food was incredible. i especially loved the moto bun - it’s basically japanese curry in a bun, super filling and flavourful. the only thing i wasn’t a fan of was the eggplant but everything else was really good. i’ll definitely be going back!\n\ni would recommend getting there before they open because there will definitely be a wait. the inside is small and cozy which means seating is limited\"\n\n⭐⭐⭐⭐⭐ \"Went here last night with my partner and was insanely impressed. The atmosphere was cozy and intimate. The staff were extremely kind and helpful, and the food was sooo delicious. We ordered oysters, the tofu, steak, the moto bun, and the miso ice cream at the end which i highly recommend. All were a decent portion for the price and were extremely tasteful in both presentation and flavour:) 10/10\""
+      }
+    ]
   }
 }

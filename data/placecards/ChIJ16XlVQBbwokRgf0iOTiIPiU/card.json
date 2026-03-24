@@ -6,7 +6,20 @@
     "name": "Golden Ratio",
     "city": "NYC",
     "address": "Clinton Hill (216½ Greene Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:30 PM – 12:00 AM",
+      "Thursday: 5:30 PM – 12:00 AM",
+      "Friday: 5:30 PM – 12:00 AM",
+      "Saturday: 1:00 PM – 12:00 AM",
+      "Sunday: 1:00 – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 40,
+    "phone": "(718) 622-2702",
+    "website": "https://www.goldenrationyc.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.bonappetit.com/story/best-bars-new-york-city",
@@ -14,6 +27,13 @@
   },
   "narrative": {
     "summary": "Zero-waste cocktail bar from the Cafe Mado/Place des Fêtes team. Every drink comes spirited + NA. Greenmarket scraps turned into cocktails via collab with Acid Spirits distillery. Bon Appétit's Best Bars in NYC list, Feb 2026. 4.3★ (40 reviews). Short ride from Bushwick.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This is the place. Really lovely service and a full menu that offers drinks with and without alcohol. We had the fried hake and potatoes, plus the flatbread and both desserts. Will be coming back.\"\n\n⭐⭐⭐⭐⭐ \"Went here on a date night. Finally a cocktail bar that takes non-alcoholic drinks seriously! The vibe was warm, the drinks were cold and the food was fantastic.\"\n\n⭐⭐⭐⭐⭐ \"This is the most inspired place to go out for drinks, whether you consume alcohol or not. And all the small plates are delicious! Friendly, knowledgable, and passionate servers too.\""
+      }
+    ]
   }
 }

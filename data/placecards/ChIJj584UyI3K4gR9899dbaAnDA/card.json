@@ -6,7 +6,20 @@
     "name": "NeuLokal",
     "city": "Toronto",
     "address": "The Junction (Dundas West)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 4:00 – 11:00 PM",
+      "Wednesday: 4:00 – 11:00 PM",
+      "Thursday: 4:00 – 11:00 PM",
+      "Friday: 4:00 PM – 2:00 AM",
+      "Saturday: 10:00 AM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4,
+    "review_count": 261,
+    "phone": "(647) 834-6363",
+    "website": "http://www.neulokal.com/"
   },
   "discovery": {
     "text": "Discovered via https://jazzintoronto.ca/",

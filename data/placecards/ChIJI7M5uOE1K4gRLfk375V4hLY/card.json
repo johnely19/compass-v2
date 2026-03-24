@@ -6,14 +6,27 @@
     "name": "Hopeless Romantic Books",
     "city": "Toronto",
     "address": "West Queen West / Parkdale edge",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 8:00 PM",
+      "Tuesday: 10:00 AM – 8:00 PM",
+      "Wednesday: 10:00 AM – 8:00 PM",
+      "Thursday: 10:00 AM – 8:00 PM",
+      "Friday: 10:00 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 8:00 PM",
+      "Sunday: 10:00 AM – 8:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 106,
+    "phone": "(437) 473-7688",
+    "website": "https://www.hopelessromanticbooks.ca/"
   },
   "discovery": {
     "text": "Discovered via goplaces:details",
     "url": "https://6ixretail.com/2026/02/little-ghosts-books-toronto/"
   },
   "narrative": {
-    "summary": "NEW (Oct 2025)\u2014Toronto's first dedicated romance bookstore. Genre-specific indie bookstores are thriving; this is the latest cool signal. 4.9 rating.",
+    "summary": "NEW (Oct 2025)—Toronto's first dedicated romance bookstore. Genre-specific indie bookstores are thriving; this is the latest cool signal. 4.9 rating.",
     "blocks": []
   }
 }

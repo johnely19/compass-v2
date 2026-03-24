@@ -13,7 +13,17 @@
     "price_level": 2,
     "rating": 4.8,
     "user_rating_count": 656,
-    "location": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada"
+    "location": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 5:00 – 11:00 PM",
+      "Sunday: 3:30 – 9:30 PM"
+    ],
+    "review_count": 668
   },
   "narrative": {
     "summary": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada",

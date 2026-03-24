@@ -6,13 +6,32 @@
     "name": "TRE - Viet Heritage Kitchen & Bar",
     "city": "Toronto",
     "address": "Yonge & Dundas (31 Elm St, 2nd floor)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 9:00 AM – 10:00 PM",
+      "Thursday: 9:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 43,
+    "phone": "(437) 880-9462"
   },
   "discovery": {
     "text": "Discovered via insauga.com"
   },
   "narrative": {
     "summary": "Heritage Vietnamese with serious technique — sá sùng (sea worm) in the pho broth, fish sauce glazed wings, head chef Chau Du. Second-floor hidden spot. Already open, 4.8★ (26 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Really enjoyed my meal here! I ordered the canh ga chien mam, bun bo hue, and the Hanoi spring rolls. The spring rolls were definitely the highlight which are super flavorful and perfectly crispy. The chicken wings had a great fish sauce glaze, and the bun bo hue broth was rich with balanced spices.\n\nFor drinks, I tried the egg coffee and tra dao cam sa which both were delicious, especially the egg coffee the egg cream was rich which highlight the coffee. Would definitely come back!\"\n\n⭐⭐⭐⭐⭐ \"Incredible! The food was amazing.\n\nThe server was very insightful, cheerful. The diverse range of drinks looked all so interesting, and the one we had were delicious. I had the salted foam coffee,  which was a pleasant surprise. We took a bánh mì for appetizer, it was sooo taste. The signature bowl of pho was comforting and delicious. Desserts looked great but we were full, maybe a next time!\n\nWill definitely be back! Thank you again:)\"\n\n⭐⭐⭐⭐⭐ \"The restaurant looked like it came straight out of asia. Beautiful portraits on the wall and lights made out of fine bamboo trees. I felt like a rich person when i walked in, not understanding how i even got the permission to sit there. The menu is way better. We get pictures besides every meals which makes it so easier to make a quick decision. Beautiful and delicious drinks and full plates for an incredible price.\n\nMe and my friend, for an entrée and plates of diner only paid 53$ for the two of us while we expected at least more than 90$. The service was amazing, everything was amazing but the service, i felt like a vip. We got explained every meals and how to eat them. Beautiful representations of everything with care i could listen to all day long.\""
+      }
+    ]
   }
 }

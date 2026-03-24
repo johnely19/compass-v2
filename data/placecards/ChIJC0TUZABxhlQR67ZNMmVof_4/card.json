@@ -6,7 +6,20 @@
     "name": "La Taqueria Pinche Taco Shop",
     "city": "Vancouver",
     "address": "Downtown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:00 AM – 9:00 PM",
+      "Tuesday: 11:00 AM – 9:00 PM",
+      "Wednesday: 11:00 AM – 9:00 PM",
+      "Thursday: 11:00 AM – 9:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 12:00 – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 83,
+    "phone": "(236) 471-1766",
+    "website": "https://www.lataqueria.com/pinchetaco"
   },
   "discovery": {
     "text": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",

@@ -6,7 +6,10 @@
     "name": "The Roasters Pack Lab",
     "city": "Toronto",
     "address": "Junction Triangle / Wade Ave",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.4,
+    "review_count": 7,
+    "website": "https://www.theroasterspack.com/"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/eat_drink/2026/03/70-dollar-coffee-toronto/",

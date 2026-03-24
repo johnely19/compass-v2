@@ -6,13 +6,26 @@
     "name": "The Mercantile",
     "city": "Toronto",
     "address": "Roncesvalles",
-    "type": "shop"
+    "type": "shop",
+    "hours": [
+      "Monday: 10:00 AM – 7:00 PM",
+      "Tuesday: 10:00 AM – 7:00 PM",
+      "Wednesday: 10:00 AM – 7:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 12:00 – 6:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 105,
+    "phone": "(416) 531-7563",
+    "website": "https://www.themercantile.ca/"
   },
   "discovery": {
     "text": "Discovered via yelp.ca"
   },
   "narrative": {
-    "summary": "Beautifully curated specialty food + gifts. Small, intentional inventory \u2014 every item chosen with care. The kind of shop that feels European. 4.8\u2605 (105 reviews).",
+    "summary": "Beautifully curated specialty food + gifts. Small, intentional inventory — every item chosen with care. The kind of shop that feels European. 4.8★ (105 reviews).",
     "blocks": []
   }
 }

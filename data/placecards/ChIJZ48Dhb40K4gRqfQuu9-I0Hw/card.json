@@ -6,7 +6,19 @@
     "name": "John P. Robarts Research Library",
     "city": "Toronto",
     "address": "University of Toronto",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 8:30 AM – 11:00 PM",
+      "Tuesday: 8:30 AM – 11:00 PM",
+      "Wednesday: 8:30 AM – 11:00 PM",
+      "Thursday: 8:30 AM – 11:00 PM",
+      "Friday: 8:30 AM – 11:00 PM",
+      "Saturday: 9:00 AM – 10:00 PM",
+      "Sunday: 10:00 AM – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 485,
+    "phone": "(416) 978-8450"
   },
   "discovery": {
     "text": "Discovered via globeandmail.com"

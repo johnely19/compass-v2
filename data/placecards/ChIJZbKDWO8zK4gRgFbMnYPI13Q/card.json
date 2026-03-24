@@ -6,7 +6,21 @@
     "name": "Elte",
     "city": "Toronto",
     "address": "Caledonia / Ronald Ave",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 9:30 AM – 5:30 PM",
+      "Tuesday: 9:30 AM – 5:30 PM",
+      "Wednesday: 9:30 AM – 5:30 PM",
+      "Thursday: 9:30 AM – 5:30 PM",
+      "Friday: 9:30 AM – 5:30 PM",
+      "Saturday: 9:30 AM – 5:30 PM",
+      "Sunday: 12:00 – 5:00 PM"
+    ],
+    "rating": 4.1,
+    "review_count": 284,
+    "price_level": 3,
+    "phone": "(888) 276-3583",
+    "website": "http://www.elte.com/"
   },
   "discovery": {
     "text": "Discovered via elte.com"

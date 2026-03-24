@@ -31,15 +31,6 @@ const TYPE_GRADIENTS: Record<string, string> = {
 const DEFAULT_GRADIENT = 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
 const DARK_TYPES = new Set(['music-venue', 'bar', 'theatre']);
 
-/* ---- Price level dots ---- */
-function PriceLevel({ level }: { level: number }) {
-  return (
-    <span className="price-level">
-      {['$', '$$', '$$$', '$$$$'][level - 1] ?? ''}
-    </span>
-  );
-}
-
 /* ---- Block title normalizer ---- */
 function normalizeBlockTitle(title: string): string {
   // Strip emoji, bold markers, location pins, dashes
@@ -180,14 +171,9 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
-        {/* Identity bar — rating + price in one compact row */}
+        {/* Identity bar — rating + review count + price in one compact row */}
         {(rating || priceLevel) && (
-          <div className="place-detail-v2-identity-bar">
-            {rating && rating > 0 && (
-              <RatingWidget rating={rating} reviewCount={reviewCount} />
-            )}
-            {priceLevel && <PriceLevel level={priceLevel} />}
-          </div>
+          <RatingWidget rating={rating} reviewCount={reviewCount} priceLevel={priceLevel} />
         )}
 
         {/* Food photos strip — right after identity, before prose */}

@@ -6,7 +6,19 @@
     "name": "Civil Works",
     "city": "Toronto",
     "address": "King West (Waterworks)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "rating": 4.5,
+    "review_count": 144,
+    "website": "https://www.waterworksfoodhall.com/restaurants/civil-works"
   },
   "discovery": {
     "text": "Discovered via yourcitywithin.com"

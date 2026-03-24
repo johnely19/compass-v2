@@ -6,7 +6,21 @@
     "name": "Fable Kitchen",
     "city": "Vancouver",
     "address": "Kitsilano",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Tuesday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Wednesday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Thursday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Friday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Saturday: 9:00 AM – 2:00 PM, 5:00 – 10:00 PM",
+      "Sunday: 9:00 AM – 2:00 PM, 5:00 – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 1481,
+    "price_level": 3,
+    "phone": "(604) 732-1322",
+    "website": "https://fablekitchen.ca/"
   },
   "discovery": {
     "text": "Farm-to-table Kitsilano gem right next door to Maenam. Local, seasonal BC ingredients. Rustic-cozy atmosphere. Great brunch option for Saturday morning. Rating 4.4/5 (1,478 reviews). Good casual-but-quality pick.",

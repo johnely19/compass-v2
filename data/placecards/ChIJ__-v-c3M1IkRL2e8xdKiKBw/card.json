@@ -6,7 +6,20 @@
     "name": "The Daughter",
     "city": "Toronto",
     "address": "Leaside (Bayview Ave)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 11:00 PM",
+      "Thursday: 12:00 – 11:00 PM",
+      "Friday: 12:00 PM – 12:00 AM",
+      "Saturday: 12:00 PM – 12:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 121,
+    "phone": "(647) 348-9928",
+    "website": "http://thedaughter.ca/"
   },
   "discovery": {
     "text": "https://streetsoftoronto.com/torontos-best-wine-bars/",

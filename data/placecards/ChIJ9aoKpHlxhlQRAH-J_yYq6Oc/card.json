@@ -6,7 +6,21 @@
     "name": "Nuba in Gastown",
     "city": "Vancouver",
     "address": "Gastown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:30 AM – 9:00 PM",
+      "Tuesday: 11:30 AM – 9:00 PM",
+      "Wednesday: 11:30 AM – 9:00 PM",
+      "Thursday: 11:30 AM – 9:00 PM",
+      "Friday: 11:30 AM – 10:00 PM",
+      "Saturday: 11:30 AM – 10:00 PM",
+      "Sunday: 11:30 AM – 9:00 PM"
+    ],
+    "rating": 4.3,
+    "review_count": 3195,
+    "price_level": 2,
+    "phone": "(604) 688-1655",
+    "website": "https://www.nuba.ca/"
   },
   "discovery": {
     "text": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ — very affordable.",
@@ -14,7 +28,14 @@
   },
   "narrative": {
     "summary": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ — very affordable.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"My boss treated me to lunch at Nuba in Gastown today. When I saw it was downstairs, I was initially worried it might be damp or smelly, but I was totally wrong! As soon as we stepped in, we were greeted by a bustling atmosphere and that amazing, unique Mediterranean aroma. I ordered the lamb kofta and hummus—both were delicious! The variety of sauces on the side really leveled up the flavor. My only minor wish would be for the bread to be served hot and fresh. Overall, a great experience. Highly recommended!\"\n\n⭐⭐⭐⭐ \"Food: I got the lamb kafta. It was a little under seasoned but the sauce made up for it. Wasn't mind blowing but it was okay. Small portion, 2 pieces, I don't think I'd order it again. The red pepper appetizer wasn't that special either. It was sweet, not enough salt and the bread was a little stale. Overall wasn't that satisfied with my meal. I would wanna try the chicken shawarma next time.\n\nService: nice waiters\n\nAtmosphere: relatively quiet, real candles and pretty good vibes.\"\n\n⭐⭐⭐⭐ \"Overall - 4.5/5\nOrdered garden falafel (comes with pita & hummus) and go green juice. Go green was quite refreshing and falafel were really good.\""
+      }
+    ]
   },
   "manifest": {
     "images": [

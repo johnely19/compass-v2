@@ -6,7 +6,21 @@
     "name": "Kissa Tanto",
     "city": "Vancouver",
     "address": "Chinatown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:30 – 11:00 PM",
+      "Thursday: 5:30 – 11:00 PM",
+      "Friday: 5:30 PM – 12:00 AM",
+      "Saturday: 5:30 PM – 12:00 AM",
+      "Sunday: 5:30 – 11:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1696,
+    "price_level": 3,
+    "phone": "(778) 379-8078",
+    "website": "http://www.kissatanto.com/"
   },
   "discovery": {
     "text": "guide.michelin.com",

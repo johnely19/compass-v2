@@ -13,7 +13,17 @@
     "price_level": 2,
     "rating": 4.1,
     "user_rating_count": 2865,
-    "location": "132 Yonge St, Toronto, ON M5C 1X3, Canada"
+    "location": "132 Yonge St, Toronto, ON M5C 1X3, Canada",
+    "hours": [
+      "Monday: 8:00 AM – 9:00 PM",
+      "Tuesday: 8:00 AM – 9:00 PM",
+      "Wednesday: 8:00 AM – 9:00 PM",
+      "Thursday: 8:00 AM – 9:00 PM",
+      "Friday: 8:00 AM – 9:30 PM",
+      "Saturday: 8:00 AM – 9:30 PM",
+      "Sunday: Closed"
+    ],
+    "review_count": 2870
   },
   "narrative": {
     "summary": "📍 Sud Forno\n132 Yonge St, Toronto, ON M5C 1X3, Canada",
@@ -42,6 +52,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 132 Yonge St, Toronto, ON M5C 1X3, Canada\n\n• walking: 58 mins • 4.3 km\n• transit: 16 mins • 4.4 km\n• driving: 15 mins • 5.6 km (traffic: 12 mins)\n• bicycling: 17 mins • 4.9 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (16 mins vs 15 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Sud Forno is a wonderful spot!\nThe café on the first floor is stylish and beautifully designed. The café latte and pastries were both delicious.\nUpstairs, the restaurant is perfect for a relaxed meal with friends. We were able to chat comfortably while enjoying authentic Italian food.\nHighly recommend for both coffee and a leisurely meal!\"\n\n⭐⭐⭐⭐⭐ \"There’s not much to say! A bit of what you fancy does you good! And a stop at Sud Forno on our way to Montreal is a must for our family. Service: superb, wine: excellent and the food: incredibly delicious!\n\nPicture:\nCod with celery puree, Tonnarelli alla Norcina\nitalian black truffle shavings, homemade spicy sausage, pecorino, garlic\""
       }
     ]
   },

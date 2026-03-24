@@ -6,7 +6,12 @@
     "name": "Pii Nong Thai (Bayview)",
     "city": "Toronto",
     "address": "Bayview / Leaside (1677 Bayview Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "rating": 4.5,
+    "review_count": 1019,
+    "price_level": 2,
+    "phone": "(416) 322-8828",
+    "website": "http://piinongthai.com/"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"

@@ -6,7 +6,20 @@
     "name": "Arrigo's of Fresh Pond Rd",
     "city": "NYC",
     "address": "Ridgewood (71-08 Fresh Pond Rd)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
+      "Thursday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
+      "Friday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
+      "Saturday: 11:30 AM – 4:00 PM, 5:30 – 10:00 PM",
+      "Sunday: 11:30 AM – 4:00 PM, 5:30 – 9:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 132,
+    "phone": "(917) 620-6978",
+    "website": "https://www.arrigosnyc.com/"
   },
   "discovery": {
     "text": "Discovered via https://ny.eater.com/maps/best-new-queens-restaurants-heatmap",

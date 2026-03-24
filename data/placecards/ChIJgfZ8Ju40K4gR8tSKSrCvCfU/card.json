@@ -10,7 +10,19 @@
     "type": "bar",
     "phone": "(416) 536-4564",
     "website": "http://sottovoce.ca/",
-    "location": "595 College St, Toronto, ON M6G 1A9, Canada"
+    "location": "595 College St, Toronto, ON M6G 1A9, Canada",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 2:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 403,
+    "price_level": 2
   },
   "narrative": {
     "summary": "📍 Sotto Voce Wine & Pasta Bar\n595 College St, Toronto, ON M6G 1A9, Canada",

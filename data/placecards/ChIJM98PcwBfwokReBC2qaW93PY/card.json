@@ -6,7 +6,19 @@
     "name": "Bodega Nights",
     "city": "New York",
     "address": "Bushwick (425 Troutman St)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 5:00 PM – 12:00 AM",
+      "Sunday: 5:00 PM – 12:00 AM"
+    ],
+    "rating": 5,
+    "review_count": 7,
+    "website": "http://www.bodeganightsbk.com/"
   },
   "discovery": {
     "text": "Brand new natural wine bar + Brazilian-Iberian kitchen from the Babysips team. On Troutman near Bushwick Collective — on Day 2 walking route. Salt cod fritters, house-made sausages, minimal-intervention wines. 5.0★."

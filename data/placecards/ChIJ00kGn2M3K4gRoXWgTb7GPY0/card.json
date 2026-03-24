@@ -6,13 +6,33 @@
     "name": "Cheese Boutique Bottega",
     "city": "Toronto",
     "address": "Junction / Ripley Ave (next door)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 9:00 AM – 6:00 PM",
+      "Tuesday: 9:00 AM – 6:00 PM",
+      "Wednesday: 9:00 AM – 6:00 PM",
+      "Thursday: 9:00 AM – 6:00 PM",
+      "Friday: 9:00 AM – 6:00 PM",
+      "Saturday: 9:00 AM – 6:00 PM",
+      "Sunday: 9:00 AM – 6:00 PM"
+    ],
+    "rating": 4.8,
+    "review_count": 228,
+    "phone": "(416) 762-6292",
+    "website": "http://cheeseboutique.com/"
   },
   "discovery": {
     "text": "Google Places"
   },
   "narrative": {
     "summary": "The café/bakery spinoff. Fresh pastries, espresso, grab-and-go gourmet. 4.8★ (228 reviews). Same family, lighter format. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"LOVE, LOVE, LOVE going to the Cheese Boutique Café at lunchtime during the week (too busy on weekends for me) with a friend to enjoy my favourite hot crispy sandwich, dessert and cappuccino to catch up!\n\nLove the new cozy seating in the Café eating area!\n\nI always have to stop by their flower shop next door to \"smell the roses,\" being a gardener myself! 😃 🤣\n\nCONGRATULATIONS to the owners and entire team for making the Cheese Boutique a landmark in Toronto over the years!\n\nBRAVO and many blessings to continue your well-deserved success for many years to come! 🌟🌟🌟🌟🌟 ❤️\"\n\n⭐⭐⭐⭐⭐ \"I wish I had more time. It was a very quick stop cause I thought it doughnuts and coffee / snacks. It’s soo much more. The pictures will tell you a story, but I didn’t even scratch the surface. It’s hard to find the entrance if you haven’t been, so if you go in the flower store, it’s ok, it’s attached together. The flower shop looked very pretty. Then you enter the actual store, and wow. They had it all, and the most interesting stuff, and the most common stuff, but prices were high. Everywhere in the store. But what do you expect, downtown Toronto and I counted 15+ employees. Which is fair, they had so many departments. And a very nice spacious sitting area if you want to enjoy your food or drink warm. Also lots of “fresh” food variety. Lots of subs, wraps, sweets etc etc. I definitely have to go back and make a more detailed review. But this is a start.  I’ll go again. But I suggest you check it out. But be ready to spend good money if you’re buying stuff.\"\n\n⭐⭐⭐⭐⭐ \"read my review about this place on the main location. Here’s some additional photos.\n\nOmg, this place is such a hidden gem tucked away in the city. I actually stumbled on it by accident while biking through the neighborhood on a weekend, and I can’t believe I hadn’t seen it on social media before. Honestly feels like the kind of spot Toronto has been missing.\""
+      }
+    ]
   }
 }

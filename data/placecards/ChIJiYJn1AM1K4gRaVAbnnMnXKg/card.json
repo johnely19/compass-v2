@@ -6,7 +6,21 @@
     "name": "Waterworks Food Hall",
     "city": "Toronto",
     "address": "King West / Entertainment District",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 8:00 AM – 10:00 PM",
+      "Tuesday: 8:00 AM – 10:00 PM",
+      "Wednesday: 8:00 AM – 10:00 PM",
+      "Thursday: 8:00 AM – 10:00 PM",
+      "Friday: 8:00 AM – 12:00 AM",
+      "Saturday: 8:00 AM – 12:00 AM",
+      "Sunday: 8:00 AM – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 604,
+    "price_level": 2,
+    "phone": "(416) 366-5500",
+    "website": "https://www.waterworksfoodhall.com/"
   },
   "discovery": {
     "text": "Discovered via goplaces:details"

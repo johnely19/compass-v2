@@ -6,7 +6,21 @@
     "name": "Twisted Fork",
     "city": "Vancouver",
     "address": "Gastown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 9:00 AM – 2:00 PM",
+      "Friday: 9:00 AM – 2:00 PM",
+      "Saturday: 9:00 AM – 2:00 PM",
+      "Sunday: 9:00 AM – 2:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 1984,
+    "price_level": 2,
+    "phone": "(604) 568-0749",
+    "website": "http://www.forkandfriends.ca/"
   },
   "discovery": {
     "text": "Beloved Gastown brunch spot by day, transforms into Breeze cocktail bar Wed-Sun evenings. French-inspired comfort food. Heritage Carrall Street location. Perfect for Friday arrival brunch or dinner. Rating 4.5/5 (1,982 reviews). $$. Featured in Eater Vancouver's 38 Best.",

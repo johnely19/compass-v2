@@ -5,7 +5,20 @@
     "city": "NYC",
     "address": "Bushwick (264 Bleecker St)",
     "type": "restaurant",
-    "place_id": "ChIJffKDyvldwokRCbpBkSbBrm0"
+    "place_id": "ChIJffKDyvldwokRCbpBkSbBrm0",
+    "hours": [
+      "Monday: 12:00 – 10:00 PM",
+      "Tuesday: 12:00 – 10:00 PM",
+      "Wednesday: 12:00 – 10:00 PM",
+      "Thursday: 12:00 – 10:00 PM",
+      "Friday: 12:00 – 10:30 PM",
+      "Saturday: 12:00 – 10:30 PM",
+      "Sunday: 12:00 – 10:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 94,
+    "phone": "(929) 669-9505",
+    "website": "https://eatgigi.com/"
   },
   "discovery": {
     "text": "BK Mag review",

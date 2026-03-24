@@ -6,7 +6,20 @@
     "name": "Swipe Design books + objects",
     "city": "Toronto",
     "address": "Fashion District / 401 Richmond (401 Richmond St W, B04)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 6:00 PM",
+      "Wednesday: 11:00 AM – 6:00 PM",
+      "Thursday: 11:00 AM – 6:00 PM",
+      "Friday: 11:00 AM – 6:00 PM",
+      "Saturday: 11:00 AM – 6:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 92,
+    "phone": "(416) 363-1332",
+    "website": "http://swipe.com/"
   },
   "discovery": {
     "text": "Discovered via swipe.com"

@@ -6,7 +6,21 @@
     "name": "St. Lawrence Restaurant",
     "city": "Vancouver",
     "address": "Railtown/Gastown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 – 10:30 PM",
+      "Wednesday: 5:00 – 10:30 PM",
+      "Thursday: 5:00 – 10:30 PM",
+      "Friday: 5:00 – 10:30 PM",
+      "Saturday: 5:00 – 10:30 PM",
+      "Sunday: 5:00 – 10:30 PM"
+    ],
+    "rating": 4.6,
+    "review_count": 1465,
+    "price_level": 3,
+    "phone": "(604) 620-3800",
+    "website": "http://www.stlawrencerestaurant.com/"
   },
   "discovery": {
     "text": "guide.michelin.com",

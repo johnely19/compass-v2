@@ -13,7 +13,17 @@
     "price_level": 3,
     "rating": 4.8,
     "user_rating_count": 2815,
-    "location": "1454 Dundas St W, Toronto, ON M6J 1Y6, Canada"
+    "location": "1454 Dundas St W, Toronto, ON M6J 1Y6, Canada",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 – 10:00 PM",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 5:00 – 10:00 PM",
+      "Saturday: 3:00 – 10:00 PM",
+      "Sunday: 3:00 – 10:00 PM"
+    ],
+    "review_count": 2817
   },
   "narrative": {
     "summary": "📍 Antler Kitchen & Bar\n1454 Dundas St W, Toronto, ON M6J 1Y6, Canada",

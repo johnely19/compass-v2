@@ -6,7 +6,20 @@
     "name": "Spike's Table",
     "city": "Toronto",
     "address": "Leslieville (487 Logan Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 6:00 – 10:30 PM",
+      "Wednesday: 6:00 – 10:30 PM",
+      "Thursday: 6:00 – 10:30 PM",
+      "Friday: 6:00 – 10:30 PM",
+      "Saturday: 6:00 – 10:30 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 5,
+    "review_count": 1,
+    "phone": "(416) 580-3930",
+    "website": "https://www.spikestable.com/"
   },
   "discovery": {
     "text": "Discovered via torontolife.com"

@@ -6,7 +6,20 @@
     "name": "313 Design Market",
     "city": "Toronto",
     "address": "Roncesvalles",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 12:00 – 6:00 PM",
+      "Thursday: 12:00 – 6:00 PM",
+      "Friday: 12:00 – 6:00 PM",
+      "Saturday: 10:00 AM – 3:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.1,
+    "review_count": 31,
+    "phone": "(416) 537-2220",
+    "website": "https://www.313designmarket.com/"
   },
   "discovery": {
     "text": "Discovered via 313designmarket.com"

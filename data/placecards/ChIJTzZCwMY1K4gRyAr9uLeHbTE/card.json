@@ -6,7 +6,20 @@
     "name": "Proper",
     "city": "Toronto",
     "address": "Roncesvalles",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 5:00 – 10:00 PM",
+      "Saturday: 5:00 – 10:00 PM",
+      "Sunday: 5:00 – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 89,
+    "phone": "(416) 539-9089",
+    "website": "https://properfb.com/"
   },
   "discovery": {
     "text": "Discovered via foodism.ca",

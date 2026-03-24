@@ -6,7 +6,21 @@
     "name": "Archive Wine Bar",
     "city": "Toronto",
     "address": "Little Portugal",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 3:00 PM – 2:00 AM",
+      "Sunday: 3:00 PM – 12:00 AM"
+    ],
+    "rating": 4.6,
+    "review_count": 319,
+    "price_level": 3,
+    "phone": "(647) 748-0909",
+    "website": "http://www.archive909.com/"
   },
   "discovery": {
     "text": "Discovered via streetsoftoronto.com"

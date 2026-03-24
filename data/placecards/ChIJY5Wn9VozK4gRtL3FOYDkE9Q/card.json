@@ -10,7 +10,19 @@
     "type": "restaurant",
     "phone": "(416) 921-3141",
     "website": "https://www.capocaccia.ca/",
-    "location": "1366 Yonge St, Toronto, ON M4T 3A7, Canada"
+    "location": "1366 Yonge St, Toronto, ON M4T 3A7, Canada",
+    "hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 11:00 PM",
+      "Saturday: 11:00 AM – 11:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "rating": 4.4,
+    "review_count": 892,
+    "price_level": 3
   },
   "narrative": {
     "summary": "📍 Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada",

@@ -6,7 +6,21 @@
     "name": "Kaiseki Yu-zen Hashimoto Restaurant",
     "city": "Toronto",
     "address": "North York (Japanese Canadian Cultural Centre)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: Closed",
+      "Wednesday: Closed",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 5:00 – 11:00 PM",
+      "Sunday: 5:00 – 11:00 PM"
+    ],
+    "rating": 4.9,
+    "review_count": 247,
+    "price_level": 4,
+    "phone": "(416) 444-7100",
+    "website": "https://www.kaiseki.ca/"
   },
   "discovery": {
     "text": "https://www.kaiseki.ca/",

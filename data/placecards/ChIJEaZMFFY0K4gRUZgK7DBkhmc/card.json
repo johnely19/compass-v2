@@ -6,7 +6,21 @@
     "name": "Imanishi Japanese Kitchen",
     "city": "Toronto",
     "address": "Dundas West / Little Portugal",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:30 – 11:00 PM",
+      "Tuesday: 5:30 – 11:00 PM",
+      "Wednesday: 5:30 – 11:00 PM",
+      "Thursday: 5:30 – 11:00 PM",
+      "Friday: 5:30 – 11:00 PM",
+      "Saturday: 5:30 – 11:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.5,
+    "review_count": 894,
+    "price_level": 2,
+    "phone": "(416) 706-4225",
+    "website": "http://www.imanishi.ca/"
   },
   "discovery": {
     "text": "Discovered via yelp late-night Toronto"

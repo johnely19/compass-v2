@@ -6,13 +6,34 @@
     "name": "Poetry Jazz Cafe",
     "city": "Toronto",
     "address": "Queen West (1078 Queen St W)",
-    "type": "cafe"
+    "type": "cafe",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:30 PM – 12:30 AM",
+      "Wednesday: 5:30 PM – 2:00 AM",
+      "Thursday: 5:30 PM – 2:00 AM",
+      "Friday: 5:30 PM – 2:00 AM",
+      "Saturday: 5:30 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.4,
+    "review_count": 876,
+    "price_level": 2,
+    "phone": "(416) 533-6695",
+    "website": "http://www.poetryjazzcafe.com/"
   },
   "discovery": {
     "text": "Discovered via toronto-travel-guide.com"
   },
   "narrative": {
-    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto \u2014 next-gen artists, eclectic programming. 4.4\u2605 (876 reviews). $$",
-    "blocks": []
+    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto — next-gen artists, eclectic programming. 4.4★ (876 reviews). $$",
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Had a fantastic time coming here for a jazz night. Inspiring music and stories.  Owner Shawn was great to give a tour of the back room as well. Has a drinks menu. No food. Looking forward to coming back. $15 entrance fee.\"\n\n⭐⭐⭐⭐⭐ \"Funky place for Jazz! I was here for a smash jam of Local Jazz artists that decided to collaborate together unscripted! Super fun and different. Great service too and alcohol price was reasonable. $10 dollars entry fee to the back stage room.\""
+      }
+    ]
   }
 }

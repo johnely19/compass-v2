@@ -6,13 +6,25 @@
     "name": "Marugame Udon",
     "city": "Toronto",
     "address": "Yonge & Wellesley",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 11:00 AM – 10:00 PM",
+      "Tuesday: 11:00 AM – 10:00 PM",
+      "Wednesday: 11:00 AM – 10:00 PM",
+      "Thursday: 11:00 AM – 10:00 PM",
+      "Friday: 11:00 AM – 10:00 PM",
+      "Saturday: 11:00 AM – 10:00 PM",
+      "Sunday: 11:00 AM – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 52,
+    "website": "https://ca.marugame.com/"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
-    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0\u2605.",
+    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0★.",
     "blocks": []
   }
 }

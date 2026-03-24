@@ -6,7 +6,21 @@
     "name": "Grapes & Soda",
     "city": "Vancouver",
     "address": "South Granville",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 5:00 – 11:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 491,
+    "price_level": 2,
+    "phone": "(604) 336-2456",
+    "website": "http://www.grapesandsoda.ca/"
   },
   "discovery": {
     "text": "bc.vitis.ca",

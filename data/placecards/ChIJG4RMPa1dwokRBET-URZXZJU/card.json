@@ -11,7 +11,17 @@
     "website": "http://hellbendernyc.com/",
     "rating": 4.3,
     "user_rating_count": 411,
-    "location": "68-22 Forest Ave, Queens, NY 11385, USA"
+    "location": "68-22 Forest Ave, Queens, NY 11385, USA",
+    "hours": [
+      "Monday: 5:00 – 10:00 PM",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
+      "Saturday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
+      "Sunday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM"
+    ],
+    "review_count": 427
   },
   "narrative": {
     "summary": "📍 Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA",

@@ -6,7 +6,20 @@
     "name": "Bar Allegro",
     "city": "Toronto",
     "address": "Little Italy (College St)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: 5:00 – 11:00 PM",
+      "Tuesday: 5:00 – 11:00 PM",
+      "Wednesday: 5:00 – 11:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 PM – 1:00 AM",
+      "Saturday: 5:00 PM – 1:00 AM",
+      "Sunday: 5:00 – 11:00 PM"
+    ],
+    "rating": 5,
+    "review_count": 22,
+    "phone": "(416) 516-1111",
+    "website": "https://www.pompette.ca/barallegro"
   },
   "discovery": {
     "text": "Discovered via toronto.com"

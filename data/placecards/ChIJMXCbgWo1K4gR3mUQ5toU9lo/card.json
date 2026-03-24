@@ -6,7 +6,20 @@
     "name": "and/ore",
     "city": "Toronto",
     "address": "Queen West (Ossington edge)",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 5:00 PM – 12:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.6,
+    "review_count": 881,
+    "phone": "(416) 536-1040",
+    "website": "https://andorerestaurant.com/"
   },
   "discovery": {
     "text": "https://starwinelist.com/wine-guide/toronto-wine-restaurants-bars",

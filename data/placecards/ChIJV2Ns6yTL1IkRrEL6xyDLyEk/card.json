@@ -10,7 +10,18 @@
     "type": "restaurant",
     "phone": "(647) 368-8008",
     "website": "https://lavenueonparliament.ca/",
-    "location": "583 Parliament St, Toronto, ON M4X 1P9, Canada"
+    "location": "583 Parliament St, Toronto, ON M4X 1P9, Canada",
+    "hours": [
+      "Monday: 5:00 – 10:00 PM",
+      "Tuesday: 5:00 – 10:00 PM",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 10:00 PM",
+      "Friday: 5:00 – 11:00 PM",
+      "Saturday: 10:00 AM – 3:00 PM, 5:00 – 11:00 PM",
+      "Sunday: 10:00 AM – 10:00 PM"
+    ],
+    "rating": 4.7,
+    "review_count": 250
   },
   "narrative": {
     "summary": "📍 L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada",

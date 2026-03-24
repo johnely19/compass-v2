@@ -5,7 +5,19 @@
     "place_id": "ChIJA7mrHRo1K4gRBEcKUdjRCYk",
     "name": "Unknown Place (ChIJA7mrHRo1K4gRBEcKUdjRCYk)",
     "address": "Address pending",
-    "type": "grocery"
+    "type": "grocery",
+    "hours": [
+      "Monday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00 PM – 12:00 AM",
+      "Wednesday: 5:00 PM – 12:00 AM",
+      "Thursday: 5:00 PM – 12:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.8,
+    "review_count": 129,
+    "website": "https://www.letigrebar.ca/"
   },
   "discovery": {
     "text": "Disco discovery"

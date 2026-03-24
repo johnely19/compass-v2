@@ -6,7 +6,20 @@
     "name": "Oku Izakaya",
     "city": "Vancouver",
     "address": "Gastown",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: Closed",
+      "Wednesday: 5:00 PM – 1:00 AM",
+      "Thursday: 5:00 PM – 1:00 AM",
+      "Friday: 5:00 PM – 2:00 AM",
+      "Saturday: 5:00 PM – 2:00 AM",
+      "Sunday: 5:00 PM – 1:00 AM"
+    ],
+    "rating": 4.8,
+    "review_count": 496,
+    "phone": "(604) 428-6557",
+    "website": "https://okuizakayabar.com/"
   },
   "discovery": {
     "text": "opentable.ca",

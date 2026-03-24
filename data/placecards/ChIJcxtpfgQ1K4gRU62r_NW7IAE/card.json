@@ -6,7 +6,21 @@
     "name": "Donna's",
     "city": "Toronto",
     "address": "Wallace Emerson / Lansdowne (827 Lansdowne Ave)",
-    "type": "restaurant"
+    "type": "restaurant",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 9:00 AM – 10:00 PM",
+      "Wednesday: 9:00 AM – 10:00 PM",
+      "Thursday: 9:00 AM – 10:00 PM",
+      "Friday: 9:00 AM – 10:00 PM",
+      "Saturday: 9:00 AM – 10:00 PM",
+      "Sunday: Closed"
+    ],
+    "rating": 4.7,
+    "review_count": 625,
+    "price_level": 2,
+    "phone": "(416) 536-1414",
+    "website": "http://donnas.ca/"
   },
   "discovery": {
     "text": "Discovered via tastetoronto.substack.com"

@@ -10,7 +10,18 @@
     "type": "bar",
     "phone": "(416) 533-7745",
     "website": "http://www.barpiquette.com/",
-    "location": "1084 Queen St W, Toronto, ON M6J 1H8, Canada"
+    "location": "1084 Queen St W, Toronto, ON M6J 1H8, Canada",
+    "hours": [
+      "Monday: 5:00 – 10:00 PM",
+      "Tuesday: 5:00 – 10:00 PM",
+      "Wednesday: 5:00 – 10:00 PM",
+      "Thursday: 5:00 – 11:00 PM",
+      "Friday: 5:00 PM – 12:00 AM",
+      "Saturday: 4:00 PM – 12:00 AM",
+      "Sunday: 4:00 – 10:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 353
   },
   "narrative": {
     "summary": "📍 Bar Piquette\n1084 Queen St W, Toronto, ON M6J 1H8, Canada",

@@ -12,7 +12,17 @@
     "website": "http://www.shopstocktc.com/",
     "rating": 4,
     "user_rating_count": 1437,
-    "location": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada"
+    "location": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
+    "hours": [
+      "Monday: 8:00 AM – 8:00 PM",
+      "Tuesday: 8:00 AM – 8:00 PM",
+      "Wednesday: 8:00 AM – 8:00 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 9:00 PM",
+      "Saturday: 8:00 AM – 9:00 PM",
+      "Sunday: 8:00 AM – 8:00 PM"
+    ],
+    "review_count": 1439
   },
   "narrative": {
     "summary": "📍 STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",

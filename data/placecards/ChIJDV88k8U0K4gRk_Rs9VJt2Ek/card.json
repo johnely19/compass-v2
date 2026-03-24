@@ -6,7 +6,20 @@
     "name": "AGO Speakeasy: A '60s Cultural Revolution",
     "city": "Toronto",
     "address": "AGO / Grange Park",
-    "type": "bar"
+    "type": "bar",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:30 AM – 4:30 PM",
+      "Wednesday: 10:30 AM – 8:30 PM",
+      "Thursday: 10:30 AM – 4:30 PM",
+      "Friday: 10:30 AM – 8:30 PM",
+      "Saturday: 10:30 AM – 5:00 PM",
+      "Sunday: 10:30 AM – 5:00 PM"
+    ],
+    "rating": 4.5,
+    "review_count": 62,
+    "phone": "(416) 979-6660",
+    "website": "http://ago.ca/"
   },
   "discovery": {
     "text": "Discovered via nowtoronto.com"
