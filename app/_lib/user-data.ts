@@ -103,6 +103,46 @@ const VALID_DISCOVERY_TYPES = new Set([
   'architecture', 'development', 'accommodation', 'neighbourhood',
 ]);
 
+/** Map non-standard V1 types to valid V2 types */
+const TYPE_NORMALIZATION: Record<string, string> = {
+  'event': 'experience',
+  'live-music': 'music-venue',
+  'live_music': 'music-venue',
+  'live_music_venue': 'music-venue',
+  'live music': 'music-venue',
+  'live music venue': 'music-venue',
+  'venue': 'music-venue',
+  'comedy': 'theatre',
+  'exhibition': 'gallery',
+  'wine-bar': 'bar',
+  'wine_bar': 'bar',
+  'cocktail-bar': 'bar',
+  'cocktail_bar': 'bar',
+  'brewery': 'bar',
+  'pub': 'bar',
+  'bakery': 'cafe',
+  'butcher': 'grocery',
+  'cheese-shop': 'grocery',
+  'grocery_store': 'grocery',
+  'specialty-shop': 'shop',
+  'bookstore': 'shop',
+  'bookshop': 'shop',
+  'street_art': 'gallery',
+  'outdoor': 'park',
+  'hiking trail': 'park',
+  'hiking_trail': 'park',
+  'culture': 'experience',
+  'note': 'experience',
+};
+
+function normalizeType(type: string | undefined | null): string {
+  if (!type) return 'restaurant';
+  if (VALID_DISCOVERY_TYPES.has(type)) return type;
+  const mapped = TYPE_NORMALIZATION[type.toLowerCase()];
+  if (mapped) return mapped;
+  return 'restaurant'; // ultimate fallback
+}
+
 function inferTypeFromName(name: string | undefined | null): string {
   if (!name) return 'restaurant';
   const lower = name.toLowerCase();
@@ -121,6 +161,8 @@ function inferTypeFromName(name: string | undefined | null): string {
 function normalizeContextKey(key: string | undefined | null): string {
   if (!key || key === 'undefined' || !key.includes(':')) return 'radar:toronto-experiences';
   let k = key;
+  // Map known non-standard prefixes
+  if (k.startsWith('home:')) return 'radar:toronto-experiences';
   if (k.startsWith('section:')) k = k.replace(/^section:/, 'radar:');
   // Strip user prefix (e.g. "john:outing:..." → "outing:...")
   if (!k.startsWith('trip:') && !k.startsWith('outing:') && !k.startsWith('radar:')) {
@@ -151,8 +193,8 @@ export async function getUserDiscoveries(userId: string): Promise<UserDiscoverie
     id: (d.id as string) || `v1_${i}`,
     name: (d.name as string) || 'Unknown Place',
     city: (d.city as string) || 'Toronto',
-    type: (d.type as string) && VALID_DISCOVERY_TYPES.has(d.type as string)
-      ? d.type
+    type: d.type
+      ? normalizeType(d.type as string)
       : inferTypeFromName(d.name as string),
     rating: d.rating != null ? Number(d.rating) || undefined : undefined,
     contextKey: normalizeContextKey(d.contextKey as string),
