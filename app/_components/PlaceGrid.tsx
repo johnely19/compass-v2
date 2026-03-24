@@ -19,17 +19,17 @@ export default function PlaceGrid({
   userId,
   layout = 'grid',
 }: PlaceGridProps) {
-  const [, setRefresh] = useState(0);
+  const [triageVersion, setTriageVersion] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Listen for triage changes
+  // Listen for triage changes — increment version to trigger re-filter
   useEffect(() => {
-    const handler = () => setRefresh((r) => r + 1);
+    const handler = () => setTriageVersion((v) => v + 1);
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
 
-  // Filter out dismissed places
+  // Filter out dismissed places — re-runs when triage state changes
   const visibleDiscoveries = useMemo(() => {
     if (!userId) return discoveries;
 
@@ -39,7 +39,8 @@ export default function PlaceGrid({
         : 'unreviewed';
       return state !== 'dismissed';
     });
-  }, [discoveries, userId, contextKey]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [discoveries, userId, contextKey, triageVersion]);
 
   const scrollLeft = () => {
     scrollRef.current?.scrollBy({ left: -300, behavior: 'smooth' });

@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
 import { getContextCounts } from '../_lib/triage';
@@ -105,6 +106,14 @@ export default function HomeClient({
       </main>
     );
   }
+
+  // Re-render when triage state changes (for saved count badges)
+  const [, setTriageVersion] = useState(0);
+  useEffect(() => {
+    const handler = () => setTriageVersion((v) => v + 1);
+    window.addEventListener('triage-changed', handler);
+    return () => window.removeEventListener('triage-changed', handler);
+  }, []);
 
   return (
     <main className="page">
