@@ -1,40 +1,136 @@
 import { NextResponse } from 'next/server';
 import { getCurrentUser } from '../../../_lib/user';
-import { readdirSync, readFileSync, existsSync } from 'fs';
+import { existsSync, readdirSync, readFileSync } from 'fs';
 import path from 'path';
-import os from 'os';
 
 export const dynamic = 'force-dynamic';
 
-interface AgentHealth {
-  id: string;
-  role: string;
-  status: 'active' | 'idle' | 'dormant';
-  lastActivity: number;
-  model: string;
-  sessionCount: number;
-  totalTokens: number;
-  contextTokens: number;
+const ROLE_MAP: Record<string, string> = {
+  main: 'Orchestrator',
+  charlie: 'General Assistant',
+  disco: 'Discovery & Research',
+  concierge: 'Travel Concierge',
+  'test-concierge': 'QA & Testing',
+  devclaw: 'Development Orchestration',
+  builder: 'Code & Infrastructure',
+};
+
+function homeDir(): string {
+  return process.env.HOME || '/Users/john';
 }
 
-interface AgentHealthStats {
-  totalAgents: number;
-  activeAgents: number;
-  placeCards: number;
-  cottages: number;
-  activeTrips: number;
-  totalTokens24h: number;
+function safeReadJSON(filePath: string): unknown | null {
+  try {
+    if (!existsSync(filePath)) return null;
+    return JSON.parse(readFileSync(filePath, 'utf-8'));
+  } catch { return null; }
 }
 
-function getAgentsDir(): string {
-  return path.join(os.homedir(), '.openclaw', 'agents');
+interface SessionEntry {
+  updatedAt: number;
+  totalTokens?: number;
+  contextTokens?: number;
+  model?: string;
+  [key: string]: unknown;
 }
 
-function getStatus(lastMs: number): 'active' | 'idle' | 'dormant' {
-  const diff = Date.now() - lastMs;
-  if (diff < 3600000) return 'active';
-  if (diff < 86400000) return 'idle';
-  return 'dormant';
+function loadAgents() {
+  const agentsDir = path.join(homeDir(), '.openclaw', 'agents');
+  if (!existsSync(agentsDir)) return [];
+
+  const now = Date.now();
+  const HOUR = 3600000;
+  const agents: Array<{
+    id: string; role: string; status: 'active' | 'idle' | 'dormant';
+    lastActivity: number; model: string; sessionCount: number;
+    totalTokens: number; contextTokens: number;
+  }> = [];
+
+  for (const agentId of readdirSync(agentsDir)) {
+    if (agentId.startsWith('.')) continue;
+    const sessionsPath = path.join(agentsDir, agentId, 'sessions', 'sessions.json');
+    const sessionsData = safeReadJSON(sessionsPath) as Record<string, SessionEntry> | null;
+    if (!sessionsData) continue;
+
+    const sessions = Object.values(sessionsData);
+    if (sessions.length === 0) continue;
+
+    // Find most recent session for status
+    let latestTimestamp = 0;
+    let mainSessionTokens = 0;
+    let contextTokensLatest = 200000; // default context window
+    let model = 'claude-opus-4-6';
+
+    for (const [key, session] of Object.entries(sessionsData)) {
+      if (session.updatedAt > latestTimestamp) {
+        latestTimestamp = session.updatedAt;
+      }
+
+      // Use main Discord channel session for context pressure (not cron/subagent)
+      const isMainSession = key.includes(':discord:channel:') &&
+        !key.includes(':cron:') && !key.includes(':run:') && !key.includes(':subagent:');
+
+      if (isMainSession && typeof session.totalTokens === 'number') {
+        mainSessionTokens = session.totalTokens;
+      }
+      if (isMainSession && typeof session.contextTokens === 'number') {
+        contextTokensLatest = session.contextTokens;
+      }
+
+      // Extract model
+      if (session.model && typeof session.model === 'string') {
+        model = session.model.replace(/^(anthropic|openai|google)\//, '');
+      }
+    }
+
+    if (latestTimestamp === 0) continue;
+
+    const hoursSince = (now - latestTimestamp) / HOUR;
+    const status: 'active' | 'idle' | 'dormant' =
+      hoursSince < 1 ? 'active' : hoursSince < 6 ? 'idle' : 'dormant';
+
+    // Count sessions updated in last 24h, excluding cron run artifacts
+    const activeSessions = Object.entries(sessionsData).filter(([key, s]) => {
+      if (now - s.updatedAt > 24 * HOUR) return false;
+      // Exclude short-lived cron/subagent runs
+      if (key.includes(':cron:') || key.includes(':run:')) return false;
+      return true;
+    }).length;
+
+    agents.push({
+      id: agentId,
+      role: ROLE_MAP[agentId] || agentId,
+      status,
+      lastActivity: latestTimestamp,
+      model,
+      sessionCount: activeSessions,
+      totalTokens: mainSessionTokens,
+      contextTokens: contextTokensLatest,
+    });
+  }
+
+  return agents;
+}
+
+function loadStats() {
+  const dataDir = path.join(process.cwd(), 'data');
+
+  let placeCards = 0;
+  const pcIndex = path.join(dataDir, 'placecards', 'index.json');
+  const pcData = safeReadJSON(pcIndex) as Record<string, unknown> | null;
+  if (pcData) placeCards = Object.keys(pcData).length;
+
+  let cottages = 0;
+  const cData = safeReadJSON(path.join(dataDir, 'cottages', 'index.json')) as { cottages?: unknown[] } | null;
+  if (cData?.cottages) cottages = cData.cottages.length;
+
+  let activeContexts = 0;
+  const manifest = safeReadJSON(path.join(dataDir, 'compass-manifest.json')) as { contexts?: Array<{ active?: boolean }> } | null;
+  if (manifest?.contexts) {
+    activeContexts = manifest.contexts.filter(c => c.active !== false).length;
+  }
+
+  return { placeCards, cottages, activeContexts };
 }
 
 export async function GET() {
@@ -43,121 +139,19 @@ export async function GET() {
     return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
   }
 
-  try {
-    const agentsDir = getAgentsDir();
-    const agentDirs = readdirSync(agentsDir).filter(name => {
-      if (name.startsWith('.')) return false;
-      try {
-        return readdirSync(path.join(agentsDir, name)).includes('sessions');
-      } catch { return false; }
-    });
+  const agents = loadAgents();
+  const stats = loadStats();
+  const totalTokens24h = agents.reduce((sum, a) => sum + a.totalTokens, 0);
 
-    const agents: AgentHealth[] = [];
-    const h24Ago = Date.now() - 86400000;
-
-    for (const agentName of agentDirs) {
-      try {
-        const sessionsPath = path.join(agentsDir, agentName, 'sessions', 'sessions.json');
-        const sessionsData = JSON.parse(readFileSync(sessionsPath, 'utf8'));
-
-        let latestMs = 0;
-        let model = 'unknown';
-        let sessionCount = 0;
-        let totalTokens = 0;
-        let contextTokens = 0;
-
-        for (const [, session] of Object.entries(sessionsData)) {
-          const s = session as Record<string, unknown>;
-          const updAt = s.updatedAt as number | undefined;
-          if (updAt && updAt > latestMs) latestMs = updAt;
-
-          // Count sessions active in last 24h
-          if (updAt && updAt > h24Ago) sessionCount++;
-
-          // Extract model from session config
-          const config = s.config as Record<string, unknown> | undefined;
-          if (config?.model && typeof config.model === 'string') {
-            model = config.model;
-          }
-          // Also check runtime metadata
-          const meta = s.meta as Record<string, unknown> | undefined;
-          if (meta?.model && typeof meta.model === 'string') {
-            model = meta.model;
-          }
-          // Check skillsSnapshot for model
-          const snap = s.skillsSnapshot as Record<string, unknown> | undefined;
-          if (snap?.prompt && typeof snap.prompt === 'string') {
-            const modelMatch = snap.prompt.match(/model=([^\s|]+)/);
-            if (modelMatch?.[1]) model = modelMatch[1];
-          }
-
-          // Token counts from usage
-          const usage = s.usage as Record<string, number> | undefined;
-          if (usage) {
-            totalTokens += (usage.totalTokens || usage.total_tokens || 0);
-            contextTokens = Math.max(contextTokens, usage.contextTokens || usage.context_tokens || 200000);
-          }
-        }
-
-        // Default context window if not found
-        if (contextTokens === 0) contextTokens = 200000;
-
-        agents.push({
-          id: agentName,
-          role: '',
-          status: latestMs > 0 ? getStatus(latestMs) : 'dormant',
-          lastActivity: latestMs || 0,
-          model: model.replace(/^(anthropic|openai|google)\//, ''),
-          sessionCount,
-          totalTokens,
-          contextTokens,
-        });
-      } catch { /* skip */ }
-    }
-
-    // Compute stats
-    const activeCount = agents.filter(a => a.status === 'active').length;
-
-    let placeCards = 0;
-    const pcDir = path.join(process.cwd(), 'data', 'placecards');
-    try {
-      const indexPath = path.join(pcDir, 'index.json');
-      if (existsSync(indexPath)) {
-        placeCards = Object.keys(JSON.parse(readFileSync(indexPath, 'utf8'))).length;
-      }
-    } catch { /* ignore */ }
-
-    let cottages = 0;
-    try {
-      const cPath = path.join(process.cwd(), 'data', 'cottages', 'index.json');
-      if (existsSync(cPath)) {
-        cottages = (JSON.parse(readFileSync(cPath, 'utf8')).cottages || []).length;
-      }
-    } catch { /* ignore */ }
-
-    let activeTrips = 0;
-    try {
-      const mPath = path.join(process.cwd(), 'data', 'compass-manifest.json');
-      if (existsSync(mPath)) {
-        const manifest = JSON.parse(readFileSync(mPath, 'utf8'));
-        activeTrips = (manifest.contexts || []).filter((c: { type: string; active: boolean }) => c.type === 'trip' && c.active).length;
-      }
-    } catch { /* ignore */ }
-
-    // Token sum from /api/admin/tokens data (approximate from agent data)
-    const totalTokens24h = agents.reduce((sum, a) => sum + a.totalTokens, 0);
-
-    const stats: AgentHealthStats = {
+  return NextResponse.json({
+    agents,
+    stats: {
       totalAgents: agents.length,
-      activeAgents: activeCount,
-      placeCards,
-      cottages,
-      activeTrips,
+      activeAgents: agents.filter(a => a.status === 'active').length,
+      placeCards: stats.placeCards,
+      cottages: stats.cottages,
+      activeContexts: stats.activeContexts,
       totalTokens24h,
-    };
-
-    return NextResponse.json({ agents, stats });
-  } catch {
-    return NextResponse.json({ error: 'Failed to load agents' }, { status: 500 });
-  }
+    },
+  });
 }

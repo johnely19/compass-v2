@@ -22,7 +22,8 @@ interface AgentHealthStats {
   activeAgents: number;
   placeCards: number;
   cottages: number;
-  activeTrips: number;
+  activeContexts: number;
+  activeTrips?: number; // compat
   totalTokens24h: number;
 }
 
@@ -31,11 +32,12 @@ interface CronJob {
   name: string;
   enabled: boolean;
   schedule: string;
-  lastRun: string | null;
+  lastRun: string | number | null;
   status: 'healthy' | 'missed' | 'error';
+  health?: 'healthy' | 'warning' | 'error' | 'unknown';
   lastError: string | null;
   agentId?: string;
-  nextRun?: string | null;
+  nextRun?: string | number | null;
   lastDuration?: number | null;
   consecutiveErrors?: number;
 }
@@ -192,6 +194,11 @@ export default function AdminClient() {
   const activeCount = agents.filter(a => a.status === 'active').length;
   const enabledCrons = crons.filter(j => j.enabled !== false);
   const healthIcon = (s: string) => s === 'healthy' ? '🟢' : s === 'missed' || s === 'warning' ? '🟡' : s === 'error' ? '🔴' : '⚪';
+  const fmtDuration = (ms: number | null | undefined) => {
+    if (!ms) return '—';
+    if (ms < 1000) return `${ms}ms`;
+    return `${(ms / 1000).toFixed(1)}s`;
+  };
 
   const maxHourly = tokenData ? Math.max(...tokenData.hourly.map(h => h.tokens), 1) : 1;
 
@@ -211,7 +218,7 @@ export default function AdminClient() {
             <div className="health-stat-card"><strong>{stats.activeAgents}</strong><span>Active</span></div>
             <div className="health-stat-card"><strong>{stats.placeCards}</strong><span>Place Cards</span></div>
             <div className="health-stat-card"><strong>{stats.cottages}</strong><span>Cottages</span></div>
-            <div className="health-stat-card"><strong>{stats.activeTrips}</strong><span>Trips</span></div>
+            <div className="health-stat-card"><strong>{stats.activeContexts ?? stats.activeTrips ?? 0}</strong><span>Contexts</span></div>
             <div className="health-stat-card"><strong>{formatTokens(tokenData?.total24h ?? stats.totalTokens24h)}</strong><span>Tokens (24h)</span></div>
           </div>
         )}
@@ -268,26 +275,31 @@ export default function AdminClient() {
                 <th>Job</th>
                 <th>Schedule</th>
                 <th>Last</th>
+                <th>Dur.</th>
                 <th>Next</th>
                 <th style={{ width: 40 }}>Err</th>
               </tr>
             </thead>
             <tbody>
-              {enabledCrons.map(job => (
+              {enabledCrons.map(job => {
+                const health = job.health || job.status;
+                return (
                 <tr key={job.id}>
-                  <td style={{ textAlign: 'center' }}>{healthIcon(job.status)}</td>
+                  <td style={{ textAlign: 'center' }}>{healthIcon(health)}</td>
                   <td>
                     <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{job.name}</div>
                     {job.agentId && <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{job.agentId}</div>}
                   </td>
                   <td className="cron-schedule">{job.schedule}</td>
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{formatRelativeTime(job.lastRun)}</td>
+                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{fmtDuration(job.lastDuration)}</td>
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{job.nextRun ? formatRelativeTime(job.nextRun) : '—'}</td>
                   <td style={{ textAlign: 'center', color: (job.consecutiveErrors ?? 0) > 0 ? '#f44336' : 'var(--text-muted)' }}>
                     {(job.consecutiveErrors ?? 0) > 0 ? job.consecutiveErrors : '—'}
                   </td>
                 </tr>
-              ))}
+                );
+              })}
             </tbody>
           </table>
         </div>
