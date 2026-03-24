@@ -15,13 +15,20 @@ interface ReviewContextClientProps {
   discoveries: Discovery[];
 }
 
-function timeAgo(dateStr: string): string {
-  const ms = Date.now() - new Date(dateStr).getTime();
+function timeAgo(dateStr: string | undefined | null): string | null {
+  if (!dateStr) return null;
+  const date = new Date(dateStr);
+  if (isNaN(date.getTime())) return null;
+  const ms = Date.now() - date.getTime();
+  // If timestamp is within last 60 seconds of page load, it's likely a default — skip
+  if (ms < 60000) return null;
   const min = Math.floor(ms / 60000);
   if (min < 60) return `${min}m ago`;
   const hrs = Math.floor(min / 60);
   if (hrs < 24) return `${hrs}h ago`;
-  return `${Math.floor(hrs / 24)}d ago`;
+  const days = Math.floor(hrs / 24);
+  if (days < 30) return `${days}d ago`;
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
 }
 
 export default function ReviewContextClient({
@@ -101,7 +108,12 @@ export default function ReviewContextClient({
                   </Link>
                   <div className="flex items-center gap-sm">
                     <TypeBadge type={d.type} />
-                    <span className="text-xs text-muted">{timeAgo(d.discoveredAt)}</span>
+                    {(() => {
+                      // Unreviewed: show discovery time. Saved/dismissed: show triage time.
+                      const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
+                      const ago = timeAgo(ts);
+                      return ago ? <span className="text-xs text-muted">{ago}</span> : null;
+                    })()}
                     {entry?.state === 'resurfaced' && entry.resurfaceReason && (
                       <span className="badge badge-warning">{entry.resurfaceReason}</span>
                     )}

@@ -135,20 +135,24 @@ export default function HomeClient({
           <section key={ctx.key} className="section">
             <div className="section-header">
               <div className="section-header-left">
-                <h2>
-                  <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="lg" />
-                  {ctx.label}
-                </h2>
-                <div className="section-meta">
-                  {naturalDate && (
-                    <span className="section-date">{naturalDate}</span>
-                  )}
-                  {naturalDate && description && (
-                    <span className="section-meta-sep">·</span>
-                  )}
-                  {description && (
-                    <span className="section-desc">{description}</span>
-                  )}
+                <div className="section-title-row">
+                  <span className="section-emoji-large">
+                    <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="lg" />
+                  </span>
+                  <div className="section-title-text">
+                    <h2>{ctx.label}</h2>
+                    <div className="section-meta">
+                      {naturalDate && (
+                        <span className="section-date">{naturalDate}</span>
+                      )}
+                      {naturalDate && description && (
+                        <span className="section-meta-sep">·</span>
+                      )}
+                      {description && (
+                        <span className="section-desc">{description}</span>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="section-header-right">

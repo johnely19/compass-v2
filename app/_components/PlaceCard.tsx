@@ -38,7 +38,7 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     : null;
 
   return (
-    <Link href={`/placecards/${place_id || id}`} className="place-card">
+    <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
       <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
         {!imageUrl && <span className="place-card-image-fallback" />}
       </div>

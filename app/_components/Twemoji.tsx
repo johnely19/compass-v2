@@ -10,10 +10,10 @@ interface TwemojiProps {
 }
 
 const sizeMap = {
-  sm: '1em',
-  md: '1.2em',
-  lg: '1.4em',
-  xl: '1.6em',
+  sm: '1.2em',
+  md: '1.6em',
+  lg: '2em',
+  xl: '2.4em',
 };
 
 export default function Twemoji({ emoji, size = 'md', className = '' }: TwemojiProps) {

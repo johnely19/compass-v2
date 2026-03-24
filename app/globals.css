@@ -412,12 +412,35 @@ a:hover {
   gap: var(--space-md);
 }
 
+.section-title-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75em;
+}
+
+.section-emoji-large {
+  flex-shrink: 0;
+  filter: saturate(0.6) opacity(0.8);
+}
+
+.section-emoji-large .twemoji-img {
+  height: 2.8em !important;
+  width: 2.8em !important;
+}
+
+.section-title-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-title-text h2 {
+  font-size: 1.125rem;
+  margin-bottom: 2px;
+}
+
 .section-header h2 {
   font-size: 1.125rem;
   margin-bottom: 2px;
-  display: flex;
-  align-items: center;
-  gap: 0.4em;
 }
 
 /* Twemoji */
@@ -428,9 +451,10 @@ a:hover {
 }
 
 .twemoji-img {
-  height: var(--twemoji-size, 1.2em);
-  width: var(--twemoji-size, 1.2em);
-  vertical-align: -0.15em;
+  height: var(--twemoji-size, 1.6em);
+  width: var(--twemoji-size, 1.6em);
+  vertical-align: -0.2em;
+  filter: saturate(1.1) drop-shadow(0 1px 2px rgba(0, 0, 0, 0.1));
 }
 
 .section-header-left {

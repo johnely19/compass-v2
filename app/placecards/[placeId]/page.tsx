@@ -2,6 +2,7 @@ import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import { notFound } from 'next/navigation';
 import { getCurrentUser } from '../../_lib/user';
+import { getUserDiscoveries } from '../../_lib/user-data';
 import { adaptCard } from '../../_lib/card-adapter';
 import PlaceCardDetail from '../../_components/PlaceCardDetail';
 
@@ -9,10 +10,12 @@ export const dynamic = 'force-dynamic';
 
 interface PageProps {
   params: Promise<{ placeId: string }>;
+  searchParams: Promise<{ context?: string }>;
 }
 
-export default async function PlaceCardPage({ params }: PageProps) {
+export default async function PlaceCardPage({ params, searchParams }: PageProps) {
   const { placeId } = await params;
+  const { context: contextFromUrl } = await searchParams;
   const cardDir = path.join(process.cwd(), 'data', 'placecards', placeId);
   const cardPath = path.join(cardDir, 'card.json');
 
@@ -37,11 +40,19 @@ export default async function PlaceCardPage({ params }: PageProps) {
   const card = adaptCard(raw, manifest);
   const user = await getCurrentUser();
 
+  // Determine context: URL param > first matching context from user's discoveries
+  let contextKey = contextFromUrl;
+  if (!contextKey && user) {
+    const discData = await getUserDiscoveries(user.id);
+    const match = discData?.discoveries?.find(d => d.place_id === placeId);
+    if (match) contextKey = match.contextKey;
+  }
+
   return (
     <PlaceCardDetail
       card={card}
       userId={user?.id}
-      contextKey={undefined}
+      contextKey={contextKey}
     />
   );
 }

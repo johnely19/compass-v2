@@ -21,7 +21,7 @@
     {
       "key": "trip:cottage-july-2026",
       "label": "Ontario Cottage",
-      "emoji": "\ud83c\udfe1",
+      "emoji": "\ud83c\udfca",
       "type": "trip",
       "city": "Lake Huron",
       "dates": "July 2026 (3+ weeks)",
@@ -34,7 +34,7 @@
       "active": true
     },
     {
-      "key": "outing:date-night-huzur",
+      "key": "outing:date-night-with-huzur",
       "label": "Date Night with Huzur",
       "emoji": "\ud83c\udf77",
       "type": "outing",
@@ -48,7 +48,7 @@
       "active": true
     },
     {
-      "key": "outing:dinner-jackson",
+      "key": "outing:dinner-with-jackson",
       "label": "Dinner with Jackson",
       "emoji": "\ud83c\udf7d\ufe0f",
       "type": "outing",
