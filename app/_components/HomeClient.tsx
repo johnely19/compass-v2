@@ -42,6 +42,22 @@ function formatDateNatural(dates: string | undefined): string | null {
   const note = parenMatch ? parenMatch[1] : null;
   const cleaned = dates.replace(/\s*\([^)]*\)/, '').trim();
 
+  // ISO: "2026-04-27 to 2026-04-30"
+  const isoRange = cleaned.match(/^(\d{4})-(\d{2})-(\d{2})\s+to\s+(\d{4})-(\d{2})-(\d{2})$/);
+  if (isoRange) {
+    const [, , startMo, startDay, endYr, endMo, endDay] = isoRange;
+    const startDate = new Date(`${isoRange[1]}-${startMo}-${startDay}`);
+    const endDate = new Date(`${endYr}-${endMo}-${endDay}`);
+    const sMonth = startDate.toLocaleString('en-US', { month: 'long' });
+    const eMonth = endDate.toLocaleString('en-US', { month: 'long' });
+    const yr = parseInt(endYr ?? '0');
+    const yearSuffix = yr !== currentYear ? `, ${endYr}` : '';
+    if (sMonth === eMonth) {
+      return `${sMonth} ${parseInt(startDay ?? '0')} – ${parseInt(endDay ?? '0')}${yearSuffix}`;
+    }
+    return `${sMonth} ${parseInt(startDay ?? '0')} – ${eMonth} ${parseInt(endDay ?? '0')}${yearSuffix}`;
+  }
+
   // "April 27-30, 2026"
   const rangeInMonth = cleaned.match(/^(\w+)\s+(\d+)\s*[-–]\s*(\d+),?\s+(\d{4})$/);
   if (rangeInMonth) {

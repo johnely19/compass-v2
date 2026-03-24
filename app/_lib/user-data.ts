@@ -4,7 +4,30 @@
    ============================================================ */
 
 import { put, list, del } from '@vercel/blob';
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
 import type { UserDocType, UserDocMap, UserProfile, UserPreferences, UserManifest, UserDiscoveries, UserChat } from './types';
+
+// Place card index cache (server-side only)
+let _placeCardIndex: Record<string, { name: string; type: string }> | null = null;
+function getPlaceCardIndex() {
+  if (_placeCardIndex) return _placeCardIndex;
+  try {
+    const p = path.join(process.cwd(), 'data', 'placecards', 'index.json');
+    if (existsSync(p)) {
+      _placeCardIndex = JSON.parse(readFileSync(p, 'utf8'));
+      return _placeCardIndex!;
+    }
+  } catch { /* ignore */ }
+  return {};
+}
+
+/** Look up authoritative type from place card index for a given place_id */
+function lookupTypeFromIndex(placeId: string | undefined | null): string | null {
+  if (!placeId || typeof window !== 'undefined') return null;
+  const index = getPlaceCardIndex();
+  return (index[placeId] as { type?: string } | undefined)?.type || null;
+}
 
 const BLOB_PREFIX = 'users';
 
@@ -146,11 +169,15 @@ function normalizeType(type: string | undefined | null): string {
 function inferTypeFromName(name: string | undefined | null): string {
   if (!name) return 'restaurant';
   const lower = name.toLowerCase();
-  if (/gallery|art\s/.test(lower)) return 'gallery';
-  if (/museum/.test(lower)) return 'museum';
+  if (/gallery|art\s|fine art/.test(lower)) return 'gallery';
+  if (/museum|biennial/.test(lower)) return 'museum';
+  if (/cinema|nitehawk|film house|movie|theater(?!.*food)/.test(lower)) return 'experience';
+  if (/concert hall|symphony|philharmonic/.test(lower)) return 'music-venue';
+  if (/roller.*arts|roller.*rink|skating/.test(lower)) return 'experience';
+  if (/house of yes|live nation|music.*hall|jazz.*club|nublu|rex\b|the rex/.test(lower)) return 'music-venue';
   if (/bar|wine|cocktail|brewery|pub\b/.test(lower)) return 'bar';
   if (/caf[eé]|coffee|bakery/.test(lower)) return 'cafe';
-  if (/theatre|theater/.test(lower)) return 'theatre';
+  if (/theatre|comedy|improv/.test(lower)) return 'theatre';
   if (/park|garden/.test(lower)) return 'park';
   if (/hotel|inn\b/.test(lower)) return 'hotel';
   if (/market|grocer|butcher/.test(lower)) return 'grocery';
@@ -193,9 +220,15 @@ export async function getUserDiscoveries(userId: string): Promise<UserDiscoverie
     id: (d.id as string) || `v1_${i}`,
     name: (d.name as string) || 'Unknown Place',
     city: (d.city as string) || 'Toronto',
-    type: d.type
-      ? normalizeType(d.type as string)
-      : inferTypeFromName(d.name as string),
+    type: (() => {
+      // Priority: authoritative type from place card index (for cards with place_id)
+      const placeId = d.place_id as string | undefined;
+      const indexed = lookupTypeFromIndex(placeId);
+      if (indexed && VALID_DISCOVERY_TYPES.has(indexed)) return indexed;
+      // Fallback: normalize incoming type or infer from name
+      if (d.type) return normalizeType(d.type as string);
+      return inferTypeFromName(d.name as string);
+    })(),
     rating: d.rating != null ? Number(d.rating) || undefined : undefined,
     contextKey: normalizeContextKey(d.contextKey as string),
     discoveredAt: (d.discoveredAt as string) || new Date().toISOString(),
