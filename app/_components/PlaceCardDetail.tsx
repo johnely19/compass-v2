@@ -2,17 +2,51 @@
 
 import type { PlaceCard, DiscoveryType } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
+import { resolveImageUrlClient } from '../_lib/image-url';
 import TriageWidget from './TriageWidget';
 import RatingWidget from './widgets/RatingWidget';
-import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
-import MenuWidget from './widgets/MenuWidget';
-import PricingWidget from './widgets/PricingWidget';
-import AmenitiesWidget from './widgets/AmenitiesWidget';
-import ExhibitionWidget from './widgets/ExhibitionWidget';
-import StatusWidget from './widgets/StatusWidget';
-import KeyDatesWidget from './widgets/KeyDatesWidget';
+
+/* ---- Type-specific hero gradients ---- */
+const TYPE_GRADIENTS: Record<string, string> = {
+  restaurant:   'linear-gradient(135deg, #f59e0b 0%, #e11d48 100%)',
+  bar:          'linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)',
+  cafe:         'linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%)',
+  gallery:      'linear-gradient(135deg, #475569 0%, #3b82f6 100%)',
+  museum:       'linear-gradient(135deg, #334155 0%, #6366f1 100%)',
+  theatre:      'linear-gradient(135deg, #1e1b4b 0%, #9f1239 100%)',
+  'music-venue':'linear-gradient(135deg, #0f0a1e 0%, #581c87 100%)',
+  grocery:      'linear-gradient(135deg, #16a34a 0%, #0d9488 100%)',
+  shop:         'linear-gradient(135deg, #78716c 0%, #d97706 100%)',
+  park:         'linear-gradient(135deg, #15803d 0%, #4ade80 100%)',
+  architecture: 'linear-gradient(135deg, #475569 0%, #94a3b8 100%)',
+  development:  'linear-gradient(135deg, #64748b 0%, #334155 100%)',
+  hotel:        'linear-gradient(135deg, #0369a1 0%, #0284c7 100%)',
+  experience:   'linear-gradient(135deg, #f97316 0%, #ec4899 100%)',
+  accommodation:'linear-gradient(135deg, #2dd4bf 0%, #0ea5e9 100%)',
+  neighbourhood:'linear-gradient(135deg, #f59e0b 0%, #ea580c 100%)',
+};
+
+const DEFAULT_GRADIENT = 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
+
+/* ---- Dark types (nightlife) ---- */
+const DARK_TYPES = new Set(['music-venue', 'bar', 'theatre']);
+
+/* ---- Helpers ---- */
+
+function extractRating(text: string | undefined): { rating: number; count: number } | null {
+  if (!text) return null;
+  const m = text.match(/(\d+\.?\d*)\s*[★⭐]\s*(?:\((\d+)\s*reviews?\))?/);
+  if (!m || !m[1]) return null;
+  return { rating: parseFloat(m[1]), count: m[2] ? parseInt(m[2]) : 0 };
+}
+
+function extractWebsite(text: string | undefined): string | null {
+  if (!text) return null;
+  const m = text.match(/https?:\/\/[^\s,)]+/);
+  return m ? m[0] : null;
+}
 
 interface PlaceCardDetailProps {
   card: PlaceCard;
@@ -20,162 +54,166 @@ interface PlaceCardDetailProps {
   contextKey?: string;
 }
 
-const TYPE_WIDGETS: Record<DiscoveryType, string[]> = {
-  restaurant: ['RatingWidget', 'MenuWidget', 'HoursWidget', 'MapWidget', 'PhotoGallery'],
-  bar: ['RatingWidget', 'MenuWidget', 'HoursWidget', 'MapWidget', 'PhotoGallery'],
-  cafe: ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  gallery: ['ExhibitionWidget', 'HoursWidget', 'MapWidget', 'PhotoGallery'],
-  museum: ['ExhibitionWidget', 'HoursWidget', 'MapWidget'],
-  accommodation: ['AmenitiesWidget', 'PricingWidget', 'MapWidget', 'PhotoGallery'],
-  hotel: ['RatingWidget', 'AmenitiesWidget', 'MapWidget'],
-  grocery: ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  theatre: ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  'music-venue': ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  experience: ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  shop: ['RatingWidget', 'HoursWidget', 'MapWidget'],
-  park: ['RatingWidget', 'MapWidget'],
-  architecture: ['RatingWidget', 'MapWidget'],
-  development: ['RatingWidget', 'MapWidget'],
-  neighbourhood: ['MapWidget'],
-};
-
-const DEFAULT_WIDGETS = ['RatingWidget', 'HoursWidget', 'MapWidget'];
-
 export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardDetailProps) {
   const typeMeta = getTypeMeta(card.type);
-  const widgets = TYPE_WIDGETS[card.type] || DEFAULT_WIDGETS;
-
   const data = card.data ?? { description: '', highlights: [], images: [] };
-  const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
-  const rawHero = data.images?.[0]?.path;
-  const heroImage = rawHero
-    ? (rawHero.startsWith('http') ? rawHero : (rawHero.startsWith('/') && BLOB_BASE ? `${BLOB_BASE}${rawHero}` : rawHero))
-    : null;
+
+  // Hero image — use first available
+  const heroImage = resolveImageUrlClient(data.images?.[0]?.path);
+  const gradient = TYPE_GRADIENTS[card.type] || DEFAULT_GRADIENT;
+  const isDark = DARK_TYPES.has(card.type);
+
+  // Extract structured data from narrative
+  const narrative = data.description as string | undefined;
+  const ratingData = extractRating(narrative) ||
+    (data.rating ? { rating: data.rating as number, count: (data.reviewCount as number) || 0 } : null);
+  const website = extractWebsite(narrative);
+
+  // Address & maps
+  const address = (data.address as string | undefined) || '';
   const googleMapsUrl = card.place_id
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
-    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name)}`;
+    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name + ' ' + address)}`;
 
-  const renderWidget = (widgetName: string) => {
-    switch (widgetName) {
-      case 'RatingWidget':
-        return (
-          <RatingWidget
-            key="rating"
-            rating={data.rating as number | undefined}
-            reviewCount={data.reviewCount as number | undefined}
-          />
-        );
-      case 'HoursWidget':
-        return data.hours ? (
-          <HoursWidget key="hours" hours={data.hours} />
-        ) : null;
-      case 'MapWidget':
-        return <MapWidget key="map" placeId={card.place_id} name={card.name} />;
-      case 'PhotoGallery':
-        return data.images && data.images.length > 0 ? (
-          <PhotoGallery key="photos" images={data.images} />
-        ) : null;
-      case 'MenuWidget':
-        return data.menu ? (
-          <MenuWidget key="menu" menu={data.menu as any} />
-        ) : null;
-      case 'PricingWidget':
-        return data.pricing ? (
-          <PricingWidget key="pricing" pricing={data.pricing as any} />
-        ) : null;
-      case 'AmenitiesWidget':
-        return data.amenities ? (
-          <AmenitiesWidget key="amenities" amenities={data.amenities as any} />
-        ) : null;
-      case 'ExhibitionWidget':
-        return data.exhibitions ? (
-          <ExhibitionWidget key="exhibitions" exhibitions={data.exhibitions as any} />
-        ) : null;
-      case 'StatusWidget':
-        return data.status ? (
-          <StatusWidget key="status" status={data.status as string} />
-        ) : null;
-      case 'KeyDatesWidget':
-        return data.dates ? (
-          <KeyDatesWidget key="dates" dates={data.dates as any} />
-        ) : null;
-      default:
-        return null;
-    }
-  };
+  // Photos — exclude hero (already shown), show rest in gallery
+  const galleryImages = data.images && data.images.length > 1 ? data.images.slice(1) : [];
+
+  // Development-specific: show all images as carousel
+  const isDevelopment = card.type === 'development';
+  const allImages = data.images ?? [];
 
   return (
-    <div className="place-detail">
-      {/* Hero Image */}
+    <div className={`place-detail-v2 ${isDark ? 'place-detail-dark' : ''}`}>
+
+      {/* ── Hero ── */}
       <div
-        className="place-detail-hero"
-        style={heroImage ? { backgroundImage: `url(${heroImage})` } : undefined}
+        className="place-detail-v2-hero"
+        style={{
+          background: heroImage
+            ? `linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%), url(${heroImage}) center/cover`
+            : gradient,
+        }}
       >
-        {!heroImage && <div className="place-detail-hero-fallback" />}
+        <div className="place-detail-v2-hero-overlay">
+          <div className="place-detail-v2-type-row">
+            <span
+              className="type-badge type-badge-md"
+              style={{ '--type-color': typeMeta.color } as React.CSSProperties}
+            >
+              <span className="type-badge-icon">{typeMeta.icon}</span>
+              {typeMeta.label}
+            </span>
+            {userId && contextKey && card.place_id && (
+              <div className="place-detail-v2-hero-triage">
+                <TriageWidget
+                  userId={userId}
+                  contextKey={contextKey}
+                  contextLabel=""
+                  placeId={card.place_id}
+                />
+              </div>
+            )}
+          </div>
+          <h1 className="place-detail-v2-name">{card.name}</h1>
+          {address && (
+            <p className="place-detail-v2-address-hero">{address}</p>
+          )}
+        </div>
       </div>
 
-      {/* Header */}
-      <div className="place-detail-header">
-        <div className="place-detail-title-row">
-          <h1 className="place-detail-name">{card.name}</h1>
-          <span
-            className="type-badge type-badge-md"
-            style={{ '--type-color': typeMeta.color } as React.CSSProperties}
+      {/* ── Body ── */}
+      <div className="place-detail-v2-body">
+
+        {/* Rating (only when present) */}
+        {ratingData && ratingData.rating > 0 && (
+          <RatingWidget rating={ratingData.rating} reviewCount={ratingData.count || undefined} />
+        )}
+
+        {/* Narrative — the heart of the card */}
+        {narrative && (
+          <div className="place-detail-v2-narrative">
+            <p>{narrative}</p>
+          </div>
+        )}
+
+        {/* Identity row — address, website, maps */}
+        <div className="place-detail-v2-identity">
+          {address && (
+            <a
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="place-detail-v2-identity-row"
+            >
+              <span className="place-detail-v2-identity-icon">📍</span>
+              <span>{address}</span>
+              <span className="place-detail-v2-identity-link">↗</span>
+            </a>
+          )}
+          {website && (
+            <a
+              href={website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="place-detail-v2-identity-row"
+            >
+              <span className="place-detail-v2-identity-icon">🌐</span>
+              <span className="place-detail-v2-website-text">{website.replace(/^https?:\/\//, '').split('/')[0]}</span>
+              <span className="place-detail-v2-identity-link">↗</span>
+            </a>
+          )}
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary place-detail-v2-maps-btn"
           >
-            <span className="type-badge-icon">{typeMeta.icon}</span>
-            {typeMeta.label}
-          </span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            Open in Maps
+          </a>
         </div>
 
-        <a
-          href={googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary place-detail-maps-btn"
-        >
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-            <circle cx="12" cy="10" r="3" />
-          </svg>
-          Open in Google Maps
-        </a>
+        {/* Development: full carousel */}
+        {isDevelopment && allImages.length > 0 && (
+          <div className="place-detail-v2-dev-gallery">
+            <div className="place-detail-v2-dev-track">
+              {allImages.map((img, i) => (
+                <img
+                  key={i}
+                  src={resolveImageUrlClient(img.path) || ''}
+                  alt={img.category || `Rendering ${i + 1}`}
+                  className="place-detail-v2-dev-img"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Photo gallery (non-development) */}
+        {!isDevelopment && galleryImages.length > 0 && (
+          <PhotoGallery images={galleryImages} />
+        )}
+
+        {/* Map */}
+        <MapWidget placeId={card.place_id} name={card.name} />
+
+        {/* Triage (fallback if not in hero) */}
+        {userId && contextKey && card.place_id && !heroImage && (
+          <div className="place-detail-triage" style={{ marginTop: 'var(--space-xl)' }}>
+            <TriageWidget
+              userId={userId}
+              contextKey={contextKey}
+              contextLabel={contextKey}
+              placeId={card.place_id}
+            />
+          </div>
+        )}
+
       </div>
-
-      {/* Description */}
-      {data.description && (
-        <div className="place-detail-description">
-          <p>{data.description}</p>
-        </div>
-      )}
-
-      {/* Highlights */}
-      {data.highlights && data.highlights.length > 0 && (
-        <div className="place-detail-highlights">
-          <h3>Highlights</h3>
-          <ul>
-            {data.highlights.map((highlight, i) => (
-              <li key={i}>{highlight}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {/* Widgets */}
-      <div className="place-detail-widgets">
-        {widgets.map(renderWidget)}
-      </div>
-
-      {/* Triage Widget */}
-      {userId && contextKey && (
-        <div className="place-detail-triage">
-          <TriageWidget
-            userId={userId}
-            contextKey={contextKey}
-            contextLabel={contextKey}
-            placeId={card.place_id}
-          />
-        </div>
-      )}
     </div>
   );
 }
