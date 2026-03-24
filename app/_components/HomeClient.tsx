@@ -7,6 +7,7 @@ import { getContextCounts } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
+import TripPlanningWidget from './TripPlanningWidget';
 
 interface HomeClientProps {
   userId: string;
@@ -172,6 +173,10 @@ export default function HomeClient({
                 </Link>
               </div>
             </div>
+
+            {ctx.type === 'trip' && (
+              <TripPlanningWidget userId={userId} contextKey={ctx.key} />
+            )}
 
             {discoveries.length > 0 ? (
               <PlaceGrid
