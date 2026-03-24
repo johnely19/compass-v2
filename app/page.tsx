@@ -51,10 +51,17 @@ export default async function HomePage() {
     getUserDiscoveries(user.id),
   ]);
 
-  const manifest = blobManifest ?? loadLocalManifest();
+  // Merge contexts: Blob manifest + local manifest (for any missing contexts)
+  const blobContexts = blobManifest?.contexts ?? [];
+  const localContexts = loadLocalManifest()?.contexts ?? [];
+  const blobKeys = new Set(blobContexts.map(c => c.key));
+  const mergedContexts = [
+    ...blobContexts,
+    ...localContexts.filter(c => !blobKeys.has(c.key)),
+  ];
 
   const contexts = sortContexts(
-    (manifest?.contexts ?? []).filter(c => isContextActive(c)),
+    mergedContexts.filter(c => isContextActive(c)),
   );
   const discoveries = discoveriesData?.discoveries ?? [];
 

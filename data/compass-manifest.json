@@ -5,66 +5,100 @@
     {
       "key": "trip:nyc-april-2026",
       "label": "NYC Solo Trip",
-      "emoji": "🗽",
+      "emoji": "\ud83d\uddfd",
       "type": "trip",
       "city": "New York",
       "dates": "April 27-30, 2026",
-      "focus": ["Brooklyn food scene", "galleries", "off-Broadway", "jazz", "architecture"],
+      "focus": [
+        "Brooklyn food scene",
+        "galleries",
+        "off-Broadway",
+        "jazz",
+        "architecture"
+      ],
       "active": true
     },
     {
       "key": "trip:cottage-july-2026",
       "label": "Ontario Cottage",
-      "emoji": "🏡",
+      "emoji": "\ud83c\udfe1",
       "type": "trip",
       "city": "Lake Huron",
       "dates": "July 2026 (3+ weeks)",
-      "focus": ["waterfront", "swimming", "dock access", "private shoreline"],
+      "focus": [
+        "waterfront",
+        "swimming",
+        "dock access",
+        "private shoreline"
+      ],
       "active": true
     },
     {
       "key": "outing:date-night-huzur",
       "label": "Date Night with Huzur",
-      "emoji": "🍷",
+      "emoji": "\ud83c\udf77",
       "type": "outing",
       "city": "Toronto",
-      "focus": ["intimate", "wine bar", "French bistro", "romantic"],
+      "focus": [
+        "intimate",
+        "wine bar",
+        "French bistro",
+        "romantic"
+      ],
       "active": true
     },
     {
       "key": "outing:dinner-jackson",
       "label": "Dinner with Jackson",
-      "emoji": "🍽️",
+      "emoji": "\ud83c\udf7d\ufe0f",
       "type": "outing",
       "city": "Toronto",
-      "focus": ["casual", "good food", "interesting"],
+      "focus": [
+        "casual",
+        "good food",
+        "interesting"
+      ],
       "active": true
     },
     {
       "key": "radar:premium-grocery",
       "label": "Premium Grocery Shopping",
-      "emoji": "🛒",
+      "emoji": "\ud83e\udd6c",
       "type": "radar",
       "city": "Toronto",
-      "focus": ["exceptional produce", "specialty stores", "quality ingredients"],
+      "focus": [
+        "exceptional produce",
+        "specialty stores",
+        "quality ingredients"
+      ],
       "active": true
     },
     {
       "key": "radar:toronto-experiences",
       "label": "Toronto Experiences",
-      "emoji": "🌆",
+      "emoji": "\ud83c\udf06",
       "type": "radar",
       "city": "Toronto",
-      "focus": ["architecture", "jazz", "art", "dance", "interesting venues"],
+      "focus": [
+        "architecture",
+        "jazz",
+        "art",
+        "dance",
+        "interesting venues"
+      ],
       "active": true
     },
     {
       "key": "radar:developments",
       "label": "Developments",
-      "emoji": "🏗️",
+      "emoji": "\ud83c\udfd7\ufe0f",
       "type": "radar",
       "city": "Toronto",
-      "focus": ["condo projects", "urban development", "architecture"],
+      "focus": [
+        "condo projects",
+        "urban development",
+        "architecture"
+      ],
       "active": true
     }
   ]
