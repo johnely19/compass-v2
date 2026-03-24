@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
+import { put, list, del } from '@vercel/blob';
 import { COOKIE_NAME, getUserById } from '../../../_lib/user';
-import { getUserDiscoveries, setUserData } from '../../../_lib/user-data';
-import type { Discovery, DiscoveryType, PlaceIdStatus, UserDiscoveries } from '../../../_lib/types';
+import type { Discovery, DiscoveryType, PlaceIdStatus } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
+
+const BLOB_PREFIX = 'users';
 
 const VALID_TYPES = new Set<string>([
   'restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum',
@@ -47,6 +49,48 @@ function determinePlaceIdStatus(placeId?: string): PlaceIdStatus {
   return 'verified';
 }
 
+/**
+ * Read raw discoveries from Blob WITHOUT normalization.
+ * This preserves the exact data — critical for safe read-merge-write.
+ */
+async function readRawDiscoveries(userId: string): Promise<unknown[]> {
+  const blobPath = `${BLOB_PREFIX}/${userId}/discoveries.json`;
+  try {
+    const { blobs } = await list({ prefix: blobPath, limit: 1 });
+    const blob = blobs[0];
+    if (!blob) return [];
+    const res = await fetch(blob.url);
+    if (!res.ok) return [];
+    const data = await res.json();
+    // Handle both formats: raw array or { discoveries: [...] }
+    if (Array.isArray(data)) return data;
+    if (data && Array.isArray(data.discoveries)) return data.discoveries;
+    return [];
+  } catch {
+    return [];
+  }
+}
+
+/**
+ * Write discoveries to Blob. Includes safety checks.
+ */
+async function writeDiscoveries(userId: string, discoveries: unknown[]): Promise<void> {
+  const blobPath = `${BLOB_PREFIX}/${userId}/discoveries.json`;
+  // Delete existing
+  try {
+    const { blobs } = await list({ prefix: blobPath, limit: 1 });
+    const existing = blobs[0];
+    if (existing) await del(existing.url);
+  } catch { /* ignore */ }
+
+  const payload = { discoveries, updatedAt: new Date().toISOString() };
+  await put(blobPath, JSON.stringify(payload, null, 2), {
+    access: 'public',
+    contentType: 'application/json',
+    addRandomSuffix: false,
+  });
+}
+
 // GET: retrieve user discoveries
 export async function GET() {
   const cookieStore = await cookies();
@@ -56,11 +100,11 @@ export async function GET() {
   const user = getUserById(userId);
   if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 });
 
-  const data = await getUserDiscoveries(userId);
-  return NextResponse.json({ discoveries: data?.discoveries ?? [] });
+  const discoveries = await readRawDiscoveries(userId);
+  return NextResponse.json({ discoveries, count: discoveries.length });
 }
 
-// POST: add discoveries (from Disco agent or chat)
+// POST: APPEND discoveries (read-merge-write, never overwrite)
 export async function POST(request: NextRequest) {
   const cookieStore = await cookies();
   const userId = cookieStore.get(COOKIE_NAME)?.value;
@@ -93,12 +137,22 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'discoveries[] required' }, { status: 400 });
   }
 
-  // Load existing discoveries
-  const existing = await getUserDiscoveries(targetUserId);
-  const discoveries = existing?.discoveries ?? [];
-  const existingIds = new Set(discoveries.map(d => `${d.place_id ?? d.id}:${d.contextKey}`));
+  // ═══════════════════════════════════════════════════════
+  // SAFETY: Read raw Blob data directly — no normalization
+  // ═══════════════════════════════════════════════════════
+  const existingRaw = await readRawDiscoveries(targetUserId);
+  const existingCount = existingRaw.length;
 
-  let added = 0;
+  // Build dedup set from raw data
+  const existingIds = new Set<string>();
+  for (const d of existingRaw) {
+    const rec = d as Record<string, unknown>;
+    const pid = rec.place_id ?? rec.id ?? rec.name;
+    const ctx = rec.contextKey ?? '';
+    existingIds.add(`${pid}:${ctx}`);
+  }
+
+  const newItems: Discovery[] = [];
   let duplicates = 0;
   const errors: string[] = [];
 
@@ -120,9 +174,6 @@ export async function POST(request: NextRequest) {
       type = item.type as DiscoveryType;
     } else {
       type = inferType(item.name);
-      if (item.type) {
-        console.log(`[discoveries] Inferred type '${type}' for '${item.name}' (sent: '${item.type}')`);
-      }
     }
 
     // Dedup check
@@ -148,17 +199,35 @@ export async function POST(request: NextRequest) {
       heroImage: item.heroImage,
     };
 
-    discoveries.push(discovery);
+    newItems.push(discovery);
     existingIds.add(dedupeKey);
-    added++;
   }
 
-  // Save
-  const updated: UserDiscoveries = {
-    discoveries,
-    updatedAt: new Date().toISOString(),
-  };
-  await setUserData(targetUserId, 'discoveries', updated);
+  // ═══════════════════════════════════════════════════════
+  // SAFETY: Append only — never shrink the array
+  // ═══════════════════════════════════════════════════════
+  const merged = [...existingRaw, ...newItems];
 
-  return NextResponse.json({ added, duplicates, errors, total: discoveries.length });
+  if (merged.length < existingCount) {
+    // This should NEVER happen with append-only, but guard anyway
+    console.error(`[discoveries] SAFETY BLOCK: would shrink ${existingCount} → ${merged.length} for ${targetUserId}. Refusing to write.`);
+    return NextResponse.json({
+      error: 'Safety check failed: write would reduce discovery count',
+      existingCount,
+      wouldWrite: merged.length,
+    }, { status: 409 });
+  }
+
+  if (newItems.length > 0) {
+    await writeDiscoveries(targetUserId, merged);
+    console.log(`[discoveries] Appended ${newItems.length} to ${targetUserId}. ${existingCount} → ${merged.length}`);
+  }
+
+  return NextResponse.json({
+    added: newItems.length,
+    duplicates,
+    errors,
+    previousCount: existingCount,
+    total: merged.length,
+  });
 }
