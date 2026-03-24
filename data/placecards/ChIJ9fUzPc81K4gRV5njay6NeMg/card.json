@@ -27,6 +27,24 @@
     "summary": "Heritage Vietnamese with serious technique — sá sùng (sea worm) in the pho broth, fish sauce glazed wings, head chef Chau Du. Second-floor hidden spot. Already open, 4.8★ (26 reviews).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're a block from the Yonge-Dundas chaos, but up on the second floor of 31 Elm, it's a different city. The room feels like someone's well-edited apartment — warm wood tables, soft overhead lighting that doesn't wash you out, maybe twenty seats total. It's the kind of hidden spot where you feel like you've discovered something, not because they're trying to be exclusive, but because most people just walk past the entrance.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "Chef Chau Du is cooking heritage Vietnamese with the kind of technique that shows up in details: sá sùng (sea worm) fortifying the pho broth, fish sauce lacquered onto chicken wings until they're sticky-glossy, Hanoi spring rolls that shatter when you bite into them. The bun bo hue gets its richness from a broth that tastes like it's been building flavor for hours, balanced spice and funk without leaning too hard on either. The egg coffee — with its thick, sweet egg cream floating over dark coffee — is the move if you want something that feels both nostalgic and revelatory.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is your second or third date spot, when you're past impressing each other and want to actually eat well. Or solo when you need to remember why you care about food — sit wherever they put you, order the spring rolls and the coffee, and reset.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

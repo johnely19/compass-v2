@@ -30,6 +30,24 @@
     "summary": "Vancouver's definitive natural wine bar. Intimate, tiny, exceptional natural wine list — BC favourites like Bella and Thorn & Burrow, grower Champagne, Loire Chenin Blancs. Farm-to-table bites. Innovative cocktails. Next to The Acorn restaurant. John's exact vibe. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on South Granville, tucked right next to The Acorn, and the entrance is easy to miss if you're not looking. Inside, it's deliberately small—maybe a dozen seats total, a narrow bar lined with bottles backlit against dark wood, and a few tables pressed close enough that you'll catch snippets of your neighbour's conversation. The light is low and amber, the kind that makes every glass of wine look better than it probably should.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a natural wine bar first, but the kitchen knows what it's doing with clean, ingredient-forward small plates that don't compete with what's in your glass. The beef croquettes are rich and crisp-edged, the sablefish comes perfectly flaked, and there's a warm chocolate cookie with roasted coconut ice cream that people order even when they're not hungry. Cocktails rotate frequently—recently that's meant things like the Red Door, layered and balanced, and house sodas that actually taste like something. Expect to spend around $15-20 per plate, more if you're chasing BC naturals or grower Champagne.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is where you take someone who actually cares about wine, or when you want a nightcap that involves something more interesting than the usual pours. It's also perfect solo at the bar on a weeknight, especially when the featured cocktails have just turned over.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -29,57 +29,28 @@
     "summary": "OG Toronto natty wine shop + bar; 250+ organic/biodynamic/natural bottles, educational tastings, second location at Waterworks. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "On Dundas West near Trinity Bellwoods, you'll find a storefront that doubles as bottle shop and wine bar—shelves stacked floor-to-ceiling with natural labels you won't see elsewhere in the city. The back opens to a patio with a grape fountain (yes, really), string lights overhead, and the kind of laid-back setup where you can nurse a flight or commit to a full bottle. It's designed thoughtfully enough to register on an architecture radar without feeling precious about it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is a wine bar first, so the food plays supporting role—snacks meant to keep you drinking through a second or third glass. The menu leans into the kind of simple, smart bites that pair well with funky, low-intervention bottles: cheese plates, tinned fish, maybe some house charcuterie. It's not a dinner destination, but the point is the 250+ bottle list of organic, biodynamic, and natural wines that John and the team have curated—stuff you'd struggle to find anywhere else in Ontario.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best for a deliberate weeknight stop when you want to learn something—ask questions, taste through a flight, maybe leave with a bottle you've never heard of. Or hit the patio on a warm evening when you're chasing that loose, European wine bar feeling without the flight to get there.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"The grape witch subscription box is SO GOOD. It brings me so much joy. It’s so fun reading about the wines and trying ones I likely wouldn’t have otherwise. Have found so many new favourites this way. Delivery is super convenient. Everything is perfect. 1000/10.\"\n\n⭐⭐⭐⭐⭐ \"wow. thanks for single-handedly carrying the Ontario natural wine importing game. found my favorite elusive wine producer here by a stroke of luck (I was just visiting Toronto) and I could’ve cried!\n\nthe patio is beautiful but the flights left something to crave. it was ok, i think i just had a weird day (as a big natural wine person!). truly some spectacular selection, great vibes, the food looked nice for snacks - and i especially appreciated the grape fountain. thx for existing!\"\n\n⭐⭐⭐⭐⭐ \"What a delicious natural wine bar. So many options and a diverse price range offers in new comers to natural wine for questions which are happily answered by staff. Upbeat and happy is everyone who is working there, and the front outdoor patio is lovely. Sign their petition on their site so they can open their back one!\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "FEATURED OFFERINGS\n⭐ Weekly Rotating Menu\n   Check out our rotating selection\n• Grower Champagne Guide\n   Educational guide to champagne producers\n\nWINE CLUB\n⭐ 3-Bottle Wine Club\n   New subscription offering\n\nLATEST IMPORTS\n• New Release: Ceramic Wine Glasses\n   Latest import selection",
-        "sections": [
-          {
-            "name": "FEATURED OFFERINGS",
-            "items": [
-              {
-                "name": "Weekly Rotating Menu",
-                "price": "",
-                "description": "Check out our rotating selection",
-                "highlight": true
-              },
-              {
-                "name": "Grower Champagne Guide",
-                "price": "",
-                "description": "Educational guide to champagne producers",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "WINE CLUB",
-            "items": [
-              {
-                "name": "3-Bottle Wine Club",
-                "price": "",
-                "description": "New subscription offering",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "LATEST IMPORTS",
-            "items": [
-              {
-                "name": "New Release: Ceramic Wine Glasses",
-                "price": "",
-                "description": "Latest import selection",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   }

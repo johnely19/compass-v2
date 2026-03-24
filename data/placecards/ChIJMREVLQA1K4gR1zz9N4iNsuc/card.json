@@ -19,6 +19,24 @@
     "summary": "Vinyl-forward bar/cafe/restaurant hybrid—good for a low-key, music-led night.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West in Little Portugal, walking into what feels like someone's extremely well-curated living room if that someone had a serious record collection and a liquor license. Vinyl lines the walls, the sound system is the kind audiophiles actually respect, and there's a patio out front where you can drink Rooms coffee in the afternoon sun. By night, the lights drop low and the whole place shifts—same space, completely different energy.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu skews snacky and shareable, built for a night of vinyl-flipping rather than a formal dinner. Zucchini flowers show up fried and delicate, beef cheek comes slow-braised and rich, and there are oysters if you want something briny with your boulevardier. Most cocktails pour from taps, which means they're consistent and fast, though the bartender will mix you something off-menu if you ask. It's the kind of place where the food is better than it needs to be for a bar, but never so precious that it distracts from the records.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Evening, when you want music to be the main event and dinner to be the excuse. This is for dates where you'd rather listen than talk over bad speakers, or solo nights when you want to sit at the bar with a drink and let someone else DJ.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

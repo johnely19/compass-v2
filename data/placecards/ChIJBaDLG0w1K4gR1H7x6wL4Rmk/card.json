@@ -27,6 +27,24 @@
     "summary": "Pan-Asian cocktails with modern bartending tech. Troy Gilchrist running the show. Bartender Atlas featured. 4.6 rating, 299 reviews.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Ossington's restaurant strip, ducking into what feels like a speakeasy that actually wants you to find it. Inside, dim lighting glows off polished wood and dark walls, with the bar as the clear focal point—this is where Troy Gilchrist and his team, including bartender Atlas, work their modern cocktail tech. It's moody without being precious, designed for watching drinks get built as much as drinking them.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen puts out Pan-Asian bar food that's more than an afterthought—the Beef Rib pulls its weight as an actual reason to visit, not just something to soak up alcohol. You'll find dishes that match the cocktail program's ambition, though desserts like the calamansi tart can lean more stunning than punchy (all meringue drama, muted citrus). This is a cocktail bar first, but one where you can actually eat dinner.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Come for a date when you want conversation lubricated by genuinely interesting drinks—the Seeing Green cocktail's earned its fans—or with a small group who'll appreciate watching the bartenders work. Skip it if you're looking for a quick casual bite; this is for settling in.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

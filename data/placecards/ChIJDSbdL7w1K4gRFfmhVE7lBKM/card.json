@@ -31,34 +31,22 @@
     "summary": "Ramen-focused Toronto spot with strong local following and dependable bowls.",
     "blocks": [
       {
-        "id": "b1",
-        "title": "Map + Practicals",
-        "body": "Start with map and practicals first."
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queen West between University and Spadina, where the street still feels a little gritty around the edges. Inside, it's narrow and functional—blonde wood counters, a few high stools facing the open kitchen, tables packed close enough that you hear conversations bleeding together. The air is thick with pork fat and garlic, steam rising from bowls that arrive in steady succession.",
+        "id": "block-the-space-0"
       },
       {
-        "id": "b2",
-        "title": "Outside",
-        "body": "Streetfront + arrival context."
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is the tonkotsu-focused location—there's a chicken broth sister spot practically next door, so check the signage before you commit. The broth here is milky and rich, the kind that coats your spoon and doesn't apologize for it, built from pork bones simmered until they surrender everything. You'll find the classics: tonkotsu with chashu pork, spicy miso variations, and a spicy vegetarian bowl that draws its own loyal crowd. Bowls run around $15-18, with add-ons like extra noodles or marinated eggs available if you're still hungry.",
+        "id": "block-the-food-1"
       },
       {
-        "id": "b3",
-        "title": "Interior vibe",
-        "body": "Wide room views and atmosphere."
-      },
-      {
-        "id": "b4",
-        "title": "Detailed interior",
-        "body": "Close-up design and counter details."
-      },
-      {
-        "id": "b5",
-        "title": "Food + drinks",
-        "body": "Ramen bowls, sides, and drinks where available."
-      },
-      {
-        "id": "b6",
-        "title": "Check",
-        "body": "Estimated check for two using Toronto tax logic."
+        "type": "prose",
+        "title": "Go When",
+        "body": "This is for those brutal January nights when the wind off Lake Ontario makes your bones ache, or when you need something restorative after a long day and don't want to think too hard about it. Also excellent for a solo counter seat where you can watch the kitchen work and be done in thirty minutes flat.",
+        "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",

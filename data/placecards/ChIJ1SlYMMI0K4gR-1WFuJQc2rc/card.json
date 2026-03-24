@@ -29,6 +29,24 @@
     "summary": "Serious bread bakery; crusty loaves and excellent croissants; also has Riverside location.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're in the heart of Kensington Market, among the vintage shops and produce stalls, where Blackbird's storefront opens onto a small bakery with a glass case full of burnished loaves. Inside, it's tight—a few seats if you're lucky, but most people grab and go. The real show is the bread itself, stacked on shelves behind the counter, and the pastries arranged like they've just been pulled from the oven.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is serious bread—crusty sourdough boules with crackled crusts, the kind you tear into with your hands. The pastries are just as committed: kouign-amann with layers that shatter, buckwheat financiers that taste earthy and buttery at once, croissants that pull apart in honeycomb sheets. There's also a lemon tart that locals return for, sharp and clean. Pastries run $4–7, loaves around $8–12.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Hit it Saturday morning right after opening—you'll get first pick of the pastries and a seat if you want one, then wander Kensington with a coffee in hand. Or stop by midweek to grab a loaf before they sell out.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -29,6 +29,24 @@
     "summary": "OG natural wine bar since 2012, minimalist design, 400+ bottles, 30+ by the glass - the anchor of Toronto's natty wine scene",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Dundas West just east of Trinity Bellwoods, where Little Portugal still feels like itself. Inside, shelves stacked floor-to-ceiling with hundreds of bottles line the exposed brick walls, and the lighting is low enough that you're reading labels by candlelight. It's narrow, minimalist without being cold—a few small tables, a bar where solo drinkers camp out for hours, and that unmistakable hum of people who actually want to be here.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The kitchen runs small, focused, and Italian-leaning—pasta is the anchor. The squash cappelletti shows up golden and glossy, filled with sweet winter squash that doesn't need much beyond butter and sage, while the orecchiette comes generous enough to share, dimpled pasta catching whatever sauce they're running that week. Plates hover around $18-24, sized to leave room for another glass and maybe something else if you're lingering. This isn't a full menu; it's smart eating designed around the wine list, which is the real reason you're here.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Best for a night when you want to drink well without the ceremony—a second or third date, or solo at the bar with a book you won't read. Skip prime weekend hours unless you like waiting; weeknights let you actually talk to the staff about what's open.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -29,52 +29,28 @@
     "summary": "Contemporary izakaya on Baldwin with 4.6 stars, 847 reviews—feels like Tokyo transplant. Open 7 days, late-night hours. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Baldwin, that narrow stretch between Spadina and University where restaurants spill onto the sidewalk half the year. Inside, it's compact—maybe a dozen tables max—with wood slat details and warm lighting that could be lifted from a Shibuya side street. The bar seats are your best bet if you're rolling in without a reservation, tight enough that you'll overhear your neighbor's order and probably want to copy it.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is izakaya cooking done right: fried things with good sauces, rice dishes that anchor a meal of small plates, and pressed sushi that's become their calling card. The karaage comes with an onsen egg sauce that's rich enough to make you slow down, and the wagyu fried rice arrives in portions that could feed two if you weren't already committed to ordering half the menu. The age pan ice cream—fried milk bread with ice cream—is the kind of mashup dessert that sounds gimmicky until it's in front of you. Expect to spend around $50-70 per person with drinks.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "You want the late-night energy without the commute to the suburbs, or you're mapping a Baldwin crawl and need a Tokyo-leaning anchor. Get there early on weekends unless you're prepared to wait—this isn't the kind of small space where hovering feels comfortable.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Great spot for small plates and drinks!\n\nLove the vibes here. It really does remind me of Japanese izakaya. Their pressed sushi is a signature! Dont skip on the karaage cuz the sauce with a onsen egg is bomb!\n\nIt can get busy and its a small place. So go early!\"\n\n⭐⭐⭐⭐⭐ \"Finally tried Yuugi Izakaya and really enjoyed it.\nThe fried dishes were excellent, the wagyu fried rice was generous, and the age pan ice cream was a standout. Great service and a fun spot for comfort food — would come back.\"\n\n⭐⭐⭐⭐⭐ \"Went here on a weekend evening and even though it was busy, the service was amazing. There was a tall Korean server who was incredibly friendly! She greeted us with a smile right when we walked in. We ordered the karaage and she explained what's in the sauce and how to eat it really well. We also had the omurice and it was one of the best Japanese dish I had in Toronto!\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "SUSHI\n⭐ Yuugi Sushi\n   Pressed and torched sushi\n• Ebi Sushi\n   Shrimp sushi\n⭐ Wagyu Sushi\n   Premium wagyu sushi\n\nDRINKS\n⭐ Highball\n   Whiskey + Soda. Classic Japanese izakaya drink",
-        "sections": [
-          {
-            "name": "SUSHI",
-            "items": [
-              {
-                "name": "Yuugi Sushi",
-                "price": "",
-                "description": "Pressed and torched sushi",
-                "highlight": true
-              },
-              {
-                "name": "Ebi Sushi",
-                "price": "",
-                "description": "Shrimp sushi",
-                "highlight": false
-              },
-              {
-                "name": "Wagyu Sushi",
-                "price": "",
-                "description": "Premium wagyu sushi",
-                "highlight": true
-              }
-            ]
-          },
-          {
-            "name": "DRINKS",
-            "items": [
-              {
-                "name": "Highball",
-                "price": "",
-                "description": "Whiskey + Soda. Classic Japanese izakaya drink",
-                "highlight": true
-              }
-            ]
-          }
-        ]
       }
     ]
   }

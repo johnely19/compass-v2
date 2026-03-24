@@ -27,6 +27,24 @@
     "summary": "Hi-fi listening bar + pour-over concept; DJ booth meets coffee bar; flagship opened summer 2024; uses SEY/La Cabra + in-house roast.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on the edge where Baldwin Village blurs into Chinatown, tucked into a narrow storefront that unfolds like a telescope—what looks like a single room keeps going, deeper than you expect. The DJ booth anchors one end, the pour-over station the other, with Nintendo figurines lining shelves above a long communal table that runs the length of the space. It's a hi-fi listening bar that happens to serve exceptional coffee, or maybe the other way around, depending on the time of day.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This is coffee as curation—they're pulling beans from Brooklyn's SEY and Copenhagen's La Cabra alongside their own in-house roast, each one brewed to order behind the bar. The hojicha latte comes silky and toasted, the kind of thing that makes you rethink what a latte can be, while the straight espresso pours show off the precision you'd expect from baristas who treat extraction times like gospel. Drinks run $5-8, which feels right for coffee this considered.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Early morning when most of the city's still figuring itself out and you can actually hear the records spinning, or late afternoon when you need somewhere to disappear into a book without feeling rushed. It's the rare coffee shop that opens early and stays interesting past 10am.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

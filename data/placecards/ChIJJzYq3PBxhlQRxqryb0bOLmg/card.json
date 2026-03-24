@@ -29,6 +29,24 @@
     "summary": "'The Hi-Fi Wine Bar At The End Of The World.' All vinyl, all the time. Natural wine, cocktails, tasty food. Union Street in Strathcona. Happy hour 5-6 & 10-11. The record-flipping + natty wine combo is peak John. Worth a deliberate stop for John’s design/architecture/art/food radar.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You'll find Bar Gobo on Union Street in Strathcona, tucked into the kind of block where industrial buildings are slowly becoming interesting. Inside, it's small—maybe a dozen seats at most—with a turntable spinning vinyl all night and natural light that gives way to warm, low bulbs after dark. The space feels more like someone's obsessively curated living room than a wine bar, all deliberate lines and carefully chosen surfaces.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu is short and shifts, but the kitchen knows what it's doing with texture and richness. That steak and gnocchi everyone mentions? Melt-in-your-mouth tender, the kind of cooking that makes you order a second glass of whatever natural wine they've poured you. The house-made focaccia shows up in reviews for a reason—it's the kind of bread you tear apart while the record flips. Expect small plates that work with wine, nothing fussy, everything considered.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Hit the 5-6pm or 10-11pm happy hour if you want to feel like you've cracked the code, or come solo on a weeknight when you want vinyl, natural wine, and no one asking you questions. It's the rare spot that works for a date or for sitting at the bar alone with a book.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

@@ -28,6 +28,24 @@
     "summary": "Diamond Schmitt adaptive reuse of heritage industrial kilns—sustainability showcase. Saturday farmers market, ravine trails, great photography spot.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're deep in the Don Valley ravine, where Diamond Schmitt turned century-old brick kilns into arched cathedral spaces with steel beams overhead and polished concrete underfoot. The heritage industrial bones—massive arched doorways, original kiln structures, exposed brick walls—frame floor-to-ceiling windows that look straight into the forest. It feels less like a renovated building and more like architecture that grew around the ruins.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "This isn't a restaurant—it's a working sustainability hub with a café and Saturday farmers market where you're buying direct from Ontario growers. The café serves the kind of counter-service fare you'd expect at a community space: soups, sandwiches, pastries that lean local and seasonal without making a fuss about it. The real food moment is Saturday mornings from spring through fall, when vendors set up with just-picked vegetables, heritage apples, sourdough still warm, honey in jars with handwritten labels.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Saturday morning for the market, then stay to walk the ravine trails before the city wakes up properly. Or any weekday afternoon when you need to shoot the architecture in good light and remember that Toronto has actual wilderness inside its borders.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",

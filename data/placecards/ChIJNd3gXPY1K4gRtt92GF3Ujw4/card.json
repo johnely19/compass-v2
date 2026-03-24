@@ -28,151 +28,28 @@
     "summary": "Just opened inside historic Gladstone House, reviving the legendary Melody Bar space. Monthly Dinner & Drag with Tynomi Banks, rotating live shows. Soulful retro-inspired restaurant + music venue. 4.6★ (32 reviews — brand new).",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "You're on Queen West at Gladstone, inside the Victorian-era hotel where the Melody Bar used to pack in crowds decades ago. Walk into a room that leans into the cassette-tape nostalgia without overdoing it—velvet banquettes, warm Edison bulbs, a stage that hosts rotating live music and monthly drag shows. It feels like a lounge that actually wants you to stay past dinner.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Food",
+        "body": "The menu skews retro comfort with a few sharp pivots—think corn ribs that guests can't stop talking about, cocktails with names like Kiss Cam and Extra Dirty Martini that taste as good as they sound cheeky. This isn't fine dining; it's soulful, shareable plates designed to complement the music and the scene. Expect mains and shareables that won't wreck your budget, priced to keep you ordering another round.",
+        "id": "block-the-food-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Book the monthly Dinner & Drag with Tynomi Banks if you want a full night out, or slip in on a weeknight when live music's on and you can snag a banquette without a wait. It's the kind of place that rewards repeat visits—once to scope it, twice to settle in.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
         "body": "⭐⭐⭐⭐⭐ \"Cassette is quickly becoming my number one restaurant. This was already my second visit, and I loved it just as much as the first. The interior and overall vibe are amazing, and even the music was perfect.\n\nI especially loved the cocktail menu — the names are adorable and the drinks taste great. My top recommendations are the Extra Dirty Martini and the Kiss Cam.\n\nA huge thank-you to Alex, the manager, for taking such good care of our table. It made the whole experience even better. I’ll definitely be coming back again!\"\n\n⭐⭐⭐⭐⭐ \"I went to the Tynomi Banks Drag Show and she was honestly the funniest! Would definitely come back for another show.\nService, food, and drinks were also great, specially the corn ribs, they’re insane!!!\"\n\n⭐⭐⭐⭐ \"Love the vibe here. I visited during the Saturday sound sommelier. The throwback music set a perfect ambiance. It was loud enough to enjoy but not so loud that you can’t have a conversation. I only had drinks and I wasn’t a huge fan of their house cocktail menu, but there’s always the option to order a classic. I’ll definitely be back and maybe try the food as well.\""
-      },
-      {
-        "id": "block-menu",
-        "type": "menu",
-        "title": "The Menu",
-        "body": "SHAREABLES\n• Mezze Dip\n• Tuna Tartare\n⭐ Cassette Chicken Tenders\n   cornflake crust, served with choice of sauce\n• Corn Ribs\n   tajin butter, lime (v)\n⭐ Gochujang Wings\n   gochujang-hoisin glaze, kewpie mayo, sesame seeds, scallions\n• Lamb Sliders\n   lamb kofta, sumac salad, cucumber, tzatziki\n\nSOUP & SALAD\n• Minestrone Soup\n   mirepoix, chickpea, potato, ditalini, fried rosemary (vg)\n• Cassette Greens\n   mixed greens, herbs, crispy shallot, cider vinaigrette\n• Caesar\n   romaine, creamy caesar dressing, smoked bacon, parmesan, lemon\n\nHANDHELDS\n• Turkey Sandwich\n• Gladstone Burger\n• Nashville Hot Chicken\n\nSIGNATURES\n⭐ Steak Frites\n   10oz striploin, fries with garlic aioli\n• Pan Seared Trout\n   arugula & fennel slaw, citrus, herb oil (df)\n• Spiced Cauli Steak\n   roasted cauliflower purée, pickled onion, chickpea gremolata, herbs (vg)\n\nDESSERT\n• Pie of the Day\n   rotating feature, ask your server for today's flavour\n• Budino\n• Panna Cotta\n   mango, passion fruit, nut crumble (vg)",
-        "sections": [
-          {
-            "name": "SHAREABLES",
-            "items": [
-              {
-                "name": "Mezze Dip",
-                "price": "",
-                "description": "",
-                "highlight": false
-              },
-              {
-                "name": "Tuna Tartare",
-                "price": "",
-                "description": "",
-                "highlight": false
-              },
-              {
-                "name": "Cassette Chicken Tenders",
-                "price": "",
-                "description": "cornflake crust, served with choice of sauce",
-                "highlight": true
-              },
-              {
-                "name": "Corn Ribs",
-                "price": "",
-                "description": "tajin butter, lime (v)",
-                "highlight": false
-              },
-              {
-                "name": "Gochujang Wings",
-                "price": "",
-                "description": "gochujang-hoisin glaze, kewpie mayo, sesame seeds, scallions",
-                "highlight": true
-              },
-              {
-                "name": "Lamb Sliders",
-                "price": "",
-                "description": "lamb kofta, sumac salad, cucumber, tzatziki",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "SOUP & SALAD",
-            "items": [
-              {
-                "name": "Minestrone Soup",
-                "price": "",
-                "description": "mirepoix, chickpea, potato, ditalini, fried rosemary (vg)",
-                "highlight": false
-              },
-              {
-                "name": "Cassette Greens",
-                "price": "",
-                "description": "mixed greens, herbs, crispy shallot, cider vinaigrette",
-                "highlight": false
-              },
-              {
-                "name": "Caesar",
-                "price": "",
-                "description": "romaine, creamy caesar dressing, smoked bacon, parmesan, lemon",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "HANDHELDS",
-            "items": [
-              {
-                "name": "Turkey Sandwich",
-                "price": "",
-                "description": "",
-                "highlight": false
-              },
-              {
-                "name": "Gladstone Burger",
-                "price": "",
-                "description": "",
-                "highlight": false
-              },
-              {
-                "name": "Nashville Hot Chicken",
-                "price": "",
-                "description": "",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "SIGNATURES",
-            "items": [
-              {
-                "name": "Steak Frites",
-                "price": "",
-                "description": "10oz striploin, fries with garlic aioli",
-                "highlight": true
-              },
-              {
-                "name": "Pan Seared Trout",
-                "price": "",
-                "description": "arugula & fennel slaw, citrus, herb oil (df)",
-                "highlight": false
-              },
-              {
-                "name": "Spiced Cauli Steak",
-                "price": "",
-                "description": "roasted cauliflower purée, pickled onion, chickpea gremolata, herbs (vg)",
-                "highlight": false
-              }
-            ]
-          },
-          {
-            "name": "DESSERT",
-            "items": [
-              {
-                "name": "Pie of the Day",
-                "price": "",
-                "description": "rotating feature, ask your server for today's flavour",
-                "highlight": false
-              },
-              {
-                "name": "Budino",
-                "price": "",
-                "description": "",
-                "highlight": false
-              },
-              {
-                "name": "Panna Cotta",
-                "price": "",
-                "description": "mango, passion fruit, nut crumble (vg)",
-                "highlight": false
-              }
-            ]
-          }
-        ]
       }
     ]
   }

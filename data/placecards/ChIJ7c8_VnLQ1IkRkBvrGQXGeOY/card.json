@@ -29,6 +29,24 @@
     "summary": "Free ‘Porcelain Narratives’ (Feb 28–Mar 23, 2026) — porcelain installations (cobalt/gold lustre) on memory/transformation.",
     "blocks": [
       {
+        "type": "prose",
+        "title": "The Space",
+        "body": "Tucked into Cedar Ridge Park in Scarborough, this city-run arts centre sits in a low-slung building surrounded by green space and parking lot. Inside, you'll find creaky wood floors, gallery walls that rotate monthly, and a separate clay studio where pottery wheels line the benches. The rooms run warm—windows don't always open far enough—but light pours in across whatever installation is up.",
+        "id": "block-the-space-0"
+      },
+      {
+        "type": "prose",
+        "title": "The Work",
+        "body": "This isn't a restaurant—it's a working creative centre offering drop-in pottery, sculpture workshops, and rotating exhibitions you can see for free. Through late March 2026, 'Porcelain Narratives' fills the gallery: translucent porcelain installations traced with cobalt blue and gold lustre, exploring memory and transformation in clay. The real draw is the programming—adult and kids' classes run year-round through Parks & Rec, taught by working artists who've kept regulars coming back for over a decade.",
+        "id": "block-the-work-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Stop by on a weekend afternoon to catch the current exhibition, or book yourself into an evening pottery class when you need your hands in clay and your head out of your phone. It's also surprisingly good for small private events—70 people max, creaky floors and all.",
+        "id": "block-go-when-2"
+      },
+      {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
