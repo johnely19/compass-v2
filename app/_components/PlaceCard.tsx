@@ -12,7 +12,10 @@ interface PlaceCardProps {
 }
 
 export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardProps) {
-  const { id, place_id, name, type, rating, heroImage } = discovery;
+  const { id, place_id, name, type, heroImage } = discovery;
+  // Ensure rating is a number (V1 data may have strings like "4.5")
+  const rating = discovery.rating != null ? Number(discovery.rating) : null;
+  const safeRating = rating != null && !isNaN(rating) ? rating : null;
 
   // Generate fallback gradient based on type
   const gradientStyle = {
@@ -37,14 +40,14 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
           <h3 className="place-card-name">{name}</h3>
           <TypeBadge type={type} size="sm" />
         </div>
-        {rating != null && (
+        {safeRating != null && (
           <div className="place-card-rating">
             {Array.from({ length: 5 }, (_, i) => (
-              <span key={i} className={i < Math.floor(rating) ? 'star-filled' : 'star-empty'}>
+              <span key={i} className={i < Math.floor(safeRating) ? 'star-filled' : 'star-empty'}>
                 ★
               </span>
             ))}
-            <span className="rating-value">{rating.toFixed(1)}</span>
+            <span className="rating-value">{safeRating.toFixed(1)}</span>
           </div>
         )}
       </div>

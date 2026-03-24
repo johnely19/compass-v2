@@ -154,6 +154,7 @@ export async function getUserDiscoveries(userId: string): Promise<UserDiscoverie
     type: (d.type as string) && VALID_DISCOVERY_TYPES.has(d.type as string)
       ? d.type
       : inferTypeFromName(d.name as string),
+    rating: d.rating != null ? Number(d.rating) || undefined : undefined,
     contextKey: normalizeContextKey(d.contextKey as string),
     discoveredAt: (d.discoveredAt as string) || new Date().toISOString(),
     placeIdStatus: (d.placeIdStatus as string) || (d.place_id ? 'verified' : 'missing'),
