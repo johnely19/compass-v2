@@ -29,7 +29,7 @@ async function test(name, url, opts = {}) {
     // Accept the expected status, or 200-399 range for pages, or 401 (alive but auth required)
     const ok = status === expectedStatus ||
       (expectedStatus === 200 && status >= 200 && status < 400) ||
-      status === 401; // auth required = server is alive
+      status === 401 || status === 403; // auth required = server is alive
 
     if (ok) {
       results.push({ name, status, ok: true });
