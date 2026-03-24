@@ -5,14 +5,25 @@ import { useState, useEffect, useCallback } from 'react';
 /* ---- Types ---- */
 
 interface AgentInfo {
+  id: string;
   name: string;
+  role: string;
   status: 'active' | 'idle' | 'dormant';
-  lastActivity: string | null;
+  lastActivity: string | number | null;
   model: string | null;
   tokenUsage: { input: number; output: number } | null;
-  sessionCount?: number;
-  totalTokens?: number;
-  contextTokens?: number;
+  sessionCount: number;
+  totalTokens: number;
+  contextTokens: number;
+}
+
+interface AgentHealthStats {
+  totalAgents: number;
+  activeAgents: number;
+  placeCards: number;
+  cottages: number;
+  activeTrips: number;
+  totalTokens24h: number;
 }
 
 interface CronJob {
@@ -129,6 +140,7 @@ function Section({ title, emoji, defaultOpen = true, count, children }: {
 
 export default function AdminClient() {
   const [agents, setAgents] = useState<AgentInfo[]>([]);
+  const [stats, setStats] = useState<AgentHealthStats | null>(null);
   const [crons, setCrons] = useState<CronJob[]>([]);
   const [tokenData, setTokenData] = useState<TokenData | null>(null);
   const [users, setUsers] = useState<UserWithData[]>([]);
@@ -143,7 +155,11 @@ export default function AdminClient() {
         fetch('/api/admin/tokens'),
         fetch('/api/admin/users'),
       ]);
-      if (agentsRes.ok) setAgents((await agentsRes.json()).agents || []);
+      if (agentsRes.ok) {
+        const data = await agentsRes.json();
+        setAgents(data.agents || []);
+        setStats(data.stats || null);
+      }
       if (cronsRes.ok) setCrons((await cronsRes.json()).jobs || []);
       if (tokensRes.ok) setTokenData(await tokensRes.json());
       if (usersRes.ok) setUsers((await usersRes.json()).users || []);
@@ -170,9 +186,9 @@ export default function AdminClient() {
   }
 
   const sortedAgents = [...agents].sort((a, b) =>
-    (AGENT_ORDER[a.name] ?? 99) - (AGENT_ORDER[b.name] ?? 99)
+    (AGENT_ORDER[a.id || a.name] ?? 99) - (AGENT_ORDER[b.id || b.name] ?? 99)
   );
-  const coreAgents = sortedAgents.filter(a => ['main', 'devclaw', 'disco'].includes(a.name));
+  const coreAgents = sortedAgents.filter(a => ['main', 'devclaw', 'disco'].includes(a.id || a.name));
   const activeCount = agents.filter(a => a.status === 'active').length;
   const enabledCrons = crons.filter(j => j.enabled !== false);
   const healthIcon = (s: string) => s === 'healthy' ? '🟢' : s === 'missed' || s === 'warning' ? '🟡' : s === 'error' ? '🔴' : '⚪';
@@ -187,40 +203,55 @@ export default function AdminClient() {
       </div>
 
       {/* ---- Agent Health ---- */}
-      <Section title="Agent Health" emoji="🤖" count={activeCount}>
+      <Section title="Agent Health" emoji="🤖">
+        {/* Stats row */}
+        {stats && (
+          <div className="health-stats">
+            <div className="health-stat-card"><strong>{stats.totalAgents}</strong><span>Agents</span></div>
+            <div className="health-stat-card"><strong>{stats.activeAgents}</strong><span>Active</span></div>
+            <div className="health-stat-card"><strong>{stats.placeCards}</strong><span>Place Cards</span></div>
+            <div className="health-stat-card"><strong>{stats.cottages}</strong><span>Cottages</span></div>
+            <div className="health-stat-card"><strong>{stats.activeTrips}</strong><span>Trips</span></div>
+            <div className="health-stat-card"><strong>{formatTokens(tokenData?.total24h ?? stats.totalTokens24h)}</strong><span>Tokens (24h)</span></div>
+          </div>
+        )}
+
+        {/* Agent cards */}
         <div className="health-grid">
           {(coreAgents.length > 0 ? coreAgents : sortedAgents).map(agent => {
-            const pressure = agent.contextTokens && agent.contextTokens > 0
-              ? ((agent.totalTokens ?? 0) / agent.contextTokens) * 100 : 0;
+            const agentId = agent.id || agent.name;
+            const pressure = agent.contextTokens > 0
+              ? (agent.totalTokens / agent.contextTokens) * 100 : 0;
             return (
-              <div key={agent.name} className="health-card">
+              <div key={agentId} className="health-card">
                 <div className="health-card-header">
                   <div>
-                    <div className="health-agent-name">{AGENT_NAMES[agent.name] || agent.name}</div>
-                    <div className="health-agent-role">{AGENT_ROLES[agent.name] || ''}</div>
+                    <div className="health-agent-name">{AGENT_NAMES[agentId] || agentId}</div>
+                    <div className="health-agent-role">{AGENT_ROLES[agentId] || agent.role}</div>
                   </div>
                   <span className={`health-status-badge health-status-${agent.status}`}>
                     {agent.status}
                   </span>
                 </div>
-                <div className="health-card-meta">
+                <div className="health-card-meta" style={{ display: 'flex', justifyContent: 'space-between' }}>
                   <span className="health-model">{shortModel(agent.model)}</span>
-                  <span style={{ marginLeft: 'auto' }}>{formatRelativeTime(agent.lastActivity)}</span>
+                  <span>{formatRelativeTime(agent.lastActivity)}</span>
                 </div>
-                {pressure > 0 && (
-                  <div className="health-pressure-bar">
-                    <div className="health-pressure-label">
-                      <span>Context</span>
-                      <span>{Math.round(pressure)}%</span>
-                    </div>
-                    <div className="health-pressure-track">
-                      <div className="health-pressure-fill" style={{
-                        width: `${Math.min(pressure, 100)}%`,
-                        background: pressure > 80 ? '#f44336' : pressure > 50 ? '#FF9800' : '#4CAF50',
-                      }} />
-                    </div>
+                <div className="health-card-stats">
+                  {agent.sessionCount} session{agent.sessionCount !== 1 ? 's' : ''} (24h)
+                </div>
+                <div className="health-pressure-bar">
+                  <div className="health-pressure-label">
+                    <span>Context</span>
+                    <span>{Math.round(pressure)}%</span>
                   </div>
-                )}
+                  <div className="health-pressure-track">
+                    <div className="health-pressure-fill" style={{
+                      width: `${Math.min(Math.max(pressure, 1), 100)}%`,
+                      background: pressure > 80 ? '#f44336' : pressure > 50 ? '#FF9800' : '#4CAF50',
+                    }} />
+                  </div>
+                </div>
               </div>
             );
           })}

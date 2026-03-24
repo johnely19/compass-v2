@@ -2597,6 +2597,50 @@ body {
    Admin V2 — Ported from V1 health/cron/token styles (#52)
    ============================================================ */
 
+/* Agent health stats row */
+.health-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .health-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.health-stat-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm) var(--space-md);
+  text-align: center;
+}
+
+.health-stat-card strong {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.3;
+}
+
+.health-stat-card span {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Agent health card stats */
+.health-card-stats {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
 /* Agent health cards */
 .health-grid {
   display: grid;
