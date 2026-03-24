@@ -6,21 +6,7 @@
     "name": "Les Faux Bourgeois",
     "city": "Vancouver",
     "address": "East Vancouver",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 5:30 – 11:00 PM",
-      "Tuesday: 5:30 – 11:00 PM",
-      "Wednesday: 5:30 – 11:00 PM",
-      "Thursday: 5:30 – 11:00 PM",
-      "Friday: 5:30 – 11:00 PM",
-      "Saturday: 5:30 – 11:00 PM",
-      "Sunday: 5:00 – 11:00 PM"
-    ],
-    "rating": 4.6,
-    "review_count": 1713,
-    "price_level": 3,
-    "phone": "(604) 873-9733",
-    "website": "http://www.lesfauxbourgeois.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "reddit.com",
@@ -28,6 +14,13 @@
   },
   "narrative": {
     "summary": "Classic French bistro beloved by locals. Reddit's 'real gem' pick for French in Vancouver. Wine bar + bistro + cocktails. 4.6 rating. Exactly John's French bistro pattern — intimate, unfussy, wine-forward. Worth a deliberate stop for John’s design/architecture/art/food radar.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Les Faux Bourgeois is a fabulous French restaurant with a reasonable price tag.\nWe came here for dinner and were impressed with the food and service.\nWe ordered the escargot, the steak frites, the cabillaud (a dish with several kinds of seafood) and a crème brûlée for dessert. Everything was delicious…special kudos to the chef for cooking the fish perfectly. Our waiter was pleasant and attentive.\nCan’t wait to come back again.\"\n\n⭐⭐⭐⭐⭐ \"Les Faux Bourgeois feels like a classic neighborhood French bistro done properly. The atmosphere is warm and intimate, with a cozy charm that makes it ideal for a relaxed dinner where you can actually enjoy conversation without feeling rushed.\n\nThe food is rich, comforting, and confidently traditional. Dishes are well executed, portions are satisfying, and flavors feel deep and familiar in the best way. Nothing feels overly modernized or fussy. It’s clear the focus is on classic technique and consistency rather than trends. Service is friendly and attentive, adding to the overall welcoming feel.\"\n\n⭐⭐⭐⭐ \"A great spot for a special dinner or date night. The steak frites were the star of dinner. Perfectly cooked steak that almost melts in your mouth, paired with crispy, well-seasoned fries and an excellent sauce. The squid appetizer was alright, and the dessert slice was a bit thin but was tart and refreshing. Excellent service and a tasteful atmosphere.\""
+      }
+    ]
   }
 }

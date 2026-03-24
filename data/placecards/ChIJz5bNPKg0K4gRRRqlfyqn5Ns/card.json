@@ -6,26 +6,20 @@
     "name": "Hollace Cluny",
     "city": "Toronto",
     "address": "Annex/Davenport",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 9:00 AM – 5:00 PM",
-      "Tuesday: 9:00 AM – 5:00 PM",
-      "Wednesday: 9:00 AM – 5:00 PM",
-      "Thursday: 9:00 AM – 5:00 PM",
-      "Friday: 9:00 AM – 5:00 PM",
-      "Saturday: Closed",
-      "Sunday: Closed"
-    ],
-    "rating": 5,
-    "review_count": 7,
-    "phone": "(416) 968-7894",
-    "website": "http://hollacecluny.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via designlinesmagazine.com"
   },
   "narrative": {
     "summary": "De La Espada and Carl Hansen - studio-created works and limited editions, 5-star rating",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"We love Hollace Cluny!!  Not only do they offer the finest products and brands, their service is exceptional.  Alistair and team are client focused making our ordering process seamless and smooth.  We are looking forward to sourcing from them again soon for our upcoming projects at Sheree Stuart Design!\"\n\n⭐⭐⭐⭐⭐ \"Working with Hollace Cluny has always been an absolute pleasure.  Our sales rep, Alistair Connor, is so knowledgeable on all of their products and one of the nicest people we’ve ever met.  We can always count on Hollace Cluny to supply goods of the utmost quality.  We look forward to working with Hollace Cluny for many years to come\""
+      }
+    ]
   }
 }

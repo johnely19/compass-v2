@@ -6,20 +6,7 @@
     "name": "Sambal | Modern Indonesian Bistro",
     "city": "Toronto",
     "address": "Danforth (463 Danforth Ave)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
-    ],
-    "rating": 4.7,
-    "review_count": 205,
-    "phone": "(416) 523-3252",
-    "website": "http://www.sambal.to/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.toronto.com/things-to-do/food-and-drink/toronto-chefs-favorite-restaurants-2026-guide/",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Modern Indonesian bistro; 4.7 rating with 202 reviews; chef-recommended—authentic and consistently tasty per local chefs.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Sate Ayam was delicious! The Beef Rendang portion was a bit too small (see the photo below). The Nasi Uduk was good as well. Love love love the chicken and sambal combo! 🫶🏼✨\n\nFor cocktails, we had the Nastar and Jl. Senopati. Both were a little too sweet for my taste and not very strong.\n\nThe desserts were excellent! We tried the Gula Aren panna cotta and the Es Teler Sundae (I think that’s what it’s called), and they were both really enjoyable.\n\nOne small note: the server felt a bit rushed when clearing our table. I was still enjoying the chips and sambal, but she asked to take our plates. She did ask for permission though it felt a bit hurried and caught us off guard, so we said yes. She mentioned the restaurant was fully booked, but it didn’t seem particularly busy at the time.\n\nDespite this, the overall experience was still a solid 4/5 ❤️\"\n\n⭐⭐⭐⭐⭐ \"Flavour profile was absolutely on point - every dish packed depth, spice, and character. The food was super delicious, with a nice variety of heat and seasoning that really stood out. Reservations were easy, and both the servers and chef were incredibly personable - they even came out to chat and shared the backstory behind their mocktail “Happy Soda,” which was a fun touch.\n\nThe only downsides were more operational. The front door kept opening with people coming and going, and in winter that draft really comes through since the curtains don’t stay closed. Also, they automatically added an 18% service charge but didn’t mention it, so we ended up double-tipping. We are going to call to ask for a refund on the extra tip - hopefully they fix that. Otherwise, great food and a memorable experience with genuine hospitality.\n\n[EDIT - Sambal was quick to respond to the double tip issue within 1 day, apologized and fixed it without hassle. Excellent service! Adjusted my rating back to 5 Stars.]\"\n\n⭐⭐⭐⭐⭐ \"We've been here literally ten times now with friends and family and the verdict is always outstanding. My family is from Indonesia and the dishes here are so authentic and full of flavour! Our favourites that we order every single time are the sambal flight, chicken sate, bakso bakar (meatballs), and especially the iga bakar (beef ribs). The ribs are huge, so flavourful and fall off the bone. I also love the ketroprak (salad with peanut sauce, tofu, vermicelli) and nasi uduk (rice and chicken). My dad loves the bakmi ayam (noodles with chicken). The cocktails here are also a huge standout - they incorporate classic cocktails with a bit of Indonesian flavour and they're all good. My husband's favorite is the Senopati (like a Manhattan with Pandan). The Es Teler sundae is a really nice refreshing way to end the meal. Last, but certainly not least, the service is outstanding - they are all so warm, personable and attentive, and the food always comes out hot and fresh. We can't say enough great things about this restaurant and the team behind it!\""
+      }
+    ]
   }
 }

@@ -13,17 +13,7 @@
     "price_level": 3,
     "rating": 4.4,
     "user_rating_count": 3134,
-    "location": "432 Wellington St W, Toronto, ON M5V 1E3, Canada",
-    "hours": [
-      "Monday: 11:30 AM – 10:00 PM",
-      "Tuesday: 11:30 AM – 10:00 PM",
-      "Wednesday: 11:30 AM – 10:00 PM",
-      "Thursday: 11:30 AM – 10:00 PM",
-      "Friday: 11:30 AM – 10:30 PM",
-      "Saturday: 10:30 AM – 10:30 PM",
-      "Sunday: 10:30 AM – 9:30 PM"
-    ],
-    "review_count": 3141
+    "location": "432 Wellington St W, Toronto, ON M5V 1E3, Canada"
   },
   "narrative": {
     "summary": "📍 Le Sélect Bistro\n432 Wellington St W, Toronto, ON M5V 1E3, Canada",
@@ -52,6 +42,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 432 Wellington St W, Toronto, ON M5V 1E3, Canada\n\n• walking: 1 hour 25 mins • 6.2 km\n• transit: 35 mins • 6.7 km\n• driving: 23 mins • 6.4 km (traffic: 17 mins)\n• bicycling: 22 mins • 6.6 km\n\nBest modality: BICYCLING ⭐\nWhy: Fastest available option (22 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐ \"Definitely felt like I was in Paris again. The steak frites were perfect, duck confit juicy and full of flavour. Excellent service. The only thing was, I was very disappointed in the French onion soup. It was bland and flavourless, for the price I expected it to at least be good. The pear tart was also a very strange combination of flavours, maybe too sweet for me? Looking past the 2 appetizers, I had a great meal.\"\n\n⭐⭐⭐⭐ \"Cute place. Reminds me of pastis of NYC although it will never be Pastis. menu is similar to Pastis.  Food was good, we got french onion soup 5/5, escargot 3.5/5, bibb salad 4/5, mussels 5/5/.\n\nService was 2.5/5. Servers were abrupt and not very friendly. They kept coming back every minute asking if were ready to order. Never really gave us time.\n\nAtmosphere is very cute. Music isnt too loud and it isnt too busy.\n\nI would recommend this place on the days that you just want to have a quiet place to dine in.\"\n\n⭐⭐⭐⭐⭐ \"I enjoyed a fabulous dinner at Le Select Bistro the other night to celebrate a friend's birthday. We were seated in the back of the restaurant in a booth that was cozy and intimate.  Our server, Brent, was excellent. He was very knowledgeable, friendly and attentive and made our dinning experience a pleasure.  All the food was exceptional and spot on. They had their own versions of french classic dishes but didn't disappoint!  The atmosphere was great.\nOverall experience was stellar and will be dinning there again.\""
       }
     ]
   },

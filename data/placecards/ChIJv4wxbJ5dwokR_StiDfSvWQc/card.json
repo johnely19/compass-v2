@@ -6,19 +6,7 @@
     "name": "Evil Twin Brewing NYC",
     "city": "NYC",
     "address": "Ridgewood (16-16 George St)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 4:00 – 9:00 PM",
-      "Tuesday: 4:00 – 9:00 PM",
-      "Wednesday: 4:00 – 9:00 PM",
-      "Thursday: 4:00 – 9:00 PM",
-      "Friday: 12:00 PM – 12:00 AM",
-      "Saturday: 12:00 PM – 12:00 AM",
-      "Sunday: 12:00 – 10:00 PM"
-    ],
-    "rating": 4.6,
-    "review_count": 443,
-    "website": "https://eviltwin.nyc/location/ridgewood-taproom/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide",
@@ -26,6 +14,13 @@
   },
   "narrative": {
     "summary": "Danish-founded craft brewery taproom in Ridgewood. Industrial cool space, rotating taps, food-friendly. 4.6★ (443 reviews). A Ridgewood anchor — TimeOut recommends it as part of a food-tour trifecta with Rolo's and Rudy's Bakery.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Amazing craft beer. From hazy IPAs to Sour Ales and Triple IPAs. Chill environment. You can bring your own food. They also sell pizza and most recently a new burger cart. Omg. The most amazing burger I’ve had in a while. Fresh and tasty. The cook is so nice and fun. Great combo: beer & burgers! Fries were also super good.\"\n\n⭐⭐⭐⭐⭐ \"Best brewery experience I’ve had in NYC thus far. The space is open, welcoming, and great music. They feature multiple foeder aged lagers and Lukr faucets which are harder to find in Brooklyn than you might imagine. The staff all seem to have a good time working there which is a good indicator that the place has both good energy and product. I’d recommend to any craft beer folks in the area. I did notice some off flavors in their old world styles but the combined experience made up for it.\"\n\n⭐⭐⭐⭐⭐ \"Great beer in a fun neighborhood where I can actually also park! Nice clean building with outdoor seating in a block I wouldn’t expect it however it did not disappoint. Large beer selection, Claudia’s taco food truck and Doozies pizza as well. Lots happening here. Very chill vibe. Great staff and service! Worth the trip from Manhattan and for ease there is an L train line stop on the corner doesn’t get easier for those who don’t want to drink and drive.\""
+      }
+    ]
   }
 }

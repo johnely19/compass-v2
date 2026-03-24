@@ -10,19 +10,7 @@
     "type": "bar",
     "phone": "(647) 368-3877",
     "website": "https://www.johnnygsrestaurant.ca/contact",
-    "location": "478 Parliament St, Toronto, ON M5A 2L3, Canada",
-    "hours": [
-      "Monday: 7:00 AM – 10:00 PM",
-      "Tuesday: 7:00 AM – 10:00 PM",
-      "Wednesday: 7:00 AM – 10:00 PM",
-      "Thursday: 7:00 AM – 10:00 PM",
-      "Friday: 7:00 AM – 10:00 PM",
-      "Saturday: 7:00 AM – 10:00 PM",
-      "Sunday: 7:00 AM – 10:00 PM"
-    ],
-    "rating": 4.4,
-    "review_count": 1029,
-    "price_level": 1
+    "location": "478 Parliament St, Toronto, ON M5A 2L3, Canada"
   },
   "narrative": {
     "summary": "📍 Johnny G's Restaurant\n478 Parliament St, Toronto, ON M5A 2L3, Canada",
@@ -46,6 +34,12 @@
         "id": "block-4",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 478 Parliament St, Toronto, ON M5A 2L3, Canada\n\n• walking: 54 mins • 4.0 km\n• transit: 23 mins • 4.6 km\n• driving: 12 mins • 4.8 km (traffic: 9 mins)\n• bicycling: 14 mins • 4.3 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (12 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Johnny G’s recently renovated into a classy Jazz restaurant. The atmosphere is very classy and relaxing. I love the new design and dim lighting. The Jazz band is excellent. The band isn’t too loud to still hold a conversation, which is a major plus for me. Rocky is a great host, and Natalie is a very sweet and attentive server.  I had the quinoa salad and a cosmo martini. Very good. Highly recommend the restaurant for a relaxing and good vibes night out.\"\n\n⭐⭐⭐⭐⭐ \"Went to see The Stone’s Trio at Johnny G’s Cafe tonight. Service 10/10, Shawn was a joy to be with and always attentive. Chefs were checking on us and the food ALL THE TIME.\nDefinitely recommend.\nMost of the dishes we had were vegan and they were SO GOOD even my non-vegan friends asked for more.\nOh, and needless to say, The Stone’s Trio were so wholesome too, sad to see they didn’t have that much of an audience, though. Will definitely come back in the future!😊\"\n\n⭐⭐⭐⭐⭐ \"Got the chicken club sandwich and grand slam breakfast was great didn't have room for the sandwiches the grand slam filled me up perfect... guna eat the sandwiches in a bit but foood was good and tasted proper and im a picky eater and usually don't get full but u will after eating here :)\""
       }
     ]
   },

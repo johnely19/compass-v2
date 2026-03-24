@@ -10,18 +10,7 @@
     "type": "restaurant",
     "phone": "(647) 398-9270",
     "website": "https://manita.ca/",
-    "location": "1164 Yonge St, Toronto, ON M4W 2L9, Canada",
-    "hours": [
-      "Monday: 10:00 AM – 10:00 PM",
-      "Tuesday: 10:00 AM – 10:00 PM",
-      "Wednesday: 10:00 AM – 10:00 PM",
-      "Thursday: 10:00 AM – 10:00 PM",
-      "Friday: 10:00 AM – 10:00 PM",
-      "Saturday: 10:00 AM – 10:00 PM",
-      "Sunday: 10:00 AM – 10:00 PM"
-    ],
-    "rating": 4.5,
-    "review_count": 111
+    "location": "1164 Yonge St, Toronto, ON M4W 2L9, Canada"
   },
   "narrative": {
     "summary": "📍 Manita\n1164 Yonge St, Toronto, ON M4W 2L9, Canada",
@@ -45,6 +34,12 @@
         "id": "block-4",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1164 Yonge St, Toronto, ON M4W 2L9, Canada\n\n• walking: 11 mins • 0.9 km\n• transit: 8 mins • 1.0 km\n• driving: 3 mins • 0.9 km (traffic: 2 mins)\n• bicycling: 2 mins • 0.9 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (11 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"A BIG thank you to Manita Rosedale for honouring our reservation (we made a mistake and went to the Rosedale location instead of Ossington). Forgot to get the name of the gentleman who took care of our mix up.\n\nA big thank you to Christian for taking care of us for the early evening dinner.\n\nThe food - absolutely delicious!\nThe drinks - tasty!\n\nFries, Roasted Mushroom and Shrimp a la Plancha to start.\n\nChicken Brochettes, Rainbow Trout and Mediterranean Plate as the mains.\n\nChenin Blanc, Paper Airplane and Old Fashioned were the drinks.\n\nHighly recommend and will come back & also visit the Ossington location!\"\n\n⭐⭐⭐⭐ \"The staff here are so kind and helpful, lovely vibe. Food is fantastic, had a great croque madame that came with a refreshing salad, orange juice was very fresh. But I will say the noise level when we came during brunch hours was almost unbearable, it was so loud. To the point that I could barely hear my friends just on the other side of our small table and I was actually concerned for the health and safety of the staff being expected to work all the hours of that shift without proper ear protection. I would strongly suggest investigating how soundscaping could help reduce noise levels, ie adding soft wall coverings to muffle echoes, etc. Otherwise a very charming brunch restaurant!\"\n\n⭐⭐⭐⭐⭐ \"I was pleasantly surprised to find that the newly opened rosedale version of the ossington staple is every bit as good. I first went for brunch and had an outstanding steak sandwich served with an Au jous and fries. We shared a steak tartar to begin with a salad. Every dish was perfectly balanced, with the right amount of salt, sweetness and freshness. Clearly the team here is doing something right because the restaurant is constantly busy and I understand why. I will be back any time I can get a table! 5 stars.\""
       }
     ]
   },

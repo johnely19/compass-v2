@@ -6,26 +6,20 @@
     "name": "AM Coffee Studio",
     "city": "Toronto",
     "address": "Dundas West/Roncesvalles",
-    "type": "cafe",
-    "hours": [
-      "Monday: 7:00 AM – 7:00 PM",
-      "Tuesday: 7:00 AM – 7:00 PM",
-      "Wednesday: 7:00 AM – 7:00 PM",
-      "Thursday: 7:00 AM – 7:00 PM",
-      "Friday: 7:00 AM – 7:00 PM",
-      "Saturday: 8:00 AM – 5:00 PM",
-      "Sunday: 9:00 AM – 4:00 PM"
-    ],
-    "rating": 4.7,
-    "review_count": 274,
-    "phone": "(416) 588-0531",
-    "website": "http://www.amcoffeestudio.com/"
+    "type": "cafe"
   },
   "discovery": {
     "text": "Discovered via TheBestToronto 2025"
   },
   "narrative": {
     "summary": "Cafe + yoga studio + flower workshop hybrid - quirky concept, quality coffee",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"This is a very cozy and calm cafe. The latte and chia pudding were both delicious and so pretty. I love the calm soul music playing and the meditation area in the back is also quite cool.\"\n\n⭐⭐⭐⭐⭐ \"This is an absolutely beautiful and serene coffee shop just a little bit north of the usual roncesvalles strech. I have visited this coffee shop many times and never had anything but an amazing cup of coffee and attentive, knowledgeable, and friendly service.\n\nOn my last visit, I had a Cortado, which is my usual order here, but have had numerous espresso based drinks and every one of them have been executed perfectly. Although the bean roast is a bit lighter than what I usually prefer, the craftsmanship of the baristas still produce a perfect expresso based drink\n\nThis is not only a must do coffee shop if you are in the Roncesvalles area, but is worth the trip just to experience the great coffee and Serene atmosphere!\"\n\n⭐⭐⭐⭐ \"Several visits to the cafe. Always thought to give their yoga workshops a try but the times… anyway, it’s a laptop friendly cafe with great drink options. Not only coffees, teas and also smoothies. They also have food options and baked goods. Tried their banana walnut muffin… delish!\n\nThe minus one star was because of my most recent visit - one of the staff members continued to cough for several hours without putting on a mask… funnily enough, the staff who wasn’t coughing was wearing one. It made me somewhat nervous so I took off without finishing my second drink.\""
+      }
+    ]
   }
 }

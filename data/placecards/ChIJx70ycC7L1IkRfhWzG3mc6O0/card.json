@@ -13,17 +13,7 @@
     "price_level": 3,
     "rating": 4.6,
     "user_rating_count": 1711,
-    "location": "972 College St, Toronto, ON M6H 1A5, Canada",
-    "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 5:00 – 10:00 PM",
-      "Saturday: 5:00 – 10:00 PM",
-      "Sunday: 5:00 – 9:00 PM"
-    ],
-    "review_count": 1725
+    "location": "972 College St, Toronto, ON M6H 1A5, Canada"
   },
   "narrative": {
     "summary": "📍 Giulietta\n972 College St, Toronto, ON M6H 1A5, Canada",
@@ -52,6 +42,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 972 College St, Toronto, ON M6H 1A5, Canada\n\n• walking: 1 hour 27 mins • 6.4 km\n• transit: 45 mins • 8.1 km\n• driving: 20 mins • 6.7 km (traffic: 15 mins)\n• bicycling: 22 mins • 6.7 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Went here to celebrate my birthday and Giulietta was a pleasant experience and served amazing food.\n\nHad a surprisingly very nice experience sitting at the counter. We originally wanted to sit in standard seating but booked counter because that was all that was available, but ended up being a great choice. Food was amazing, we got the grilled octopus, ravioli,  and cacio e pep. To top it off we got to see the amazing chefs cook and plate all the dishes.\n\nService was excellent, we felt very well taken care of and welcomed. Definitely looking forward to coming back and trying their other dishes.\"\n\n⭐⭐⭐⭐⭐ \"Beef tartare melts in your mouth. It is prepared in a way that is easy to pick up and eat and the truffle flavour is wonderful.\n\nHokkaido scallop crudo is a fresh dish with fresh ingredients but flavour was lacking comparatively.\n\nLa Valentia - Neapolitan crust is excellent and chewy. The sausage packs a punch in terms of heat and salt. It goes well is the tomato sauce and roasted garlic.\n\nSeafood pasta is cooked to al dente. It’s light and full seafood and juicy tomatoes.\n\nRomanesco cauliflower is so unique; it’s green and chopped into tiny florets and roasted with crunchy almond pieces which makes it delightful.\n\nTorta della nonna is like a light butter tart except with honey, pine nuts, and mascarpone cream. I highly recommend it. Tiramisu was nice (and big) but it was no contest against the torta della nonna.\"\n\n⭐⭐⭐⭐⭐ \"We celebrated my wife’s birthday at Giulietta and had an amazing night. The space is cozy but lively, the service was excellent, and everyone was friendly. We reserved bar seats since no tables were available and ended up loving it. Watching the cocktails being made really added to the atmosphere. We ordered the beef tartare, fried olive and sausage ascolana, roasted squash with brown butter and sage, and of course the cacio e pepe. We also added the pan roasted pork chop, which was honestly one of the best things we’ve ever eaten. The photos don’t do this place justice. Everything was delicious and completely worth the hype. This is easily our new favourite Italian spot in the city. Thanks to the team at Giulietta for a wonderful night.\""
       }
     ]
   },

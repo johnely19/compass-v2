@@ -6,20 +6,7 @@
     "name": "OnePound",
     "city": "Toronto",
     "address": "Trinity Bellwoods / Dundas West",
-    "type": "restaurant",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: 9:30 AM – 6:00 PM",
-      "Wednesday: 9:30 AM – 6:00 PM",
-      "Thursday: 9:30 AM – 6:00 PM",
-      "Friday: 9:30 AM – 6:00 PM",
-      "Saturday: 9:30 AM – 6:00 PM",
-      "Sunday: 9:30 AM – 6:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 45,
-    "phone": "(416) 364-5025",
-    "website": "https://www.onepound.ca/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.blogto.com/bakery/one-pound-toronto/",
@@ -27,6 +14,13 @@
   },
   "narrative": {
     "summary": "Korean-style cake café with cloud-like confections; 4.8 rating with early fans. Quiet gem on Dundas W for soft pastry lovers.",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"The Strawberry Matcha Latte was creamy and perfectly sweet, and the Matcha Brownie Basque Cheesecake exceeded my expectations! Must try duo 🍵🍰\n\nThe cafe is simple and cute with soft music playing in the background. There’s also spacious seating, perfect to work/study from.\n\nAlso the owners and staff are incredibly sweet! They added extra seating to accommodate us as the cafe was super busy, and we were very appreciative ❤️ Excited to come back and try other drinks and desserts!\"\n\n⭐⭐⭐⭐ \"Follow @__homekong__ for more ✨\n\nThis is a new café that just opened recently ~\nI love the interior — it really gives you that Korea vibe. Aesthetic, minimalist, and super cozy (but yes… it gets very busy on weekends 😂).\n\nI tried their Earl Grey cake and Matcha Brownie cake.\nBetween the two, I definitely prefer the Matcha Brownie — it has a rich matcha flavour and the dark brownie base balances the sweetness perfectly 🍵🤎\n\nThe Earl Grey cake is good too, but the texture is a bit too moist for my personal taste. The Earl Grey flavour is strong though, so if you love Earl Grey, you’ll probably enjoy it more than I did!\n\nSave this spot for your next cozy café day 🤍\"\n\n⭐⭐⭐⭐⭐ \"There was an unfortunate mix up on dates for our cake order yesterday. The team was beyond kind and sweet in resolving this. They were able to provide us with a christmas cake super last minute which also tasted amazing as usual. We’ve loved their cakes even back when they were operating out of a different location and teaching various cake classes. I can’t recommend and thank them enough for all the kindness. We can’t wait to order more in the future.\""
+      }
+    ]
   }
 }

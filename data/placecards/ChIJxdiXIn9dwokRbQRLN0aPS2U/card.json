@@ -13,8 +13,7 @@
     "price_level": 2,
     "rating": 4.1,
     "user_rating_count": 518,
-    "location": "59-09 71st Ave, Ridgewood, NY 11385, USA",
-    "review_count": 518
+    "location": "59-09 71st Ave, Ridgewood, NY 11385, USA"
   },
   "narrative": {
     "summary": "📍 Cream Ridgewood\n59-09 71st Ave, Ridgewood, NY 11385, USA",
@@ -43,6 +42,12 @@
         "id": "block-5",
         "title": "Travel Intel",
         "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 59-09 71st Ave, Ridgewood, NY 11385, USA\n\n• walking: 2 hours 11 mins • 5.7 mi\n• transit: 52 mins • 7.4 mi\n• driving: 33 mins • 8.5 mi (traffic: 32 mins)\n• bicycling: 42 mins • 6.5 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (33 mins)"
+      },
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I went to this place months ago but yet I cannot seem to get it off of my mind. My associates and I ordered the mocktails to start with and they were nothing short of tasty and delicious. For appetizers we ordered the buffalo wings, barbecue wings and 2 orders of the pull apart bread. The wings were cooked perfectly and were very saucey, the bread was warm and the cheese sauce was to die for. For my meal, I ordered the rasta pasta with shrimp and it was the best decision I mad. all night. It  was very flavorful, very well seasoned, and was a good portion. I was able to take a good amount home for leftovers. I went around the beginning of October and it was decorated to match a Halloween theme. The music was very lively and had a mixture of different song types. I loved coming here and I cannot wait to come back soon. I recommend this place to anyone looking to celebrate a birthday or any kind of celebration. You can amazing food, amazing scenery, and a great time all for a good price. This place was a 10/10.\"\n\n⭐⭐⭐⭐⭐ \"This restaurant is a must visit in the Ridgewood neighborhood, the atmosphere is lively and inviting. Our group was seated in the back in a park bench style table. Waitress was attentive and friendly and offered suggestions since it was our first time. The cheesy pull apart bread is definitely a must try because it is so comforting and delicious. The shrimp tacos are loaded and flavorful. If you’re looking for a fun, chill spot for girls night, this is it. Good music, great drinks and positive vibes all around. Will definitely be returning for many more girls night. Prices are average and not overly priced.\"\n\n⭐⭐⭐⭐ \"I came here for happy hour after seeing it advertised on IG. From the outside I didn’t know what to expect but once we went inside I really like the vibe and ambience. We sat in the back patio area, while I like the idea of the bench seating it was a bit uncomfortable as the uneven flooring means your bench is constantly wobbling which made me a little uneasy.\nOther than that the food and drinks were good they had great happy hour deals I enjoyed everything I had and would come back. I would recommend the Birria empanadas and the buffalo chicken dumplings they were so good\""
       }
     ]
   },

@@ -6,26 +6,20 @@
     "name": "Good Cheese",
     "city": "Toronto",
     "address": "Gerrard East / Leslieville",
-    "type": "bar",
-    "hours": [
-      "Monday: 11:00 AM – 7:00 PM",
-      "Tuesday: 11:00 AM – 7:00 PM",
-      "Wednesday: 11:00 AM – 7:00 PM",
-      "Thursday: 11:00 AM – 7:00 PM",
-      "Friday: 11:00 AM – 7:00 PM",
-      "Saturday: 11:00 AM – 7:00 PM",
-      "Sunday: 11:00 AM – 7:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 277,
-    "phone": "(416) 285-8482",
-    "website": "http://goodcheese.ca/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via yelp.ca"
   },
   "narrative": {
     "summary": "Specialist cheese + natural wine shop. Intimate, curated, serious about product. The kind of place where the person behind the counter knows every wheel. 4.8★ (277 reviews).",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"LOVE the Cheese Club box! Each cheese was unique and flavourful, with complex profiles I hadn’t tried before. I really appreciated the note sharing the background on each one - it made the experience even better. Such a great way to discover new cheeses. It arrived around 7pm the day of delivery, which was perfect.\n\nAnd the olives were amazing (coming from someone who normally despises olives) and loved the surprise tote bag too.\"\n\n⭐⭐⭐⭐⭐ \"I put in a fairly large order online. Got a call shortly after stating some cheese was now sold out but she recommended a great substitute and the I asked her if I was missing anything else and so she recommended more stuff. Next day was sent and following day I received it. I am 4 hours away and everything was fresh and well packaged. Superbe cheese, selection, service and packaging.\"\n\n⭐⭐⭐⭐⭐ \"✨️A Hidden Gem for Cheese & Wine Lovers✨️\n\nGood Cheese is an absolute gem! From the moment I walked in, the two women working that evening made me feel so at home. They were warm, engaging, and incredibly knowledgeable about their selection. Their enthusiasm for cheese (and wine!) was contagious, making the experience even more enjoyable.\n\nThe store itself is beautifully laid out—thoughtfully arranged, inviting, and just a lovely space to browse. But what truly sets Good Cheese apart is that it’s not just a shop; it’s a place to slow down and savor. They don’t just sell wine—they serve it too, so you can sit back, relax, and enjoy a glass from their expertly curated selection.\n\nIf you’re a cheese lover, a wine enthusiast, or just someone who enjoys discovering special little spots, Good Cheese is a must-visit. I’ll definitely be back!\""
+      }
+    ]
   }
 }

@@ -6,25 +6,20 @@
     "name": "Standard Time",
     "city": "Toronto",
     "address": "Geary Ave",
-    "type": "bar",
-    "hours": [
-      "Monday: Closed",
-      "Tuesday: Closed",
-      "Wednesday: Closed",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 PM – 2:30 AM",
-      "Saturday: 3:00 PM – 2:30 AM",
-      "Sunday: 3:00 – 10:00 PM"
-    ],
-    "rating": 4.4,
-    "review_count": 104,
-    "website": "http://www.standardtime.to/"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via reddit.com/r/naturalwine"
   },
   "narrative": {
     "summary": "Second-floor wine bar with DJ nights - the cool Geary corridor play, events-driven",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"Edit 2026: upgrading my review to five stars because they've added extra lighting on the dance floor and improved the back room to add dancing space.\n\nGreat space, great sound, just needs someone working the lights.   I took this photo early in the night before it filled up, but throughout the night they just turned down and then off some of the lights.\n\nThe sound during the warm up was fine but then the headliner came on and then you then heard how much more bass the speakers can put out.\"\n\n⭐⭐⭐⭐ \"I liked the minimalistic vibe and lighting. Good coat check, entry, and bar experience. I agree with other reviewers that the sound system is acceptable — but nothing special. My gripe is that there is no quiet place to wind down. The seating area away from the dance floor is just as loud. Imagine how much better this place would be if it had a chill area where you could escape the relentless undst-undst-undst of the dance floor and reconnect with your friends.\"\n\n⭐⭐⭐⭐⭐ \"Had an amazing time at this club! The lights are awesome, the sound was awesome and DJ Benski was incredible and kept the good vibes going all night!\""
+      }
+    ]
   }
 }

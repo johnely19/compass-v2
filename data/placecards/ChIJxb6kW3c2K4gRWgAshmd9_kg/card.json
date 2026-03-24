@@ -6,21 +6,7 @@
     "name": "Cheese Boutique",
     "city": "Toronto",
     "address": "South Etobicoke (45 Ripley Ave)",
-    "type": "restaurant",
-    "hours": [
-      "Monday: 9:00 AM – 6:00 PM",
-      "Tuesday: 9:00 AM – 6:00 PM",
-      "Wednesday: 9:00 AM – 6:00 PM",
-      "Thursday: 9:00 AM – 6:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
-    ],
-    "rating": 4.8,
-    "review_count": 2713,
-    "price_level": 3,
-    "phone": "(416) 762-6292",
-    "website": "https://www.cheeseboutique.com/"
+    "type": "restaurant"
   },
   "discovery": {
     "text": "Discovered via https://www.reddit.com/r/askTO/comments/1czyccu/best_high_end_grocery_stores_in_toronto/",
@@ -28,6 +14,13 @@
   },
   "narrative": {
     "summary": "Toronto's legendary cheese & gourmet destination. 4.8★ (2708 reviews). Best-in-city cheese selection, premium meats, fish, and specialty items. The Bottega next door adds bakery/café. Small Talk jazz bar does a Cheese Boutique collab menu. Worth the trip from midtown. $$$",
-    "blocks": []
+    "blocks": [
+      {
+        "id": "block-vibe",
+        "type": "vibe",
+        "title": "The Vibe",
+        "body": "⭐⭐⭐⭐⭐ \"I love the Cheese Boutique! A fourth generation, family owned business. From the real bay leaf trees (indoors) at the entrance to the extra fine balsamic vinegars, this store has it all. So many cheeses to choose from and the staff are super helpful. I love that tasting is encouraged. I was able to find the Wensleydale and Stiltons I couldn't find elsewhere. Take a tour of the cool cheese cave.  They have a full service aged meat section too.  So many lovely treats to take home from fresh fruits and veggies to prepared dishes.  Christmas week is super busy but so well organized.  The hustle and bustle was an energizing experience.  I keep returning again and again.\"\n\n⭐⭐⭐⭐⭐ \"We did an industry tour of the cheese boutique and it was all 5 star service, from products to the explanation of thier products is top notch.  Theu have a bodega down the street and they serve a plethora of baked goods. I had the pastichio tiramisu and it was delicious! They also sell meats which was a great supirse!!\"\n\n⭐⭐⭐⭐⭐ \"I have never had such a pleasant shopping experience! This business model👍🫶🏻👍 My first visit ever - not sure why it took so long! Traffic was crazy - efficiently & pleasantly handled!!! OMG where do I start - cart jovially passed to me and basket put on by a lovely kind smiling lady!!! Too many things in my basket (had no idea of the plethora of products available!) - a jocular young (41- he sang) man reorganized my cart on a whim to facilitate adding more goods! Every turn was met with a smiling face and offer of assistance (but not at all in your face!) Store was full - EVERYONE - workers & shoppers alike were blissful - moving & chatting merrily! Cashier was über efficient yet also soooo friendly! I don’t know if this was a Christmas miracle or simply life the way it should be led but I just can’t stop reminiscing about this « shopping experience!! » I heard someone praising the resident « Cheese Guru » about his Insta posts & reels so I immediately gave a follow and was not disappointed!! Thank you all @cheese_boutique - never underestimate the impact you have on improving someone’s day❣️🎄⛄️❣️\""
+      }
+    ]
   }
 }
