@@ -61,7 +61,7 @@ export default function PlaceGrid({
       const state = d.place_id
         ? getTriageState(userId, contextKey, d.place_id)
         : 'unreviewed';
-      return state !== 'dismissed';
+      return state === 'unreviewed' || state === 'resurfaced';
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [discoveries, userId, contextKey, triageVersion]);
