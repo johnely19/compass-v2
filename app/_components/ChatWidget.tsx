@@ -1,7 +1,35 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useMemo } from 'react';
 import type { ChatMessage } from '../_lib/types';
+
+/**
+ * Lightweight markdown→HTML for chat messages.
+ * Handles: links, bold, italic, inline code, line breaks.
+ */
+function renderMarkdown(text: string): string {
+  let html = text
+    // Escape HTML
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    // Links: [text](url)
+    .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    // Bare URLs
+    .replace(/(^|[\s(])(https?:\/\/[^\s)<]+)/g, '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>')
+    // Bold: **text** or __text__
+    .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+    .replace(/__([^_]+)__/g, '<strong>$1</strong>')
+    // Italic: *text* or _text_
+    .replace(/\*([^*]+)\*/g, '<em>$1</em>')
+    .replace(/_([^_]+)_/g, '<em>$1</em>')
+    // Inline code: `text`
+    .replace(/`([^`]+)`/g, '<code>$1</code>')
+    // Line breaks
+    .replace(/\n/g, '<br/>');
+
+  return html;
+}
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
@@ -129,7 +157,14 @@ export default function ChatWidget() {
                 key={i}
                 className={`chat-message chat-message-${msg.role}`}
               >
-                <div className="chat-message-content">{msg.content}</div>
+                {msg.role === 'assistant' ? (
+                  <div
+                    className="chat-message-content"
+                    dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.content) }}
+                  />
+                ) : (
+                  <div className="chat-message-content">{msg.content}</div>
+                )}
               </div>
             ))}
 
