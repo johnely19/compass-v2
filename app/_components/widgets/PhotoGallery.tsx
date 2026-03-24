@@ -1,5 +1,13 @@
 import type { PlaceCardImage } from '../../_lib/types';
 
+const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
+
+function resolveUrl(path: string): string {
+  if (path.startsWith('http')) return path;
+  if (path.startsWith('/') && BLOB_BASE) return `${BLOB_BASE}${path}`;
+  return path;
+}
+
 interface PhotoGalleryProps {
   images: PlaceCardImage[];
 }
@@ -13,7 +21,7 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
       <div className="photo-gallery">
         {images.map((img, i) => (
           <div key={i} className="photo-gallery-item">
-            <img src={img.path} alt={img.category} className="photo-gallery-img" />
+            <img src={resolveUrl(img.path)} alt={img.category} className="photo-gallery-img" />
             {img.category && (
               <span className="photo-gallery-label">{img.category}</span>
             )}

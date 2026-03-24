@@ -46,7 +46,11 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
   const widgets = TYPE_WIDGETS[card.type] || DEFAULT_WIDGETS;
 
   const data = card.data ?? { description: '', highlights: [], images: [] };
-  const heroImage = data.images?.[0]?.path;
+  const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
+  const rawHero = data.images?.[0]?.path;
+  const heroImage = rawHero
+    ? (rawHero.startsWith('http') ? rawHero : (rawHero.startsWith('/') && BLOB_BASE ? `${BLOB_BASE}${rawHero}` : rawHero))
+    : null;
   const googleMapsUrl = card.place_id
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
     : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name)}`;

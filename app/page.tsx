@@ -4,6 +4,7 @@ import { getCurrentUser } from './_lib/user';
 import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery, UserManifest } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
+import { resolveImageUrl, getManifestHeroImage } from './_lib/image-url';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -57,13 +58,23 @@ export default async function HomePage() {
   );
   const discoveries = discoveriesData?.discoveries ?? [];
 
+  // Enrich discoveries with resolved image URLs
+  const enrichedDiscoveries = discoveries.map(d => {
+    let heroImage = resolveImageUrl(d.heroImage);
+    // Fallback: pull from place card manifest if no heroImage
+    if (!heroImage && d.place_id) {
+      heroImage = getManifestHeroImage(d.place_id);
+    }
+    return heroImage ? { ...d, heroImage } : d;
+  });
+
   // Group discoveries by context — fuzzy match on slug to handle key variants
   const byContext = new Map<string, Discovery[]>();
   for (const ctx of contexts) {
     const ctxSlug = ctx.key.split(':').slice(1).join(':');
     byContext.set(
       ctx.key,
-      discoveries.filter(d => {
+      enrichedDiscoveries.filter(d => {
         if (d.contextKey === ctx.key) return true;
         // Fuzzy: slug contains or is contained by context slug
         const dSlug = d.contextKey.split(':').slice(1).join(':');

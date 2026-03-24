@@ -12,15 +12,22 @@ interface PlaceCardProps {
 }
 
 export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardProps) {
-  const { id, place_id, name, type, heroImage } = discovery;
+  const { id, place_id, name, type } = discovery;
   // Ensure rating is a number (V1 data may have strings like "4.5")
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
   const safeRating = rating != null && !isNaN(rating) ? rating : null;
 
+  // Resolve image URL — server already enriches, but handle edge cases
+  const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
+  const rawImage = discovery.heroImage;
+  const imageUrl = rawImage
+    ? (rawImage.startsWith('http') ? rawImage : (rawImage.startsWith('/') && BLOB_BASE ? `${BLOB_BASE}${rawImage}` : rawImage))
+    : null;
+
   // Generate fallback gradient based on type
   const gradientStyle = {
-    background: heroImage
-      ? `url(${heroImage}) center/cover`
+    background: imageUrl
+      ? `url(${imageUrl}) center/cover`
       : `linear-gradient(135deg,
           color-mix(in srgb, var(--accent) 30%, var(--bg-secondary)),
           color-mix(in srgb, var(--accent) 10%, var(--bg-primary)))`,
@@ -33,7 +40,7 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   return (
     <Link href={`/placecards/${id}`} className="place-card">
       <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
-        {!heroImage && <span className="place-card-image-fallback" />}
+        {!imageUrl && <span className="place-card-image-fallback" />}
       </div>
       <div className="place-card-body">
         <div className="place-card-header">
