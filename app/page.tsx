@@ -19,6 +19,16 @@ function loadLocalManifest(): UserManifest | null {
   } catch { return null; }
 }
 
+/** Load local discoveries (cottages, developments) */
+function loadLocalDiscoveries(): Discovery[] {
+  const p = path.join(process.cwd(), 'data', 'local-discoveries.json');
+  if (!existsSync(p)) return [];
+  try {
+    const raw = JSON.parse(readFileSync(p, 'utf8'));
+    return (raw.discoveries ?? []) as Discovery[];
+  } catch { return []; }
+}
+
 function sortContexts(contexts: Context[]): Context[] {
   return [...contexts].sort((a, b) => {
     // Trips with dates first (nearest date first)
@@ -63,7 +73,14 @@ export default async function HomePage() {
   const contexts = sortContexts(
     mergedContexts.filter(c => isContextActive(c)),
   );
-  const discoveries = discoveriesData?.discoveries ?? [];
+  // Merge Blob discoveries with local discoveries (cottages, developments)
+  const blobDiscoveries = discoveriesData?.discoveries ?? [];
+  const localDisc = loadLocalDiscoveries();
+  const blobIds = new Set(blobDiscoveries.map(d => d.id));
+  const discoveries = [
+    ...blobDiscoveries,
+    ...localDisc.filter(d => !blobIds.has(d.id)),
+  ];
 
   // Enrich discoveries with resolved image URLs
   const enrichedDiscoveries = discoveries.map(d => {

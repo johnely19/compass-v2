@@ -1,0 +1,4226 @@
+{
+  "cottages": [
+    {
+      "id": "the-lookout",
+      "name": "The Lookout",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/the-lookout/",
+      "region": "Port Albert",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 7,
+      "swimScore": 4,
+      "swimType": "sandy beach",
+      "swimVerdict": "Direct beach access from lower level. Sandy beach with kayaks and paddleboard included. Campfire on the shore. Long walks on the beach.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "kayaks",
+        "paddleboard",
+        "dishwasher",
+        "pet friendly"
+      ],
+      "coordinates": {
+        "lat": 43.7565,
+        "lng": -81.7465
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Goderich",
+          "minutes": 15
+        },
+        "restaurants": {
+          "name": "Goderich",
+          "minutes": 15
+        },
+        "dianaKlaus": {
+          "minutes": 35
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/the-lookout/water_1.jpg",
+        "/cottages/the-lookout/water_2.jpg",
+        "/cottages/the-lookout/water_3.jpg",
+        "/cottages/the-lookout/exterior.jpg",
+        "/cottages/the-lookout/interior_1.jpg",
+        "/cottages/the-lookout/interior_2.jpg",
+        "/cottages/the-lookout/interior_3.jpg",
+        "/cottages/the-lookout/interior_4.jpg",
+        "/cottages/the-lookout/interior_5.jpg",
+        "/cottages/the-lookout/interior_6.jpg"
+      ],
+      "heroImage": "/cottages/the-lookout/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 4,
+        "quiet": 5,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Wall of windows with lake views. Open concept. Main floor: Queen bed (BR1), Single-over-Queen bunk (BR2), 4pc bath. Lower level: Queen bed (BR3), 3pc bath, entertainment space, beach access. Max 7 occupancy. 1 dog allowed. Noise monitoring device. Parking for 3. Beautifully landscaped.",
+      "description": "The Lookout",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "sunset-paradise",
+      "name": "Sunset Paradise",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/sunset-paradise/",
+      "region": "Bayfield-Goderich",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 7,
+      "swimScore": 3,
+      "swimType": "rocky/stone beach",
+      "swimVerdict": "Lakeview beachfront with stone collecting. Clean water - not weedy or slimy. Bring water shoes for rocky shore. Great sunset views.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "laundry",
+        "pet friendly",
+        "soda stream"
+      ],
+      "coordinates": {
+        "lat": 43.67,
+        "lng": -81.74
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield/Goderich",
+          "minutes": 10
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 10
+        },
+        "dianaKlaus": {
+          "minutes": 50
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/sunset-paradise/water_1.jpg",
+        "/cottages/sunset-paradise/water_2.jpg",
+        "/cottages/sunset-paradise/water_3.jpg",
+        "/cottages/sunset-paradise/exterior.jpg",
+        "/cottages/sunset-paradise/interior_1.jpg",
+        "/cottages/sunset-paradise/interior_2.jpg",
+        "/cottages/sunset-paradise/interior_3.jpg",
+        "/cottages/sunset-paradise/interior_4.jpg"
+      ],
+      "heroImage": "/cottages/sunset-paradise/water_1.jpg",
+      "scores": {
+        "swimming": 3,
+        "amenities": 4,
+        "quiet": 4,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Gorgeous sunset views. Open concept living. Main floor: Queen bed (BR2), Single-over-Double bunk (BR3), 4pc bath, laundry. Upper level has master bedroom. Stone beach - great for geology lovers but bring water shoes. Max 7 occupancy. 2 dogs allowed. Noise monitoring. Parking for 2. License: BWSTR25-181.",
+      "description": "Sunset Paradise",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "willowcrest",
+      "name": "WillowCrest",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/willowcrest/",
+      "region": "Bayfield-Grand Bend",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "sandy/stony beach",
+      "swimVerdict": "Lakefront with beach under a willow tree. Sandy/stony beach. Outdoor shower. World-class sunsets. Beach varies by season.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "wood fireplace",
+        "AC",
+        "outdoor kitchen",
+        "bbq",
+        "beverage fridge",
+        "playground",
+        "outdoor shower",
+        "pet friendly"
+      ],
+      "coordinates": {
+        "lat": 43.61,
+        "lng": -81.74
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield",
+          "minutes": 8
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 8
+        },
+        "dianaKlaus": {
+          "minutes": 55
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/willowcrest/water_1.jpg",
+        "/cottages/willowcrest/water_2.jpg",
+        "/cottages/willowcrest/water_3.jpg",
+        "/cottages/willowcrest/exterior.jpg",
+        "/cottages/willowcrest/interior_1.jpg",
+        "/cottages/willowcrest/interior_2.jpg",
+        "/cottages/willowcrest/interior_3.jpg",
+        "/cottages/willowcrest/outdoor_kitchen.jpg",
+        "/cottages/willowcrest/sunset.jpg"
+      ],
+      "heroImage": "/cottages/willowcrest/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Named after the willow tree on the beach. Sunroom with views on 3 sides. Outdoor kitchen with beverage fridge, sink and BBQ with live edge bar overlooking lake. Premier BR with Queen, BR2 with Queen, BR3 with single-over-single bunk. Outdoor shower. Playground. Max 6 occupancy. 1 dog. Parking for 4. License: BWSTR25-188. Picturesque Bayfield Main Street nearby.",
+      "description": "WillowCrest",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "cedar-shore",
+      "name": "Cedar Shore",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/cedar-shore/",
+      "region": "Kincardine-Inverhuron",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "lake view/access",
+      "swimVerdict": "Lake view cottage with beach access. Good for families with playful backyard. Cozy evenings by the fire. Beach vacation vibes.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "electric fireplace",
+        "hot tub",
+        "pet friendly",
+        "4 bedrooms",
+        "2 bathrooms"
+      ],
+      "coordinates": {
+        "lat": 44.28,
+        "lng": -81.62
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Kincardine",
+          "minutes": 15
+        },
+        "restaurants": {
+          "name": "Kincardine",
+          "minutes": 15
+        },
+        "dianaKlaus": {
+          "minutes": 70
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/cedar-shore/water_1.jpg",
+        "/cottages/cedar-shore/water_2.jpg",
+        "/cottages/cedar-shore/water_3.jpg",
+        "/cottages/cedar-shore/exterior.jpg",
+        "/cottages/cedar-shore/interior_1.jpg",
+        "/cottages/cedar-shore/interior_2.jpg",
+        "/cottages/cedar-shore/interior_3.jpg",
+        "/cottages/cedar-shore/interior_4.jpg"
+      ],
+      "heroImage": "/cottages/cedar-shore/water_1.jpg",
+      "scores": {
+        "swimming": 3,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "notes": "Spacious 4-bedroom cottage. King bed (premier BR), Double + Twin-over-Queen bunk (BR2), 2 twin beds (BR3), Double bed (BR4). Hot tub. Electric fireplace. Open layout. Playful backyard. 2 dogs allowed. Max 8 occupancy. Parking for 4. Farthest from Diana & Klaus in Sarnia. Kincardine/Inverhuron area - further north along Lake Huron.",
+      "description": "Cedar Shore",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "the-signal",
+      "name": "The Signal",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/the-signal/",
+      "region": "Grand Bend-Bayfield",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "sandy beach",
+      "swimVerdict": "1-minute walk to the lake. Sandy beach. Perfect for families or couples. Modern A-frame design with brand new outdoor sauna.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "gas fireplace",
+        "EV charger",
+        "sauna",
+        "kayaks",
+        "smart TV",
+        "fire pit",
+        "bbq",
+        "washer/dryer",
+        "dishwasher",
+        "2 dogs allowed"
+      ],
+      "coordinates": {
+        "lat": 43.35,
+        "lng": -81.75
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield",
+          "minutes": 10
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 10
+        },
+        "dianaKlaus": {
+          "minutes": 50
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": false,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/the-signal/water_1.jpg",
+        "/cottages/the-signal/water_2.jpg",
+        "/cottages/the-signal/water_3.jpg",
+        "/cottages/the-signal/exterior.jpg",
+        "/cottages/the-signal/interior_1.jpg",
+        "/cottages/the-signal/photo_6.jpg",
+        "/cottages/the-signal/photo_7.jpg",
+        "/cottages/the-signal/photo_8.jpg",
+        "/cottages/the-signal/photo_9.jpg",
+        "/cottages/the-signal/photo_10.jpg",
+        "/cottages/the-signal/photo_11.jpg",
+        "/cottages/the-signal/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/the-signal/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Brand new stylish A-frame cottage. Premier King bed, Queen bedroom, Double-over-Double bunk + Twin. 2 bathrooms. EV charger on-site. Newly added outdoor sauna. 2 honeymoon balconies. 1-minute walk to lake. 10 mins from Grand Bend & Bayfield. Max 8 occupancy. 2 dogs allowed. License: BWSTR25-004.",
+      "photos": [
+        "/cottages/the-signal/water_1.jpg",
+        "/cottages/the-signal/water_2.jpg",
+        "/cottages/the-signal/water_3.jpg",
+        "/cottages/the-signal/exterior.jpg",
+        "/cottages/the-signal/interior_1.jpg",
+        "/cottages/the-signal/photo_6.jpg",
+        "/cottages/the-signal/photo_7.jpg",
+        "/cottages/the-signal/photo_8.jpg",
+        "/cottages/the-signal/photo_9.jpg",
+        "/cottages/the-signal/photo_10.jpg",
+        "/cottages/the-signal/photo_11.jpg",
+        "/cottages/the-signal/photo_12.jpg"
+      ],
+      "description": "The Signal",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "huron-shores",
+      "name": "Huron Shores",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/huron-shores/",
+      "region": "Point Clark",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 3,
+      "sleeps": 10,
+      "swimScore": 5,
+      "swimType": "sandy beach",
+      "swimVerdict": "NO stairs to beach. Beachfront retreat on well-treed private lot. Sandy beaches, historic lighthouse, biking trails, and Lake Huron sunsets. Perfect for families.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "wood fireplace",
+        "hot tub",
+        "kayaks",
+        "paddleboards",
+        "fire pit",
+        "bbq",
+        "washer/dryer",
+        "dishwasher",
+        "satellite TV",
+        "2 pets allowed"
+      ],
+      "coordinates": {
+        "lat": 44.07,
+        "lng": -81.76
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield",
+          "minutes": 20
+        },
+        "restaurants": {
+          "name": "Bayfield",
+          "minutes": 20
+        },
+        "dianaKlaus": {
+          "minutes": 65
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/huron-shores/water_1.jpg",
+        "/cottages/huron-shores/water_2.jpg",
+        "/cottages/huron-shores/water_3.jpg",
+        "/cottages/huron-shores/exterior.jpg",
+        "/cottages/huron-shores/interior_1.jpg",
+        "/cottages/huron-shores/photo_6.jpg",
+        "/cottages/huron-shores/photo_7.jpg",
+        "/cottages/huron-shores/photo_8.jpg",
+        "/cottages/huron-shores/photo_9.jpg",
+        "/cottages/huron-shores/photo_10.jpg",
+        "/cottages/huron-shores/photo_11.jpg",
+        "/cottages/huron-shores/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/huron-shores/water_1.jpg",
+      "scores": {
+        "swimming": 5,
+        "amenities": 5,
+        "quiet": 5,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Beachfront cottage with NO STAIRS to beach - rare find! 4BR + loft, sleeps 10. BR1: Queen (access through BR2), BR2: Double, BR3: Double, BR4: Single + Single-over-Single bunk, Loft: 4 Double beds. 3 bathrooms. Hot tub. 2 kayaks + 2 paddleboards. Point Clark area near historic lighthouse. Max 10 occupancy. 2 pets allowed.",
+      "photos": [
+        "/cottages/huron-shores/water_1.jpg",
+        "/cottages/huron-shores/water_2.jpg",
+        "/cottages/huron-shores/water_3.jpg",
+        "/cottages/huron-shores/exterior.jpg",
+        "/cottages/huron-shores/interior_1.jpg",
+        "/cottages/huron-shores/photo_6.jpg",
+        "/cottages/huron-shores/photo_7.jpg",
+        "/cottages/huron-shores/photo_8.jpg",
+        "/cottages/huron-shores/photo_9.jpg",
+        "/cottages/huron-shores/photo_10.jpg",
+        "/cottages/huron-shores/photo_11.jpg",
+        "/cottages/huron-shores/photo_12.jpg"
+      ],
+      "description": "Huron Shores",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "blue-bluff-beauty",
+      "name": "Blue Bluff Beauty",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/blue-bluff-beauty/",
+      "region": "Bayfield",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "lake access",
+      "swimVerdict": "Lakefront with floor-to-ceiling windows facing Lake Huron. New stairs added in 2025 to lake access. 80 stairs to water. World-renowned sunsets.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "gas fireplace",
+        "smart TV",
+        "dishwasher",
+        "bbq",
+        "fire pit",
+        "screened porch",
+        "1 dog allowed"
+      ],
+      "coordinates": {
+        "lat": 43.57,
+        "lng": -81.73
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield downtown",
+          "minutes": 5
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 5
+        },
+        "dianaKlaus": {
+          "minutes": 55
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/blue-bluff-beauty/water_1.jpg",
+        "/cottages/blue-bluff-beauty/water_2.jpg",
+        "/cottages/blue-bluff-beauty/water_3.jpg",
+        "/cottages/blue-bluff-beauty/exterior.jpg",
+        "/cottages/blue-bluff-beauty/interior_1.jpg",
+        "/cottages/blue-bluff-beauty/photo_6.jpg",
+        "/cottages/blue-bluff-beauty/photo_7.jpg",
+        "/cottages/blue-bluff-beauty/photo_8.jpg",
+        "/cottages/blue-bluff-beauty/photo_9.jpg",
+        "/cottages/blue-bluff-beauty/photo_10.jpg",
+        "/cottages/blue-bluff-beauty/photo_11.jpg",
+        "/cottages/blue-bluff-beauty/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/blue-bluff-beauty/water_1.jpg",
+      "scores": {
+        "swimming": 3,
+        "amenities": 4,
+        "quiet": 5,
+        "value": 4,
+        "location": 5
+      },
+      "notes": "Stunning floor-to-ceiling windows facing Lake Huron. 5 min south of Bayfield village. Premier King bed in loft, Queen bedroom, Single over Single + Single over Double bunks. Den with pullout Double bed. 2 bathrooms. 80 stairs to water (new stairs added 2025). Screened porch. Max 8 occupancy. 1 non-shedding dog allowed. License: BWSTR25-134.",
+      "photos": [
+        "/cottages/blue-bluff-beauty/water_1.jpg",
+        "/cottages/blue-bluff-beauty/water_2.jpg",
+        "/cottages/blue-bluff-beauty/water_3.jpg",
+        "/cottages/blue-bluff-beauty/exterior.jpg",
+        "/cottages/blue-bluff-beauty/interior_1.jpg",
+        "/cottages/blue-bluff-beauty/photo_6.jpg",
+        "/cottages/blue-bluff-beauty/photo_7.jpg",
+        "/cottages/blue-bluff-beauty/photo_8.jpg",
+        "/cottages/blue-bluff-beauty/photo_9.jpg",
+        "/cottages/blue-bluff-beauty/photo_10.jpg",
+        "/cottages/blue-bluff-beauty/photo_11.jpg",
+        "/cottages/blue-bluff-beauty/photo_12.jpg"
+      ],
+      "description": "Blue Bluff Beauty",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "pine-view-cottage",
+      "name": "Pine View Cottage",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/pine-view-cottage/",
+      "region": "Bayfield",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "sandy beach",
+      "swimVerdict": "2-minute walk to sandy beach with NO STAIRS. Perfect for mobility issues. Wagon provided for beach chairs. Sandy lakebed.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "gas fireplace",
+        "smart TV",
+        "bbq",
+        "washer/dryer",
+        "dishwasher",
+        "gazebo",
+        "firetable",
+        "1 small hypoallergenic dog allowed"
+      ],
+      "coordinates": {
+        "lat": 43.57,
+        "lng": -81.73
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield downtown",
+          "minutes": 5
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 5
+        },
+        "dianaKlaus": {
+          "minutes": 55
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": false,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/pine-view-cottage/water_1.jpg",
+        "/cottages/pine-view-cottage/water_2.jpg",
+        "/cottages/pine-view-cottage/water_3.jpg",
+        "/cottages/pine-view-cottage/exterior.jpg",
+        "/cottages/pine-view-cottage/interior_1.jpg",
+        "/cottages/pine-view-cottage/photo_6.jpg",
+        "/cottages/pine-view-cottage/photo_7.jpg",
+        "/cottages/pine-view-cottage/photo_8.jpg",
+        "/cottages/pine-view-cottage/photo_9.jpg",
+        "/cottages/pine-view-cottage/photo_10.jpg",
+        "/cottages/pine-view-cottage/photo_11.jpg",
+        "/cottages/pine-view-cottage/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/pine-view-cottage/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 4,
+        "quiet": 5,
+        "value": 5,
+        "location": 5
+      },
+      "notes": "Single level home with only 2 stairs to enter - wheelchair accessible! 2-minute walk to sandy beach with NO STAIRS. Perfect for mobility issues. 3BR: King, Queen, Queen. 2 bathrooms. Gazebo over dining area. Outdoor firetable. Max 6 occupancy. 1 small hypoallergenic dog allowed. License: BWSTR25-178.",
+      "photos": [
+        "/cottages/pine-view-cottage/water_1.jpg",
+        "/cottages/pine-view-cottage/water_2.jpg",
+        "/cottages/pine-view-cottage/water_3.jpg",
+        "/cottages/pine-view-cottage/exterior.jpg",
+        "/cottages/pine-view-cottage/interior_1.jpg",
+        "/cottages/pine-view-cottage/photo_6.jpg",
+        "/cottages/pine-view-cottage/photo_7.jpg",
+        "/cottages/pine-view-cottage/photo_8.jpg",
+        "/cottages/pine-view-cottage/photo_9.jpg",
+        "/cottages/pine-view-cottage/photo_10.jpg",
+        "/cottages/pine-view-cottage/photo_11.jpg",
+        "/cottages/pine-view-cottage/photo_12.jpg"
+      ],
+      "description": "Pine View Cottage",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "cedarhaven",
+      "name": "Cedarhaven",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/cedarhaven/",
+      "region": "Point Clark",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "rocky beach",
+      "swimVerdict": "1-minute walk to rocky beach or 5-minute bike ride to sandy beach. Modern, beautifully updated cottage across from Lake Huron.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "gas fireplace",
+        "hot tub",
+        "games room",
+        "smart TV",
+        "projector screen",
+        "bbq",
+        "fire pit",
+        "washer/dryer",
+        "dishwasher",
+        "bicycles",
+        "2 pets allowed"
+      ],
+      "coordinates": {
+        "lat": 44.07,
+        "lng": -81.76
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield",
+          "minutes": 20
+        },
+        "restaurants": {
+          "name": "Bayfield",
+          "minutes": 20
+        },
+        "dianaKlaus": {
+          "minutes": 65
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": false,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/cedarhaven/water_1.jpg",
+        "/cottages/cedarhaven/water_2.jpg",
+        "/cottages/cedarhaven/water_3.jpg",
+        "/cottages/cedarhaven/exterior.jpg",
+        "/cottages/cedarhaven/interior_1.jpg",
+        "/cottages/cedarhaven/photo_6.jpg",
+        "/cottages/cedarhaven/photo_7.jpg",
+        "/cottages/cedarhaven/photo_8.jpg",
+        "/cottages/cedarhaven/photo_9.jpg",
+        "/cottages/cedarhaven/photo_10.jpg",
+        "/cottages/cedarhaven/photo_11.jpg",
+        "/cottages/cedarhaven/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/cedarhaven/water_1.jpg",
+      "scores": {
+        "swimming": 3,
+        "amenities": 5,
+        "quiet": 5,
+        "value": 4,
+        "location": 4
+      },
+      "notes": "Modern, beautifully updated cottage in Point Clark. 3BR+: King, King, Queen, plus Den with fold-out Double. 2 bathrooms. Hot tub. Games room with air hockey table. 5 adult & 3 kids bicycles. 1-minute walk to rocky beach. Sun loungers, hanging egg chair. Max 8 occupancy. 2 pets allowed.",
+      "photos": [
+        "/cottages/cedarhaven/water_1.jpg",
+        "/cottages/cedarhaven/water_2.jpg",
+        "/cottages/cedarhaven/water_3.jpg",
+        "/cottages/cedarhaven/exterior.jpg",
+        "/cottages/cedarhaven/interior_1.jpg",
+        "/cottages/cedarhaven/photo_6.jpg",
+        "/cottages/cedarhaven/photo_7.jpg",
+        "/cottages/cedarhaven/photo_8.jpg",
+        "/cottages/cedarhaven/photo_9.jpg",
+        "/cottages/cedarhaven/photo_10.jpg",
+        "/cottages/cedarhaven/photo_11.jpg",
+        "/cottages/cedarhaven/photo_12.jpg"
+      ],
+      "description": "Cedarhaven",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "sunset-ridge",
+      "name": "Sunset Ridge",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/sunset-ridge/",
+      "region": "Bayfield",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 3,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "sandy/stony beach",
+      "swimVerdict": "Approximately 80 steps down to beach. Sandy/stony lakebed - water shoes recommended. Stunning lakeview deck perfect for gathering.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "games room",
+        "kayaks",
+        "smart TV",
+        "fire pit",
+        "bbq",
+        "washer/dryer",
+        "wine fridge",
+        "1 small non-shedding dog allowed"
+      ],
+      "coordinates": {
+        "lat": 43.57,
+        "lng": -81.73
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield downtown",
+          "minutes": 5
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 5
+        },
+        "dianaKlaus": {
+          "minutes": 55
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/sunset-ridge/water_1.jpg",
+        "/cottages/sunset-ridge/water_2.jpg",
+        "/cottages/sunset-ridge/water_3.jpg",
+        "/cottages/sunset-ridge/exterior.jpg",
+        "/cottages/sunset-ridge/interior_1.jpg",
+        "/cottages/sunset-ridge/photo_6.jpg",
+        "/cottages/sunset-ridge/photo_7.jpg",
+        "/cottages/sunset-ridge/photo_8.jpg",
+        "/cottages/sunset-ridge/photo_9.jpg",
+        "/cottages/sunset-ridge/photo_10.jpg",
+        "/cottages/sunset-ridge/photo_11.jpg",
+        "/cottages/sunset-ridge/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/sunset-ridge/water_1.jpg",
+      "scores": {
+        "swimming": 3,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 5
+      },
+      "notes": "High-end quality finishes. 3+BR: King (main floor), Queen (upstairs), 2 Doubles (upstairs), plus extra room with Single bed + Crib. 3 full bathrooms + powder room. Games room with ping pong table in garage. Large deck with retractable awning. High-end kitchen with wine fridge. 2 kayaks. 80 steps to beach. Max 8 occupancy. 1 small non-shedding dog allowed.",
+      "photos": [
+        "/cottages/sunset-ridge/water_1.jpg",
+        "/cottages/sunset-ridge/water_2.jpg",
+        "/cottages/sunset-ridge/water_3.jpg",
+        "/cottages/sunset-ridge/exterior.jpg",
+        "/cottages/sunset-ridge/interior_1.jpg",
+        "/cottages/sunset-ridge/photo_6.jpg",
+        "/cottages/sunset-ridge/photo_7.jpg",
+        "/cottages/sunset-ridge/photo_8.jpg",
+        "/cottages/sunset-ridge/photo_9.jpg",
+        "/cottages/sunset-ridge/photo_10.jpg",
+        "/cottages/sunset-ridge/photo_11.jpg",
+        "/cottages/sunset-ridge/photo_12.jpg"
+      ],
+      "description": "Sunset Ridge",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "turkey-perch",
+      "name": "Turkey Perch",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/turkey-perch/",
+      "region": "Bayfield",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 1,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "lake access",
+      "swimVerdict": "Lake view and lake access from backyard. Floor-to-ceiling windows with lake views. Hot tub. Kayak, paddleboard & lake mat included.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "gas fireplace",
+        "hot tub",
+        "smart TV",
+        "DVD",
+        "Xbox",
+        "bbq",
+        "fire pit",
+        "kayak",
+        "paddleboard",
+        "volleyball net",
+        "washer/dryer",
+        "dishwasher",
+        "2 dogs allowed"
+      ],
+      "coordinates": {
+        "lat": 43.57,
+        "lng": -81.73
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Bayfield downtown",
+          "minutes": 5
+        },
+        "restaurants": {
+          "name": "Bayfield Main St",
+          "minutes": 5
+        },
+        "dianaKlaus": {
+          "minutes": 55
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/turkey-perch/water_1.jpg",
+        "/cottages/turkey-perch/water_2.jpg",
+        "/cottages/turkey-perch/water_3.jpg",
+        "/cottages/turkey-perch/exterior.jpg",
+        "/cottages/turkey-perch/interior_1.jpg",
+        "/cottages/turkey-perch/photo_6.jpg",
+        "/cottages/turkey-perch/photo_7.jpg",
+        "/cottages/turkey-perch/photo_8.jpg",
+        "/cottages/turkey-perch/photo_9.jpg",
+        "/cottages/turkey-perch/photo_10.jpg",
+        "/cottages/turkey-perch/photo_11.jpg",
+        "/cottages/turkey-perch/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/turkey-perch/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 5
+      },
+      "notes": "Charming lakeside retreat near Bayfield. 4BR: Queen (main), Double (main), Double (2nd level), Single over Single bunk (2nd level). 1 bathroom. Hot tub. Floor-to-ceiling windows with lake views. Kayak, paddleboard & lake mat included. Volleyball/badminton net. Large deck. Max 8 occupancy. 2 dogs allowed. License: BWSTR25-022.",
+      "photos": [
+        "/cottages/turkey-perch/water_1.jpg",
+        "/cottages/turkey-perch/water_2.jpg",
+        "/cottages/turkey-perch/water_3.jpg",
+        "/cottages/turkey-perch/exterior.jpg",
+        "/cottages/turkey-perch/interior_1.jpg",
+        "/cottages/turkey-perch/photo_6.jpg",
+        "/cottages/turkey-perch/photo_7.jpg",
+        "/cottages/turkey-perch/photo_8.jpg",
+        "/cottages/turkey-perch/photo_9.jpg",
+        "/cottages/turkey-perch/photo_10.jpg",
+        "/cottages/turkey-perch/photo_11.jpg",
+        "/cottages/turkey-perch/photo_12.jpg"
+      ],
+      "description": "Turkey Perch",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "modern-classic",
+      "name": "Modern Classic",
+      "platform": "CottageStays",
+      "url": "https://cottagestays.ca/modern-classic/",
+      "region": "Inverhuron-Kincardine",
+      "pricePerWeek": null,
+      "beds": 2,
+      "baths": 1,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "sandy beach",
+      "swimVerdict": "Direct river access with 2-minute paddle to beach, or short 2-minute walk to sandy beach (no stairs). Modern stylish cottage.",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "AC",
+        "kayaks",
+        "paddleboards",
+        "smart TV",
+        "bbq",
+        "firepit",
+        "washer/dryer",
+        "dishwasher",
+        "2 pets allowed"
+      ],
+      "coordinates": {
+        "lat": 44.32,
+        "lng": -81.58
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Kincardine",
+          "minutes": 10
+        },
+        "restaurants": {
+          "name": "Kincardine",
+          "minutes": 10
+        },
+        "dianaKlaus": {
+          "minutes": 75
+        }
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": false,
+        "dockAccess": false
+      },
+      "images": [
+        "/cottages/modern-classic/water_1.jpg",
+        "/cottages/modern-classic/water_2.jpg",
+        "/cottages/modern-classic/water_3.jpg",
+        "/cottages/modern-classic/exterior.jpg",
+        "/cottages/modern-classic/interior_1.jpg",
+        "/cottages/modern-classic/photo_6.jpg",
+        "/cottages/modern-classic/photo_7.jpg",
+        "/cottages/modern-classic/photo_8.jpg",
+        "/cottages/modern-classic/photo_9.jpg",
+        "/cottages/modern-classic/photo_10.jpg",
+        "/cottages/modern-classic/photo_11.jpg",
+        "/cottages/modern-classic/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/modern-classic/water_1.jpg",
+      "scores": {
+        "swimming": 4,
+        "amenities": 4,
+        "quiet": 4,
+        "value": 5,
+        "location": 3
+      },
+      "notes": "Stylish modern cottage near Inverhuron. 2BR + Loft: 2 Queen beds + King bed in loft. 1 bathroom. Open concept with floor-to-ceiling windows. Kitchen with induction stove and live-edge island. Direct river access with 2-minute paddle to beach, or short 2-minute walk to sandy beach (no stairs). 2 kayaks + 2 paddleboards. Near Inverhuron Provincial Park, Kincardine Lighthouse & Museum. 2 min to Tiverton & Bruce Power, 10 min to Kincardine. Max 6 occupancy. 2 pets allowed.",
+      "photos": [
+        "/cottages/modern-classic/water_1.jpg",
+        "/cottages/modern-classic/water_2.jpg",
+        "/cottages/modern-classic/water_3.jpg",
+        "/cottages/modern-classic/exterior.jpg",
+        "/cottages/modern-classic/interior_1.jpg",
+        "/cottages/modern-classic/photo_6.jpg",
+        "/cottages/modern-classic/photo_7.jpg",
+        "/cottages/modern-classic/photo_8.jpg",
+        "/cottages/modern-classic/photo_9.jpg",
+        "/cottages/modern-classic/photo_10.jpg",
+        "/cottages/modern-classic/photo_11.jpg",
+        "/cottages/modern-classic/photo_12.jpg"
+      ],
+      "description": "Modern Classic",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "quaint-steps",
+      "name": "Quaint Cottage Steps from Beach",
+      "region": "Port Albert (Goderich)",
+      "url": "https://www.cottagesincanada.com/40181",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2100,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Steps to sandy Lake Huron beach, shallow entry with some stones then sandy, never busy",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Fireplace",
+        "Washer/Dryer",
+        "Dishwasher",
+        "BBQ",
+        "Ping-pong",
+        "TV/DVD"
+      ],
+      "driveTimes": {
+        "groceries": "15 min (Goderich)",
+        "restaurants": "15 min (Goderich)",
+        "dianaKlaus": "1h 15min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 5,
+        "value": 4,
+        "location": 4
+      },
+      "coordinates": {
+        "lat": 43.949,
+        "lng": -81.743
+      },
+      "images": [
+        "/cottages/quaint-steps/hero.jpg",
+        "/cottages/quaint-steps/interior1.jpg",
+        "/cottages/quaint-steps/exterior1.jpg",
+        "/cottages/quaint-steps/interior2.jpg",
+        "/cottages/quaint-steps/interior3.jpg",
+        "/cottages/quaint-steps/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/quaint-steps/hero.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "cottagesincanada.com",
+        "julyStatus": "mostly_available",
+        "julyNotes": "Jul 5-18 available (2 weeks). Jul 1-4 and Jul 18-31 booked.",
+        "bookedRanges": [
+          {
+            "start": "2026-06-27",
+            "end": "2026-07-04"
+          },
+          {
+            "start": "2026-07-18",
+            "end": "2026-08-15"
+          },
+          {
+            "start": "2026-08-22",
+            "end": "2026-08-29"
+          }
+        ],
+        "availableWeeks": [
+          {
+            "start": "2026-07-05",
+            "end": "2026-07-18",
+            "weeks": 2,
+            "note": "Jul 5-18 \u2014 2 consecutive weeks open"
+          }
+        ]
+      },
+      "rates": {
+        "currency": "CAD",
+        "includesHST": false,
+        "seasons": [
+          {
+            "name": "Spring (May 2 - Jun 27)",
+            "weekly": 1475,
+            "minimum": "6 nights"
+          },
+          {
+            "name": "Beach Season (Jun 27 - Aug 31)",
+            "weekly": 2100,
+            "minimum": "6 nights"
+          },
+          {
+            "name": "Base Rate",
+            "weekly": 2100,
+            "minimum": "-"
+          }
+        ]
+      },
+      "highlights": [
+        "Steps to beach",
+        "Port Albert village",
+        "Nine Mile River views",
+        "No pets"
+      ],
+      "notes": "Port Albert village, 15 min from Goderich. 3BR: master (Q) main floor + 2 upstairs (2Q + 2 singles). Walk-out basement with ping-pong. Backyard overlooks Nine Mile River. NO PETS. 5.0/5 rating (5 reviews). Families only, no one under 25. $500 security deposit. **JULY: 2 weeks available (Jul 5-18)**",
+      "photos": [
+        "/cottages/quaint-steps/hero.jpg",
+        "/cottages/quaint-steps/interior1.jpg",
+        "/cottages/quaint-steps/exterior1.jpg",
+        "/cottages/quaint-steps/interior2.jpg",
+        "/cottages/quaint-steps/interior3.jpg",
+        "/cottages/quaint-steps/photo_6.jpg"
+      ],
+      "description": "Quaint Cottage Steps from Beach",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "carruthers-cottage",
+      "name": "Carruthers Cottage",
+      "region": "Point Clark (Lake Huron)",
+      "url": "https://cottagestays.ca/carruthers-cottage/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "beds": 2,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Lake Huron just around the corner, close to sandy beach",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Pet Friendly (2)",
+        "Parking (3 vehicles)"
+      ],
+      "driveTimes": {
+        "groceries": "10 min (Point Clark)",
+        "restaurants": "15 min (Kincardine)",
+        "dianaKlaus": "1h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 4,
+        "value": 4,
+        "location": 4
+      },
+      "coordinates": {
+        "lat": 44.07,
+        "lng": -81.76
+      },
+      "images": [
+        "/cottages/carruthers-cottage/photo_1.jpg",
+        "/cottages/carruthers-cottage/photo_2.jpg",
+        "/cottages/carruthers-cottage/photo_3.jpg",
+        "/cottages/carruthers-cottage/photo_4.jpg",
+        "/cottages/carruthers-cottage/photo_5.jpg",
+        "/cottages/carruthers-cottage/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/carruthers-cottage/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "cottagestays.ca calendar",
+        "julyStatus": "mostly_available",
+        "julyNotes": "~3.5 weeks available (Jul 1-26). Only booked Jul 27-31.",
+        "availableWeeks": [
+          {
+            "start": "2026-07-01",
+            "end": "2026-07-26",
+            "weeks": 3.5,
+            "note": "Jul 1-26 open"
+          }
+        ]
+      },
+      "highlights": [
+        "Lake Huron vibes",
+        "Pet friendly",
+        "Blue-toned decor"
+      ],
+      "notes": "Laid-back Lake Huron cottage with calm blue tones throughout. 2+BR/2BTH, sleeps 8. Pets allowed (2, with addendum). Max occupancy monitored. Primary renter must be 25+. **JULY: ~3.5 weeks open (Jul 1-26)**",
+      "description": "Carruthers Cottage",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "wexford-cottage",
+      "name": "Wexford Cottage",
+      "region": "Point Clark (Lake Huron)",
+      "url": "https://cottagestays.ca/wexford-cottage/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "beds": 2,
+      "baths": 1,
+      "sleeps": 6,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Steps from Point Clark Lighthouse \u2014 one of Lake Huron's best sandy beaches",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Pet Friendly (2)",
+        "Firepit",
+        "Fenced Yard"
+      ],
+      "driveTimes": {
+        "groceries": "10 min (Point Clark)",
+        "restaurants": "15 min (Kincardine)",
+        "dianaKlaus": "1h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 3,
+        "quiet": 4,
+        "value": 4,
+        "location": 5
+      },
+      "coordinates": {
+        "lat": 44.07,
+        "lng": -81.76
+      },
+      "images": [
+        "/cottages/wexford-cottage/photo_1.jpg",
+        "/cottages/wexford-cottage/photo_2.jpg",
+        "/cottages/wexford-cottage/photo_3.jpg",
+        "/cottages/wexford-cottage/photo_4.jpg",
+        "/cottages/wexford-cottage/photo_5.jpg",
+        "/cottages/wexford-cottage/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/wexford-cottage/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "cottagestays.ca calendar",
+        "julyStatus": "fully_available",
+        "julyNotes": "~4 weeks available (Jul 1-27). Only booked Jul 28+.",
+        "availableWeeks": [
+          {
+            "start": "2026-07-01",
+            "end": "2026-07-27",
+            "weeks": 4,
+            "note": "Jul 1-27 open \u2014 4 consecutive weeks!"
+          }
+        ]
+      },
+      "highlights": [
+        "Point Clark Lighthouse beach",
+        "Freshly renovated",
+        "Fenced yard",
+        "Firepit"
+      ],
+      "notes": "Freshly renovated pet-friendly retreat steps from Point Clark Lighthouse \u2014 one of Lake Huron's best sandy beaches. Private fenced yard, firepit, classic cottage charm. 2BR/1BTH, sleeps 6 (smaller side). **JULY: 4 weeks open (Jul 1-27)**",
+      "description": "Wexford Cottage",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "twilight-haven",
+      "name": "Twilight Haven",
+      "region": "Near Lake Huron",
+      "url": "https://cottagestays.ca/twilight-haven/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 3,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "Nearby",
+      "swimIcon": "beach",
+      "swimVerdict": "Near Lake Huron with big yard, beach vibes but not lakefront",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Electric Fireplace",
+        "Carriage House",
+        "Big Yard",
+        "Games",
+        "Pet Friendly (1 non-shedding)"
+      ],
+      "driveTimes": {
+        "groceries": "10 min",
+        "restaurants": "10 min",
+        "dianaKlaus": "1h 30min"
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": false,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 4,
+        "quiet": 4,
+        "value": 3,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.05,
+        "lng": -81.73
+      },
+      "images": [
+        "/cottages/twilight-haven/photo_1.jpg",
+        "/cottages/twilight-haven/photo_2.jpg",
+        "/cottages/twilight-haven/photo_3.jpg",
+        "/cottages/twilight-haven/photo_4.jpg",
+        "/cottages/twilight-haven/photo_5.jpg",
+        "/cottages/twilight-haven/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/twilight-haven/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "cottagestays.ca calendar",
+        "julyStatus": "mostly_available",
+        "julyNotes": "Jul 1-10 open + Jul 18-26 open (fragmented, ~2.5 weeks total). Booked Jul 11-17 and Jul 27+.",
+        "availableWeeks": [
+          {
+            "start": "2026-07-01",
+            "end": "2026-07-10",
+            "weeks": 1.5,
+            "note": "Jul 1-10"
+          },
+          {
+            "start": "2026-07-18",
+            "end": "2026-07-26",
+            "weeks": 1,
+            "note": "Jul 18-26"
+          }
+        ]
+      },
+      "highlights": [
+        "3BR + Carriage House",
+        "Big yard",
+        "Family games",
+        "Borderline \u2014 fragmented July"
+      ],
+      "notes": "3BR + carriage house, sleeps 8. Big yard with games, beach vibes. Near Lake Huron but not lakefront. Pet friendly (1 non-shedding dog). \u26a0\ufe0f July availability is fragmented \u2014 only ~2.5 weeks total, not continuous. **BORDERLINE pick.**",
+      "description": "Twilight Haven",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "meaford-sunrise-waterfront",
+      "name": "Meaford Sunrise Waterfront",
+      "region": "Georgian Bay (Meaford)",
+      "url": "https://www.cottagesincanada.com/22051",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2200,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "50 feet of private sandy beach with gentle sloping entry into Georgian Bay. Crystal clear water, excellent for swimming and snorkeling. Views of Meaford Bluffs and Blue Mountains from the cottage.",
+      "amenities": [
+        "WiFi",
+        "Satellite TV",
+        "Linens Provided",
+        "Washer/Dryer",
+        "BBQ",
+        "Firepit",
+        "2 Kayaks",
+        "Paddle Boat",
+        "Dock",
+        "Full Kitchen"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "5 min",
+        "dianaKlaus": "3h 15min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.605,
+        "lng": -80.595
+      },
+      "images": [
+        "/cottages/meaford-sunrise-waterfront/photo_1.jpg",
+        "/cottages/meaford-sunrise-waterfront/photo_2.jpg",
+        "/cottages/meaford-sunrise-waterfront/photo_3.jpg",
+        "/cottages/meaford-sunrise-waterfront/photo_4.jpg",
+        "/cottages/meaford-sunrise-waterfront/photo_5.jpg",
+        "/cottages/meaford-sunrise-waterfront/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/meaford-sunrise-waterfront/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "mostly_available",
+        "julyNotes": "July 11 appears booked but most of July wide open. Weekly rentals Friday-Friday during summer. Updated March 3, 2026."
+      },
+      "highlights": [],
+      "notes": "TRUE WATERFRONT gem on Georgian Bay. 4 bedrooms all with queen beds. Pet-friendly ($10/day). Private sandy beach is the real deal. Owner Doug highly rated. A second 2-bedroom cottage next door can be rented for overflow. Cleaning fee $175. $400 refundable security deposit. Reviews: 4.8/5 stars. Best waterfront value in the Georgian Bay region at $2,200/week.",
+      "description": "Meaford Sunrise Waterfront",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "georgian-bay-holiday-haven",
+      "name": "Georgian Bay Holiday Haven",
+      "region": "Georgian Bay (Meaford)",
+      "url": "https://www.cottagesincanada.com/40787",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2100,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "5-minute walk to beautiful Meaford beaches on Georgian Bay. Multiple beaches within walking distance. Not waterfront but very close.",
+      "amenities": [
+        "WiFi",
+        "Central AC",
+        "Smart TV",
+        "Netflix/Disney+",
+        "Dishwasher",
+        "Washer/Dryer",
+        "BBQ (natural gas)",
+        "Firepit",
+        "Bikes Provided",
+        "Games Table",
+        "Air Hockey",
+        "Foosball",
+        "Ping Pong",
+        "Pool Table",
+        "High Chair",
+        "Crib",
+        "Wheelchair Accessible",
+        "Linens Provided"
+      ],
+      "driveTimes": {
+        "groceries": "3 min",
+        "restaurants": "3 min",
+        "dianaKlaus": "3h 15min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.609,
+        "lng": -80.589
+      },
+      "images": [
+        "/cottages/georgian-bay-holiday-haven/photo_1.jpg",
+        "/cottages/georgian-bay-holiday-haven/photo_2.jpg",
+        "/cottages/georgian-bay-holiday-haven/photo_3.jpg",
+        "/cottages/georgian-bay-holiday-haven/photo_4.jpg",
+        "/cottages/georgian-bay-holiday-haven/photo_5.jpg",
+        "/cottages/georgian-bay-holiday-haven/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/georgian-bay-holiday-haven/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "mostly_available",
+        "julyNotes": "July has scattered bookings but multiple weeks appear available. Calendar updated March 16, 2026. Contact owner for specific July weeks."
+      },
+      "highlights": [],
+      "notes": "Modern, beautifully upgraded vacation home in the HEART of Meaford. Walking distance to beach, marina, shops, restaurants, LCBO. 37 high-quality photos on listing. Near Wasaga Beach, Sauble Beach, Owen Sound, Collingwood/Blue Mountain. $200-400/night (~$2,100/week estimated). Fully equipped with life-size Connect 4 and corn hole games. Great for families. Natural gas BBQ means never running out. Excellent reviews.",
+      "description": "Georgian Bay Holiday Haven",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "house-of-lords-georgian-bay",
+      "name": "House of Lords - Georgian Bay Waterfront",
+      "region": "Georgian Bay (Wiarton)",
+      "url": "https://www.cottagevacations.com/cottage/1874-georgian-bay",
+      "platform": "Cottage Vacations",
+      "pricePerWeek": 2000,
+      "beds": 4,
+      "baths": 1,
+      "sleeps": 8,
+      "swimScore": 5,
+      "swimType": "Rocky",
+      "swimIcon": "beach",
+      "swimVerdict": "Flat shoreline with shallow entry into remarkably clear Georgian Bay water. Excellent snorkeling. Swim raft provided. Safe for kids with gradual entry. Crystal clear water typical of the Wiarton/Bruce Peninsula area.",
+      "amenities": [
+        "WiFi",
+        "Satellite TV",
+        "Blu-Ray/DVD",
+        "Dishwasher",
+        "Washer/Dryer",
+        "Wood Fireplace",
+        "Wood Stove",
+        "BBQ",
+        "Firepit",
+        "2 Kayaks",
+        "Swim Raft",
+        "Life Jackets",
+        "Muskoka Chairs",
+        "Board Games"
+      ],
+      "driveTimes": {
+        "groceries": "20 min (Wiarton)",
+        "restaurants": "20 min (Wiarton)",
+        "dianaKlaus": "2h 45min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.73,
+        "lng": -81.05
+      },
+      "images": [
+        "/cottages/house-of-lords-georgian-bay/photo_1.jpg",
+        "/cottages/house-of-lords-georgian-bay/photo_5.jpg",
+        "/cottages/house-of-lords-georgian-bay/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/house-of-lords-georgian-bay/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "Cottage Vacations",
+        "julyStatus": "unknown",
+        "julyNotes": "Contact Cottage Vacations for July 2026 availability. Managed by Ontario's premier rental company (since 1999). Popular property - book early."
+      },
+      "highlights": [],
+      "notes": "Charming waterfront cottage with BUNKIE for extra sleeping. 3 bedrooms + bunkie with queen bed = sleeps 8. Flat shoreline is ideal for kids. Clear water for snorkeling. 20 min from Wiarton. Boat docking available at Wiarton Marina. Boat launch at Big Bay 6km away. Pillows/blankets provided but bring your own linens/towels. Price estimated at ~$2,000/week for this category on Cottage Vacations.",
+      "photos": [
+        "/cottages/house-of-lords-georgian-bay/photo_1.jpg",
+        "/cottages/house-of-lords-georgian-bay/photo_5.jpg",
+        "/cottages/house-of-lords-georgian-bay/photo_6.jpg"
+      ],
+      "description": "House of Lords - Georgian Bay Waterfront",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "603-third-ave-sauble",
+      "name": "603 Third Avenue North",
+      "region": "Sauble Beach",
+      "url": "https://saublebeachcottagerentals.ca/rentals/603-third-ave-north/",
+      "platform": "Sauble Beach Cottage Rentals",
+      "pricePerWeek": 2200,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 10,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Less than 1-MINUTE WALK to Sauble Beach \u2014 11km of pristine sandy beach on Lake Huron. Warm shallow water, world-class sunsets. One of Ontario's best swimming beaches.",
+      "amenities": [
+        "WiFi",
+        "Portable AC",
+        "Smart TV",
+        "Gas Fireplace",
+        "Pool Table",
+        "Trampoline",
+        "Firepit",
+        "BBQ",
+        "Washer/Dryer",
+        "Full Kitchen",
+        "Dog Friendly (fee)"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "5 min",
+        "dianaKlaus": "2h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.634,
+        "lng": -81.265
+      },
+      "images": [
+        "/cottages/603-third-ave-sauble/photo_1.jpg",
+        "/cottages/603-third-ave-sauble/photo_2.jpg",
+        "/cottages/603-third-ave-sauble/photo_3.jpg",
+        "/cottages/603-third-ave-sauble/photo_4.jpg",
+        "/cottages/603-third-ave-sauble/photo_5.jpg",
+        "/cottages/603-third-ave-sauble/photo_6.jpg",
+        "/cottages/603-third-ave-sauble/photo_7.jpg",
+        "/cottages/603-third-ave-sauble/photo_8.jpg",
+        "/cottages/603-third-ave-sauble/photo_9.jpg",
+        "/cottages/603-third-ave-sauble/photo_10.jpg",
+        "/cottages/603-third-ave-sauble/photo_11.jpg",
+        "/cottages/603-third-ave-sauble/photo_12.jpg"
+      ],
+      "heroImage": null,
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "Sauble Beach Cottage Rentals",
+        "julyStatus": "unknown",
+        "julyNotes": "Calendar shows July 2026 \u2014 availability not yet fully marked. Contact office at 519-422-1313 for specific weeks. Saturday-Saturday rentals. Families only."
+      },
+      "highlights": [],
+      "notes": "Classic Sauble Beach cottage on a corner lot. 1 King, 1 Queen, 1 Double, 2 sets of single bunks + 2 pullout couches. Great for larger families. Pool table and trampoline keep kids busy. Price estimated ~$2,200/week for Sauble Beach in peak season. Managed by Sauble Beach Cottage Rentals (reputable local agency).",
+      "photos": [
+        "/cottages/603-third-ave-sauble/photo_1.jpg",
+        "/cottages/603-third-ave-sauble/photo_2.jpg",
+        "/cottages/603-third-ave-sauble/photo_3.jpg",
+        "/cottages/603-third-ave-sauble/photo_4.jpg",
+        "/cottages/603-third-ave-sauble/photo_5.jpg",
+        "/cottages/603-third-ave-sauble/photo_6.jpg",
+        "/cottages/603-third-ave-sauble/photo_7.jpg",
+        "/cottages/603-third-ave-sauble/photo_8.jpg",
+        "/cottages/603-third-ave-sauble/photo_9.jpg",
+        "/cottages/603-third-ave-sauble/photo_10.jpg",
+        "/cottages/603-third-ave-sauble/photo_11.jpg",
+        "/cottages/603-third-ave-sauble/photo_12.jpg"
+      ],
+      "description": "603 Third Avenue North",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "144-albemarle-sauble",
+      "name": "144 Albemarle Crescent",
+      "region": "Sauble Beach",
+      "url": "https://saublebeachcottagerentals.ca/rentals/144-albemarle-cres/",
+      "platform": "Sauble Beach Cottage Rentals",
+      "pricePerWeek": 2400,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 10,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "5-minute walk to Sauble Beach's famous 11km sandy shoreline on Lake Huron. Warm, shallow water perfect for families. World-class sunsets.",
+      "amenities": [
+        "WiFi",
+        "Central AC",
+        "Central Heat",
+        "Dishwasher",
+        "Washer/Dryer",
+        "BBQ",
+        "Firepit",
+        "Full Kitchen",
+        "Blender",
+        "4 Parking Spaces"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "5 min",
+        "dianaKlaus": "2h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 3,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.632,
+        "lng": -81.268
+      },
+      "images": [
+        "/cottages/144-albemarle-sauble/photo_1.jpg",
+        "/cottages/144-albemarle-sauble/photo_2.jpg",
+        "/cottages/144-albemarle-sauble/photo_3.jpg",
+        "/cottages/144-albemarle-sauble/photo_4.jpg",
+        "/cottages/144-albemarle-sauble/photo_5.jpg",
+        "/cottages/144-albemarle-sauble/photo_6.jpg",
+        "/cottages/144-albemarle-sauble/photo_7.jpg",
+        "/cottages/144-albemarle-sauble/photo_8.jpg",
+        "/cottages/144-albemarle-sauble/photo_9.jpg",
+        "/cottages/144-albemarle-sauble/photo_10.jpg",
+        "/cottages/144-albemarle-sauble/photo_11.jpg",
+        "/cottages/144-albemarle-sauble/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/144-albemarle-sauble/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "Sauble Beach Cottage Rentals",
+        "julyStatus": "unknown",
+        "julyNotes": "Calendar shows July 2026 dates. Contact office at 519-422-1313. Sunday-Sunday rentals. Families only. No pets."
+      },
+      "highlights": [],
+      "notes": "PREMIUM cottage on quiet crescent with exquisite landscaping. Bright and airy two-story. Central AC is a big plus for July heat. 3 Queen beds + bunk beds + pullout sofa. Two separate living areas. Covered back deck. Well-maintained grounds. No pets allowed. This is the upscale pick for Sauble Beach.",
+      "photos": [
+        "/cottages/144-albemarle-sauble/photo_1.jpg",
+        "/cottages/144-albemarle-sauble/photo_2.jpg",
+        "/cottages/144-albemarle-sauble/photo_3.jpg",
+        "/cottages/144-albemarle-sauble/photo_4.jpg",
+        "/cottages/144-albemarle-sauble/photo_5.jpg",
+        "/cottages/144-albemarle-sauble/photo_6.jpg",
+        "/cottages/144-albemarle-sauble/photo_7.jpg",
+        "/cottages/144-albemarle-sauble/photo_8.jpg",
+        "/cottages/144-albemarle-sauble/photo_9.jpg",
+        "/cottages/144-albemarle-sauble/photo_10.jpg",
+        "/cottages/144-albemarle-sauble/photo_11.jpg",
+        "/cottages/144-albemarle-sauble/photo_12.jpg"
+      ],
+      "description": "144 Albemarle Crescent",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "21-silver-lake-sauble",
+      "name": "21 Silver Lake Crescent",
+      "region": "Sauble Beach",
+      "url": "https://saublebeachcottagerentals.ca/rentals/21-silver-lake-crescent/",
+      "platform": "Sauble Beach Cottage Rentals",
+      "pricePerWeek": 1800,
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 7,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "10-minute walk to Lake Huron's sandy beach, plus minutes from Silver Lake shoreline. Two water bodies to choose from. Beach wagon and chairs provided. 2 kayaks + canoe included for water exploration.",
+      "amenities": [
+        "WiFi",
+        "Smart TV",
+        "Gas Fireplace",
+        "BBQ (direct gas)",
+        "Firepit",
+        "2 Kayaks",
+        "Canoe",
+        "Beach Wagon",
+        "Beach Chairs",
+        "Basketball Hoop",
+        "Hammock",
+        "PlayStation 4",
+        "Board Games",
+        "DVD Collection"
+      ],
+      "driveTimes": {
+        "groceries": "8 min",
+        "restaurants": "8 min",
+        "dianaKlaus": "2h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.629,
+        "lng": -81.258
+      },
+      "images": [
+        "/cottages/21-silver-lake-sauble/photo_1.jpg",
+        "/cottages/21-silver-lake-sauble/photo_2.jpg",
+        "/cottages/21-silver-lake-sauble/photo_3.jpg",
+        "/cottages/21-silver-lake-sauble/photo_4.jpg",
+        "/cottages/21-silver-lake-sauble/photo_5.jpg",
+        "/cottages/21-silver-lake-sauble/photo_6.jpg",
+        "/cottages/21-silver-lake-sauble/photo_7.jpg",
+        "/cottages/21-silver-lake-sauble/photo_8.jpg",
+        "/cottages/21-silver-lake-sauble/photo_9.jpg",
+        "/cottages/21-silver-lake-sauble/photo_10.jpg",
+        "/cottages/21-silver-lake-sauble/photo_11.jpg",
+        "/cottages/21-silver-lake-sauble/photo_12.jpg"
+      ],
+      "heroImage": "/cottages/21-silver-lake-sauble/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "Sauble Beach Cottage Rentals",
+        "julyStatus": "unknown",
+        "julyNotes": "Calendar shows July 2026. Contact office for availability. Saturday-Saturday rentals. No pets."
+      },
+      "highlights": [],
+      "notes": "Charming cottage nestled in trees with abundant privacy. Cathedral ceiling with stone propane fireplace. 2 Queen beds + single-over-double bunk. Access to BOTH Silver Lake and Lake Huron. The included kayaks and canoe are a huge bonus \u2014 explore Sauble by water. PS4 for rainy days. Budget-friendly at estimated $1,800/week. The best value pick for Sauble Beach.",
+      "photos": [
+        "/cottages/21-silver-lake-sauble/photo_1.jpg",
+        "/cottages/21-silver-lake-sauble/photo_2.jpg",
+        "/cottages/21-silver-lake-sauble/photo_3.jpg",
+        "/cottages/21-silver-lake-sauble/photo_4.jpg",
+        "/cottages/21-silver-lake-sauble/photo_5.jpg",
+        "/cottages/21-silver-lake-sauble/photo_6.jpg",
+        "/cottages/21-silver-lake-sauble/photo_7.jpg",
+        "/cottages/21-silver-lake-sauble/photo_8.jpg",
+        "/cottages/21-silver-lake-sauble/photo_9.jpg",
+        "/cottages/21-silver-lake-sauble/photo_10.jpg",
+        "/cottages/21-silver-lake-sauble/photo_11.jpg",
+        "/cottages/21-silver-lake-sauble/photo_12.jpg"
+      ],
+      "description": "21 Silver Lake Crescent",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "out-of-the-blue-port-elgin",
+      "name": "Out of the Blue - Family Cottage",
+      "region": "Port Elgin / Southampton",
+      "url": "https://www.cottagesincanada.com/23272",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2100,
+      "beds": 4,
+      "baths": 1,
+      "sleeps": 10,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "5-minute walk to Port Elgin's beautiful sandy beach on Lake Huron. North Shore Park Splash Pad nearby for kids. Sheltered swimming areas. Stunning sunsets over the lake.",
+      "amenities": [
+        "WiFi",
+        "Smart TV",
+        "Roku/Netflix",
+        "Gas Fireplace",
+        "BBQ",
+        "Firepit",
+        "Full Kitchen",
+        "Fenced Backyard",
+        "Covered Porch"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "5 min",
+        "dianaKlaus": "2h 15min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 4,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.442,
+        "lng": -81.395
+      },
+      "images": [
+        "/cottages/out-of-the-blue-port-elgin/photo_1.jpg",
+        "/cottages/out-of-the-blue-port-elgin/photo_2.jpg",
+        "/cottages/out-of-the-blue-port-elgin/photo_3.jpg",
+        "/cottages/out-of-the-blue-port-elgin/photo_4.jpg",
+        "/cottages/out-of-the-blue-port-elgin/photo_5.jpg",
+        "/cottages/out-of-the-blue-port-elgin/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/out-of-the-blue-port-elgin/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "mostly_available",
+        "julyNotes": "July shows first two weeks may have some bookings, but weeks of July 18-25 and July 25-Aug 1 appear available. Calendar updated Feb 4, 2026. Saturday-Saturday rentals."
+      },
+      "highlights": [],
+      "notes": "EXCELLENT VALUE at $2,100/week summer rate ($1,250 off-season). 15 photos on listing. 4 bedrooms: 2 queens + 2 double/single bunks. Fenced backyard big enough for badminton/volleyball. Walking distance to downtown, shopping, restaurants, beaches. 6 reviews all 5-stars. Bring your own linens/towels. $300 refundable deposit. Closest region to Sarnia at just 2h 15min drive. Near Diana & Klaus.",
+      "description": "Out of the Blue - Family Cottage",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "miramichi-bayview-port-elgin",
+      "name": "The Miramichi Bayview",
+      "region": "Port Elgin / Southampton",
+      "url": "https://www.cottagesincanada.com/35492",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2000,
+      "beds": 5,
+      "baths": 2,
+      "sleeps": 10,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Directly across the road from Miramichi Bay on Lake Huron. Sandy beach access steps away. Located on the Great Lakes Waterfront Trail for walking/biking along the lakeshore.",
+      "amenities": [
+        "WiFi",
+        "TV",
+        "BBQ",
+        "Firepit",
+        "Wood Stove",
+        "Washer/Dryer",
+        "Full Kitchen",
+        "Parking",
+        "Pet Friendly",
+        "Woodland Trail Access"
+      ],
+      "driveTimes": {
+        "groceries": "5 min (Port Elgin or Southampton)",
+        "restaurants": "5 min",
+        "dianaKlaus": "2h 15min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 5,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.46,
+        "lng": -81.4
+      },
+      "images": [
+        "/cottages/miramichi-bayview-port-elgin/photo_1.jpg",
+        "/cottages/miramichi-bayview-port-elgin/photo_2.jpg",
+        "/cottages/miramichi-bayview-port-elgin/photo_3.jpg",
+        "/cottages/miramichi-bayview-port-elgin/photo_4.jpg",
+        "/cottages/miramichi-bayview-port-elgin/photo_5.jpg",
+        "/cottages/miramichi-bayview-port-elgin/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/miramichi-bayview-port-elgin/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "unknown",
+        "julyNotes": "No availability calendar displayed on listing. Contact owner directly. Newly renovated four-season cottage."
+      },
+      "highlights": [],
+      "notes": "Newly renovated 4-season cottage BETWEEN Port Elgin and Southampton \u2014 best of both towns. 5 bedrooms (3 main floor + 2 basement) with 2 full baths. Basement has rec room with wood stove. Direct access to Woodland Trail from backyard. On the Great Lakes Waterfront Trail. Pet-friendly. Families or quiet groups only. World-famous Lake Huron sunsets from front deck. Estimated ~$2,000/week.",
+      "description": "The Miramichi Bayview",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "vfamilycottage-wasaga",
+      "name": "VFamily Cottage - Beach 4",
+      "region": "Wasaga Beach",
+      "url": "https://www.cottagesincanada.com/16292",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2400,
+      "beds": 3,
+      "baths": 3,
+      "sleeps": 10,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "1-minute walk to Beach Area 4 \u2014 one of the best stretches of Wasaga's 14km of sandy shoreline (longest freshwater beach in the world). Warm, shallow Georgian Bay water. Dog-friendly Beach 3 also within walking distance.",
+      "amenities": [
+        "WiFi (5G)",
+        "AC",
+        "TV",
+        "Full Kitchen",
+        "Firepit",
+        "BBQ",
+        "Parking"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "2 min (Tim Hortons, McDonald's)",
+        "dianaKlaus": "3h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 3,
+        "quiet": 4,
+        "value": 3,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.516,
+        "lng": -80.01
+      },
+      "images": [
+        "/cottages/vfamilycottage-wasaga/photo_1.jpg",
+        "/cottages/vfamilycottage-wasaga/photo_2.jpg",
+        "/cottages/vfamilycottage-wasaga/photo_3.jpg",
+        "/cottages/vfamilycottage-wasaga/photo_4.jpg",
+        "/cottages/vfamilycottage-wasaga/photo_5.jpg",
+        "/cottages/vfamilycottage-wasaga/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/vfamilycottage-wasaga/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "unknown",
+        "julyNotes": "Popular repeat-booking property. Contact owner Oswald directly. Multiple glowing reviews from July stays. $900-2,400/week range depending on season."
+      },
+      "highlights": [],
+      "notes": "PROVEN WINNER \u2014 8 reviews averaging 4.7/5 stars with multiple families rebooking year after year. Quiet dead-end street, no through traffic. Close to park for kids. Owner Oswald is responsive and accommodating. 15-20 min to Blue Mountain/Collingwood. Veranda with bay views. 5G WiFi is excellent. The most reviewed and trusted Wasaga option.",
+      "description": "VFamily Cottage - Beach 4",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "vfamilycottage-2-wasaga",
+      "name": "VFamily Cottage 2 - Steps to Beach 4",
+      "region": "Wasaga Beach",
+      "url": "https://www.cottagesincanada.com/42974",
+      "platform": "CottagesInCanada",
+      "pricePerWeek": 2000,
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 8,
+      "swimScore": 5,
+      "swimType": "Sandy",
+      "swimIcon": "beach",
+      "swimVerdict": "Steps from Beach Area 4 on Georgian Bay \u2014 14km of pristine sandy shoreline. Safe family-friendly beach with no public parking on the street (quiet). Kids can play freely. Listen to waves from the front patio.",
+      "amenities": [
+        "WiFi (High-speed)",
+        "Hardwood Floors",
+        "Front Porch",
+        "Back Deck/Patio",
+        "BBQ",
+        "Full Kitchen"
+      ],
+      "driveTimes": {
+        "groceries": "5 min",
+        "restaurants": "2 min",
+        "dianaKlaus": "3h 30min"
+      },
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 3,
+        "quiet": 4,
+        "value": 4,
+        "location": 3
+      },
+      "coordinates": {
+        "lat": 44.516,
+        "lng": -80.009
+      },
+      "images": [
+        "/cottages/vfamilycottage-2-wasaga/photo_1.jpg",
+        "/cottages/vfamilycottage-2-wasaga/photo_2.jpg",
+        "/cottages/vfamilycottage-2-wasaga/photo_3.jpg",
+        "/cottages/vfamilycottage-2-wasaga/photo_4.jpg",
+        "/cottages/vfamilycottage-2-wasaga/photo_5.jpg",
+        "/cottages/vfamilycottage-2-wasaga/photo_6.jpg"
+      ],
+      "heroImage": "/cottages/vfamilycottage-2-wasaga/photo_1.jpg",
+      "availability": {
+        "lastChecked": "2026-03-16",
+        "source": "CottagesInCanada",
+        "julyStatus": "unknown",
+        "julyNotes": "New listing (DI-42974). Part of dual-rental option \u2014 can combine with front cottage for groups up to 20. Contact owner for July 2026 weeks. $1,000-2,000/week range."
+      },
+      "highlights": [],
+      "notes": "Same great location as VFamily Cottage but newer listing. 3-bedroom bungalow with bright open living space and hardwood floors. Dead-end street with no public parking = extra safe for kids. Walk to Tim Hortons/McDonald's. 15-20 min to Blue Mountain. Can be rented alongside the front cottage for extended family groups up to 20. Budget-friendly at $1,000-2,000/week.",
+      "description": "VFamily Cottage 2 - Steps to Beach 4",
+      "guests": null,
+      "sourceTags": [
+        "CottagesInCanada"
+      ]
+    },
+    {
+      "id": "sandpiper-cottage",
+      "name": "Sandpiper Cottage",
+      "region": "Bayfield",
+      "url": "https://huronshorescottages.com/sandpiper-cottage/",
+      "platform": "Huron Shores Cottages (direct)",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "Sandy beach access via ~90 shared stairs (flights of 6-8 steps with platforms). Shared with sister cottage Shades of Blue.",
+      "amenities": [
+        "WiFi",
+        "Satellite TV",
+        "Amazon FireStick",
+        "Large Screen TV",
+        "Dishwasher",
+        "Full Kitchen",
+        "Fire Pit",
+        "Gas BBQ",
+        "2 Picnic Tables",
+        "Snug/Reading Nook",
+        "Dog Friendly"
+      ],
+      "coordinates": {
+        "lat": 43.573,
+        "lng": -81.698
+      },
+      "driveTimes": {
+        "groceries": "2 min (Bayfield)",
+        "restaurants": "2 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Rates page mentions 2026 rates but calendar rendering unclear. Weekly-only in July/August (Sun-Sun). Inquiry needed for specific weeks.",
+      "notes": "Classic rustic 3-season lakefront cottage. 2BR main cottage + 2BR bunkie. Max 8 people. 2.3km from Bayfield downtown. No linens/towels provided. $500 refundable security deposit. Sister cottage to Shades of Blue. Beds: BR1 single bunks (sleeps 2), BR2 queen (2), BR3 double (2), BR4 single-over-double bunk + single (3).",
+      "photos": [
+        "/cottages/sandpiper-cottage/photo_1.jpg",
+        "/cottages/sandpiper-cottage/photo_2.jpg",
+        "/cottages/sandpiper-cottage/photo_3.jpg",
+        "/cottages/sandpiper-cottage/photo_4.jpg",
+        "/cottages/sandpiper-cottage/photo_5.jpg",
+        "/cottages/sandpiper-cottage/photo_6.jpg",
+        "/cottages/sandpiper-cottage/photo_7.jpg",
+        "/cottages/sandpiper-cottage/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/sandpiper-cottage/photo_1.jpg",
+        "/cottages/sandpiper-cottage/photo_2.jpg",
+        "/cottages/sandpiper-cottage/photo_3.jpg",
+        "/cottages/sandpiper-cottage/photo_4.jpg",
+        "/cottages/sandpiper-cottage/photo_5.jpg",
+        "/cottages/sandpiper-cottage/photo_6.jpg",
+        "/cottages/sandpiper-cottage/photo_7.jpg",
+        "/cottages/sandpiper-cottage/photo_8.jpg"
+      ],
+      "description": "Sandpiper Cottage",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "charming-bayfield-cottage",
+      "name": "Charming Bayfield Cottage",
+      "region": "Bayfield",
+      "url": "https://www.vrbo.com/en-ca/cottage-rental/p3395371vb",
+      "platform": "VRBO",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": 5,
+      "swimType": "Sandy/Waterfront",
+      "swimVerdict": "Directly on Lake Huron waterfront with spacious lot. Double-wide lot backing right onto the water.",
+      "amenities": [
+        "WiFi",
+        "Gas Fireplace",
+        "Dishwasher",
+        "Laundry",
+        "BBQ",
+        "Firepit",
+        "3 Decks",
+        "Bunkie House"
+      ],
+      "coordinates": {
+        "lat": 43.565,
+        "lng": -81.7
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "VRBO listing \u2014 check availability on platform. 15 min drive to Grand Bend.",
+      "notes": "3 bedrooms + bunkie house with bunk beds. 2 full bathrooms. Double wide lot with three decks. Directly on Lake Huron waterfront. Host named Heather \u2014 described as excellent. Reviews praise spaciousness exceeding photos. 5 min to Bayfield, 15 min to Grand Bend.",
+      "photos": [],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [],
+      "description": "Charming Bayfield Cottage",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "id": "blue-haven-lakehouse",
+      "name": "Blue Haven Lakehouse",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/blue-haven/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 6,
+      "swimScore": 3,
+      "swimType": "Mixed sand/stone",
+      "swimVerdict": "Lake access with variable lakebed \u2014 sandy or stoney depending on conditions. Sand typically found 3ft out. Good for stone collecting. Not weedy or slimy. Water shoes recommended.",
+      "amenities": [
+        "WiFi",
+        "Lake View",
+        "Lake Access",
+        "Dog Friendly (2 dogs)",
+        "Noise Monitor"
+      ],
+      "coordinates": {
+        "lat": 43.56,
+        "lng": -81.695
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing/availability. License #BWSTR25-019.",
+      "notes": "3BR, 1 bath, sleeps 6. Max 2 dogs allowed (pet addendum required). Parking limited to 3 vehicles. Noise/temp/wifi monitoring device. Primary renter must be over 25. Parties strictly prohibited. Max occupancy 6 at all times.",
+      "photos": [
+        "/cottages/blue-haven-lakehouse/photo_1.jpg",
+        "/cottages/blue-haven-lakehouse/photo_2.jpg",
+        "/cottages/blue-haven-lakehouse/photo_3.jpg",
+        "/cottages/blue-haven-lakehouse/photo_4.jpg",
+        "/cottages/blue-haven-lakehouse/photo_5.jpg",
+        "/cottages/blue-haven-lakehouse/photo_6.jpg",
+        "/cottages/blue-haven-lakehouse/photo_7.jpg",
+        "/cottages/blue-haven-lakehouse/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/blue-haven-lakehouse/photo_1.jpg",
+        "/cottages/blue-haven-lakehouse/photo_2.jpg",
+        "/cottages/blue-haven-lakehouse/photo_3.jpg",
+        "/cottages/blue-haven-lakehouse/photo_4.jpg",
+        "/cottages/blue-haven-lakehouse/photo_5.jpg",
+        "/cottages/blue-haven-lakehouse/photo_6.jpg",
+        "/cottages/blue-haven-lakehouse/photo_7.jpg",
+        "/cottages/blue-haven-lakehouse/photo_8.jpg"
+      ],
+      "description": "Blue Haven Lakehouse",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "hideaway",
+      "name": "HideAway",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/hideaway/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 5,
+      "swimScore": 3,
+      "swimType": "Sandy (stairs)",
+      "swimVerdict": "Lake access via approx 45 stairs to beach. Includes kayaks, paddleboard & lake mat for water activities.",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Gas Fireplace",
+        "TV with FireStick",
+        "Netflix",
+        "Prime Video",
+        "Piano",
+        "Games",
+        "Cedar Barrel Sauna",
+        "EV Charger",
+        "Kayaks",
+        "Paddleboard",
+        "Lake Mat",
+        "Hammock",
+        "Espresso Maker",
+        "Propane BBQ",
+        "Charcoal BBQ",
+        "Fire Pit",
+        "Dishwasher",
+        "Ice Maker",
+        "Private Balcony",
+        "Dog Friendly (2 pets)"
+      ],
+      "coordinates": {
+        "lat": 43.555,
+        "lng": -81.69
+      },
+      "driveTimes": {
+        "groceries": "10 min (Bayfield)",
+        "restaurants": "10 min (Bayfield)",
+        "dianaKlaus": "1h 10min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing. $500 security deposit, $75 booking fee, $125 cleaning fee. Linen rental $20/person.",
+      "notes": "Standout property \u2014 newly added AC, panoramic window cedar barrel sauna (wood provided), EV charger. Upstairs master with NEW king bed, 2 downstairs queens. Upstairs + downstairs 3pc bathrooms with showers. Well-equipped kitchen with espresso maker, Ninja blender, ice maker. 10 min from Bayfield. Max 5 occupancy. License #BWSTR25-063.",
+      "photos": [
+        "/cottages/hideaway/photo_1.jpg",
+        "/cottages/hideaway/photo_2.jpg",
+        "/cottages/hideaway/photo_3.jpg",
+        "/cottages/hideaway/photo_4.jpg",
+        "/cottages/hideaway/photo_5.jpg",
+        "/cottages/hideaway/photo_6.jpg",
+        "/cottages/hideaway/photo_7.jpg",
+        "/cottages/hideaway/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/hideaway/photo_1.jpg",
+        "/cottages/hideaway/photo_2.jpg",
+        "/cottages/hideaway/photo_3.jpg",
+        "/cottages/hideaway/photo_4.jpg",
+        "/cottages/hideaway/photo_5.jpg",
+        "/cottages/hideaway/photo_6.jpg",
+        "/cottages/hideaway/photo_7.jpg",
+        "/cottages/hideaway/photo_8.jpg"
+      ],
+      "description": "HideAway",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "bedrock-beach-house",
+      "name": "Bedrock Beach House",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/bedrock_beach_house/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 2,
+      "baths": 1,
+      "sleeps": 5,
+      "swimScore": 4,
+      "swimType": "Sandy/Lakefront",
+      "swimVerdict": "Lakefront property designed to take advantage of lake views from every angle \u2014 kitchen, fireplace, hot tub, gazebo, and beach. Direct lake view and access.",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Gas Fireplace",
+        "Hot Tub",
+        "Lake View",
+        "Lake Access",
+        "Gazebo",
+        "Dog Friendly (2 pets)",
+        "Noise Monitor"
+      ],
+      "coordinates": {
+        "lat": 43.562,
+        "lng": -81.697
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing. Max occupancy 4 per listing terms (task says sleeps 5).",
+      "notes": "Open concept with reclaimed barn wood beams, thick stone walls, full wall of windows. Hot tub with lake views. Designed for immersive lakefront experience. Max occupancy listed as 4 on rental terms (original brief says sleeps 5). Parking limited to 3 vehicles. License #BWSTR25-054.",
+      "photos": [
+        "/cottages/bedrock-beach-house/photo_1.jpg",
+        "/cottages/bedrock-beach-house/photo_2.jpg",
+        "/cottages/bedrock-beach-house/photo_3.jpg",
+        "/cottages/bedrock-beach-house/photo_4.jpg",
+        "/cottages/bedrock-beach-house/photo_5.jpg",
+        "/cottages/bedrock-beach-house/photo_6.jpg",
+        "/cottages/bedrock-beach-house/photo_7.jpg",
+        "/cottages/bedrock-beach-house/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/bedrock-beach-house/photo_1.jpg",
+        "/cottages/bedrock-beach-house/photo_2.jpg",
+        "/cottages/bedrock-beach-house/photo_3.jpg",
+        "/cottages/bedrock-beach-house/photo_4.jpg",
+        "/cottages/bedrock-beach-house/photo_5.jpg",
+        "/cottages/bedrock-beach-house/photo_6.jpg",
+        "/cottages/bedrock-beach-house/photo_7.jpg",
+        "/cottages/bedrock-beach-house/photo_8.jpg"
+      ],
+      "description": "Bedrock Beach House",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "sunset-serenity-shorehouse",
+      "name": "Sunset Serenity Shorehouse",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/sunset-serenity-shorehouse/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 2,
+      "baths": 1,
+      "sleeps": 4,
+      "swimScore": 4,
+      "swimType": "Sandy/Lakefront",
+      "swimVerdict": "Lake view and lake access. Exceptional Bayfield beach cottage with stunning lake views inside and out.",
+      "amenities": [
+        "WiFi",
+        "Gas Fireplace",
+        "Hot Tub",
+        "AC",
+        "Lake View",
+        "Lake Access",
+        "Parking",
+        "Dog Friendly (1 dog)",
+        "Noise Monitor"
+      ],
+      "coordinates": {
+        "lat": 43.567,
+        "lng": -81.699
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Also listed on VRBO (#9548393ha) at ~$215/night avg and Airbnb (#47579306). Summer weekly rentals Sun-Sun via CottageStays. $257/night on Tripadvisor.",
+      "notes": "2BR, 1 bath, sleeps 4. Queen bed in master. Hot tub. Gas fireplace. Stunning lake views from inside. Full-size appliances, plenty of counter space. Max 1 well-behaved dog. Professionally managed by Jennifer at CottageStays. License #BWSTR25-072.",
+      "photos": [
+        "/cottages/sunset-serenity-shorehouse/photo_1.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_3.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_4.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_5.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_6.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_7.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/sunset-serenity-shorehouse/photo_1.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_3.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_4.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_5.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_6.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_7.jpg",
+        "/cottages/sunset-serenity-shorehouse/photo_8.jpg"
+      ],
+      "description": "Sunset Serenity Shorehouse",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "lakeshore-sunsets",
+      "name": "Lakeshore Sunsets",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/lakeshore-sunsets/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 2,
+      "baths": 1.5,
+      "sleeps": 5,
+      "swimScore": 4,
+      "swimType": "Sandy/Lakefront",
+      "swimVerdict": "Lake view and lake access. Unforgettable sunsets from the property.",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Gas Fireplace",
+        "Hot Tub",
+        "King Bed",
+        "Lake View",
+        "Lake Access",
+        "Dog Friendly (1 dog)",
+        "Noise Monitor"
+      ],
+      "coordinates": {
+        "lat": 43.564,
+        "lng": -81.698
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Summer weekly rentals. Contact CottageStays for pricing/availability. Winter cancellation policy is flexible (full refund if weather prevents travel).",
+      "notes": "2BR, 1.5 bath, sleeps 5. King bed \u2014 great for couples. Hot tub. Bright interiors. Perfect for family adventures or romantic escapes. Max 1 dog allowed. May have outdoor camera. License #BWSTR25-156.",
+      "photos": [
+        "/cottages/lakeshore-sunsets/photo_1.jpg",
+        "/cottages/lakeshore-sunsets/photo_2.jpg",
+        "/cottages/lakeshore-sunsets/photo_3.jpg",
+        "/cottages/lakeshore-sunsets/photo_4.jpg",
+        "/cottages/lakeshore-sunsets/photo_5.jpg",
+        "/cottages/lakeshore-sunsets/photo_6.jpg",
+        "/cottages/lakeshore-sunsets/photo_7.jpg",
+        "/cottages/lakeshore-sunsets/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/lakeshore-sunsets/photo_1.jpg",
+        "/cottages/lakeshore-sunsets/photo_2.jpg",
+        "/cottages/lakeshore-sunsets/photo_3.jpg",
+        "/cottages/lakeshore-sunsets/photo_4.jpg",
+        "/cottages/lakeshore-sunsets/photo_5.jpg",
+        "/cottages/lakeshore-sunsets/photo_6.jpg",
+        "/cottages/lakeshore-sunsets/photo_7.jpg",
+        "/cottages/lakeshore-sunsets/photo_8.jpg"
+      ],
+      "description": "Lakeshore Sunsets",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "jervis-bay",
+      "name": "Jervis Bay",
+      "region": "Bayfield",
+      "url": "https://cottagestays.ca/jervis-bay/",
+      "platform": "CottageStays",
+      "pricePerWeek": null,
+      "priceSource": "",
+      "beds": 2,
+      "baths": 0.5,
+      "sleeps": 4,
+      "swimScore": 5,
+      "swimType": "Sandy/Lakefront",
+      "swimVerdict": "Lakefront with lots of beach! Lower sunset deck with seating overlooking lake. Direct lake view and lake access. Paddleboard & lake mat rentals available mid-June to mid-Sept.",
+      "amenities": [
+        "WiFi",
+        "Wood Fireplace",
+        "TV with Roku",
+        "DVD Library",
+        "Propane BBQ",
+        "Outdoor Shower",
+        "Lower Sunset Deck",
+        "Adirondack Chairs",
+        "Outdoor Dining with Umbrella",
+        "Paddleboard Rentals",
+        "Lake Mat Rentals",
+        "Dog Friendly (1 small pet)"
+      ],
+      "coordinates": {
+        "lat": 43.568,
+        "lng": -81.7
+      },
+      "driveTimes": {
+        "groceries": "5 min (Bayfield)",
+        "restaurants": "5 min (Bayfield)",
+        "dianaKlaus": "1h 15min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Summer weekly rentals. $500 security deposit, $75 booking fee, $150 cleaning fee. Linen rental $20/person.",
+      "notes": "Vintage lakefront cottage with character. 2BR (both double beds) + pullout sofa. Half bathroom inside + outdoor shower only (no full indoor shower). Wood fireplace \u2014 real cottage feel. Lower sunset deck. Parking limited to 2 vehicles. Max 1 small pet. Playpen/highchair available on request. Kitchen: stove, oven, microwave, toaster, drip coffee maker, kettle, fridge.",
+      "photos": [
+        "/cottages/jervis-bay/photo_1.jpg",
+        "/cottages/jervis-bay/photo_2.jpg",
+        "/cottages/jervis-bay/photo_3.jpg",
+        "/cottages/jervis-bay/photo_4.jpg",
+        "/cottages/jervis-bay/photo_5.jpg",
+        "/cottages/jervis-bay/photo_6.jpg",
+        "/cottages/jervis-bay/photo_7.jpg",
+        "/cottages/jervis-bay/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 5,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/jervis-bay/photo_1.jpg",
+        "/cottages/jervis-bay/photo_2.jpg",
+        "/cottages/jervis-bay/photo_3.jpg",
+        "/cottages/jervis-bay/photo_4.jpg",
+        "/cottages/jervis-bay/photo_5.jpg",
+        "/cottages/jervis-bay/photo_6.jpg",
+        "/cottages/jervis-bay/photo_7.jpg",
+        "/cottages/jervis-bay/photo_8.jpg"
+      ],
+      "description": "Jervis Bay",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "martins-point-cottage",
+      "name": "Martin's Point Cottage",
+      "region": "Port Albert",
+      "url": "https://huronbeaches.ca/martins-point-cottage",
+      "platform": "HuronBeaches (direct)",
+      "pricePerWeek": 2080,
+      "priceSource": "",
+      "beds": 2,
+      "baths": 1,
+      "sleeps": 5,
+      "swimScore": 4,
+      "swimType": "Sandy/Private access",
+      "swimVerdict": "Private beach access via short walk down the hill. Uncrowded beach. Parking at beach can be arranged for those who can't manage the incline.",
+      "amenities": [
+        "WiFi",
+        "AC",
+        "Satellite TV",
+        "46\" HD TV",
+        "Netflix",
+        "Linens Provided",
+        "Towels Provided",
+        "Washing Machine",
+        "Propane BBQ",
+        "Campfire Pit",
+        "Wrap-Around Deck",
+        "Water Cooler",
+        "Iron & Board",
+        "Hair Dryer",
+        "Dog Friendly"
+      ],
+      "coordinates": {
+        "lat": 43.776,
+        "lng": -81.635
+      },
+      "driveTimes": {
+        "groceries": "5 min (general store) / 15 min (Goderich)",
+        "restaurants": "15 min (Goderich)",
+        "dianaKlaus": "1h 30min"
+      },
+      "julyStatus": "unknown",
+      "julyNotes": "Weekly rate C$1,889-2,080. Summer weeks sell out early. Book via secure site at huronbeaches.ca. Cancellation: 30+ days = full refund less $50 fee.",
+      "notes": "Step above usual cottage \u2014 described as 'conveniences of home with comfort of an excellent hotel.' Queen + double/single bunk beds (sleeps 5 max). Premium mattresses, fine linens & towels PROVIDED (unique among listings). Air conditioned. At end of dead-end road \u2014 very quiet. Hosts June & Keith nearby but leave you alone. 2h25min from Toronto. Pet fee C$60. C$400 pre-auth deposit. Also listed on CottagesInCanada (DI-25253) and TripAdvisor.",
+      "photos": [
+        "/cottages/martins-point-cottage/photo_2.jpg",
+        "/cottages/martins-point-cottage/photo_3.jpg",
+        "/cottages/martins-point-cottage/photo_4.jpg",
+        "/cottages/martins-point-cottage/photo_5.jpg",
+        "/cottages/martins-point-cottage/photo_6.jpg",
+        "/cottages/martins-point-cottage/photo_7.jpg",
+        "/cottages/martins-point-cottage/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": false,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/martins-point-cottage/photo_2.jpg",
+        "/cottages/martins-point-cottage/photo_3.jpg",
+        "/cottages/martins-point-cottage/photo_4.jpg",
+        "/cottages/martins-point-cottage/photo_5.jpg",
+        "/cottages/martins-point-cottage/photo_6.jpg",
+        "/cottages/martins-point-cottage/photo_7.jpg",
+        "/cottages/martins-point-cottage/photo_8.jpg"
+      ],
+      "description": "Martin's Point Cottage",
+      "guests": null,
+      "sourceTags": [
+        "Direct"
+      ]
+    },
+    {
+      "id": "airbnb-cozy-cabin-3-one-block-to-beach",
+      "name": "Cozy  Cabin #3 one block to beach",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/670358004249033249",
+      "platform": "Airbnb",
+      "airbnbId": "670358004249033249",
+      "pricePerWeek": 1772,
+      "beds": 2,
+      "baths": 1.0,
+      "sleeps": 5,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.3144,
+        "lng": -81.76231
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_8.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_9.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_10.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_11.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_12.jpg"
+      ],
+      "airbnbRating": 4.51,
+      "airbnbReviews": 43,
+      "superhost": false,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire guesthouse \u00b7 Prime location in the village of Grand Bend   1 block to Ontario's most beautiful beach. Enjoy Canada's best sunset. Rustic and cozy cabin, fire pi...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $5,315 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_8.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_9.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_10.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_11.jpg",
+        "/cottages/airbnb-cozy-cabin-3-one-block-to-beach/photo_12.jpg"
+      ],
+      "description": "Cozy  Cabin #3 one block to beach",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-the-brew-house",
+      "name": "The Brew House",
+      "region": "Lake Huron \u2014 Bayfield/Goderich",
+      "url": "https://www.airbnb.com/rooms/23881942",
+      "platform": "Airbnb",
+      "airbnbId": "23881942",
+      "pricePerWeek": 2388,
+      "beds": 2,
+      "baths": 1.5,
+      "sleeps": 4,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.75194,
+        "lng": -81.69828
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-the-brew-house/photo_1.jpg",
+        "/cottages/airbnb-the-brew-house/photo_2.jpg",
+        "/cottages/airbnb-the-brew-house/photo_3.jpg",
+        "/cottages/airbnb-the-brew-house/photo_4.jpg",
+        "/cottages/airbnb-the-brew-house/photo_5.jpg",
+        "/cottages/airbnb-the-brew-house/photo_6.jpg",
+        "/cottages/airbnb-the-brew-house/photo_7.jpg",
+        "/cottages/airbnb-the-brew-house/photo_8.jpg",
+        "/cottages/airbnb-the-brew-house/photo_9.jpg",
+        "/cottages/airbnb-the-brew-house/photo_10.jpg",
+        "/cottages/airbnb-the-brew-house/photo_11.jpg",
+        "/cottages/airbnb-the-brew-house/photo_12.jpg"
+      ],
+      "airbnbRating": 4.95,
+      "airbnbReviews": 187,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire home \u00b7 Our place is a 2 minute drive from the \"Prettiest Town in Canada\", Goderich, Ontario. It is a 1400sq ft, fully furnished,  space for people to enjo...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $7,164 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-the-brew-house/photo_1.jpg",
+        "/cottages/airbnb-the-brew-house/photo_2.jpg",
+        "/cottages/airbnb-the-brew-house/photo_3.jpg",
+        "/cottages/airbnb-the-brew-house/photo_4.jpg",
+        "/cottages/airbnb-the-brew-house/photo_5.jpg",
+        "/cottages/airbnb-the-brew-house/photo_6.jpg",
+        "/cottages/airbnb-the-brew-house/photo_7.jpg",
+        "/cottages/airbnb-the-brew-house/photo_8.jpg",
+        "/cottages/airbnb-the-brew-house/photo_9.jpg",
+        "/cottages/airbnb-the-brew-house/photo_10.jpg",
+        "/cottages/airbnb-the-brew-house/photo_11.jpg",
+        "/cottages/airbnb-the-brew-house/photo_12.jpg"
+      ],
+      "description": "The Brew House",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-coach-house-rustic-retreat",
+      "name": "Coach House Rustic Retreat",
+      "region": "Lake Huron \u2014 Lucan",
+      "url": "https://www.airbnb.com/rooms/31690026",
+      "platform": "Airbnb",
+      "airbnbId": "31690026",
+      "pricePerWeek": 1067,
+      "beds": 2,
+      "baths": 1.5,
+      "sleeps": 5,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.18851,
+        "lng": -81.4089
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_1.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_2.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_3.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_4.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_5.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_6.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_7.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_8.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_9.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_10.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_11.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_12.jpg"
+      ],
+      "airbnbRating": 4.92,
+      "airbnbReviews": 139,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire home \u00b7 The Coach House is a barn converted into a comfortable rustic 2 bedroom home with an attached yoga studio set on 2.5 acres in the heart of Lucan.  ...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $3,200 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_1.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_2.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_3.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_4.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_5.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_6.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_7.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_8.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_9.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_10.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_11.jpg",
+        "/cottages/airbnb-coach-house-rustic-retreat/photo_12.jpg"
+      ],
+      "description": "Coach House Rustic Retreat",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-the-retreat-on-mill-street",
+      "name": "The Retreat on Mill Street",
+      "region": "Lake Huron \u2014 Parkhill",
+      "url": "https://www.airbnb.com/rooms/616100882035972754",
+      "platform": "Airbnb",
+      "airbnbId": "616100882035972754",
+      "pricePerWeek": 2051,
+      "beds": 3,
+      "baths": 1.5,
+      "sleeps": 8,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.16482,
+        "lng": -81.68377
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_1.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_2.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_3.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_4.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_5.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_6.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_7.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_8.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_9.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_10.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_11.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_12.jpg"
+      ],
+      "airbnbRating": 4.96,
+      "airbnbReviews": 23,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire cottage \u00b7 Unwind and enjoy at The Mill Street Retreat with an entire cottage all to your self! With a spacious backyard and lots of room for your family and ...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $6,153 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_1.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_2.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_3.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_4.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_5.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_6.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_7.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_8.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_9.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_10.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_11.jpg",
+        "/cottages/airbnb-the-retreat-on-mill-street/photo_12.jpg"
+      ],
+      "description": "The Retreat on Mill Street",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-private-guest-suite",
+      "name": "Private Guest Suite",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/32874469",
+      "platform": "Airbnb",
+      "airbnbId": "32874469",
+      "pricePerWeek": 1389,
+      "beds": 2,
+      "baths": 1.0,
+      "sleeps": 4,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.25693,
+        "lng": -81.80976
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-private-guest-suite/photo_1.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_2.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_3.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_4.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_5.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_6.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_7.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_8.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_9.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_10.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_11.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_12.jpg"
+      ],
+      "airbnbRating": 4.87,
+      "airbnbReviews": 126,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire guest suite \u00b7 Located steps from the Pinery provincial park entrance  We offer  a lovely private basement suite with it's own entrance.  Fishing, hiking, bike ri...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $4,167 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-private-guest-suite/photo_1.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_2.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_3.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_4.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_5.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_6.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_7.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_8.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_9.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_10.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_11.jpg",
+        "/cottages/airbnb-private-guest-suite/photo_12.jpg"
+      ],
+      "description": "Private Guest Suite",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-grand-bend",
+      "name": "Grand Bend",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/1489364659814979610",
+      "platform": "Airbnb",
+      "airbnbId": "1489364659814979610",
+      "pricePerWeek": 1656,
+      "beds": 2,
+      "baths": 1.0,
+      "sleeps": 4,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.22423,
+        "lng": -81.85693
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-grand-bend/photo_1.jpg",
+        "/cottages/airbnb-grand-bend/photo_2.jpg",
+        "/cottages/airbnb-grand-bend/photo_3.jpg",
+        "/cottages/airbnb-grand-bend/photo_4.jpg",
+        "/cottages/airbnb-grand-bend/photo_5.jpg",
+        "/cottages/airbnb-grand-bend/photo_6.jpg",
+        "/cottages/airbnb-grand-bend/photo_7.jpg",
+        "/cottages/airbnb-grand-bend/photo_8.jpg",
+        "/cottages/airbnb-grand-bend/photo_9.jpg",
+        "/cottages/airbnb-grand-bend/photo_10.jpg",
+        "/cottages/airbnb-grand-bend/photo_11.jpg",
+        "/cottages/airbnb-grand-bend/photo_12.jpg"
+      ],
+      "airbnbRating": 5,
+      "airbnbReviews": 9,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire rental unit \u00b7 \ud83c\udf33 Escape to Walker Woods Retreat! \ud83c\udf43  Private basement suite sleeps 4 (queen bedroom + full sized sofa bed in second smaller room\u2014ideal for famili...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $4,969 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-grand-bend/photo_1.jpg",
+        "/cottages/airbnb-grand-bend/photo_2.jpg",
+        "/cottages/airbnb-grand-bend/photo_3.jpg",
+        "/cottages/airbnb-grand-bend/photo_4.jpg",
+        "/cottages/airbnb-grand-bend/photo_5.jpg",
+        "/cottages/airbnb-grand-bend/photo_6.jpg",
+        "/cottages/airbnb-grand-bend/photo_7.jpg",
+        "/cottages/airbnb-grand-bend/photo_8.jpg",
+        "/cottages/airbnb-grand-bend/photo_9.jpg",
+        "/cottages/airbnb-grand-bend/photo_10.jpg",
+        "/cottages/airbnb-grand-bend/photo_11.jpg",
+        "/cottages/airbnb-grand-bend/photo_12.jpg"
+      ],
+      "description": "Grand Bend",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-new-the-carlyle-302",
+      "name": "*New* The Carlyle 302",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/1218827003867958366",
+      "platform": "Airbnb",
+      "airbnbId": "1218827003867958366",
+      "pricePerWeek": 2899,
+      "beds": 2,
+      "baths": 2.0,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.31354,
+        "lng": -81.75726
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-new-the-carlyle-302/photo_1.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_2.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_3.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_4.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_5.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_6.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_7.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_8.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_9.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_10.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_11.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_12.jpg"
+      ],
+      "airbnbRating": 5,
+      "airbnbReviews": 3,
+      "superhost": false,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire rental unit \u00b7 Embark on an unforgettable adventure in Grand Bend's stunning Strip district! Located just steps from Grand Bend's main beach, you can take in stun...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $8,697 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-new-the-carlyle-302/photo_1.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_2.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_3.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_4.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_5.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_6.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_7.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_8.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_9.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_10.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_11.jpg",
+        "/cottages/airbnb-new-the-carlyle-302/photo_12.jpg"
+      ],
+      "description": "*New* The Carlyle 302",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-blue-skies-house",
+      "name": "Blue Skies House",
+      "region": "Lake Huron \u2014 Bayfield/Goderich",
+      "url": "https://www.airbnb.com/rooms/907440851616473681",
+      "platform": "Airbnb",
+      "airbnbId": "907440851616473681",
+      "pricePerWeek": 2957,
+      "beds": 3,
+      "baths": 2.0,
+      "sleeps": 6,
+      "swimScore": 3,
+      "swimType": "Lake Access",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.5598,
+        "lng": -81.6922
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 3,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-blue-skies-house/photo_1.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_2.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_3.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_4.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_5.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_6.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_7.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_8.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_9.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_10.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_11.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_12.jpg"
+      ],
+      "airbnbRating": 4.75,
+      "airbnbReviews": 4,
+      "superhost": true,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire cottage \u00b7 WIFI | AC | Games Room | 1 Hypoallergenic Dog Allowed  When it's time to unwind, sink into our comfy couches surrounding the smart TV, ready to bin...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $8,871 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-blue-skies-house/photo_1.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_2.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_3.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_4.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_5.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_6.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_7.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_8.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_9.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_10.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_11.jpg",
+        "/cottages/airbnb-blue-skies-house/photo_12.jpg"
+      ],
+      "description": "Blue Skies House",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-cozy-cabin-1-1-block-to-the-beach",
+      "name": "Cozy Cabin #1, 1 block to the beach.",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/668806742931498373",
+      "platform": "Airbnb",
+      "airbnbId": "668806742931498373",
+      "pricePerWeek": 1745,
+      "beds": 2,
+      "baths": 1.0,
+      "sleeps": 5,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.31433,
+        "lng": -81.76072
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_8.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_9.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_10.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_11.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_12.jpg"
+      ],
+      "airbnbRating": 4.62,
+      "airbnbReviews": 45,
+      "superhost": false,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire guesthouse \u00b7 Prime location in the village of Grand Bend   1 block to Ontario's most beautiful beach, enjoy Canada's best sunset! Rustic and cozy cabin, firepit...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $5,236 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_8.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_9.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_10.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_11.jpg",
+        "/cottages/airbnb-cozy-cabin-1-1-block-to-the-beach/photo_12.jpg"
+      ],
+      "description": "Cozy Cabin #1, 1 block to the beach.",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-cottage-in-grand-bend-with-rooftop-patio",
+      "name": "Cottage in Grand Bend with rooftop patio",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/6465758",
+      "platform": "Airbnb",
+      "airbnbId": "6465758",
+      "pricePerWeek": 2956,
+      "beds": 3,
+      "baths": 1.0,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.31613,
+        "lng": -81.75805
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_1.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_2.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_3.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_4.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_5.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_6.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_7.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_8.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_9.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_10.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_11.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_12.jpg"
+      ],
+      "airbnbRating": 4.5,
+      "airbnbReviews": 40,
+      "superhost": false,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire cottage \u00b7 AGE: 25 or older age requirement !!!  cottage is 3 blocks to the main beach 3 blocks to the main strip 2 short blocks to Highway 21. Located in a q...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $8,869 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_1.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_2.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_3.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_4.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_5.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_6.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_7.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_8.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_9.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_10.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_11.jpg",
+        "/cottages/airbnb-cottage-in-grand-bend-with-rooftop-patio/photo_12.jpg"
+      ],
+      "description": "Cottage in Grand Bend with rooftop patio",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "id": "airbnb-cozy-cabin-2-3-beds",
+      "name": "Cozy Cabin #2 , 3 beds.",
+      "region": "Lake Huron \u2014 Grand Bend",
+      "url": "https://www.airbnb.com/rooms/670338879487616691",
+      "platform": "Airbnb",
+      "airbnbId": "670338879487616691",
+      "pricePerWeek": 2102,
+      "beds": 2,
+      "baths": 1.0,
+      "sleeps": 6,
+      "swimScore": 4,
+      "swimType": "Sandy",
+      "swimVerdict": "",
+      "amenities": [],
+      "coordinates": {
+        "lat": 43.31247,
+        "lng": -81.76246
+      },
+      "driveTimes": {},
+      "gates": {
+        "threeWeeks": true,
+        "private": true,
+        "shoreline": true,
+        "dockAccess": false
+      },
+      "scores": {
+        "swimming": 4,
+        "amenities": 3,
+        "quiet": 3,
+        "value": 3,
+        "location": 3
+      },
+      "images": [
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_8.jpg"
+      ],
+      "airbnbRating": 4.66,
+      "airbnbReviews": 38,
+      "superhost": false,
+      "julyStatus": "available",
+      "julyNotes": "Available Jul 4-25 on Airbnb",
+      "notes": "Mar 16, 2026 \u00b7 Entire guesthouse \u00b7 Prime location in the village of Grand Bend 1 block to Ontario's most beautiful beach enjoy  Canada's best sunset. , fire pit, patio, bbq, flat top...",
+      "source": "apify",
+      "lastSynced": "2026-03-16",
+      "priceSource": "Airbnb (Jul 4-25 total: $6,305 CAD / 3 weeks)",
+      "photos": [
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_1.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_2.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_3.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_4.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_5.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_6.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_7.jpg",
+        "/cottages/airbnb-cozy-cabin-2-3-beds/photo_8.jpg"
+      ],
+      "description": "Cozy Cabin #2 , 3 beds.",
+      "guests": null,
+      "sourceTags": [
+        "Airbnb"
+      ]
+    },
+    {
+      "name": "Romantic Couples Getaway - Sauna, Hot Tub, Private Beach access, Hiking trails",
+      "slug": "romantic-couples-getaway-sauna-hot-tub-private-bea",
+      "url": "https://www.vrbo.com/3608831?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692818859&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=261&top_cur=USD&userIntent=&selectedRoomType=98468825&selectedRatePlan=0004f5ced56708954ed4993f0bccd2dda15a&expediaPropertyId=98468825",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1825,
+      "total3Weeks": 5475,
+      "currency": "USD",
+      "images": [
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_1.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_2.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_3.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_4.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_5.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_6.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_7.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "romantic-couples-getaway-sauna-hot-tub-private-bea",
+      "amenities": [],
+      "description": "Romantic Couples Getaway - Sauna, Hot Tub, Private Beach access, Hiking trails",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Cozy, rustic cottage minutes to a private beach",
+      "slug": "cozy-rustic-cottage-minutes-to-a-private-beach",
+      "url": "https://www.vrbo.com/20116319ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692818861&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=190&top_cur=USD&userIntent=&selectedRoomType=113308135&selectedRatePlan=0000a280cbb6c0404cbc9b1fc2546515bca7&expediaPropertyId=113308135",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1332,
+      "total3Weeks": 3996,
+      "currency": "USD",
+      "images": [
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_1.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_2.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_3.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_4.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_5.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_6.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_7.jpg",
+        "/cottages/cozy-rustic-cottage-minutes-to-a-private-beach/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "cozy-rustic-cottage-minutes-to-a-private-beach",
+      "amenities": [],
+      "description": "Cozy, rustic cottage minutes to a private beach",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Homey Cottage Studio on Lake Huron for Week-Long Getaway near Grand Bend, Ontario",
+      "slug": "homey-cottage-studio-on-lake-huron-for-week-long-g",
+      "url": "https://www.vrbo.com/5145679?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692821354&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=247&top_cur=USD&userIntent=&selectedRoomType=127228379&selectedRatePlan=0004f35af3ced6ca4186b42a762609c974e9&expediaPropertyId=127228379",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1727,
+      "total3Weeks": 5182,
+      "currency": "USD",
+      "images": [
+        "/cottages/homey-cottage-studio-on-lake-huron-for-week-long-g/photo_1.jpg",
+        "/cottages/homey-cottage-studio-on-lake-huron-for-week-long-g/photo_3.jpg",
+        "/cottages/homey-cottage-studio-on-lake-huron-for-week-long-g/photo_4.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "homey-cottage-studio-on-lake-huron-for-week-long-g",
+      "amenities": [],
+      "description": "Homey Cottage Studio on Lake Huron for Week-Long Getaway near Grand Bend, Ontario",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Port Franks Getaway",
+      "slug": "port-franks-getaway",
+      "url": "https://www.vrbo.com/pdp/lo/27434068?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692821363&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=260&top_cur=USD&userIntent=&selectedRoomType=220555878&selectedRatePlan=386094981&expediaPropertyId=27434068",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1821,
+      "total3Weeks": 5462,
+      "currency": "USD",
+      "images": [
+        "/cottages/port-franks-getaway/photo_1.jpg",
+        "/cottages/port-franks-getaway/photo_2.jpg",
+        "/cottages/port-franks-getaway/photo_3.jpg",
+        "/cottages/port-franks-getaway/photo_4.jpg",
+        "/cottages/port-franks-getaway/photo_5.jpg",
+        "/cottages/port-franks-getaway/photo_6.jpg",
+        "/cottages/port-franks-getaway/photo_7.jpg",
+        "/cottages/port-franks-getaway/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "port-franks-getaway",
+      "amenities": [],
+      "description": "Port Franks Getaway",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Perfect Family Vacation Cottage!!!",
+      "slug": "perfect-family-vacation-cottage",
+      "url": "https://www.vrbo.com/2084512?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692821366&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=299&top_cur=USD&userIntent=&selectedRoomType=59033685&selectedRatePlan=00042de02e5ea9134aa4919972d53773d00f&expediaPropertyId=59033685",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 2091,
+      "total3Weeks": 6274,
+      "currency": "USD",
+      "images": [
+        "/cottages/perfect-family-vacation-cottage/photo_1.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_2.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_3.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_4.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_5.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_6.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_7.jpg",
+        "/cottages/perfect-family-vacation-cottage/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "perfect-family-vacation-cottage",
+      "amenities": [],
+      "description": "Perfect Family Vacation Cottage!!!",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Luxury Studio Rental in a Charming Cottage on Lake Huron near Grand Bend, Ontario",
+      "slug": "luxury-studio-rental-in-a-charming-cottage-on-lake",
+      "url": "https://www.vrbo.com/5145471?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692821369&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=309&top_cur=USD&userIntent=&selectedRoomType=127227670&selectedRatePlan=00043d6a1a545e7c4ae281120a845a5d24f4&expediaPropertyId=127227670",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 2166,
+      "total3Weeks": 6497,
+      "currency": "USD",
+      "images": [],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "luxury-studio-rental-in-a-charming-cottage-on-lake",
+      "amenities": [],
+      "description": "Luxury Studio Rental in a Charming Cottage on Lake Huron near Grand Bend, Ontario",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Romantic Couples Getaway Sauna, Hot Tub, Private Beach access, Hiking trails",
+      "slug": "romantic-couples-getaway-sauna-hot-tub-private-bea",
+      "url": "https://www.vrbo.com/3361747?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692821373&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181878&destination=Grand+Bend%2C+Lambton+Shores%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.313038%2C-81.756226&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=282&top_cur=USD&userIntent=&selectedRoomType=92997060&selectedRatePlan=0004b668cae077094c5cbbfc5ff2e7f0a262&expediaPropertyId=92997060",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1972,
+      "total3Weeks": 5915,
+      "currency": "USD",
+      "images": [
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_1.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_2.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_3.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_4.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_5.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_6.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_7.jpg",
+        "/cottages/romantic-couples-getaway-sauna-hot-tub-private-bea/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "romantic-couples-getaway-sauna-hot-tub-private-bea",
+      "amenities": [],
+      "description": "Romantic Couples Getaway Sauna, Hot Tub, Private Beach access, Hiking trails",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "8 Minutes to Huron Sand Beaches. Prettiest Town Goderich",
+      "slug": "8-minutes-to-huron-sand-beaches-prettiest-town-god",
+      "url": "https://www.vrbo.com/9842772ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692808681&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=181877&destination=Goderich%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.742836%2C-81.713898&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=312&top_cur=USD&userIntent=&selectedRoomType=95567761&selectedRatePlan=0000b048adaf32a64287a7f0f228b42645d2&expediaPropertyId=95567761",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 2183,
+      "total3Weeks": 6548,
+      "currency": "USD",
+      "images": [
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_1.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_2.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_3.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_4.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_5.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_6.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_7.jpg",
+        "/cottages/8-minutes-to-huron-sand-beaches-prettiest-town-god/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "8-minutes-to-huron-sand-beaches-prettiest-town-god",
+      "amenities": [],
+      "description": "8 Minutes to Huron Sand Beaches. Prettiest Town Goderich",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Blue Skies House - Cool Games Room",
+      "slug": "blue-skies-house-cool-games-room",
+      "url": "https://www.vrbo.com/9835561ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692797265&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=279&top_cur=USD&userIntent=&selectedRoomType=95084336&selectedRatePlan=0000602198fa141e45b38774ee711f6821eb&expediaPropertyId=95084336",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1955,
+      "total3Weeks": 5866,
+      "currency": "USD",
+      "images": [
+        "/cottages/blue-skies-house-cool-games-room/photo_1.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_2.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_3.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_4.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_5.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_6.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_7.jpg",
+        "/cottages/blue-skies-house-cool-games-room/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "blue-skies-house-cool-games-room",
+      "amenities": [],
+      "description": "Blue Skies House - Cool Games Room",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Sip & Stay",
+      "slug": "sip-stay",
+      "url": "https://www.vrbo.com/9971122ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692797268&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=148&top_cur=USD&userIntent=&selectedRoomType=105955440&selectedRatePlan=000009a3b0c3ef9842e7b7c3e68cd4d9fd20&expediaPropertyId=105955440",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1037,
+      "total3Weeks": 3110,
+      "currency": "USD",
+      "images": [
+        "/cottages/sip-stay/photo_1.jpg",
+        "/cottages/sip-stay/photo_2.jpg",
+        "/cottages/sip-stay/photo_3.jpg",
+        "/cottages/sip-stay/photo_4.jpg",
+        "/cottages/sip-stay/photo_5.jpg",
+        "/cottages/sip-stay/photo_6.jpg",
+        "/cottages/sip-stay/photo_7.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "sip-stay",
+      "amenities": [],
+      "description": "Sip & Stay",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Cozy Bayfield Retreat \u2022 Pool & Hot Tub \u2022 15min to Grand Bend \u2022 Lake Huron Nearby",
+      "slug": "cozy-bayfield-retreat-pool-hot-tub-15min-to-grand",
+      "url": "https://www.vrbo.com/9980676ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692797270&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=312&top_cur=USD&userIntent=&selectedRoomType=106669323&selectedRatePlan=0000142b5ef8d2f84d79a49904f1bf0a1fde&expediaPropertyId=106669323",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 2187,
+      "total3Weeks": 6561,
+      "currency": "USD",
+      "images": [
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_1.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_2.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_3.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_4.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_5.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_6.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_7.jpg",
+        "/cottages/cozy-bayfield-retreat-pool-hot-tub-15min-to-grand/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "cozy-bayfield-retreat-pool-hot-tub-15min-to-grand",
+      "amenities": [],
+      "description": "Cozy Bayfield Retreat \u2022 Pool & Hot Tub \u2022 15min to Grand Bend \u2022 Lake Huron Nearby",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Beutt's Beach House - Private Lake Access",
+      "slug": "beutt-s-beach-house-private-lake-access",
+      "url": "https://www.vrbo.com/9710775ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692799525&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=421&top_cur=USD&userIntent=&selectedRoomType=83283833&selectedRatePlan=00001eb6d99baad94c9bb4b472a5cb20fcb5&expediaPropertyId=83283833",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 2948,
+      "total3Weeks": 8845,
+      "currency": "USD",
+      "images": [
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_1.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_2.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_3.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_4.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_5.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_6.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_7.jpg",
+        "/cottages/beutt-s-beach-house-private-lake-access/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "beutt-s-beach-house-private-lake-access",
+      "amenities": [],
+      "description": "Beutt's Beach House - Private Lake Access",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "Private Lake View Cottage on Lake Huron",
+      "slug": "private-lake-view-cottage-on-lake-huron",
+      "url": "https://www.vrbo.com/9667888ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692799528&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=274&top_cur=USD&userIntent=&selectedRoomType=76310962&selectedRatePlan=00004cfc032481e2469c98d8da015cdd886c&expediaPropertyId=76310962",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1915,
+      "total3Weeks": 5744,
+      "currency": "USD",
+      "images": [
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_1.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_2.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_3.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_4.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_5.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_6.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_7.jpg",
+        "/cottages/private-lake-view-cottage-on-lake-huron/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "private-lake-view-cottage-on-lake-huron",
+      "amenities": [],
+      "description": "Private Lake View Cottage on Lake Huron",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    },
+    {
+      "name": "2 bedroom small cottage 1 minute to beach OPTIONAL bunkie with queen bed",
+      "slug": "2-bedroom-small-cottage-1-minute-to-beach-optional",
+      "url": "https://www.vrbo.com/4438822ha?chkin=2026-07-04&chkout=2026-07-25&d1=2026-07-04&d2=2026-07-25&startDate=2026-07-04&endDate=2026-07-25&x_pwa=1&rfrr=HSR&pwa_ts=1773692799530&referrerUrl=aHR0cHM6Ly93d3cudnJiby5jb20vSG90ZWwtU2VhcmNo&useRewards=true&adults=2&regionId=6336300&destination=Bayfield%2C+Ontario%2C+Canada&destType=MARKET&latLong=43.560998%2C-81.695903&privacyTrackingState=CAN_NOT_TRACK&sort=RECOMMENDED&top_dp=273&top_cur=USD&userIntent=&selectedRoomType=39830493&selectedRatePlan=0000d2ebedf676234d0ab3bd8643bc375da0&expediaPropertyId=39830493",
+      "source": "vrbo-apify",
+      "region": "Lake Huron",
+      "lat": null,
+      "lng": null,
+      "bedrooms": null,
+      "bathrooms": null,
+      "weeklyPrice": 1911,
+      "total3Weeks": 5732,
+      "currency": "USD",
+      "images": [
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_1.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_2.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_3.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_4.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_5.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_6.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_7.jpg",
+        "/cottages/2-bedroom-small-cottage-1-minute-to-beach-optional/photo_8.jpg"
+      ],
+      "gates": {
+        "threeWeeks": null,
+        "privateCottage": null,
+        "privateShoreline": null,
+        "deepWater": null
+      },
+      "scores": {},
+      "dismissed": false,
+      "id": "2-bedroom-small-cottage-1-minute-to-beach-optional",
+      "amenities": [],
+      "description": "2 bedroom small cottage 1 minute to beach OPTIONAL bunkie with queen bed",
+      "guests": null,
+      "sourceTags": [
+        "VRBO"
+      ]
+    }
+  ]
+}

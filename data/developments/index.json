@@ -1,0 +1,287 @@
+{
+  "generatedAt": "2026-03-17T18:45:00.000Z",
+  "city": "Toronto",
+  "developments": [
+    {
+      "id": "1233-yonge-street",
+      "name": "1233 Yonge Street",
+      "location": "1233 Yonge St & 9 Woodlawn Ave E, Toronto, ON (SE corner Yonge & Woodlawn)",
+      "neighbourhood": "Summerhill",
+      "status": "Under review — City hearing April 1",
+      "developer": "Plazacorp / Firm Capital (operating as 1233Y Development LP)",
+      "architect": "Arcadis (IBI Group), originally BDP Quadrangle",
+      "planner": "Bousfields",
+      "heightStoreys": "49-53 storeys (163.5m)",
+      "units": "724-764 units (studios, 1BR, 2BR, 3BR)",
+      "type": "Mixed-use condo + rental replacement",
+      "keyDates": [
+        {
+          "label": "Original application",
+          "date": "2021-12-01",
+          "note": "13 storeys, 110 units"
+        },
+        {
+          "label": "Major revision",
+          "date": "2023-05-10",
+          "note": "Jumped to 49 storeys, 764 units — 36 extra storeys"
+        },
+        {
+          "label": "Latest revision",
+          "date": "2024-11-01",
+          "note": "Further increased to 53 storeys per UrbanToronto"
+        },
+        {
+          "label": "City committee hearing",
+          "date": "2026-04-01",
+          "note": "Bousfields presenting to committee — 2 weeks away!"
+        }
+      ],
+      "summary": "The most controversial development in Summerhill. Originally a modest 13-storey proposal, it has ballooned to 49-53 storeys — right at Summerhill Station. Replaces an existing 3-storey rental building. Includes 40 rental replacement units. Grey brick base with white metal tower. The jump from 13 to 53 storeys is aggressive and has drawn significant neighbourhood opposition.",
+      "images": {
+        "rendering": "/developments/1233-yonge-hero.jpg",
+        "gallery": [
+          "/developments/1233-yonge-rendering-1.jpg",
+          "/developments/1233-yonge-rendering-2.png",
+          "/developments/1233-yonge-rendering-3.png",
+          "/developments/1233-yonge-rendering-4.jpg"
+        ]
+      },
+      "renderingSources": [
+        "https://urbantoronto.ca/database/projects/1233-yonge.46977",
+        "https://storeys.com/revised-proposal-49-storeys-yonge-street-summerhill-station/",
+        "https://www.blogto.com/real-estate-toronto/2024/11/1233-yonge-street-toronto/"
+      ],
+      "sources": [
+        {
+          "name": "UrbanToronto Database",
+          "url": "https://urbantoronto.ca/database/projects/1233-yonge.46977"
+        },
+        {
+          "name": "Storeys — Revised Proposal (June 2023)",
+          "url": "https://storeys.com/revised-proposal-49-storeys-yonge-street-summerhill-station/"
+        },
+        {
+          "name": "BlogTO — Keeps Getting Taller (Nov 2024)",
+          "url": "https://www.blogto.com/real-estate-toronto/2024/11/1233-yonge-street-toronto/"
+        },
+        {
+          "name": "Summerhill Residents Association",
+          "url": "https://summerhillresidentsassociation.ca/f/new-development-1233-yonge-st-and-9-woodlawn-east"
+        }
+      ],
+      "placeId": "DEV_1233_YONGE"
+    },
+    {
+      "id": "yonge-birch-residences",
+      "name": "Yonge & Birch Residences",
+      "location": "1196-1210 Yonge St & 2-8 Birch Ave, Toronto, ON (NW corner Yonge & Birch)",
+      "neighbourhood": "Summerhill / Rosedale",
+      "status": "Revised OPA/SPA returned to City Council (Nov 2025)",
+      "developer": "Woodcliffe Landmark Properties",
+      "architect": "architects—Alliance (revised from KPMB Architects)",
+      "interiorDesign": "Brian Gluckstein Design",
+      "landscapeArchitect": "The Planning Partnership",
+      "heightStoreys": "32 storeys (133.7m)",
+      "units": "64 suites + office space",
+      "type": "Mixed-use condo, office, retail",
+      "keyDates": [
+        {
+          "label": "Original proposal",
+          "date": "2019-12-01",
+          "note": "14 storeys, 67 boutique suites (KPMB)"
+        },
+        {
+          "label": "Major revision",
+          "date": "2025-11-01",
+          "note": "Scaled to 32 storeys, added office, cut units, shifted rental replacement off-site"
+        }
+      ],
+      "summary": "Woodcliffe's boutique condo directly across from the Summerhill LCBO and North Toronto Station (restored by Woodcliffe in 2003). Originally a 14-storey, 67-suite boutique building — now revised to 32 storeys with 64 suites plus office space. Facade designed to extend the neighbourhood's traditional character along Yonge while the tower embraces contemporary architecture. Brian Gluckstein interiors.",
+      "images": {
+        "rendering": "/developments/yonge-birch-rendering-1.jpg",
+        "gallery": []
+      },
+      "renderingSources": [
+        "https://www.woodcliffe.ca/portfolio/yonge-and-birch-residences",
+        "https://marketvision.ca/projects/yonge-and-birch-residences",
+        "https://urbantoronto.ca/news/2025/11/yonge-and-birch-revisions-add-office-space-cut-units-summerhill.59787"
+      ],
+      "sources": [
+        {
+          "name": "Woodcliffe Official",
+          "url": "https://www.woodcliffe.ca/portfolio/yonge-and-birch-residences"
+        },
+        {
+          "name": "UrbanToronto — Revision (Nov 2025)",
+          "url": "https://urbantoronto.ca/news/2025/11/yonge-and-birch-revisions-add-office-space-cut-units-summerhill.59787"
+        },
+        {
+          "name": "UrbanToronto Database",
+          "url": "https://urbantoronto.ca/database/projects/1196-yonge.46721"
+        },
+        {
+          "name": "MarketVision (renderings)",
+          "url": "https://marketvision.ca/projects/yonge-and-birch-residences"
+        },
+        {
+          "name": "UrbanToronto Forum",
+          "url": "https://urbantoronto.ca/forum/threads/toronto-yonge-and-birch-residences-133-7m-32s-woodcliffe-a%E2%80%94a.30670/"
+        }
+      ],
+      "placeId": "DEV_YONGE_BIRCH"
+    },
+    {
+      "id": "135-st-clair-ave-w",
+      "name": "135 St Clair Ave W",
+      "location": "135 St Clair Ave W, Toronto, ON (SE corner St Clair & Avenue Rd)",
+      "neighbourhood": "Deer Park / Avenue & St Clair",
+      "status": "Proposal filed, facing strong local opposition",
+      "developer": "Fitzrovia Real Estate Inc.",
+      "architect": "Hariri Pontarini Architects",
+      "heightStoreys": "49 storeys",
+      "units": "631 purpose-built rental units",
+      "type": "Mixed-use rental, childcare, commercial",
+      "keyDates": [
+        {
+          "label": "Proposal filed",
+          "date": "2024-12-01",
+          "note": "49-storey rental tower replacing 1964 provincial office building"
+        },
+        {
+          "label": "Local opposition peaks",
+          "date": "2025-09-01",
+          "note": "Residents call it a 'giant monolith' and 'monstrosity'"
+        }
+      ],
+      "summary": "Fitzrovia's first project from their $1B DevCore Fund. Replaces a 14-storey mid-century office building (Ontario Ministry of Environment). 100-year lease structure — 'rent to build rentals.' 631 purpose-built rental units with childcare. Locals in the affluent Avenue & St Clair area are strongly opposed, calling it a 'giant monolith' that threatens neighbourhood character. Designed by the prestigious Hariri Pontarini Architects.",
+      "images": {
+        "rendering": "/developments/135-st-clair-rendering-1.png",
+        "gallery": [
+          "/developments/135-st-clair-rendering-2.png",
+          "/developments/135-st-clair-rendering-3.png",
+          "/developments/135-st-clair-rendering-4.png",
+          "/developments/135-st-clair-rendering-5.png"
+        ]
+      },
+      "renderingSources": [
+        "https://urbantoronto.ca/news/2024/12/49-storey-rental-tower-would-replace-mid-century-office-building-avenue-st-clair.57516",
+        "https://storeys.com/fitzrovia-rental-development-st-clair-west/",
+        "https://www.blogto.com/real-estate-toronto/2024/12/135-st-clair-avenue-west-toronto/"
+      ],
+      "sources": [
+        {
+          "name": "UrbanToronto (Dec 2024)",
+          "url": "https://urbantoronto.ca/news/2024/12/49-storey-rental-tower-would-replace-mid-century-office-building-avenue-st-clair.57516"
+        },
+        {
+          "name": "Storeys — Fitzrovia Proposal",
+          "url": "https://storeys.com/fitzrovia-rental-development-st-clair-west/"
+        },
+        {
+          "name": "BlogTO — Soaring Tower (Dec 2024)",
+          "url": "https://www.blogto.com/real-estate-toronto/2024/12/135-st-clair-avenue-west-toronto/"
+        },
+        {
+          "name": "BlogTO — Local Opposition (Sep 2025)",
+          "url": "https://www.blogto.com/real-estate-toronto/2025/09/135-st-clair-ave-w-toronto-opposition/"
+        },
+        {
+          "name": "Deer Park Residents Group",
+          "url": "https://deerparkresidents.ca/2025/09/25/135-st-clair-ave-west/"
+        }
+      ],
+      "placeId": "DEV_135_ST_CLAIR"
+    },
+    {
+      "id": "1220-yonge-street",
+      "name": "1220 Yonge Street",
+      "location": "1220 Yonge St, Toronto, ON (SW corner Yonge & Alcorn)",
+      "neighbourhood": "Summerhill",
+      "status": "Pre-construction",
+      "developer": "Trinity Point Development",
+      "architect": "BBB Architects",
+      "heightStoreys": "35 storeys",
+      "units": "273 suites",
+      "type": "Mixed-use condo",
+      "keyDates": [
+        {
+          "label": "Pre-construction phase",
+          "date": "2025-03-01",
+          "note": "Marketing and VIP sales stage"
+        }
+      ],
+      "summary": "Luxury 35-storey condo at Yonge & Alcorn in Summerhill. 273 suites including two massive 3BR penthouses (1,847 + 2,463 sqft) occupying the entire 22nd floor. Steps from Summerhill subway. Another significant density addition to the Yonge corridor.",
+      "images": {
+        "rendering": "/developments/1220-yonge-hero.jpg",
+        "gallery": [
+          "/developments/1220-yonge-rendering-1.jpg",
+          "/developments/1220-yonge-street-level.jpg",
+          "/developments/1220-yonge-exterior.jpg"
+        ]
+      },
+      "renderingSources": [
+        "https://urbantoronto.ca/database/projects/1220-yonge.49323",
+        "https://yolevski.com/preconstruction/1220-yonge"
+      ],
+      "sources": [
+        {
+          "name": "UrbanToronto Database",
+          "url": "https://urbantoronto.ca/database/projects/1220-yonge.49323"
+        },
+        {
+          "name": "Yolevski RE",
+          "url": "https://yolevski.com/preconstruction/1220-yonge"
+        },
+        {
+          "name": "GTA-Homes",
+          "url": "https://www.gta-homes.com/toronto-condos/1220-yonge-street/"
+        }
+      ]
+    },
+    {
+      "id": "one-roxborough-west",
+      "name": "One Roxborough West",
+      "location": "1086 Yonge St, Toronto, ON (Yonge & Roxborough)",
+      "neighbourhood": "Rosedale / Summerhill",
+      "status": "Development application filed",
+      "developer": "North Drive Investments Inc.",
+      "architect": "Reflect Architecture",
+      "heightStoreys": "12 storeys",
+      "units": "27 units (includes full-floor residences)",
+      "type": "Boutique mixed-use condo",
+      "keyDates": [
+        {
+          "label": "Application filed",
+          "date": "2024-09-01",
+          "note": "Demolishing existing neighbourhood hub at Yonge & Roxborough"
+        }
+      ],
+      "summary": "The boutique counterpoint to the mega-towers. Only 27 units across 12 storeys with several full-floor residences. Two-storey red brick base with contemporary upper facade. Contextually responsive design by Reflect Architecture. Replacing a popular Rosedale/Summerhill neighbourhood hub, which has drawn local concern despite the relatively modest scale.",
+      "images": {
+        "rendering": "/developments/one-roxborough-hero.jpg",
+        "gallery": [
+          "/developments/one-roxborough-rendering-1.jpg",
+          "/developments/one-roxborough-rendering-2.jpg"
+        ]
+      },
+      "renderingSources": [
+        "https://toronto.urbanize.city/post/north-drives-one-roxborough-west-coming-rosedale-summerhill",
+        "https://yolevski.com/preconstruction/one-roxborough-west"
+      ],
+      "sources": [
+        {
+          "name": "Urbanize Toronto",
+          "url": "https://toronto.urbanize.city/post/north-drives-one-roxborough-west-coming-rosedale-summerhill"
+        },
+        {
+          "name": "Post City News",
+          "url": "https://postcity.com/another-condo-tower-proposed-as-rosedale-and-summerhill-see-uptick-in-development-pressure/"
+        },
+        {
+          "name": "Yolevski RE",
+          "url": "https://yolevski.com/preconstruction/one-roxborough-west"
+        }
+      ]
+    }
+  ]
+}

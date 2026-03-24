@@ -1,0 +1,77 @@
+{
+  "generatedBy": "disco",
+  "generatedAt": "2026-03-17T19:00:00Z",
+  "note": "All images already downloaded to public/developments/. Paths are relative to public/.",
+  "developments": {
+    "1233-yonge-street": {
+      "hero": "/developments/1233-yonge-hero.jpg",
+      "gallery": [
+        "/developments/1233-yonge-rendering-1.jpg",
+        "/developments/1233-yonge-rendering-2.png",
+        "/developments/1233-yonge-rendering-3.png",
+        "/developments/1233-yonge-rendering-4.jpg"
+      ],
+      "sourceUrls": [
+        "https://storeys.com/media-library/skyscraper-proposed-summerhill-station.jpg?id=34677754&width=1245&height=700&quality=50",
+        "https://storeys.com/media-library/summerhill-4-min-1024x543.jpg?id=34678100&width=800&quality=50",
+        "https://storeys.com/media-library/summerhill-6-1024x566.png?id=34678092&width=800&quality=50",
+        "https://storeys.com/media-library/summerhill-3-1024x667.png?id=34678097&width=800&quality=50",
+        "https://storeys.com/media-library/summerhill-2-min-1024x673.jpg?id=34678103&width=800&quality=50"
+      ],
+      "attribution": "Arcadis / Storeys.com"
+    },
+    "yonge-birch-residences": {
+      "hero": "/developments/yonge-birch-rendering-1.jpg",
+      "gallery": [],
+      "sourceUrls": [
+        "https://marketvision.ca/wp-content/uploads/2023/11/marketvision_yongeandbirch_1-1024x576.jpg"
+      ],
+      "attribution": "architects—Alliance / MarketVision / Woodcliffe"
+    },
+    "135-st-clair-ave-w": {
+      "hero": "/developments/135-st-clair-rendering-1.png",
+      "gallery": [
+        "/developments/135-st-clair-rendering-2.png",
+        "/developments/135-st-clair-rendering-3.png",
+        "/developments/135-st-clair-rendering-4.png",
+        "/developments/135-st-clair-rendering-5.png"
+      ],
+      "sourceUrls": [
+        "https://storeys.com/media-library/image.png?id=55143434&width=800&quality=50",
+        "https://storeys.com/media-library/image.png?id=55143436&width=800&quality=50",
+        "https://storeys.com/media-library/image.png?id=55143437&width=800&quality=50",
+        "https://storeys.com/media-library/image.png?id=55143435&width=800&quality=50",
+        "https://storeys.com/media-library/image.png?id=55143433&width=800&quality=50"
+      ],
+      "attribution": "Hariri Pontarini Architects / Storeys.com"
+    },
+    "1220-yonge-street": {
+      "hero": "/developments/1220-yonge-hero.jpg",
+      "gallery": [
+        "/developments/1220-yonge-rendering-1.jpg",
+        "/developments/1220-yonge-street-level.jpg",
+        "/developments/1220-yonge-exterior.jpg"
+      ],
+      "sourceUrls": [
+        "https://images.squarespace-cdn.com/content/v1/5d4c3e9347459c0001703eb2/966a6da2-1e90-4f6f-a35d-880528026443/1220+Yonge+Summerhill+Condos+Trinity+Point+Development+Luxury+Toronto+Real+Estate+Yolevski.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5d4c3e9347459c0001703eb2/1737563919989-L9QPF0YZ4D70TN14TSDD/1220+Yonge+Summerhill+Condos+Trinity+Point+Development+Luxury+Toronto+Real+Estate+Yolevski.jpg?format=1000w",
+        "https://images.squarespace-cdn.com/content/v1/5d4c3e9347459c0001703eb2/1737563920144-FL5O8APXCTPAH9OCM0L2/1220+Yonge+Street+Level+Summerhill+Condos+Trinity+Point+Development+Luxury+Toronto+Real+Estate+Yolevski.jpg.jpg?format=750w",
+        "https://images.squarespace-cdn.com/content/v1/5d4c3e9347459c0001703eb2/1737563921353-JQUD2N65TVRYR14YYI5E/1220+Yonge+Summerhill+Condos+Exterior+Front+Rendering+Trinity+Point+Development+Luxury+Toronto+Real+Estate+Yolevski.jpg.jpg?format=500w"
+      ],
+      "attribution": "BBB Architects / Trinity Point Development / Yolevski RE"
+    },
+    "one-roxborough-west": {
+      "hero": "/developments/one-roxborough-hero.jpg",
+      "gallery": [
+        "/developments/one-roxborough-rendering-1.jpg",
+        "/developments/one-roxborough-rendering-2.jpg"
+      ],
+      "sourceUrls": [
+        "https://toronto.urbanize.city/sites/default/files/styles/2018_article_image_1140x538/public/background/2024-07/131e5bb3-1f74-b3d4-3f93-c44cd87a7dbc.jpg?itok=-X6K_EOu",
+        "https://toronto.urbanize.city/sites/default/files/styles/950w/public/2024-07/131e5bb3-1f74-b3d4-3f93-c44cd87a7dbc.jpg?itok=k6Q6fY4c",
+        "https://toronto.urbanize.city/sites/default/files/styles/950w/public/2024-07/2f548d3b-a2f5-a9bf-a0ae-cbf1d815958e.jpg?itok=yQGnEn7e"
+      ],
+      "attribution": "Reflect Architecture / Urbanize Toronto"
+    }
+  }
+}
