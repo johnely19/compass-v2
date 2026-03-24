@@ -10,6 +10,7 @@ interface ReviewHubClientProps {
   userId: string;
   contexts: Context[];
   archivedContexts?: Context[];
+  discoveryCounts?: Record<string, number>;
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -18,19 +19,21 @@ const TYPE_EMOJI: Record<string, string> = {
   radar: '📡',
 };
 
-export default function ReviewHubClient({ userId, contexts, archivedContexts = [] }: ReviewHubClientProps) {
+export default function ReviewHubClient({ userId, contexts, archivedContexts = [], discoveryCounts = {} }: ReviewHubClientProps) {
   const [counts, setCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
   const [showArchived, setShowArchived] = useState(false);
 
-  const allContexts = [...contexts, ...archivedContexts];
+  const allKeys = [...contexts, ...archivedContexts].map(c => c.key).join(',');
 
   const refresh = useCallback(() => {
-    const c: typeof counts = {};
-    for (const ctx of allContexts) {
+    const allCtxs = [...contexts, ...archivedContexts];
+    const c: Record<string, { saved: number; dismissed: number; resurfaced: number }> = {};
+    for (const ctx of allCtxs) {
       c[ctx.key] = getContextCounts(userId, ctx.key);
     }
     setCounts(c);
-  }, [userId, allContexts]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId, allKeys]);
 
   useEffect(() => {
     refresh();
@@ -65,6 +68,9 @@ export default function ReviewHubClient({ userId, contexts, archivedContexts = [
                     {c.saved > 0 && <span className="badge badge-success">✓ {c.saved}</span>}
                     {c.dismissed > 0 && <span className="badge badge-danger">✗ {c.dismissed}</span>}
                     {c.resurfaced > 0 && <span className="badge badge-warning">↻ {c.resurfaced}</span>}
+                    {c.saved === 0 && c.dismissed === 0 && c.resurfaced === 0 && (discoveryCounts[ctx.key] || 0) > 0 && (
+                      <span className="badge badge-muted">{discoveryCounts[ctx.key]} to review</span>
+                    )}
                   </div>
                 </div>
               </div>

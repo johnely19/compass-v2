@@ -21,6 +21,7 @@ interface IncomingDiscovery {
   city?: string;
   contextKey?: string;
   type?: string;
+  googleTypes?: string | string[];  // Google Places primaryType or types array
   place_id?: string;
   address?: string;
   rating?: number;
@@ -29,16 +30,65 @@ interface IncomingDiscovery {
   heroImage?: string;
 }
 
+/** Map Google Places API primaryType/types to Compass DiscoveryType */
+const GOOGLE_TYPE_MAP: Record<string, DiscoveryType> = {
+  // Galleries / Art
+  art_gallery: 'gallery', gallery: 'gallery', museum: 'museum',
+  // Nightlife
+  bar: 'bar', night_club: 'bar', pub: 'bar', brewery: 'bar', wine_bar: 'bar',
+  cocktail_bar: 'bar', sports_bar: 'bar', comedy_club: 'bar',
+  // Food
+  restaurant: 'restaurant', cafe: 'cafe', coffee_shop: 'cafe', bakery: 'cafe',
+  food: 'restaurant', meal_takeaway: 'restaurant', meal_delivery: 'restaurant',
+  // Culture
+  performing_arts_theater: 'theatre', theater: 'theatre', cinema: 'experience',
+  movie_theater: 'experience', movie_theatre: 'experience',
+  // Music
+  music_venue: 'music-venue', concert_hall: 'music-venue', jazz_club: 'music-venue',
+  live_music_venue: 'music-venue', karaoke: 'music-venue',
+  // Outdoors
+  park: 'park', national_park: 'park', state_park: 'park', playground: 'park',
+  beach: 'park', nature_reserve: 'park', campground: 'park',
+  // Architecture / Sights
+  tourist_attraction: 'experience', amusement_park: 'experience',
+  aquarium: 'experience', zoo: 'experience', botanical_garden: 'park',
+  // Shopping
+  shopping_mall: 'shop', store: 'shop', book_store: 'shop', clothing_store: 'shop',
+  // Accommodation
+  lodging: 'hotel', hotel: 'hotel', motel: 'hotel',
+  // Development
+  real_estate_agency: 'development',
+};
+
+function mapGoogleType(types: string | string[] | undefined, name?: string): DiscoveryType {
+  const typeList = Array.isArray(types) ? types : (types ? [types] : []);
+
+  // Try each Google type in the map
+  for (const t of typeList) {
+    const lower = t.toLowerCase().replace(/ /g, '_');
+    if (GOOGLE_TYPE_MAP[lower]) return GOOGLE_TYPE_MAP[lower];
+  }
+
+  // Name-based fallback
+  return inferType(name);
+}
+
 function inferType(name?: string): DiscoveryType {
   if (!name) return 'restaurant';
   const lower = name.toLowerCase();
-  if (/gallery|art\s/.test(lower)) return 'gallery';
-  if (/museum/.test(lower)) return 'museum';
-  if (/bar|wine|cocktail|brewery|pub\b/.test(lower)) return 'bar';
+  if (/gallery|fine art/.test(lower)) return 'gallery';
+  if (/museum|biennial/.test(lower)) return 'museum';
+  if (/cinema|nitehawk|film house|movie theater|imax/.test(lower)) return 'experience';
+  if (/roller.*arts|roller.*rink|skating|makerspace/.test(lower)) return 'experience';
+  if (/house of yes|concert hall|music.*hall|jazz.*club|nublu|the rex\b/.test(lower)) return 'music-venue';
+  if (/brewery|brew.*collective|brew.*co\b/.test(lower)) return 'bar';
+  if (/bar|wine|cocktail|pub\b/.test(lower)) return 'bar';
   if (/caf[eé]|coffee|bakery/.test(lower)) return 'cafe';
-  if (/theatre|theater|comedy/.test(lower)) return 'theatre';
-  if (/park|garden|beach/.test(lower)) return 'park';
+  if (/theatre|theater|comedy|improv/.test(lower)) return 'theatre';
+  if (/park|garden|beach|preserve/.test(lower)) return 'park';
   if (/hotel|inn\b|hostel/.test(lower)) return 'hotel';
+  if (/market|grocer|butcher/.test(lower)) return 'grocery';
+  if (/shop|store|book/.test(lower)) return 'shop';
   return 'restaurant';
 }
 
@@ -168,10 +218,15 @@ export async function POST(request: NextRequest) {
       continue;
     }
 
-    // Validate/infer type
+    // Validate/infer type — priority: explicit valid type > Google types > name inference
     let type: DiscoveryType;
     if (item.type && VALID_TYPES.has(item.type)) {
       type = item.type as DiscoveryType;
+    } else if (item.googleTypes) {
+      type = mapGoogleType(item.googleTypes, item.name);
+    } else if (item.type) {
+      // Try the Google type map even for non-standard type strings
+      type = mapGoogleType(item.type, item.name);
     } else {
       type = inferType(item.name);
     }

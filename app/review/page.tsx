@@ -1,5 +1,5 @@
 import { getCurrentUser } from '../_lib/user';
-import { getUserManifest } from '../_lib/user-data';
+import { getUserManifest, getUserDiscoveries } from '../_lib/user-data';
 import { getContextStatus } from '../_lib/context-lifecycle';
 import ReviewHubClient from '../_components/ReviewHubClient';
 
@@ -19,8 +19,20 @@ export default async function ReviewPage() {
     );
   }
 
-  const manifest = await getUserManifest(user.id);
+  const [manifest, discoveriesData] = await Promise.all([
+    getUserManifest(user.id),
+    getUserDiscoveries(user.id),
+  ]);
+
   const allContexts = manifest?.contexts ?? [];
+  const discoveries = discoveriesData?.discoveries ?? [];
+
+  // Count discoveries per context (server-side) — unreviewed count
+  const discoveryCounts: Record<string, number> = {};
+  for (const d of discoveries) {
+    const key = d.contextKey;
+    if (key) discoveryCounts[key] = (discoveryCounts[key] || 0) + 1;
+  }
 
   // Active + completed contexts shown in main section
   const activeContexts = allContexts.filter(c => {
@@ -39,6 +51,7 @@ export default async function ReviewPage() {
       userId={user.id}
       contexts={activeContexts}
       archivedContexts={archivedContexts}
+      discoveryCounts={discoveryCounts}
     />
   );
 }
