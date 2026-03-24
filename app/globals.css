@@ -2975,6 +2975,104 @@ body {
   margin: 0;
 }
 
+/* ── Rich narrative blocks ── */
+.place-detail-v2-narrative-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.narrative-block {
+  border-left: 3px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  padding-left: var(--space-md);
+}
+
+.narrative-block-travel {
+  border-left-color: color-mix(in srgb, var(--accent) 15%, transparent);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  border-left-width: 3px;
+}
+
+.narrative-block-check {
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  border-left-width: 2px;
+}
+
+.narrative-block-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.narrative-block-body p {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.narrative-block-body p:last-child { margin-bottom: 0; }
+.narrative-block-body br { display: block; margin: var(--space-xs) 0; content: ''; }
+
+.narrative-quote {
+  border-left: 3px solid var(--accent);
+  margin: var(--space-sm) 0;
+  padding: var(--space-xs) var(--space-md);
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.narrative-menu-item {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin: 2px 0;
+}
+
+.narrative-menu-highlight {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.narrative-section-header {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin: var(--space-md) 0 var(--space-xs) 0;
+}
+
+/* Food photo strip */
+.place-detail-v2-food-strip {
+  margin: 0 calc(-1 * var(--space-lg));
+}
+
+/* Identity bar */
+.place-detail-v2-identity-bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+/* Price level */
+.price-level {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.05em;
+}
+
 /* Identity rows */
 .place-detail-v2-identity {
   display: flex;

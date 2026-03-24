@@ -80,7 +80,15 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
   let rating: number | undefined;
   let reviewCount: number | undefined;
 
+  // Preserve prose blocks (title + body) for rich rendering
+  const narrativeBlocks: { title: string; body: string }[] = [];
+
   for (const block of blocks) {
+    // Prose blocks — the actual narrative content
+    if (block.title && block.body && typeof block.body === 'string') {
+      narrativeBlocks.push({ title: block.title as string, body: block.body as string });
+    }
+
     if (block.type === 'highlights' && Array.isArray(block.items)) {
       for (const item of block.items) {
         if (typeof item === 'string') highlights.push(item);
@@ -90,6 +98,17 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
 
     if (block.type === 'hours' && block.hours) {
       hours = block.hours as Record<string, string>;
+    }
+
+    // Also read hours from identity if available
+    if (!hours && Array.isArray((v1.identity as Record<string, unknown>)?.hours)) {
+      const rawHours = (v1.identity as Record<string, unknown>).hours as string[];
+      hours = {};
+      for (const h of rawHours) {
+        const parts = h.split(': ');
+        const day = parts[0];
+        if (parts.length >= 2 && day) hours[day] = parts.slice(1).join(': ');
+      }
     }
 
     if (block.type === 'images' && Array.isArray(block.images)) {
@@ -119,6 +138,22 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
     }
   }
 
+  // Also pull identity fields not in blocks
+  const identityFields: Record<string, unknown> = {
+    phone: (v1.identity as Record<string, unknown>)?.phone,
+    website: (v1.identity as Record<string, unknown>)?.website,
+    price_level: (v1.identity as Record<string, unknown>)?.price_level,
+    rating: (v1.identity as Record<string, unknown>)?.rating,
+    user_rating_count: (v1.identity as Record<string, unknown>)?.user_rating_count,
+    menu_link: (v1.identity as Record<string, unknown>)?.menu_link,
+    lat: (v1.identity as Record<string, unknown>)?.lat,
+    lng: (v1.identity as Record<string, unknown>)?.lng,
+    address: (v1.identity as Record<string, unknown>)?.address,
+    city: (v1.identity as Record<string, unknown>)?.city,
+  };
+  if (!rating && identityFields.rating) rating = identityFields.rating as number;
+  if (!reviewCount && identityFields.user_rating_count) reviewCount = identityFields.user_rating_count as number;
+
   // Merge images from manifest if available
   if (manifest) {
     const manifestImages = manifest.images as Array<{ path?: string; category?: string }> | undefined;
@@ -143,6 +178,16 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
       ...(menu ? { menu } : {}),
       ...(rating !== undefined ? { rating } : {}),
       ...(reviewCount !== undefined ? { reviewCount } : {}),
+      ...(narrativeBlocks.length > 0 ? { narrativeBlocks } : {}),
+      // Identity fields
+      ...(identityFields.phone ? { phone: identityFields.phone } : {}),
+      ...(identityFields.website ? { website: identityFields.website } : {}),
+      ...(identityFields.price_level !== undefined ? { price_level: identityFields.price_level } : {}),
+      ...(identityFields.menu_link ? { menu_link: identityFields.menu_link } : {}),
+      ...(identityFields.lat ? { lat: identityFields.lat } : {}),
+      ...(identityFields.lng ? { lng: identityFields.lng } : {}),
+      ...(identityFields.address ? { address: identityFields.address } : {}),
+      ...(identityFields.city ? { city: identityFields.city } : {}),
     },
   };
 }
