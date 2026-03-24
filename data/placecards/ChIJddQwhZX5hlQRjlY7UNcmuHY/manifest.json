@@ -3,59 +3,67 @@
   "images": [
     {
       "id": "outside-1",
-      "category": "outside",
+      "category": "exterior",
       "order": 1,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/outside-1.jpg",
-      "caption": "Street-facing arrival and exterior context"
+      "caption": "Street-facing arrival and exterior context",
+      "classified": true
     },
     {
       "id": "interior-vibe-1",
-      "category": "interior_vibe",
+      "category": "food",
       "order": 2,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/interior_vibe-1.jpg",
-      "caption": "Interior mood and seating vibe"
+      "caption": "Interior mood and seating vibe",
+      "classified": true
     },
     {
       "id": "interior-detail-1",
-      "category": "interior_detail",
+      "category": "food",
       "order": 3,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/interior_detail-1.jpg",
-      "caption": "Interior detail and finish"
+      "caption": "Interior detail and finish",
+      "classified": true
     },
     {
       "id": "food-1",
       "category": "food",
       "order": 4,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/food-1.jpg",
-      "caption": "Dish and plating reference"
+      "caption": "Dish and plating reference",
+      "classified": true
     },
     {
       "id": "drinks-1",
-      "category": "drinks",
+      "category": "food",
       "order": 5,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/drinks-1.jpg",
-      "caption": "Beverage program reference"
+      "caption": "Beverage program reference",
+      "classified": true
     },
     {
       "id": "check-1",
-      "category": "check",
+      "category": "food",
       "order": 6,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/check-1.jpg",
-      "caption": "Receipt/check visual context"
+      "caption": "Receipt/check visual context",
+      "classified": true
     },
     {
       "id": "exterior-1",
       "category": "exterior",
       "order": 7,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/exterior.jpg",
-      "caption": "The Broken Seal is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe."
+      "caption": "The Broken Seal is a currently operating Squamish-area restaurant with strong local demand and a casual destination vibe.",
+      "classified": true
     },
     {
       "id": "map-1",
       "category": "map",
       "order": 8,
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJddQwhZX5hlQRjlY7UNcmuHY/map.png",
-      "caption": "📍 The Broken Seal\n38038 Loggers Ln, Squamish, BC V8B 0V7, Canada"
+      "caption": "📍 The Broken Seal\n38038 Loggers Ln, Squamish, BC V8B 0V7, Canada",
+      "classified": true
     }
   ]
 }

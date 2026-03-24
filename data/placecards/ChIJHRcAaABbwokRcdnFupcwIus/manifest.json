@@ -3,10 +3,11 @@
     {
       "id": "gmap-1",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHRcAaABbwokRcdnFupcwIus/photo_1.jpg",
-      "category": "interior_vibe",
+      "category": "food",
       "caption": "",
       "order": 1,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-2",
@@ -14,15 +15,17 @@
       "category": "food",
       "caption": "",
       "order": 2,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-3",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHRcAaABbwokRcdnFupcwIus/photo_3.jpg",
-      "category": "interior_detail",
+      "category": "food",
       "caption": "",
       "order": 3,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-4",
@@ -30,23 +33,26 @@
       "category": "food",
       "caption": "",
       "order": 4,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-5",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHRcAaABbwokRcdnFupcwIus/photo_5.jpg",
-      "category": "drinks",
+      "category": "food",
       "caption": "",
       "order": 5,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-6",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHRcAaABbwokRcdnFupcwIus/photo_6.jpg",
-      "category": "interior_vibe",
+      "category": "food",
       "caption": "",
       "order": 6,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-7",
@@ -54,15 +60,17 @@
       "category": "food",
       "caption": "",
       "order": 7,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     },
     {
       "id": "gmap-8",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHRcAaABbwokRcdnFupcwIus/photo_8.jpg",
-      "category": "outside",
+      "category": "food",
       "caption": "",
       "order": 8,
-      "source": "google_maps"
+      "source": "google_maps",
+      "classified": true
     }
   ],
   "place_id": "ChIJHRcAaABbwokRcdnFupcwIus"

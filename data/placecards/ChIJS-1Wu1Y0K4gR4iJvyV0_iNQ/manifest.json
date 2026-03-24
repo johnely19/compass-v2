@@ -6,14 +6,16 @@
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJS-1Wu1Y0K4gR4iJvyV0_iNQ/photos/1.jpg",
       "category": "exterior",
       "caption": "",
-      "order": 1
+      "order": 1,
+      "classified": true
     },
     {
       "id": "photo-2",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJS-1Wu1Y0K4gR4iJvyV0_iNQ/photos/2.jpg",
       "category": "exterior",
       "caption": "",
-      "order": 2
+      "order": 2,
+      "classified": true
     }
   ]
 }

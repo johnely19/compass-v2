@@ -4,16 +4,18 @@
     {
       "id": "photo-1",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJUV6ZXAk1K4gRGWxcW_9swuE/photos/1.jpg",
-      "category": "exterior",
+      "category": "interior",
       "caption": "",
-      "order": 1
+      "order": 1,
+      "classified": true
     },
     {
       "id": "photo-2",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJUV6ZXAk1K4gRGWxcW_9swuE/photos/2.jpg",
       "category": "exterior",
       "caption": "",
-      "order": 2
+      "order": 2,
+      "classified": true
     }
   ]
 }

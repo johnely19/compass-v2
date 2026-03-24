@@ -6,14 +6,16 @@
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJB6Ujd-o1K4gR5-h6Y2xQ1QA/photos/1.jpg",
       "category": "exterior",
       "caption": "",
-      "order": 1
+      "order": 1,
+      "classified": true
     },
     {
       "id": "photo-2",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJB6Ujd-o1K4gR5-h6Y2xQ1QA/photos/2.jpg",
-      "category": "exterior",
+      "category": "food",
       "caption": "",
-      "order": 2
+      "order": 2,
+      "classified": true
     }
   ]
 }

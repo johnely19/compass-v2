@@ -4,16 +4,18 @@
     {
       "id": "photo-1",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJZ4QaXF3L1IkRB8F5wt3LpQ8/photos/1.jpg",
-      "category": "exterior",
+      "category": "drinks",
       "caption": "",
-      "order": 1
+      "order": 1,
+      "classified": true
     },
     {
       "id": "photo-2",
       "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJZ4QaXF3L1IkRB8F5wt3LpQ8/photos/2.jpg",
-      "category": "exterior",
+      "category": "drinks",
       "caption": "",
-      "order": 2
+      "order": 2,
+      "classified": true
     }
   ]
 }
