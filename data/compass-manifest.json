@@ -8,7 +8,7 @@
       "emoji": "\ud83d\uddfd",
       "type": "trip",
       "city": "New York",
-      "dates": "April 27-30, 2026",
+      "dates": "2026-04-27 to 2026-04-30",
       "focus": [
         "Brooklyn food scene",
         "galleries",
@@ -16,7 +16,41 @@
         "jazz",
         "architecture"
       ],
-      "active": true
+      "active": true,
+      "bookingStatus": "fully-booked",
+      "travel": {
+        "outbound": {
+          "date": "2026-04-27",
+          "flight": "AC 8534",
+          "operator": "Air Canada Express - Jazz",
+          "aircraft": "De Havilland Dash 8-400",
+          "from": "Toronto Island (YTZ)",
+          "to": "LaGuardia (LGA)",
+          "terminal": "Terminal B",
+          "departs": "11:00",
+          "arrives": "12:21",
+          "cabin": "Economy Class (G)",
+          "duration": "1hr 21m"
+        },
+        "return": {
+          "date": "2026-04-30",
+          "flight": "AC 8535",
+          "operator": "Air Canada Express - Jazz",
+          "aircraft": "De Havilland Dash 8-400",
+          "from": "LaGuardia (LGA)",
+          "to": "Toronto Island (YTZ)",
+          "terminal": "Terminal B",
+          "departs": "13:00",
+          "arrives": "14:39",
+          "cabin": "Economy Class (G)",
+          "duration": "1hr 39m"
+        }
+      },
+      "accommodation": {
+        "name": "Arnold's",
+        "address": "126 Leonard St",
+        "status": "booked"
+      }
     },
     {
       "key": "trip:cottage-july-2026",
