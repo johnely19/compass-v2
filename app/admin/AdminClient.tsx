@@ -122,18 +122,16 @@ const AGENT_ORDER: Record<string, number> = { main: 0, devclaw: 1, disco: 2 };
 
 /* ---- Collapsible Section ---- */
 
-function Section({ title, emoji, defaultOpen = true, count, children }: {
+function Section({ title, emoji, count, children }: {
   title: string; emoji: string; defaultOpen?: boolean; count?: number;
   children: React.ReactNode;
 }) {
-  const [open, setOpen] = useState(defaultOpen);
   return (
     <div className="admin-v2-section">
-      <div className="admin-v2-section-header" onClick={() => setOpen(!open)}>
+      <div className="admin-v2-section-header">
         <h2><span>{emoji}</span> {title}{count != null ? ` (${count})` : ''}</h2>
-        <span className={`admin-v2-section-toggle ${open ? 'open' : ''}`}>▸</span>
       </div>
-      {open && <div className="admin-v2-section-content">{children}</div>}
+      <div className="admin-v2-section-content">{children}</div>
     </div>
   );
 }

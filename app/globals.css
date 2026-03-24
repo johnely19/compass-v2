@@ -2842,25 +2842,18 @@ body {
 
 /* Collapsible admin sections */
 .admin-v2-section {
-  margin-bottom: var(--space-md);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
-  background: var(--card-bg);
-  overflow: hidden;
+  margin-bottom: var(--space-lg);
 }
 
 .admin-v2-section-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-md) var(--space-lg);
-  cursor: pointer;
-  user-select: none;
-  transition: background 0.15s ease;
+  padding: var(--space-sm) 0;
 }
 
 .admin-v2-section-header:hover {
-  background: var(--bg-secondary);
+  background: none;
 }
 
 .admin-v2-section-header h2 {
@@ -2873,18 +2866,16 @@ body {
 }
 
 .admin-v2-section-toggle {
-  font-size: 1.2rem;
-  color: var(--text-muted);
-  transition: transform 0.2s ease;
+  display: none;
 }
 
 .admin-v2-section-toggle.open {
-  transform: rotate(90deg);
+  display: none;
 }
 
 .admin-v2-section-content {
   padding: 0 var(--space-lg) var(--space-lg);
-  border-top: 1px solid var(--card-border);
+  border-top: none;
 }
 
 /* Relative time helper */

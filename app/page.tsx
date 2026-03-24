@@ -26,7 +26,7 @@ function loadLocalDiscoveries(): Discovery[] {
   if (!existsSync(p)) return [];
   try {
     const raw = JSON.parse(readFileSync(p, 'utf8'));
-    return (raw.discoveries ?? []) as Discovery[];
+    return (Array.isArray(raw) ? raw : (raw.discoveries ?? [])) as Discovery[];
   } catch { return []; }
 }
 
@@ -84,9 +84,11 @@ export default async function HomePage() {
   ];
 
   // Enrich discoveries with resolved image URLs
+  // Priority: heroImage field (already resolved) > manifest fallback
   const enrichedDiscoveries = discoveries.map(d => {
-    let heroImage = resolveImageUrl(d.heroImage);
-    // Fallback: pull from place card manifest if no heroImage
+    // 1. Use heroImage if present
+    let heroImage: string | null = resolveImageUrl(d.heroImage);
+    // 2. Fall back to manifest
     if (!heroImage && d.place_id) {
       heroImage = getManifestHeroImage(d.place_id);
     }

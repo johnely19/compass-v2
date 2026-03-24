@@ -21,8 +21,10 @@ const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
 export function resolveImageUrl(path: string | undefined | null): string | null {
   if (!path) return null;
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  // Local public assets — serve directly, don't prefix with Blob URL
+  if (path.startsWith('/developments/') || path.startsWith('/cottages/')) return path;
+  // Place photos — prefix with Blob base URL
   if (path.startsWith('/') && BLOB_BASE) return `${BLOB_BASE}${path}`;
-  // Relative without leading slash — try Blob base anyway
   if (BLOB_BASE && !path.startsWith('.')) return `${BLOB_BASE}/${path}`;
   return path;
 }
