@@ -50,7 +50,92 @@
         "name": "Arnold's",
         "address": "126 Leonard St",
         "status": "booked"
-      }
+      },
+      "purpose": "Dessa's art show (Tue Apr 28 evening) + Brooklyn exploration",
+      "people": [
+        {
+          "name": "Dessa",
+          "relation": "daughter",
+          "base": "Ridgewood, Brooklyn",
+          "note": "Art show Tue Apr 28 evening. Busy Wed 2-6pm (Cooper Union class)."
+        },
+        {
+          "name": "Dean",
+          "relation": "Dessa's partner",
+          "note": "Has a clothing store worth visiting."
+        },
+        {
+          "name": "Arnold",
+          "relation": "friend",
+          "note": "Hosting John at 126 Leonard St, Williamsburg."
+        }
+      ],
+      "schedule": [
+        {
+          "date": "2026-04-27",
+          "notes": "Arrive LGA ~12:21. Settle into Arnold's."
+        },
+        {
+          "date": "2026-04-28",
+          "notes": "Evening: Dessa's art show \u2192 drinks after. Visit Dean's store."
+        },
+        {
+          "date": "2026-04-29",
+          "notes": "2-6pm: Dessa busy (class). Good solo museum day. Evening free."
+        },
+        {
+          "date": "2026-04-30",
+          "notes": "Depart LGA 13:00. Morning free."
+        }
+      ],
+      "priorities": [
+        "Dessa's art show",
+        "Art galleries + exhibitions (Guggenheim Carol Bove, MoMA Marcel Duchamp, Whitney Biennial)",
+        "Brooklyn food scene (Williamsburg \u2192 Bushwick \u2192 Ridgewood corridor)",
+        "Natural wine bars",
+        "Jazz (Williamsburg Music Center, Ornithology)",
+        "Comedy Cellar (monitoring reservations from Apr 13)"
+      ],
+      "not_this_trip": [
+        "theatre"
+      ],
+      "base": {
+        "address": "126 Leonard St, Williamsburg, Brooklyn",
+        "host": "Arnold",
+        "zone": "Williamsburg \u2192 Bushwick \u2192 Ridgewood corridor"
+      },
+      "anchor_experiences": [
+        {
+          "name": "Guggenheim \u2013 Carol Bove Rotunda",
+          "type": "gallery",
+          "note": "Free ticket in desk drawer"
+        },
+        {
+          "name": "MoMA \u2013 Marcel Duchamp Retrospective",
+          "type": "museum",
+          "note": "First major retrospective in 50+ years. Opens Apr 12."
+        },
+        {
+          "name": "Whitney Biennial 2026",
+          "type": "gallery",
+          "note": "82nd edition, heavy Brooklyn representation"
+        },
+        {
+          "name": "The Four Horsemen",
+          "type": "bar",
+          "note": "James Murphy's natural wine bar, 295 Grand St. Book Resy ahead."
+        },
+        {
+          "name": "Domino Park",
+          "type": "park",
+          "note": "Walking distance from Arnold's. Manhattan skyline views."
+        },
+        {
+          "name": "Comedy Cellar",
+          "type": "comedy",
+          "note": "MONITORING from Apr 13. Standby strategy: arrive hours early."
+        }
+      ]
     },
     {
       "key": "trip:cottage-july-2026",

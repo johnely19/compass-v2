@@ -105,11 +105,59 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
     }
     card = adaptCard(raw, manifest);
   } else {
-    // Fallback: check cottage data
+    // Fallback 1: check cottage data
     const cottage = findCottage(placeId);
-    if (!cottage) notFound();
-    card = cottage;
+    if (cottage) {
+      card = cottage;
+    } else {
+      // Fallback 2: synthesize card from user's discovery data (Google Place IDs without card.json)
+      const user = await getCurrentUser();
+      let contextKey = contextFromUrl;
+      if (user) {
+        const discData = await getUserDiscoveries(user.id);
+        const match = discData?.discoveries?.find(
+          d => d.place_id === placeId || d.id === placeId
+        );
+        if (!match) notFound();
+        if (!contextKey) contextKey = match.contextKey;
+
+        // Build a minimal PlaceCard from discovery data
+        const synCard: PlaceCard = {
+          place_id: match.place_id || placeId,
+          name: match.name,
+          type: match.type,
+          data: {
+            description: `${match.name} — discovered via ${match.source || 'Compass'}. ${match.address || ''}`.trim(),
+            highlights: [],
+            images: match.heroImage ? [{ path: match.heroImage, category: 'general' }] : [],
+            address: match.address,
+            city: match.city,
+            rating: match.rating,
+          },
+        };
+
+        if (synCard.type === 'accommodation') {
+          return (
+            <AccommodationCard
+              data={synCard.data as Record<string, unknown> & { name?: string }}
+              placeId={synCard.place_id || ''}
+              userId={user.id}
+              contextKey={contextKey}
+            />
+          );
+        }
+        return (
+          <PlaceCardDetail
+            card={synCard}
+            userId={user.id}
+            contextKey={contextKey}
+          />
+        );
+      }
+      notFound();
+    }
   }
+
   const user = await getCurrentUser();
 
   // Determine context: URL param > first matching context from user's discoveries
