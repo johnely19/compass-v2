@@ -11,6 +11,35 @@ import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
 import TravelIntelWidget from './widgets/TravelIntelWidget';
 
+/* ---- Share button ---- */
+function ShareButton({ name }: { name: string }) {
+  const [copied, setCopied] = useState(false);
+
+  async function handleShare() {
+    const url = typeof window !== 'undefined' ? window.location.href : '';
+    const text = `Check out ${name} on Compass`;
+
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try {
+        await navigator.share({ title: name, text, url });
+        return;
+      } catch { /* cancelled */ }
+    }
+    // Fallback: copy to clipboard
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch { /* ignore */ }
+  }
+
+  return (
+    <button className="place-detail-share-btn" onClick={handleShare} aria-label="Share this place">
+      {copied ? '✅ Link copied' : '🔗 Share'}
+    </button>
+  );
+}
+
 /* ---- Type-specific hero gradients ---- */
 const TYPE_GRADIENTS: Record<string, string> = {
   restaurant:    'linear-gradient(135deg, #f59e0b 0%, #e11d48 100%)',
@@ -312,13 +341,27 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           )}
         </div>
 
-        {/* Map — above fold */}
-        <MapWidget
-          placeId={card.place_id}
-          name={card.name}
-          fromAddress={contextKey === 'trip:nyc-april-2026' ? '126 Leonard St, Brooklyn, NY 11211' : undefined}
-          fromLabel={contextKey === 'trip:nyc-april-2026' ? "Arnold's" : undefined}
-        />
+        {/* ── Hours + Go When (BEFORE narrative, after identity) ── */}
+        {(() => {
+          const goWhen = narrativeBlocks.find(b => /go.?when/i.test(normalizeBlockTitle(b.title)));
+          const hasHours = data.hours && (Array.isArray(data.hours) ? (data.hours as string[]).length > 0 : Object.keys(data.hours as Record<string,string>).length > 0);
+          if (!hasHours && !goWhen) return null;
+          return (
+            <div className="place-detail-v2-hours-section">
+              {hasHours && <HoursWidget hours={data.hours as string[] | Record<string, string>} />}
+              {goWhen && (
+                <div className="narrative-block narrative-go-when">
+                  <h3 className="narrative-block-title">Go When</h3>
+                  <div className="narrative-block-body">
+                    {goWhen.body.split('\n').filter(l => l.trim()).slice(0, 2).map((line, idx) => (
+                      <p key={idx} className="narrative-prose">{line}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* ── NARRATIVE — truncated blocks ── */}
         {narrativeBlocks.length > 0 ? (
@@ -336,28 +379,6 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
             <p>{summary}</p>
           </div>
         ) : null}
-
-        {/* Hours + Go When */}
-        {(() => {
-          const goWhen = narrativeBlocks.find(b => /go.?when/i.test(normalizeBlockTitle(b.title)));
-          const hasHours = data.hours && (Array.isArray(data.hours) ? (data.hours as string[]).length > 0 : Object.keys(data.hours as Record<string,string>).length > 0);
-          if (!hasHours && !goWhen) return null;
-          return (
-            <div className="place-detail-v2-hours-section">
-              {hasHours && <HoursWidget hours={data.hours as string[] | Record<string, string>} />}
-              {goWhen && (
-                <div className="narrative-block narrative-go-when">
-                  <h3 className="narrative-block-title">Go When</h3>
-                  <div className="narrative-block-body">
-                    {goWhen.body.split('\n').filter(l => l.trim()).slice(0, 2).map((line, i) => (
-                      <p key={i} className="narrative-prose">{line}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })()}
 
         {/* Reviews / Vibe — collapsed */}
         {narrativeBlocks.filter(b => /vibe|review/i.test(normalizeBlockTitle(b.title))).map((block, i) => (
@@ -392,6 +413,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         {contextKey && contextKey.startsWith('trip:') && card.place_id && (
           <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
         )}
+
+        {/* Map */}
+        <MapWidget placeId={card.place_id} name={card.name} />
+
+        {/* Share button */}
+        <ShareButton name={card.name} />
 
       </div>
     </div>

@@ -5182,3 +5182,58 @@ body {
   border-radius: 100px;
   border: 1px solid var(--card-border);
 }
+
+
+/* ---- Place card polish (#89) ---- */
+
+/* 3. The Check block — distinct styling */
+.narrative-block-check {
+  background: var(--bg-secondary) !important;
+  border-left: 3px solid var(--accent) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: var(--space-md) !important;
+}
+
+.narrative-block-check .narrative-block-title {
+  color: var(--accent);
+  font-size: 0.72rem;
+}
+
+.narrative-block-check .narrative-block-body p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+
+/* 4. Interior gallery — match food strip (240px × 180px, same as food) */
+.place-detail-v2-interior-gallery .photo-gallery-img {
+  width: 240px;
+  height: 180px;
+}
+
+@media (min-width: 768px) {
+  .place-detail-v2-interior-gallery .photo-gallery-img {
+    width: 280px;
+    height: 210px;
+  }
+}
+
+/* 5. Share button */
+.place-detail-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  align-self: flex-start;
+}
+
+.place-detail-share-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
