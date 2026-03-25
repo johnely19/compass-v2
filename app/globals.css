@@ -205,6 +205,26 @@ a:hover {
   font-size: 0.9rem;
 }
 
+/* Compass homepage header — tagline inline with heading, bottom-aligned */
+.compass-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.compass-header h1 {
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.compass-tagline {
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+  margin: 0 !important;
+  line-height: 1.4;
+}
+
 @media (min-width: 768px) {
   .page {
     padding: var(--space-lg);

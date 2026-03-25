@@ -138,9 +138,9 @@ export default function HomeClient({
 
   return (
     <main className="page">
-      <div className="page-header">
+      <div className="page-header compass-header">
         <h1>🧭 Compass</h1>
-        <p>Your discovery inbox — what needs your attention.</p>
+        <p className="compass-tagline">The AI Travel Agent that ensures the best experience on your trips and outings</p>
       </div>
 
       <BriefingBanner userId={userId} />
