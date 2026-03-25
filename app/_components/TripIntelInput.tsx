@@ -5,6 +5,7 @@ import { useState } from 'react';
 interface TripIntelInputProps {
   contextKey: string;
   onSaved?: () => void;
+  inlineMode?: boolean; // always-visible transparent input row
 }
 
 interface SaveResult {
@@ -14,7 +15,7 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -48,6 +49,29 @@ export default function TripIntelInput({ contextKey, onSaved }: TripIntelInputPr
     }
   }
 
+  // Inline mode: always-visible single-line input (the "Trip Notes" row in the widget)
+  if (inlineMode) {
+    return (
+      <div className="tpw-notes-row">
+        <span className="tpw-label">Trip Notes</span>
+        <input
+          type="text"
+          className="tpw-notes-input"
+          placeholder="Add details, people, plans..."
+          value={text}
+          onChange={e => setText(e.target.value)}
+          onKeyDown={e => { if (e.key === 'Enter' && text.trim()) handleSave(); }}
+          disabled={loading}
+        />
+        {text.trim() && (
+          <button className="tpw-notes-save" onClick={handleSave} disabled={loading}>
+            {loading ? '…' : '↵'}
+          </button>
+        )}
+      </div>
+    );
+  }
+
   if (!open) {
     return (
       <button className="trip-intel-add-btn" onClick={() => setOpen(true)}>
@@ -60,24 +84,17 @@ export default function TripIntelInput({ contextKey, onSaved }: TripIntelInputPr
     <div className="trip-intel-input-panel">
       <textarea
         className="trip-intel-textarea"
-        placeholder="Tell me who you're seeing, what you want to do, paste a confirmation email... e.g. 'Going to Dessa's art show Tuesday evening, staying with Arnold at 126 Leonard St'"
+        placeholder="Tell me who you're seeing, what you want to do, paste a confirmation email..."
         value={text}
         onChange={e => setText(e.target.value)}
         rows={4}
         autoFocus
       />
       <div className="trip-intel-input-actions">
-        <button
-          className="btn btn-primary"
-          onClick={handleSave}
-          disabled={loading || !text.trim()}
-        >
+        <button className="btn btn-primary" onClick={handleSave} disabled={loading || !text.trim()}>
           {loading ? 'Saving…' : 'Save'}
         </button>
-        <button
-          className="filter-clear"
-          onClick={() => { setOpen(false); setText(''); setResult(null); setError(''); }}
-        >
+        <button className="filter-clear" onClick={() => { setOpen(false); setText(''); setResult(null); setError(''); }}>
           Cancel
         </button>
         {error && <span className="trip-intel-input-msg" style={{ color: 'var(--danger)' }}>❌ {error}</span>}

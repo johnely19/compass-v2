@@ -180,15 +180,33 @@ export default function TripPlanningWidget({
     : null;
   const accomSummary = parsedAccom?.name || accommodation?.name || null;
 
+  // Build travel summary: "YTZ-LGA Apr 27"
+  const travelLine = travel?.outbound
+    ? `${travel.outbound.from.split('(')[1]?.replace(')','') || travel.outbound.from}-${travel.outbound.to.split('(')[1]?.replace(')','') || travel.outbound.to} ${travel.outbound.date.replace(/^\d{4}-/,'').replace(/-(\d{2})$/,' $1').replace('-',' ').replace(/^(\w{3}) (\d+)$/, (_, m, d) => `${m} ${parseInt(d)}`)}`
+    : null;
+
+  // Shorter: just "YTZ→LGA · Apr 27"
+  const travelShort = travel?.outbound
+    ? (() => {
+        const from = travel.outbound.from.match(/\(([A-Z]{3})\)/)?.[1] || travel.outbound.from.split(' ')[0];
+        const to = travel.outbound.to.match(/\(([A-Z]{3})\)/)?.[1] || travel.outbound.to.split(' ')[0];
+        const d = new Date(travel.outbound.date);
+        const mon = d.toLocaleString('en-US', { month: 'short' });
+        const day = d.getDate();
+        return `${from}-${to} ${mon} ${day}`;
+      })()
+    : null;
+
   return (
     <div className="tpw">
-      {/* Travel row */}
+
+      {/* Row 1: Travel  [Booked]  YTZ-LGA Apr 27   (1 saved) */}
       <div className="tpw-row">
         <span className="tpw-label">Travel</span>
         <button
           className={`tpw-status ${planning.travel.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
           onClick={() => {
-            if (planning.travel.status === 'booked' && travelSummary) {
+            if (planning.travel.status === 'booked' && travelShort) {
               setTravelExpanded(e => !e);
             } else {
               toggle('travel');
@@ -197,19 +215,17 @@ export default function TripPlanningWidget({
         >
           {planning.travel.status === 'booked' ? 'Booked' : 'Unbooked'}
         </button>
-        {/* Compact summary when booked and collapsed */}
-        {planning.travel.status === 'booked' && travelSummary && !travelExpanded && (
-          <span className="tpw-summary" onClick={() => setTravelExpanded(true)}>{travelSummary}</span>
+        {planning.travel.status === 'booked' && travelShort && !travelExpanded && (
+          <span className="tpw-summary" onClick={() => setTravelExpanded(true)}>{travelShort}</span>
         )}
         {savedCount > 0 && (
           <Link href={`${reviewUrl}?tab=saved`} className="tpw-saved">
             {savedCount} saved
           </Link>
         )}
-        <Link href={reviewUrl} className="tpw-review">Review →</Link>
       </div>
 
-      {/* Travel flight cards — expanded */}
+      {/* Expanded flight cards */}
       {travelExpanded && travel?.outbound && (
         <div className="tpw-flights">
           <FlightCard leg={travel.outbound} label="Out" />
@@ -218,19 +234,19 @@ export default function TripPlanningWidget({
         </div>
       )}
 
-      {/* Accommodation row */}
+      {/* Row 2: Accom.  [Booked]  126 Leonard Ave  Review → */}
       <div className={`tpw-row ${accomInputOpen ? 'tpw-row-expanding' : ''}`}>
-        <span className="tpw-label">Accommodation</span>
+        <span className="tpw-label">Accom.</span>
         <button
           className={`tpw-status ${planning.accommodation.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
           onClick={() => toggle('accommodation')}
         >
           {planning.accommodation.status === 'booked' ? 'Booked' : 'Unbooked'}
         </button>
-        {/* Compact summary */}
         {!accomInputOpen && accomSummary && planning.accommodation.status === 'booked' && (
           <span className="tpw-summary">{accomSummary}</span>
         )}
+        <Link href={reviewUrl} className="tpw-review">Review →</Link>
       </div>
 
       {/* Accommodation input expansion */}
@@ -241,30 +257,21 @@ export default function TripPlanningWidget({
             className="tpw-accom-textarea"
             value={accomText}
             onChange={e => setAccomText(e.target.value)}
-            placeholder="Describe your accommodation — paste a confirmation email, type an address, or just say where you're staying..."
-            rows={3}
+            placeholder="Describe your accommodation..."
+            rows={2}
             onKeyDown={e => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) parseAndSaveAccom(); }}
           />
           <div className="tpw-accom-actions">
-            <button
-              className="tpw-accom-confirm"
-              onClick={parseAndSaveAccom}
-              disabled={accomParsing || !accomText.trim()}
-            >
+            <button className="tpw-accom-confirm" onClick={parseAndSaveAccom} disabled={accomParsing || !accomText.trim()}>
               {accomParsing ? 'Parsing...' : 'Save'}
             </button>
-            <button
-              className="tpw-accom-cancel"
-              onClick={() => setAccomInputOpen(false)}
-            >
-              Cancel
-            </button>
+            <button className="tpw-accom-cancel" onClick={() => setAccomInputOpen(false)}>Cancel</button>
           </div>
         </div>
       )}
 
-      {/* + Add trip details — under accommodation */}
-      <TripIntelInput contextKey={contextKey} />
+      {/* Row 3: Trip Notes — always-visible transparent input with thin border */}
+      <TripIntelInput contextKey={contextKey} inlineMode />
 
     </div>
   );

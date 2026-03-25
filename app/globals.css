@@ -3652,6 +3652,44 @@ body {
   text-overflow: ellipsis;
 }
 
+/* Trip Notes inline row */
+.tpw-notes-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.tpw-notes-input {
+  flex: 1;
+  background: transparent;
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  outline: none;
+  transition: border-color 0.15s;
+  min-width: 0;
+}
+
+.tpw-notes-input:focus {
+  border-color: var(--accent);
+}
+
+.tpw-notes-input::placeholder {
+  color: var(--text-muted);
+}
+
+.tpw-notes-save {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0 4px;
+  flex-shrink: 0;
+}
+
 .tpw-summary:hover { color: var(--text-secondary); }
 
 .tpw-collapse {
