@@ -1,6 +1,16 @@
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
 import { getCurrentUser } from '../../_lib/user';
 import { getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
 import ReviewContextClient from '../../_components/ReviewContextClient';
+
+function loadSharedManifest() {
+  try {
+    const p = path.join(process.cwd(), 'data', 'compass-manifest.json');
+    if (!existsSync(p)) return null;
+    return JSON.parse(readFileSync(p, 'utf8'));
+  } catch { return null; }
+}
 
 export const dynamic = 'force-dynamic';
 
@@ -26,7 +36,10 @@ export default async function ReviewContextPage({ params }: Props) {
     getUserDiscoveries(user.id),
   ]);
 
-  const context = manifest?.contexts.find(c => c.key === contextKey);
+  // Fall back to shared compass-manifest.json if user manifest doesn't have the context
+  const sharedManifest = loadSharedManifest();
+  const context = manifest?.contexts.find(c => c.key === contextKey)
+    ?? sharedManifest?.contexts?.find((c: { key: string }) => c.key === contextKey);
   const discoveries = (discoveriesData?.discoveries ?? []).filter(
     d => d.contextKey === contextKey,
   );
