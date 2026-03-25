@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
   // Load existing discoveries
   const { blobs } = await list({ prefix: `users/${userId}/discoveries` });
   let existing: unknown[] = [];
-  if (blobs.length > 0) {
+  if (blobs.length > 0 && blobs[0]) {
     try {
       const res = await fetch(blobs[0].url);
       const data = await res.json();
