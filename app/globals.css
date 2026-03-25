@@ -402,6 +402,7 @@ a:hover {
 
 .section {
   margin-bottom: var(--space-2xl);
+  overflow: visible; /* allow carousel nav buttons to show outside section bounds */
 }
 
 .section-header {
@@ -617,8 +618,6 @@ a:hover {
 
 .carousel-container {
   position: relative;
-  padding: 0 20px; /* room for nav buttons */
-  margin: 0 -20px; /* cancel out padding so track aligns */
   overflow: visible;
 }
 
@@ -674,11 +673,11 @@ a:hover {
 }
 
 .carousel-arrow-left {
-  left: -2px;
+  left: 4px;
 }
 
 .carousel-arrow-right {
-  right: -2px;
+  right: 4px;
 }
 
 /* Hide arrows on mobile (touch scroll instead) */
@@ -4956,6 +4955,7 @@ body {
   overflow: hidden;
   transition: box-shadow var(--transition-base);
   min-height: 160px;
+  max-width: 680px;
 }
 
 .accomm-card:hover {
