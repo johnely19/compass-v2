@@ -61,6 +61,17 @@ interface PlaceCardData {
 
 export default async function PlacecardsPage() {
   const user = await getCurrentUser();
+
+  // Places browse uses the global index — owner only
+  if (!user?.isOwner) {
+    return (
+      <main className="page">
+        <div className="page-header"><h1>Places</h1></div>
+        <p className="text-muted">Coming soon.</p>
+      </main>
+    );
+  }
+
   const index = loadIndex();
 
   // Build enriched card data with city and rating

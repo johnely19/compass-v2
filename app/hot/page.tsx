@@ -72,6 +72,19 @@ interface HotPlaceCard {
 
 export default async function HotPage() {
   const user = await getCurrentUser();
+
+  // Hot page uses the global place card index — owner only
+  if (!user?.isOwner) {
+    return (
+      <main className="page">
+        <div className="page-header">
+          <h1>🔥 What&apos;s Hot</h1>
+        </div>
+        <p className="text-muted">Coming soon.</p>
+      </main>
+    );
+  }
+
   const index = loadIndex();
 
   // Build enriched card data with city, new opening detection, and date
