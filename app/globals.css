@@ -4061,3 +4061,264 @@ body {
   border-top: 1px solid var(--card-border);
   background: var(--bg-secondary);
 }
+
+
+/* ============================================================
+   Accommodation Card (#80) — Rental/Cottage UI
+   ============================================================ */
+
+.accommodation-card {
+  max-width: 720px;
+  margin: 0 auto;
+  padding-bottom: var(--space-2xl);
+}
+
+/* Hero */
+.accommodation-hero {
+  width: 100%;
+  min-height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .accommodation-hero {
+    min-height: 50vh;
+    border-radius: var(--radius-lg);
+    margin: var(--space-md);
+  }
+}
+
+.accommodation-hero-overlay {
+  width: 100%;
+  padding: var(--space-xl) var(--space-md) var(--space-md);
+}
+
+.accommodation-hero-top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.accommodation-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(4px);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.accommodation-match-badge {
+  padding: 4px 10px;
+  background: rgba(251,191,36,0.25);
+  border: 1px solid rgba(251,191,36,0.5);
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #fbbf24;
+}
+
+.accommodation-hero-triage {
+  margin-left: auto;
+}
+
+.accommodation-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: 0 0 var(--space-xs);
+  line-height: 1.2;
+}
+
+.accommodation-location {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+  margin: 0;
+}
+
+/* Body */
+.accommodation-body {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .accommodation-body {
+    padding: var(--space-xl);
+  }
+}
+
+/* Vitals row */
+.accommodation-vitals {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+}
+
+.accommodation-vital {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.accommodation-vital-icon {
+  width: 24px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+/* Narrative */
+.accommodation-narrative {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+}
+
+.accommodation-narrative p {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* Sections */
+.accommodation-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.accommodation-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0 0 var(--space-xs);
+}
+
+/* Swimming & Setting */
+.accommodation-setting-row {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+}
+
+.accommodation-setting-row > span:first-child {
+  flex-shrink: 0;
+  width: 24px;
+  text-align: center;
+}
+
+.accommodation-setting-desc {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+.accommodation-setting-tags {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.accommodation-notes {
+  margin-top: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--card-border);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.accommodation-notes p { margin: 0; color: inherit; }
+
+/* Amenities grid */
+.accommodation-amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: var(--space-sm);
+}
+
+.accommodation-amenity {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+}
+
+.accommodation-amenity-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.accommodation-amenity-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Nearby */
+.accommodation-nearby-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+  border-bottom: 1px solid rgba(148,163,184,0.08);
+}
+
+.accommodation-nearby-row:last-child { border-bottom: none; }
+
+/* Actions */
+.accommodation-actions {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.accommodation-cta {
+  font-size: 1rem;
+  padding: var(--space-md) var(--space-xl);
+  border-radius: var(--radius-md);
+  font-weight: 600;
+}
+
+.accommodation-action-triage {
+  flex: 1;
+}
+
+@media (max-width: 640px) {
+  .accommodation-amenities {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .accommodation-name { font-size: 1.5rem; }
+  .accommodation-hero { min-height: 45vw; }
+}

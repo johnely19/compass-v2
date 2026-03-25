@@ -6,6 +6,7 @@ import { getUserDiscoveries } from '../../_lib/user-data';
 import { adaptCard } from '../../_lib/card-adapter';
 import { resolveImageUrl } from '../../_lib/image-url';
 import PlaceCardDetail from '../../_components/PlaceCardDetail';
+import AccommodationCard from '../../_components/AccommodationCard';
 import type { PlaceCard } from '../../_lib/types';
 
 interface CottageEntry {
@@ -13,43 +14,50 @@ interface CottageEntry {
   region?: string; pricePerWeek?: number | null; beds?: number;
   baths?: number; sleeps?: number; swimScore?: number;
   swimType?: string; swimVerdict?: string; amenities?: string[];
-  images?: string[]; heroImage?: string; description?: string;
-  notes?: string; guests?: number;
+  images?: Array<string | { path: string; category: string }>;
+  heroImage?: string; description?: string; notes?: string;
+  guests?: number; scores?: Record<string, number>;
+  driveTimes?: Record<string, { name?: string; minutes?: number }>;
+  gates?: Record<string, boolean>; sourceTags?: string[];
 }
 
-/** Build a PlaceCard from a cottage entry */
+/** Build a PlaceCard from a cottage entry — passes through all cottage-specific fields */
 function adaptCottage(c: CottageEntry): PlaceCard {
-  const highlights: string[] = [];
-  if (c.beds) highlights.push(`${c.beds} bed${c.beds !== 1 ? 's' : ''}`);
-  if (c.baths) highlights.push(`${c.baths} bath${c.baths !== 1 ? 's' : ''}`);
-  if (c.sleeps) highlights.push(`Sleeps ${c.sleeps}`);
-  if (c.swimType) highlights.push(c.swimType);
-  if (c.amenities) highlights.push(...c.amenities.slice(0, 4));
-
-  const images = (c.images || (c.heroImage ? [c.heroImage] : []))
-    .map(img => ({ path: resolveImageUrl(img) || img, category: 'exterior' }));
-
-  const price = c.pricePerWeek ? `$${c.pricePerWeek.toLocaleString()}/week` : null;
-  const summary = [
-    c.description || c.name,
-    c.region ? `Located in ${c.region}.` : '',
-    price ? `From ${price}.` : '',
-    c.swimVerdict || '',
-    c.url ? `Book at ${c.platform || 'listing site'}: ${c.url}` : '',
-  ].filter(Boolean).join(' ');
+  const normalizedImages = (c.images || (c.heroImage ? [c.heroImage] : []))
+    .map(img => {
+      if (typeof img === 'string') {
+        return { path: resolveImageUrl(img) || img, category: 'exterior' };
+      }
+      return { path: resolveImageUrl(img.path) || img.path, category: img.category || 'exterior' };
+    });
 
   return {
     place_id: c.id,
     name: c.name,
     type: 'accommodation',
     data: {
-      description: summary,
-      highlights,
-      images,
+      description: (c.description || c.notes || ''),
+      highlights: [] as string[],
+      images: normalizedImages,
+      heroImage: c.heroImage ? resolveImageUrl(c.heroImage) || c.heroImage : undefined,
+      // Pass through all cottage-specific fields for AccommodationCard
       address: c.region || 'Ontario',
       city: 'Ontario',
-      website: c.url,
-      price_level: c.pricePerWeek ? (c.pricePerWeek > 5000 ? 4 : c.pricePerWeek > 3000 ? 3 : 2) : undefined,
+      region: c.region,
+      platform: c.platform,
+      url: c.url,
+      pricePerWeek: c.pricePerWeek,
+      beds: c.beds,
+      baths: c.baths,
+      sleeps: c.sleeps,
+      guests: c.guests,
+      swimType: c.swimType,
+      swimVerdict: c.swimVerdict,
+      amenities: c.amenities,
+      scores: c.scores,
+      driveTimes: c.driveTimes,
+      notes: c.notes,
+      gates: c.gates,
     },
   };
 }
@@ -110,6 +118,18 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
     const discData = await getUserDiscoveries(user.id);
     const match = discData?.discoveries?.find(d => d.place_id === placeId);
     if (match) contextKey = match.contextKey;
+  }
+
+  // Accommodation type gets the dedicated rental card UI
+  if (card.type === 'accommodation') {
+    return (
+      <AccommodationCard
+        data={card.data as Record<string, unknown> & { name?: string }}
+        placeId={card.place_id || ''}
+        userId={user?.id}
+        contextKey={contextKey}
+      />
+    );
   }
 
   return (
