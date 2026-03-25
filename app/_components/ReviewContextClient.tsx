@@ -47,16 +47,38 @@ export default function ReviewContextClient({
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
 
-  const filtered = useMemo(() => {
-    return discoveries.filter(d => {
-      const placeId = d.place_id ?? d.id;
-      const state = getTriageState(userId, context.key, placeId);
+  // Toronto neighbourhood classifier — returns neighbourhood name + proximity rank from Yonge & St Clair
+  function getNeighbourhood(address: string | undefined | null): { name: string; rank: number } {
+    if (!address) return { name: 'Toronto', rank: 99 };
+    const a = address.toLowerCase();
+    // Order by proximity to Yonge & St Clair
+    if (/yonge|st clair|davenport|summerhill|rosedale/.test(a)) return { name: 'Midtown', rank: 1 };
+    if (/avenue|bedford|annex|bloor.*west|spadina.*bloor/.test(a)) return { name: 'Annex', rank: 2 };
+    if (/harbord|wales|brunswick|borden/.test(a)) return { name: 'Harbord Village', rank: 3 };
+    if (/college.*spadina|kensington|augusta|crawford|clinton/.test(a)) return { name: 'Kensington / Little Italy', rank: 4 };
+    if (/college.*east|palmerston|ossington.*college/.test(a)) return { name: 'Little Italy', rank: 4 };
+    if (/bayview|leaside|mount pleasant/.test(a)) return { name: 'Leaside / Bayview', rank: 5 };
+    if (/ossington|queen.*west|trinity bellwoods|gore vale|dufferin.*queen/.test(a)) return { name: 'Queen West', rank: 6 };
+    if (/dundas.*west|parkdale/.test(a)) return { name: 'Parkdale', rank: 7 };
+    if (/queen.*east|leslieville|broadview/.test(a)) return { name: 'East End', rank: 8 };
+    return { name: 'Toronto', rank: 99 };
+  }
 
-      if (tab === 'unreviewed') return state === 'unreviewed' || state === 'resurfaced';
-      if (tab === 'saved') return state === 'saved';
-      if (tab === 'dismissed') return state === 'dismissed';
-      return false;
-    });
+  const filtered = useMemo(() => {
+    return discoveries
+      .filter(d => {
+        const placeId = d.place_id ?? d.id;
+        const state = getTriageState(userId, context.key, placeId);
+        if (tab === 'unreviewed') return state === 'unreviewed' || state === 'resurfaced';
+        if (tab === 'saved') return state === 'saved';
+        if (tab === 'dismissed') return state === 'dismissed';
+        return false;
+      })
+      .sort((a, b) => {
+        const na = getNeighbourhood((a as unknown as Record<string,string>).address);
+        const nb = getNeighbourhood((b as unknown as Record<string,string>).address);
+        return na.rank - nb.rank || (a.name ?? '').localeCompare(b.name ?? '');
+      });
   }, [discoveries, userId, context.key, tab]);
 
   const counts = useMemo(() => {
@@ -117,38 +139,53 @@ export default function ReviewContextClient({
         />
       ) : (
         <div className="review-list">
-          {filtered.map(d => {
-            const placeId = d.place_id ?? d.id;
-            const entry = getTriageEntry(userId, context.key, placeId);
-
-            return (
-              <div key={d.id} className="review-item card">
-                <div className="card-body flex items-center justify-between">
-                  <div className="review-item-info">
-                    <Link href={`/placecards/${placeId}`} className="review-item-name">
-                      {d.name}
-                    </Link>
-                    <div className="flex items-center gap-sm">
-                      <TypeBadge type={d.type} />
-                      {(() => {
-                        const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
-                        const ago = timeAgo(ts);
-                        return ago ? <span className="text-xs text-muted">{ago}</span> : null;
-                      })()}
-                      {entry?.state === 'resurfaced' && entry.resurfaceReason && (
-                        <span className="badge badge-warning">{entry.resurfaceReason}</span>
-                      )}
+          {(() => {
+            // Group by neighbourhood
+            const groups: { name: string; items: typeof filtered }[] = [];
+            let lastNeighbourhood = '';
+            for (const d of filtered) {
+              const hood = getNeighbourhood((d as unknown as Record<string,string>).address).name;
+              if (hood !== lastNeighbourhood) {
+                groups.push({ name: hood, items: [] });
+                lastNeighbourhood = hood;
+              }
+              groups[groups.length - 1]!.items.push(d);
+            }
+            return groups.map(group => (
+              <div key={group.name} className="review-neighbourhood-group">
+                {groups.length > 1 && (
+                  <div className="review-neighbourhood-label">{group.name}</div>
+                )}
+                {group.items.map(d => {
+                  const placeId = d.place_id ?? d.id;
+                  const entry = getTriageEntry(userId, context.key, placeId);
+                  return (
+                    <div key={d.id} className="review-item card">
+                      <div className="card-body flex items-center justify-between">
+                        <div className="review-item-info">
+                          <Link href={`/placecards/${placeId}`} className="review-item-name">
+                            {d.name}
+                          </Link>
+                          <div className="flex items-center gap-sm">
+                            <TypeBadge type={d.type} />
+                            {(() => {
+                              const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
+                              const ago = timeAgo(ts);
+                              return ago ? <span className="text-xs text-muted">{ago}</span> : null;
+                            })()}
+                            {entry?.state === 'resurfaced' && entry.resurfaceReason && (
+                              <span className="badge badge-warning">{entry.resurfaceReason}</span>
+                            )}
+                          </div>
+                        </div>
+                        <TriageButtons userId={userId} contextKey={context.key} placeId={placeId} />
+                      </div>
                     </div>
-                  </div>
-                  <TriageButtons
-                    userId={userId}
-                    contextKey={context.key}
-                    placeId={placeId}
-                  />
-                </div>
+                  );
+                })}
               </div>
-            );
-          })}
+            ));
+          })()}
 
           {filtered.length === 0 && (
             <div className="empty-state">

@@ -2081,6 +2081,23 @@ a:hover {
   gap: var(--space-sm);
 }
 
+.review-neighbourhood-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.review-neighbourhood-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  padding: var(--space-sm) 0 2px;
+  border-bottom: 1px solid color-mix(in srgb, var(--card-border) 50%, transparent);
+  margin-top: var(--space-sm);
+}
+
 .review-item-info {
   display: flex;
   flex-direction: column;
