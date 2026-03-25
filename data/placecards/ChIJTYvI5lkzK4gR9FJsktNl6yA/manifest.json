@@ -1,4 +1,47 @@
 {
   "place_id": "ChIJTYvI5lkzK4gR9FJsktNl6yA",
-  "images": []
+  "images": [
+    {
+      "id": "interior",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/interior-9Vbz6ZCX2zfsb3hDW9vGwXF8TEbA9Q.jpg",
+      "category": "interior_vibe",
+      "order": 1
+    },
+    {
+      "id": "food_tartare",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/food_2_tartare-n9FHbVdBcgF3kBD0QPq2Uw4pusQf46.jpg",
+      "category": "food",
+      "order": 2
+    },
+    {
+      "id": "food_fish",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/food_3_fish-l3mPOdqHuSupt9qeT097CB9M9KHMSN.jpg",
+      "category": "food",
+      "order": 3
+    },
+    {
+      "id": "food_scallops",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/food_4_scallops-8X73A7r7ePd2Bq0iZohHpvou6AaiXR.jpg",
+      "category": "food",
+      "order": 4
+    },
+    {
+      "id": "food_icebox",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/food_1_icebox-Y4yXLtrpSkj7rr6L15N4zXmuFwtZqA.jpg",
+      "category": "food",
+      "order": 5
+    },
+    {
+      "id": "drinks",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/drinks_1-VXg2YpWgBOiQg4M1kivM5ZDiU7Ezr9.jpg",
+      "category": "drinks",
+      "order": 6
+    },
+    {
+      "id": "exterior",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJTYvI5lkzK4gR9FJsktNl6yA/photos/exterior-JjQ2XANzkdwo5a5piaLTlglzFXgq0I.jpg",
+      "category": "exterior",
+      "order": 7
+    }
+  ]
 }
