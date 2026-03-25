@@ -99,6 +99,7 @@ export default function TripPlanningWidget({
   userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0,
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
+  const [travelExpanded, setTravelExpanded] = useState(false);
   const [accomInputOpen, setAccomInputOpen] = useState(false);
   const [accomText, setAccomText] = useState('');
   const [accomParsing, setAccomParsing] = useState(false);
@@ -172,6 +173,12 @@ export default function TripPlanningWidget({
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
 
+  // Build compact travel summary line
+  const travelSummary = travel?.outbound
+    ? `${travel.outbound.flight} · ${travel.outbound.departs}→${travel.outbound.arrives}`
+    : null;
+  const accomSummary = parsedAccom?.name || accommodation?.name || null;
+
   return (
     <div className="tpw">
       {/* Travel row */}
@@ -179,10 +186,20 @@ export default function TripPlanningWidget({
         <span className="tpw-label">Travel</span>
         <button
           className={`tpw-status ${planning.travel.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
-          onClick={() => toggle('travel')}
+          onClick={() => {
+            if (planning.travel.status === 'booked' && travelSummary) {
+              setTravelExpanded(e => !e);
+            } else {
+              toggle('travel');
+            }
+          }}
         >
           {planning.travel.status === 'booked' ? 'Booked' : 'Unbooked'}
         </button>
+        {/* Compact summary when booked and collapsed */}
+        {planning.travel.status === 'booked' && travelSummary && !travelExpanded && (
+          <span className="tpw-summary" onClick={() => setTravelExpanded(true)}>{travelSummary}</span>
+        )}
         {savedCount > 0 && (
           <Link href={`${reviewUrl}?tab=saved`} className="tpw-saved">
             {savedCount} saved
@@ -190,6 +207,15 @@ export default function TripPlanningWidget({
         )}
         <Link href={reviewUrl} className="tpw-review">Review →</Link>
       </div>
+
+      {/* Travel flight cards — expanded */}
+      {travelExpanded && travel?.outbound && (
+        <div className="tpw-flights">
+          <FlightCard leg={travel.outbound} label="Out" />
+          {travel.return && <FlightCard leg={travel.return} label="Return" />}
+          <button className="tpw-collapse" onClick={() => setTravelExpanded(false)}>↑ collapse</button>
+        </div>
+      )}
 
       {/* Accommodation row */}
       <div className={`tpw-row ${accomInputOpen ? 'tpw-row-expanding' : ''}`}>
@@ -200,13 +226,9 @@ export default function TripPlanningWidget({
         >
           {planning.accommodation.status === 'booked' ? 'Booked' : 'Unbooked'}
         </button>
-        {/* Structured accommodation from manifest */}
-        {!accomInputOpen && accommodation?.name && planning.accommodation.status === 'booked' && (
-          <span className="tpw-accom-name">{parsedAccom?.name || accommodation.name}{parsedAccom?.address ? ` · ${parsedAccom.address}` : accommodation.address ? ` · ${accommodation.address}` : ''}</span>
-        )}
-        {/* Parsed result from user input */}
-        {!accomInputOpen && !accommodation?.name && parsedAccom && (
-          <span className="tpw-accom-name">{parsedAccom.name}{parsedAccom.address ? ` · ${parsedAccom.address}` : ''}</span>
+        {/* Compact summary */}
+        {!accomInputOpen && accomSummary && planning.accommodation.status === 'booked' && (
+          <span className="tpw-summary">{accomSummary}</span>
         )}
       </div>
 
@@ -240,13 +262,6 @@ export default function TripPlanningWidget({
         </div>
       )}
 
-      {/* Flight cards — collapsed by default, shown when travel is booked and has structured data */}
-      {travel?.outbound && planning.travel.status === 'booked' && (
-        <div className="tpw-flights">
-          <FlightCard leg={travel.outbound} label="Out" />
-          {travel.return && <FlightCard leg={travel.return} label="Return" />}
-        </div>
-      )}
     </div>
   );
 }

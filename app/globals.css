@@ -3611,6 +3611,33 @@ body {
   color: var(--text-muted);
 }
 
+.tpw-summary {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tpw-summary:hover { color: var(--text-secondary); }
+
+.tpw-collapse {
+  display: block;
+  margin-top: var(--space-xs);
+  background: none;
+  border: none;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0;
+  text-align: right;
+  width: 100%;
+}
+
+.tpw-collapse:hover { color: var(--text-primary); }
+
 /* Accommodation input expansion */
 .tpw-row-expanding {
   flex-wrap: wrap;
