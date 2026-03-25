@@ -62,9 +62,9 @@ export default async function HomePage() {
     getUserDiscoveries(user.id),
   ]);
 
-  // Merge contexts: Blob manifest + local manifest (for any missing contexts)
+  // Merge contexts: Blob manifest + local manifest (owner only)
   const blobContexts = blobManifest?.contexts ?? [];
-  const localContexts = loadLocalManifest()?.contexts ?? [];
+  const localContexts = user.isOwner ? (loadLocalManifest()?.contexts ?? []) : [];
   const blobKeys = new Set(blobContexts.map(c => c.key));
   const mergedContexts = [
     ...blobContexts,
@@ -76,7 +76,8 @@ export default async function HomePage() {
   );
   // Merge Blob discoveries with local discoveries (cottages, developments)
   const blobDiscoveries = discoveriesData?.discoveries ?? [];
-  const localDisc = loadLocalDiscoveries();
+  // Local discoveries (cottages, developments) — owner only
+  const localDisc = user.isOwner ? loadLocalDiscoveries() : [];
   const blobIds = new Set(blobDiscoveries.map(d => d.id));
   const discoveries = [
     ...blobDiscoveries,

@@ -36,8 +36,8 @@ export default async function ReviewContextPage({ params }: Props) {
     getUserDiscoveries(user.id),
   ]);
 
-  // Fall back to shared compass-manifest.json if user manifest doesn't have the context
-  const sharedManifest = loadSharedManifest();
+  // Fall back to shared compass-manifest.json ONLY for the owner user
+  const sharedManifest = user?.isOwner ? loadSharedManifest() : null;
   const context = manifest?.contexts.find(c => c.key === contextKey)
     ?? sharedManifest?.contexts?.find((c: { key: string }) => c.key === contextKey);
   const discoveries = (discoveriesData?.discoveries ?? []).filter(
