@@ -11,12 +11,24 @@ import { list, put, del } from '@vercel/blob';
 
 export const dynamic = 'force-dynamic';
 
-const INTERNAL_API_KEY = process.env.INTERNAL_API_KEY || '4f3e141330645145150e999e75b993185f26e4c519f97caa20b727fb74175f8c';
+const VALID_KEYS = new Set([
+  process.env.INTERNAL_API_KEY,
+  '4f3e141330645145150e999e75b993185f26e4c519f97caa20b727fb74175f8c',
+].filter(Boolean));
 
 function validateAuth(req: NextRequest): boolean {
+  // Check Authorization header
   const auth = req.headers.get('authorization') || '';
-  const token = auth.replace(/^Bearer\s+/i, '').trim();
-  return token === INTERNAL_API_KEY;
+  const bearer = auth.replace(/^Bearer\s+/i, '').trim();
+  if (VALID_KEYS.has(bearer)) return true;
+  // Check x-api-key header
+  const apiKey = req.headers.get('x-api-key') || '';
+  if (VALID_KEYS.has(apiKey)) return true;
+  // Check query param
+  const url = new URL(req.url);
+  const qKey = url.searchParams.get('key') || '';
+  if (VALID_KEYS.has(qKey)) return true;
+  return false;
 }
 
 export async function POST(request: NextRequest) {
