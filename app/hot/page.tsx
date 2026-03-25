@@ -3,6 +3,7 @@ import path from 'path';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
+import { getManifestHeroImage } from '../_lib/image-url';
 import HotClient from './HotClient';
 
 export const dynamic = 'force-dynamic';
@@ -65,6 +66,7 @@ interface HotPlaceCard {
   city: string;
   isNewOpening: boolean;
   addedAt: string | null;
+  heroImage: string | null;
 }
 
 export default async function HotPage() {
@@ -80,6 +82,8 @@ export default async function HotPage() {
     // Use built date as the date signal for sorting (when card was created)
     const addedAt = cardData.built ?? null;
 
+    const heroImage = getManifestHeroImage(placeId);
+
     return {
       placeId,
       name: entry.name,
@@ -87,6 +91,7 @@ export default async function HotPage() {
       city,
       isNewOpening: isNew,
       addedAt,
+      heroImage,
     };
   });
 

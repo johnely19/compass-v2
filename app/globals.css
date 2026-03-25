@@ -3551,6 +3551,7 @@ body {
   align-items: center;
   gap: var(--space-sm);
   flex-wrap: wrap;
+  row-gap: 4px;
 }
 
 .tpw-label {
@@ -3595,6 +3596,7 @@ body {
   padding: 2px 10px;
   text-decoration: none;
   transition: opacity 0.15s;
+  margin-left: auto;  /* push to right edge */
 }
 
 .tpw-saved:hover { opacity: 0.8; }
@@ -3603,8 +3605,11 @@ body {
   font-size: 0.78rem;
   color: var(--accent);
   text-decoration: none;
-  margin-left: auto;
   font-weight: 500;
+  /* Sits on its own line below the travel row */
+  width: 100%;
+  padding-left: 108px; /* align under content, past the label */
+  margin-top: -2px;
 }
 
 .tpw-review:hover { text-decoration: underline; }
