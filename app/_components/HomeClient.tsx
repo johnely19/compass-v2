@@ -152,7 +152,7 @@ export default function HomeClient({
 
         return (
           <section key={ctx.key} className="section">
-            <div className="section-header">
+            <div className={`section-header${ctx.type === 'trip' ? ' section-header-trip' : ''}`}>
               <div className="section-header-left">
                 <div className="section-title-row">
                   <span className="section-emoji-large">
@@ -174,6 +174,20 @@ export default function HomeClient({
                   </div>
                 </div>
               </div>
+
+              {/* Desktop: trip planning widget inline with header */}
+              {ctx.type === 'trip' && (
+                <div className="section-header-trip-widget">
+                  <TripPlanningWidget
+                    userId={userId}
+                    contextKey={ctx.key}
+                    travel={contextMeta[ctx.key]?.travel as never}
+                    accommodation={contextMeta[ctx.key]?.accommodation as never}
+                    bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                  />
+                </div>
+              )}
+
               <div className="section-header-right">
                 {counts.saved > 0 && (
                   <Link
@@ -192,14 +206,17 @@ export default function HomeClient({
               </div>
             </div>
 
+            {/* Mobile: trip planning widget below header */}
             {ctx.type === 'trip' && (
-              <TripPlanningWidget
-                userId={userId}
-                contextKey={ctx.key}
-                travel={contextMeta[ctx.key]?.travel as never}
-                accommodation={contextMeta[ctx.key]?.accommodation as never}
-                bookingStatus={contextMeta[ctx.key]?.bookingStatus}
-              />
+              <div className="section-trip-widget-mobile">
+                <TripPlanningWidget
+                  userId={userId}
+                  contextKey={ctx.key}
+                  travel={contextMeta[ctx.key]?.travel as never}
+                  accommodation={contextMeta[ctx.key]?.accommodation as never}
+                  bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                />
+              </div>
             )}
 
             {discoveries.length > 0 ? (

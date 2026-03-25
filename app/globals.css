@@ -469,6 +469,62 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* Trip header: widget beside title on desktop */
+.section-header-trip {
+  align-items: center;
+}
+
+.section-header-trip-widget {
+  display: none; /* hidden on mobile */
+  flex-shrink: 0;
+}
+
+.section-trip-widget-mobile {
+  display: block; /* shown on mobile */
+}
+
+@media (min-width: 768px) {
+  .section-header-trip-widget {
+    display: block;
+    min-width: 280px;
+    max-width: 340px;
+  }
+
+  .section-trip-widget-mobile {
+    display: none; /* hidden on desktop */
+  }
+
+  .section-header-trip-widget .trip-planning-widget {
+    margin-bottom: 0;
+    background: transparent;
+    border: 1px solid var(--card-border);
+    padding: var(--space-sm) var(--space-md);
+  }
+}
+
+/* Trip planning: unbook button, no emoji labels */
+.trip-planning-label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.trip-planning-unbook {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: none;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.trip-planning-unbook:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
+}
+
 .section-meta {
   display: flex;
   align-items: center;

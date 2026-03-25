@@ -155,15 +155,19 @@ export default function TripPlanningWidget({ userId, contextKey, travel, accommo
       <div className="trip-planning-header">
         <span className="trip-planning-title">Trip Planning</span>
         <span className="text-muted text-xs">
-          {isFullyBooked ? '✅ Fully booked' : `${[planning.travel, planning.accommodation].filter(i => i.status !== 'open').length}/2 booked`}
+          {isFullyBooked ? 'Fully booked' : `${[planning.travel, planning.accommodation].filter(i => i.status !== 'open').length}/2 booked`}
         </span>
       </div>
 
       {/* Travel */}
       <div className="trip-planning-row">
         <div className="trip-planning-row-header">
-          <span>✈️ Travel</span>
-          <StatusBadge status={planning.travel.status} />
+          <span className="trip-planning-label">Travel</span>
+          {planning.travel.status === 'booked' && (
+            <button className="trip-planning-unbook" onClick={() => { update('travel', { status: 'open' }); }}>
+              Unbook
+            </button>
+          )}
         </div>
 
         {/* Structured flight data from manifest */}
@@ -196,21 +200,20 @@ export default function TripPlanningWidget({ userId, contextKey, travel, accommo
             </div>
           </div>
         )}
-        {!travel?.outbound && planning.travel.details && planning.travel.status !== 'open' && (
-          <div className="trip-planning-details">
-            {planning.travel.details}
-            <button className="trip-planning-action-secondary" onClick={() => { update('travel', { status: 'open' }); setEditingTravel(false); }}>
-              Reopen
-            </button>
-          </div>
+        {!travel?.outbound && planning.travel.details && planning.travel.status === 'booked' && (
+          <div className="trip-planning-details">{planning.travel.details}</div>
         )}
       </div>
 
       {/* Accommodation */}
       <div className="trip-planning-row">
         <div className="trip-planning-row-header">
-          <span>🏨 Accommodation</span>
-          <StatusBadge status={planning.accommodation.status} />
+          <span className="trip-planning-label">Accommodation</span>
+          {planning.accommodation.status === 'booked' && (
+            <button className="trip-planning-unbook" onClick={() => { update('accommodation', { status: 'open' }); }}>
+              Unbook
+            </button>
+          )}
         </div>
 
         {/* Structured accommodation from manifest */}
@@ -242,13 +245,8 @@ export default function TripPlanningWidget({ userId, contextKey, travel, accommo
             </div>
           </div>
         )}
-        {!accommodation?.name && planning.accommodation.details && planning.accommodation.status !== 'open' && (
-          <div className="trip-planning-details">
-            {planning.accommodation.details}
-            <button className="trip-planning-action-secondary" onClick={() => { update('accommodation', { status: 'open' }); setEditingAccom(false); }}>
-              Reopen
-            </button>
-          </div>
+        {!accommodation?.name && planning.accommodation.details && planning.accommodation.status === 'booked' && (
+          <div className="trip-planning-details">{planning.accommodation.details}</div>
         )}
       </div>
     </div>
