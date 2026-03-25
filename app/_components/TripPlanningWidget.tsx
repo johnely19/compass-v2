@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
+import TripIntelInput from './TripIntelInput';
 
 interface FlightLeg {
   date: string;
@@ -261,6 +262,9 @@ export default function TripPlanningWidget({
           </div>
         </div>
       )}
+
+      {/* + Add trip details — under accommodation */}
+      <TripIntelInput contextKey={contextKey} />
 
     </div>
   );

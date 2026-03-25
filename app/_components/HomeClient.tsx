@@ -9,7 +9,6 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import TripIntelWidget, { type TripIntelData } from './TripIntelWidget';
-import TripIntelInput from './TripIntelInput';
 
 interface HomeClientProps {
   userId: string;
@@ -223,11 +222,6 @@ export default function HomeClient({
                   savedCount={counts.saved}
                 />
               </div>
-            )}
-
-            {/* + Add trip details — directly under planning widget */}
-            {ctx.type === 'trip' && (
-              <TripIntelInput contextKey={ctx.key} />
             )}
 
             {/* Trip Intelligence — purpose, people, schedule, anchors */}
