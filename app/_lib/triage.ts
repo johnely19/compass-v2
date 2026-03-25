@@ -110,6 +110,10 @@ export function setTriageState(
   };
 
   saveStore(userId, store);
+  // Notify any listeners that triage changed (e.g. Hot page filters)
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('triage-updated', { detail: { placeId, state } }));
+  }
 }
 
 export function clearTriageState(

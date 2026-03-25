@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
@@ -25,6 +25,19 @@ export interface HotClientProps {
 
 export default function HotClient({ cards, availableTypes, userId }: HotClientProps) {
   const [selectedTypes, setSelectedTypes] = useState<DiscoveryType[]>([]);
+  const [triageVersion, setTriageVersion] = useState(0);
+
+  // Re-render when triage state changes (listens for storage events from TriageButtons)
+  useEffect(() => {
+    const handler = () => setTriageVersion(v => v + 1);
+    window.addEventListener('storage', handler);
+    // Also listen for custom triage events
+    window.addEventListener('triage-updated', handler);
+    return () => {
+      window.removeEventListener('storage', handler);
+      window.removeEventListener('triage-updated', handler);
+    };
+  }, []);
 
   const toggleType = useCallback((type: DiscoveryType) => {
     setSelectedTypes((prev) =>
@@ -40,9 +53,31 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
 
   // Filter cards by type
   const filteredCards = useMemo(() => {
-    if (selectedTypes.length === 0) return cards;
-    return cards.filter((card) => selectedTypes.includes(card.type));
-  }, [cards, selectedTypes]);
+    // Filter out dismissed cards using local triage state
+    let result = cards;
+    if (userId) {
+      result = result.filter(card => {
+        // Check localStorage for triage state
+        try {
+          const key = `compass-triage-${userId}`;
+          const raw = localStorage.getItem(key);
+          if (!raw) return true;
+          const states = JSON.parse(raw) as Record<string, Record<string, { state: string }>>;
+          // Check across all contexts
+          for (const ctx of Object.values(states)) {
+            const entry = ctx[card.placeId];
+            if (entry?.state === 'dismissed') return false;
+          }
+        } catch { /* ignore */ }
+        return true;
+      });
+    }
+    if (selectedTypes.length > 0) {
+      result = result.filter((card) => selectedTypes.includes(card.type));
+    }
+    return result;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cards, selectedTypes, userId, triageVersion]);
 
   // New Openings: cards with isNewOpening flag
   const newOpenings = useMemo(
