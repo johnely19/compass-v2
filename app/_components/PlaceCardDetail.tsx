@@ -344,7 +344,8 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         <MapWidget
           placeId={card.place_id}
           name={card.name}
-          fromAddress={contextKey === 'trip:nyc-april-2026' ? '126 Leonard St, Brooklyn, NY' : undefined}
+          fromAddress={contextKey === 'trip:nyc-april-2026' ? '126 Leonard St, Brooklyn, NY 11211' : undefined}
+          fromLabel={contextKey === 'trip:nyc-april-2026' ? "Arnold's" : undefined}
         />
 
       </div>

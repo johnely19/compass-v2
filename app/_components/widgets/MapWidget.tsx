@@ -5,64 +5,54 @@ interface MapWidgetProps {
   name: string;
   /** If provided, shows directions FROM this address */
   fromAddress?: string;
+  /** Label for the from address (e.g. "Arnold's") */
+  fromLabel?: string;
 }
 
-const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '';
-
-export default function MapWidget({ placeId, name, fromAddress }: MapWidgetProps) {
-  // Destination: prefer place_id, fall back to name search
-  const destination = placeId ? `place_id:${placeId}` : name;
+export default function MapWidget({ placeId, name, fromAddress, fromLabel }: MapWidgetProps) {
+  const destination = placeId
+    ? `place_id:${placeId}`
+    : name;
   const destinationEncoded = encodeURIComponent(destination);
 
-  // Build embed URL
-  let embedUrl: string;
-  if (fromAddress) {
-    // Directions embed: origin → destination
-    const originEncoded = encodeURIComponent(fromAddress);
-    embedUrl = `https://www.google.com/maps/embed/v1/directions?key=${MAPS_API_KEY}&origin=${originEncoded}&destination=${destinationEncoded}&mode=walking`;
-  } else if (placeId) {
-    // Place embed
-    embedUrl = `https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=${destinationEncoded}`;
-  } else {
-    // Search embed
-    embedUrl = `https://www.google.com/maps/embed/v1/search?key=${MAPS_API_KEY}&q=${destinationEncoded}`;
-  }
-
-  // Fallback link for "open in maps"
+  // Direct link to Google Maps
   const mapsLink = fromAddress
-    ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(fromAddress)}&destination=${destinationEncoded}`
+    ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(fromAddress)}&destination=${destinationEncoded}&travelmode=walking`
     : placeId
       ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
       : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`;
 
-  if (!MAPS_API_KEY) {
-    // No API key — just show a link
-    return (
-      <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
-        <span className="place-detail-v2-identity-icon">📍</span>
-        <span>Open in Maps</span>
-        <span className="place-detail-v2-identity-link">↗</span>
-      </a>
-    );
+  // Iframe src — no API key needed for this basic embed format
+  // directions mode: /maps/embed?pb=... is complex; use the public /maps/dir embed
+  // Best no-key approach: use the standard Google Maps iframe share link
+  let iframeSrc: string;
+  if (fromAddress) {
+    iframeSrc = `https://maps.google.com/maps?saddr=${encodeURIComponent(fromAddress)}&daddr=${encodeURIComponent(placeId ? name : name)}&dirflg=w&output=embed`;
+  } else {
+    iframeSrc = placeId
+      ? `https://maps.google.com/maps?q=place_id:${placeId}&output=embed`
+      : `https://maps.google.com/maps?q=${encodeURIComponent(name)}&output=embed`;
   }
+
+  const label = fromLabel || (fromAddress ? fromAddress.split(',')[0] : null);
 
   return (
     <div className="map-widget">
-      {fromAddress && (
+      {label && (
         <p className="map-widget-label">
-          From <strong>{fromAddress.split(',')[0]}</strong>
+          Walking from <strong>{label}</strong>
         </p>
       )}
       <div className="map-widget-frame">
         <iframe
-          src={embedUrl}
+          src={iframeSrc}
           width="100%"
-          height="260"
-          style={{ border: 0, borderRadius: 8 }}
+          height="280"
+          style={{ border: 0, borderRadius: 8, display: 'block' }}
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title={fromAddress ? `Directions to ${name}` : name}
+          title={fromAddress ? `Walking directions to ${name}` : name}
         />
       </div>
       <a
