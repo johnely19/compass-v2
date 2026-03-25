@@ -38,51 +38,43 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     : null;
 
   return (
-    <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
-      <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
-        {!imageUrl && <span className="place-card-image-fallback" />}
-      </div>
-      <div className="place-card-body">
-        <div className="place-card-header">
-          <h3 className="place-card-name">{name}</h3>
-          <TypeBadge type={type} size="sm" />
+    <div style={{ position: 'relative' }}>
+      <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
+        <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
+          {!imageUrl && <span className="place-card-image-fallback" />}
         </div>
-        <div className="place-card-rating">
-          {safeRating != null ? (
-            <>
-              {Array.from({ length: 5 }, (_, i) => (
-                <span key={i} className={i < Math.floor(safeRating) ? 'star-filled' : 'star-empty'}>
-                  ★
-                </span>
-              ))}
-              <span className="rating-value">{safeRating.toFixed(1)}</span>
-            </>
-          ) : (
-            <span className="rating-placeholder">&nbsp;</span>
-          )}
+        <div className="place-card-body">
+          <div className="place-card-header">
+            <h3 className="place-card-name">{name}</h3>
+            <TypeBadge type={type} size="sm" />
+          </div>
+          <div className="place-card-rating">
+            {safeRating != null ? (
+              <>
+                {Array.from({ length: 5 }, (_, i) => (
+                  <span key={i} className={i < Math.floor(safeRating) ? 'star-filled' : 'star-empty'}>
+                    ★
+                  </span>
+                ))}
+                <span className="rating-value">{safeRating.toFixed(1)}</span>
+              </>
+            ) : (
+              <span className="rating-placeholder">&nbsp;</span>
+            )}
+          </div>
         </div>
-      </div>
-      <div className="place-card-footer">
         {mapsUrl && (
-          <a
-            href={mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="place-card-maps"
-            onClick={(e) => e.stopPropagation()}
-          >
-            ↗ Maps
-          </a>
+          <div className="place-card-footer">
+            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
+              onClick={(e) => e.stopPropagation()}>↗ Maps</a>
+          </div>
         )}
-        {userId && place_id && (
-          <TriageButtons
-            userId={userId}
-            contextKey={contextKey}
-            placeId={place_id}
-            size="sm"
-          />
-        )}
-      </div>
-    </Link>
+      </Link>
+      {userId && place_id && (
+        <div className="place-card-triage-overlay">
+          <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
+        </div>
+      )}
+    </div>
   );
 }

@@ -1282,6 +1282,16 @@ a:hover {
   color: var(--accent);
 }
 
+/* Triage overlay — sits on top of card, outside the Link */
+.place-card-triage-overlay {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 10;
+  display: flex;
+  gap: 4px;
+}
+
 
 /* ---- 20. Place Grid ---- */
 
