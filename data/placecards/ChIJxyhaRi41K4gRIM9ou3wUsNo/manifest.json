@@ -1,4 +1,68 @@
 {
   "place_id": "ChIJxyhaRi41K4gRIM9ou3wUsNo",
-  "images": []
+  "images": [
+    {
+      "id": "exterior",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/exterior.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "interior",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/interior.jpg",
+      "category": "interior",
+      "caption": "",
+      "order": 2
+    },
+    {
+      "id": "interior_2",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/interior_2.jpg",
+      "category": "interior",
+      "caption": "",
+      "order": 3
+    },
+    {
+      "id": "food_1",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_1.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 4
+    },
+    {
+      "id": "food_2",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_2.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 5
+    },
+    {
+      "id": "food_3",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_3.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 6
+    },
+    {
+      "id": "food_4",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_4.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 7
+    },
+    {
+      "id": "food_5",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_5.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 8
+    },
+    {
+      "id": "food_6",
+      "path": "/place-photos/ChIJxyhaRi41K4gRIM9ou3wUsNo/food_6.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 9
+    }
+  ]
 }

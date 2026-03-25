@@ -1,4 +1,12 @@
 {
   "place_id": "ChIJgYvViSc1K4gRX6KrtGcoN6Q",
-  "images": []
+  "images": [
+    {
+      "id": "exterior",
+      "path": "/place-photos/ChIJgYvViSc1K4gRX6KrtGcoN6Q/exterior.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    }
+  ]
 }

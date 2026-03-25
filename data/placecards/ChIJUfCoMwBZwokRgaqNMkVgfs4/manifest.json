@@ -2,6 +2,48 @@
   "place_id": "ChIJUfCoMwBZwokRgaqNMkVgfs4",
   "images": [
     {
+      "id": "exterior",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/exterior.jpg",
+      "category": "exterior",
+      "caption": "",
+      "order": 1
+    },
+    {
+      "id": "interior",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/interior.jpg",
+      "category": "interior",
+      "caption": "",
+      "order": 2
+    },
+    {
+      "id": "food_1",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_1.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 3
+    },
+    {
+      "id": "food_2",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_2.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 4
+    },
+    {
+      "id": "food_3",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/food_3.jpg",
+      "category": "food",
+      "caption": "",
+      "order": 5
+    },
+    {
+      "id": "drinks",
+      "path": "/place-photos/ChIJUfCoMwBZwokRgaqNMkVgfs4/drinks.jpg",
+      "category": "drinks",
+      "caption": "",
+      "order": 6
+    },
+    {
       "id": "map-1",
       "category": "map",
       "order": 0,
