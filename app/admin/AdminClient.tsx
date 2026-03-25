@@ -402,7 +402,7 @@ export default function AdminClient() {
 
             {tokenData.hourly.filter(h => h.tokens > 0).length > 0 && (
               <div>
-                {tokenData.hourly.filter(h => h.tokens > 0).map((h, i) => {
+                {[...tokenData.hourly].reverse().filter(h => h.tokens > 0).map((h, i) => {
                   const byAgent = (h as unknown as { byAgent?: Record<string,number> }).byAgent || {};
                   const totalWidth = Math.max((h.tokens / maxHourly) * 100, 2);
                   // Build stacked segments in agent order
