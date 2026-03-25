@@ -47,15 +47,16 @@ function loadCardData(placeId: string): CardData {
 function isNewOpening(summary: string | null): boolean {
   if (!summary) return false;
   const lower = summary.toLowerCase();
-  // Look for keywords indicating new/opened/recent
+  // Use specific phrases only — avoid false positives like "New York" or "new to the area"
   return (
-    lower.includes('new') ||
-    lower.includes('opened') ||
-    lower.includes('2026') ||
-    lower.includes('soft-opened') ||
     lower.includes('just opened') ||
-    lower.includes('opening') ||
-    lower.includes('arrival')
+    lower.includes('soft-opened') ||
+    lower.includes('soft open') ||
+    lower.includes('now open') ||
+    lower.includes('opening soon') ||
+    lower.includes('grand opening') ||
+    /opened\s+(in\s+)?(march|april|may|june|july|august|2026)/.test(lower) ||
+    /new\s+(restaurant|bar|café|cafe|spot|opening|location|arrival)/.test(lower)
   );
 }
 
