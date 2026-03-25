@@ -590,6 +590,9 @@ a:hover {
 
 .carousel-container {
   position: relative;
+  padding: 0 20px; /* room for nav buttons */
+  margin: 0 -20px; /* cancel out padding so track aligns */
+  overflow: visible;
 }
 
 .carousel-track {
@@ -644,11 +647,11 @@ a:hover {
 }
 
 .carousel-arrow-left {
-  left: -18px;
+  left: -2px;
 }
 
 .carousel-arrow-right {
-  right: -18px;
+  right: -2px;
 }
 
 /* Hide arrows on mobile (touch scroll instead) */
