@@ -1812,8 +1812,8 @@ a:hover {
 }
 
 .photo-gallery-img {
-  width: 200px;
-  height: 150px;
+  width: 240px;
+  height: 180px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   display: block;
@@ -1829,8 +1829,8 @@ a:hover {
 
 @media (min-width: 768px) {
   .photo-gallery-img {
-    width: 240px;
-    height: 180px;
+    width: 280px;
+    height: 210px;
   }
 }
 
