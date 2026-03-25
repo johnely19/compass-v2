@@ -49,37 +49,114 @@ function normalizeBlockTitle(title: string): string {
     .trim();
 }
 
+/* ---- Menu item parser ---- */
+interface MenuItem {
+  name: string;
+  price: string;
+  description: string;
+  highlight: boolean;
+}
+
+function parseMenuLine(line: string): MenuItem | null {
+  // Formats: "• Name — $XX ⭐", "⭐ Name — $XX", "• Name — $XX"
+  const raw = line.replace(/^[•·]\s*/, '').trim();
+  const isHighlight = raw.includes('⭐') || line.startsWith('⭐');
+  const clean = raw.replace(/⭐/g, '').trim();
+
+  // Match "Name — $XX" or "Name — XX" (dash variants)
+  const priceMatch = clean.match(/^(.+?)\s+[—–-]+\s+(\$[\d,.]+(?:\s*[-–]\s*\$[\d,.]+)?|\$[\d,.]+)(.*)$/);
+  if (!priceMatch) return null;
+
+  return {
+    name: priceMatch[1]?.trim() ?? clean,
+    price: priceMatch[2]?.trim() ?? '',
+    description: priceMatch[3]?.trim() ?? '',
+    highlight: isHighlight,
+  };
+}
+
+function MenuItemRow({ item, description }: { item: MenuItem; description?: string }) {
+  const desc = description || item.description;
+  return (
+    <div className={`menu-item-row ${item.highlight ? 'menu-item-highlight' : ''}`}>
+      <div className="menu-item-line">
+        <span className="menu-item-name">{item.name}</span>
+        <span className="menu-item-dots" aria-hidden="true" />
+        <span className="menu-item-price">{item.price}</span>
+      </div>
+      {desc && <p className="menu-item-desc">{desc}</p>}
+    </div>
+  );
+}
+
 /* ---- Prose block renderer ---- */
 function NarrativeBlock({ title, body }: { title: string; body: string }) {
   const label = normalizeBlockTitle(title);
-  // Detect if this is "Travel Intel" type block
   const isTravelIntel = /travel.?intel/i.test(label);
   const isCheck = /check/i.test(label);
+  const isFood = /food|menu|drink/i.test(label);
 
+  // For food/menu blocks, use the structured menu renderer
+  if (isFood) {
+    const lines = body.split('\n');
+    const elements: React.ReactNode[] = [];
+    let i = 0;
+
+    while (i < lines.length) {
+      const line = lines[i] ?? '';
+      const trimmed = line.trim();
+
+      if (!trimmed) { i++; continue; }
+
+      // Section header (ALL CAPS or **bold**)
+      if (/^[A-Z][A-Z\s&()]{3,}$/.test(trimmed) || trimmed.startsWith('**')) {
+        elements.push(
+          <p key={i} className="narrative-section-header">{trimmed.replace(/\*\*/g, '')}</p>
+        );
+        i++; continue;
+      }
+
+      // Menu item line
+      if (trimmed.startsWith('•') || trimmed.startsWith('⭐') || trimmed.startsWith('·')) {
+        const item = parseMenuLine(trimmed);
+        if (item) {
+          // Peek at next line for description (indented or no bullet)
+          const nextLine = lines[i + 1]?.trim() ?? '';
+          const isNextDesc = nextLine && !nextLine.startsWith('•') && !nextLine.startsWith('⭐') &&
+            !/^[A-Z][A-Z\s]{3,}$/.test(nextLine) && !nextLine.startsWith('**');
+          const desc = isNextDesc ? nextLine : '';
+          if (desc) i++;
+          elements.push(<MenuItemRow key={i} item={item} description={desc} />);
+          i++; continue;
+        }
+      }
+
+      elements.push(<p key={i} className="narrative-prose">{trimmed}</p>);
+      i++;
+    }
+
+    return (
+      <div className={`narrative-block narrative-block-menu`}>
+        <h3 className="narrative-block-title">{label}</h3>
+        <div className="narrative-block-body menu-body">{elements}</div>
+      </div>
+    );
+  }
+
+  // Non-menu blocks — prose renderer
   return (
     <div className={`narrative-block ${isTravelIntel ? 'narrative-block-travel' : ''} ${isCheck ? 'narrative-block-check' : ''}`}>
       <h3 className="narrative-block-title">{label}</h3>
       <div className="narrative-block-body">
         {body.split('\n').map((line, i) => {
           if (!line.trim()) return <br key={i} />;
-          // Detect review quotes (starts with ⭐)
-          if (line.startsWith('⭐')) {
-            return <blockquote key={i} className="narrative-quote">{line.replace(/^⭐+\s*/, '')}</blockquote>;
+          if (line.trim().startsWith('⭐') && !line.trim().startsWith('⭐⭐')) {
+            return <blockquote key={i} className="narrative-quote">{line.replace(/^⭐+\s*"?/, '').replace(/"$/, '')}</blockquote>;
           }
-          // Detect menu items (• name — price or • name — $XX)
-          if (line.startsWith('•')) {
-            const isHighlight = line.includes('⭐');
-            return (
-              <p key={i} className={`narrative-menu-item ${isHighlight ? 'narrative-menu-highlight' : ''}`}>
-                {line}
-              </p>
-            );
-          }
-          // Bold section headers (all caps lines or bold markers)
-          if (/^[A-Z\s]{4,}$/.test(line.trim()) || line.startsWith('**')) {
+          if (/^[A-Z][A-Z\s&()]{3,}$/.test(line.trim()) || line.trim().startsWith('**')) {
             return <p key={i} className="narrative-section-header">{line.replace(/\*\*/g, '')}</p>;
           }
-          return <p key={i}>{line}</p>;
+          return <p key={i} className="narrative-prose">{line}</p>;
         })}
       </div>
     </div>
