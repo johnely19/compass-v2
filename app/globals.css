@@ -494,11 +494,9 @@ a:hover {
     display: none; /* hidden on desktop */
   }
 
-  .section-header-trip-widget .trip-planning-widget {
+  .section-header-trip-widget .trip-planning-widget,
+  .section-header-trip-widget .tpw {
     margin-bottom: 0;
-    background: transparent;
-    border: 1px solid var(--card-border);
-    padding: var(--space-sm) var(--space-md);
   }
 }
 
@@ -3382,6 +3380,88 @@ body {
   border-radius: var(--radius-md);
   padding: var(--space-md);
   margin-bottom: var(--space-md);
+}
+
+/* ── New compact trip planning widget (tpw) ── */
+.tpw {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.tpw-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.tpw-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  min-width: 100px;
+}
+
+.tpw-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 2px 10px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  letter-spacing: 0.02em;
+}
+
+.tpw-status:hover { opacity: 0.8; }
+
+.tpw-status-open {
+  background: color-mix(in srgb, #ef4444 15%, transparent);
+  color: #ef4444;
+  border: 1px solid color-mix(in srgb, #ef4444 30%, transparent);
+}
+
+.tpw-status-booked {
+  background: color-mix(in srgb, #22c55e 15%, transparent);
+  color: #22c55e;
+  border: 1px solid color-mix(in srgb, #22c55e 30%, transparent);
+}
+
+.tpw-saved {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: color-mix(in srgb, #22c55e 15%, transparent);
+  color: #22c55e;
+  border: 1px solid color-mix(in srgb, #22c55e 30%, transparent);
+  border-radius: 20px;
+  padding: 2px 10px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+}
+
+.tpw-saved:hover { opacity: 0.8; }
+
+.tpw-review {
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+  margin-left: auto;
+  font-weight: 500;
+}
+
+.tpw-review:hover { text-decoration: underline; }
+
+.tpw-accom-name {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.tpw-flights {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
 }
 
 .flight-cards {

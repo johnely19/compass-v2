@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 
 interface FlightLeg {
@@ -24,13 +25,11 @@ interface TravelData {
 interface AccommodationData {
   name: string;
   address?: string;
-  status?: string;
 }
 
 interface PlanningItem {
-  status: 'open' | 'booked' | 'locked';
+  status: 'open' | 'booked';
   details?: string;
-  bookedAt?: string;
 }
 
 interface TripPlanning {
@@ -44,11 +43,12 @@ interface TripPlanningWidgetProps {
   travel?: TravelData;
   accommodation?: AccommodationData;
   bookingStatus?: string;
+  savedCount?: number;
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
 
-function loadPlanning(userId: string, contextKey: string): TripPlanning {
+function load(userId: string, contextKey: string): TripPlanning {
   if (typeof window === 'undefined') return defaultPlanning();
   try {
     const raw = localStorage.getItem(`${STORAGE_KEY_PREFIX}${userId}-${contextKey}`);
@@ -56,26 +56,12 @@ function loadPlanning(userId: string, contextKey: string): TripPlanning {
   } catch { return defaultPlanning(); }
 }
 
-function savePlanning(userId: string, contextKey: string, planning: TripPlanning): void {
-  if (typeof window === 'undefined') return;
-  localStorage.set(`${STORAGE_KEY_PREFIX}${userId}-${contextKey}`, JSON.stringify(planning));
+function save(userId: string, contextKey: string, p: TripPlanning): void {
+  try { localStorage.setItem(`${STORAGE_KEY_PREFIX}${userId}-${contextKey}`, JSON.stringify(p)); } catch {}
 }
 
 function defaultPlanning(): TripPlanning {
-  return {
-    travel: { status: 'open' },
-    accommodation: { status: 'open' },
-  };
-}
-
-function StatusBadge({ status }: { status: string }) {
-  const map: Record<string, { label: string; className: string }> = {
-    open: { label: 'Open', className: 'status-badge status-paused' },
-    booked: { label: 'Booked', className: 'status-badge status-active' },
-    locked: { label: 'Confirmed', className: 'status-badge status-completed' },
-  };
-  const s = map[status] ?? map.open;
-  return <span className={s?.className}>{s?.label}</span>;
+  return { travel: { status: 'open' }, accommodation: { status: 'open' } };
 }
 
 function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
@@ -93,7 +79,7 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
         </div>
         <div className="flight-middle">
           <span className="flight-duration">{leg.duration}</span>
-          <div className="flight-line">✈️</div>
+          <div className="flight-line">→</div>
         </div>
         <div className="flight-endpoint">
           <span className="flight-time">{leg.arrives}</span>
@@ -102,153 +88,81 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
         </div>
       </div>
       {leg.operator && (
-        <div className="flight-meta">{leg.operator}{leg.aircraft ? ` · ${leg.aircraft}` : ''}{leg.cabin ? ` · ${leg.cabin}` : ''}</div>
+        <div className="flight-meta">{leg.operator}{leg.aircraft ? ` · ${leg.aircraft}` : ''}</div>
       )}
     </div>
   );
 }
 
-export default function TripPlanningWidget({ userId, contextKey, travel, accommodation, bookingStatus }: TripPlanningWidgetProps) {
+export default function TripPlanningWidget({
+  userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0,
+}: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
-  const [editingTravel, setEditingTravel] = useState(false);
-  const [editingAccom, setEditingAccom] = useState(false);
-  const [travelDetails, setTravelDetails] = useState('');
-  const [accomDetails, setAccomDetails] = useState('');
 
   useEffect(() => {
-    const p = loadPlanning(userId, contextKey);
-    // If manifest has structured travel data, auto-mark as booked
-    if (travel?.outbound && p.travel.status === 'open') {
-      p.travel = { status: 'booked', bookedAt: p.travel.bookedAt };
+    const p = load(userId, contextKey);
+    // Auto-mark booked if manifest has data
+    if ((travel?.outbound || bookingStatus === 'fully-booked') && p.travel.status === 'open') {
+      p.travel = { status: 'booked' };
     }
     if (accommodation?.name && p.accommodation.status === 'open') {
-      p.accommodation = { status: 'booked', details: `${accommodation.name}${accommodation.address ? ` at ${accommodation.address}` : ''}`, bookedAt: p.accommodation.bookedAt };
+      p.accommodation = { status: 'booked' };
     }
     setPlanning(p);
-    setTravelDetails(p.travel.details ?? '');
-    setAccomDetails(p.accommodation.details ?? accommodation?.name ?? '');
-  }, [userId, contextKey, travel, accommodation]);
+  }, [userId, contextKey, travel, accommodation, bookingStatus]);
 
-  function update(field: 'travel' | 'accommodation', item: PlanningItem) {
-    const next = { ...planning, [field]: item };
+  function toggle(field: 'travel' | 'accommodation') {
+    const cur = planning[field].status;
+    const next: TripPlanning = {
+      ...planning,
+      [field]: { status: cur === 'booked' ? 'open' : 'booked' },
+    };
     setPlanning(next);
-    try {
-      localStorage.setItem(`${STORAGE_KEY_PREFIX}${userId}-${contextKey}`, JSON.stringify(next));
-    } catch {}
+    save(userId, contextKey, next);
   }
 
-  function bookTravel() {
-    update('travel', { status: 'booked', details: travelDetails, bookedAt: new Date().toISOString() });
-    setEditingTravel(false);
-  }
-
-  function bookAccom() {
-    update('accommodation', { status: 'booked', details: accomDetails, bookedAt: new Date().toISOString() });
-    setEditingAccom(false);
-  }
-
-  const isFullyBooked = bookingStatus === 'fully-booked' ||
-    [planning.travel, planning.accommodation].every(i => i.status !== 'open');
+  const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
 
   return (
-    <div className="trip-planning-widget">
-      <div className="trip-planning-header">
-        <span className="trip-planning-title">Trip Planning</span>
-        <span className="text-muted text-xs">
-          {isFullyBooked ? 'Fully booked' : `${[planning.travel, planning.accommodation].filter(i => i.status !== 'open').length}/2 booked`}
-        </span>
+    <div className="tpw">
+      {/* Travel row */}
+      <div className="tpw-row">
+        <span className="tpw-label">Travel</span>
+        <button
+          className={`tpw-status ${planning.travel.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
+          onClick={() => toggle('travel')}
+        >
+          {planning.travel.status === 'booked' ? 'Booked' : 'Unbooked'}
+        </button>
+        {savedCount > 0 && (
+          <Link href={`${reviewUrl}?tab=saved`} className="tpw-saved">
+            {savedCount} saved
+          </Link>
+        )}
+        <Link href={reviewUrl} className="tpw-review">Review →</Link>
       </div>
 
-      {/* Travel */}
-      <div className="trip-planning-row">
-        <div className="trip-planning-row-header">
-          <span className="trip-planning-label">Travel</span>
-          {planning.travel.status === 'booked' && (
-            <button className="trip-planning-unbook" onClick={() => { update('travel', { status: 'open' }); }}>
-              Unbook
-            </button>
-          )}
-        </div>
-
-        {/* Structured flight data from manifest */}
-        {travel?.outbound && (
-          <div className="flight-cards">
-            <FlightCard leg={travel.outbound} label="Outbound" />
-            {travel.return && <FlightCard leg={travel.return} label="Return" />}
-          </div>
-        )}
-
-        {/* Fallback: manual entry */}
-        {!travel?.outbound && planning.travel.status === 'open' && !editingTravel && (
-          <button className="trip-planning-action" onClick={() => setEditingTravel(true)}>
-            Mark as booked
-          </button>
-        )}
-        {!travel?.outbound && editingTravel && (
-          <div className="trip-planning-edit">
-            <input
-              type="text"
-              value={travelDetails}
-              onChange={e => setTravelDetails(e.target.value)}
-              placeholder="e.g. Air Canada YTZ→LGA, April 27"
-              className="trip-planning-input"
-              autoFocus
-            />
-            <div className="trip-planning-edit-actions">
-              <button className="trip-planning-action" onClick={bookTravel}>Confirm</button>
-              <button className="trip-planning-action-secondary" onClick={() => setEditingTravel(false)}>Cancel</button>
-            </div>
-          </div>
-        )}
-        {!travel?.outbound && planning.travel.details && planning.travel.status === 'booked' && (
-          <div className="trip-planning-details">{planning.travel.details}</div>
-        )}
-      </div>
-
-      {/* Accommodation */}
-      <div className="trip-planning-row">
-        <div className="trip-planning-row-header">
-          <span className="trip-planning-label">Accommodation</span>
-          {planning.accommodation.status === 'booked' && (
-            <button className="trip-planning-unbook" onClick={() => { update('accommodation', { status: 'open' }); }}>
-              Unbook
-            </button>
-          )}
-        </div>
-
-        {/* Structured accommodation from manifest */}
+      {/* Accommodation row */}
+      <div className="tpw-row">
+        <span className="tpw-label">Accommodation</span>
+        <button
+          className={`tpw-status ${planning.accommodation.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
+          onClick={() => toggle('accommodation')}
+        >
+          {planning.accommodation.status === 'booked' ? 'Booked' : 'Unbooked'}
+        </button>
         {accommodation?.name && (
-          <div className="accom-details">
-            <span className="accom-name">{accommodation.name}</span>
-            {accommodation.address && <span className="accom-address">{accommodation.address}</span>}
-          </div>
-        )}
-
-        {!accommodation?.name && planning.accommodation.status === 'open' && !editingAccom && (
-          <button className="trip-planning-action" onClick={() => setEditingAccom(true)}>
-            Mark as booked
-          </button>
-        )}
-        {!accommodation?.name && editingAccom && (
-          <div className="trip-planning-edit">
-            <input
-              type="text"
-              value={accomDetails}
-              onChange={e => setAccomDetails(e.target.value)}
-              placeholder="e.g. Ace Hotel, 29th St"
-              className="trip-planning-input"
-              autoFocus
-            />
-            <div className="trip-planning-edit-actions">
-              <button className="trip-planning-action" onClick={bookAccom}>Confirm</button>
-              <button className="trip-planning-action-secondary" onClick={() => setEditingAccom(false)}>Cancel</button>
-            </div>
-          </div>
-        )}
-        {!accommodation?.name && planning.accommodation.details && planning.accommodation.status === 'booked' && (
-          <div className="trip-planning-details">{planning.accommodation.details}</div>
+          <span className="tpw-accom-name">{accommodation.name}</span>
         )}
       </div>
+
+      {/* Flight cards — collapsed by default, shown when travel is booked and has structured data */}
+      {travel?.outbound && planning.travel.status === 'booked' && (
+        <div className="tpw-flights">
+          <FlightCard leg={travel.outbound} label="Out" />
+          {travel.return && <FlightCard leg={travel.return} label="Return" />}
+        </div>
+      )}
     </div>
   );
 }

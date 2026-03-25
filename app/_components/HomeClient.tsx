@@ -184,12 +184,13 @@ export default function HomeClient({
                     travel={contextMeta[ctx.key]?.travel as never}
                     accommodation={contextMeta[ctx.key]?.accommodation as never}
                     bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                    savedCount={counts.saved}
                   />
                 </div>
               )}
 
               <div className="section-header-right">
-                {counts.saved > 0 && (
+                {ctx.type !== 'trip' && counts.saved > 0 && (
                   <Link
                     href={`/review/${encodeURIComponent(ctx.key)}?tab=saved`}
                     className="saved-count-badge"
@@ -197,12 +198,14 @@ export default function HomeClient({
                     ✓ {counts.saved} saved
                   </Link>
                 )}
-                <Link
-                  href={`/review/${encodeURIComponent(ctx.key)}`}
-                  className="section-review-link"
-                >
-                  Review →
-                </Link>
+                {ctx.type !== 'trip' && (
+                  <Link
+                    href={`/review/${encodeURIComponent(ctx.key)}`}
+                    className="section-review-link"
+                  >
+                    Review →
+                  </Link>
+                )}
               </div>
             </div>
 
@@ -215,6 +218,7 @@ export default function HomeClient({
                   travel={contextMeta[ctx.key]?.travel as never}
                   accommodation={contextMeta[ctx.key]?.accommodation as never}
                   bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                  savedCount={counts.saved}
                 />
               </div>
             )}
