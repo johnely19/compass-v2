@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
 
 interface FlightLeg {
   date: string;
@@ -98,6 +99,11 @@ export default function TripPlanningWidget({
   userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0,
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
+  const [accomInputOpen, setAccomInputOpen] = useState(false);
+  const [accomText, setAccomText] = useState('');
+  const [accomParsing, setAccomParsing] = useState(false);
+  const [parsedAccom, setParsedAccom] = useState<ParsedAccommodation | null>(null);
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const p = load(userId, contextKey);
@@ -112,13 +118,56 @@ export default function TripPlanningWidget({
   }, [userId, contextKey, travel, accommodation, bookingStatus]);
 
   function toggle(field: 'travel' | 'accommodation') {
+    if (field === 'accommodation' && planning.accommodation.status === 'open') {
+      // Open the input instead of directly toggling
+      setAccomInputOpen(true);
+      setTimeout(() => textareaRef.current?.focus(), 50);
+      return;
+    }
     const cur = planning[field].status;
     const next: TripPlanning = {
       ...planning,
       [field]: { status: cur === 'booked' ? 'open' : 'booked' },
     };
+    if (field === 'accommodation' && cur === 'booked') {
+      setAccomInputOpen(false);
+      setParsedAccom(null);
+    }
     setPlanning(next);
     save(userId, contextKey, next);
+  }
+
+  async function parseAndSaveAccom() {
+    if (!accomText.trim()) return;
+    setAccomParsing(true);
+    try {
+      const res = await fetch('/api/trip/parse-accommodation', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ text: accomText, contextKey }),
+      });
+      if (!res.ok) throw new Error('parse failed');
+      const parsed = await res.json() as ParsedAccommodation;
+      setParsedAccom(parsed);
+      const next: TripPlanning = {
+        ...planning,
+        accommodation: { status: 'booked', details: parsed.name },
+      };
+      setPlanning(next);
+      save(userId, contextKey, next);
+      setAccomInputOpen(false);
+    } catch {
+      // fallback: save raw text
+      const next: TripPlanning = {
+        ...planning,
+        accommodation: { status: 'booked', details: accomText },
+      };
+      setPlanning(next);
+      save(userId, contextKey, next);
+      setAccomInputOpen(false);
+    } finally {
+      setAccomParsing(false);
+    }
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
@@ -143,7 +192,7 @@ export default function TripPlanningWidget({
       </div>
 
       {/* Accommodation row */}
-      <div className="tpw-row">
+      <div className={`tpw-row ${accomInputOpen ? 'tpw-row-expanding' : ''}`}>
         <span className="tpw-label">Accommodation</span>
         <button
           className={`tpw-status ${planning.accommodation.status === 'booked' ? 'tpw-status-booked' : 'tpw-status-open'}`}
@@ -151,10 +200,45 @@ export default function TripPlanningWidget({
         >
           {planning.accommodation.status === 'booked' ? 'Booked' : 'Unbooked'}
         </button>
-        {accommodation?.name && (
-          <span className="tpw-accom-name">{accommodation.name}</span>
+        {/* Structured accommodation from manifest */}
+        {!accomInputOpen && accommodation?.name && planning.accommodation.status === 'booked' && (
+          <span className="tpw-accom-name">{parsedAccom?.name || accommodation.name}{parsedAccom?.address ? ` · ${parsedAccom.address}` : accommodation.address ? ` · ${accommodation.address}` : ''}</span>
+        )}
+        {/* Parsed result from user input */}
+        {!accomInputOpen && !accommodation?.name && parsedAccom && (
+          <span className="tpw-accom-name">{parsedAccom.name}{parsedAccom.address ? ` · ${parsedAccom.address}` : ''}</span>
         )}
       </div>
+
+      {/* Accommodation input expansion */}
+      {accomInputOpen && (
+        <div className="tpw-accom-input">
+          <textarea
+            ref={textareaRef}
+            className="tpw-accom-textarea"
+            value={accomText}
+            onChange={e => setAccomText(e.target.value)}
+            placeholder="Describe your accommodation — paste a confirmation email, type an address, or just say where you're staying..."
+            rows={3}
+            onKeyDown={e => { if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) parseAndSaveAccom(); }}
+          />
+          <div className="tpw-accom-actions">
+            <button
+              className="tpw-accom-confirm"
+              onClick={parseAndSaveAccom}
+              disabled={accomParsing || !accomText.trim()}
+            >
+              {accomParsing ? 'Parsing...' : 'Save'}
+            </button>
+            <button
+              className="tpw-accom-cancel"
+              onClick={() => setAccomInputOpen(false)}
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Flight cards — collapsed by default, shown when travel is booked and has structured data */}
       {travel?.outbound && planning.travel.status === 'booked' && (

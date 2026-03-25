@@ -3530,6 +3530,78 @@ body {
   color: var(--text-muted);
 }
 
+/* Accommodation input expansion */
+.tpw-row-expanding {
+  flex-wrap: wrap;
+}
+
+.tpw-accom-input {
+  width: 100%;
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.tpw-accom-textarea {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.tpw-accom-textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--accent) 15%, transparent);
+}
+
+.tpw-accom-textarea::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.tpw-accom-actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+}
+
+.tpw-accom-confirm {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 4px 16px;
+  border-radius: 20px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.tpw-accom-confirm:hover:not(:disabled) { opacity: 0.85; }
+.tpw-accom-confirm:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.tpw-accom-cancel {
+  font-size: 0.82rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.tpw-accom-cancel:hover { color: var(--text-primary); }
+
 .tpw-flights {
   margin-top: var(--space-sm);
   display: flex;
