@@ -3,14 +3,14 @@
   "images": [
     {
       "id": "exterior",
-      "path": "/place-photos/ChIJKbInLr_PKIgRhZELaOyRew4/exterior.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJKbInLr_PKIgRhZELaOyRew4/exterior.jpg",
       "category": "exterior",
       "caption": "",
       "order": 1
     },
     {
       "id": "interior",
-      "path": "/place-photos/ChIJKbInLr_PKIgRhZELaOyRew4/interior.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJKbInLr_PKIgRhZELaOyRew4/interior.jpg",
       "category": "interior",
       "caption": "",
       "order": 2

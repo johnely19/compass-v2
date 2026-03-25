@@ -2,14 +2,14 @@
   "images": [
     {
       "id": "photo-1",
-      "path": "/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/1.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/1.jpg",
       "category": "exterior",
       "caption": "",
       "order": 1
     },
     {
       "id": "photo-2",
-      "path": "/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/2.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/photos/2.jpg",
       "category": "exterior",
       "caption": "",
       "order": 2

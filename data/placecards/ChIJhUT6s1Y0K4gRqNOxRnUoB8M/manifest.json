@@ -3,49 +3,49 @@
   "images": [
     {
       "id": "exterior",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/exterior.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/exterior.jpg",
       "category": "exterior",
       "caption": "",
       "order": 1
     },
     {
       "id": "story-arrival",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-arrival.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-arrival.jpg",
       "category": "general",
       "caption": "",
       "order": 2
     },
     {
       "id": "story-details-check",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-details-check.png",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-details-check.png",
       "category": "general",
       "caption": "",
       "order": 3
     },
     {
       "id": "story-drinks-food",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-drinks-food.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-drinks-food.jpg",
       "category": "general",
       "caption": "",
       "order": 4
     },
     {
       "id": "story-enter",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-enter.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-enter.jpg",
       "category": "general",
       "caption": "",
       "order": 5
     },
     {
       "id": "story-food",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-food.jpg",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-food.jpg",
       "category": "general",
       "caption": "",
       "order": 6
     },
     {
       "id": "story-food",
-      "path": "/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-food.png",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJhUT6s1Y0K4gRqNOxRnUoB8M/story-food.png",
       "category": "general",
       "caption": "",
       "order": 7
