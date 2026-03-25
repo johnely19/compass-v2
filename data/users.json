@@ -16,10 +16,10 @@
       "isOwner": false,
       "createdAt": "2026-03-15T00:00:00.000Z"
     },
-    "test1q7j": {
-      "id": "test1q7j",
-      "name": "Test User",
-      "code": "test1q7j",
+    "qa-test-user": {
+      "id": "qa-test-user",
+      "name": "QA Test User",
+      "code": "qa-test-user",
       "city": "Toronto",
       "isOwner": false,
       "createdAt": "2026-03-18T21:38:46.381Z"
