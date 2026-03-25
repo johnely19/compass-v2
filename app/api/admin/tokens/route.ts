@@ -100,11 +100,15 @@ export async function GET() {
     const tokens = entries
       .filter(e => e.ts >= start && e.ts < end)
       .reduce((s, e) => s + e.total, 0);
-    const label = new Date(start).toLocaleString('en-US', {
-      timeZone: 'America/Toronto',
-      hour: 'numeric',
-      hour12: true,
-    });
+    const d = new Date(start);
+    const hourNum = parseInt(d.toLocaleString('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hour12: false }));
+    const timeLabel = d.toLocaleString('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hour12: true });
+    // Show day prefix at midnight (hour 0) or first hour of the window
+    const isNewDay = hourNum === 0 || h === 0;
+    const dayLabel = isNewDay
+      ? d.toLocaleString('en-US', { timeZone: 'America/Toronto', weekday: 'short' }) + ' '
+      : '';
+    const label = dayLabel + timeLabel;
     hourly.push({ hour: label, tokens });
   }
 
