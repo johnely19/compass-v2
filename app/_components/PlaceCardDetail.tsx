@@ -63,6 +63,12 @@ const TYPE_GRADIENTS: Record<string, string> = {
 const DEFAULT_GRADIENT = 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
 const DARK_TYPES = new Set(['music-venue', 'bar', 'theatre']);
 
+// Types where food/drink photo strips make sense
+const FOOD_STRIP_TYPES = new Set(['restaurant', 'bar', 'cafe', 'grocery', 'hotel']);
+
+// Types where interior photo galleries make sense
+const INTERIOR_GALLERY_TYPES = new Set(['restaurant', 'bar', 'cafe', 'gallery', 'museum', 'theatre', 'music-venue', 'hotel', 'shop', 'accommodation']);
+
 /* ---- Block title normalizer ---- */
 function normalizeBlockTitle(title: string): string {
   // Strip emoji, bold markers, location pins, dashes
@@ -226,6 +232,8 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
   const gradient = TYPE_GRADIENTS[card.type] || DEFAULT_GRADIENT;
   const isDark = DARK_TYPES.has(card.type);
   const isDevelopment = card.type === 'development';
+  const hasFoodStrip = FOOD_STRIP_TYPES.has(card.type);
+  const hasInteriorGallery = INTERIOR_GALLERY_TYPES.has(card.type);
 
   // Narrative blocks (rich prose)
   const narrativeBlocks = (data.narrativeBlocks ?? []) as Array<{ title: string; body: string }>;
@@ -303,8 +311,8 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           <RatingWidget rating={rating} reviewCount={reviewCount} priceLevel={priceLevel} />
         )}
 
-        {/* Food photos strip */}
-        {!isDevelopment && foodPhotos.length > 0 && (
+        {/* Food photos strip — only for food/drink venues */}
+        {hasFoodStrip && foodPhotos.length > 0 && (
           <div className="place-detail-v2-food-strip">
             <PhotoGallery images={foodPhotos} />
           </div>
@@ -385,8 +393,8 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
         ))}
 
-        {/* Interior gallery — below fold */}
-        {!isDevelopment && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
+        {/* Interior gallery — below fold, for applicable types */}
+        {hasInteriorGallery && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
           <div className="place-detail-v2-interior-gallery">
             <PhotoGallery images={[...interiorPhotos, ...otherPhotos]} />
           </div>

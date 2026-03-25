@@ -27,7 +27,8 @@ export async function POST(req: NextRequest) {
   const { blobs } = await list({ prefix: `users/${userId}/discoveries` });
   if (blobs.length === 0) return NextResponse.json({ error: 'No discoveries found' }, { status: 404 });
 
-  const blobUrl = blobs.find(b => b.pathname === `users/${userId}/discoveries.json`)?.url || blobs[0].url;
+  const matchedBlob = blobs.find(b => b.pathname === `users/${userId}/discoveries.json`) ?? blobs[0];
+  const blobUrl = matchedBlob!.url;
   const res = await fetch(blobUrl);
   const raw = await res.json();
   const discoveries: Record<string, unknown>[] = Array.isArray(raw) ? raw : raw.discoveries || [];
