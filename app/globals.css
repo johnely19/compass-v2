@@ -4634,3 +4634,50 @@ body {
   color: var(--text-muted);
   margin-left: auto;
 }
+
+
+/* Trip Intel result + suggestions */
+.trip-intel-result {
+  padding: var(--space-md);
+  border-top: 1px solid var(--card-border);
+  background: var(--bg-elevated);
+}
+
+.trip-intel-result-summary {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--success);
+  margin-bottom: var(--space-sm);
+}
+
+.trip-intel-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.trip-intel-suggestions-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.trip-intel-suggestion {
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--warning);
+  line-height: 1.5;
+}
+
+.trip-intel-suggestions-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-style: italic;
+  margin-top: 4px;
+}

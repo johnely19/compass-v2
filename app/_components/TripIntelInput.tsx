@@ -7,33 +7,42 @@ interface TripIntelInputProps {
   onSaved?: () => void;
 }
 
+interface SaveResult {
+  message: string;
+  suggestions?: string[] | null;
+  prefCount?: number;
+  tripFieldCount?: number;
+}
+
 export default function TripIntelInput({ contextKey, onSaved }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState('');
+  const [result, setResult] = useState<SaveResult | null>(null);
+  const [error, setError] = useState('');
 
   async function handleSave() {
     if (!text.trim()) return;
     setLoading(true);
-    setMessage('');
+    setResult(null);
+    setError('');
     try {
       const res = await fetch('/api/trip/parse-intelligence', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ text: text.trim(), contextKey }),
       });
-      const data = await res.json();
+      const data = await res.json() as SaveResult & { error?: string };
       if (res.ok) {
-        const count = Object.keys(data.changes || {}).length;
-        setMessage(count > 0 ? `✅ Saved ${count} field(s)` : '— No new info found');
+        setResult(data);
         setText('');
-        setTimeout(() => { setOpen(false); setMessage(''); onSaved?.(); }, 1500);
+        // Close after 4s (long enough to read suggestions)
+        setTimeout(() => { setOpen(false); setResult(null); onSaved?.(); }, 4000);
       } else {
-        setMessage(`❌ ${data.error || 'Failed'}`);
+        setError(data.error || 'Failed to save');
       }
     } catch {
-      setMessage('❌ Error saving');
+      setError('Error saving — check connection');
     } finally {
       setLoading(false);
     }
@@ -67,12 +76,30 @@ export default function TripIntelInput({ contextKey, onSaved }: TripIntelInputPr
         </button>
         <button
           className="filter-clear"
-          onClick={() => { setOpen(false); setText(''); setMessage(''); }}
+          onClick={() => { setOpen(false); setText(''); setResult(null); setError(''); }}
         >
           Cancel
         </button>
-        {message && <span className="trip-intel-input-msg">{message}</span>}
+        {error && <span className="trip-intel-input-msg" style={{ color: 'var(--danger)' }}>❌ {error}</span>}
       </div>
+
+      {/* Confirmation + suggestions */}
+      {result && (
+        <div className="trip-intel-result">
+          <div className="trip-intel-result-summary">✅ {result.message}</div>
+          {result.suggestions && result.suggestions.length > 0 && (
+            <div className="trip-intel-suggestions">
+              <div className="trip-intel-suggestions-label">💡 Preference patterns noticed:</div>
+              {result.suggestions.map((s, i) => (
+                <div key={i} className="trip-intel-suggestion">{s}</div>
+              ))}
+              <div className="trip-intel-suggestions-note">
+                These won&apos;t be added automatically — mention it to your concierge to save permanently.
+              </div>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
