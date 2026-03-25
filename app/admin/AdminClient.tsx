@@ -285,10 +285,14 @@ export default function AdminClient() {
 
         {/* Agent cards */}
         <div className="health-grid">
+          {/* Core agents from API */}
           {(coreAgents.length > 0 ? coreAgents : sortedAgents).map(agent => {
             const agentId = agent.id || agent.name;
             const pressure = agent.contextTokens > 0
               ? (agent.totalTokens / agent.contextTokens) * 100 : 0;
+            const tokenInfo = tokenData?.agents.find(a =>
+              a.name === agentId || a.name === (agentId === 'main' ? 'charlie' : agentId)
+            );
             return (
               <div key={agentId} className="health-card">
                 <div className="health-card-header">
@@ -319,27 +323,55 @@ export default function AdminClient() {
                     }} />
                   </div>
                 </div>
+                {tokenInfo && tokenInfo.tokens > 0 && (
+                  <div className="health-card-tokens">
+                    <span className="health-token-value">{formatTokens(tokenInfo.tokens)}</span>
+                    <span className="health-token-label">tokens (24h)</span>
+                    <span className="health-token-pct">{tokenInfo.pct}%</span>
+                  </div>
+                )}
               </div>
             );
           })}
-        </div>
-      </Section>
 
-      {/* ---- Tokens by Agent (first after health) ---- */}
-      <Section title="Tokens by Agent" emoji="📊">
-        {tokenData && tokenData.agents.length > 0 ? (
-          <div className="token-usage">
-            {tokenData.agents.map(a => (
-              <div key={a.name} className="token-agent-row">
-                <span className="token-agent-name">{AGENT_NAMES[a.name] || a.name}</span>
-                <span className="token-agent-tokens">{formatTokens(a.tokens)}</span>
-                <span className="token-agent-pct">{a.pct}%</span>
+          {/* Concierge card — from tokenData if not already in agents list */}
+          {(() => {
+            const conciergeToken = tokenData?.agents.find(a => a.name === 'concierge');
+            const alreadyShown = (coreAgents.length > 0 ? coreAgents : sortedAgents).some(
+              a => (a.id || a.name) === 'concierge'
+            );
+            if (!conciergeToken || alreadyShown) return null;
+            return (
+              <div key="concierge" className="health-card health-card-secondary">
+                <div className="health-card-header">
+                  <div>
+                    <div className="health-agent-name">Concierge</div>
+                    <div className="health-agent-role">Chat Assistant</div>
+                  </div>
+                  <span className="health-status-badge health-status-dormant">dormant</span>
+                </div>
+                <div className="health-card-meta" style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <span className="health-model">claude-sonnet-4-6</span>
+                  <span>—</span>
+                </div>
+                <div className="health-card-stats">— sessions (24h)</div>
+                <div className="health-pressure-bar">
+                  <div className="health-pressure-label"><span>Context</span><span>—</span></div>
+                  <div className="health-pressure-track">
+                    <div className="health-pressure-fill" style={{ width: '1%', background: '#4CAF50' }} />
+                  </div>
+                </div>
+                {conciergeToken.tokens > 0 && (
+                  <div className="health-card-tokens">
+                    <span className="health-token-value">{formatTokens(conciergeToken.tokens)}</span>
+                    <span className="health-token-label">tokens (24h)</span>
+                    <span className="health-token-pct">{conciergeToken.pct}%</span>
+                  </div>
+                )}
               </div>
-            ))}
-          </div>
-        ) : (
-          <p className="text-muted">Token data unavailable</p>
-        )}
+            );
+          })()}
+        </div>
       </Section>
 
       {/* ---- Token Usage (hourly chart) ---- */}
