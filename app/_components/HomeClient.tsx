@@ -8,6 +8,8 @@ import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
+import TripIntelWidget, { type TripIntelData } from './TripIntelWidget';
+import TripIntelInput from './TripIntelInput';
 
 interface HomeClientProps {
   userId: string;
@@ -222,6 +224,23 @@ export default function HomeClient({
                 />
               </div>
             )}
+
+            {/* Trip Intelligence — purpose, people, schedule, anchors */}
+            {ctx.type === 'trip' && (() => {
+              const raw = ctx as unknown as Record<string, unknown>;
+              const hasIntel = raw.purpose || (raw.people as unknown[])?.length || (raw.schedule as unknown[])?.length || (raw.anchor_experiences as unknown[])?.length;
+              return (
+                <>
+                  {hasIntel && (
+                    <TripIntelWidget
+                      intel={raw as unknown as TripIntelData}
+                      tripKey={ctx.key}
+                    />
+                  )}
+                  <TripIntelInput contextKey={ctx.key} />
+                </>
+              );
+            })()}
 
             {discoveries.length > 0 ? (
               <PlaceGrid
