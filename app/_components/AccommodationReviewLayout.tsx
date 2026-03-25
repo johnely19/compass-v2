@@ -51,25 +51,39 @@ function AccommodationCard({
   // Resolve hero image
   const hero = resolveImageUrlClient(discovery.heroImage) || null;
 
-  // Extract cottage-specific fields
+  // Extract cottage-specific fields (all from _cottage since migration update)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const cottage = (discovery as any)._cottage as Record<string, unknown> | undefined;
   const beds = cottage?.beds as number | undefined;
   const sleeps = cottage?.sleeps as number | undefined;
   const pricePerWeek = cottage?.pricePerWeek as number | null | undefined;
   const swimType = cottage?.swimType as string | undefined;
-  const julyAvail = cottage?.july_available as boolean | undefined;
-  const matchScore = discovery.rating; // reusing rating field for match score
   const amenities = cottage?.amenities as string[] | undefined;
+  const driveTimes = cottage?.driveTimes as Record<string, { name?: string; minutes?: number }> | undefined;
+  const scores = cottage?.scores as Record<string, number> | undefined;
+  const gates = cottage?.gates as Record<string, boolean> | undefined;
+  const notes = cottage?.notes as string | undefined;
 
-  // Drive time
+  // Match score: average of scores, or fall back to discovery.rating
+  const matchScore = scores
+    ? Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / Object.values(scores).length * 10) / 10
+    : discovery.rating;
+
+  // July availability: derive from gates.threeWeeks or discovery field
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const driveTimes = (discovery as any)._cottage?.driveTimes as Record<string, { minutes?: number }> | undefined;
+  const julyAvail: boolean | undefined = (discovery as any).july_available ??
+    (gates?.threeWeeks === true ? true : undefined);
+
+  // Drive time from Toronto
   let driveTime: string | null = null;
-  if (driveTimes?.dianaKlaus?.minutes) {
-    const m = driveTimes.dianaKlaus.minutes;
-    driveTime = m >= 60 ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}m` : ''}`.trim() : `${m}min`;
+  const dkMins = driveTimes?.dianaKlaus?.minutes;
+  if (dkMins) {
+    driveTime = dkMins >= 60 ? `${Math.floor(dkMins / 60)}h ${dkMins % 60 > 0 ? `${dkMins % 60}m` : ''}`.trim() : `${dkMins}min`;
   }
+
+  // Nearest grocery / town
+  const nearestGrocery = driveTimes?.groceries;
+  const nearestTown = driveTimes?.restaurants;
 
   const topAmenities = getTopAmenities(amenities);
   const july = julyPill(julyAvail);
@@ -78,7 +92,7 @@ function AccommodationCard({
 
   return (
     <div className="accomm-card">
-      {/* Hero image */}
+      {/* Hero image with match score overlay */}
       <Link href={`/placecards/${placeId}?context=${encodeURIComponent(contextKey)}`} className="accomm-card-hero-link">
         <div
           className="accomm-card-hero"
@@ -86,8 +100,13 @@ function AccommodationCard({
             background: hero
               ? `url(${hero}) center/cover no-repeat`
               : GRADIENT,
+            position: 'relative',
           }}
-        />
+        >
+          {matchScore != null && (
+            <span className="accomm-hero-match">⭐ {matchScore}</span>
+          )}
+        </div>
       </Link>
 
       {/* Right content */}
@@ -130,13 +149,25 @@ function AccommodationCard({
           )}
         </div>
 
-        {/* Bottom row: July pill + match score */}
+        {/* Bottom row: July pill */}
         <div className="accomm-card-bottom">
           <span className={`accomm-pill ${july.cls}`}>{july.label}</span>
-          {matchScore != null && (
-            <span className="accomm-match">⭐ {matchScore}/5</span>
-          )}
+          {gates?.private && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>🔒 Private</span>}
+          {gates?.shoreline && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>🌊 Shoreline</span>}
+          {gates?.dockAccess && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>⛵ Dock</span>}
         </div>
+
+        {/* Nearby: grocery / town */}
+        {(nearestGrocery || nearestTown) && (
+          <div className="accomm-card-nearby">
+            {nearestGrocery?.name && (
+              <span className="accomm-nearby-item">🛒 {nearestGrocery.name}{nearestGrocery.minutes ? ` ${nearestGrocery.minutes}min` : ''}</span>
+            )}
+            {nearestTown?.name && nearestTown.name !== nearestGrocery?.name && (
+              <span className="accomm-nearby-item">🏘️ {nearestTown.name}{nearestTown.minutes ? ` ${nearestTown.minutes}min` : ''}</span>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );

@@ -181,7 +181,11 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   const listingUrl = data.listing_url || data.url;
 
   // Match score
-  const matchScore = data.match_score || data.scores?.swimming;
+  const rawScores = data.scores as Record<string, number> | undefined;
+  const matchScore = data.match_score ||
+    (rawScores && Object.values(rawScores).length > 0
+      ? Math.round(Object.values(rawScores).reduce((a, b) => a + b, 0) / Object.values(rawScores).length * 10) / 10
+      : null);
 
   return (
     <div className="accommodation-card">

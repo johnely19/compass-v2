@@ -45,6 +45,11 @@ for (const c of cottages) {
       platform: c.platform,
       url: c.url,
       amenities: c.amenities,
+      driveTimes: c.driveTimes,
+      scores: c.scores,
+      gates: c.gates,
+      notes: c.notes,
+      coordinates: c.coordinates,
     },
   });
 }

@@ -5129,3 +5129,36 @@ body {
     min-height: 120px;
   }
 }
+
+
+/* Accommodation card enhancements (#86) */
+.accomm-hero-match {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background: rgba(0,0,0,0.6);
+  color: #fbbf24;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
+.accomm-card-nearby {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+  padding-top: var(--space-xs);
+  border-top: 1px solid rgba(148,163,184,0.1);
+}
+
+.accomm-nearby-item {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid var(--card-border);
+}
