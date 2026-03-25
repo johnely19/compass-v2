@@ -6,6 +6,7 @@ import type { Context, Discovery, TriageState } from '../_lib/types';
 import { getTriageState, getTriageEntry } from '../_lib/triage';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
+import TripRouteMap from './TripRouteMap';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -81,6 +82,11 @@ export default function ReviewContextClient({
         <h1>{context.emoji} {context.label}</h1>
         {context.dates && <p className="text-muted">{context.dates}</p>}
       </div>
+
+      {/* Route map — only for trip contexts with discoveries */}
+      {context.type === 'trip' && (
+        <TripRouteMap contextKey={context.key} />
+      )}
 
       <div className="review-tabs">
         {tabs.map(t => (

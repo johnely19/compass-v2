@@ -156,21 +156,21 @@ export default function HomeClient({
           <section key={ctx.key} className="section">
             <div className={`section-header${ctx.type === 'trip' ? ' section-header-trip' : ''}`}>
               <div className="section-header-left">
-                <div className="section-title-row">
-                  <span className="section-emoji-large">
-                    <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size="lg" />
+                <div className={`section-title-row${ctx.type === 'trip' ? ' section-title-row-trip' : ''}`}>
+                  <span className={ctx.type === 'trip' ? 'section-emoji-trip' : 'section-emoji-large'}>
+                    <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size={ctx.type === 'trip' ? 'xl' : 'lg'} />
                   </span>
                   <div className="section-title-text">
-                    <h2>{ctx.label}</h2>
+                    <h2 className={ctx.type === 'trip' ? 'section-title-trip' : ''}>{ctx.label}</h2>
                     <div className="section-meta">
                       {naturalDate && (
-                        <span className="section-date">{naturalDate}</span>
+                        <span className={`section-date${ctx.type === 'trip' ? ' section-date-trip' : ''}`}>{naturalDate}</span>
                       )}
                       {naturalDate && description && (
                         <span className="section-meta-sep">·</span>
                       )}
                       {description && (
-                        <span className="section-desc">{description}</span>
+                        <span className={`section-desc${ctx.type === 'trip' ? ' section-desc-trip' : ''}`}>{description}</span>
                       )}
                     </div>
                   </div>
@@ -225,20 +225,21 @@ export default function HomeClient({
               </div>
             )}
 
+            {/* + Add trip details — directly under planning widget */}
+            {ctx.type === 'trip' && (
+              <TripIntelInput contextKey={ctx.key} />
+            )}
+
             {/* Trip Intelligence — purpose, people, schedule, anchors */}
             {ctx.type === 'trip' && (() => {
               const raw = ctx as unknown as Record<string, unknown>;
               const hasIntel = raw.purpose || (raw.people as unknown[])?.length || (raw.schedule as unknown[])?.length || (raw.anchor_experiences as unknown[])?.length;
+              if (!hasIntel) return null;
               return (
-                <>
-                  {hasIntel && (
-                    <TripIntelWidget
-                      intel={raw as unknown as TripIntelData}
-                      tripKey={ctx.key}
-                    />
-                  )}
-                  <TripIntelInput contextKey={ctx.key} />
-                </>
+                <TripIntelWidget
+                  intel={raw as unknown as TripIntelData}
+                  tripKey={ctx.key}
+                />
               );
             })()}
 

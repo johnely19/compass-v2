@@ -4740,3 +4740,103 @@ body {
   font-style: italic;
   margin-top: 4px;
 }
+
+
+/* ---- Trip Route Map (#84) ---- */
+.trip-route-map {
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--bg-elevated);
+  margin-bottom: var(--space-lg);
+}
+
+.trip-route-map-loading {
+  margin-bottom: var(--space-lg);
+}
+
+.trip-route-map-placeholder {
+  height: 80px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--card-border);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.trip-route-map-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--card-border);
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.trip-route-map-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.trip-route-map-icon { font-size: 1.1rem; }
+
+.trip-route-map-title {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.trip-route-map-meta {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.trip-route-map-open {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 4px 10px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+}
+
+.trip-route-map-open:hover {
+  background: rgba(59,130,246,0.08);
+}
+
+.trip-route-map-embed {
+  line-height: 0;
+}
+
+.trip-route-map-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-xs) var(--space-md);
+  border-top: 1px solid var(--card-border);
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.trip-route-map-zone {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.trip-route-map-directions {
+  font-size: 0.78rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.trip-route-map-directions:hover { text-decoration: underline; }
