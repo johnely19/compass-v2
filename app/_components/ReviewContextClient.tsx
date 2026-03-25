@@ -39,10 +39,11 @@ export default function ReviewContextClient({
   discoveries,
 }: ReviewContextClientProps) {
   const [tab, setTab] = useState<Tab>('unreviewed');
-  const [, setRefresh] = useState(0);
+  // triageKey changes when triage state changes — forces memo/state recompute
+  const [triageKey, setTriageKey] = useState(0);
 
   useEffect(() => {
-    const handler = () => setRefresh(n => n + 1);
+    const handler = () => setTriageKey(k => k + 1);
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
@@ -79,7 +80,8 @@ export default function ReviewContextClient({
         const nb = getNeighbourhood((b as unknown as Record<string,string>).address);
         return na.rank - nb.rank || (a.name ?? '').localeCompare(b.name ?? '');
       });
-  }, [discoveries, userId, context.key, tab]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [discoveries, userId, context.key, tab, triageKey]);
 
   const counts = useMemo(() => {
     let unreviewed = 0, saved = 0, dismissed = 0;
@@ -91,7 +93,8 @@ export default function ReviewContextClient({
       else if (state === 'dismissed') dismissed++;
     }
     return { unreviewed, saved, dismissed };
-  }, [discoveries, userId, context.key]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [discoveries, userId, context.key, triageKey]);
 
   const tabs: { key: Tab; label: string; count: number }[] = [
     { key: 'unreviewed', label: 'Needs Review', count: counts.unreviewed },

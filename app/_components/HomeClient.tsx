@@ -117,6 +117,15 @@ export default function HomeClient({
   discoveryMap,
   contextMeta = {},
 }: HomeClientProps) {
+  // Re-render when triage state changes (for saved count badges)
+  // Must be BEFORE any conditional returns (Rules of Hooks)
+  const [, setTriageVersion] = useState(0);
+  useEffect(() => {
+    const handler = () => setTriageVersion((v) => v + 1);
+    window.addEventListener('triage-changed', handler);
+    return () => window.removeEventListener('triage-changed', handler);
+  }, []);
+
   if (contexts.length === 0) {
     return (
       <main className="page">
@@ -127,14 +136,6 @@ export default function HomeClient({
       </main>
     );
   }
-
-  // Re-render when triage state changes (for saved count badges)
-  const [, setTriageVersion] = useState(0);
-  useEffect(() => {
-    const handler = () => setTriageVersion((v) => v + 1);
-    window.addEventListener('triage-changed', handler);
-    return () => window.removeEventListener('triage-changed', handler);
-  }, []);
 
   return (
     <main className="page">

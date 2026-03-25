@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import type { Discovery } from '../_lib/types';
 import { getTriageState } from '../_lib/triage';
 import PlaceCard from './PlaceCard';
@@ -13,23 +13,48 @@ interface PlaceGridProps {
   layout?: 'grid' | 'carousel';
 }
 
+/** Filter to only unreviewed/resurfaced discoveries */
+function filterVisible(discoveries: Discovery[], userId: string | undefined, contextKey: string): Discovery[] {
+  if (!userId) return discoveries;
+  return discoveries.filter((d) => {
+    const pid = d.place_id || d.id;
+    if (!pid) return true;
+    const state = getTriageState(userId, contextKey, pid);
+    return state === 'unreviewed' || state === 'resurfaced';
+  });
+}
+
 export default function PlaceGrid({
   discoveries,
   contextKey,
   userId,
   layout = 'grid',
 }: PlaceGridProps) {
-  const [triageVersion, setTriageVersion] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
-  // Listen for triage changes — increment version to trigger re-filter
+  // Visible discoveries — filtered by triage state
+  // Use state (not memo) so we can update it independently of React's render cycle
+  const [visibleDiscoveries, setVisibleDiscoveries] = useState<Discovery[]>(() =>
+    filterVisible(discoveries, userId, contextKey)
+  );
+
+  // Re-filter when discoveries or userId/contextKey changes
   useEffect(() => {
-    const handler = () => setTriageVersion((v) => v + 1);
-    window.addEventListener('triage-changed', handler);
-    return () => window.removeEventListener('triage-changed', handler);
-  }, []);
+    setVisibleDiscoveries(filterVisible(discoveries, userId, contextKey));
+  }, [discoveries, userId, contextKey]);
+
+  // Re-filter immediately when triage state changes
+  useEffect(() => {
+    function handleTriageChange() {
+      setVisibleDiscoveries(filterVisible(discoveries, userId, contextKey));
+    }
+
+    window.addEventListener('triage-changed', handleTriageChange);
+    return () => window.removeEventListener('triage-changed', handleTriageChange);
+  // Re-register listener when deps change so it captures latest values
+  }, [discoveries, userId, contextKey]);
 
   // Track scroll position for arrow visibility
   const updateScrollState = useCallback(() => {
@@ -42,7 +67,6 @@ export default function PlaceGrid({
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    // Initial check after render
     requestAnimationFrame(updateScrollState);
     el.addEventListener('scroll', updateScrollState, { passive: true });
     const ro = new ResizeObserver(updateScrollState);
@@ -53,20 +77,6 @@ export default function PlaceGrid({
     };
   }, [updateScrollState]);
 
-  // Filter out dismissed places — re-runs when triage state changes
-  const visibleDiscoveries = useMemo(() => {
-    if (!userId) return discoveries;
-
-    return discoveries.filter((d) => {
-      const state = d.place_id
-        ? getTriageState(userId, contextKey, d.place_id)
-        : 'unreviewed';
-      return state === 'unreviewed' || state === 'resurfaced';
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [discoveries, userId, contextKey, triageVersion]);
-
-  // Re-check scroll after content changes
   useEffect(() => {
     requestAnimationFrame(updateScrollState);
   }, [visibleDiscoveries, updateScrollState]);
