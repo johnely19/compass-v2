@@ -62,6 +62,12 @@ export default async function HomePage() {
     getUserDiscoveries(user.id),
   ]);
 
+  // Non-owner with no manifest → onboarding
+  if (!user.isOwner && (!blobManifest || blobManifest.contexts.length === 0)) {
+    const { redirect } = await import('next/navigation');
+    redirect('/onboarding');
+  }
+
   // Merge contexts: Blob manifest + local manifest (owner only)
   const blobContexts = blobManifest?.contexts ?? [];
   const localContexts = user.isOwner ? (loadLocalManifest()?.contexts ?? []) : [];

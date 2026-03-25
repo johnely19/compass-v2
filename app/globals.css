@@ -5257,3 +5257,244 @@ body {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+
+/* ============================================================
+   Onboarding Flow (#90)
+   ============================================================ */
+
+.onboarding-container {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  background: var(--bg-primary);
+}
+
+.onboarding-card {
+  width: 100%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.onboarding-progress {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.onboarding-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--card-border);
+  transition: background var(--transition-base);
+}
+
+.onboarding-dot-active {
+  background: var(--accent);
+}
+
+.onboarding-step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.onboarding-emoji {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.onboarding-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.onboarding-subtitle {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.onboarding-hint {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.onboarding-step-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.onboarding-step-desc {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.onboarding-input {
+  width: 100%;
+  padding: var(--space-md);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.onboarding-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.onboarding-options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.onboarding-option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  border: 2px solid var(--card-border);
+  border-radius: var(--radius-md);
+  background: var(--bg-elevated);
+  text-align: left;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  min-height: 60px;
+}
+
+.onboarding-option:hover {
+  border-color: var(--accent);
+}
+
+.onboarding-option-selected {
+  border-color: var(--accent);
+  background: rgba(59, 130, 246, 0.06);
+}
+
+.onboarding-option-emoji {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+.onboarding-option-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.onboarding-option-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.onboarding-option-desc {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.onboarding-option-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.onboarding-option-selected .onboarding-option-check {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+
+.onboarding-detail-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.onboarding-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: -4px;
+}
+
+.onboarding-actions {
+  display: flex;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+.onboarding-back {
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: var(--space-sm);
+}
+
+.onboarding-back:hover { color: var(--text-primary); }
+
+.onboarding-next,
+.onboarding-finish {
+  flex: 1;
+  padding: var(--space-md) var(--space-xl);
+  border: none;
+  border-radius: var(--radius-md);
+  background: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition-fast);
+}
+
+.onboarding-next:hover,
+.onboarding-finish:hover { opacity: 0.9; }
+
+.onboarding-next-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.onboarding-skip {
+  text-align: center;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: calc(-1 * var(--space-sm));
+}
+
+.onboarding-error {
+  color: var(--danger);
+  font-size: 0.85rem;
+  text-align: center;
+}
