@@ -1712,6 +1712,41 @@ a:hover {
   }
 }
 
+/* Map widget with embedded iframe */
+.map-widget {
+  margin-top: var(--space-md);
+}
+
+.map-widget-label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: var(--space-xs);
+}
+
+.map-widget-label strong {
+  color: var(--text-secondary);
+}
+
+.map-widget-frame {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+}
+
+.map-widget-open-link {
+  display: block;
+  text-align: right;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.map-widget-open-link:hover {
+  color: var(--accent);
+}
+
 
 /* ---- 26. Photo Gallery ---- */
 

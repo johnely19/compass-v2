@@ -1,25 +1,77 @@
+'use client';
+
 interface MapWidgetProps {
-  placeId: string;
+  placeId?: string;
   name: string;
+  /** If provided, shows directions FROM this address */
+  fromAddress?: string;
 }
 
-export default function MapWidget({ placeId, name }: MapWidgetProps) {
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`;
+const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || '';
+
+export default function MapWidget({ placeId, name, fromAddress }: MapWidgetProps) {
+  // Destination: prefer place_id, fall back to name search
+  const destination = placeId ? `place_id:${placeId}` : name;
+  const destinationEncoded = encodeURIComponent(destination);
+
+  // Build embed URL
+  let embedUrl: string;
+  if (fromAddress) {
+    // Directions embed: origin → destination
+    const originEncoded = encodeURIComponent(fromAddress);
+    embedUrl = `https://www.google.com/maps/embed/v1/directions?key=${MAPS_API_KEY}&origin=${originEncoded}&destination=${destinationEncoded}&mode=walking`;
+  } else if (placeId) {
+    // Place embed
+    embedUrl = `https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=${destinationEncoded}`;
+  } else {
+    // Search embed
+    embedUrl = `https://www.google.com/maps/embed/v1/search?key=${MAPS_API_KEY}&q=${destinationEncoded}`;
+  }
+
+  // Fallback link for "open in maps"
+  const mapsLink = fromAddress
+    ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(fromAddress)}&destination=${destinationEncoded}`
+    : placeId
+      ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
+      : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`;
+
+  if (!MAPS_API_KEY) {
+    // No API key — just show a link
+    return (
+      <a href={mapsLink} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
+        <span className="place-detail-v2-identity-icon">📍</span>
+        <span>Open in Maps</span>
+        <span className="place-detail-v2-identity-link">↗</span>
+      </a>
+    );
+  }
 
   return (
-    <div className="widget">
-      <h3 className="widget-title">Location</h3>
+    <div className="map-widget">
+      {fromAddress && (
+        <p className="map-widget-label">
+          From <strong>{fromAddress.split(',')[0]}</strong>
+        </p>
+      )}
+      <div className="map-widget-frame">
+        <iframe
+          src={embedUrl}
+          width="100%"
+          height="260"
+          style={{ border: 0, borderRadius: 8 }}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title={fromAddress ? `Directions to ${name}` : name}
+        />
+      </div>
       <a
-        href={googleMapsUrl}
+        href={mapsLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="btn btn-primary map-link-btn"
+        className="map-widget-open-link"
       >
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z" />
-          <circle cx="12" cy="10" r="3" />
-        </svg>
-        Open in Google Maps
+        Open in Google Maps ↗
       </a>
     </div>
   );
