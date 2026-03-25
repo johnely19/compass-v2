@@ -7,6 +7,7 @@ import { getTriageState, getTriageEntry } from '../_lib/triage';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import TripRouteMap from './TripRouteMap';
+import AccommodationReviewLayout from './AccommodationReviewLayout';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -76,6 +77,12 @@ export default function ReviewContextClient({
     { key: 'dismissed', label: 'Dismissed', count: counts.dismissed },
   ];
 
+  // Detect if >50% accommodation type → use rich layout
+  const accommodationFraction = discoveries.length > 0
+    ? discoveries.filter(d => d.type === 'accommodation').length / discoveries.length
+    : 0;
+  const useAccommodationLayout = accommodationFraction > 0.5;
+
   return (
     <main className="page">
       <div className="page-header">
@@ -83,8 +90,8 @@ export default function ReviewContextClient({
         {context.dates && <p className="text-muted">{context.dates}</p>}
       </div>
 
-      {/* Route map — only for trip contexts with discoveries */}
-      {context.type === 'trip' && (
+      {/* Route map — only for non-accommodation trip contexts */}
+      {context.type === 'trip' && !useAccommodationLayout && (
         <TripRouteMap contextKey={context.key} />
       )}
 
@@ -100,51 +107,60 @@ export default function ReviewContextClient({
         ))}
       </div>
 
-      <div className="review-list">
-        {filtered.map(d => {
-          const placeId = d.place_id ?? d.id;
-          const entry = getTriageEntry(userId, context.key, placeId);
+      {useAccommodationLayout ? (
+        /* Rich accommodation card layout with sidebar map */
+        <AccommodationReviewLayout
+          userId={userId}
+          context={context}
+          discoveries={discoveries}
+          tab={tab}
+        />
+      ) : (
+        <div className="review-list">
+          {filtered.map(d => {
+            const placeId = d.place_id ?? d.id;
+            const entry = getTriageEntry(userId, context.key, placeId);
 
-          return (
-            <div key={d.id} className="review-item card">
-              <div className="card-body flex items-center justify-between">
-                <div className="review-item-info">
-                  <Link href={`/placecards/${placeId}`} className="review-item-name">
-                    {d.name}
-                  </Link>
-                  <div className="flex items-center gap-sm">
-                    <TypeBadge type={d.type} />
-                    {(() => {
-                      // Unreviewed: show discovery time. Saved/dismissed: show triage time.
-                      const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
-                      const ago = timeAgo(ts);
-                      return ago ? <span className="text-xs text-muted">{ago}</span> : null;
-                    })()}
-                    {entry?.state === 'resurfaced' && entry.resurfaceReason && (
-                      <span className="badge badge-warning">{entry.resurfaceReason}</span>
-                    )}
+            return (
+              <div key={d.id} className="review-item card">
+                <div className="card-body flex items-center justify-between">
+                  <div className="review-item-info">
+                    <Link href={`/placecards/${placeId}`} className="review-item-name">
+                      {d.name}
+                    </Link>
+                    <div className="flex items-center gap-sm">
+                      <TypeBadge type={d.type} />
+                      {(() => {
+                        const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
+                        const ago = timeAgo(ts);
+                        return ago ? <span className="text-xs text-muted">{ago}</span> : null;
+                      })()}
+                      {entry?.state === 'resurfaced' && entry.resurfaceReason && (
+                        <span className="badge badge-warning">{entry.resurfaceReason}</span>
+                      )}
+                    </div>
                   </div>
+                  <TriageButtons
+                    userId={userId}
+                    contextKey={context.key}
+                    placeId={placeId}
+                  />
                 </div>
-                <TriageButtons
-                  userId={userId}
-                  contextKey={context.key}
-                  placeId={placeId}
-                />
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
-        {filtered.length === 0 && (
-          <div className="empty-state">
-            <p className="text-muted text-sm">
-              {tab === 'unreviewed'
-                ? 'All caught up — nothing to review!'
-                : `No ${tab} places yet.`}
-            </p>
-          </div>
-        )}
-      </div>
+          {filtered.length === 0 && (
+            <div className="empty-state">
+              <p className="text-muted text-sm">
+                {tab === 'unreviewed'
+                  ? 'All caught up — nothing to review!'
+                  : `No ${tab} places yet.`}
+              </p>
+            </div>
+          )}
+        </div>
+      )}
     </main>
   );
 }
