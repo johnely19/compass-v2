@@ -4118,6 +4118,60 @@ body {
 .place-browse-triage {
   display: flex;
   justify-content: flex-end;
+
+/* ── Hot page place cards with images ── */
+.hot-place-card {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.hot-place-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.hot-place-card-link {
+  display: block;
+  text-decoration: none;
+}
+
+.hot-place-card-image {
+  height: 200px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hot-place-card-overlay {
+  padding: var(--space-sm) var(--space-md);
+  width: 100%;
+}
+
+.hot-place-card-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 4px 0 2px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+  line-height: 1.2;
+}
+
+.hot-place-card-city {
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.75);
+  display: block;
+}
+
+.hot-place-card-triage {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  display: flex;
+  gap: 4px;
+  z-index: 2;
   padding: var(--space-xs) var(--space-sm);
   border-top: 1px solid var(--card-border);
   background: var(--bg-secondary);

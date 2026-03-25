@@ -14,6 +14,7 @@ export interface HotPlaceCard {
   city: string;
   isNewOpening: boolean;
   addedAt: string | null;
+  heroImage?: string | null;
 }
 
 export interface HotClientProps {
@@ -79,21 +80,43 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
   }, [typeCounts]);
 
   // Render a card
+  const TYPE_GRADIENTS: Record<string, string> = {
+    restaurant: 'linear-gradient(135deg, #f59e0b 0%, #e11d48 100%)',
+    bar: 'linear-gradient(135deg, #7c3aed 0%, #4f46e5 100%)',
+    cafe: 'linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%)',
+    gallery: 'linear-gradient(135deg, #475569 0%, #3b82f6 100%)',
+    museum: 'linear-gradient(135deg, #334155 0%, #6366f1 100%)',
+    theatre: 'linear-gradient(135deg, #1e1b4b 0%, #9f1239 100%)',
+    'music-venue': 'linear-gradient(135deg, #0f0a1e 0%, #581c87 100%)',
+    grocery: 'linear-gradient(135deg, #16a34a 0%, #0d9488 100%)',
+    shop: 'linear-gradient(135deg, #78716c 0%, #d97706 100%)',
+    park: 'linear-gradient(135deg, #15803d 0%, #4ade80 100%)',
+    development: 'linear-gradient(135deg, #64748b 0%, #334155 100%)',
+    accommodation: 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)',
+  };
+
   function renderCard(card: HotPlaceCard) {
+    const gradient = TYPE_GRADIENTS[card.type] || 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
+    const bgStyle = card.heroImage
+      ? `linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.65) 100%), url(${card.heroImage}) center/cover`
+      : gradient;
+
     return (
-      <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
-        <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
-          <div className="card-body">
-            <h3 className="place-browse-name">{card.name}</h3>
-            <TypeBadge type={card.type} />
-            {card.city && <span className="place-browse-city">{card.city}</span>}
-            {card.isNewOpening && (
-              <span className="place-browse-newopening">New Opening</span>
-            )}
+      <div key={card.placeId} className="hot-place-card" style={{ position: 'relative' }}>
+        <Link href={`/placecards/${card.placeId}`} className="hot-place-card-link">
+          <div className="hot-place-card-image" style={{ background: bgStyle }}>
+            <div className="hot-place-card-overlay">
+              <TypeBadge type={card.type} size="sm" />
+              <h3 className="hot-place-card-name">{card.name}</h3>
+              {card.city && <span className="hot-place-card-city">{card.city}</span>}
+              {card.isNewOpening && (
+                <span className="place-browse-newopening">New Opening</span>
+              )}
+            </div>
           </div>
         </Link>
         {userId && (
-          <div className="place-browse-triage">
+          <div className="hot-place-card-triage">
             <TriageButtons
               userId={userId}
               contextKey="radar:toronto-experiences"
