@@ -428,6 +428,33 @@ a:hover {
   width: 2.8em !important;
 }
 
+/* Trip sections: bigger everything */
+.section-emoji-trip {
+  flex-shrink: 0;
+  filter: saturate(0.8) opacity(0.9);
+}
+
+.section-emoji-trip .twemoji-img {
+  height: 5.6em !important;
+  width: 5.6em !important;
+}
+
+.section-title-trip {
+  font-size: 1.7rem !important;
+  font-weight: 700;
+  margin-bottom: 4px;
+  line-height: 1.15;
+}
+
+.section-date-trip {
+  font-size: 1rem !important;
+  font-weight: 500;
+}
+
+.section-desc-trip {
+  font-size: 0.95rem !important;
+}
+
 .section-title-text {
   flex: 1;
   min-width: 0;
