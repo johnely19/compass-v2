@@ -92,24 +92,26 @@ export async function GET() {
   const entries = collectUsage();
   const total24h = entries.reduce((s, e) => s + e.total, 0);
 
-  // Hourly buckets (24h)
-  const hourly: Array<{ hour: string; tokens: number }> = [];
+  // Hourly buckets (24h) with per-agent breakdown
+  const hourly: Array<{ hour: string; tokens: number; byAgent: Record<string, number> }> = [];
   for (let h = 0; h < 24; h++) {
     const start = now - (24 - h) * 3600000;
     const end = start + 3600000;
-    const tokens = entries
-      .filter(e => e.ts >= start && e.ts < end)
-      .reduce((s, e) => s + e.total, 0);
+    const bucket = entries.filter(e => e.ts >= start && e.ts < end);
+    const tokens = bucket.reduce((s, e) => s + e.total, 0);
+    const byAgent: Record<string, number> = {};
+    for (const e of bucket) {
+      byAgent[e.agent] = (byAgent[e.agent] || 0) + e.total;
+    }
     const d = new Date(start);
     const hourNum = parseInt(d.toLocaleString('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hour12: false }));
     const timeLabel = d.toLocaleString('en-US', { timeZone: 'America/Toronto', hour: 'numeric', hour12: true });
-    // Show day prefix at midnight (hour 0) or first hour of the window
     const isNewDay = hourNum === 0 || h === 0;
     const dayLabel = isNewDay
       ? d.toLocaleString('en-US', { timeZone: 'America/Toronto', weekday: 'short' }) + ' '
       : '';
     const label = dayLabel + timeLabel;
-    hourly.push({ hour: label, tokens });
+    hourly.push({ hour: label, tokens, byAgent });
   }
 
   // 5-min buckets (2h)

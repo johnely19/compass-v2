@@ -3054,6 +3054,7 @@ body {
   background: rgba(148, 163, 184, 0.1);
   border-radius: 3px;
   overflow: hidden;
+  display: flex;
 }
 
 .token-bar-fill {
@@ -3061,6 +3062,36 @@ body {
   background: linear-gradient(90deg, #60a5fa, #3b82f6);
   border-radius: 3px;
   transition: width 0.3s ease;
+}
+
+/* Stacked segment per agent */
+.token-bar-segment {
+  height: 100%;
+  transition: width 0.3s ease;
+  flex-shrink: 0;
+}
+
+/* Agent color legend */
+.agent-color-legend {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-sm);
+}
+
+.agent-color-dot {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.agent-color-swatch {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
 }
 
 .token-bar-value {

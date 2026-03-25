@@ -116,7 +116,14 @@ function shortModel(model: string | null): string {
   return model.replace(/^(anthropic|openai|google)\//, '');
 }
 
-const AGENT_NAMES: Record<string, string> = { main: 'Charlie', devclaw: 'DevClaw', disco: 'Disco' };
+const AGENT_NAMES: Record<string, string> = { main: 'Charlie', devclaw: 'DevClaw', disco: 'Disco', concierge: 'Concierge' };
+const AGENT_COLORS: Record<string, string> = {
+  main:      '#6366f1',  // indigo — orchestrator
+  charlie:   '#6366f1',
+  devclaw:   '#f59e0b',  // amber — builder
+  disco:     '#22c55e',  // green — discovery
+  concierge: '#e879f9',  // fuchsia — chat
+};
 const AGENT_ROLES: Record<string, string> = { main: 'Orchestrator', devclaw: 'Development', disco: 'Discovery & Research' };
 const AGENT_ORDER: Record<string, number> = { main: 0, devclaw: 1, disco: 2 };
 
@@ -293,8 +300,9 @@ export default function AdminClient() {
             const tokenInfo = tokenData?.agents.find(a =>
               a.name === agentId || a.name === (agentId === 'main' ? 'charlie' : agentId)
             );
+            const agentColor = AGENT_COLORS[agentId] || '#94a3b8';
             return (
-              <div key={agentId} className="health-card">
+              <div key={agentId} className="health-card" style={{ borderTop: `3px solid ${agentColor}` }}>
                 <div className="health-card-header">
                   <div>
                     <div className="health-agent-name">{AGENT_NAMES[agentId] || agentId}</div>
@@ -342,7 +350,7 @@ export default function AdminClient() {
             );
             if (!conciergeToken || alreadyShown) return null;
             return (
-              <div key="concierge" className="health-card health-card-secondary">
+              <div key="concierge" className="health-card health-card-secondary" style={{ borderTop: `3px solid ${AGENT_COLORS.concierge}` }}>
                 <div className="health-card-header">
                   <div>
                     <div className="health-agent-name">Concierge</div>
@@ -382,17 +390,50 @@ export default function AdminClient() {
               <span className="token-total-number">{formatTokens(tokenData.total24h)}</span>
               <span className="token-total-label">tokens (24h)</span>
             </div>
+            {/* Agent color legend */}
+            <div className="agent-color-legend">
+              {Object.entries(AGENT_COLORS).filter(([a]) => a !== 'charlie').map(([agent, color]) => (
+                <div key={agent} className="agent-color-dot">
+                  <div className="agent-color-swatch" style={{ background: color }} />
+                  {AGENT_NAMES[agent] || agent}
+                </div>
+              ))}
+            </div>
+
             {tokenData.hourly.filter(h => h.tokens > 0).length > 0 && (
               <div>
-                {tokenData.hourly.filter(h => h.tokens > 0).map((h, i) => (
+                {tokenData.hourly.filter(h => h.tokens > 0).map((h, i) => {
+                  const byAgent = (h as unknown as { byAgent?: Record<string,number> }).byAgent || {};
+                  const totalWidth = Math.max((h.tokens / maxHourly) * 100, 2);
+                  // Build stacked segments in agent order
+                  const agentOrder = ['main', 'devclaw', 'disco', 'concierge'];
+                  const segments = agentOrder
+                    .filter(a => (byAgent[a] ?? 0) > 0)
+                    .map(a => ({
+                      agent: a,
+                      pct: ((byAgent[a] ?? 0) / h.tokens) * totalWidth,
+                      color: AGENT_COLORS[a] || '#94a3b8',
+                    }));
+                  // Add any unknown agents
+                  Object.entries(byAgent).forEach(([a, v]) => {
+                    if (!agentOrder.includes(a) && v > 0) {
+                      segments.push({ agent: a, pct: (v / h.tokens) * totalWidth, color: '#94a3b8' });
+                    }
+                  });
+                  return (
                   <div key={i} className="token-bar-row">
                     <span className="token-bar-label">{h.hour}</span>
                     <div className="token-bar-track">
-                      <div className="token-bar-fill" style={{ width: `${Math.max((h.tokens / maxHourly) * 100, 2)}%` }} />
+                      {segments.length > 0 ? segments.map((seg, si) => (
+                        <div key={si} className="token-bar-segment" style={{ width: `${seg.pct}%`, background: seg.color }} title={`${AGENT_NAMES[seg.agent] || seg.agent}`} />
+                      )) : (
+                        <div className="token-bar-fill" style={{ width: `${totalWidth}%` }} />
+                      )}
                     </div>
                     <span className="token-bar-value">{formatTokens(h.tokens)}</span>
                   </div>
-                ))}
+                  );
+                })}
               </div>
             )}
           </div>
