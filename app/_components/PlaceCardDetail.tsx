@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import type { PlaceCard, DiscoveryType } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
@@ -90,7 +91,8 @@ function MenuItemRow({ item, description }: { item: MenuItem; description?: stri
 }
 
 /* ---- Prose block renderer ---- */
-function NarrativeBlock({ title, body }: { title: string; body: string }) {
+function NarrativeBlock({ title, body, truncate }: { title: string; body: string; truncate?: number }) {
+  const [expanded, setExpanded] = useState(false);
   const label = normalizeBlockTitle(title);
   const isTravelIntel = /travel.?intel/i.test(label);
   const isCheck = /check/i.test(label);
@@ -144,20 +146,35 @@ function NarrativeBlock({ title, body }: { title: string; body: string }) {
   }
 
   // Non-menu blocks — prose renderer
+  const allLines = body.split('\n').filter(l => l.trim());
+  const visibleLines = (truncate && !expanded) ? allLines.slice(0, truncate) : allLines;
+  const hasMore = truncate && allLines.length > truncate && !expanded;
+
+  const renderLine = (line: string, i: number) => {
+    if (line.trim().startsWith('⭐') && !line.trim().startsWith('⭐⭐')) {
+      return <blockquote key={i} className="narrative-quote">{line.replace(/^⭐+\s*"?/, '').replace(/"$/, '')}</blockquote>;
+    }
+    if (/^[A-Z][A-Z\s&()]{3,}$/.test(line.trim()) || line.trim().startsWith('**')) {
+      return <p key={i} className="narrative-section-header">{line.replace(/\*\*/g, '')}</p>;
+    }
+    return <p key={i} className="narrative-prose">{line}</p>;
+  };
+
   return (
     <div className={`narrative-block ${isTravelIntel ? 'narrative-block-travel' : ''} ${isCheck ? 'narrative-block-check' : ''}`}>
       <h3 className="narrative-block-title">{label}</h3>
       <div className="narrative-block-body">
-        {body.split('\n').map((line, i) => {
-          if (!line.trim()) return <br key={i} />;
-          if (line.trim().startsWith('⭐') && !line.trim().startsWith('⭐⭐')) {
-            return <blockquote key={i} className="narrative-quote">{line.replace(/^⭐+\s*"?/, '').replace(/"$/, '')}</blockquote>;
-          }
-          if (/^[A-Z][A-Z\s&()]{3,}$/.test(line.trim()) || line.trim().startsWith('**')) {
-            return <p key={i} className="narrative-section-header">{line.replace(/\*\*/g, '')}</p>;
-          }
-          return <p key={i} className="narrative-prose">{line}</p>;
-        })}
+        {visibleLines.map((line, i) => renderLine(line, i))}
+        {hasMore && (
+          <button className="narrative-show-more" onClick={() => setExpanded(true)}>
+            ...show more
+          </button>
+        )}
+        {expanded && truncate && (
+          <button className="narrative-show-more" onClick={() => setExpanded(false)}>
+            show less
+          </button>
+        )}
       </div>
     </div>
   );
@@ -250,61 +267,21 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
-        {/* Identity bar — rating + review count + price in one compact row */}
+        {/* ── ABOVE THE FOLD: rating, food strip, identity, map ── */}
+
+        {/* Identity bar — rating + price */}
         {(rating || priceLevel) && (
           <RatingWidget rating={rating} reviewCount={reviewCount} priceLevel={priceLevel} />
         )}
 
-        {/* Hours widget — shows today + expand for full week */}
-        {data.hours && (Array.isArray(data.hours) ? data.hours.length > 0 : Object.keys(data.hours).length > 0) && (
-          <HoursWidget hours={data.hours as string[] | Record<string, string>} />
-        )}
-
-        {/* Food photos strip — right after identity, before prose */}
+        {/* Food photos strip */}
         {!isDevelopment && foodPhotos.length > 0 && (
           <div className="place-detail-v2-food-strip">
             <PhotoGallery images={foodPhotos} />
           </div>
         )}
 
-        {/* ── Narrative blocks — the heart of the card ── */}
-        {narrativeBlocks.length > 0 ? (
-          <div className="place-detail-v2-narrative-blocks">
-            {narrativeBlocks.map((block, i) => (
-              <NarrativeBlock key={i} title={block.title} body={block.body} />
-            ))}
-          </div>
-        ) : summary ? (
-          <div className="place-detail-v2-narrative">
-            <p>{summary}</p>
-          </div>
-        ) : null}
-
-        {/* Interior gallery */}
-        {!isDevelopment && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
-          <div className="place-detail-v2-interior-gallery">
-            <PhotoGallery images={[...interiorPhotos, ...otherPhotos]} />
-          </div>
-        )}
-
-        {/* Development carousel */}
-        {isDevelopment && allImages.length > 0 && (
-          <div className="place-detail-v2-dev-gallery">
-            <div className="place-detail-v2-dev-track">
-              {allImages.map((img, i) => (
-                <img
-                  key={i}
-                  src={resolveImageUrlClient(img.path) || ''}
-                  alt={img.category || `Rendering ${i + 1}`}
-                  className="place-detail-v2-dev-img"
-                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* ── Practical info ── */}
+        {/* Practical info — address, website, menu */}
         <div className="place-detail-v2-identity">
           {address && (
             <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
@@ -335,18 +312,86 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           )}
         </div>
 
-        {/* Travel intel — only for trip contexts */}
-        {contextKey && contextKey.startsWith('trip:') && card.place_id && (
-          <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
-        )}
-
-        {/* Map — with directions from trip base if available */}
+        {/* Map — above fold */}
         <MapWidget
           placeId={card.place_id}
           name={card.name}
           fromAddress={contextKey === 'trip:nyc-april-2026' ? '126 Leonard St, Brooklyn, NY 11211' : undefined}
           fromLabel={contextKey === 'trip:nyc-april-2026' ? "Arnold's" : undefined}
         />
+
+        {/* ── NARRATIVE — truncated blocks ── */}
+        {narrativeBlocks.length > 0 ? (
+          <div className="place-detail-v2-narrative-blocks">
+            {narrativeBlocks.filter(b => {
+              const label = normalizeBlockTitle(b.title);
+              // Move "Go When" to hours section — skip here
+              return !/go.?when/i.test(label) && !/vibe|review/i.test(label);
+            }).map((block, i) => (
+              <NarrativeBlock key={i} title={block.title} body={block.body} truncate={2} />
+            ))}
+          </div>
+        ) : summary ? (
+          <div className="place-detail-v2-narrative">
+            <p>{summary}</p>
+          </div>
+        ) : null}
+
+        {/* Hours + Go When */}
+        {(() => {
+          const goWhen = narrativeBlocks.find(b => /go.?when/i.test(normalizeBlockTitle(b.title)));
+          const hasHours = data.hours && (Array.isArray(data.hours) ? (data.hours as string[]).length > 0 : Object.keys(data.hours as Record<string,string>).length > 0);
+          if (!hasHours && !goWhen) return null;
+          return (
+            <div className="place-detail-v2-hours-section">
+              {hasHours && <HoursWidget hours={data.hours as string[] | Record<string, string>} />}
+              {goWhen && (
+                <div className="narrative-block narrative-go-when">
+                  <h3 className="narrative-block-title">Go When</h3>
+                  <div className="narrative-block-body">
+                    {goWhen.body.split('\n').filter(l => l.trim()).slice(0, 2).map((line, i) => (
+                      <p key={i} className="narrative-prose">{line}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
+
+        {/* Reviews / Vibe — collapsed */}
+        {narrativeBlocks.filter(b => /vibe|review/i.test(normalizeBlockTitle(b.title))).map((block, i) => (
+          <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
+        ))}
+
+        {/* Interior gallery — below fold */}
+        {!isDevelopment && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
+          <div className="place-detail-v2-interior-gallery">
+            <PhotoGallery images={[...interiorPhotos, ...otherPhotos]} />
+          </div>
+        )}
+
+        {/* Development carousel */}
+        {isDevelopment && allImages.length > 0 && (
+          <div className="place-detail-v2-dev-gallery">
+            <div className="place-detail-v2-dev-track">
+              {allImages.map((img, i) => (
+                <img
+                  key={i}
+                  src={resolveImageUrlClient(img.path) || ''}
+                  alt={img.category || `Rendering ${i + 1}`}
+                  className="place-detail-v2-dev-img"
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Travel intel — only for trip contexts */}
+        {contextKey && contextKey.startsWith('trip:') && card.place_id && (
+          <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
+        )}
 
       </div>
     </div>
