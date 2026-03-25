@@ -4,6 +4,7 @@ import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
+import { resolveImageUrlClient } from '../_lib/image-url';
 
 interface PlaceCardProps {
   discovery: Discovery;
@@ -18,11 +19,8 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   const safeRating = rating != null && !isNaN(rating) ? rating : null;
 
   // Resolve image URL — server already enriches, but handle edge cases
-  const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
   const rawImage = discovery.heroImage;
-  const imageUrl = rawImage
-    ? (rawImage.startsWith('http') ? rawImage : (rawImage.startsWith('/') && BLOB_BASE ? `${BLOB_BASE}${rawImage}` : rawImage))
-    : null;
+  const imageUrl = resolveImageUrlClient(rawImage);
 
   // Generate fallback gradient based on type
   const gradientStyle = {

@@ -1,11 +1,8 @@
 import type { PlaceCardImage } from '../../_lib/types';
-
-const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
+import { resolveImageUrlClient } from '../../_lib/image-url';
 
 function resolveUrl(path: string): string {
-  if (path.startsWith('http')) return path;
-  if (path.startsWith('/') && BLOB_BASE) return `${BLOB_BASE}${path}`;
-  return path;
+  return resolveImageUrlClient(path) || path;
 }
 
 interface PhotoGalleryProps {
