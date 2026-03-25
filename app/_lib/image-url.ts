@@ -80,6 +80,8 @@ export function getManifestHeroImage(placeId: string): string | null {
 export function resolveImageUrlClient(path: string | undefined | null): string | null {
   if (!path) return null;
   if (path.startsWith('http://') || path.startsWith('https://')) return path;
+  // Local public assets — serve directly without Blob prefix
+  if (path.startsWith('/cottages/') || path.startsWith('/developments/')) return path;
   const base = typeof window !== 'undefined'
     ? (process.env.NEXT_PUBLIC_BLOB_BASE_URL || '')
     : BLOB_BASE;
