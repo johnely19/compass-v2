@@ -165,13 +165,18 @@ export default function HomeClient({
                       {naturalDate && (
                         <span className={`section-date${ctx.type === 'trip' ? ' section-date-trip' : ''}`}>{naturalDate}</span>
                       )}
-                      {naturalDate && description && (
+                      {/* For non-trip: inline with separator */}
+                      {naturalDate && description && ctx.type !== 'trip' && (
                         <span className="section-meta-sep">·</span>
                       )}
-                      {description && (
-                        <span className={`section-desc${ctx.type === 'trip' ? ' section-desc-trip' : ''}`}>{description}</span>
+                      {description && ctx.type !== 'trip' && (
+                        <span className="section-desc">{description}</span>
                       )}
                     </div>
+                    {/* For trips: description on its own third line */}
+                    {description && ctx.type === 'trip' && (
+                      <div className="section-desc-trip">{description}</div>
+                    )}
                   </div>
                 </div>
               </div>

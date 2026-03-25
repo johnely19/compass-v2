@@ -436,14 +436,14 @@ a:hover {
 }
 
 .section-emoji-trip .twemoji-img {
-  height: 5.6em !important;
-  width: 5.6em !important;
+  height: 4.4em !important;
+  width: 4.4em !important;
 }
 
 .section-title-trip {
-  font-size: 1.7rem !important;
+  font-size: 1.85rem !important;
   font-weight: 700;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   line-height: 1.15;
 }
 
@@ -453,7 +453,10 @@ a:hover {
 }
 
 .section-desc-trip {
-  font-size: 0.95rem !important;
+  font-size: 0.88rem !important;
+  display: block;  /* force to own line */
+  margin-top: 3px;
+  color: var(--text-muted);
 }
 
 .section-title-text {
