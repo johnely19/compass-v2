@@ -10,7 +10,8 @@
     "phone": "(416) 532-8000",
     "website": "https://pizzerialibretto.com/bar-libretto",
     "price_level": 2,
-    "location": "221 Ossington Ave, Toronto, ON M6J 2Z8"
+    "location": "221 Ossington Ave, Toronto, ON M6J 2Z8",
+    "type": "bar"
   },
   "narrative": {
     "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nOssington Strip — between Dundas and Queen\n\nThe original Pizzeria Libretto storefront, now reborn as its nightlife incarnation.",

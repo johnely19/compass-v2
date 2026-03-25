@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES, getTypeMeta } from '../_lib/discovery-types';
 import TypeBadge from '../_components/TypeBadge';
+import TriageButtons from '../_components/TriageButtons';
 
 export interface PlaceCardData {
   placeId: string;
@@ -17,6 +18,7 @@ export interface PlaceCardData {
 export interface PlacecardsBrowseClientProps {
   cards: PlaceCardData[];
   availableTypes: DiscoveryType[];
+  userId?: string;
 }
 
 type SortOption = 'name-asc' | 'name-desc' | 'type';
@@ -27,7 +29,7 @@ interface FilterState {
 }
 
 export default function PlacecardsBrowseClient({
-  cards,
+  cards, userId,
   availableTypes,
 }: PlacecardsBrowseClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -172,22 +174,30 @@ export default function PlacecardsBrowseClient({
       {/* Cards Grid */}
       <div className="grid grid-auto">
         {filteredCards.map((card) => (
-          <Link
-            key={card.placeId}
-            href={`/placecards/${card.placeId}`}
-            className="card place-browse-card"
-          >
-            <div className="card-body">
-              <h3 className="place-browse-name">{card.name}</h3>
-              <TypeBadge type={card.type} />
-              {card.city && (
-                <span className="place-browse-city">{card.city}</span>
-              )}
-              {card.rating !== null && (
-                <span className="place-browse-rating">{card.rating.toFixed(1)}★</span>
-              )}
-            </div>
-          </Link>
+          <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
+            <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
+              <div className="card-body">
+                <h3 className="place-browse-name">{card.name}</h3>
+                <TypeBadge type={card.type} />
+                {card.city && (
+                  <span className="place-browse-city">{card.city}</span>
+                )}
+                {card.rating !== null && (
+                  <span className="place-browse-rating">{card.rating.toFixed(1)}★</span>
+                )}
+              </div>
+            </Link>
+            {userId && (
+              <div className="place-browse-triage">
+                <TriageButtons
+                  userId={userId}
+                  contextKey="radar:toronto-experiences"
+                  placeId={card.placeId}
+                  size="sm"
+                />
+              </div>
+            )}
+          </div>
         ))}
       </div>
 

@@ -7,7 +7,7 @@
     "name": "Nature's Emporium",
     "city": "Toronto",
     "address": "8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada",
-    "type": "accommodation",
+    "type": "park",
     "phone": "(365) 527-2466",
     "website": "https://www.naturesemporium.com/",
     "rating": 4.4,
@@ -15,27 +15,27 @@
     "location": "8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada"
   },
   "narrative": {
-    "summary": "\ud83d\udccd Nature's Emporium\n8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada",
+    "summary": "📍 Nature's Emporium\n8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Nature's Emporium",
-        "body": "\ud83d\udccd Nature's Emporium\n8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada"
+        "body": "📍 Nature's Emporium\n8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nPremium natural grocer known for organic produce depth and specialty pantry selection."
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nPremium natural grocer known for organic produce depth and specialty pantry selection."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.4 (711 reviews)\nPrice level: n/a\nPhone: (365) 527-2466\nWebsite: https://www.naturesemporium.com/\n\nHours:\nMonday: 9:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nTuesday: 9:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nWednesday: 9:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nThursday: 9:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nFriday: 9:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nSaturday: 9:00\u202fAM\u2009\u2013\u20097:00\u202fPM\nSunday: 9:00\u202fAM\u2009\u2013\u20097:00\u202fPM"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (711 reviews)\nPrice level: n/a\nPhone: (365) 527-2466\nWebsite: https://www.naturesemporium.com/\n\nHours:\nMonday: 9:00 AM – 8:00 PM\nTuesday: 9:00 AM – 8:00 PM\nWednesday: 9:00 AM – 8:00 PM\nThursday: 9:00 AM – 8:00 PM\nFriday: 9:00 AM – 8:00 PM\nSaturday: 9:00 AM – 7:00 PM\nSunday: 9:00 AM – 7:00 PM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada\n\n\u2022 walking: 5 hours 26 mins \u2022 23.4 km\n\u2022 transit: 1 hour 39 mins \u2022 28.6 km\n\u2022 driving: 32 mins \u2022 26.1 km (traffic: 25 mins)\n\u2022 bicycling: 1 hour 30 mins \u2022 26.0 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (32 mins)"
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 8401 Weston Rd, Woodbridge, ON L4L 0K8, Canada\n\n• walking: 5 hours 26 mins • 23.4 km\n• transit: 1 hour 39 mins • 28.6 km\n• driving: 32 mins • 26.1 km (traffic: 25 mins)\n• bicycling: 1 hour 30 mins • 26.0 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (32 mins)"
       }
     ]
   },

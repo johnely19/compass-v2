@@ -138,6 +138,8 @@ function Section({ title, emoji, count, children }: {
 
 /* ---- Main Component ---- */
 
+type AdminTab = 'overview' | 'crons';
+
 export default function AdminClient() {
   const [agents, setAgents] = useState<AgentInfo[]>([]);
   const [stats, setStats] = useState<AgentHealthStats | null>(null);
@@ -146,6 +148,7 @@ export default function AdminClient() {
   const [users, setUsers] = useState<UserWithData[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
+  const [activeTab, setActiveTab] = useState<AdminTab>('overview');
 
   const load = useCallback(async () => {
     try {
@@ -207,6 +210,65 @@ export default function AdminClient() {
         <p className="text-muted">{agents.length} agents · {enabledCrons.length} cron jobs · {formatTokens(tokenData?.total24h ?? 0)} tokens (24h)</p>
       </div>
 
+      {/* ── Tabs ── */}
+      <div className="admin-tabs">
+        <button
+          className={`admin-tab ${activeTab === 'overview' ? 'admin-tab-active' : ''}`}
+          onClick={() => setActiveTab('overview')}
+        >
+          Overview
+        </button>
+        <button
+          className={`admin-tab ${activeTab === 'crons' ? 'admin-tab-active' : ''}`}
+          onClick={() => setActiveTab('crons')}
+        >
+          Cron Jobs <span className="admin-tab-badge">{enabledCrons.length}</span>
+        </button>
+      </div>
+
+      {activeTab === 'crons' && (
+        <Section title="Cron Jobs" emoji="⏰" count={enabledCrons.length}>
+          <div style={{ overflowX: 'auto' }}>
+            <table className="cron-table">
+              <thead>
+                <tr>
+                  <th style={{ width: 28 }}></th>
+                  <th style={{ textAlign: 'left' }}>Job</th>
+                  <th>Schedule</th>
+                  <th>Last</th>
+                  <th>Dur.</th>
+                  <th>Next</th>
+                  <th style={{ width: 40 }}>Err</th>
+                </tr>
+              </thead>
+              <tbody>
+                {enabledCrons.map(job => {
+                const health = job.health || job.status;
+                return (
+                <tr key={job.id}>
+                  <td style={{ textAlign: 'center' }}>{healthIcon(health)}</td>
+                  <td>
+                    <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{job.name}</div>
+                    {job.agentId && <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{job.agentId}</div>}
+                  </td>
+                  <td className="cron-schedule">{job.schedule}</td>
+                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{formatRelativeTime(job.lastRun)}</td>
+                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{fmtDuration(job.lastDuration)}</td>
+                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{job.nextRun ? formatRelativeTime(job.nextRun) : '—'}</td>
+                  <td style={{ textAlign: 'center', color: (job.consecutiveErrors ?? 0) > 0 ? '#f44336' : 'var(--text-muted)' }}>
+                    {(job.consecutiveErrors ?? 0) > 0 ? job.consecutiveErrors : '—'}
+                  </td>
+                </tr>
+                );
+              })}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
+
+      {activeTab === 'overview' && <>
+
       {/* ---- Agent Health ---- */}
       <Section title="Agent Health" emoji="🤖">
         {/* Stats row */}
@@ -263,58 +325,33 @@ export default function AdminClient() {
         </div>
       </Section>
 
-      {/* ---- Cron Jobs ---- */}
-      <Section title="Cron Jobs" emoji="⏰" count={enabledCrons.length}>
-        <div style={{ overflowX: 'auto' }}>
-          <table className="cron-table">
-            <thead>
-              <tr>
-                <th style={{ width: 28 }}></th>
-                <th>Job</th>
-                <th>Schedule</th>
-                <th>Last</th>
-                <th>Dur.</th>
-                <th>Next</th>
-                <th style={{ width: 40 }}>Err</th>
-              </tr>
-            </thead>
-            <tbody>
-              {enabledCrons.map(job => {
-                const health = job.health || job.status;
-                return (
-                <tr key={job.id}>
-                  <td style={{ textAlign: 'center' }}>{healthIcon(health)}</td>
-                  <td>
-                    <div style={{ fontWeight: 500, color: 'var(--text-primary)' }}>{job.name}</div>
-                    {job.agentId && <div style={{ fontSize: '0.72rem', color: 'var(--text-muted)' }}>{job.agentId}</div>}
-                  </td>
-                  <td className="cron-schedule">{job.schedule}</td>
-                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{formatRelativeTime(job.lastRun)}</td>
-                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{fmtDuration(job.lastDuration)}</td>
-                  <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{job.nextRun ? formatRelativeTime(job.nextRun) : '—'}</td>
-                  <td style={{ textAlign: 'center', color: (job.consecutiveErrors ?? 0) > 0 ? '#f44336' : 'var(--text-muted)' }}>
-                    {(job.consecutiveErrors ?? 0) > 0 ? job.consecutiveErrors : '—'}
-                  </td>
-                </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+      {/* ---- Tokens by Agent (first after health) ---- */}
+      <Section title="Tokens by Agent" emoji="📊">
+        {tokenData && tokenData.agents.length > 0 ? (
+          <div className="token-usage">
+            {tokenData.agents.map(a => (
+              <div key={a.name} className="token-agent-row">
+                <span className="token-agent-name">{AGENT_NAMES[a.name] || a.name}</span>
+                <span className="token-agent-tokens">{formatTokens(a.tokens)}</span>
+                <span className="token-agent-pct">{a.pct}%</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-muted">Token data unavailable</p>
+        )}
       </Section>
 
-      {/* ---- Token Usage ---- */}
-      <Section title="Token Usage" emoji="📊" defaultOpen={true}>
+      {/* ---- Token Usage (hourly chart) ---- */}
+      <Section title="Token Usage (24h)" emoji="📈">
         {tokenData ? (
           <div className="token-usage">
             <div className="token-total">
               <span className="token-total-number">{formatTokens(tokenData.total24h)}</span>
               <span className="token-total-label">tokens (24h)</span>
             </div>
-
             {tokenData.hourly.filter(h => h.tokens > 0).length > 0 && (
-              <div style={{ marginBottom: 'var(--space-lg)' }}>
-                <h4 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Hourly (24h)</h4>
+              <div>
                 {tokenData.hourly.filter(h => h.tokens > 0).map((h, i) => (
                   <div key={i} className="token-bar-row">
                     <span className="token-bar-label">{h.hour}</span>
@@ -326,19 +363,6 @@ export default function AdminClient() {
                 ))}
               </div>
             )}
-
-            {tokenData.agents.length > 0 && (
-              <div>
-                <h4 style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginBottom: '0.5rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>By Agent (24h)</h4>
-                {tokenData.agents.map(a => (
-                  <div key={a.name} className="token-agent-row">
-                    <span className="token-agent-name">{AGENT_NAMES[a.name] || a.name}</span>
-                    <span className="token-agent-tokens">{formatTokens(a.tokens)}</span>
-                    <span className="token-agent-pct">{a.pct}%</span>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
         ) : (
           <p className="text-muted">Token data unavailable</p>
@@ -346,7 +370,7 @@ export default function AdminClient() {
       </Section>
 
       {/* ---- Users ---- */}
-      <Section title="Users" emoji="👤" count={users.length} defaultOpen={false}>
+      <Section title="Users" emoji="👤" count={users.length}>
         {users.map(user => {
           const expanded = expandedUsers.has(user.id);
           return (
@@ -412,6 +436,9 @@ export default function AdminClient() {
           );
         })}
       </Section>
+
+      </>}  {/* end overview tab */}
+
     </main>
   );
 }

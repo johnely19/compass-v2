@@ -2,6 +2,7 @@ import { readFileSync, existsSync, readdirSync } from 'fs';
 import path from 'path';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
+import { getCurrentUser } from '../_lib/user';
 import HotClient from './HotClient';
 
 export const dynamic = 'force-dynamic';
@@ -66,7 +67,8 @@ interface HotPlaceCard {
   addedAt: string | null;
 }
 
-export default function HotPage() {
+export default async function HotPage() {
+  const user = await getCurrentUser();
   const index = loadIndex();
 
   // Build enriched card data with city, new opening detection, and date
@@ -92,5 +94,5 @@ export default function HotPage() {
   const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));
   const availableTypes = ALL_TYPES.filter((t) => typeSet.has(t));
 
-  return <HotClient cards={cards} availableTypes={availableTypes} />;
+  return <HotClient cards={cards} availableTypes={availableTypes} userId={user?.id} />;
 }

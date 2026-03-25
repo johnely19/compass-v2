@@ -6,7 +6,7 @@
     "name": "Bar Poet",
     "city": "Toronto",
     "address": "Queen West (Trinity Bellwoods)",
-    "type": "restaurant"
+    "type": "bar"
   },
   "discovery": {
     "text": "Discovered via yelp late-night Toronto"

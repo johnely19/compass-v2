@@ -16,6 +16,7 @@
       "cocktail_bar",
       "point_of_interest",
       "establishment"
-    ]
+    ],
+    "type": "bar"
   }
 }

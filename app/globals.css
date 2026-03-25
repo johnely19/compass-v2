@@ -2966,6 +2966,47 @@ body {
 .cron-schedule { font-family: monospace; font-size: 0.75rem; color: var(--text-muted); }
 
 /* Collapsible admin sections */
+/* ── Admin tabs ── */
+.admin-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 0;
+}
+
+.admin-tab {
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  background: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.15s, border-color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.admin-tab:hover { color: var(--text-primary); }
+
+.admin-tab-active {
+  color: var(--text-primary);
+  border-bottom-color: var(--accent);
+}
+
+.admin-tab-badge {
+  font-size: 0.72rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: 10px;
+  padding: 1px 6px;
+  color: var(--text-muted);
+}
+
 .admin-v2-section {
   margin-bottom: var(--space-lg);
 }
@@ -3840,4 +3881,24 @@ body {
   background: rgba(59, 130, 246, 0.12);
   padding: 1px 6px;
   border-radius: 100px;
+}
+
+
+/* ---- Browse + Hot card triage overlay ---- */
+.place-browse-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.place-browse-card-link:hover {
+  color: inherit;
+}
+
+.place-browse-triage {
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--space-xs) var(--space-sm);
+  border-top: 1px solid var(--card-border);
+  background: var(--bg-secondary);
 }

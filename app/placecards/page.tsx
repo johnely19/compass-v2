@@ -2,6 +2,7 @@ import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
+import { getCurrentUser } from '../_lib/user';
 import PlacecardsBrowseClient from './PlacecardsBrowseClient';
 
 export const dynamic = 'force-dynamic';
@@ -58,7 +59,8 @@ interface PlaceCardData {
   rating: number | null;
 }
 
-export default function PlacecardsPage() {
+export default async function PlacecardsPage() {
+  const user = await getCurrentUser();
   const index = loadIndex();
 
   // Build enriched card data with city and rating
@@ -80,5 +82,5 @@ export default function PlacecardsPage() {
   const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));
   const availableTypes = ALL_TYPES.filter((t) => typeSet.has(t));
 
-  return <PlacecardsBrowseClient cards={cards} availableTypes={availableTypes} />;
+  return <PlacecardsBrowseClient cards={cards} availableTypes={availableTypes} userId={user?.id} />;
 }

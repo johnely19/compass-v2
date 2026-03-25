@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import TypeBadge from '../_components/TypeBadge';
+import TriageButtons from '../_components/TriageButtons';
 
 export interface HotPlaceCard {
   placeId: string;
@@ -18,9 +19,10 @@ export interface HotPlaceCard {
 export interface HotClientProps {
   cards: HotPlaceCard[];
   availableTypes: DiscoveryType[];
+  userId?: string;
 }
 
-export default function HotClient({ cards, availableTypes }: HotClientProps) {
+export default function HotClient({ cards, availableTypes, userId }: HotClientProps) {
   const [selectedTypes, setSelectedTypes] = useState<DiscoveryType[]>([]);
 
   const toggleType = useCallback((type: DiscoveryType) => {
@@ -79,20 +81,28 @@ export default function HotClient({ cards, availableTypes }: HotClientProps) {
   // Render a card
   function renderCard(card: HotPlaceCard) {
     return (
-      <Link
-        key={card.placeId}
-        href={`/placecards/${card.placeId}`}
-        className="card place-browse-card"
-      >
-        <div className="card-body">
-          <h3 className="place-browse-name">{card.name}</h3>
-          <TypeBadge type={card.type} />
-          {card.city && <span className="place-browse-city">{card.city}</span>}
-          {card.isNewOpening && (
-            <span className="place-browse-newopening">New Opening</span>
-          )}
-        </div>
-      </Link>
+      <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
+        <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
+          <div className="card-body">
+            <h3 className="place-browse-name">{card.name}</h3>
+            <TypeBadge type={card.type} />
+            {card.city && <span className="place-browse-city">{card.city}</span>}
+            {card.isNewOpening && (
+              <span className="place-browse-newopening">New Opening</span>
+            )}
+          </div>
+        </Link>
+        {userId && (
+          <div className="place-browse-triage">
+            <TriageButtons
+              userId={userId}
+              contextKey="radar:toronto-experiences"
+              placeId={card.placeId}
+              size="sm"
+            />
+          </div>
+        )}
+      </div>
     );
   }
 
