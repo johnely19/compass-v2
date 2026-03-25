@@ -54,11 +54,11 @@ export async function POST(request: NextRequest) {
   // Deduplicate by id or name+contextKey
   const existingIds = new Set(
     (existing as Array<{ id?: string; name?: string; contextKey?: string }>)
-      .map(d => d.id || `${d.name}|${d.contextKey}`)
+      .map(d => d.id || `${d.name ?? ''}|${d.contextKey ?? ''}`)
   );
 
   const newItems = (incoming as Array<{ id?: string; name?: string; contextKey?: string }>)
-    .filter(d => !existingIds.has(d.id || `${d.name}|${d.contextKey}`));
+    .filter(d => !existingIds.has(d.id || `${d.name ?? ''}|${d.contextKey ?? ''}`));
 
   if (newItems.length === 0) {
     return NextResponse.json({ added: 0, total: existing.length, message: 'All duplicates' });
