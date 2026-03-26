@@ -648,11 +648,14 @@ a:hover {
   display: flex;
   gap: var(--space-md);
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding-bottom: var(--space-xs);
+  overscroll-behavior-x: contain;
+  touch-action: pan-x;
 }
 
 .carousel-track::-webkit-scrollbar {
