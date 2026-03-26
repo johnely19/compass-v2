@@ -121,18 +121,41 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
         if (!match) notFound();
         if (!contextKey) contextKey = match.contextKey;
 
-        // Build a minimal PlaceCard from discovery data
+        // Build a PlaceCard from discovery data — pass all known fields
+        const disc = match as unknown as Record<string, unknown>;
         const synCard: PlaceCard = {
-          place_id: match.place_id || placeId,
+          place_id: (match.place_id || placeId) as string,
           name: match.name,
           type: match.type,
           data: {
-            description: `${match.name} — discovered via ${match.source || 'Compass'}. ${match.address || ''}`.trim(),
+            name: match.name,
+            description: (disc.summary as string) || `${match.name} — discovered via ${match.source || 'Compass'}. ${match.address || ''}`.trim(),
             highlights: [],
             images: match.heroImage ? [{ path: match.heroImage, category: 'general' }] : [],
             address: match.address,
-            city: match.city,
+            city: (disc.city as string) || match.city,
             rating: match.rating,
+            // Accommodation-specific fields
+            heroImage: match.heroImage,
+            region: (disc.address as string) || match.address,
+            pricePerWeek: disc.price_per_week,
+            price_per_week: disc.price_per_week,
+            bedrooms: disc.bedrooms,
+            beds: disc.bedrooms,
+            sleeps: disc.max_guests,
+            max_guests: disc.max_guests,
+            swimType: disc.swim_quality,
+            swim_quality: disc.swim_quality,
+            water_body: disc.water_body,
+            amenities: disc.amenities,
+            drive_from_toronto: disc.drive_from_toronto,
+            july_available: disc.july_available,
+            match_score: disc.match_score,
+            listing_url: disc.listing_url,
+            nearest_grocery: disc.nearest_grocery,
+            nearest_town: disc.nearest_town,
+            setting_tags: disc.setting_tags,
+            notes: disc.note || disc.notes,
           },
         };
 

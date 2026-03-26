@@ -356,20 +356,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               View Listing ↗
             </a>
           )}
-          {userId && contextKey && (
-            <div className="accommodation-action-triage">
-              <TriageWidget
-                userId={userId}
-                contextKey={contextKey}
-                contextLabel="Save to shortlist"
-                placeId={placeId}
-              />
-            </div>
-          )}
+          {/* Triage handled in hero — not duplicated here */}
         </div>
 
-        {/* Map */}
-        <MapWidget placeId={placeId.startsWith('ChIJ') ? placeId : undefined} name={name} />
+        {/* Map — use address for non-Google-Places cottages */}
+        <MapWidget
+          placeId={placeId.startsWith('ChIJ') ? placeId : undefined}
+          name={data.nearest_town ? `${name}, ${data.nearest_town}, Ontario` : name}
+        />
 
       </div>
     </div>
