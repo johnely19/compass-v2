@@ -66,8 +66,8 @@ function mergeStores(server: TriageStore, client: TriageStore): TriageStore {
       const sEntry = sCtx.triage[placeId];
       const cEntry = cCtx.triage[placeId];
 
-      if (!sEntry) { mergedTriage[placeId] = cEntry; continue; }
-      if (!cEntry) { mergedTriage[placeId] = sEntry; continue; }
+      if (!sEntry) { mergedTriage[placeId] = cEntry!; continue; }
+      if (!cEntry) { mergedTriage[placeId] = sEntry!; continue; }
 
       // Both exist — keep whichever is newer
       const sTime = new Date(sEntry.updatedAt).getTime();
