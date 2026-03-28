@@ -223,7 +223,7 @@
     {
       "key": "trip:boston-summer-2026",
       "label": "Boston Long Weekend",
-      "emoji": "🦞",
+      "emoji": "\ud83e\udd9e",
       "type": "trip",
       "city": "Boston",
       "dates": "Late August or early September 2026",
@@ -232,12 +232,13 @@
         "lively atmosphere",
         "historical sites",
         "neighborhoods",
-        "seafood"
+        "seafood",
+        "street walking"
       ],
       "active": true,
       "bookingStatus": "planning",
       "travel": {
-        "note": "Flying Porter from Toronto Island (Billy Lake area) — direct and scenic"
+        "note": "Flying Porter from Toronto Island (Billy Lake area) \u2014 direct and scenic"
       },
       "people": [
         {
@@ -245,8 +246,11 @@
           "relation": "travel companion"
         }
       ],
-      "purpose": "Long weekend escape — good food, history, lively atmosphere, late summer/early fall timing for best energy",
-      "notes": "Late Aug or early Sept preferred — shoulder season hotel rates + college energy returning. Freedom Trail walking, North End, harbor. Budget-conscious but nice hotel."
+      "purpose": "Long weekend escape \u2014 good food, history, lively atmosphere, late summer/early fall timing for best energy",
+      "notes": "Late Aug or early Sept preferred \u2014 shoulder season hotel rates + college energy returning. Freedom Trail walking, North End, harbour. Budget-conscious but nice hotel. GREAT STREETS connection: Commonwealth Avenue (Boston's mall) is profiled in Allan B. Jacobs' Great Streets \u2014 walk it as a primary activity, not just transit.",
+      "mustDo": [
+        "Walk Commonwealth Avenue (Great Streets by Jacobs)"
+      ]
     }
   ]
 }
