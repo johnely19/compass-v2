@@ -17,8 +17,13 @@ export async function persistChatData(
   messageId: string,
   history?: ChatMessage[],
 ): Promise<void> {
+  // Cap history at 40 messages (~20 exchanges) before appending new pair.
+  // Without this the blob grows unboundedly and eventually exceeds Claude's context window.
+  const MAX_STORED = 40;
+  const trimmed = (history || []).slice(-MAX_STORED);
+
   const updatedMessages: ChatMessage[] = [
-    ...(history || []),
+    ...trimmed,
     { role: 'user', content: message, timestamp: new Date().toISOString() },
     { role: 'assistant', content: reply, timestamp: new Date().toISOString() },
   ];

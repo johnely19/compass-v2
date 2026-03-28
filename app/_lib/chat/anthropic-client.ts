@@ -73,13 +73,19 @@ export async function sendChatMessage(
 
   const systemPrompt = buildSystemPrompt(context);
 
-  // Build conversation history
+  // Build conversation history — cap at last 10 exchanges (20 messages).
+  // Also truncate individual message content to avoid blowing the context window
+  // (tool results from web searches / place lookups can be very long).
+  const MAX_CONTENT = 2000; // chars per message in history
   const messages: any[] = [];
   if (request.history && Array.isArray(request.history)) {
     for (const msg of request.history.slice(-20)) {
+      const content = typeof msg.content === 'string' && msg.content.length > MAX_CONTENT
+        ? msg.content.slice(0, MAX_CONTENT) + '…'
+        : msg.content;
       messages.push({
         role: msg.role === 'user' ? 'user' : 'assistant',
-        content: msg.content,
+        content,
       });
     }
   }
