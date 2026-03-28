@@ -61,4 +61,74 @@ export const TOOLS: ToolDefinition[] = [
       required: ['name', 'city', 'category', 'why'],
     },
   },
+  {
+    name: 'save_discovery',
+    description: 'Save a specific place to the user\'s Compass AND mark it as saved in triage. Use this when the user explicitly asks to save a place (e.g. "save that", "add Legal Sea Foods to my Boston trip", "save this restaurant"). Also writes triage state = saved so it appears in their saved list immediately.',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        name: { type: 'string' as const, description: 'Place name' },
+        contextKey: { type: 'string' as const, description: 'Which context to save to, e.g. trip:boston-august-2026' },
+        city: { type: 'string' as const, description: 'City the place is in' },
+        type: {
+          type: 'string' as const,
+          enum: ['restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum', 'theatre', 'music-venue', 'hotel', 'experience', 'shop', 'park', 'architecture', 'development', 'accommodation', 'neighbourhood'] as DiscoveryType[],
+          description: 'Place type',
+        },
+        address: { type: 'string' as const, description: 'Full address' },
+        place_id: { type: 'string' as const, description: 'Google Place ID if known' },
+        rating: { type: 'number' as const, description: 'Rating (e.g. 4.5)' },
+        summary: { type: 'string' as const, description: 'Short reason for saving — why this place is great' },
+      },
+      required: ['name', 'contextKey', 'city'],
+    },
+  },
+  {
+    name: 'update_trip',
+    description: 'Update trip details in the user\'s manifest. Use when the user shares trip dates, accommodation, focus areas, or other trip details. E.g. "my Boston trip is August 15–18" or "I\'m staying at The Liberty Hotel".',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        contextKey: { type: 'string' as const, description: 'Context key to update, e.g. trip:boston-august-2026' },
+        dates: { type: 'string' as const, description: 'Trip dates, e.g. "August 15–18, 2026"' },
+        city: { type: 'string' as const, description: 'City for the trip' },
+        label: { type: 'string' as const, description: 'New label/name for the context' },
+        emoji: { type: 'string' as const, description: 'Emoji for the context' },
+        focus: {
+          type: 'array' as const,
+          items: { type: 'string' as const },
+          description: 'Focus areas e.g. ["food", "history", "architecture"]',
+        },
+        accommodationName: { type: 'string' as const, description: 'Hotel or accommodation name' },
+        accommodationAddress: { type: 'string' as const, description: 'Hotel address' },
+        notes: { type: 'string' as const, description: 'Any other trip notes' },
+      },
+      required: ['contextKey'],
+    },
+  },
+  {
+    name: 'create_context',
+    description: 'Create a new trip, outing, or radar context in the user\'s manifest. Use when the user says they\'re planning a new trip, want a new outing, or want to track a new city/radar. E.g. "I\'m planning a trip to Boston in August" or "set up a Boston trip for me".',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        type: {
+          type: 'string' as const,
+          enum: ['trip', 'outing', 'radar'],
+          description: 'Context type: trip (multi-day travel), outing (single day/evening), radar (ongoing city monitor)',
+        },
+        label: { type: 'string' as const, description: 'Human-readable name, e.g. "Boston August 2026"' },
+        emoji: { type: 'string' as const, description: 'Emoji for the context (optional — auto-selected if omitted)' },
+        city: { type: 'string' as const, description: 'City for the context' },
+        dates: { type: 'string' as const, description: 'Dates, e.g. "August 15–18, 2026"' },
+        focus: {
+          type: 'array' as const,
+          items: { type: 'string' as const },
+          description: 'Focus areas e.g. ["food", "architecture", "jazz"]',
+        },
+        setActive: { type: 'boolean' as const, description: 'Whether to mark this context active (default: true)' },
+      },
+      required: ['type', 'label'],
+    },
+  },
 ];
