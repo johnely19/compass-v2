@@ -400,11 +400,12 @@ export default function AdminClient() {
               ))}
             </div>
 
-            {tokenData.hourly.filter(h => h.tokens > 0).length > 0 && (
+            {tokenData.hourly.length > 0 && (
               <div>
-                {[...tokenData.hourly].reverse().filter(h => h.tokens > 0).map((h, i) => {
+                {[...tokenData.hourly].reverse().map((h, i) => {
                   const byAgent = (h as unknown as { byAgent?: Record<string,number> }).byAgent || {};
-                  const totalWidth = Math.max((h.tokens / maxHourly) * 100, 2);
+                  const isEmpty = h.tokens === 0;
+                  const totalWidth = isEmpty ? 0 : Math.max((h.tokens / maxHourly) * 100, 2);
                   // Build stacked segments in agent order
                   const agentOrder = ['main', 'devclaw', 'disco', 'concierge'];
                   const segments = agentOrder
@@ -421,16 +422,20 @@ export default function AdminClient() {
                     }
                   });
                   return (
-                  <div key={i} className="token-bar-row">
+                  <div key={i} className={`token-bar-row ${isEmpty ? 'token-bar-row-empty' : ''}`}>
                     <span className="token-bar-label">{h.hour}</span>
                     <div className="token-bar-track">
-                      {segments.length > 0 ? segments.map((seg, si) => (
+                      {isEmpty ? (
+                        <div className="token-bar-idle" />
+                      ) : segments.length > 0 ? segments.map((seg, si) => (
                         <div key={si} className="token-bar-segment" style={{ width: `${seg.pct}%`, background: seg.color }} title={`${AGENT_NAMES[seg.agent] || seg.agent}`} />
                       )) : (
                         <div className="token-bar-fill" style={{ width: `${totalWidth}%` }} />
                       )}
                     </div>
-                    <span className="token-bar-value">{formatTokens(h.tokens)}</span>
+                    <span className="token-bar-value" style={{ opacity: isEmpty ? 0.3 : 1 }}>
+                      {isEmpty ? '—' : formatTokens(h.tokens)}
+                    </span>
                   </div>
                   );
                 })}

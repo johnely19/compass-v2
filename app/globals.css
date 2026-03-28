@@ -3074,6 +3074,19 @@ body {
   flex-shrink: 0;
 }
 
+/* Empty hour — faint baseline */
+.token-bar-row-empty {
+  opacity: 0.45;
+}
+
+.token-bar-idle {
+  height: 2px;
+  width: 100%;
+  background: color-mix(in srgb, var(--text-muted) 20%, transparent);
+  align-self: center;
+  border-radius: 1px;
+}
+
 /* Agent color legend */
 .agent-color-legend {
   display: flex;
