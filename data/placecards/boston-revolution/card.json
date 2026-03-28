@@ -1,0 +1,48 @@
+{
+  "place_id": "boston-revolution",
+  "source": "concierge-chat",
+  "identity": {
+    "place_id": "boston-revolution",
+    "name": "Revolution Hotel",
+    "city": "Boston",
+    "address": "40 Berkeley St, Boston, MA 02116",
+    "neighborhood": "South End",
+    "type": "accommodation",
+    "subtype": "boutique hotel",
+    "website": "https://www.revolutionhotel.com"
+  },
+  "discovery": {
+    "text": "Recommended via Concierge Chat for Boston late-summer trip",
+    "contextKey": "trip:boston-summer-2026",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "Hip, affordable boutique in the South End — Boston's best neighbourhood for dining and nightlife. A converted YWCA with bold design, bunk rooms and private rooms available, great value without sacrificing style.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Place",
+        "body": "The Revolution is a converted YWCA from 1884 — big bones, high ceilings, and bold graphic design that wears its history loudly. It's the most affordable on this list, and the location is arguably the best for John's brief: the South End is Boston's dining and bar district, with Tremont Street lined with restaurants, and the SoWa arts market a short walk away.",
+        "id": "block-the-place-0"
+      },
+      {
+        "type": "prose",
+        "title": "Location",
+        "body": "South End is the neighbourhood for eating and drinking in Boston. Tremont Street, Washington Street, and the surrounding blocks are packed with some of the city's best restaurants. It's also walkable to Back Bay, the Public Garden, and the MBTA Orange Line.",
+        "id": "block-location-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late August for SoWa Open Market (Sundays through October) and the South End's street festivals. Best value-to-experience ratio on this list for a long weekend.",
+        "id": "block-go-when-2"
+      }
+    ]
+  },
+  "_hotel": {
+    "priceRange": "$$",
+    "vibe": "hip, affordable, design-forward, great neighbourhood",
+    "highlights": ["South End location", "best value on the list", "lively dining neighbourhood"],
+    "bestFor": "Budget-conscious without sacrificing vibe"
+  }
+}

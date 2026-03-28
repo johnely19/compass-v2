@@ -1,0 +1,48 @@
+{
+  "place_id": "boston-harborside-inn",
+  "source": "concierge-chat",
+  "identity": {
+    "place_id": "boston-harborside-inn",
+    "name": "Harborside Inn",
+    "city": "Boston",
+    "address": "185 State St, Boston, MA 02109",
+    "neighborhood": "Waterfront / Financial District",
+    "type": "accommodation",
+    "subtype": "boutique hotel",
+    "website": "https://www.harborsideinnboston.com"
+  },
+  "discovery": {
+    "text": "Recommended via Concierge Chat for Boston late-summer trip",
+    "contextKey": "trip:boston-summer-2026",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "Converted granite warehouse on Boston's waterfront with exposed brick and post-and-beam character. Steps from the ferry terminals, Faneuil Hall, and the North End. Best for harbour energy and water access.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Place",
+        "body": "A 19th-century granite merchant warehouse converted into a boutique hotel with exposed brick walls, post-and-beam ceilings, and rooms that feel genuinely historic rather than faux-historic. It's a smaller property, which means it feels personal rather than transactional. The State Street location puts you at the edge of the Financial District and steps from the waterfront.",
+        "id": "block-the-place-0"
+      },
+      {
+        "type": "prose",
+        "title": "Location",
+        "body": "Right on State Street, minutes from the harbour ferry to Charlestown or the Harbor Islands. Quincy Market, Faneuil Hall, and the North End are all a short walk. This is maximum Boston waterfront — good for harbour cruises, lobster rolls, and the Freedom Trail.",
+        "id": "block-location-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late August for Boston Harborfest and the summer harbor cruise season. The waterfront is most alive mid-summer and the ferry routes to the Harbor Islands are worth the trip.",
+        "id": "block-go-when-2"
+      }
+    ]
+  },
+  "_hotel": {
+    "priceRange": "$$-$$$",
+    "vibe": "historic warehouse, waterfront, intimate",
+    "highlights": ["harbour views", "converted granite warehouse", "North End + Faneuil Hall walkable", "ferry access"],
+    "bestFor": "Water lovers, harbour atmosphere, historic character"
+  }
+}

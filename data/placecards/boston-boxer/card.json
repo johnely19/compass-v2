@@ -1,0 +1,48 @@
+{
+  "place_id": "boston-boxer",
+  "source": "concierge-chat",
+  "identity": {
+    "place_id": "boston-boxer",
+    "name": "The Boxer Boston",
+    "city": "Boston",
+    "address": "107 Merrimac St, Boston, MA 02114",
+    "neighborhood": "North End / Bulfinch Triangle",
+    "type": "accommodation",
+    "subtype": "boutique hotel",
+    "website": "https://www.theboxerboston.com"
+  },
+  "discovery": {
+    "text": "Recommended via Concierge Chat for Boston late-summer trip",
+    "contextKey": "trip:boston-summer-2026",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "Historic building turned sharp boutique hotel in the Bulfinch Triangle, steps from the North End. Perfect base for food crawls through Boston's Italian neighbourhood. Government Center, Faneuil Hall, and the waterfront all walkable.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Place",
+        "body": "The Boxer occupies a beautifully restored historic building in the Bulfinch Triangle — a quieter pocket between the North End and downtown that most tourists walk right past. The rooms are tight but well-designed, the common spaces warm, and the location is essentially perfect: cross one street and you're in the North End, cross another and you're at Faneuil Hall.",
+        "id": "block-the-place-0"
+      },
+      {
+        "type": "prose",
+        "title": "Location",
+        "body": "This is the food crawl hotel. The North End is Boston's Italian neighbourhood — Hanover Street packed with trattorias, cannoli shops, and wine bars. You're also minutes from the waterfront, the Freedom Trail start, and the Greenway. Best base if the plan involves eating well and walking everything.",
+        "id": "block-location-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "August for the North End's famous Feast of the Assumption (mid-August) — the whole neighbourhood turns into a street festival. Or late September for quieter streets and the same great food without the crowds.",
+        "id": "block-go-when-2"
+      }
+    ]
+  },
+  "_hotel": {
+    "priceRange": "$$-$$$",
+    "vibe": "historic, intimate, foodie-forward location",
+    "highlights": ["North End proximity", "historic building", "walkable to Freedom Trail + waterfront"],
+    "bestFor": "Food crawls, history walking, maximum walkability"
+  }
+}

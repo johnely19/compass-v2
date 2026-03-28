@@ -1,0 +1,48 @@
+{
+  "place_id": "boston-verb-hotel",
+  "source": "concierge-chat",
+  "identity": {
+    "place_id": "boston-verb-hotel",
+    "name": "The Verb Hotel",
+    "city": "Boston",
+    "address": "1271 Boylston St, Boston, MA 02215",
+    "neighborhood": "Fenway",
+    "type": "accommodation",
+    "subtype": "boutique hotel",
+    "website": "https://www.theverbhotel.com"
+  },
+  "discovery": {
+    "text": "Recommended via Concierge Chat for Boston late-summer trip",
+    "contextKey": "trip:boston-summer-2026",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "Music-themed boutique hotel steps from Fenway Park. Rock memorabilia everywhere, heated outdoor pool, and one of the best hotel bars in Boston. Walking distance to Red Sox games and the Back Bay.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "The Place",
+        "body": "The Verb is Boston's love letter to rock and roll — a converted 1959 motor lodge decked in vintage concert posters, guitars on the walls, and record bins to flip through at the front desk. The heated outdoor pool is a genuine surprise for New England, and the rooftop views of Fenway make this feel like staying inside the city's soul rather than near it.",
+        "id": "block-the-place-0"
+      },
+      {
+        "type": "prose",
+        "title": "Location",
+        "body": "Fenway-Kenmore puts you minutes from the ballpark, a short walk to the Back Bay and Newbury Street, and on the Green Line for quick shots to Cambridge or downtown. It's the right base for someone who wants to walk everywhere and stumble back late.",
+        "id": "block-location-1"
+      },
+      {
+        "type": "prose",
+        "title": "Go When",
+        "body": "Late August when there's a Red Sox home stand. Pool weather, outdoor concert season, and the neighbourhood buzzes with post-game crowds spilling out of Fenway.",
+        "id": "block-go-when-2"
+      }
+    ]
+  },
+  "_hotel": {
+    "priceRange": "$$-$$$",
+    "vibe": "boutique, music-themed, fun",
+    "highlights": ["heated outdoor pool", "rock memorabilia", "Fenway proximity", "great hotel bar"],
+    "bestFor": "People who want character and energy over polish"
+  }
+}
