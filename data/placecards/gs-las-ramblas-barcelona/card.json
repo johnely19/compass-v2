@@ -1,0 +1,43 @@
+{
+  "place_id": "gs-las-ramblas-barcelona",
+  "source": "great-streets-book",
+  "identity": {
+    "place_id": "gs-las-ramblas-barcelona",
+    "name": "La Rambla",
+    "city": "Barcelona",
+    "country": "Spain",
+    "address": "La Rambla, Barcelona, Spain",
+    "neighborhood": "Ciutat Vella / Eixample",
+    "type": "street",
+    "subtype": "great street"
+  },
+  "discovery": {
+    "text": "From Allan B. Jacobs' Great Streets (1993). The great promenade. Jacobs' opening case study \u2014 a living room for the city, not a road.",
+    "contextKey": "wishlist:great-streets",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "The great promenade. Jacobs' opening case study \u2014 a living room for the city, not a road.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why Jacobs Chose It",
+        "body": "Wide central pedestrian median, caf\u00e9s and kiosks spilling into the walk, plane trees filtering light, human scale on every side. The classic example of a street where the architecture serves the life below, not the other way around.",
+        "id": "block-jacobs-0"
+      },
+      {
+        "type": "prose",
+        "title": "How to Walk It",
+        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
+        "id": "block-walk-1"
+      }
+    ]
+  },
+  "_street": {
+    "book": "Great Streets",
+    "author": "Allan B. Jacobs",
+    "visited": false,
+    "country": "Spain",
+    "highlights": []
+  }
+}

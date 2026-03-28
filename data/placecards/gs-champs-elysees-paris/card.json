@@ -1,0 +1,43 @@
+{
+  "place_id": "gs-champs-elysees-paris",
+  "source": "great-streets-book",
+  "identity": {
+    "place_id": "gs-champs-elysees-paris",
+    "name": "Champs-\u00c9lys\u00e9es",
+    "city": "Paris",
+    "country": "France",
+    "address": "Avenue des Champs-\u00c9lys\u00e9es, Paris, France",
+    "neighborhood": "8th arrondissement",
+    "type": "street",
+    "subtype": "great street"
+  },
+  "discovery": {
+    "text": "From Allan B. Jacobs' Great Streets (1993). The most famous street in the world \u2014 and Jacobs is clear-eyed about both its glory and its decline into car traffic and brand stores.",
+    "contextKey": "wishlist:great-streets",
+    "discoveredAt": "2026-03-28T00:00:00.000Z"
+  },
+  "narrative": {
+    "summary": "The most famous street in the world \u2014 and Jacobs is clear-eyed about both its glory and its decline into car traffic and brand stores.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why Jacobs Chose It",
+        "body": "The axial geometry from the Arc de Triomphe to the Place de la Concorde is still thrilling. The side all\u00e9es with their chestnut trees, the width, the sense of formal procession. Best at dawn before the traffic, or understanding it as the upper half \u2014 the lower half (Tuileries to Concorde) retains the original park character.",
+        "id": "block-jacobs-0"
+      },
+      {
+        "type": "prose",
+        "title": "How to Walk It",
+        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
+        "id": "block-walk-1"
+      }
+    ]
+  },
+  "_street": {
+    "book": "Great Streets",
+    "author": "Allan B. Jacobs",
+    "visited": false,
+    "country": "France",
+    "highlights": []
+  }
+}

@@ -251,6 +251,29 @@
       "mustDo": [
         "Walk Commonwealth Avenue (Great Streets by Jacobs)"
       ]
+    },
+    {
+      "key": "wishlist:great-streets",
+      "label": "Great Streets",
+      "emoji": "\ud83d\udeb6",
+      "type": "wishlist",
+      "city": "Global",
+      "focus": [
+        "urban fabric",
+        "street life",
+        "human scale",
+        "walkability",
+        "architecture"
+      ],
+      "active": true,
+      "bookingStatus": "ongoing",
+      "notes": "Inspired by Allan B. Jacobs' Great Streets (1993). A lifelong project \u2014 visiting the streets that define what makes a city feel alive. Jacobs studied ~50 streets worldwide for proportion, edges, trees, uses, detail, and human scale. Each street is a destination, not just a route.",
+      "reference": {
+        "book": "Great Streets",
+        "author": "Allan B. Jacobs",
+        "year": 1993,
+        "publisher": "MIT Press"
+      }
     }
   ]
 }
