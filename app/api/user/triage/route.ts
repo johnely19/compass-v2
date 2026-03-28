@@ -60,7 +60,7 @@ function mergeStores(server: TriageStore, client: TriageStore): TriageStore {
     const cCtx = client[ctx] ?? { triage: {} };
 
     const mergedTriage: Record<string, TriageEntry> = {};
-    const allPlaces = new Set([...Object.keys(sCtx.triage), ...Object.keys(cCtx.triage)]);
+    const allPlaces = new Set([...Object.keys(sCtx.triage ?? {}), ...Object.keys(cCtx.triage ?? {})]);
 
     for (const placeId of allPlaces) {
       const sEntry = sCtx.triage[placeId];
