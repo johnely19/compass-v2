@@ -2124,6 +2124,26 @@ a:hover {
   margin-top: var(--space-sm);
 }
 
+.review-item-with-photo {
+  display: flex !important;
+  flex-direction: row !important;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.review-item-thumb {
+  width: 72px;
+  min-width: 72px;
+  height: 72px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.review-item-with-photo .card-body {
+  padding: var(--space-sm) var(--space-md) !important;
+}
+
 .review-item-info {
   display: flex;
   flex-direction: column;

@@ -1,5 +1,22 @@
 {
-  "runs": [],
-  "lastRun": null,
-  "currentAverage": null
+  "runs": [
+    {
+      "timestamp": "2026-03-30T16:44:35.353Z",
+      "scores": {
+        "home-full": 6.8,
+        "placecard-restaurant-cookshop": 5.2,
+        "placecard-bar-balera": 7.6,
+        "placecard-restaurant-portici": 6.6,
+        "placecard-cafe-etape22": 6.6,
+        "placecard-cottage-muskoka": 3.8,
+        "review-nyc": 5.2,
+        "review-toronto": 4,
+        "browse-places": 4.4,
+        "hot-page": 5.2
+      },
+      "averageOverall": 5.540000000000001
+    }
+  ],
+  "lastRun": "2026-03-30T16:44:35.353Z",
+  "currentAverage": 5.54
 }

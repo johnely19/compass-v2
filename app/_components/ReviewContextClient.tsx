@@ -162,15 +162,27 @@ export default function ReviewContextClient({
                 {group.items.map(d => {
                   const placeId = d.place_id ?? d.id;
                   const entry = getTriageEntry(userId, context.key, placeId);
+                  const heroImage = (d as unknown as Record<string,string>).heroImage;
+                  const resolvedHero = heroImage
+                    ? (heroImage.startsWith('http') ? heroImage
+                      : heroImage.startsWith('/cottages/') || heroImage.startsWith('/developments/') ? heroImage
+                      : `${process.env.NEXT_PUBLIC_BLOB_BASE_URL || ''}${heroImage}`)
+                    : null;
                   return (
-                    <div key={d.id} className="review-item card">
-                      <div className="card-body flex items-center justify-between">
+                    <div key={d.id} className="review-item card review-item-with-photo">
+                      {resolvedHero && (
+                        <div className="review-item-thumb" style={{ backgroundImage: `url(${resolvedHero})` }} />
+                      )}
+                      <div className="card-body flex items-center justify-between" style={{ flex: 1 }}>
                         <div className="review-item-info">
-                          <Link href={`/placecards/${placeId}`} className="review-item-name">
+                          <Link href={`/placecards/${placeId}?context=${encodeURIComponent(context.key)}`} className="review-item-name">
                             {d.name}
                           </Link>
                           <div className="flex items-center gap-sm">
                             <TypeBadge type={d.type} />
+                            {(d as unknown as Record<string,string>).city && (
+                              <span className="text-xs text-muted">{(d as unknown as Record<string,string>).city}</span>
+                            )}
                             {(() => {
                               const ts = tab === 'unreviewed' ? d.discoveredAt : entry?.updatedAt;
                               const ago = timeAgo(ts);
