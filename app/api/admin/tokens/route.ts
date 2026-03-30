@@ -15,10 +15,38 @@ interface UsageEntry {
   total: number;
 }
 
+/**
+ * Build a Set of session file UUIDs that belong to DevClaw worker subagents.
+ * We identify these by reading the main agent's sessions.json index and
+ * finding session keys matching /agent:main:subagent:/.
+ * This is fast (single JSON read) and avoids scanning JSONL content.
+ */
+function loadSubagentFileIds(): Set<string> {
+  const sessionsJsonPath = path.join(AGENTS_DIR, 'main', 'sessions', 'sessions.json');
+  const ids = new Set<string>();
+  try {
+    const raw = readFileSync(sessionsJsonPath, 'utf8');
+    const sessionsMap = JSON.parse(raw) as Record<string, { sessionId?: string; sessionFile?: string }>;
+    for (const [key, val] of Object.entries(sessionsMap)) {
+      if (!key.includes(':subagent:')) continue;
+      // sessionId is the UUID, or derive from sessionFile
+      const sessionId = val.sessionId
+        || (val.sessionFile ? path.basename(val.sessionFile, '.jsonl') : null);
+      if (sessionId) ids.add(sessionId);
+    }
+  } catch {
+    // If unavailable, return empty set (graceful degradation)
+  }
+  return ids;
+}
+
 function collectUsage(): UsageEntry[] {
   const entries: UsageEntry[] = [];
   const now = Date.now();
   const h24Ago = now - 24 * 3600000;
+
+  // Pre-load subagent UUID set once for the main agent directory
+  const subagentIds = loadSubagentFileIds();
 
   let agentDirs: string[];
   try {
@@ -41,6 +69,12 @@ function collectUsage(): UsageEntry[] {
     }
 
     for (const file of files) {
+      // Determine effective agent label:
+      // For the 'main' agent dir, re-label subagent session files as 'devclaw-workers'
+      const fileUuid = file.replace(/\.jsonl$/, '');
+      const effectiveAgent =
+        agentName === 'main' && subagentIds.has(fileUuid) ? 'devclaw-workers' : agentName;
+
       let content: string;
       try {
         content = readFileSync(path.join(sessionsDir, file), 'utf8');
@@ -61,7 +95,7 @@ function collectUsage(): UsageEntry[] {
 
           entries.push({
             ts,
-            agent: agentName,
+            agent: effectiveAgent,
             total:
               msg.usage.totalTokens ||
               msg.usage.total_tokens ||
