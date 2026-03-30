@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJ6-9kbQBZwokR7RTDKFGG5Zc",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ6-9kbQBZwokR7RTDKFGG5Zc/photos/1.jpg",
+      "category": "exterior",
+      "order": 1
+    },
+    {
+      "id": "photo-2",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ6-9kbQBZwokR7RTDKFGG5Zc/photos/2.jpg",
+      "category": "interior_vibe",
+      "order": 2
+    },
+    {
+      "id": "photo-3",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ6-9kbQBZwokR7RTDKFGG5Zc/photos/3.jpg",
+      "category": "food",
+      "order": 3
+    },
+    {
+      "id": "photo-4",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ6-9kbQBZwokR7RTDKFGG5Zc/photos/4.jpg",
+      "category": "food",
+      "order": 4
+    },
+    {
+      "id": "photo-5",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ6-9kbQBZwokR7RTDKFGG5Zc/photos/5.jpg",
+      "category": "interior_detail",
+      "order": 5
+    }
+  ]
+}

@@ -31,10 +31,12 @@ export default function MapWidget({ placeId, name, fromAddress, fromLabel }: Map
       ? `place_id%3A${placeId}`
       : encodeURIComponent(name);
     iframeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&origin=${origin}&destination=${dest}&mode=walking`;
+  } else if (placeId) {
+    // Use Maps Embed API with place_id (most reliable zoom)
+    iframeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&q=place_id:${placeId}&zoom=16`;
   } else {
-    // Place embed — zoom to neighborhood level
-    const q = placeId ? `place_id:${placeId}` : name;
-    iframeSrc = `https://maps.google.com/maps?q=${encodeURIComponent(q)}&zoom=15&output=embed`;
+    // Name-based search embed
+    iframeSrc = `https://www.google.com/maps/embed/v1/search?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&q=${encodeURIComponent(name)}`;
   }
 
   const label = fromLabel || (fromAddress ? fromAddress.split(',')[0] : null);

@@ -1,0 +1,11 @@
+{
+  "place_id": "ChIJmxWHez41K4gRlPPjVLS0wrc",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJmxWHez41K4gRlPPjVLS0wrc/photos/1.jpg",
+      "category": "general",
+      "order": 1
+    }
+  ]
+}
