@@ -281,7 +281,20 @@ export default function ReviewContextClient({
                             )}
                           </div>
                         </div>
-                        <TriageButtons userId={userId} contextKey={context.key} placeId={placeId} />
+                        <div className="review-item-actions">
+                          <TriageButtons userId={userId} contextKey={context.key} placeId={placeId} />
+                          {d.place_id && (
+                            <a
+                              href={`https://www.google.com/maps/place/?q=place_id:${d.place_id}`}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="review-item-maps-link"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              View in Google Maps →
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
                   );

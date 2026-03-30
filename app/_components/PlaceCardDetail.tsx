@@ -253,7 +253,7 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
 
   const googleMapsUrl = card.place_id
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
-    : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(card.name + ' ' + address)}`;
+    : null;
 
   // Photo gallery — exclude hero, categorize
   const foodPhotos = allImages.filter(i => ['food', 'drinks'].includes(i.category) && i !== heroImg);
@@ -301,6 +301,18 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
+        {/* ── Google Maps CTA — prominent, below hero ── */}
+        {googleMapsUrl && (
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="place-detail-maps-cta"
+          >
+            View in Google Maps →
+          </a>
+        )}
+
         {/* ── ABOVE THE FOLD: hours first, then food strip, identity, narrative ── */}
 
         {/* ── Hours + Go When (FIRST in body) ── */}
@@ -335,11 +347,18 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         {/* Practical info — address, website, menu */}
         <div className="place-detail-v2-identity">
           {address && (
-            <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
-              <span className="place-detail-v2-identity-icon">📍</span>
-              <span>{address}</span>
-              <span className="place-detail-v2-identity-link">↗</span>
-            </a>
+            googleMapsUrl ? (
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
+                <span className="place-detail-v2-identity-icon">📍</span>
+                <span>{address}</span>
+                <span className="place-detail-v2-identity-link">↗</span>
+              </a>
+            ) : (
+              <div className="place-detail-v2-identity-row">
+                <span className="place-detail-v2-identity-icon">📍</span>
+                <span>{address}</span>
+              </div>
+            )
           )}
           {phone && (
             <a href={`tel:${phone}`} className="place-detail-v2-identity-row">
@@ -416,10 +435,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
 
         {/* ── Compact actions row ── */}
         <div className="place-detail-actions-row">
-          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
-             className="place-detail-action-btn place-detail-action-maps">
-            🗺 Maps
-          </a>
+          {googleMapsUrl && (
+            <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
+               className="place-detail-action-btn place-detail-action-maps">
+              View in Google Maps →
+            </a>
+          )}
           <ShareButton name={card.name} />
           {userId && contextKey && card.place_id && (
             <TriageWidget

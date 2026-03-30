@@ -64,7 +64,7 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
         {mapsUrl && (
           <div className="place-card-footer">
             <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
-              onClick={(e) => e.stopPropagation()}>↗ Maps</a>
+              onClick={(e) => e.stopPropagation()}>View in Google Maps →</a>
           </div>
         )}
       </Link>
