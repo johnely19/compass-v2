@@ -24,8 +24,14 @@ if (!GOOGLE_API_KEY) {
 
 // 1. Get list of place_ids that already have blob photos
 console.log('Listing existing Blob photos...');
-const { blobs: existingPhotos } = await list({ prefix: 'place-photos', limit: 2000 });
-const existingPathnames = new Set(existingPhotos.map(b => b.pathname));
+let allBlobs = [];
+let cursor;
+do {
+  const result = await list({ prefix: 'place-photos', limit: 1000, cursor });
+  allBlobs = allBlobs.concat(result.blobs);
+  cursor = result.cursor;
+} while (cursor);
+const existingPathnames = new Set(allBlobs.map(b => b.pathname));
 console.log(`Existing photo blobs: ${existingPathnames.size}`);
 
 // 2. Load discoveries
@@ -103,6 +109,7 @@ for (const d of toProcess) {
       access: 'public',
       addRandomSuffix: false,
       contentType: 'image/jpeg',
+      allowOverwrite: true,
     });
 
     // Update discovery heroImage
