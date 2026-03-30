@@ -116,13 +116,14 @@ function shortModel(model: string | null): string {
   return model.replace(/^(anthropic|openai|google)\//, '');
 }
 
-const AGENT_NAMES: Record<string, string> = { main: 'Charlie', devclaw: 'DevClaw', disco: 'Disco', concierge: 'Concierge' };
+const AGENT_NAMES: Record<string, string> = { main: 'Charlie', devclaw: 'DevClaw', 'devclaw-workers': 'Workers', disco: 'Disco', concierge: 'Concierge' };
 const AGENT_COLORS: Record<string, string> = {
-  main:      '#6366f1',  // indigo — orchestrator
-  charlie:   '#6366f1',
-  devclaw:   '#f59e0b',  // amber — builder
-  disco:     '#22c55e',  // green — discovery
-  concierge: '#e879f9',  // fuchsia — chat
+  main:             '#6366f1',  // indigo — orchestrator
+  charlie:          '#6366f1',
+  devclaw:          '#f59e0b',  // amber — pipeline
+  'devclaw-workers':'#d97706',  // darker amber — worker subagents
+  disco:            '#22c55e',  // green — discovery
+  concierge:        '#e879f9',  // fuchsia — chat
 };
 const AGENT_ROLES: Record<string, string> = { main: 'Orchestrator', devclaw: 'Development', disco: 'Discovery & Research' };
 const AGENT_ORDER: Record<string, number> = { main: 0, devclaw: 1, disco: 2 };
@@ -407,7 +408,7 @@ export default function AdminClient() {
                   const isEmpty = h.tokens === 0;
                   const totalWidth = isEmpty ? 0 : Math.max((h.tokens / maxHourly) * 100, 2);
                   // Build stacked segments in agent order
-                  const agentOrder = ['main', 'devclaw', 'disco', 'concierge'];
+                  const agentOrder = ['main', 'devclaw', 'devclaw-workers', 'disco', 'concierge'];
                   const segments = agentOrder
                     .filter(a => (byAgent[a] ?? 0) > 0)
                     .map(a => ({
