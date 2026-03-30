@@ -19,6 +19,7 @@ interface CottageEntry {
   guests?: number; scores?: Record<string, number>;
   driveTimes?: Record<string, { name?: string; minutes?: number }>;
   gates?: Record<string, boolean>; sourceTags?: string[];
+  coordinates?: { lat: number; lng: number };
 }
 
 /** Build a PlaceCard from a cottage entry — passes through all cottage-specific fields */
