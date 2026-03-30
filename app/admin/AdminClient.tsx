@@ -42,6 +42,27 @@ interface CronJob {
   consecutiveErrors?: number;
 }
 
+interface DiscoActivityData {
+  lastRunAtMs: number | null;
+  lastRunStatus: string | null;
+  lastJobName: string | null;
+  runsToday: number;
+  placesScannedToday: number;
+  discoveriesToday: number;
+  changesDetectedToday: number;
+  errorsToday: number;
+  errorDetails: string[];
+  jobs: Array<{
+    id: string;
+    name: string;
+    enabled: boolean;
+    lastRun: number | null;
+    lastStatus: string | null;
+    consecutiveErrors: number;
+    lastError: string | null;
+  }>;
+}
+
 interface TokenData {
   total24h: number;
   hourly: Array<{ hour: string; tokens: number }>;
@@ -153,17 +174,19 @@ export default function AdminClient() {
   const [crons, setCrons] = useState<CronJob[]>([]);
   const [tokenData, setTokenData] = useState<TokenData | null>(null);
   const [users, setUsers] = useState<UserWithData[]>([]);
+  const [discoActivity, setDiscoActivity] = useState<DiscoActivityData | null>(null);
   const [loading, setLoading] = useState(true);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
   const [activeTab, setActiveTab] = useState<AdminTab>('overview');
 
   const load = useCallback(async () => {
     try {
-      const [agentsRes, cronsRes, tokensRes, usersRes] = await Promise.all([
+      const [agentsRes, cronsRes, tokensRes, usersRes, discoRes] = await Promise.all([
         fetch('/api/admin/agents'),
         fetch('/api/admin/crons'),
         fetch('/api/admin/tokens'),
         fetch('/api/admin/users'),
+        fetch('/api/admin/disco'),
       ]);
       if (agentsRes.ok) {
         const data = await agentsRes.json();
@@ -173,6 +196,7 @@ export default function AdminClient() {
       if (cronsRes.ok) setCrons((await cronsRes.json()).jobs || []);
       if (tokensRes.ok) setTokenData(await tokensRes.json());
       if (usersRes.ok) setUsers((await usersRes.json()).users || []);
+      if (discoRes.ok) setDiscoActivity(await discoRes.json());
     } catch {
       // silent
     } finally {
@@ -380,6 +404,113 @@ export default function AdminClient() {
             );
           })()}
         </div>
+      </Section>
+
+      {/* ---- Disco Activity ---- */}
+      <Section title="Disco Activity" emoji="🔍">
+        {discoActivity ? (
+          <div>
+            {/* Key metrics row */}
+            <div className="health-stats" style={{ marginBottom: 'var(--space-md)' }}>
+              <div className="health-stat-card">
+                <strong style={{ color: discoActivity.lastRunStatus === 'error' ? '#f44336' : 'var(--text-primary)' }}>
+                  {formatRelativeTime(discoActivity.lastRunAtMs)}
+                </strong>
+                <span>Last Run</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.runsToday}</strong>
+                <span>Runs Today</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.placesScannedToday}</strong>
+                <span>Places Found</span>
+              </div>
+              <div className="health-stat-card">
+                <strong style={{ color: discoActivity.discoveriesToday > 0 ? '#22c55e' : 'var(--text-primary)' }}>
+                  {discoActivity.discoveriesToday}
+                </strong>
+                <span>Pushed Today</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.changesDetectedToday}</strong>
+                <span>Changes</span>
+              </div>
+              <div className="health-stat-card">
+                <strong style={{ color: discoActivity.errorsToday > 0 ? '#f44336' : 'var(--text-muted)' }}>
+                  {discoActivity.errorsToday}
+                </strong>
+                <span>Errors</span>
+              </div>
+            </div>
+
+            {/* Last run detail */}
+            {discoActivity.lastJobName && (
+              <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: discoActivity.errorDetails.length > 0 ? 'var(--space-sm)' : 0 }}>
+                Last: <span style={{ color: 'var(--text-secondary)' }}>{discoActivity.lastJobName}</span>
+                {discoActivity.lastRunStatus && (
+                  <span style={{
+                    marginLeft: 8,
+                    color: discoActivity.lastRunStatus === 'ok' ? '#22c55e' : '#f44336',
+                    fontWeight: 500,
+                  }}>
+                    {discoActivity.lastRunStatus === 'ok' ? '✓' : '✗'} {discoActivity.lastRunStatus}
+                  </span>
+                )}
+              </div>
+            )}
+
+            {/* Error details */}
+            {discoActivity.errorDetails.length > 0 && (
+              <div style={{
+                marginTop: 'var(--space-sm)',
+                padding: '8px 12px',
+                background: 'rgba(244, 67, 54, 0.08)',
+                borderLeft: '3px solid #f44336',
+                borderRadius: 4,
+                fontSize: '0.78rem',
+                color: '#f44336',
+              }}>
+                {discoActivity.errorDetails.map((e, i) => <div key={i}>{e}</div>)}
+              </div>
+            )}
+
+            {/* Per-job mini table */}
+            {discoActivity.jobs.length > 0 && (
+              <div style={{ marginTop: 'var(--space-md)', overflowX: 'auto' }}>
+                <table className="cron-table">
+                  <thead>
+                    <tr>
+                      <th style={{ width: 20 }}></th>
+                      <th style={{ textAlign: 'left' }}>Job</th>
+                      <th>Last Run</th>
+                      <th>Errs</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {discoActivity.jobs.map(job => {
+                      const statusIcon = !job.lastStatus ? '⚪'
+                        : job.consecutiveErrors > 0 ? '🔴'
+                        : job.lastStatus === 'ok' ? '🟢' : '🟡';
+                      return (
+                        <tr key={job.id}>
+                          <td style={{ textAlign: 'center', fontSize: '0.75rem' }}>{statusIcon}</td>
+                          <td style={{ fontSize: '0.8rem', color: 'var(--text-primary)' }}>{job.name}</td>
+                          <td style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>{formatRelativeTime(job.lastRun)}</td>
+                          <td style={{ textAlign: 'center', fontSize: '0.78rem', color: job.consecutiveErrors > 0 ? '#f44336' : 'var(--text-muted)' }}>
+                            {job.consecutiveErrors > 0 ? job.consecutiveErrors : '—'}
+                          </td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+            )}
+          </div>
+        ) : (
+          <p className="text-muted" style={{ fontSize: '0.85rem' }}>Disco data unavailable</p>
+        )}
       </Section>
 
       {/* ---- Token Usage (hourly chart) ---- */}
