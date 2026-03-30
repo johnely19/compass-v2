@@ -5063,16 +5063,18 @@ body {
   color: var(--text-muted);
 }
 
-/* Accommodation card */
+/* ── Accommodation card: Hipcamp-style vertical layout (#106) ── */
+
 .accomm-card {
   display: flex;
+  flex-direction: column;           /* VERTICAL now */
   background: var(--card-bg);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
   overflow: hidden;
   transition: box-shadow var(--transition-base);
-  min-height: 160px;
   max-width: 680px;
+  width: 100%;
 }
 
 .accomm-card:hover {
@@ -5080,26 +5082,24 @@ body {
 }
 
 .accomm-card-hero-link {
-  flex-shrink: 0;
   display: block;
-  position: relative; /* needed for match score overlay */
+  position: relative;
+  width: 100%;
 }
 
 .accomm-card-hero {
-  width: 160px;
-  height: 100%;
-  min-height: 160px;
+  width: 100%;                      /* full width */
+  height: 200px;                    /* 200px tall */
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .accomm-card-body {
-  flex: 1;
   padding: var(--space-md);
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  min-width: 0;
+  gap: 6px;
 }
 
 .accomm-card-top {
@@ -5111,21 +5111,109 @@ body {
 
 .accomm-card-name {
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: var(--text-primary);
   text-decoration: none;
   line-height: 1.3;
   flex: 1;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
-
 .accomm-card-name:hover { color: var(--accent); }
 .accomm-card-triage { flex-shrink: 0; }
 
-/* Tags */
+.accomm-card-location {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-top: -2px;
+}
+
+/* Vibe tags */
+.accomm-vibe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 2px;
+}
+
+.accomm-vibe-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 3px 9px;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: 100px;
+  font-size: 0.72rem;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* Stats row */
+.accomm-stats-row {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+/* Amenity icon row */
+.accomm-amenity-icons {
+  display: flex;
+  gap: 6px;
+  font-size: 1rem;
+}
+
+/* Price row */
+.accomm-price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.accomm-price {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.accomm-price-per-night {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.accomm-price-unknown {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.accomm-pill {
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 100px;
+  border: 1px solid;
+}
+.accomm-pill-green { background: rgba(74, 222, 128, 0.12); color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
+.accomm-pill-red { background: rgba(248, 113, 113, 0.12); color: #f87171; border-color: rgba(248, 113, 113, 0.3); }
+.accomm-pill-yellow { background: rgba(251, 191, 36, 0.12); color: #fbbf24; border-color: rgba(251, 191, 36, 0.3); }
+
+/* Match score badge on photo */
+.accomm-hero-match {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.65);
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 100px;
+  backdrop-filter: blur(4px);
+}
+
+/* Tags (kept for compatibility) */
 .accomm-card-tags {
   display: flex;
   flex-wrap: wrap;
@@ -5150,118 +5238,14 @@ body {
   border-color: rgba(14, 165, 233, 0.3);
 }
 
-/* Vitals */
-.accomm-card-vitals {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  flex-wrap: wrap;
-  margin-top: 2px;
-}
-
-.accomm-price {
-  font-size: 1.05rem;
-  font-weight: 800;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
-}
-
-.accomm-price-unknown {
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: var(--text-muted);
-}
-
-.accomm-beds {
-  font-size: 0.82rem;
-  color: var(--text-secondary);
-}
-
-.accomm-drive {
-  font-size: 0.78rem;
-  color: var(--text-muted);
-}
-
-/* Bottom row */
-.accomm-card-bottom {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-top: auto;
-  padding-top: 4px;
-}
-
-.accomm-pill {
-  font-size: 0.72rem;
-  font-weight: 600;
-  padding: 2px 8px;
-  border-radius: 100px;
-  border: 1px solid;
-}
-
-.accomm-pill-green {
-  background: rgba(74, 222, 128, 0.12);
-  color: #4ade80;
-  border-color: rgba(74, 222, 128, 0.3);
-}
-
-.accomm-pill-red {
-  background: rgba(248, 113, 113, 0.12);
-  color: #f87171;
-  border-color: rgba(248, 113, 113, 0.3);
-}
-
-.accomm-pill-yellow {
-  background: rgba(251, 191, 36, 0.12);
-  color: #fbbf24;
-  border-color: rgba(251, 191, 36, 0.3);
-}
-
-.accomm-match {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-}
-
-/* Mobile: single column, map hidden */
-@media (max-width: 768px) {
-  .accomm-review-layout {
-    grid-template-columns: 1fr;
-  }
-
-  .accomm-map-column {
-    display: none;
-  }
-
-  .accomm-card-hero {
-    width: 120px;
-    min-height: 120px;
-  }
-}
-
-
-/* Accommodation card enhancements (#86) */
-.accomm-hero-match {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  background: rgba(0,0,0,0.6);
-  color: #fbbf24;
-  font-size: 0.72rem;
-  font-weight: 700;
-  padding: 2px 7px;
-  border-radius: 100px;
-  backdrop-filter: blur(4px);
-}
-
+/* Nearby (kept for compatibility) */
 .accomm-card-nearby {
   display: flex;
   flex-wrap: wrap;
   gap: 4px;
-  margin-top: 2px;
   padding-top: var(--space-xs);
   border-top: 1px solid rgba(148,163,184,0.1);
 }
-
 .accomm-nearby-item {
   font-size: 0.72rem;
   color: var(--text-muted);
@@ -5271,6 +5255,59 @@ body {
   border: 1px solid var(--card-border);
 }
 
+/* Mobile: single column, map hidden */
+@media (max-width: 768px) {
+  .accomm-review-layout { grid-template-columns: 1fr; }
+  .accomm-map-column { display: none; }
+  .accomm-card-hero { height: 180px; }
+}
+
+/* Photo gallery in full detail card */
+.accomm-photo-gallery {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 0 16px 12px;
+  -webkit-overflow-scrolling: touch;
+}
+.accomm-gallery-photo {
+  flex-shrink: 0;
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: start;
+}
+
+/* Grouped amenities */
+.accomm-amenity-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 16px;
+}
+.accomm-amenity-group-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.accomm-amenity-group-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  min-width: 50px;
+}
+.accomm-amenity-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
 
 /* ---- Place card polish (#89) ---- */
 

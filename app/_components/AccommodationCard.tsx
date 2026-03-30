@@ -85,6 +85,10 @@ function quietLabel(score: number | undefined): string {
   return 'Active area';
 }
 
+/* ---- Grouped amenity sets ---- */
+const OUTDOOR_AMENITIES = new Set(['dock', 'dock access', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe', 'firepit', 'fire pit', 'bbq', 'boat launch', 'private beach', 'hot tub', 'hottub', 'sauna', 'pet friendly', 'pets', 'parking']);
+const INDOOR_AMENITIES = new Set(['wifi', 'kitchen', 'full kitchen', 'washer', 'dryer', 'washer/dryer', 'dishwasher', 'ac', 'air conditioning', 'tv', 'baby', 'games', 'fireplace']);
+
 interface AccommodationData {
   name?: string;
   description?: string;
@@ -152,6 +156,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   const pricePerWeek = data.pricePerWeek || data.price_per_week;
   const pricePerNight = data.price_per_night;
   const priceStr = formatPrice(pricePerWeek, pricePerNight);
+  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : null;
   const beds = data.beds || data.bedrooms;
   const sleeps = data.sleeps || data.max_guests || data.guests;
 

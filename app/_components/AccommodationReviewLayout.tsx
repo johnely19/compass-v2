@@ -17,12 +17,14 @@ interface AccommodationReviewLayoutProps {
   tab: Tab;
 }
 
-/* ---- Amenity icons (top 3) ---- */
+/* ---- Amenity icons (top 5) ---- */
 const AMENITY_ICONS: Record<string, string> = {
   dock: '⛵', 'dock access': '⛵', kayaks: '🛶', paddleboard: '🏄',
   wifi: '📶', kitchen: '🍳', 'full kitchen': '🍳', bbq: '🥩',
-  fireplace: '🔥', firepit: '🔥', 'hot tub': '♨️',
-  'pet friendly': '🐾', washer: '🫧',
+  fireplace: '🔥', firepit: '🔥', 'hot tub': '♨️', canoe: '🛶',
+  'kayaks/canoe': '🛶', 'pet friendly': '🐾', pets: '🐾',
+  washer: '🫧', 'washer/dryer': '🫧', sauna: '🧖',
+  ac: '❄️', 'air conditioning': '❄️', parking: '🚗',
 };
 function getTopAmenities(amenities?: string[]): string[] {
   if (!amenities) return [];
@@ -30,7 +32,7 @@ function getTopAmenities(amenities?: string[]): string[] {
   for (const a of amenities) {
     const icon = AMENITY_ICONS[a.toLowerCase()];
     if (icon && !icons.includes(icon)) icons.push(icon);
-    if (icons.length >= 3) break;
+    if (icons.length >= 5) break;
   }
   return icons;
 }
@@ -87,8 +89,25 @@ function AccommodationCard({
 
   const topAmenities = getTopAmenities(amenities);
   const july = julyPill(julyAvail);
+  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : null;
 
   const GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
+
+  // Vibe tags
+  const vibeTags: string[] = [];
+  if (gates?.private) vibeTags.push('🔒 All to yourself');
+  if (gates?.shoreline) vibeTags.push('🌊 Crown land shoreline');
+  if (gates?.dockAccess) vibeTags.push('⛵ Dock access');
+  if (swimType?.toLowerCase().includes('sandy')) vibeTags.push('🏖 Sandy beach');
+  else if (swimType) vibeTags.push(`🏊 ${swimType}`);
+  const settingTags = cottage?.setting_tags as string[] | undefined;
+  if (settingTags) vibeTags.push(...settingTags.slice(0, 2).map(t => `🌿 ${t}`));
+  const topVibeTags = vibeTags.slice(0, 3);
+
+  // Location: city · water body
+  const city = (discovery as any).city as string | undefined;
+  const waterBody = (discovery as any).water_body as string | undefined;
+  const locationStr = [city, waterBody].filter(Boolean).join(' · ');
 
   return (
     <div className="accomm-card">
@@ -100,7 +119,6 @@ function AccommodationCard({
             background: hero
               ? `url(${hero}) center/cover no-repeat`
               : GRADIENT,
-            position: 'relative',
           }}
         >
           {matchScore != null && (
@@ -109,8 +127,10 @@ function AccommodationCard({
         </div>
       </Link>
 
-      {/* Right content */}
+      {/* Card body */}
       <div className="accomm-card-body">
+
+        {/* Name + triage */}
         <div className="accomm-card-top">
           <Link href={`/placecards/${placeId}?context=${encodeURIComponent(contextKey)}`} className="accomm-card-name">
             {discovery.name}
@@ -120,54 +140,47 @@ function AccommodationCard({
           </div>
         </div>
 
-        {/* Swim + tags */}
-        {swimType && (
-          <div className="accomm-card-tags">
-            <span className="accomm-tag accomm-tag-swim">🏊 {swimType}</span>
-            {topAmenities.map((icon, i) => (
-              <span key={i} className="accomm-tag">{icon}</span>
+        {/* Location */}
+        {locationStr && (
+          <div className="accomm-card-location">{locationStr}</div>
+        )}
+
+        {/* Vibe tags */}
+        {topVibeTags.length > 0 && (
+          <div className="accomm-vibe-tags">
+            {topVibeTags.map((tag, i) => (
+              <span key={i} className="accomm-vibe-tag">{tag}</span>
             ))}
           </div>
         )}
 
-        {/* Vitals */}
-        <div className="accomm-card-vitals">
+        {/* Stats row: beds · sleeps · drive */}
+        {(beds || sleeps || driveTime) && (
+          <div className="accomm-stats-row">
+            {beds && <span>{beds} beds</span>}
+            {sleeps && <span>· sleeps {sleeps}</span>}
+            {driveTime && <span>· {driveTime} from Toronto</span>}
+          </div>
+        )}
+
+        {/* Amenity icons */}
+        {topAmenities.length > 0 && (
+          <div className="accomm-amenity-icons">{topAmenities.join(' ')}</div>
+        )}
+
+        {/* Price row + July pill */}
+        <div className="accomm-price-row">
           {pricePerWeek ? (
-            <span className="accomm-price">${pricePerWeek.toLocaleString()}/wk</span>
+            <>
+              <span className="accomm-price">CA${pricePerWeek.toLocaleString()}/wk</span>
+              {perNight && <span className="accomm-price-per-night">~${perNight}/night</span>}
+            </>
           ) : (
             <span className="accomm-price accomm-price-unknown">Call for pricing</span>
           )}
-          {(beds || sleeps) && (
-            <span className="accomm-beds">
-              {beds ? `${beds}BR` : ''}
-              {beds && sleeps ? ' · ' : ''}
-              {sleeps ? `sleeps ${sleeps}` : ''}
-            </span>
-          )}
-          {driveTime && (
-            <span className="accomm-drive">🚗 {driveTime}</span>
-          )}
-        </div>
-
-        {/* Bottom row: July pill */}
-        <div className="accomm-card-bottom">
           <span className={`accomm-pill ${july.cls}`}>{july.label}</span>
-          {gates?.private && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>🔒 Private</span>}
-          {gates?.shoreline && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>🌊 Shoreline</span>}
-          {gates?.dockAccess && <span className="accomm-tag" style={{ fontSize: '0.7rem' }}>⛵ Dock</span>}
         </div>
 
-        {/* Nearby: grocery / town */}
-        {(nearestGrocery || nearestTown) && (
-          <div className="accomm-card-nearby">
-            {nearestGrocery?.name && (
-              <span className="accomm-nearby-item">🛒 {nearestGrocery.name}{nearestGrocery.minutes ? ` ${nearestGrocery.minutes}min` : ''}</span>
-            )}
-            {nearestTown?.name && nearestTown.name !== nearestGrocery?.name && (
-              <span className="accomm-nearby-item">🏘️ {nearestTown.name}{nearestTown.minutes ? ` ${nearestTown.minutes}min` : ''}</span>
-            )}
-          </div>
-        )}
       </div>
     </div>
   );
