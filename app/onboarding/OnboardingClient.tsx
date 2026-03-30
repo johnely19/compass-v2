@@ -13,6 +13,19 @@ const OPTIONS: Array<{ id: Selection; emoji: string; label: string; desc: string
   { id: 'cottage', emoji: '🏡', label: 'A cottage or vacation rental', desc: 'Finding the perfect summer retreat' },
 ];
 
+const INTEREST_OPTIONS = [
+  { id: 'asian-food', emoji: '🍜', label: 'Asian food' },
+  { id: 'pizza-italian', emoji: '🍕', label: 'Pizza & Italian' },
+  { id: 'wine-bars', emoji: '🍷', label: 'Wine bars' },
+  { id: 'craft-beer', emoji: '🍺', label: 'Craft beer' },
+  { id: 'live-music', emoji: '🎵', label: 'Live music' },
+  { id: 'art-galleries', emoji: '🎨', label: 'Art & galleries' },
+  { id: 'active-outdoors', emoji: '🏃', label: 'Active / outdoors' },
+  { id: 'coffee-cafes', emoji: '☕', label: 'Coffee & cafes' },
+  { id: 'casual-eats', emoji: '🌮', label: 'Casual eats' },
+  { id: 'steakhouses', emoji: '🥩', label: 'Steakhouses' },
+];
+
 interface OnboardingClientProps {
   userName: string;
   city: string;
@@ -23,6 +36,7 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
   const [step, setStep] = useState(0);
   const [cityInput, setCityInput] = useState(defaultCity || '');
   const [selected, setSelected] = useState<Set<Selection>>(new Set());
+  const [interests, setInterests] = useState<Set<string>>(new Set());
   const [tripDest, setTripDest] = useState('');
   const [tripDates, setTripDates] = useState('');
   const [dateNightWith, setDateNightWith] = useState('');
@@ -33,10 +47,19 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
   const hasTripSelected = selected.has('trip');
   const hasDateNightSelected = selected.has('date-night');
   const needsExtraStep = hasTripSelected || hasDateNightSelected;
-  const totalSteps = needsExtraStep ? 4 : 3;
+  const totalSteps = needsExtraStep ? 5 : 4;
 
   function toggleSelection(id: Selection) {
     setSelected(prev => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
+
+  function toggleInterest(id: string) {
+    setInterests(prev => {
       const next = new Set(prev);
       if (next.has(id)) next.delete(id);
       else next.add(id);
@@ -57,10 +80,23 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
           tripDestination: tripDest || undefined,
           tripDates: tripDates || undefined,
           dateNightWith: dateNightWith || undefined,
+          interests: interests.size > 0 ? [...interests] : undefined,
         }),
       });
       if (!res.ok) throw new Error('Failed to save');
-      router.push('/');
+
+      const data = await res.json();
+
+      // Seed initial discoveries in background (fire and forget)
+      fetch('/api/internal/bootstrap-user', { method: 'POST' }).catch(() => {});
+
+      // Redirect to first context review page so they see discoveries immediately
+      const firstContextKey = data.contexts?.[0]?.key;
+      if (firstContextKey) {
+        router.push('/review/' + encodeURIComponent(firstContextKey));
+      } else {
+        router.push('/');
+      }
       router.refresh();
     } catch {
       setError('Something went wrong. Try again.');
@@ -69,7 +105,7 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
   }
 
   function nextStep() {
-    if (step === 2 && !needsExtraStep) {
+    if (step === 3 && !needsExtraStep) {
       handleFinish();
     } else {
       setStep(s => s + 1);
@@ -79,6 +115,7 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
   const canProceed = step === 0 ? true
     : step === 1 ? cityInput.trim().length > 0
     : step === 2 ? true
+    : step === 3 ? true
     : true;
 
   return (
@@ -119,8 +156,29 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
           </div>
         )}
 
-        {/* Step 2: What are you planning? */}
+        {/* Step 2: Interests */}
         {step === 2 && (
+          <div className="onboarding-step">
+            <h2 className="onboarding-step-title">What do you like?</h2>
+            <p className="onboarding-step-desc">Pick your favourites — this sharpens your recommendations.</p>
+            <div className="onboarding-interests-grid">
+              {INTEREST_OPTIONS.map(opt => (
+                <button
+                  key={opt.id}
+                  className={"onboarding-interest-chip" + (interests.has(opt.id) ? " onboarding-interest-chip-selected" : "")}
+                  onClick={() => toggleInterest(opt.id)}
+                  type="button"
+                >
+                  <span>{opt.emoji}</span>
+                  <span>{opt.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Step 3: What are you planning? */}
+        {step === 3 && (
           <div className="onboarding-step">
             <h2 className="onboarding-step-title">What are you planning?</h2>
             <p className="onboarding-step-desc">Select everything that applies — you can always add more later.</p>
@@ -143,8 +201,8 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
           </div>
         )}
 
-        {/* Step 3: Trip / Date Night details */}
-        {step === 3 && (
+        {/* Step 4: Trip / Date Night details */}
+        {step === 4 && (
           <div className="onboarding-step">
             <h2 className="onboarding-step-title">A little more detail</h2>
             {hasTripSelected && (
@@ -206,7 +264,7 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
           )}
         </div>
 
-        {step === 2 && (
+        {step === 3 && (
           <button className="onboarding-skip" onClick={handleFinish}>
             Skip for now — I&apos;ll set it up later
           </button>
