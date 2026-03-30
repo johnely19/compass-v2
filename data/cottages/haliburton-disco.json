@@ -52,7 +52,9 @@
       "notes": "Luxury 4 bedroom cottage with sandy beach. Kijiji listing in Haliburton region.",
       "description": "Highlands East",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "happynest-kawigamog",
@@ -107,7 +109,9 @@
       "notes": "Lakefront cottage on Kawigamog Lake. CottagesInCanada listing.",
       "description": "Happynest on Kawigamog Lake",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "moira-lake-cottagesincanada",
@@ -151,8 +155,12 @@
         "shoreline": true,
         "dockAccess": true
       },
-      "images": [],
-      "heroImage": null,
+      "images": [
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/moira-lake-cottagesincanada/photos/1.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/moira-lake-cottagesincanada/photos/2.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/moira-lake-cottagesincanada/photos/3.jpg"
+      ],
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/moira-lake-cottagesincanada/photos/1.jpg",
       "scores": {
         "swimming": null,
         "amenities": null,
@@ -163,7 +171,9 @@
       "notes": "4BR lakefront cottage on Moira Lake. CottagesInCanada ID: 29388",
       "description": "Moira Lake Cottage",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "devil-lake-east-kijiji",
@@ -216,7 +226,9 @@
       "notes": "Lakefront cottage on Devil Lake. Kijiji listing.",
       "description": "Devil Lake East",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "garrison-lake-cottagesincanada",
@@ -259,8 +271,12 @@
         "shoreline": true,
         "dockAccess": true
       },
-      "images": [],
-      "heroImage": null,
+      "images": [
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/garrison-lake-cottagesincanada/photos/1.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/garrison-lake-cottagesincanada/photos/2.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/garrison-lake-cottagesincanada/photos/3.jpg"
+      ],
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/garrison-lake-cottagesincanada/photos/1.jpg",
       "scores": {
         "swimming": null,
         "amenities": null,
@@ -271,7 +287,9 @@
       "notes": "4BR lakefront cottage on Garrison Lake. CottagesInCanada ID: 33733",
       "description": "Garrison Lake Cottage",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "haliburton-vrbo",
@@ -326,7 +344,9 @@
       "notes": "Lakefront cottage with hot tub. VRBO listing p7417233.",
       "description": "Haliburton VRBO",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     },
     {
       "id": "paradise-cove-cottagesincanada",
@@ -371,8 +391,12 @@
         "shoreline": true,
         "dockAccess": true
       },
-      "images": [],
-      "heroImage": null,
+      "images": [
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/paradise-cove-cottagesincanada/photos/1.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/paradise-cove-cottagesincanada/photos/2.jpg",
+        "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/paradise-cove-cottagesincanada/photos/3.jpg"
+      ],
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/paradise-cove-cottagesincanada/photos/1.jpg",
       "scores": {
         "swimming": null,
         "amenities": null,
@@ -383,7 +407,9 @@
       "notes": "Large 5BR cottage with sandy beach and water toys. CottagesInCanada ID: 36457",
       "description": "Paradise Cove",
       "guests": null,
-      "sourceTags": ["Disco"]
+      "sourceTags": [
+        "Disco"
+      ]
     }
   ]
 }
