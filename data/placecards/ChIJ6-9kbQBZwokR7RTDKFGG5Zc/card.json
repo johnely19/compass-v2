@@ -1,0 +1,23 @@
+{
+  "place_id": "ChIJ6-9kbQBZwokR7RTDKFGG5Zc",
+  "built": "2026-03-30T00:00:00Z",
+  "source": "disco-enriched",
+  "identity": {
+    "place_id": "ChIJ6-9kbQBZwokR7RTDKFGG5Zc",
+    "name": "Balera",
+    "city": "Brooklyn",
+    "address": "442 Graham Ave, Brooklyn, NY 11211",
+    "type": "bar",
+    "phone": "",
+    "website": "",
+    "price_level": 2,
+    "rating": 5.0,
+    "user_rating_count": 0,
+    "lat": 40.7128,
+    "lng": -73.9442
+  },
+  "narrative": {
+    "summary": "Balera \u2014 442 Graham Ave, Williamsburg/Bushwick border. A warm neighbourhood bar with good energy.",
+    "blocks": []
+  }
+}
