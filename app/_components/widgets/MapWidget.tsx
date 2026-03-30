@@ -9,9 +9,11 @@ interface MapWidgetProps {
   fromAddress?: string;
   /** Label for the from address (e.g. "Arnold's") */
   fromLabel?: string;
+  /** Height of the map iframe in pixels (default: 280) */
+  height?: number;
 }
 
-export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLabel }: MapWidgetProps) {
+export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLabel, height = 280 }: MapWidgetProps) {
   const destination = placeId
     ? `place_id:${placeId}`
     : name;
@@ -57,7 +59,7 @@ export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLa
         <iframe
           src={iframeSrc}
           width="100%"
-          height="280"
+          height={height}
           style={{ border: 0, borderRadius: 8, display: 'block' }}
           allowFullScreen
           loading="lazy"

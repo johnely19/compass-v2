@@ -281,18 +281,15 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
               <span className="type-badge-icon">{typeMeta.icon}</span>
               {typeMeta.label}
             </span>
-            {userId && contextKey && card.place_id && (
-              <div className="place-detail-v2-hero-triage">
-                <TriageWidget
-                  userId={userId}
-                  contextKey={contextKey}
-                  contextLabel=""
-                  placeId={card.place_id}
-                />
-              </div>
-            )}
           </div>
           <h1 className="place-detail-v2-name">{card.name}</h1>
+          {(rating || priceLevel) && (
+            <div className="place-detail-v2-hero-rating">
+              {rating && <span>⭐ {rating.toFixed(1)}</span>}
+              {reviewCount && <span className="place-detail-v2-hero-review-count"> ({reviewCount.toLocaleString()})</span>}
+              {priceLevel && <span className="place-detail-v2-hero-price"> · {'$'.repeat(priceLevel)}</span>}
+            </div>
+          )}
           {(city || address) && (
             <p className="place-detail-v2-address-hero">
               {city && address ? `${city} · ${address.split(',')[0]}` : city || address.split(',')[0]}
@@ -304,12 +301,29 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
-        {/* ── ABOVE THE FOLD: rating, food strip, identity, map ── */}
+        {/* ── ABOVE THE FOLD: hours first, then food strip, identity, narrative ── */}
 
-        {/* Identity bar — rating + price */}
-        {(rating || priceLevel) && (
-          <RatingWidget rating={rating} reviewCount={reviewCount} priceLevel={priceLevel} />
-        )}
+        {/* ── Hours + Go When (FIRST in body) ── */}
+        {(() => {
+          const goWhen = narrativeBlocks.find(b => /go.?when/i.test(normalizeBlockTitle(b.title)));
+          const hasHours = data.hours && (Array.isArray(data.hours) ? (data.hours as string[]).length > 0 : Object.keys(data.hours as Record<string,string>).length > 0);
+          if (!hasHours && !goWhen) return null;
+          return (
+            <div className="place-detail-v2-hours-section">
+              {hasHours && <HoursWidget hours={data.hours as string[] | Record<string, string>} />}
+              {goWhen && (
+                <div className="narrative-block narrative-go-when">
+                  <h3 className="narrative-block-title">Go When</h3>
+                  <div className="narrative-block-body">
+                    {goWhen.body.split('\n').filter(l => l.trim()).slice(0, 2).map((line, idx) => (
+                      <p key={idx} className="narrative-prose">{line}</p>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        })()}
 
         {/* Food photos strip — only for food/drink venues */}
         {hasFoodStrip && foodPhotos.length > 0 && (
@@ -348,28 +362,6 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
             </a>
           )}
         </div>
-
-        {/* ── Hours + Go When (BEFORE narrative, after identity) ── */}
-        {(() => {
-          const goWhen = narrativeBlocks.find(b => /go.?when/i.test(normalizeBlockTitle(b.title)));
-          const hasHours = data.hours && (Array.isArray(data.hours) ? (data.hours as string[]).length > 0 : Object.keys(data.hours as Record<string,string>).length > 0);
-          if (!hasHours && !goWhen) return null;
-          return (
-            <div className="place-detail-v2-hours-section">
-              {hasHours && <HoursWidget hours={data.hours as string[] | Record<string, string>} />}
-              {goWhen && (
-                <div className="narrative-block narrative-go-when">
-                  <h3 className="narrative-block-title">Go When</h3>
-                  <div className="narrative-block-body">
-                    {goWhen.body.split('\n').filter(l => l.trim()).slice(0, 2).map((line, idx) => (
-                      <p key={idx} className="narrative-prose">{line}</p>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
-          );
-        })()}
 
         {/* ── NARRATIVE — truncated blocks ── */}
         {narrativeBlocks.length > 0 ? (
@@ -422,11 +414,27 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
         )}
 
-        {/* Map */}
-        <MapWidget placeId={card.place_id} name={card.name} />
+        {/* ── Compact actions row ── */}
+        <div className="place-detail-actions-row">
+          <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
+             className="place-detail-action-btn place-detail-action-maps">
+            🗺 Maps
+          </a>
+          <ShareButton name={card.name} />
+          {userId && contextKey && card.place_id && (
+            <TriageWidget
+              userId={userId}
+              contextKey={contextKey}
+              contextLabel=""
+              placeId={card.place_id}
+            />
+          )}
+        </div>
 
-        {/* Share button */}
-        <ShareButton name={card.name} />
+        {/* Map (compact 200px) */}
+        <div className="place-detail-map-compact">
+          <MapWidget placeId={card.place_id} name={card.name} height={200} />
+        </div>
 
       </div>
     </div>

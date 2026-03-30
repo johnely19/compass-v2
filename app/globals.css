@@ -5545,3 +5545,57 @@ body {
   font-size: 0.85rem;
   text-align: center;
 }
+
+/* ---- 33. Restaurant Card Above-Fold Redesign (issue #102) ---- */
+
+.place-detail-v2-hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.92);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.place-detail-v2-hero-review-count {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.8rem;
+}
+
+.place-detail-v2-hero-price {
+  color: rgba(255,255,255,0.8);
+}
+
+.place-detail-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  flex-wrap: wrap;
+}
+
+.place-detail-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-decoration: none;
+  background: var(--color-surface-raised, #f1f5f9);
+  color: inherit;
+  border: 1px solid var(--color-border, #e2e8f0);
+}
+
+.place-detail-action-btn:hover {
+  background: var(--bg-elevated, #e2e8f0);
+}
+
+.place-detail-map-compact {
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 8px;
+  margin: 0 16px 16px;
+}
