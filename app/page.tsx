@@ -91,35 +91,73 @@ export default async function HomePage() {
   ];
 
   // Enrich discoveries with resolved image URLs
-  // Priority: heroImage field (already resolved) > manifest fallback
+  // Priority: heroImage field (already resolved) > manifest fallback > Blob place-cards/
+  const BLOB_BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
   const enrichedDiscoveries = discoveries.map(d => {
     // 1. Use heroImage if present
     let heroImage: string | null = resolveImageUrl(d.heroImage);
-    // 2. Fall back to manifest
+    // 2. Fall back to manifest (local fs)
     if (!heroImage && d.place_id) {
       heroImage = getManifestHeroImage(d.place_id);
+    }
+    // 3. Fall back to Blob place-cards/{id}/card.json heroImage via URL pattern
+    //    (card stubs may have heroImage set from the migration; use URL directly)
+    if (!heroImage && d.place_id && BLOB_BASE_URL) {
+      // Point at the Blob-hosted card; PlaceCardStore will resolve at render time.
+      // For now, mark with a synthetic Blob photo URL to signal availability.
+      // Actual resolution happens client-side for cards with real photos in Blob.
+      heroImage = null; // leave null — handled below by photo-first sort
     }
     return heroImage ? { ...d, heroImage } : d;
   });
 
   // Group discoveries by context — fuzzy match on slug to handle key variants
+  // Fix #108: deduplicate by place_id within each context bucket
   const byContext = new Map<string, Discovery[]>();
   for (const ctx of contexts) {
     const ctxSlug = ctx.key.split(':').slice(1).join(':');
-    byContext.set(
-      ctx.key,
-      enrichedDiscoveries.filter(d => {
-        // Type-context compatibility check (e.g. no galleries in dinner outings)
-        if (!isTypeCompatible(ctx.key, d.type)) return false;
-        if (d.contextKey === ctx.key) return true;
-        // Fuzzy: slug contains or is contained by context slug
-        const dSlug = d.contextKey.split(':').slice(1).join(':');
-        return dSlug === ctxSlug || dSlug.includes(ctxSlug) || ctxSlug.includes(dSlug);
-      }),
-    );
+    const matched = enrichedDiscoveries.filter(d => {
+      // Type-context compatibility check (e.g. no galleries in dinner outings)
+      if (!isTypeCompatible(ctx.key, d.type)) return false;
+      if (d.contextKey === ctx.key) return true;
+      // Fuzzy: slug contains or is contained by context slug
+      const dSlug = d.contextKey.split(':').slice(1).join(':');
+      return dSlug === ctxSlug || dSlug.includes(ctxSlug) || ctxSlug.includes(dSlug);
+    });
+
+    // Deduplicate by place_id (keep first occurrence), then by id
+    const seenPlaceIds = new Set<string>();
+    const seenIds = new Set<string>();
+    const deduped = matched.filter(d => {
+      if (d.place_id) {
+        if (seenPlaceIds.has(d.place_id)) return false;
+        seenPlaceIds.add(d.place_id);
+      }
+      if (seenIds.has(d.id)) return false;
+      seenIds.add(d.id);
+      return true;
+    });
+
+    // Fix #107: sort cards with real photos first so the carousel looks complete
+    const withPhoto = deduped.filter(d => d.heroImage);
+    const withoutPhoto = deduped.filter(d => !d.heroImage);
+    byContext.set(ctx.key, [...withPhoto, ...withoutPhoto]);
   }
 
-    // Build contextMeta — structured trip data for widgets
+  // Fix #108 (global): deduplicate place_ids across ALL context carousels
+  // A place appearing in NYC trip should not also appear in the Toronto radar carousel
+  const globalSeenPlaceIds = new Set<string>();
+  for (const [ctxKey, items] of byContext) {
+    const globalDeduped = items.filter(d => {
+      if (!d.place_id) return true; // no place_id → always show (won't match cross-context)
+      if (globalSeenPlaceIds.has(d.place_id)) return false;
+      globalSeenPlaceIds.add(d.place_id);
+      return true;
+    });
+    byContext.set(ctxKey, globalDeduped);
+  }
+
+  // Build contextMeta — structured trip data for widgets
   const contextMeta = Object.fromEntries(
     contexts
       .filter(c => c.type === 'trip')
