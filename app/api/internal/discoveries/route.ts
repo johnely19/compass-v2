@@ -86,5 +86,16 @@ export async function POST(request: NextRequest) {
   });
 
   console.log(`[internal/discoveries] Added ${newItems.length} discoveries for ${userId}`);
+
+  // Fire-and-forget: trigger post-push validation to backfill stubs/cities
+  // Uses the internal validate endpoint (non-blocking)
+  const baseUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : process.env.NEXT_PUBLIC_APP_URL || 'https://compass-v2-lake.vercel.app';
+  fetch(`${baseUrl}/api/internal/validate-discoveries?userId=${encodeURIComponent(userId)}`, {
+    method: 'POST',
+    headers: { Authorization: `Bearer ${process.env.BRIEFING_INGEST_TOKEN || ''}` },
+  }).catch(() => {}); // fire-and-forget — never block the response
+
   return NextResponse.json({ added: newItems.length, total: merged.length });
 }
