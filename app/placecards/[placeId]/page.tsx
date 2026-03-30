@@ -42,7 +42,7 @@ function adaptCottage(c: CottageEntry): PlaceCard {
       heroImage: c.heroImage ? resolveImageUrl(c.heroImage) || c.heroImage : undefined,
       // Pass through all cottage-specific fields for AccommodationCard
       address: c.region || 'Ontario',
-      city: 'Ontario',
+      city: c.region || 'Ontario',
       region: c.region,
       platform: c.platform,
       url: c.url,
@@ -58,6 +58,10 @@ function adaptCottage(c: CottageEntry): PlaceCard {
       driveTimes: c.driveTimes,
       notes: c.notes,
       gates: c.gates,
+      lat: c.coordinates?.lat,
+      lng: c.coordinates?.lng,
+      latitude: c.coordinates?.lat,
+      longitude: c.coordinates?.lng,
     },
   };
 }
