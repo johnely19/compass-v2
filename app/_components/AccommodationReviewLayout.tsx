@@ -135,7 +135,7 @@ function AccommodationCard({
           {pricePerWeek ? (
             <span className="accomm-price">${pricePerWeek.toLocaleString()}/wk</span>
           ) : (
-            <span className="accomm-price accomm-price-unknown">Price TBD</span>
+            <span className="accomm-price accomm-price-unknown">Call for pricing</span>
           )}
           {(beds || sleeps) && (
             <span className="accomm-beds">

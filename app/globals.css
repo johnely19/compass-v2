@@ -5082,6 +5082,7 @@ body {
 .accomm-card-hero-link {
   flex-shrink: 0;
   display: block;
+  position: relative; /* needed for match score overlay */
 }
 
 .accomm-card-hero {
