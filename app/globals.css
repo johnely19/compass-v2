@@ -5190,6 +5190,30 @@ body {
   color: var(--text-muted);
 }
 
+.accomm-swim-verdict {
+  font-size: 0.72rem;
+  color: #0ea5e9;
+  margin-top: 0.2rem;
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.accomm-price-est {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  margin-right: 2px;
+}
+
+.accomm-details-pending {
+  display: inline-block;
+  font-size: 0.65rem;
+  color: #94a3b8;
+  background: #f1f5f9;
+  border-radius: 3px;
+  padding: 1px 5px;
+  margin-top: 0.25rem;
+}
+
 .accomm-pill {
   font-size: 0.72rem;
   font-weight: 600;
