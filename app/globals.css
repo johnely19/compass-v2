@@ -3811,6 +3811,62 @@ body {
   flex-shrink: 0;
 }
 
+/* Trip Notes edit expand */
+.tpw-notes-edit-link {
+  background: none;
+  border: none;
+  color: var(--accent);
+  font-size: 0.75rem;
+  cursor: pointer;
+  padding: 0 0 0 var(--space-sm);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.tpw-notes-edit-link:hover { text-decoration: underline; }
+
+.tpw-notes-expand {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+}
+.tpw-notes-expand.open {
+  max-height: 200px;
+}
+.tpw-notes-expand-body {
+  padding: var(--space-sm) 0 var(--space-xs) 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.tpw-notes-expand-purpose {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+.tpw-notes-expand-person {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.tpw-notes-expand-person-rel {
+  margin-left: var(--space-xs);
+  color: var(--text-muted);
+  font-style: italic;
+}
+.tpw-archive-btn {
+  margin-top: var(--space-sm);
+  align-self: flex-start;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.tpw-archive-btn:hover {
+  background: var(--bg-hover, var(--bg-card));
+  color: var(--text-secondary);
+}
+
 .tpw-summary:hover { color: var(--text-secondary); }
 
 .tpw-collapse {
