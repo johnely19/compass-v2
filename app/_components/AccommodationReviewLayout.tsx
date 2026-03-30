@@ -65,6 +65,9 @@ function AccommodationCard({
   const scores = cottage?.scores as Record<string, number> | undefined;
   const gates = cottage?.gates as Record<string, boolean> | undefined;
   const notes = cottage?.notes as string | undefined;
+  const vibeTags = cottage?.vibeTags as string[] | undefined;
+  const swimVerdict = cottage?.swimVerdict as string | undefined;
+  const priceEstimated = cottage?.priceEstimated as boolean | undefined;
 
   // Match score: average of scores, or fall back to discovery.rating
   const matchScore = scores
@@ -76,11 +79,16 @@ function AccommodationCard({
   const julyAvail: boolean | undefined = (discovery as any).july_available ??
     (gates?.threeWeeks === true ? true : undefined);
 
-  // Drive time from Toronto
+  // Drive time from Toronto - use explicit driveTimeLabel if available, fall back to dianaKlaus
   let driveTime: string | null = null;
-  const dkMins = driveTimes?.dianaKlaus?.minutes;
-  if (dkMins) {
-    driveTime = dkMins >= 60 ? `${Math.floor(dkMins / 60)}h ${dkMins % 60 > 0 ? `${dkMins % 60}m` : ''}`.trim() : `${dkMins}min`;
+  const driveTimeLabel = cottage?.driveTimeLabel as string | undefined;
+  if (driveTimeLabel) {
+    driveTime = driveTimeLabel;
+  } else {
+    const dkMins = driveTimes?.dianaKlaus?.minutes;
+    if (dkMins) {
+      driveTime = dkMins >= 60 ? `${Math.floor(dkMins / 60)}h ${dkMins % 60 > 0 ? `${dkMins % 60}m` : ''}`.trim() : `${dkMins}min`;
+    }
   }
 
   // Nearest grocery / town
@@ -93,16 +101,12 @@ function AccommodationCard({
 
   const GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
 
-  // Vibe tags
-  const vibeTags: string[] = [];
-  if (gates?.private) vibeTags.push('🔒 All to yourself');
-  if (gates?.shoreline) vibeTags.push('🌊 Crown land shoreline');
-  if (gates?.dockAccess) vibeTags.push('⛵ Dock access');
-  if (swimType?.toLowerCase().includes('sandy')) vibeTags.push('🏖 Sandy beach');
-  else if (swimType) vibeTags.push(`🏊 ${swimType}`);
-  const settingTags = cottage?.setting_tags as string[] | undefined;
-  if (settingTags) vibeTags.push(...settingTags.slice(0, 2).map(t => `🌿 ${t}`));
-  const topVibeTags = vibeTags.slice(0, 3);
+  // Vibe tags - use enriched vibeTags if available, otherwise derive from fields
+  const enrichedVibeTags = vibeTags && vibeTags.length > 0 ? vibeTags : [];
+  const topVibeTags = enrichedVibeTags.slice(0, 4);
+
+  // Shortened swimVerdict for potential tag (not currently used as a tag)
+  const shortSwimVerdict = swimVerdict && swimVerdict.length > 40 ? swimVerdict.slice(0, 37) + '...' : swimVerdict;
 
   // Location: city · water body
   const city = (discovery as any).city as string | undefined;
@@ -154,6 +158,13 @@ function AccommodationCard({
           </div>
         )}
 
+        {/* Swim verdict (if not Unconfirmed) */}
+        {swimVerdict && !swimVerdict.includes('Unconfirmed') && (
+          <div className="accomm-swim-verdict">
+            🏊 {swimVerdict.length > 80 ? swimVerdict.slice(0, 77) + '...' : swimVerdict}
+          </div>
+        )}
+
         {/* Stats row: beds · sleeps · drive */}
         {(beds || sleeps || driveTime) && (
           <div className="accomm-stats-row">
@@ -172,14 +183,20 @@ function AccommodationCard({
         <div className="accomm-price-row">
           {pricePerWeek ? (
             <>
+              {priceEstimated && <span className="accomm-price-est">~est. </span>}
               <span className="accomm-price">CA${pricePerWeek.toLocaleString()}/wk</span>
               {perNight && <span className="accomm-price-per-night">~${perNight}/night</span>}
             </>
           ) : (
-            <span className="accomm-price accomm-price-unknown">Call for pricing</span>
+            <span className="accomm-price accomm-price-unknown">Price TBD</span>
           )}
           <span className={`accomm-pill ${july.cls}`}>{july.label}</span>
         </div>
+
+        {/* Details pending badge */}
+        {(!hero || !pricePerWeek) && (
+          <span className="accomm-details-pending">Details pending</span>
+        )}
 
       </div>
     </div>
@@ -226,7 +243,7 @@ export default function AccommodationReviewLayout({
   }, []);
 
   const filtered = useMemo(() => {
-    return discoveries.filter(d => {
+    let result = discoveries.filter(d => {
       const placeId = d.place_id ?? d.id;
       const state = getTriageState(userId, context.key, placeId);
       if (tab === 'unreviewed') return state === 'unreviewed' || state === 'resurfaced';
@@ -234,6 +251,44 @@ export default function AccommodationReviewLayout({
       if (tab === 'dismissed') return state === 'dismissed';
       return false;
     });
+
+    // Sort by bookability priority
+    result = result.sort((a, b) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const cottageA = (a as any)._cottage as Record<string, any> | undefined;
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const cottageB = (b as any)._cottage as Record<string, any> | undefined;
+
+      const hasHeroA = !!resolveImageUrlClient(a.heroImage);
+      const hasPriceA = cottageA?.pricePerWeek != null;
+      const hasVibesA = cottageA?.vibeTags && cottageA.vibeTags.length > 0;
+      const swimScoreA = cottageA?.scores?.swimming ?? 0;
+
+      const hasHeroB = !!resolveImageUrlClient(b.heroImage);
+      const hasPriceB = cottageB?.pricePerWeek != null;
+      const hasVibesB = cottageB?.vibeTags && cottageB.vibeTags.length > 0;
+      const swimScoreB = cottageB?.scores?.swimming ?? 0;
+
+      // Priority groups
+      const getPriority = (hasHero: boolean, hasPrice: boolean, hasVibes: boolean) => {
+        if (hasHero && hasPrice && hasVibes) return 1;
+        if (hasHero && hasPrice) return 2;
+        if (hasHero) return 3;
+        return 4;
+      };
+
+      const priorityA = getPriority(hasHeroA, hasPriceA, hasVibesA);
+      const priorityB = getPriority(hasHeroB, hasPriceB, hasVibesB);
+
+      if (priorityA !== priorityB) {
+        return priorityA - priorityB;
+      }
+
+      // Within same group, sort by swim score (higher first)
+      return swimScoreB - swimScoreA;
+    });
+
+    return result;
   }, [discoveries, userId, context.key, tab]);
 
   return (

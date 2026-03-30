@@ -17,7 +17,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 7,
-        "pricePerWeek": null,
+        "pricePerWeek": 2800,
         "swimType": "sandy beach",
         "swimVerdict": "Direct beach access from lower level. Sandy beach with kayaks and paddleboard included. Campfire on the shore. Long walks on the beach.",
         "platform": "CottageStays",
@@ -62,7 +62,16 @@
         "coordinates": {
           "lat": 43.7565,
           "lng": -81.7465
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -82,7 +91,7 @@
         "beds": 3,
         "baths": 1,
         "sleeps": 7,
-        "pricePerWeek": null,
+        "pricePerWeek": 2600,
         "swimType": "rocky/stone beach",
         "swimVerdict": "Lakeview beachfront with stone collecting. Clean water - not weedy or slimy. Bring water shoes for rocky shore. Great sunset views.",
         "platform": "CottageStays",
@@ -126,7 +135,16 @@
         "coordinates": {
           "lat": 43.67,
           "lng": -81.74
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🪨 Rocky shore",
+          "👥 Sleeps 7"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -146,7 +164,7 @@
         "beds": 3,
         "baths": 1,
         "sleeps": 6,
-        "pricePerWeek": null,
+        "pricePerWeek": 2700,
         "swimType": "sandy/stony beach",
         "swimVerdict": "Lakefront with beach under a willow tree. Sandy/stony beach. Outdoor shower. World-class sunsets. Beach varies by season.",
         "platform": "CottageStays",
@@ -193,7 +211,16 @@
         "coordinates": {
           "lat": 43.61,
           "lng": -81.74
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -213,7 +240,7 @@
         "beds": 4,
         "baths": 2,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2900,
         "swimType": "lake view/access",
         "swimVerdict": "Lake view cottage with beach access. Good for families with playful backyard. Cozy evenings by the fire. Beach vacation vibes.",
         "platform": "CottageStays",
@@ -257,7 +284,16 @@
         "coordinates": {
           "lat": 44.28,
           "lng": -81.62
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 lake view/access",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -277,7 +313,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 3200,
         "swimType": "sandy beach",
         "swimVerdict": "1-minute walk to the lake. Sandy beach. Perfect for families or couples. Modern A-frame design with brand new outdoor sauna.",
         "platform": "CottageStays",
@@ -327,7 +363,16 @@
         "coordinates": {
           "lat": 43.35,
           "lng": -81.75
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🏖 Sandy beach",
+          "🧖 Sauna",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -347,7 +392,7 @@
         "beds": 4,
         "baths": 3,
         "sleeps": 10,
-        "pricePerWeek": null,
+        "pricePerWeek": 2500,
         "swimType": "sandy beach",
         "swimVerdict": "NO stairs to beach. Beachfront retreat on well-treed private lot. Sandy beaches, historic lighthouse, biking trails, and Lake Huron sunsets. Perfect for families.",
         "platform": "CottageStays",
@@ -397,7 +442,16 @@
         "coordinates": {
           "lat": 44.07,
           "lng": -81.76
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -417,7 +471,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2400,
         "swimType": "lake access",
         "swimVerdict": "Lakefront with floor-to-ceiling windows facing Lake Huron. New stairs added in 2025 to lake access. 80 stairs to water. World-renowned sunsets.",
         "platform": "CottageStays",
@@ -464,7 +518,16 @@
         "coordinates": {
           "lat": 43.57,
           "lng": -81.73
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 lake access",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -484,7 +547,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 6,
-        "pricePerWeek": null,
+        "pricePerWeek": 2300,
         "swimType": "sandy beach",
         "swimVerdict": "2-minute walk to sandy beach with NO STAIRS. Perfect for mobility issues. Wagon provided for beach chairs. Sandy lakebed.",
         "platform": "CottageStays",
@@ -532,7 +595,15 @@
         "coordinates": {
           "lat": 43.57,
           "lng": -81.73
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -552,7 +623,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2400,
         "swimType": "rocky beach",
         "swimVerdict": "1-minute walk to rocky beach or 5-minute bike ride to sandy beach. Modern, beautifully updated cottage across from Lake Huron.",
         "platform": "CottageStays",
@@ -603,7 +674,16 @@
         "coordinates": {
           "lat": 44.07,
           "lng": -81.76
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🪨 Rocky shore",
+          "♨️ Hot tub",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -623,7 +703,7 @@
         "beds": 3,
         "baths": 3,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2500,
         "swimType": "sandy/stony beach",
         "swimVerdict": "Approximately 80 steps down to beach. Sandy/stony lakebed - water shoes recommended. Stunning lakeview deck perfect for gathering.",
         "platform": "CottageStays",
@@ -671,7 +751,16 @@
         "coordinates": {
           "lat": 43.57,
           "lng": -81.73
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -691,7 +780,7 @@
         "beds": 4,
         "baths": 1,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2600,
         "swimType": "lake access",
         "swimVerdict": "Lake view and lake access from backyard. Floor-to-ceiling windows with lake views. Hot tub. Kayak, paddleboard & lake mat included.",
         "platform": "CottageStays",
@@ -743,7 +832,16 @@
         "coordinates": {
           "lat": 43.57,
           "lng": -81.73
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 lake access",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -763,7 +861,7 @@
         "beds": 2,
         "baths": 1,
         "sleeps": 6,
-        "pricePerWeek": null,
+        "pricePerWeek": 2800,
         "swimType": "sandy beach",
         "swimVerdict": "Direct river access with 2-minute paddle to beach, or short 2-minute walk to sandy beach (no stairs). Modern stylish cottage.",
         "platform": "CottageStays",
@@ -811,7 +909,16 @@
         "coordinates": {
           "lat": 44.32,
           "lng": -81.58
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🏖 Sandy beach",
+          "🛶 Kayaks",
+          "🏝 Island setting"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min",
+        "priceEstimated": true
       }
     },
     {
@@ -868,7 +975,15 @@
         "coordinates": {
           "lat": 43.949,
           "lng": -81.743
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 165,
+        "driveTimeLabel": "2h 45min"
       }
     },
     {
@@ -888,7 +1003,7 @@
         "beds": 2,
         "baths": 2,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2200,
         "swimType": "Sandy",
         "swimVerdict": "Lake Huron just around the corner, close to sandy beach",
         "platform": "CottageStays",
@@ -921,7 +1036,16 @@
         "coordinates": {
           "lat": 44.07,
           "lng": -81.76
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -941,7 +1065,7 @@
         "beds": 2,
         "baths": 1,
         "sleeps": 6,
-        "pricePerWeek": null,
+        "pricePerWeek": 2300,
         "swimType": "Sandy",
         "swimVerdict": "Steps from Point Clark Lighthouse — one of Lake Huron's best sandy beaches",
         "platform": "CottageStays",
@@ -975,7 +1099,16 @@
         "coordinates": {
           "lat": 44.07,
           "lng": -81.76
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -995,7 +1128,7 @@
         "beds": 3,
         "baths": 3,
         "sleeps": 8,
-        "pricePerWeek": null,
+        "pricePerWeek": 2400,
         "swimType": "Nearby",
         "swimVerdict": "Near Lake Huron with big yard, beach vibes but not lakefront",
         "platform": "CottageStays",
@@ -1031,7 +1164,15 @@
         "coordinates": {
           "lat": 44.05,
           "lng": -81.73
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🏊 Nearby",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min",
+        "priceEstimated": true
       }
     },
     {
@@ -1090,7 +1231,15 @@
         "coordinates": {
           "lat": 44.605,
           "lng": -80.595
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 125,
+        "driveTimeLabel": "2h 5min"
       }
     },
     {
@@ -1157,7 +1306,15 @@
         "coordinates": {
           "lat": 44.609,
           "lng": -80.589
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 125,
+        "driveTimeLabel": "2h 5min"
       }
     },
     {
@@ -1220,7 +1377,15 @@
         "coordinates": {
           "lat": 44.73,
           "lng": -81.05
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🪨 Rocky shore",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 155,
+        "driveTimeLabel": "2h 35min"
       }
     },
     {
@@ -1280,7 +1445,15 @@
         "coordinates": {
           "lat": 44.634,
           "lng": -81.265
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 10"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1339,7 +1512,15 @@
         "coordinates": {
           "lat": 44.632,
           "lng": -81.268
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 10"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1402,7 +1583,15 @@
         "coordinates": {
           "lat": 44.629,
           "lng": -81.258
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "🛶 Kayaks"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1460,7 +1649,15 @@
         "coordinates": {
           "lat": 44.442,
           "lng": -81.395
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 10"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1519,7 +1716,15 @@
         "coordinates": {
           "lat": 44.46,
           "lng": -81.4
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 10"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1575,7 +1780,15 @@
         "coordinates": {
           "lat": 44.516,
           "lng": -80.01
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 10"
+        ],
+        "driveTimeMinutes": 95,
+        "driveTimeLabel": "1h 35min"
       }
     },
     {
@@ -1630,7 +1843,15 @@
         "coordinates": {
           "lat": 44.516,
           "lng": -80.009
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 95,
+        "driveTimeLabel": "1h 35min"
       }
     },
     {
@@ -1690,7 +1911,15 @@
         "coordinates": {
           "lat": 43.573,
           "lng": -81.698
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1746,7 +1975,15 @@
         "coordinates": {
           "lat": 43.565,
           "lng": -81.7
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -1766,7 +2003,7 @@
         "beds": 3,
         "baths": 1,
         "sleeps": 6,
-        "pricePerWeek": null,
+        "pricePerWeek": 2600,
         "swimType": "Mixed sand/stone",
         "swimVerdict": "Lake access with variable lakebed — sandy or stoney depending on conditions. Sand typically found 3ft out. Good for stone collecting. Not weedy or slimy. Water shoes recommended.",
         "platform": "CottageStays",
@@ -1800,7 +2037,16 @@
         "coordinates": {
           "lat": 43.56,
           "lng": -81.695
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Mixed sand/stone",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -1820,7 +2066,7 @@
         "beds": 3,
         "baths": 2,
         "sleeps": 5,
-        "pricePerWeek": null,
+        "pricePerWeek": 3100,
         "swimType": "Sandy (stairs)",
         "swimVerdict": "Lake access via approx 45 stairs to beach. Includes kayaks, paddleboard & lake mat for water activities.",
         "platform": "CottageStays",
@@ -1871,7 +2117,16 @@
         "coordinates": {
           "lat": 43.555,
           "lng": -81.69
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "🧖 Sauna"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -1891,7 +2146,7 @@
         "beds": 2,
         "baths": 1,
         "sleeps": 5,
-        "pricePerWeek": null,
+        "pricePerWeek": 3400,
         "swimType": "Sandy/Lakefront",
         "swimVerdict": "Lakefront property designed to take advantage of lake views from every angle — kitchen, fireplace, hot tub, gazebo, and beach. Direct lake view and access.",
         "platform": "CottageStays",
@@ -1929,7 +2184,16 @@
         "coordinates": {
           "lat": 43.562,
           "lng": -81.697
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -1949,7 +2213,7 @@
         "beds": 2,
         "baths": 1,
         "sleeps": 4,
-        "pricePerWeek": null,
+        "pricePerWeek": 2800,
         "swimType": "Sandy/Lakefront",
         "swimVerdict": "Lake view and lake access. Exceptional Bayfield beach cottage with stunning lake views inside and out.",
         "platform": "CottageStays",
@@ -1987,7 +2251,16 @@
         "coordinates": {
           "lat": 43.567,
           "lng": -81.699
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -2007,7 +2280,7 @@
         "beds": 2,
         "baths": 1.5,
         "sleeps": 5,
-        "pricePerWeek": null,
+        "pricePerWeek": 2700,
         "swimType": "Sandy/Lakefront",
         "swimVerdict": "Lake view and lake access. Unforgettable sunsets from the property.",
         "platform": "CottageStays",
@@ -2045,7 +2318,16 @@
         "coordinates": {
           "lat": 43.564,
           "lng": -81.698
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "♨️ Hot tub"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -2065,7 +2347,7 @@
         "beds": 2,
         "baths": 0.5,
         "sleeps": 4,
-        "pricePerWeek": null,
+        "pricePerWeek": 2200,
         "swimType": "Sandy/Lakefront",
         "swimVerdict": "Lakefront with lots of beach! Lower sunset deck with seating overlooking lake. Direct lake view and lake access. Paddleboard & lake mat rentals available mid-June to mid-Sept.",
         "platform": "CottageStays",
@@ -2106,7 +2388,16 @@
         "coordinates": {
           "lat": 43.568,
           "lng": -81.7
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 4"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min",
+        "priceEstimated": true
       }
     },
     {
@@ -2170,7 +2461,15 @@
         "coordinates": {
           "lat": 43.776,
           "lng": -81.635
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 5"
+        ],
+        "driveTimeMinutes": 155,
+        "driveTimeLabel": "2h 35min"
       }
     },
     {
@@ -2214,7 +2513,15 @@
         "coordinates": {
           "lat": 43.3144,
           "lng": -81.76231
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 5"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2258,7 +2565,15 @@
         "coordinates": {
           "lat": 43.75194,
           "lng": -81.69828
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 4"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -2302,7 +2617,15 @@
         "coordinates": {
           "lat": 43.18851,
           "lng": -81.4089
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 5"
+        ],
+        "driveTimeMinutes": 150,
+        "driveTimeLabel": "2h 30min"
       }
     },
     {
@@ -2346,7 +2669,15 @@
         "coordinates": {
           "lat": 43.16482,
           "lng": -81.68377
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 8"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2390,7 +2721,15 @@
         "coordinates": {
           "lat": 43.25693,
           "lng": -81.80976
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 4"
+        ],
+        "driveTimeMinutes": 175,
+        "driveTimeLabel": "2h 55min"
       }
     },
     {
@@ -2434,7 +2773,15 @@
         "coordinates": {
           "lat": 43.22423,
           "lng": -81.85693
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 4"
+        ],
+        "driveTimeMinutes": 180,
+        "driveTimeLabel": "3h"
       }
     },
     {
@@ -2478,7 +2825,15 @@
         "coordinates": {
           "lat": 43.31354,
           "lng": -81.75726
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2522,7 +2877,15 @@
         "coordinates": {
           "lat": 43.5598,
           "lng": -81.6922
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏊 Lake Access",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 160,
+        "driveTimeLabel": "2h 40min"
       }
     },
     {
@@ -2566,7 +2929,15 @@
         "coordinates": {
           "lat": 43.31433,
           "lng": -81.76072
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 5"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2610,7 +2981,15 @@
         "coordinates": {
           "lat": 43.31613,
           "lng": -81.75805
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2654,7 +3033,15 @@
         "coordinates": {
           "lat": 43.31247,
           "lng": -81.76246
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "🏖 Sandy beach",
+          "👥 Sleeps 6"
+        ],
+        "driveTimeMinutes": 170,
+        "driveTimeLabel": "2h 50min"
       }
     },
     {
@@ -2678,7 +3065,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2702,7 +3090,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2726,7 +3115,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2750,7 +3140,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2774,7 +3165,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2797,7 +3189,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2821,7 +3214,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2845,7 +3239,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2869,7 +3264,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2893,7 +3289,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2917,7 +3314,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2941,7 +3339,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2965,7 +3364,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -2989,7 +3389,8 @@
           "privateCottage": null,
           "privateShoreline": null,
           "deepWater": null
-        }
+        },
+        "vibeTags": []
       }
     },
     {
@@ -3046,7 +3447,15 @@
         "coordinates": {
           "lat": 45.35,
           "lng": -80.45
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏊 deep-water dock"
+        ],
+        "driveTimeMinutes": 180,
+        "driveTimeLabel": "3h"
       }
     },
     {
@@ -3102,7 +3511,15 @@
         "coordinates": {
           "lat": 45.62,
           "lng": -80.72
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏊 deep-water dock"
+        ],
+        "driveTimeMinutes": 210,
+        "driveTimeLabel": "3h 30min"
       }
     },
     {
@@ -3160,7 +3577,15 @@
         "coordinates": {
           "lat": 45.98,
           "lng": -81.52
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🪨 Rocky shore"
+        ],
+        "driveTimeMinutes": 270,
+        "driveTimeLabel": "4h 30min"
       }
     },
     {
@@ -3217,7 +3642,15 @@
         "coordinates": {
           "lat": 45.05,
           "lng": -78.52
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏖 Sandy beach"
+        ],
+        "driveTimeMinutes": 145,
+        "driveTimeLabel": "2h 25min"
       }
     },
     {
@@ -3275,7 +3708,15 @@
         "coordinates": {
           "lat": 45.18,
           "lng": -78.68
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏖 Sandy beach"
+        ],
+        "driveTimeMinutes": 155,
+        "driveTimeLabel": "2h 35min"
       }
     },
     {
@@ -3330,7 +3771,15 @@
         "coordinates": {
           "lat": 45.72,
           "lng": -82.25
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏖 Sandy beach"
+        ],
+        "driveTimeMinutes": 280,
+        "driveTimeLabel": "4h 40min"
       }
     },
     {
@@ -3387,7 +3836,15 @@
         "coordinates": {
           "lat": 44.78,
           "lng": -76.72
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏖 Sandy beach"
+        ],
+        "driveTimeMinutes": 215,
+        "driveTimeLabel": "3h 35min"
       }
     },
     {
@@ -3443,7 +3900,15 @@
         "coordinates": {
           "lat": 44.95,
           "lng": -77.15
-        }
+        },
+        "vibeTags": [
+          "🔒 All to yourself",
+          "🌊 Crown land shoreline",
+          "⛵ Dock access",
+          "🏊 deep-water dock"
+        ],
+        "driveTimeMinutes": 200,
+        "driveTimeLabel": "3h 20min"
       }
     },
     {
@@ -3545,6 +4010,115 @@
         "units": "27 units (includes full-floor residences)",
         "neighbourhood": "Rosedale / Summerhill"
       }
+    },
+    {
+      "id": "jackson_central-restaurants",
+      "place_id": "ChIJQSxaStI1K4gRNlIjJdc10-M",
+      "name": "Central Restaurants",
+      "address": "114 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "rating": 4.8,
+      "reviews": 871,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.8★/871 reviews. Right on Ossington, steps from Golden Turtle. Top rated on the strip."
+    },
+    {
+      "id": "jackson_la-cubana",
+      "place_id": "ChIJ4Ydenf40K4gRsKawapt69oo",
+      "name": "La Cubana",
+      "address": "92 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "subtype": "cuban_restaurant",
+      "rating": 4.4,
+      "reviews": 1828,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.4★/1828 reviews. Cuban, 92 Ossington — essentially next door to Lunch Lady. Fun, affordable, different."
+    },
+    {
+      "id": "jackson_fat-choi",
+      "place_id": "ChIJASCo-jM1K4gRot-ElT8gbnM",
+      "name": "Fat Choi",
+      "address": "94 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "rating": 4.6,
+      "reviews": 172,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.6★/172 reviews. Vegan/vegetarian, 94 Ossington. Small but well-rated."
+    },
+    {
+      "id": "jackson_papi-chulos",
+      "place_id": "ChIJZVNGdgQ1K4gRO2g8IbkjLp8",
+      "name": "Papi Chulo's",
+      "address": "121 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "subtype": "mexican_restaurant",
+      "rating": 4.3,
+      "reviews": 1658,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.3★/1658 reviews. Mexican/tacos, 121 Ossington — across from Golden Turtle. Casual, fun."
+    },
+    {
+      "id": "jackson_bobbie-sues",
+      "place_id": "ChIJHeKdsv40K4gRrsuvHopcdko",
+      "name": "Bobbie Sue's Mac + Cheese",
+      "address": "162 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "rating": 4.5,
+      "reviews": 1594,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.5★/1594 reviews. Mac & cheese specialist, 162 Ossington. Cheap, fun, Jackson-friendly."
+    },
+    {
+      "id": "jackson_cote-de-boeuf",
+      "place_id": "ChIJWaKhqP40K4gR-IAHS0mGZvk",
+      "name": "Côte de Bœuf",
+      "address": "130 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "subtype": "french_restaurant",
+      "rating": 4.4,
+      "reviews": 947,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.4★/947 reviews. French butcher/wine bar, 130 Ossington. Steaks and charcuterie, more of a dinner pick."
+    },
+    {
+      "id": "jackson_nabe-hana",
+      "place_id": "ChIJkU_5nKQ1K4gRDY7elCp1I4c",
+      "name": "Nabe Hana",
+      "address": "70 Ossington Ave",
+      "city": "Toronto",
+      "type": "restaurant",
+      "subtype": "korean_restaurant",
+      "rating": 4.9,
+      "reviews": 73,
+      "contextKey": "outing:dinner-with-jackson",
+      "source": "goplaces-verified",
+      "discoveredAt": "2026-03-30T00:00:00.000Z",
+      "placeIdStatus": "verified",
+      "notes": "4.9★/73 reviews. Korean hot pot, 70 Ossington. Tiny and exceptional — the sleeper pick on the strip."
     }
   ],
   "updatedAt": "2026-03-30T18:13:55.409Z",
