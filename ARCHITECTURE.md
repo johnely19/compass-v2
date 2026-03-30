@@ -4,13 +4,46 @@
 
 ## What Compass Is
 
-Compass is a **personal travel intelligence app**. It helps users discover, evaluate, and plan around places — restaurants, venues, experiences, accommodations. An AI concierge (Charlie) discovers places, and the user triages them: keep or dismiss.
+Compass is an **invite-only personal travel intelligence app**. It helps users discover, evaluate, and plan around places — restaurants, venues, experiences, accommodations. An AI concierge (Charlie) discovers places, and the user triages them: keep or dismiss.
 
-It is **not** a social network or a content management system. Booking functionality may be added in a future version.
+It is **not** a social network or a content management system. Each user gets a deeply curated experience for their own city, taste profile, and trips — not a generic discovery feed.
 
-**Companion to Google Maps:** Compass is designed to work alongside Google Maps, not replace it. Every place links to Google Maps so users can jump seamlessly — get directions, see Street View, read reviews. Google Place ID is the bridge between the two systems. Think of Compass as the intelligence layer on top of Google Maps: we curate, filter, and recommend; Google handles navigation and street-level detail.
+**Google Maps is the foundation.** Every place in Compass is anchored to a **Google Place ID**. This is the primary key for everything: place cards, maps, photos, verification, deep-links. Compass is the intelligence and curation layer on top of Google's place graph. When you've decided you want to go somewhere, you tap "View in Maps" and Google takes over — directions, Street View, reviews, navigation. We curate. Google executes.
 
-**Mobile-first, desktop-capable:** This is a travel app — users are on their phones exploring a city, checking recommendations at dinner, reviewing places on the go. The primary experience is mobile. However, desktop is essential for trip planning, reviewing discoveries in bulk, managing contexts, and admin. Design mobile-first, then ensure desktop works well for planning workflows.
+> Every place card with a `place_id` must show a **"View in Maps"** button that opens `https://www.google.com/maps/place/?q=place_id:{place_id}` — which opens the native Google Maps app on iOS/Android. This is not optional. It's the primary action after reading a Compass review.
+
+**Phone-native first.** Compass is designed to be used standing on a street corner, with one thumb, with inconsistent cell signal. Every interaction must work at arm's length. Desktop is for planning sessions only — the primary experience is always mobile.
+
+---
+
+## Mobile Performance Contract
+
+These are hard targets. Every PR that touches the homepage, place cards, or review pages must not regress them:
+
+- **LCP (Largest Contentful Paint):** < 1.5s on 4G
+- **INP:** < 100ms
+- **CLS:** < 0.1 (no layout shift)
+- **Homepage:** < 50KB HTML, < 100KB total JS (gzipped)
+- **Place card:** renders useful content within 800ms
+- **Images:** WebP only, lazy-loaded, explicit width/height (no reflow)
+- **No blocking JS in `<head>`**
+- **No layout shift on triage button press**
+- **System fonts only:** `-apple-system, BlinkMacSystemFont, 'Segoe UI'` — no web font CDN calls
+- **No component library dependencies** — hand-written CSS only (no shadcn, radix, headless UI)
+
+---
+
+## Place Review Philosophy
+
+Every place description in Compass is written to this standard:
+
+- **Second-person, evocative:** "You're going to walk in and smell the wood smoke before you see the room." Not "This is a well-regarded restaurant."
+- **One specific detail** nobody else has — something you'd only know from being there or from deep research. The thing a friend who'd been there would tell you.
+- **Honest about the one weakness** — the tables are close together, it gets loud after 8pm, reservations are required weeks out.
+- **Ends with the handoff** — a "View in Maps" link so the user can navigate and go. Compass is the intelligence. Google is the execution.
+- **Max 3 sentences.** Tight. No filler. No "this charming establishment."
+
+---
 
 ---
 
@@ -689,9 +722,11 @@ Agents write data. Compass reads and displays it. Users triage it.
 - ❌ Real-time collaboration
 - ❌ Social features (sharing, comments, followers)
 - ❌ Payment/booking integration
-- ❌ Native mobile app (mobile-first responsive web, not a native app)
+- ❌ Desktop-first features — anything that requires a keyboard, large screen, or mouse as primary interaction
 - ❌ Multiple homepage experiments (one design, done well)
 - ❌ CMS or content editing UI
+- ❌ Native iOS app (on hold — charlie-ios exists but Compass is Google Place ID-based and the web PWA is the primary surface)
+- ❌ Apple Maps integration (we are a Google Maps app)
 
 ---
 
