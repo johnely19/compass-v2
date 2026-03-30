@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import Link from 'next/link';
 import type { Context, Discovery, TriageState } from '../_lib/types';
 import { getTriageState, getTriageEntry } from '../_lib/triage';
+import { haversineDistance, formatDistance, isWalkable } from '../_lib/distance';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import TripRouteMap from './TripRouteMap';
@@ -15,6 +16,25 @@ interface ReviewContextClientProps {
   userId: string;
   context: Context;
   discoveries: Discovery[];
+}
+
+// Cache for place card coordinates (loaded lazily)
+const _placeCardCoordsCache: Record<string, { lat: number; lng: number }> = {};
+
+async function loadPlaceCardCoords(placeId: string): Promise<{ lat: number; lng: number } | null> {
+  if (_placeCardCoordsCache[placeId]) return _placeCardCoordsCache[placeId];
+  try {
+    const res = await fetch(`/placecards/${placeId}/card.json`);
+    if (!res.ok) return null;
+    const card = await res.json();
+    const lat = card.identity?.lat ?? (card as Record<string, unknown>).lat;
+    const lng = card.identity?.lng ?? (card as Record<string, unknown>).lng;
+    if (lat && lng) {
+      _placeCardCoordsCache[placeId] = { lat, lng };
+      return { lat, lng };
+    }
+  } catch { /* ignore */ }
+  return null;
 }
 
 function timeAgo(dateStr: string | undefined | null): string | null {
@@ -41,6 +61,26 @@ export default function ReviewContextClient({
   const [tab, setTab] = useState<Tab>('unreviewed');
   // triageKey changes when triage state changes — forces memo/state recompute
   const [triageKey, setTriageKey] = useState(0);
+  // Coordinates for place cards (for anchor-based sorting)
+  const [placeCoords, setPlaceCoords] = useState<Record<string, { lat: number; lng: number }>>({});
+
+  // Load coordinates for discoveries when context has anchor
+  useEffect(() => {
+    if (!context.anchor) return;
+    const placeIds = discoveries
+      .map(d => d.place_id)
+      .filter((id): id is string => !!id);
+    Promise.all(placeIds.map(async (placeId) => {
+      const coords = await loadPlaceCardCoords(placeId);
+      return coords ? { placeId, coords } : null;
+    })).then(results => {
+      const newCoords: Record<string, { lat: number; lng: number }> = {};
+      for (const r of results) {
+        if (r) newCoords[r.placeId] = r.coords;
+      }
+      setPlaceCoords(prev => ({ ...prev, ...newCoords }));
+    });
+  }, [context.anchor, discoveries.map(d => d.place_id ?? d.id).join(',')]);
 
   useEffect(() => {
     const handler = () => setTriageKey(k => k + 1);
@@ -66,6 +106,7 @@ export default function ReviewContextClient({
   }
 
   const filtered = useMemo(() => {
+    const anchor = context.anchor;
     return discoveries
       .filter(d => {
         const placeId = d.place_id ?? d.id;
@@ -75,13 +116,39 @@ export default function ReviewContextClient({
         if (tab === 'dismissed') return state === 'dismissed';
         return false;
       })
+      .map(d => {
+        // Calculate distance if anchor exists and we have coordinates
+        let distanceM: number | undefined;
+        if (anchor) {
+          const coords = placeCoords[d.place_id ?? ''];
+          if (coords) {
+            distanceM = haversineDistance(anchor.lat, anchor.lng, coords.lat, coords.lng);
+          }
+        }
+        return { ...d, distanceM };
+      })
       .sort((a, b) => {
+        // If anchor exists, sort by distance (walkable first, then by proximity)
+        if (anchor) {
+          const aWalkable = a.distanceM !== undefined && isWalkable(a.distanceM, anchor.radiusM);
+          const bWalkable = b.distanceM !== undefined && isWalkable(b.distanceM, anchor.radiusM);
+          // Non-walkable goes to bottom
+          if (aWalkable && !bWalkable) return -1;
+          if (!aWalkable && bWalkable) return 1;
+          // Both walkable or both non-walkable: sort by distance
+          if (a.distanceM !== undefined && b.distanceM !== undefined) {
+            return a.distanceM - b.distanceM;
+          }
+          if (a.distanceM !== undefined) return -1;
+          if (b.distanceM !== undefined) return 1;
+        }
+        // Fallback to neighbourhood sorting
         const na = getNeighbourhood((a as unknown as Record<string,string>).address);
         const nb = getNeighbourhood((b as unknown as Record<string,string>).address);
         return na.rank - nb.rank || (a.name ?? '').localeCompare(b.name ?? '');
       });
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [discoveries, userId, context.key, tab, triageKey]);
+  }, [discoveries, userId, context.key, tab, triageKey, context.anchor, placeCoords]);
 
   const counts = useMemo(() => {
     let unreviewed = 0, saved = 0, dismissed = 0;
@@ -113,6 +180,14 @@ export default function ReviewContextClient({
       <div className="page-header">
         <h1>{context.emoji} {context.label}</h1>
         {context.dates && <p className="text-muted">{context.dates}</p>}
+        {context.anchor && (
+          <p className="text-sm" style={{ marginTop: '4px' }}>
+            📍 Near {context.anchor.label} · {filtered.filter(d => {
+              const walkable = d.distanceM !== undefined && isWalkable(d.distanceM, context.anchor!.radiusM);
+              return walkable;
+            }).length} places within {context.anchor.radiusM}m
+          </p>
+        )}
       </div>
 
       {/* Route map — only for non-accommodation trip contexts */}
@@ -168,6 +243,11 @@ export default function ReviewContextClient({
                       : heroImage.startsWith('/cottages/') || heroImage.startsWith('/developments/') ? heroImage
                       : `${process.env.NEXT_PUBLIC_BLOB_BASE_URL || ''}${heroImage}`)
                     : null;
+                  // Distance badge for anchor contexts
+                  const distanceM = (d as unknown as { distanceM?: number }).distanceM;
+                  const walkable = context.anchor && distanceM !== undefined
+                    ? isWalkable(distanceM, context.anchor.radiusM)
+                    : undefined;
                   return (
                     <div key={d.id} className="review-item card review-item-with-photo">
                       {resolvedHero && (
@@ -180,6 +260,14 @@ export default function ReviewContextClient({
                           </Link>
                           <div className="flex items-center gap-sm">
                             <TypeBadge type={d.type} />
+                            {/* Distance badge for anchor contexts */}
+                            {context.anchor && distanceM !== undefined && (
+                              walkable ? (
+                                <span className="badge badge-info">{formatDistance(distanceM)}</span>
+                              ) : (
+                                <span className="badge badge-muted">Not walkable from {context.anchor.label}</span>
+                              )
+                            )}
                             {(d as unknown as Record<string,string>).city && (
                               <span className="text-xs text-muted">{(d as unknown as Record<string,string>).city}</span>
                             )}
