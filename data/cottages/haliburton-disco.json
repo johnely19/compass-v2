@@ -1,0 +1,389 @@
+{
+  "cottages": [
+    {
+      "id": "highlands-east-kijiji",
+      "name": "Highlands East",
+      "platform": "Kijiji",
+      "url": "https://www.kijiji.ca/v-cottage-rental/haliburton/4-bedroom-luxury-cottage-sandy-beach-highlands-east/",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": null,
+      "swimType": "sandy beach",
+      "swimVerdict": "Sandy beach - verified from listing",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "fire pit"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 20
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 20
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": null
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "Luxury 4 bedroom cottage with sandy beach. Kijiji listing in Haliburton region.",
+      "description": "Highlands East",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "happynest-kawigamog",
+      "name": "Happynest on Kawigamog Lake",
+      "platform": "CottagesInCanada",
+      "url": "https://www.cottagesincanada.com/happynest",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 6,
+      "swimScore": null,
+      "swimType": "lake",
+      "swimVerdict": "Lakefront property on Kawigamog Lake",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "kayaks",
+        "dock"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 25
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 25
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": true
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "Lakefront cottage on Kawigamog Lake. CottagesInCanada listing.",
+      "description": "Happynest on Kawigamog Lake",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "moira-lake-cottagesincanada",
+      "name": "Moira Lake Cottage",
+      "platform": "CottagesInCanada",
+      "url": "https://www.cottagesincanada.com/29388",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": null,
+      "swimType": "lake",
+      "swimVerdict": "Lakefront on Moira Lake",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "kayaks",
+        "paddleboat",
+        "dock"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 30
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 30
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": true
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "4BR lakefront cottage on Moira Lake. CottagesInCanada ID: 29388",
+      "description": "Moira Lake Cottage",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "devil-lake-east-kijiji",
+      "name": "Devil Lake East",
+      "platform": "Kijiji",
+      "url": "https://www.kijiji.ca/v-cottage-rental/haliburton/devil-lake-cottage/",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 1,
+      "sleeps": 6,
+      "swimScore": null,
+      "swimType": "lake",
+      "swimVerdict": "Lakefront on Devil Lake",
+      "amenities": [
+        "kitchen",
+        "bbq",
+        "fireplace",
+        "fire pit"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 25
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 25
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": null
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "Lakefront cottage on Devil Lake. Kijiji listing.",
+      "description": "Devil Lake East",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "garrison-lake-cottagesincanada",
+      "name": "Garrison Lake Cottage",
+      "platform": "CottagesInCanada",
+      "url": "https://www.cottagesincanada.com/33733",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 4,
+      "baths": 2,
+      "sleeps": 8,
+      "swimScore": null,
+      "swimType": "lake",
+      "swimVerdict": "Lakefront on Garrison Lake",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "kayaks",
+        "dock"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 20
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 20
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": true
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "4BR lakefront cottage on Garrison Lake. CottagesInCanada ID: 33733",
+      "description": "Garrison Lake Cottage",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "haliburton-vrbo",
+      "name": "Haliburton VRBO",
+      "platform": "VRBO",
+      "url": "https://www.vrbo.com/en-ca/p7417233",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 3,
+      "baths": 2,
+      "sleeps": 6,
+      "swimScore": null,
+      "swimType": "lake",
+      "swimVerdict": "Lakefront cottage in Haliburton",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "hot tub",
+        "dock"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 15
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 15
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": true
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "Lakefront cottage with hot tub. VRBO listing p7417233.",
+      "description": "Haliburton VRBO",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    },
+    {
+      "id": "paradise-cove-cottagesincanada",
+      "name": "Paradise Cove",
+      "platform": "CottagesInCanada",
+      "url": "https://www.cottagesincanada.com/36457",
+      "region": "Haliburton Highlands",
+      "pricePerWeek": null,
+      "beds": 5,
+      "baths": 3,
+      "sleeps": 10,
+      "swimScore": null,
+      "swimType": "sandy beach",
+      "swimVerdict": "Sandy beach waterfront",
+      "amenities": [
+        "kitchen",
+        "wifi",
+        "bbq",
+        "fireplace",
+        "kayaks",
+        "paddleboard",
+        "dock",
+        "fire pit"
+      ],
+      "coordinates": {
+        "lat": null,
+        "lng": null
+      },
+      "driveTimes": {
+        "groceries": {
+          "name": "Haliburton",
+          "minutes": 30
+        },
+        "restaurants": {
+          "name": "Haliburton",
+          "minutes": 30
+        }
+      },
+      "gates": {
+        "threeWeeks": false,
+        "private": false,
+        "shoreline": true,
+        "dockAccess": true
+      },
+      "images": [],
+      "heroImage": null,
+      "scores": {
+        "swimming": null,
+        "amenities": null,
+        "quiet": null,
+        "value": null,
+        "location": null
+      },
+      "notes": "Large 5BR cottage with sandy beach and water toys. CottagesInCanada ID: 36457",
+      "description": "Paradise Cove",
+      "guests": null,
+      "sourceTags": ["Disco"]
+    }
+  ]
+}
