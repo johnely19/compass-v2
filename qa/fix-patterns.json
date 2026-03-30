@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "version": 1,
+    "description": "Known issue→fix patterns for Compass QA auto-fix engine",
+    "createdAt": "2026-03-30T00:00:00.000Z",
+    "updatedAt": "2026-03-30T00:00:00.000Z"
+  },
+  "patterns": [
+    {
+      "symptom": "map shows Toronto for Brooklyn address",
+      "root_cause": "saddr/daddr embed format ignores place_id; falls back to generic region search",
+      "fix": "use Google Maps Embed API place embed with explicit place_id",
+      "code_location": "app/_components/widgets/MapWidget.tsx",
+      "times_applied": 7,
+      "success_rate": 1.0,
+      "first_seen": "2026-03-28T00:00:00.000Z",
+      "last_applied": "2026-03-30T00:00:00.000Z"
+    },
+    {
+      "symptom": "city shows Ontario for non-Ontario place",
+      "root_cause": "hardcoded fallback city in discovery data or adaptCottage function",
+      "fix": "extract city from address field using comma-split heuristic; use context key to override (NYC context → New York)",
+      "code_location": "scripts/qa-auto-fix.mjs#fixCityFromAddress",
+      "times_applied": 136,
+      "success_rate": 0.94,
+      "first_seen": "2026-03-28T00:00:00.000Z",
+      "last_applied": "2026-03-30T00:00:00.000Z"
+    },
+    {
+      "symptom": "hero shows orange gradient instead of food photo",
+      "root_cause": "discovery.heroImage is null — no photo fetched from Google Places at discovery time",
+      "fix": "call Google Places Details API with place_id to get photo_reference, upload to Blob, update discovery.heroImage",
+      "code_location": "scripts/qa-auto-fix.mjs#fetchAndUploadPhoto",
+      "times_applied": 0,
+      "success_rate": 1.0,
+      "first_seen": "2026-03-30T00:00:00.000Z",
+      "last_applied": null
+    },
+    {
+      "symptom": "missing card stub — no card.json exists for place_id",
+      "root_cause": "Discovery added to Blob but no local data/placecards/{id}/card.json created",
+      "fix": "create minimal card.json stub from discovery fields, add to index.json",
+      "code_location": "scripts/qa-auto-fix.mjs#createCardStub",
+      "times_applied": 88,
+      "success_rate": 1.0,
+      "first_seen": "2026-03-30T00:00:00.000Z",
+      "last_applied": "2026-03-30T00:00:00.000Z"
+    }
+  ]
+}
