@@ -31,6 +31,8 @@ interface SessionEntry {
   totalTokens?: number;
   contextTokens?: number;
   model?: string;
+  status?: string;
+  startedAt?: number;
   [key: string]: unknown;
 }
 
@@ -133,6 +135,54 @@ function loadStats() {
   return { placeCards, cottages, activeContexts };
 }
 
+function loadWorkers(): Array<{
+  sessionKey: string; status: string; model: string;
+  totalTokens: number; startedAt: number;
+}> {
+  const agentsDir = path.join(homeDir(), '.openclaw', 'agents');
+  if (!existsSync(agentsDir)) return [];
+
+  const now = Date.now();
+  const HOUR = 3600000;
+  const workers: Array<{
+    sessionKey: string; status: string; model: string;
+    totalTokens: number; startedAt: number;
+  }> = [];
+
+  // Scan all agent directories for subagent sessions
+  for (const agentId of readdirSync(agentsDir)) {
+    if (agentId.startsWith('.')) continue;
+    const sessionsPath = path.join(agentsDir, agentId, 'sessions', 'sessions.json');
+    const sessionsData = safeReadJSON(sessionsPath) as Record<string, SessionEntry> | null;
+    if (!sessionsData) continue;
+
+    for (const [key, session] of Object.entries(sessionsData)) {
+      // Match subagent sessions: agent:main:subagent:*
+      if (!key.includes(':subagent:')) continue;
+
+      // Only include workers from last 24h
+      if (now - session.updatedAt > 24 * HOUR) continue;
+
+      workers.push({
+        sessionKey: key,
+        status: session.status || 'unknown',
+        model: session.model?.replace(/^(anthropic|openai|google)\//, '') || '—',
+        totalTokens: session.totalTokens || 0,
+        startedAt: session.startedAt || session.updatedAt,
+      });
+    }
+  }
+
+  // Sort: running first, then by most recent
+  workers.sort((a, b) => {
+    if (a.status === 'running' && b.status !== 'running') return -1;
+    if (b.status === 'running' && a.status !== 'running') return 1;
+    return b.startedAt - a.startedAt;
+  });
+
+  return workers.slice(0, 10);
+}
+
 export async function GET() {
   const currentUser = await getCurrentUser();
   if (!currentUser || !currentUser.isOwner) {
@@ -141,6 +191,7 @@ export async function GET() {
 
   const agents = loadAgents();
   const stats = loadStats();
+  const workers = loadWorkers();
   const totalTokens24h = agents.reduce((sum, a) => sum + a.totalTokens, 0);
 
   return NextResponse.json({
@@ -153,5 +204,6 @@ export async function GET() {
       activeContexts: stats.activeContexts,
       totalTokens24h,
     },
+    workers,
   });
 }

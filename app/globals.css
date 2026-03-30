@@ -5688,3 +5688,74 @@ body {
   border-radius: 8px;
   margin: 0 16px 16px;
 }
+
+/* Worker sub-agent cards */
+.worker-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.worker-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.worker-card-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.worker-emoji {
+  font-size: 1rem;
+}
+
+.worker-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.worker-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.worker-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: capitalize;
+  margin-bottom: 2px;
+}
+
+.worker-project {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 4px;
+}
+
+.worker-tokens {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin: 1.5rem 0 0.5rem;
+}

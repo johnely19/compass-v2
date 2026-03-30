@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import WorkerCard from '../_components/WorkerCard';
 
 /* ---- Types ---- */
 
@@ -61,6 +62,14 @@ interface DiscoActivityData {
     consecutiveErrors: number;
     lastError: string | null;
   }>;
+}
+
+interface WorkerInfo {
+  sessionKey: string;
+  status: string;
+  model: string;
+  totalTokens: number;
+  startedAt: number;
 }
 
 interface TokenData {
@@ -176,6 +185,7 @@ export default function AdminClient() {
   const [tokenData, setTokenData] = useState<TokenData | null>(null);
   const [users, setUsers] = useState<UserWithData[]>([]);
   const [discoActivity, setDiscoActivity] = useState<DiscoActivityData | null>(null);
+  const [workers, setWorkers] = useState<WorkerInfo[]>([]);
   const [loading, setLoading] = useState(true);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
   const [activeTab, setActiveTab] = useState<AdminTab>('overview');
@@ -193,6 +203,7 @@ export default function AdminClient() {
         const data = await agentsRes.json();
         setAgents(data.agents || []);
         setStats(data.stats || null);
+        setWorkers(data.workers || []);
       }
       if (cronsRes.ok) setCrons((await cronsRes.json()).jobs || []);
       if (tokensRes.ok) setTokenData(await tokensRes.json());
@@ -406,6 +417,16 @@ export default function AdminClient() {
           })()}
         </div>
       </Section>
+
+      {/* ---- Workers (sub-agents) ---- */}
+      {workers.length > 0 && (
+        <>
+          <h2 className="section-label">Workers</h2>
+          <div className="worker-grid">
+            {workers.map(w => <WorkerCard key={w.sessionKey} worker={w} />)}
+          </div>
+        </>
+      )}
 
       {/* ---- Disco Activity ---- */}
       <Section title="Disco Activity" emoji="🔍">
