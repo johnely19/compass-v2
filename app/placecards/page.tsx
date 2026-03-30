@@ -1,8 +1,8 @@
-import { readFileSync, existsSync } from 'fs';
-import path from 'path';
+import { notFound } from 'next/navigation';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
+import { PlaceCardStore } from '../_lib/place-card-store';
 import PlacecardsBrowseClient from './PlacecardsBrowseClient';
 
 export const dynamic = 'force-dynamic';
@@ -19,26 +19,6 @@ interface CardData {
   narrative?: {
     summary?: string | null;
   };
-}
-
-function loadIndex(): Record<string, IndexEntry> {
-  const indexPath = path.join(process.cwd(), 'data', 'placecards', 'index.json');
-  if (!existsSync(indexPath)) return {};
-  try {
-    return JSON.parse(readFileSync(indexPath, 'utf8')) as Record<string, IndexEntry>;
-  } catch {
-    return {};
-  }
-}
-
-function loadCardData(placeId: string): CardData {
-  const cardPath = path.join(process.cwd(), 'data', 'placecards', placeId, 'card.json');
-  if (!existsSync(cardPath)) return {};
-  try {
-    return JSON.parse(readFileSync(cardPath, 'utf8')) as CardData;
-  } catch {
-    return {};
-  }
 }
 
 // Extract rating from summary string (e.g., "5.0★" or "4.5★")
@@ -72,22 +52,25 @@ export default async function PlacecardsPage() {
     );
   }
 
-  const index = loadIndex();
+  const index = await PlaceCardStore.getIndex();
 
   // Build enriched card data with city and rating
-  const cards: PlaceCardData[] = Object.entries(index).map(([placeId, entry]) => {
-    const cardData = loadCardData(placeId);
-    const city = cardData.identity?.city ?? '';
-    const rating = extractRating(cardData.narrative?.summary ?? null);
+  // Note: During migration, we may fall back to local data for some cards
+  const cards: PlaceCardData[] = await Promise.all(
+    Object.entries(index).map(async ([placeId, entry]) => {
+      const cardData = await PlaceCardStore.getCard(placeId) as CardData | null;
+      const city = cardData?.identity?.city ?? '';
+      const rating = extractRating(cardData?.narrative?.summary ?? null);
 
-    return {
-      placeId,
-      name: entry.name,
-      type: entry.type,
-      city,
-      rating,
-    };
-  });
+      return {
+        placeId,
+        name: entry.name,
+        type: entry.type,
+        city,
+        rating,
+      };
+    })
+  );
 
   // Get available types from the data
   const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));

@@ -1,10 +1,9 @@
-import { readFileSync, existsSync } from 'fs';
-import path from 'path';
 import { notFound } from 'next/navigation';
 import { getCurrentUser } from '../../_lib/user';
 import { getUserDiscoveries } from '../../_lib/user-data';
 import { adaptCard } from '../../_lib/card-adapter';
 import { resolveImageUrl } from '../../_lib/image-url';
+import { PlaceCardStore } from '../../_lib/place-card-store';
 import PlaceCardDetail from '../../_components/PlaceCardDetail';
 import AccommodationCard from '../../_components/AccommodationCard';
 import type { PlaceCard } from '../../_lib/types';
@@ -68,8 +67,10 @@ function adaptCottage(c: CottageEntry): PlaceCard {
 }
 
 /** Look up a cottage by ID from data/cottages/index.json */
-function findCottage(id: string): PlaceCard | null {
-  const p = path.join(process.cwd(), 'data', 'cottages', 'index.json');
+async function findCottage(id: string): Promise<PlaceCard | null> {
+  const { readFileSync, existsSync } = await import('fs');
+  const { join } = await import('path');
+  const p = join(process.cwd(), 'data', 'cottages', 'index.json');
   if (!existsSync(p)) return null;
   try {
     const data = JSON.parse(readFileSync(p, 'utf8')) as { cottages: CottageEntry[] };
@@ -89,29 +90,18 @@ interface PageProps {
 export default async function PlaceCardPage({ params, searchParams }: PageProps) {
   const { placeId } = await params;
   const { context: contextFromUrl } = await searchParams;
-  const cardDir = path.join(process.cwd(), 'data', 'placecards', placeId);
-  const cardPath = path.join(cardDir, 'card.json');
 
-  let card: PlaceCard;
+  let card: PlaceCard | null = null;
 
-  if (existsSync(cardPath)) {
-    let raw: Record<string, unknown>;
-    try {
-      raw = JSON.parse(readFileSync(cardPath, 'utf8')) as Record<string, unknown>;
-    } catch {
-      notFound();
-    }
-    let manifest: Record<string, unknown> | undefined;
-    const manifestPath = path.join(cardDir, 'manifest.json');
-    if (existsSync(manifestPath)) {
-      try {
-        manifest = JSON.parse(readFileSync(manifestPath, 'utf8')) as Record<string, unknown>;
-      } catch { /* ignore */ }
-    }
+  // Try PlaceCardStore (Blob with local fallback)
+  const raw = await PlaceCardStore.getCard(placeId);
+
+  if (raw) {
+    const manifest = await PlaceCardStore.getManifest(placeId) ?? undefined;
     card = adaptCard(raw, manifest);
   } else {
     // Fallback 1: check cottage data
-    const cottage = findCottage(placeId);
+    const cottage = await findCottage(placeId);
     if (cottage) {
       card = cottage;
     } else {
@@ -197,7 +187,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
   }
 
   // Accommodation type gets the dedicated rental card UI
-  if (card.type === 'accommodation') {
+  if (card?.type === 'accommodation') {
     return (
       <AccommodationCard
         data={card.data as Record<string, unknown> & { name?: string }}
