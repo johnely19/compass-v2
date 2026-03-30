@@ -18,7 +18,7 @@ export default function PhotoGallery({ images }: PhotoGalleryProps) {
       <div className="photo-gallery">
         {images.map((img, i) => (
           <div key={i} className="photo-gallery-item">
-            <img src={resolveUrl(img.path)} alt={img.category} className="photo-gallery-img" />
+            <img src={resolveUrl(img.path)} alt={img.category} className="photo-gallery-img" width={240} height={180} loading="lazy" />
             {img.category && (
               <span className="photo-gallery-label">{img.category}</span>
             )}
