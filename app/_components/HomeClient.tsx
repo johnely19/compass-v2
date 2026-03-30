@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
-import { getContextCounts } from '../_lib/triage';
+import { getContextCounts, hydrateFromServer } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
@@ -125,6 +125,15 @@ export default function HomeClient({
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
+
+  // Hydrate triage from Blob on first mount — syncs cross-device state into localStorage
+  useEffect(() => {
+    hydrateFromServer(userId).then(() => {
+      // After hydration, trigger a re-render so counts reflect remote state
+      setTriageVersion((v) => v + 1);
+    }).catch(() => {/* network errors are non-fatal */});
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [userId]);
 
   if (contexts.length === 0) {
     return (

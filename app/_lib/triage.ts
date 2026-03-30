@@ -1,6 +1,7 @@
 /* ============================================================
-   Compass v2 — Triage System (localStorage)
-   Single source of truth: compass-triage-{userId}
+   Compass v2 — Triage System
+   localStorage = fast local cache
+   Vercel Blob = persistent truth (synced via /api/user/triage)
    ============================================================ */
 
 import type { TriageState, TriageEntry, SeenEntry, ContextTriage, TriageStore, DiscoveryType } from './types';
@@ -33,6 +34,96 @@ function ensureContext(store: TriageStore, contextKey: string): ContextTriage {
     store[contextKey] = { triage: {}, seen: {} };
   }
   return store[contextKey];
+}
+
+// ---- Server sync ----
+
+/**
+ * Merge two TriageStore objects — keep the entry with the later updatedAt.
+ * Mirrors the server-side merge logic in /api/user/triage.
+ */
+function mergeStores(local: TriageStore, remote: TriageStore): TriageStore {
+  const merged: TriageStore = {};
+  const allContexts = new Set([...Object.keys(local), ...Object.keys(remote)]);
+
+  for (const ctx of allContexts) {
+    const lCtx = local[ctx] ?? { triage: {}, seen: {} };
+    const rCtx = remote[ctx] ?? { triage: {}, seen: {} };
+
+    const mergedTriage: Record<string, TriageEntry> = {};
+    const allPlaces = new Set([...Object.keys(lCtx.triage ?? {}), ...Object.keys(rCtx.triage ?? {})]);
+
+    for (const placeId of allPlaces) {
+      const lEntry = lCtx.triage[placeId];
+      const rEntry = rCtx.triage[placeId];
+
+      if (!lEntry) { mergedTriage[placeId] = rEntry!; continue; }
+      if (!rEntry) { mergedTriage[placeId] = lEntry!; continue; }
+
+      // Both exist — keep whichever is newer (remote wins ties)
+      const lTime = new Date(lEntry.updatedAt).getTime();
+      const rTime = new Date(rEntry.updatedAt).getTime();
+      mergedTriage[placeId] = rTime >= lTime ? rEntry : lEntry;
+    }
+
+    // Merge seen (union — once seen, always seen)
+    const mergedSeen = { ...(lCtx.seen ?? {}), ...(rCtx.seen ?? {}) } as Record<string, SeenEntry>;
+
+    merged[ctx] = { triage: mergedTriage, seen: mergedSeen };
+  }
+
+  return merged;
+}
+
+/**
+ * Hydrate localStorage from Blob on app startup.
+ * Call once from HomeClient on mount.
+ * Remote wins for conflicts (Blob is the persistent truth).
+ */
+export async function hydrateFromServer(userId: string): Promise<void> {
+  if (typeof window === 'undefined') return;
+  try {
+    const res = await fetch('/api/user/triage', { credentials: 'include' });
+    if (!res.ok) return; // silently fail — localStorage is still usable
+
+    const remoteStore = (await res.json()) as TriageStore;
+    const localStore = loadStore(userId);
+
+    // Only update if remote has data
+    const hasRemoteData = Object.keys(remoteStore).length > 0;
+    if (!hasRemoteData) {
+      // Remote is empty — push our local state up so it survives browser clear
+      const hasLocalData = Object.keys(localStore).length > 0;
+      if (hasLocalData) {
+        syncToServer(userId).catch(() => {/* fire-and-forget */});
+      }
+      return;
+    }
+
+    const merged = mergeStores(localStore, remoteStore);
+    saveStore(userId, merged);
+  } catch {
+    // Network error — localStorage still works fine
+  }
+}
+
+/**
+ * Push the full local triage store to the server (Blob).
+ * Fire-and-forget — call after writes. Does not block UI.
+ */
+export async function syncToServer(userId: string): Promise<void> {
+  if (typeof window === 'undefined') return;
+  try {
+    const store = loadStore(userId);
+    await fetch('/api/user/triage', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(store),
+    });
+  } catch {
+    // Silently fail — localStorage already updated, sync will happen on next action
+  }
 }
 
 // ---- Read operations ----
@@ -110,6 +201,10 @@ export function setTriageState(
   };
 
   saveStore(userId, store);
+
+  // Async fire-and-forget sync to Blob
+  syncToServer(userId).catch(() => {/* silently ignore */});
+
   // Notify any listeners that triage changed (e.g. Hot page filters)
   if (typeof window !== 'undefined') {
     window.dispatchEvent(new CustomEvent('triage-updated', { detail: { placeId, state } }));
@@ -126,6 +221,9 @@ export function clearTriageState(
   if (!ctx) return;
   delete ctx.triage[placeId];
   saveStore(userId, store);
+
+  // Async fire-and-forget sync to Blob
+  syncToServer(userId).catch(() => {/* silently ignore */});
 }
 
 export function toggleTriage(
