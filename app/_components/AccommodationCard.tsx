@@ -121,6 +121,10 @@ interface AccommodationData {
   setting_tags?: string[];
   nearest_grocery?: string;
   nearest_town?: string;
+  lat?: number;
+  lng?: number;
+  latitude?: number;
+  longitude?: number;
 }
 
 interface AccommodationCardProps {
@@ -193,6 +197,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
       <div
         className="accommodation-hero"
         style={{
+          minHeight: 'min(45vw, 320px)',
           background: heroImage
             ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
             : LAKE_GRADIENT,
@@ -203,16 +208,6 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
             <span className="accommodation-type-badge">🏡 Cottage</span>
             {matchScore && (
               <span className="accommodation-match-badge">⭐ {matchScore}/5</span>
-            )}
-            {userId && contextKey && (
-              <div className="accommodation-hero-triage">
-                <TriageWidget
-                  userId={userId}
-                  contextKey={contextKey}
-                  contextLabel=""
-                  placeId={placeId}
-                />
-              </div>
             )}
           </div>
           <h1 className="accommodation-name">{name}</h1>
@@ -356,13 +351,24 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               View Listing ↗
             </a>
           )}
-          {/* Triage handled in hero — not duplicated here */}
+          {userId && contextKey && (
+            <div className="accommodation-triage-row">
+              <TriageWidget
+                userId={userId}
+                contextKey={contextKey}
+                contextLabel=""
+                placeId={placeId}
+              />
+            </div>
+          )}
         </div>
 
         {/* Map — use address for non-Google-Places cottages */}
         <MapWidget
           placeId={placeId.startsWith('ChIJ') ? placeId : undefined}
-          name={data.nearest_town ? `${name}, ${data.nearest_town}, Ontario` : name}
+          lat={data.lat || data.latitude}
+          lng={data.lng || data.longitude}
+          name={`${name}${region ? ', ' + region : ''}`}
         />
 
       </div>

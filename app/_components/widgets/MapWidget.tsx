@@ -2,6 +2,8 @@
 
 interface MapWidgetProps {
   placeId?: string;
+  lat?: number;
+  lng?: number;
   name: string;
   /** If provided, shows directions FROM this address */
   fromAddress?: string;
@@ -9,7 +11,7 @@ interface MapWidgetProps {
   fromLabel?: string;
 }
 
-export default function MapWidget({ placeId, name, fromAddress, fromLabel }: MapWidgetProps) {
+export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLabel }: MapWidgetProps) {
   const destination = placeId
     ? `place_id:${placeId}`
     : name;
@@ -24,7 +26,10 @@ export default function MapWidget({ placeId, name, fromAddress, fromLabel }: Map
 
   // Build iframe src — use Google Maps embed API (no key needed for basic embeds)
   let iframeSrc: string;
-  if (fromAddress) {
+  if (lat && lng) {
+    // Use view embed centered on coords at zoom 10
+    iframeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&center=${lat},${lng}&zoom=10`;
+  } else if (fromAddress) {
     // Directions embed with walking mode
     const origin = encodeURIComponent(fromAddress);
     const dest = placeId
