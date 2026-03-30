@@ -241,7 +241,7 @@
         "seafood",
         "street walking"
       ],
-      "active": true,
+      "active": false,
       "bookingStatus": "planning",
       "travel": {
         "note": "Flying Porter from Toronto Island (Billy Lake area) \u2014 direct and scenic"
@@ -256,7 +256,10 @@
       "notes": "Late Aug or early Sept preferred \u2014 shoulder season hotel rates + college energy returning. Freedom Trail walking, North End, harbour. Budget-conscious but nice hotel. GREAT STREETS connection: Commonwealth Avenue (Boston's mall) is profiled in Allan B. Jacobs' Great Streets \u2014 walk it as a primary activity, not just transit.",
       "mustDo": [
         "Walk Commonwealth Avenue (Great Streets by Jacobs)"
-      ]
+      ],
+      "status": "archived",
+      "archivedAt": "2026-03-30",
+      "archiveReason": "Not going this year \u2014 revisit for future planning"
     },
     {
       "key": "wishlist:great-streets",
