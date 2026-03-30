@@ -92,7 +92,7 @@ async function main() {
   console.log(`  Found ${total} cards in ${DATA_DIR}\n`);
 
   // Build map of already-uploaded cards (for resume)
-  const uploaded = new Set<string>();
+  const uploaded = new Set();
   if (resumeMode && writeMode) {
     console.log('  Checking for already-uploaded cards...');
     try {
