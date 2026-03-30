@@ -172,6 +172,12 @@
       "emoji": "\ud83c\udf7d\ufe0f",
       "type": "outing",
       "city": "Toronto",
+      "anchor": {
+        "lat": 43.6492,
+        "lng": -79.4215,
+        "label": "Ossington Ave",
+        "radiusM": 800
+      },
       "focus": [
         "casual",
         "good food",

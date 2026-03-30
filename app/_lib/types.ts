@@ -44,6 +44,13 @@ export type ContextType = 'trip' | 'outing' | 'radar';
 
 export type ContextStatus = 'active' | 'completed' | 'archived' | 'paused';
 
+export interface ContextAnchor {
+  lat: number;
+  lng: number;
+  label: string;
+  radiusM: number;
+}
+
 export interface Context {
   key: string;          // "trip:slug", "outing:slug", "radar:slug"
   label: string;        // "NYC Solo Trip"
@@ -55,6 +62,7 @@ export interface Context {
   focus: string[];      // "food", "jazz", "architecture"
   active: boolean;
   status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
+  anchor?: ContextAnchor;  // geographic anchor for proximity sorting
 }
 
 export interface UserManifest {
@@ -100,6 +108,8 @@ export interface Discovery {
   match?: number;        // 1-5 relevance score
   placeIdStatus: PlaceIdStatus;
   heroImage?: string;
+  lat?: number;         // latitude for proximity sorting
+  lng?: number;         // longitude for proximity sorting
 }
 
 export interface UserDiscoveries {
