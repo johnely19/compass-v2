@@ -92,12 +92,14 @@ export default function PlacecardsBrowseClient({
   return (
     <main className="page">
       <div className="page-header">
-        <h1>Places</h1>
-        <p className="text-muted">
-          {filteredCards.length === cards.length
-            ? `${cards.length} place cards`
-            : `${filteredCards.length} of ${cards.length} place cards`}
-        </p>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
+          <h1>Places</h1>
+          <span className="text-muted" style={{ fontSize: '0.85rem', fontWeight: 400 }}>
+            {filteredCards.length === cards.length
+              ? `${cards.length} place cards`
+              : `${filteredCards.length} of ${cards.length}`}
+          </span>
+        </div>
       </div>
 
       {/* Filter Bar */}
