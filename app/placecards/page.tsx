@@ -1,15 +1,21 @@
-import { notFound } from 'next/navigation';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
 import { PlaceCardStore } from '../_lib/place-card-store';
+import { getUserDiscoveries, getUserManifest } from '../_lib/user-data';
 import PlacecardsBrowseClient from './PlacecardsBrowseClient';
 
 export const dynamic = 'force-dynamic';
 
-interface IndexEntry {
+interface PlaceCardData {
+  placeId: string;
   name: string;
   type: DiscoveryType;
+  city: string;
+  rating: number | null;
+  contextKey: string;
+  contextLabel?: string;
+  heroImage?: string;
 }
 
 interface CardData {
@@ -31,50 +37,103 @@ function extractRating(summary: string | null): number | null {
   return parseFloat(value);
 }
 
-interface PlaceCardData {
-  placeId: string;
-  name: string;
-  type: DiscoveryType;
-  city: string;
-  rating: number | null;
-}
-
 export default async function PlacecardsPage() {
   const user = await getCurrentUser();
 
-  // Places browse uses the global index — owner only
-  if (!user?.isOwner) {
+  if (!user) {
     return (
       <main className="page">
-        <div className="page-header"><h1>Places</h1></div>
-        <p className="text-muted">Coming soon.</p>
+        <div className="page-header"><h1>My Places</h1></div>
+        <p className="text-muted">Sign in to see your discovered places.</p>
       </main>
     );
   }
 
-  const index = await PlaceCardStore.getIndex();
+  // Load user discoveries and manifest (for context labels)
+  const [discData, manifestData] = await Promise.all([
+    getUserDiscoveries(user.id),
+    getUserManifest(user.id),
+  ]);
 
-  // Build enriched card data with city and rating
-  // Note: During migration, we may fall back to local data for some cards
-  const cards: PlaceCardData[] = await Promise.all(
-    Object.entries(index).map(async ([placeId, entry]) => {
-      const cardData = await PlaceCardStore.getCard(placeId) as CardData | null;
-      const city = cardData?.identity?.city ?? '';
-      const rating = extractRating(cardData?.narrative?.summary ?? null);
+  const discoveries = discData?.discoveries ?? [];
 
-      return {
-        placeId,
-        name: entry.name,
-        type: entry.type,
-        city,
-        rating,
-      };
-    })
-  );
+  // Build context label map from manifest
+  const contextLabels: Record<string, string> = {};
+  if (manifestData?.contexts) {
+    for (const ctx of manifestData.contexts) {
+      contextLabels[ctx.key] = `${ctx.emoji || ''} ${ctx.label}`.trim();
+    }
+  }
 
-  // Get available types from the data
-  const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));
+  // Build card list from user's actual discoveries
+  // Deduplicate by placeId (keep the most recent discovery per place)
+  const seenPlaceIds = new Map<string, PlaceCardData>();
+
+  for (const d of discoveries) {
+    const placeId = d.place_id || d.id;
+    const contextKey = d.contextKey || 'radar:toronto-experiences';
+    const rating = d.rating != null ? Number(d.rating) : null;
+
+    const card: PlaceCardData = {
+      placeId,
+      name: d.name,
+      type: d.type as DiscoveryType,
+      city: d.city || '',
+      rating: !isNaN(rating!) && rating !== null ? rating : null,
+      contextKey,
+      contextLabel: contextLabels[contextKey] || contextKey,
+      heroImage: d.heroImage,
+    };
+
+    // Keep first occurrence (discoveries are ordered by discoveredAt)
+    if (!seenPlaceIds.has(placeId)) {
+      seenPlaceIds.set(placeId, card);
+    }
+  }
+
+  const userCards = Array.from(seenPlaceIds.values());
+
+  // For owner: also build the global admin cards
+  let adminCards: PlaceCardData[] = [];
+  if (user.isOwner) {
+    const index = await PlaceCardStore.getIndex();
+    adminCards = await Promise.all(
+      Object.entries(index).map(async ([placeId, entry]) => {
+        const cardData = await PlaceCardStore.getCard(placeId) as CardData | null;
+        const city = cardData?.identity?.city ?? '';
+        const rating = extractRating(cardData?.narrative?.summary ?? null);
+        return {
+          placeId,
+          name: entry.name,
+          type: entry.type as DiscoveryType,
+          city,
+          rating,
+          contextKey: 'admin:index',
+          contextLabel: '🗂️ Admin Index',
+        };
+      })
+    );
+  }
+
+  // Get available types from user's data
+  const typeSet = new Set<DiscoveryType>(userCards.map((c) => c.type));
   const availableTypes = ALL_TYPES.filter((t) => typeSet.has(t));
 
-  return <PlacecardsBrowseClient cards={cards} availableTypes={availableTypes} userId={user?.id} />;
+  // Get available contexts from user's data
+  const contextKeys = Array.from(new Set(userCards.map((c) => c.contextKey)));
+  const availableContexts = contextKeys.map(key => ({
+    key,
+    label: contextLabels[key] || key,
+  }));
+
+  return (
+    <PlacecardsBrowseClient
+      cards={userCards}
+      adminCards={user.isOwner ? adminCards : undefined}
+      availableTypes={availableTypes}
+      availableContexts={availableContexts}
+      userId={user.id}
+      isOwner={user.isOwner}
+    />
+  );
 }
