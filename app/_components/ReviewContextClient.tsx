@@ -9,8 +9,9 @@ import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import TripRouteMap from './TripRouteMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
+import ReviewMapPanel from './ReviewMapPanel';
 
-type Tab = 'unreviewed' | 'saved' | 'dismissed';
+type Tab = 'unreviewed' | 'saved' | 'dismissed' | 'map';
 
 interface ReviewContextClientProps {
   userId: string;
@@ -163,10 +164,21 @@ export default function ReviewContextClient({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [discoveries, userId, context.key, triageKey]);
 
+  // Count mappable unreviewed places for Map tab badge
+  const mappableCount = useMemo(() => {
+    return discoveries.filter(d => {
+      const state = getTriageState(userId, context.key, d.place_id ?? d.id);
+      if (state !== 'unreviewed' && state !== 'resurfaced') return false;
+      return !!(d.lat ?? placeCoords[d.place_id ?? '']?.lat);
+    }).length;
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [discoveries, userId, context.key, triageKey, placeCoords]);
+
   const tabs: { key: Tab; label: string; count: number }[] = [
     { key: 'unreviewed', label: 'Needs Review', count: counts.unreviewed },
     { key: 'saved', label: 'Saved', count: counts.saved },
     { key: 'dismissed', label: 'Dismissed', count: counts.dismissed },
+    { key: 'map', label: '🗺 Map', count: mappableCount },
   ];
 
   // Detect if >50% accommodation type → use rich layout
@@ -213,10 +225,20 @@ export default function ReviewContextClient({
           userId={userId}
           context={context}
           discoveries={discoveries}
-          tab={tab}
+          tab={(tab === 'map' ? 'unreviewed' : tab) as 'unreviewed' | 'saved' | 'dismissed'}
+        />
+      ) : tab === 'map' ? (
+        /* ── Map-only view (mobile full-screen, or desktop standalone) ── */
+        <ReviewMapPanel
+          discoveries={filtered}
+          placeCoords={placeCoords}
+          contextLabel={context.label}
+          city={context.city}
         />
       ) : (
-        <div className="review-list">
+        /* ── Desktop: list + sticky map side-by-side; mobile: list only ── */
+        <div className="review-list-map-layout">
+          <div className="review-list">
           {(() => {
             // Group by neighbourhood
             const groups: { name: string; items: typeof filtered }[] = [];
@@ -312,6 +334,17 @@ export default function ReviewContextClient({
               </p>
             </div>
           )}
+          </div>
+
+          {/* Desktop sticky map panel — hidden on mobile */}
+          <div className="review-map-sidebar">
+            <ReviewMapPanel
+              discoveries={filtered}
+              placeCoords={placeCoords}
+              contextLabel={context.label}
+              city={context.city}
+            />
+          </div>
         </div>
       )}
     </main>

@@ -2168,6 +2168,124 @@ a:hover {
 }
 
 
+/* ---- Review Map Panel ---- */
+
+.review-list-map-layout {
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+}
+
+.review-list-map-layout .review-list {
+  flex: 1;
+  min-width: 0;
+}
+
+.review-map-sidebar {
+  width: 40%;
+  min-width: 260px;
+  max-width: 480px;
+  position: sticky;
+  top: 80px;
+  flex-shrink: 0;
+}
+
+/* On mobile: hide sidebar, map tab shows full panel */
+@media (max-width: 768px) {
+  .review-list-map-layout {
+    flex-direction: column;
+  }
+  .review-map-sidebar {
+    display: none;
+  }
+}
+
+.review-map-panel {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+}
+
+.review-map-panel-empty {
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.review-map-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--card-border);
+  font-size: 0.8rem;
+}
+
+.review-map-count {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.review-map-unmapped {
+  color: var(--text-muted);
+}
+
+.review-map-link {
+  display: block;
+  line-height: 0;
+}
+
+.review-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.review-map-legend {
+  padding: var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 240px;
+  overflow-y: auto;
+  border-top: 1px solid var(--card-border);
+}
+
+.review-map-legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.78rem;
+}
+
+.review-map-legend-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  background: #e53e3e;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 700;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  flex-shrink: 0;
+}
+
+.review-map-legend-label > * {
+  transform: rotate(45deg);
+}
+
+.review-map-legend-name {
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ---- 22. Place Browse ---- */
 
 .place-browse-card {
