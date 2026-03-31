@@ -226,11 +226,11 @@ export default function ReviewContextClient({
             // For trips (nyc, cottage, etc.) skip grouping — addresses aren't Toronto neighbourhoods
             const isToronto = context.city?.toLowerCase().includes('toronto') && context.type !== 'trip';
             const groups: { name: string; items: typeof filtered }[] = [];
-            let lastNeighbourhood = '';
+            let lastNeighbourhood = '__init__';
             for (const d of filtered) {
               const hood = isToronto
                 ? getNeighbourhood((d as unknown as Record<string,string>).address).name
-                : '';
+                : 'Places';
               if (hood !== lastNeighbourhood) {
                 groups.push({ name: hood, items: [] });
                 lastNeighbourhood = hood;
