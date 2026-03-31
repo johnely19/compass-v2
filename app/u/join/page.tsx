@@ -1,73 +1,107 @@
 'use client';
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState, useEffect, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function JoinPage() {
+function JoinForm() {
+  const searchParams = useSearchParams();
   const [code, setCode] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const prefill = searchParams.get('code');
+    if (prefill) setCode(prefill);
+  }, [searchParams]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setLoading(true);
     const trimmed = code.trim().toLowerCase();
-    if (!trimmed) return;
+    if (!trimmed) { setLoading(false); return; }
 
-    const res = await fetch(`/u/${encodeURIComponent(trimmed)}`, { redirect: 'manual' });
-    if (res.status === 404) {
-      setError('Invalid invite code. Check your code and try again.');
-    } else {
-      // Success — cookie is set, redirect to home
+    try {
+      const res = await fetch(`/u/${encodeURIComponent(trimmed)}`, { redirect: 'manual' });
+      if (res.status === 404) {
+        setError('Invalid invite code. Check your code and try again.');
+        setLoading(false);
+        return;
+      }
+      router.push('/');
+      router.refresh();
+    } catch {
       router.push('/');
       router.refresh();
     }
   };
 
   return (
-    <main className="page" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '60vh' }}>
-      <div style={{ maxWidth: '360px', width: '100%', textAlign: 'center' }}>
-        <h1 style={{ fontSize: '1.5rem', marginBottom: '0.5rem' }}>Welcome to Compass</h1>
-        <p style={{ opacity: 0.6, marginBottom: '2rem', fontSize: '0.9rem' }}>
-          Enter your invite code to get started.
+    <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <input
+        type="text"
+        value={code}
+        onChange={(e) => setCode(e.target.value)}
+        placeholder="Your invite code"
+        autoFocus
+        style={{
+          padding: '14px 18px',
+          fontSize: '1.1rem',
+          borderRadius: '12px',
+          border: '1.5px solid rgba(148, 163, 184, 0.3)',
+          background: 'rgba(255,255,255,0.05)',
+          color: 'inherit',
+          textAlign: 'center',
+          letterSpacing: '0.08em',
+        }}
+      />
+      {error && (
+        <p style={{ color: '#f87171', fontSize: '0.85rem', margin: 0, textAlign: 'center' }}>{error}</p>
+      )}
+      <button
+        type="submit"
+        disabled={loading || !code.trim()}
+        style={{
+          padding: '14px',
+          fontSize: '1rem',
+          fontWeight: 700,
+          borderRadius: '12px',
+          border: 'none',
+          background: loading ? 'rgba(59,130,246,0.5)' : 'linear-gradient(135deg, #3b82f6, #6366f1)',
+          color: '#fff',
+          cursor: loading ? 'default' : 'pointer',
+        }}
+      >
+        {loading ? 'Opening Compass...' : 'Enter Compass ->'}
+      </button>
+    </form>
+  );
+}
+
+export default function JoinPage() {
+  return (
+    <main style={{
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: '100vh',
+      padding: '2rem',
+    }}>
+      <div style={{ maxWidth: '380px', width: '100%', textAlign: 'center' }}>
+        <div style={{ fontSize: '3rem', marginBottom: '1rem' }}>🧭</div>
+        <h1 style={{ fontSize: '2rem', fontWeight: 800, margin: '0 0 0.4rem', letterSpacing: '-0.02em' }}>
+          Compass
+        </h1>
+        <p style={{ color: '#94a3b8', fontSize: '1rem', marginBottom: '2.5rem', lineHeight: 1.5 }}>
+          Your personal guide to the city.
         </p>
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          <input
-            type="text"
-            value={code}
-            onChange={(e) => setCode(e.target.value)}
-            placeholder="Invite code"
-            autoFocus
-            style={{
-              padding: '12px 16px',
-              fontSize: '1rem',
-              borderRadius: '8px',
-              border: '1px solid rgba(148, 163, 184, 0.3)',
-              background: 'rgba(0,0,0,0.2)',
-              color: 'inherit',
-              textAlign: 'center',
-              letterSpacing: '0.05em',
-            }}
-          />
-          {error && (
-            <p style={{ color: '#f44336', fontSize: '0.85rem', margin: 0 }}>{error}</p>
-          )}
-          <button
-            type="submit"
-            style={{
-              padding: '12px',
-              fontSize: '1rem',
-              fontWeight: 600,
-              borderRadius: '8px',
-              border: 'none',
-              background: 'var(--accent, #3b82f6)',
-              color: '#fff',
-              cursor: 'pointer',
-            }}
-          >
-            Sign In
-          </button>
-        </form>
+        <Suspense fallback={<div style={{ color: '#64748b' }}>Loading...</div>}>
+          <JoinForm />
+        </Suspense>
+        <p style={{ marginTop: '1.5rem', color: '#475569', fontSize: '0.78rem', lineHeight: 1.6 }}>
+          You need an invite code to join.
+        </p>
       </div>
     </main>
   );

@@ -14,15 +14,18 @@ export async function GET(
     return new Response('Invalid invite code', { status: 404 });
   }
 
-  // Set the auth cookie
   const cookieStore = await cookies();
   cookieStore.set(COOKIE_NAME, user.id, {
     path: '/',
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'lax',
-    maxAge: 60 * 60 * 24 * 365, // 1 year
+    maxAge: 60 * 60 * 24 * 365,
   });
 
-  redirect('/');
+  if (user.isOwner) {
+    redirect('/');
+  } else {
+    redirect('/onboarding');
+  }
 }

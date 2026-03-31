@@ -18,6 +18,7 @@ interface OnboardingInput {
   tripDates?: string;
   dateNightWith?: string;
   city_area?: string;
+  interests?: string[];
 }
 
 function slugify(s: string): string {
@@ -140,7 +141,9 @@ export async function POST(request: NextRequest) {
 
   // Basic preferences
   const preferences: UserPreferences = {
-    interests: ['food', 'culture', 'local experiences'],
+    interests: body.interests && body.interests.length > 0
+      ? body.interests
+      : ['food', 'culture', 'local experiences'],
     updatedAt: now,
   };
 
