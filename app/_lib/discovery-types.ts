@@ -32,6 +32,21 @@ export const TYPE_META: Record<DiscoveryType, TypeMeta> = {
 
 export const ALL_TYPES = Object.keys(TYPE_META) as DiscoveryType[];
 
-export function getTypeMeta(type: DiscoveryType): TypeMeta {
-  return TYPE_META[type];
+const TYPE_ALIASES: Record<string, DiscoveryType> = {
+  'live-music': 'music-venue',
+  'live_music': 'music-venue',
+  'live music': 'music-venue',
+  'wine-bar': 'bar',
+  'cocktail-bar': 'bar',
+  'bakery': 'cafe',
+  'butcher': 'grocery',
+  'bookstore': 'shop',
+  'bookshop': 'shop',
+};
+
+export function getTypeMeta(type: string): TypeMeta {
+  const resolved = TYPE_META[type as DiscoveryType]
+    || TYPE_META[TYPE_ALIASES[type] as DiscoveryType]
+    || TYPE_META['experience']; // safe fallback
+  return resolved;
 }
