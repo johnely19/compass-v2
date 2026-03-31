@@ -345,10 +345,18 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         {/* Practical info — address, website, menu */}
         <div className="place-detail-v2-identity">
           {address && (
-            <div className="place-detail-v2-identity-row">
-              <span className="place-detail-v2-identity-icon">📍</span>
-              <span>{address}</span>
-            </div>
+            googleMapsUrl ? (
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row place-detail-v2-identity-link-row">
+                <span className="place-detail-v2-identity-icon">📍</span>
+                <span>{address}</span>
+                <span className="place-detail-v2-identity-link">View in Google Maps ↗</span>
+              </a>
+            ) : (
+              <div className="place-detail-v2-identity-row">
+                <span className="place-detail-v2-identity-icon">📍</span>
+                <span>{address}</span>
+              </div>
+            )
           )}
           {phone && (
             <a href={`tel:${phone}`} className="place-detail-v2-identity-row">
@@ -442,12 +450,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
 
         {/* ── Compact actions row ── */}
         <div className="place-detail-actions-row">
-          {googleMapsUrl && (
-            <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
-               className="place-detail-action-btn place-detail-action-maps">
-              View in Google Maps →
-            </a>
-          )}
+          {/* Maps link moved to address row above */}
           {googleEarthUrl && (
             <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
                className="place-detail-action-btn">
