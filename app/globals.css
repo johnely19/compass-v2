@@ -1348,6 +1348,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
+  max-width: 100%;
+  overflow: visible;
 }
 
 .filter-chip {
@@ -2211,13 +2213,11 @@ a:hover {
 
 @media (min-width: 768px) {
   .browse-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    display: block;
   }
 
   .filter-section {
-    flex-shrink: 0;
+    margin-bottom: var(--space-md);
   }
 }
 
