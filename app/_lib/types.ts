@@ -110,6 +110,13 @@ export interface Discovery {
   heroImage?: string;
   lat?: number;         // latitude for proximity sorting
   lng?: number;         // longitude for proximity sorting
+  // Provenance fields
+  sourceUrl?: string;   // URL to the article/source
+  sourceName?: string;  // display name for source
+  theme?: string;       // e.g. "New NYC Openings — Brooklyn Heights"
+  verified?: boolean;    // verified via Google Places
+  ratingCount?: number; // review count from Google Places
+  description?: string; // Disco description
 }
 
 export interface UserDiscoveries {

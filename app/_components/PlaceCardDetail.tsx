@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import type { PlaceCard, DiscoveryType } from '../_lib/types';
+import type { PlaceCard, DiscoveryType, Discovery } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
 import TriageWidget from './TriageWidget';
+import ProvenanceSection from './ProvenanceSection';
 import RatingWidget from './widgets/RatingWidget';
 import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
@@ -219,9 +220,10 @@ interface PlaceCardDetailProps {
   card: PlaceCard;
   userId?: string;
   contextKey?: string;
+  discovery?: Partial<Discovery>;
 }
 
-export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardDetailProps) {
+export default function PlaceCardDetail({ card, userId, contextKey, discovery }: PlaceCardDetailProps) {
   const typeMeta = getTypeMeta(card.type);
   const data = card.data ?? { description: '', highlights: [], images: [] };
 
@@ -253,6 +255,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
 
   const googleMapsUrl = card.place_id
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
+    : null;
+
+  // Google Earth 3D link — useful for spatial context on outdoor/area types
+  const EARTH_TYPES = new Set(['accommodation', 'neighbourhood', 'park', 'architecture', 'experience', 'development']);
+  const googleEarthUrl = EARTH_TYPES.has(card.type)
+    ? `https://earth.google.com/web/search/${encodeURIComponent([card.name, city || address?.split(',').slice(-2, -1)[0]?.trim()].filter(Boolean).join(' '))}`
     : null;
 
   // Photo gallery — exclude hero, categorize
@@ -404,6 +412,22 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
           <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
         ))}
 
+        {/* Provenance section — why this place was recommended */}
+        {discovery && discovery.source && (
+          <ProvenanceSection
+            source={discovery.source}
+            discoveredAt={discovery.discoveredAt || undefined}
+            sourceUrl={discovery.sourceUrl}
+            sourceName={discovery.sourceName}
+            theme={discovery.theme}
+            verified={discovery.verified}
+            rating={discovery.rating}
+            ratingCount={discovery.ratingCount}
+            description={discovery.description}
+            placeName={card.name}
+          />
+        )}
+
         {/* Interior gallery — below fold, for applicable types */}
         {hasInteriorGallery && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
           <div className="place-detail-v2-interior-gallery">
@@ -440,6 +464,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
             <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
                className="place-detail-action-btn place-detail-action-maps">
               View in Google Maps →
+            </a>
+          )}
+          {googleEarthUrl && (
+            <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
+               className="place-detail-action-btn">
+              🌍 Google Earth 3D →
             </a>
           )}
           <ShareButton name={card.name} />

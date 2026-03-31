@@ -491,7 +491,7 @@ Add triage sync to Vercel Blob so triage state persists across devices and survi
 | Route | Purpose | Auth |
 |-------|---------|------|
 | `/` | Homepage — active contexts showing unreviewed discoveries | Public (user-scoped) |
-| `/placecards` | Browse all place cards | Public |
+| `/placecards` | **My Places** — browse the current user's own discovered places (filtered by their contexts and triage state). NOT a global card library. Owner admin toggle shows full index. | User-scoped |
 | `/placecards/[placeId]` | Place card detail — type-driven template with widgets | Public |
 | `/review` | Review hub — all contexts with triage counts | Public (user-scoped) |
 | `/review/[contextKey]` | Per-context review — unreviewed/saved/dismissed tabs | Public (user-scoped) |
@@ -648,6 +648,8 @@ This means:
 | Users index | `data/users.json` | User registry |
 
 **No dual storage systems.** Each piece of data has exactly one home.
+
+**Place cards are a render layer, not a content collection.** A place card exists because a discovery needed it. The filesystem card data is a lookup cache — accessed through the discovery pipeline, not browsed independently. The flow is always: User → Context → Discovery → Place Card. There is no global place card library visible to users.
 
 ---
 

@@ -145,11 +145,18 @@ export async function GET() {
 
     runsToday += todayRuns.length;
 
+    // Only count as an active error if the job currently has consecutive errors
+    const consecutiveErrs = job.state?.consecutiveErrors || 0;
+    if (consecutiveErrs > 0) {
+      errorsToday += consecutiveErrs;
+      const lastErr = job.state?.lastError || job.state?.lastErrorReason || 'error';
+      const errMsg = `${job.name}: ${lastErr} (${consecutiveErrs} consecutive)`;
+      if (!errorDetails.find(e => e.startsWith(job.name))) errorDetails.push(errMsg);
+    }
+
     for (const run of todayRuns) {
-      if (run.status === 'error' || run.status === 'timeout') {
+      if (false) { // historical errors no longer counted — use consecutiveErrors instead
         errorsToday++;
-        const errMsg = `${job.name}: ${run.status}`;
-        if (!errorDetails.includes(errMsg)) errorDetails.push(errMsg);
       }
 
       if (run.summary) {

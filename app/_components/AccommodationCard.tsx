@@ -2,8 +2,10 @@
 
 import { resolveImageUrlClient } from '../_lib/image-url';
 import { getPlatformInfo } from '../_lib/platform';
+import type { Discovery } from '../_lib/types';
 import TriageWidget from './TriageWidget';
 import MapWidget from './widgets/MapWidget';
+import ProvenanceSection from './ProvenanceSection';
 
 /* ================================================================
    Amenity icon map
@@ -402,6 +404,7 @@ interface AccommodationCardProps {
   placeId: string;
   userId?: string;
   contextKey?: string;
+  discovery?: Partial<Discovery>;
 }
 
 /* ================================================================
@@ -422,7 +425,7 @@ function AccommodationFeature({ icon, title, desc }: FeatureCallout) {
 /* ================================================================
    Main Component
    ================================================================ */
-export default function AccommodationCard({ data, placeId, userId, contextKey }: AccommodationCardProps) {
+export default function AccommodationCard({ data, placeId, userId, contextKey, discovery }: AccommodationCardProps) {
   const name = data.name || 'Cottage';
   const region = data.region || data.address || data.city || '';
 
@@ -750,6 +753,22 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
                 </div>
               )}
             </div>
+          )}
+
+          {/* Provenance — why this place was recommended */}
+          {(discovery?.source || data.platform) && (
+            <ProvenanceSection
+              source={discovery?.source || (data.platform ? `platform:${data.platform}` : 'disco:cottage-scan')}
+              discoveredAt={discovery?.discoveredAt || undefined}
+              sourceUrl={discovery?.sourceUrl || data.url || data.listing_url}
+              sourceName={discovery?.sourceName || data.platform}
+              theme={discovery?.theme}
+              verified={discovery?.verified}
+              rating={discovery?.rating || data.scores?.overall}
+              ratingCount={discovery?.ratingCount}
+              description={discovery?.description || data.description}
+              placeName={name}
+            />
           )}
         </div>
 
