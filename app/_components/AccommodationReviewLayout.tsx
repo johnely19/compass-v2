@@ -297,9 +297,9 @@ export default function AccommodationReviewLayout({
     <div className="accomm-review-layout">
       {/* Card list */}
       <div className="accomm-review-list">
-        {filtered.map(d => (
+        {filtered.map((d, idx) => (
           <AccommodationCard
-            key={d.id}
+            key={`${d.id}-${idx}`}
             discovery={d}
             userId={userId}
             contextKey={context.key}
