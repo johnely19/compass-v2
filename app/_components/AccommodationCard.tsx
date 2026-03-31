@@ -546,14 +546,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
                     loading="lazy"
                     className="hc-photo-img"
                   />
-                  {i === Math.min(galleryPhotos.length - 2, 3) && galleryPhotos.length > 5 && (
+                  {i === Math.min(galleryPhotos.length - 2, 3) && (
                     <a
                       href={mapsPhotosUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hc-photo-view-all"
                     >
-                      View {galleryPhotos.length} photos ↗
+                      View {galleryPhotos.length} photo{galleryPhotos.length !== 1 ? 's' : ''} ↗
                     </a>
                   )}
                 </div>
