@@ -7,7 +7,7 @@ import { getTriageState, getTriageEntry } from '../_lib/triage';
 import { haversineDistance, formatDistance, isWalkable } from '../_lib/distance';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
-import TripRouteMap from './TripRouteMap';
+import ReviewMarkersMap from './ReviewMarkersMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
@@ -190,9 +190,13 @@ export default function ReviewContextClient({
         )}
       </div>
 
-      {/* Route map — only for non-accommodation trip contexts */}
-      {context.type === 'trip' && !useAccommodationLayout && (
-        <TripRouteMap contextKey={context.key} />
+      {/* Markers map — show all unreviewed places as pins, no route */}
+      {!useAccommodationLayout && filtered.length > 0 && tab === 'unreviewed' && (
+        <ReviewMarkersMap
+          discoveries={filtered}
+          contextLabel={context.label}
+          city={context.city}
+        />
       )}
 
       <div className="review-tabs">
