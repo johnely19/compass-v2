@@ -11,38 +11,44 @@
 /* ---- 1. CSS Custom Properties ---- */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
-  /* Colors — Light mode */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
+  /* Colors — Light mode only */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
   --bg-elevated: #ffffff;
-  --text-primary: #0c1929;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --bg-card: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
 
   /* Accent palette */
-  --accent: #1e3a5f;
-  --accent-hover: #2d5a87;
-  --accent-light: #4a7eb8;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
   --warm-coral: #e07a5f;
   --warm-amber: #f4a261;
 
   /* Cards */
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(30, 58, 95, 0.12);
-  --card-shadow: 0 4px 24px rgba(12, 25, 41, 0.08);
-  --card-shadow-hover: 0 8px 32px rgba(12, 25, 41, 0.14);
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 6px 24px rgba(0,0,0,0.14);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
 
   /* Buttons */
-  --btn-primary-bg: #1e3a5f;
-  --btn-primary-hover: #2d5a87;
+  --btn-primary-bg: #2563eb;
+  --btn-primary-hover: #1d4ed8;
   --btn-primary-text: #ffffff;
 
   /* Semantic */
-  --success: #4ade80;
-  --warning: #fbbf24;
-  --danger: #f87171;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
 
   /* Layout */
   --radius-sm: 6px;
@@ -66,50 +72,6 @@
 }
 
 /* Dark mode (auto) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-primary: #060d18;
-    --bg-secondary: #0a1628;
-    --bg-elevated: #0f1e32;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-
-    --accent: #3b82f6;
-    --accent-hover: #60a5fa;
-    --accent-light: #93c5fd;
-
-    --card-bg: rgba(15, 30, 50, 0.85);
-    --card-border: rgba(59, 130, 246, 0.15);
-    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-    --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
-
-    --btn-primary-bg: #3b82f6;
-    --btn-primary-hover: #60a5fa;
-  }
-}
-
-/* Dark mode (explicit) */
-[data-theme="dark"] {
-  --bg-primary: #060d18;
-  --bg-secondary: #0a1628;
-  --bg-elevated: #0f1e32;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-light: #93c5fd;
-
-  --card-bg: rgba(15, 30, 50, 0.85);
-  --card-border: rgba(59, 130, 246, 0.15);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-  --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
-
-  --btn-primary-bg: #3b82f6;
-  --btn-primary-hover: #60a5fa;
-}
 
 
 /* ---- 2. Reset & Base ---- */

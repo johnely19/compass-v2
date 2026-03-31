@@ -26,7 +26,7 @@ export default async function RootLayout({
   const user = await getCurrentUser();
 
   return (
-    <html lang="en">
+    <html lang="en" style={{ colorScheme: "light" }}>
       <body>
         <Nav
           userName={user?.name}
