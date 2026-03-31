@@ -1,11 +1,11 @@
 {
   "place_id": "ChIJ5UXURXdZwokR4sn8rm7f9Q4",
   "name": "Nublu",
-  "type": "live-music",
+  "type": "music-venue",
   "address": "151 Loisaida Ave, New York, NY 10009",
   "city": "",
   "rating": 4.5,
-  "hero_image": null,
+  "hero_image": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ5UXURXdZwokR4sn8rm7f9Q4/photo_1.jpg",
   "stub": true,
   "data": {
     "address": "151 Loisaida Ave, New York, NY 10009",
@@ -13,6 +13,21 @@
     "rating": 4.5,
     "reviewCount": 389,
     "googlePlacesUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ5UXURXdZwokR4sn8rm7f9Q4",
-    "description": "You're going to feel the bass before you see the stage. Nublu on Loisaida has been the East Village's most genuinely underground jazz and world music room for two decades \u2014 a narrow, low-ceilinged bar where the musicians play close enough to touch. The crowd is real, the booking is eclectic, and the sound system is serious. One weakness: no website worth checking, so follow their Instagram or just show up."
+    "description": "You're going to feel the bass before you see the stage. Nublu on Loisaida has been the East Village's most genuinely underground jazz and world music room for two decades \u2014 a narrow, low-ceilinged bar where the musicians play close enough to touch. The crowd is real, the booking is eclectic, and the sound system is serious. One weakness: no website worth checking, so follow their Instagram or just show up.",
+    "images": [
+      {
+        "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ5UXURXdZwokR4sn8rm7f9Q4/photo_1.jpg",
+        "category": "exterior"
+      },
+      {
+        "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ5UXURXdZwokR4sn8rm7f9Q4/photo_2.jpg",
+        "category": "interior"
+      },
+      {
+        "path": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ5UXURXdZwokR4sn8rm7f9Q4/photo_3.jpg",
+        "category": "interior"
+      }
+    ],
+    "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ5UXURXdZwokR4sn8rm7f9Q4/photo_1.jpg"
   }
 }

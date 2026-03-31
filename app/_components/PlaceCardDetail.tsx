@@ -67,7 +67,7 @@ const DARK_TYPES = new Set(['music-venue', 'bar', 'theatre']);
 const FOOD_STRIP_TYPES = new Set(['restaurant', 'bar', 'cafe', 'grocery', 'hotel']);
 
 // Types where interior photo galleries make sense
-const INTERIOR_GALLERY_TYPES = new Set(['restaurant', 'bar', 'cafe', 'gallery', 'museum', 'theatre', 'music-venue', 'hotel', 'shop', 'accommodation']);
+const INTERIOR_GALLERY_TYPES = new Set(['restaurant', 'bar', 'cafe', 'gallery', 'museum', 'theatre', 'music-venue', 'live-music', 'hotel', 'shop', 'accommodation']);
 
 /* ---- Block title normalizer ---- */
 function normalizeBlockTitle(title: string): string {
