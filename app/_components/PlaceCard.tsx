@@ -61,13 +61,13 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
             )}
           </div>
         </div>
-        {mapsUrl && (
-          <div className="place-card-footer">
-            <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
-              onClick={(e) => e.stopPropagation()}>View in Google Maps →</a>
-          </div>
-        )}
       </Link>
+      {mapsUrl && (
+        <div className="place-card-footer">
+          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
+            onClick={(e) => e.stopPropagation()}>View in Google Maps →</a>
+        </div>
+      )}
       {userId && place_id && (
         <div className="place-card-triage-overlay">
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
