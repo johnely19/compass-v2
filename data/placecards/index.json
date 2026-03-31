@@ -153,7 +153,7 @@
   },
   "ChIJ5UXURXdZwokR4sn8rm7f9Q4": {
     "name": "Nublu",
-    "type": "live-music"
+    "type": "music-venue"
   },
   "ChIJ5W_gCbI1K4gRT6jPTp7Jtl4": {
     "name": "A Kind of Order (Union Station \u00d7 BAND Gallery)",
@@ -193,7 +193,7 @@
   },
   "ChIJ6Sg_8VFbwokRlbnhEiqKE7w": {
     "name": "Baby's All Right",
-    "type": "live-music-bar"
+    "type": "music-venue"
   },
   "ChIJ6WFHd3w1K4gRerr6HGTIzO4": {
     "name": "MADE RITE COFFEE",
@@ -245,7 +245,11 @@
   },
   "ChIJ8zKTr7dZwokRb56ALJrJcDw": {
     "name": "A Partial Refusal at Field Projects",
-    "type": "exhibition"
+    "type": "gallery"
+  },
+  "ChIJ8zKTr7dZwokRb56ALJrJcDw": {
+    "name": "A Partial Refusal at Field Projects",
+    "type": "gallery"
   },
   "ChIJ8zdX2Qg1K4gRbS29GLNUlw8": {
     "name": "Artist Project 2026",
@@ -309,7 +313,7 @@
   },
   "ChIJAzCPOo40K4gRTBn7FQkuBuc": {
     "name": "Karma Co-op Grocery Store",
-    "type": "grocery_store"
+    "type": "grocery"
   },
   "ChIJAzlRJac1K4gRl5k1WxEhZis": {
     "name": "C Suite",
@@ -329,7 +333,7 @@
   },
   "ChIJBarGotoLES2026": {
     "name": "Bar Goto",
-    "type": "cocktail-bar"
+    "type": "bar"
   },
   "ChIJBarRavalToronto2026": {
     "name": "Bar Raval",
@@ -373,7 +377,7 @@
   },
   "ChIJCumbraesToronto2026": {
     "name": "Cumbrae's \u2014 The Reference Butcher",
-    "type": "specialty-food"
+    "type": "grocery"
   },
   "ChIJCxjDu8c1K4gR33Dh5X2QMlc": {
     "name": "Konjiki Ramen (Downtown)",
@@ -449,7 +453,7 @@
   },
   "ChIJFourHorsemenWburg2026": {
     "name": "Four Horsemen",
-    "type": "wine-bar-restaurant"
+    "type": "bar"
   },
   "ChIJFwS17nTL1IkRFeRjonlMdZ4": {
     "name": "Vatican Gift Shop",
@@ -477,7 +481,7 @@
   },
   "ChIJGT3AEKFZwokRUZ-qV2gkqXo": {
     "name": "Comedy Cellar",
-    "type": "comedy"
+    "type": "theatre"
   },
   "ChIJGWoBKrNbwokRYqGihCSHp0U": {
     "name": "Confidant",
@@ -553,7 +557,7 @@
   },
   "ChIJIe2WgqE0K4gRVYqNQQmdp-k": {
     "name": "Le Paradis",
-    "type": "wine_bar"
+    "type": "bar"
   },
   "ChIJIw3AQNHzKk0RosaXCl0RTC0": {
     "name": "Muskoka Cottage Rental",
@@ -665,7 +669,7 @@
   },
   "ChIJM07TGoI1K4gRlMcPaThSHPs": {
     "name": "The Cheese Boutique",
-    "type": "specialty-food"
+    "type": "grocery"
   },
   "ChIJM4XXRdRzhlQRU5tJVe7D8xY": {
     "name": "Twisted Fork",
@@ -689,7 +693,7 @@
   },
   "ChIJMylYNDkzK4gRCgeXY9OBarU": {
     "name": "La Salumeria",
-    "type": "specialty-shop"
+    "type": "shop"
   },
   "ChIJN2IsOiPN1IkRDpnNkQylaPE": {
     "name": "hanamaru market and bento",
@@ -765,7 +769,7 @@
   },
   "ChIJOwg_06lPK4gRINkzrj8Yqbc": {
     "name": "Toronto Biennial 2026 \u2014 Dawoud Bey at AGO",
-    "type": "event"
+    "type": "experience"
   },
   "ChIJP8xM4HrL1IkRDLQtboVwRHQ": {
     "name": "Spike's Table",
@@ -785,7 +789,7 @@
   },
   "ChIJPaulieGeesGreenpoint2026": {
     "name": "Paulie Gee's + See No Evil + L'Industrie \u2014 Greenpoint Spring Expansion",
-    "type": "restaurant-cluster"
+    "type": "restaurant"
   },
   "ChIJPbRWNL41K4gRLX9TDHsu3aQ": {
     "name": "Lonely Diner",
@@ -865,11 +869,11 @@
   },
   "ChIJSmalllsJazzClub10th2014": {
     "name": "Smalls Jazz Club + Mezzrow",
-    "type": "jazz-club"
+    "type": "music-venue"
   },
   "ChIJSmorgasburgWburg2026": {
     "name": "Smorgasburg Williamsburg \u2014 Season Opens",
-    "type": "food-market"
+    "type": "experience"
   },
   "ChIJSunnysBarRedHook2026": {
     "name": "Sunny's Bar",
@@ -905,11 +909,11 @@
   },
   "ChIJTheRexToronto2026": {
     "name": "The Rex \u2014 This Weekend (Mar 28-29)",
-    "type": "live-music"
+    "type": "music-venue"
   },
   "ChIJTheRexTorontoJazz2026": {
     "name": "The Rex Hotel Jazz & Blues Bar",
-    "type": "live-music"
+    "type": "music-venue"
   },
   "ChIJTxFin6U1K4gRJAFAY_wZvAc": {
     "name": "Suite 115",
@@ -949,7 +953,7 @@
   },
   "ChIJU_PzWVNbwokRdhm11e7XEBw": {
     "name": "Nowadays",
-    "type": "club-bar"
+    "type": "bar"
   },
   "ChIJU_e-ag5YhlQRVnYsDNKhfA0": {
     "name": "Shannon Falls Provincial Park",
@@ -1009,7 +1013,7 @@
   },
   "ChIJWildairLES2026": {
     "name": "Wildair",
-    "type": "wine-bar-restaurant"
+    "type": "bar"
   },
   "ChIJWx0eDi9zhlQRtAITySyE3oE": {
     "name": "Published on Main",
@@ -1053,7 +1057,7 @@
   },
   "ChIJYRqEV39bwokRpz-hF0GXgaA": {
     "name": "Archestratus Books + Foods",
-    "type": "bookshop-cafe"
+    "type": "shop"
   },
   "ChIJYThlkFczK4gRH4_Sb0wcOlY": {
     "name": "Unknown Place (ChIJYThlkFczK4gRH4_Sb0wcOlY)",
@@ -1337,11 +1341,11 @@
   },
   "ChIJh6SGZ8I0K4gR47bAdya6pjs": {
     "name": "Grey Gardens",
-    "type": "wine-bar"
+    "type": "bar"
   },
   "ChIJh92VBllZwokR02frzAmb3MA": {
     "name": "Quimby's Bookstore NYC",
-    "type": "bookstore"
+    "type": "shop"
   },
   "ChIJhUT6s1Y0K4gRqNOxRnUoB8M": {
     "name": "Antler Kitchen & Bar",
@@ -1449,7 +1453,7 @@
   },
   "ChIJkzJKldA0K4gR13zj8cLdm8E": {
     "name": "N'Awlins Jazz Bar & Dining",
-    "type": "live-music"
+    "type": "music-venue"
   },
   "ChIJl-Hi4f00K4gR4X2byQYCO9A": {
     "name": "Stephen Bulger Gallery - Mehdi Dandi: Afterimage",
@@ -1497,11 +1501,11 @@
   },
   "ChIJmxWHez41K4gRlPPjVLS0wrc": {
     "name": "Backroom Comedy Club",
-    "type": "comedy"
+    "type": "theatre"
   },
   "ChIJmyapAHlZwokRW-fOBZfs_rA": {
     "name": "Nublu Classic",
-    "type": "live_music_venue"
+    "type": "music-venue"
   },
   "ChIJmzPYgJFZwokRg4zUwTlZwtI": {
     "name": "Comedy Cellar",
@@ -1593,7 +1597,7 @@
   },
   "ChIJp6yGSxc1K4gRjEPJXU-EXoY": {
     "name": "Bar Pompette",
-    "type": "wine-bar"
+    "type": "bar"
   },
   "ChIJpWNESPw1K4gRdYeqpgEB1wY": {
     "name": "1117 Meats & Pantry",
@@ -1657,7 +1661,7 @@
   },
   "ChIJqxedNj5bwokRMbQHYfPRHBo": {
     "name": "Pioneer Works",
-    "type": "cultural-center"
+    "type": "experience"
   },
   "ChIJr0jKBbI0K4gRQN-dXKRMMGA": {
     "name": "Cyrano (Virginia Gay, gender-flipped)",
@@ -1837,11 +1841,11 @@
   },
   "ChIJwSfKme40K4gRxoeQD9wP7OQ": {
     "name": "Bar Raval",
-    "type": "wine-bar"
+    "type": "bar"
   },
   "ChIJwUcmtIJZwokREiWU5DTPSLA": {
     "name": "DROM",
-    "type": "live_music_venue"
+    "type": "music-venue"
   },
   "ChIJwUewt-Q1K4gRYt8vLh31KLY": {
     "name": "Standard Time",
@@ -1873,7 +1877,7 @@
   },
   "ChIJx8E1BF5ZwokRtRU5AGl19I0": {
     "name": "Spoonbill & Sugartown Books",
-    "type": "bookstore"
+    "type": "shop"
   },
   "ChIJx8LPLtk0K4gRVkpHcrMIYKE": {
     "name": "Le S\u00e9lect Bistro",
