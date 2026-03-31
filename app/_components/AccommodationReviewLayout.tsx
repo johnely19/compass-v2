@@ -7,6 +7,7 @@ import type { Context } from '../_lib/types';
 import { getTriageState } from '../_lib/triage';
 import TriageButtons from './TriageButtons';
 import { resolveImageUrlClient } from '../_lib/image-url';
+import { getPlatformInfo } from '../_lib/platform';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -68,6 +69,8 @@ function AccommodationCard({
   const vibeTags = cottage?.vibeTags as string[] | undefined;
   const swimVerdict = cottage?.swimVerdict as string | undefined;
   const priceEstimated = cottage?.priceEstimated as boolean | undefined;
+  const platform = cottage?.platform as string | undefined;
+  const platformInfo = getPlatformInfo(platform);
 
   // Match score: average of scores, or fall back to discovery.rating
   const matchScore = scores
@@ -129,6 +132,14 @@ function AccommodationCard({
         >
           {matchScore != null && (
             <span className="accomm-hero-match">⭐ {matchScore}</span>
+          )}
+          {platform && (
+            <span
+              className="accomm-hero-platform"
+              style={{ background: platformInfo.colour }}
+            >
+              {platformInfo.label}
+            </span>
           )}
         </div>
       </Link>
