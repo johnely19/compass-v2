@@ -13,29 +13,43 @@ export interface PlaceCardData {
   type: DiscoveryType;
   city: string;
   rating: number | null;
+  contextKey: string;
+  contextLabel: string;
+  heroImage?: string;
+}
+
+export interface ContextOption {
+  key: string;
+  label: string;
 }
 
 export interface PlacecardsBrowseClientProps {
   cards: PlaceCardData[];
   availableTypes: DiscoveryType[];
+  availableContexts: ContextOption[];
   userId?: string;
+  isOwner?: boolean;
+  adminCards?: PlaceCardData[];
 }
 
+type TriageFilter = 'all' | 'unreviewed' | 'saved' | 'dismissed';
 type SortOption = 'name-asc' | 'name-desc' | 'type';
-
-interface FilterState {
-  types: DiscoveryType[];
-  minRating: number | null;
-}
+type ViewMode = 'my-places' | 'admin';
 
 export default function PlacecardsBrowseClient({
-  cards, userId,
+  cards,
   availableTypes,
+  availableContexts,
+  userId,
+  isOwner,
+  adminCards,
 }: PlacecardsBrowseClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTypes, setSelectedTypes] = useState<DiscoveryType[]>([]);
+  const [selectedContext, setSelectedContext] = useState<string>('');
   const [minRating, setMinRating] = useState<number | null>(null);
   const [sortOption, setSortOption] = useState<SortOption>('name-asc');
+  const [viewMode, setViewMode] = useState<ViewMode>('my-places');
 
   const toggleType = useCallback((type: DiscoveryType) => {
     setSelectedTypes((prev) =>
@@ -45,34 +59,39 @@ export default function PlacecardsBrowseClient({
 
   const clearFilters = useCallback(() => {
     setSelectedTypes([]);
+    setSelectedContext('');
     setMinRating(null);
     setSearchQuery('');
   }, []);
 
-  const hasActiveFilters = selectedTypes.length > 0 || minRating !== null || searchQuery !== '';
+  const hasActiveFilters = selectedTypes.length > 0 || selectedContext !== '' || minRating !== null || searchQuery !== '';
+
+  // Use admin cards when in admin view mode
+  const activeCards = viewMode === 'admin' && adminCards ? adminCards : cards;
 
   const filteredCards = useMemo(() => {
-    let result = cards;
+    let result = activeCards;
 
-    // Filter by search query (name)
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       result = result.filter((card) =>
-        card.name.toLowerCase().includes(query)
+        card.name.toLowerCase().includes(query) ||
+        card.city.toLowerCase().includes(query)
       );
     }
 
-    // Filter by type
+    if (selectedContext) {
+      result = result.filter((card) => card.contextKey === selectedContext);
+    }
+
     if (selectedTypes.length > 0) {
       result = result.filter((card) => selectedTypes.includes(card.type));
     }
 
-    // Filter by rating
     if (minRating !== null) {
       result = result.filter((card) => card.rating !== null && card.rating >= minRating);
     }
 
-    // Sort
     result = [...result].sort((a, b) => {
       switch (sortOption) {
         case 'name-asc':
@@ -87,18 +106,27 @@ export default function PlacecardsBrowseClient({
     });
 
     return result;
-  }, [cards, searchQuery, selectedTypes, minRating, sortOption]);
+  }, [activeCards, searchQuery, selectedContext, selectedTypes, minRating, sortOption]);
 
   return (
     <main className="page">
       <div className="page-header">
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem' }}>
-          <h1>Places</h1>
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.6rem', flexWrap: 'wrap' }}>
+          <h1>{viewMode === 'admin' ? 'All Cards (Admin)' : 'My Places'}</h1>
           <span className="text-muted" style={{ fontSize: '0.85rem', fontWeight: 400 }}>
-            {filteredCards.length === cards.length
-              ? `${cards.length} place cards`
-              : `${filteredCards.length} of ${cards.length}`}
+            {filteredCards.length === activeCards.length
+              ? `${activeCards.length} places`
+              : `${filteredCards.length} of ${activeCards.length}`}
           </span>
+          {isOwner && adminCards && (
+            <button
+              className="filter-chip"
+              style={{ marginLeft: 'auto', fontSize: '0.75rem' }}
+              onClick={() => setViewMode(viewMode === 'my-places' ? 'admin' : 'my-places')}
+            >
+              {viewMode === 'my-places' ? '🔧 Admin view' : '← My Places'}
+            </button>
+          )}
         </div>
       </div>
 
@@ -115,6 +143,25 @@ export default function PlacecardsBrowseClient({
         </div>
 
         <div className="browse-filters">
+          {/* Context filter — only in my-places mode with multiple contexts */}
+          {viewMode === 'my-places' && availableContexts.length > 1 && (
+            <div className="filter-section filter-section-row">
+              <div className="filter-group">
+                <label className="filter-label">Context</label>
+                <select
+                  className="filter-select"
+                  value={selectedContext}
+                  onChange={(e) => setSelectedContext(e.target.value)}
+                >
+                  <option value="">All contexts</option>
+                  {availableContexts.map((ctx) => (
+                    <option key={ctx.key} value={ctx.key}>{ctx.label}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          )}
+
           <div className="filter-section">
             <div className="filter-label">Type</div>
             <div className="filter-chips">
@@ -187,13 +234,18 @@ export default function PlacecardsBrowseClient({
                 {card.rating !== null && (
                   <span className="place-browse-rating">{card.rating.toFixed(1)}★</span>
                 )}
+                {viewMode === 'my-places' && card.contextLabel && (
+                  <span className="place-browse-context text-muted" style={{ fontSize: '0.75rem', display: 'block', marginTop: '0.25rem' }}>
+                    {card.contextLabel}
+                  </span>
+                )}
               </div>
             </Link>
-            {userId && (
+            {userId && card.contextKey && (
               <div className="place-browse-triage">
                 <TriageButtons
                   userId={userId}
-                  contextKey="radar:toronto-experiences"
+                  contextKey={card.contextKey}
                   placeId={card.placeId}
                   size="sm"
                 />
@@ -205,10 +257,21 @@ export default function PlacecardsBrowseClient({
 
       {filteredCards.length === 0 && (
         <div className="place-grid-empty">
-          <p>No places match your filters.</p>
-          <button className="filter-clear" onClick={clearFilters}>
-            Clear filters
-          </button>
+          {activeCards.length === 0 ? (
+            <div>
+              <p>No places discovered yet.</p>
+              <p className="text-muted" style={{ fontSize: '0.85rem' }}>
+                Chat with Compass to start discovering places — they'll appear here.
+              </p>
+            </div>
+          ) : (
+            <div>
+              <p>No places match your filters.</p>
+              <button className="filter-clear" onClick={clearFilters}>
+                Clear filters
+              </button>
+            </div>
+          )}
         </div>
       )}
     </main>

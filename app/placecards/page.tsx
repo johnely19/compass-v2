@@ -1,80 +1,108 @@
-import { notFound } from 'next/navigation';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
+import { getUserDiscoveries, getUserManifest } from '../_lib/user-data';
 import { PlaceCardStore } from '../_lib/place-card-store';
 import PlacecardsBrowseClient from './PlacecardsBrowseClient';
 
 export const dynamic = 'force-dynamic';
 
-interface IndexEntry {
-  name: string;
-  type: DiscoveryType;
-}
-
-interface CardData {
-  identity?: {
-    city?: string | null;
-  };
-  narrative?: {
-    summary?: string | null;
-  };
-}
-
-// Extract rating from summary string (e.g., "5.0★" or "4.5★")
-function extractRating(summary: string | null): number | null {
-  if (!summary) return null;
-  const match = summary.match(/(\d+\.?\d*)\s*★/);
-  if (!match) return null;
-  const value = match[1];
-  if (!value) return null;
-  return parseFloat(value);
-}
-
-interface PlaceCardData {
+export interface PlaceCardData {
   placeId: string;
   name: string;
   type: DiscoveryType;
   city: string;
   rating: number | null;
+  contextKey: string;
+  contextLabel: string;
+  heroImage?: string;
 }
 
 export default async function PlacecardsPage() {
   const user = await getCurrentUser();
 
-  // Places browse uses the global index — owner only
-  if (!user?.isOwner) {
+  if (!user) {
     return (
       <main className="page">
-        <div className="page-header"><h1>Places</h1></div>
-        <p className="text-muted">Coming soon.</p>
+        <div className="page-header"><h1>My Places</h1></div>
+        <p className="text-muted">Sign in to see your discovered places.</p>
       </main>
     );
   }
 
-  const index = await PlaceCardStore.getIndex();
+  // Load user discoveries and context manifest in parallel
+  const [discData, manifest] = await Promise.all([
+    getUserDiscoveries(user.id),
+    getUserManifest(user.id),
+  ]);
 
-  // Build enriched card data with city and rating
-  // Note: During migration, we may fall back to local data for some cards
-  const cards: PlaceCardData[] = await Promise.all(
-    Object.entries(index).map(async ([placeId, entry]) => {
-      const cardData = await PlaceCardStore.getCard(placeId) as CardData | null;
-      const city = cardData?.identity?.city ?? '';
-      const rating = extractRating(cardData?.narrative?.summary ?? null);
+  const discoveries = discData?.discoveries ?? [];
 
-      return {
-        placeId,
-        name: entry.name,
-        type: entry.type,
-        city,
-        rating,
-      };
-    })
-  );
+  // Build context label lookup from manifest
+  const contextLabels: Record<string, string> = {};
+  if (manifest?.contexts) {
+    for (const ctx of manifest.contexts) {
+      contextLabels[ctx.key] = `${ctx.emoji || '📋'} ${ctx.label}`;
+    }
+  }
 
-  // Get available types from the data
+  // Deduplicate by place_id (first occurrence wins)
+  const seen = new Set<string>();
+  const cards: PlaceCardData[] = [];
+
+  for (const d of discoveries) {
+    const placeId = d.place_id || d.id;
+    if (seen.has(placeId)) continue;
+    seen.add(placeId);
+
+    cards.push({
+      placeId,
+      name: d.name,
+      type: d.type,
+      city: d.city || '',
+      rating: d.rating ?? null,
+      contextKey: d.contextKey,
+      contextLabel: contextLabels[d.contextKey] || d.contextKey,
+      heroImage: d.heroImage,
+    });
+  }
+
+  // Get available types from user's data
   const typeSet = new Set<DiscoveryType>(cards.map((c) => c.type));
   const availableTypes = ALL_TYPES.filter((t) => typeSet.has(t));
 
-  return <PlacecardsBrowseClient cards={cards} availableTypes={availableTypes} userId={user?.id} />;
+  // Get unique contexts for filtering
+  const contextSet = new Map<string, string>();
+  for (const c of cards) {
+    if (!contextSet.has(c.contextKey)) {
+      contextSet.set(c.contextKey, c.contextLabel);
+    }
+  }
+  const availableContexts = Array.from(contextSet.entries()).map(([key, label]) => ({ key, label }));
+
+  // Owner admin: build global card list for the admin toggle
+  let adminCards: PlaceCardData[] | undefined;
+  if (user.isOwner) {
+    const index = await PlaceCardStore.getIndex();
+    adminCards = Object.entries(index).map(([placeId, entry]) => ({
+      placeId,
+      name: entry.name,
+      type: entry.type as DiscoveryType,
+      city: '',
+      rating: null,
+      contextKey: '',
+      contextLabel: '',
+    }));
+  }
+
+  return (
+    <PlacecardsBrowseClient
+      cards={cards}
+      availableTypes={availableTypes}
+      availableContexts={availableContexts}
+      userId={user.id}
+      isOwner={user.isOwner}
+      adminCards={adminCards}
+    />
+  );
 }
