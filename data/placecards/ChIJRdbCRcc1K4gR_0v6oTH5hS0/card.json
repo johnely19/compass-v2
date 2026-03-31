@@ -8,13 +8,13 @@
     "address": "Harbord Village (89 Harbord St)",
     "type": "bar",
     "hours": [
-      "Monday: 5:00 – 10:30 PM",
+      "Monday: 5:00\u2009\u2013\u200910:30\u202fPM",
       "Tuesday: Closed",
       "Wednesday: Closed",
-      "Thursday: 5:00 – 10:30 PM",
-      "Friday: 5:00 – 10:30 PM",
-      "Saturday: 5:00 – 10:30 PM",
-      "Sunday: 5:00 – 9:30 PM"
+      "Thursday: 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u20099:30\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 123,
@@ -25,31 +25,31 @@
     "text": "Discovered via blogto.com"
   },
   "narrative": {
-    "summary": "Named after Eugénie Brazier — first chef to earn 6 Michelin stars. Chef Rebekah Bruce (Alobar alum) does ingredient-driven small plates with Filipino inflections. 36 seats in the old Harbord Room space. Casual fine dining done right. 4.8★ (118 reviews). Participating in Chefs for Change 2026.",
+    "summary": "You're in a 36-seat room in Harbord Village where the old Harbord Room bones still do their job\u2014maximally laid out without feeling tight. The small plates move in waves\u2014an octopus dish that holds its char, a chicken liver number that a table next to you will order twice. Named after Eug\u00e9nie Brazier, the first chef to earn six Michelin stars, which tells you everything about the ambition here.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a residential stretch of Harbord Village, a few blocks west of the university, where the old Harbord Room used to be. Inside, 36 seats fill a room that feels maximally laid out without being cramped—bare tables, warm lighting, and an efficiency to the layout that keeps servers moving smoothly between kitchen and floor. The vibe is casually elegant in that way where you could show up in a sweater or a blazer and feel equally right.",
+        "body": "You're on a residential stretch of Harbord Village, a few blocks west of the university, where the old Harbord Room used to be. Inside, 36 seats fill a room that feels maximally laid out without being cramped\u2014bare tables, warm lighting, and an efficiency to the layout that keeps servers moving smoothly between kitchen and floor. The vibe is casually elegant in that way where you could show up in a sweater or a blazer and feel equally right.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Chef Rebekah Bruce (ex-Alobar) runs an ingredient-driven menu with Filipino inflections—think scallop kinilaw with sharp acidity, green peppercorn squid heavy on garlic, or cauliflower that gets texture from pineapple nuts. The kitchen paces small plates efficiently, and while some dishes lean subtle (like a delicate halibut), others hit harder (Argentinian red shrimp over chickpea purée that steals the show). Desserts are serious: a chocolate cake that looks like architecture, a peanut butter pie dense enough to slow you down.",
+        "body": "Chef Rebekah Bruce (ex-Alobar) runs an ingredient-driven menu with Filipino inflections\u2014think scallop kinilaw with sharp acidity, green peppercorn squid heavy on garlic, or cauliflower that gets texture from pineapple nuts. The kitchen paces small plates efficiently, and while some dishes lean subtle (like a delicate halibut), others hit harder (Argentinian red shrimp over chickpea pur\u00e9e that steals the show). Desserts are serious: a chocolate cake that looks like architecture, a peanut butter pie dense enough to slow you down.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is a fun-night-out spot when you want to taste through a menu without the formality—bring someone who'll split six things with you. The energy and pacing make it better for groups than solo, though the bar works if you're comfortable eating alone.",
+        "body": "This is a fun-night-out spot when you want to taste through a menu without the formality\u2014bring someone who'll split six things with you. The energy and pacing make it better for groups than solo, though the bar works if you're comfortable eating alone.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"This place is getting a lot of buzz recently, so decided to check out their fusion menu.\n- Scallop Kinilaw: Great acidity, would have liked the scallops a bit more plump.\n- Green Peppercorn Squid: Strong garlicky flavour which I liked.\n- Argentinian Red Shrimp: The star of the dish was the chickpea bed.\n- Halibut: Good amount and texture, but a tad bland.\n- Cauliflower: The pineapple nuts made things pop.\n- Chocolate Cake: Beautiful to look at, delectable to the taste.\n- Peanut Butter Pie: Dense and heavy in all the best ways.\n\nPlace is small-ish but miximally laid out. Service and kitchen are efficient with the pacing. Prices are what prices are these days. Bonus points for the casually elegant vibe and fun-night-out atmosphere.\"\n\n⭐⭐⭐⭐⭐ \"Wonderful experience, front to back. Incredible service from the moment we stepped in the door without a reservation, hoping to acquire a bar seat on a busy Valentine’s Day Saturday. Ronnie welcomed us in right away and accommodated us with an open table to get our cocktails started while a 2-top at the bar finished up. We transitioned to the corner bar (which is typically one of my favourite seats in the house) and it did not disappoint. Lee welcomed us at the bar and elevated the experience instantly. Easily one of the best meals and genuine memorable experiences my wife and I have had in a while. We were sad when the Harbord Room closed many years ago, and finally Bar Eugenie fills the void that was left in the wonderful space at 89 Harbord. Thank you! See you soon :)\"\n\n⭐⭐⭐⭐⭐ \"One of the simplest but the best meals I’ve had in Toronto. Their cooking method is seamless yet delicious. Also special shout out to their chocolate cake. Very friendly and welcoming staff. Would definitely be coming back for more.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"This place is getting a lot of buzz recently, so decided to check out their fusion menu.\n- Scallop Kinilaw: Great acidity, would have liked the scallops a bit more plump.\n- Green Peppercorn Squid: Strong garlicky flavour which I liked.\n- Argentinian Red Shrimp: The star of the dish was the chickpea bed.\n- Halibut: Good amount and texture, but a tad bland.\n- Cauliflower: The pineapple nuts made things pop.\n- Chocolate Cake: Beautiful to look at, delectable to the taste.\n- Peanut Butter Pie: Dense and heavy in all the best ways.\n\nPlace is small-ish but miximally laid out. Service and kitchen are efficient with the pacing. Prices are what prices are these days. Bonus points for the casually elegant vibe and fun-night-out atmosphere.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wonderful experience, front to back. Incredible service from the moment we stepped in the door without a reservation, hoping to acquire a bar seat on a busy Valentine\u2019s Day Saturday. Ronnie welcomed us in right away and accommodated us with an open table to get our cocktails started while a 2-top at the bar finished up. We transitioned to the corner bar (which is typically one of my favourite seats in the house) and it did not disappoint. Lee welcomed us at the bar and elevated the experience instantly. Easily one of the best meals and genuine memorable experiences my wife and I have had in a while. We were sad when the Harbord Room closed many years ago, and finally Bar Eugenie fills the void that was left in the wonderful space at 89 Harbord. Thank you! See you soon :)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"One of the simplest but the best meals I\u2019ve had in Toronto. Their cooking method is seamless yet delicious. Also special shout out to their chocolate cake. Very friendly and welcoming staff. Would definitely be coming back for more.\""
       }
     ]
   }

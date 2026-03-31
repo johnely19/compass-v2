@@ -13,31 +13,31 @@
     "url": "https://www.boogieonqueen.com/"
   },
   "narrative": {
-    "summary": "Dedicated listening bar—music-first room, late-night hang; feels like the “go for the system” spot.",
+    "summary": "You're on the grittier stretch of West Queen West past Gladstone, inside a room that's small and deliberate\u2014a proper sound system mounted where other bars would put a TV, and a crowd that came specifically to listen. The weakness is the hours: it gets good late, and late in this neighborhood means you're committing to the night.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the grittier stretch of West Queen West past Gladstone, where the storefronts still feel lived-in. Inside, the room is small and deliberate—a proper sound system mounted where other bars would hang art, low seating that makes you settle in, dim enough that the music becomes the architecture. This isn't a place with a DJ booth as decoration; the system is the point, and everyone here knows it.",
+        "body": "You're on the grittier stretch of West Queen West past Gladstone, where the storefronts still feel lived-in. Inside, the room is small and deliberate\u2014a proper sound system mounted where other bars would hang art, low seating that makes you settle in, dim enough that the music becomes the architecture. This isn't a place with a DJ booth as decoration; the system is the point, and everyone here knows it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Boogie is a listening bar, not a restaurant—you come for the sound system and whatever the bartender pours. There's no kitchen, no menu to speak of, just drinks to keep your hands occupied while the music does the work. Think of it as the late-night endpoint, not the dinner destination.",
+        "body": "Boogie is a listening bar, not a restaurant\u2014you come for the sound system and whatever the bartender pours. There's no kitchen, no menu to speak of, just drinks to keep your hands occupied while the music does the work. Think of it as the late-night endpoint, not the dinner destination.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go late—after 11 when the crowd that knows shows up and the room fills with underground scene regulars who've been chasing good sound for decades. This is where you end the night when you actually want to hear the music, not just feel the bass.",
+        "body": "Go late\u2014after 11 when the crowd that knows shows up and the room fills with underground scene regulars who've been chasing good sound for decades. This is where you end the night when you actually want to hear the music, not just feel the bass.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Arrived before 11 and the bar was at capacity already.  After a short wait we were in. Great night of music with a great crowd.\"\n\n⭐⭐⭐⭐⭐ \"I absolutely love this crew. The owners did a fantastic job of renovating this space. Offering a beautiful bar and sound system, this is a great place to both dance and lounge. Their regulars are often veterans of Toronto's underground electronic music scene. If you have a passion for electronic music, this is a great place to frequent, dance, and network.\"\n\n⭐⭐⭐⭐⭐ \"The music here had me having the best night I’ve had in so long. Great small vibe with just the right amount of people. The bartender, Chris, was the sweetest. Definitely an underrated, lowkey and groovy spot.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Arrived before 11 and the bar was at capacity already.  After a short wait we were in. Great night of music with a great crowd.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I absolutely love this crew. The owners did a fantastic job of renovating this space. Offering a beautiful bar and sound system, this is a great place to both dance and lounge. Their regulars are often veterans of Toronto's underground electronic music scene. If you have a passion for electronic music, this is a great place to frequent, dance, and network.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The music here had me having the best night I\u2019ve had in so long. Great small vibe with just the right amount of people. The bartender, Chris, was the sweetest. Definitely an underrated, lowkey and groovy spot.\""
       }
     ]
   }

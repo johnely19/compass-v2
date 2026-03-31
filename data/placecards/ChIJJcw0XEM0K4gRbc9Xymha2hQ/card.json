@@ -8,13 +8,13 @@
     "address": "Bloordale (1184 Bloor St W)",
     "type": "bar",
     "hours": [
-      "Monday: 5:00 – 11:00 PM",
-      "Tuesday: 5:00 – 11:00 PM",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 12:00 – 11:00 PM",
-      "Sunday: 12:00 – 11:00 PM"
+      "Monday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 1419,
@@ -26,31 +26,31 @@
     "text": "burdockbrewery.com"
   },
   "narrative": {
-    "summary": "Craft brewery with a compact music hall that attracts experimental and indie acts. Ontario-crafted lagers, unpretentious vibes. Musicians love this room. 4.5★, 1,418 reviews. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "You're in Bloordale where the storefronts are still mix-and-match, drinking next to fermentation tanks while an experimental quartet sets up on stage. Concrete floors and industrial bones frame the brewery and music stage in the same sightline. The beer is genuinely good\u2014Ontario-crafted lagers, nothing showy\u2014but the room is why musicians want to play here.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Bloordale, where the storefronts are still mix-and-match and the rent hasn't priced out the interesting tenants yet. Inside, concrete floors and industrial bones frame the brewery tanks—visible through glass or steel mesh depending on where you sit—and the compact music hall in back has that low-ceiling intimacy musicians actually want to play. It's louder than you'd expect for a Tuesday, with long communal tables filling fast and a patio that swallows the warm-weather crowd whole.",
+        "body": "You're in Bloordale, where the storefronts are still mix-and-match and the rent hasn't priced out the interesting tenants yet. Inside, concrete floors and industrial bones frame the brewery tanks\u2014visible through glass or steel mesh depending on where you sit\u2014and the compact music hall in back has that low-ceiling intimacy musicians actually want to play. It's louder than you'd expect for a Tuesday, with long communal tables filling fast and a patio that swallows the warm-weather crowd whole.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a brewery first, so the kitchen keeps it tight: Ontario lagers that lean clean and sessionable, a house IPA that regulars swear by, and a happy hour menu built for serious value. The fries get called out in nearly every review—thick-cut, crispy in that inexplicably perfect way that makes you order a second round. You're not coming for a tasting menu, but the food holds its own against the beer, and nothing on the menu feels like an afterthought.",
+        "body": "This is a brewery first, so the kitchen keeps it tight: Ontario lagers that lean clean and sessionable, a house IPA that regulars swear by, and a happy hour menu built for serious value. The fries get called out in nearly every review\u2014thick-cut, crispy in that inexplicably perfect way that makes you order a second round. You're not coming for a tasting menu, but the food holds its own against the beer, and nothing on the menu feels like an afterthought.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go for happy hour if you want the deals and the energy, or check the music calendar and show up when an act you've been following announces a date here. Solo at the bar works, too—especially if you're the type who wants to try four different beers without anyone judging the pace.",
+        "body": "Go for happy hour if you want the deals and the energy, or check the music calendar and show up when an act you've been following announces a date here. Solo at the bar works, too\u2014especially if you're the type who wants to try four different beers without anyone judging the pace.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Absolutely fantastic beers here and a stellar happy hour with great deals and options. I had their staple IPA and absolutely loved it! I'm not sure why they were so good, but we had an order of fries and they were just the best fries ever? I can't even describe why they were so great. The vibe here is electric and they have a lovely patio for warmer times. Big reccomend!\"\n\n⭐⭐⭐⭐ \"This bar/brewery has a great selection of beers—something for every taste, and definitely worth a visit if you’re a craft beer fan. The atmosphere is lively, and it’s clear they put effort into their brews.\n\nUnfortunately, our experience was a bit overshadowed by the seating arrangement. We were placed in a spot uncomfortably close to the service area, where I kept getting bumped as servers rushed by and handled food orders behind me. It really affected the overall vibe.\n\nWe also waited quite a while for our food, and when the tempura green beans finally arrived, they were underwhelming—mostly tempura batter with a few green beans, and lacking in flavor.\n\nIt’s a solid place for drinks, but I’d recommend choosing your table carefully and tempering expectations when it comes to the food.\"\n\n⭐⭐⭐⭐ \"4.4.\nGo for the beer, stay for the vibes. Have been here a few times for drinks over the past few years and it’s always great. Great lighting, great patio (in the summer), great beers, and a good vibe all around.\nWent recently for dinner- the service was great, and the food was also pretty good. Menu changes but there are some staples.\nDon’t sleep on the French fries or the lemon ricotta doughnuts!\nThey have a rotating kombucha and some zero-proof options as welll!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Absolutely fantastic beers here and a stellar happy hour with great deals and options. I had their staple IPA and absolutely loved it! I'm not sure why they were so good, but we had an order of fries and they were just the best fries ever? I can't even describe why they were so great. The vibe here is electric and they have a lovely patio for warmer times. Big reccomend!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"This bar/brewery has a great selection of beers\u2014something for every taste, and definitely worth a visit if you\u2019re a craft beer fan. The atmosphere is lively, and it\u2019s clear they put effort into their brews.\n\nUnfortunately, our experience was a bit overshadowed by the seating arrangement. We were placed in a spot uncomfortably close to the service area, where I kept getting bumped as servers rushed by and handled food orders behind me. It really affected the overall vibe.\n\nWe also waited quite a while for our food, and when the tempura green beans finally arrived, they were underwhelming\u2014mostly tempura batter with a few green beans, and lacking in flavor.\n\nIt\u2019s a solid place for drinks, but I\u2019d recommend choosing your table carefully and tempering expectations when it comes to the food.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"4.4.\nGo for the beer, stay for the vibes. Have been here a few times for drinks over the past few years and it\u2019s always great. Great lighting, great patio (in the summer), great beers, and a good vibe all around.\nWent recently for dinner- the service was great, and the food was also pretty good. Menu changes but there are some staples.\nDon\u2019t sleep on the French fries or the lemon ricotta doughnuts!\nThey have a rotating kombucha and some zero-proof options as welll!\""
       }
     ]
   }

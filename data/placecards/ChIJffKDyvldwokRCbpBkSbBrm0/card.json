@@ -12,31 +12,31 @@
     "url": "https://www.bkmag.com/2026/02/23/gigi-curry-and-noodle-shop-bushwick-opening-review/"
   },
   "narrative": {
-    "summary": "Thai noodle shop just landed on Eater's Brooklyn Heatmap for March 2026. Small counter-service spot doing curries and noodles with intention. 5.0★ (83 reviews) — perfect score is rare. Dessa's neighborhood-adjacent, easy walk from Ridgewood. A clean Williamsburg–Bushwick–Ridgewood corridor add, right in John’s preferred orbit.",
+    "summary": "You're on a quiet Bushwick block that still feels residential, just where the neighborhood bleeds into Ridgewood. Inside, it's a small counter-service setup\u2014order at the register, grab a seat, and wait for a bowl that's been thought through. The Thai curry base is the kind you don't forget\u2014coconut, lemongrass, actual heat.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Bushwick block that still feels residential, just where the neighborhood bleeds into Ridgewood. Inside, it's a small counter-service setup—order at the register, grab a seat at one of the handful of tables. The space runs narrow and unfussy, the kind of spot where you're there for what's in the bowl, not the decor.",
+        "body": "You're on a quiet Bushwick block that still feels residential, just where the neighborhood bleeds into Ridgewood. Inside, it's a small counter-service setup\u2014order at the register, grab a seat at one of the handful of tables. The space runs narrow and unfussy, the kind of spot where you're there for what's in the bowl, not the decor.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Thai cooking with a tight menu and clear point of view—curries and noodles done right, nothing more. The GiGi curry shows up in bowls with fried tofu or your protein of choice, rich and balanced enough that people keep coming back for it. The beef noodle soup has a broth that actually tastes like something, deep and full-bodied, the kind that makes you understand why it's called comforting. Massaman curry, shrimp and chicken wontons, and a Thai tea matcha round out a menu that's well-priced and clearly made by someone who knows what they're doing.",
+        "body": "This is Thai cooking with a tight menu and clear point of view\u2014curries and noodles done right, nothing more. The GiGi curry shows up in bowls with fried tofu or your protein of choice, rich and balanced enough that people keep coming back for it. The beef noodle soup has a broth that actually tastes like something, deep and full-bodied, the kind that makes you understand why it's called comforting. Massaman curry, shrimp and chicken wontons, and a Thai tea matcha round out a menu that's well-priced and clearly made by someone who knows what they're doing.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You're in Ridgewood or the Bushwick-Williamsburg stretch and want something good without the scene—an easy weeknight dinner or a solo lunch where you can sit with a bowl of noodles and not think too hard.",
+        "body": "You're in Ridgewood or the Bushwick-Williamsburg stretch and want something good without the scene\u2014an easy weeknight dinner or a solo lunch where you can sit with a bowl of noodles and not think too hard.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"What a cute cozy place!! The food here is amazing I wish I could give more than 5 stars. We got the massaman curry,  gigi curry and for the appetizer: shrimp and chicken wontons with a thai tea matcha. Everything tasted authentic and fresh. Super flavorful and tasty. Will be back!!\"\n\n⭐⭐⭐⭐⭐ \"Outstanding, everything we got was fantastic, Nam was so nice. Food was incredible and well priced. Definitely check this place out. Try the beef noodle soup! The broth has a full flavor profile and is truly so comforting\"\n\n⭐⭐⭐⭐⭐ \"I had an amazing experience at Gigi Curry and Noodles Bar! I tried several of their vegan options and everything was absolutely delicious. The Gigi curry with noodles and fried tofu was full of flavor and perfectly balanced. I also loved the matcha, Thai tea, and the curry puff — such a great combination of textures and taste.\n\nThe space itself is beautiful. I really love the color palette and overall aesthetic; it feels welcoming and thoughtfully designed. The kitchen looks very clean and trustworthy, which makes the experience even better.\n\nIf you’re looking for flavorful vegan-friendly dishes in a cozy and stylish environment, this place is definitely worth visiting. I will be coming back!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"What a cute cozy place!! The food here is amazing I wish I could give more than 5 stars. We got the massaman curry,  gigi curry and for the appetizer: shrimp and chicken wontons with a thai tea matcha. Everything tasted authentic and fresh. Super flavorful and tasty. Will be back!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Outstanding, everything we got was fantastic, Nam was so nice. Food was incredible and well priced. Definitely check this place out. Try the beef noodle soup! The broth has a full flavor profile and is truly so comforting\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I had an amazing experience at Gigi Curry and Noodles Bar! I tried several of their vegan options and everything was absolutely delicious. The Gigi curry with noodles and fried tofu was full of flavor and perfectly balanced. I also loved the matcha, Thai tea, and the curry puff \u2014 such a great combination of textures and taste.\n\nThe space itself is beautiful. I really love the color palette and overall aesthetic; it feels welcoming and thoughtfully designed. The kitchen looks very clean and trustworthy, which makes the experience even better.\n\nIf you\u2019re looking for flavorful vegan-friendly dishes in a cozy and stylish environment, this place is definitely worth visiting. I will be coming back!\""
       }
     ]
   }
