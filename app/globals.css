@@ -3298,8 +3298,7 @@ body {
    ============================================================ */
 
 .place-detail-v2 {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 100%;
   padding-bottom: var(--space-2xl);
 }
 
@@ -4425,8 +4424,7 @@ body {
    ============================================================ */
 
 .accommodation-card {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 100%;
   padding-bottom: var(--space-2xl);
 }
 
