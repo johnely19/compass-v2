@@ -45,7 +45,7 @@ export default function ReviewMarkersMap({ discoveries, contextLabel, city }: Re
     return `markers=color:red%7Clabel:${label}%7C${c.lat},${c.lng}`;
   }).join('&');
 
-  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?size=800x320&scale=2&center=${centerLat},${centerLng}&${markerParams}&key=${MAPS_KEY}`;
+  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?size=800x640&scale=2&center=${centerLat},${centerLng}&${markerParams}&key=${MAPS_KEY}`;
 
   // Google Maps URL — open centered on midpoint at the right zoom
   // Best native experience: each place links individually from its card.
@@ -58,7 +58,7 @@ export default function ReviewMarkersMap({ discoveries, contextLabel, city }: Re
         <img
           src={staticMapUrl}
           alt={`Map of ${mappable.length} places to review`}
-          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: 320, objectFit: 'cover' }}
+          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: 640, objectFit: 'cover' }}
         />
       </a>
       <div style={{
