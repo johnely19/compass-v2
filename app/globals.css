@@ -4359,6 +4359,7 @@ body {
 .place-browse-triage {
   display: flex;
   justify-content: flex-end;
+}
 
 /* ── Hot page place cards with images ── */
 .hot-place-card {
