@@ -135,6 +135,9 @@ interface AccommodationData {
   airQualityJuly?: { aqi: number; category: string };
   pollenJulyTree?: string;
   pollenJulyGrass?: string;
+  // Aerial View (Google Maps Aerial View API)
+  aerialVideoUrl?: string | null;
+  aerialVideoUrlWebm?: string | null;
 }
 
 interface AccommodationCardProps {
@@ -200,6 +203,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
     ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
     : null;
 
+  // Aerial video
+  const aerialVideoUrl = data.aerialVideoUrl || null;
+  const aerialVideoUrlWebm = data.aerialVideoUrlWebm || null;
+
+  // Google Earth 3D link
+  const googleEarthUrl = `https://earth.google.com/web/search/${encodeURIComponent(`${name}${region ? ', ' + region : ''}`)}`;
+
+
   // Match score
   const rawScores = data.scores as Record<string, number> | undefined;
   const matchScore = data.match_score ||
@@ -210,34 +221,89 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   return (
     <div className="accommodation-card">
       {/* ── Hero ── */}
-      <div
-        className="accommodation-hero"
-        style={{
-          minHeight: 'min(45vw, 320px)',
-          position: 'relative',
-          background: heroImage
-            ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
-            : LAKE_GRADIENT,
-        }}
-      >
-        {data.heroSource === 'street-view' && (
-          <span
+      <div className="accommodation-hero" style={{ position: 'relative', minHeight: 'min(45vw, 320px)' }}>
+        {aerialVideoUrl ? (
+          /* ── Aerial video hero ── */
+          <>
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster={heroImage || undefined}
+              style={{
+                width: '100%',
+                height: 'min(45vw, 320px)',
+                objectFit: 'cover',
+                borderRadius: '12px 12px 0 0',
+                display: 'block',
+              }}
+            >
+              {aerialVideoUrlWebm && <source src={aerialVideoUrlWebm} type="video/webm" />}
+              <source src={aerialVideoUrl} type="video/mp4" />
+            </video>
+            {/* Gradient overlay for text legibility */}
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%)',
+                borderRadius: '12px 12px 0 0',
+                pointerEvents: 'none',
+              }}
+            />
+            {/* Aerial badge */}
+            <span
+              style={{
+                position: 'absolute',
+                bottom: 56,
+                left: 12,
+                background: 'rgba(0,0,0,0.55)',
+                color: 'white',
+                fontSize: '0.7rem',
+                padding: '2px 8px',
+                borderRadius: '12px',
+                backdropFilter: 'blur(4px)',
+              }}
+            >
+              🛸 Aerial view
+            </span>
+          </>
+        ) : (
+          /* ── Static photo hero (fallback) ── */
+          <div
             style={{
+              minHeight: 'min(45vw, 320px)',
               position: 'absolute',
-              top: 8,
-              right: 8,
-              background: 'rgba(0,0,0,0.55)',
-              color: 'white',
-              fontSize: '0.7rem',
-              padding: '2px 8px',
-              borderRadius: '12px',
-              backdropFilter: 'blur(4px)',
+              inset: 0,
+              background: heroImage
+                ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
+                : LAKE_GRADIENT,
+              borderRadius: '12px 12px 0 0',
             }}
           >
-            📷 Street view
-          </span>
+            {data.heroSource === 'street-view' && (
+              <span
+                style={{
+                  position: 'absolute',
+                  top: 8,
+                  right: 8,
+                  background: 'rgba(0,0,0,0.55)',
+                  color: 'white',
+                  fontSize: '0.7rem',
+                  padding: '2px 8px',
+                  borderRadius: '12px',
+                  backdropFilter: 'blur(4px)',
+                }}
+              >
+                📷 Street view
+              </span>
+            )}
+          </div>
         )}
-        <div className="accommodation-hero-overlay">
+
+        {/* Hero text overlay — sits on top of both video and photo */}
+        <div className="accommodation-hero-overlay" style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '12px 16px' }}>
           <div className="accommodation-hero-top">
             <span className="accommodation-type-badge">🏡 Cottage</span>
             {matchScore && (
@@ -435,6 +501,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               View in Google Maps →
             </a>
           )}
+          <a
+            href={googleEarthUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="accommodation-maps-link"
+          >
+            🌍 View in Google Earth 3D →
+          </a>
           {userId && contextKey && (
             <div className="accommodation-triage-row">
               <TriageWidget
