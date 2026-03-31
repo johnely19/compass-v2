@@ -421,6 +421,7 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
                   src={resolveImageUrlClient(img.path) || ''}
                   alt={img.category || `Rendering ${i + 1}`}
                   className="place-detail-v2-dev-img"
+                  loading="lazy"
                   onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
                 />
               ))}
