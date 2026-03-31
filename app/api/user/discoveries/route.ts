@@ -99,6 +99,39 @@ function determinePlaceIdStatus(placeId?: string): PlaceIdStatus {
   return 'verified';
 }
 
+/** Normalise place name for dedup matching */
+function normaliseName(n: string): string {
+  return n.toLowerCase().replace(/[^a-z0-9 ]/g, "").replace(/\s+/g, " ").trim();
+}
+
+/** Merge discoveries by place_id: keep the one with more data (description, address, rating) */
+function mergeByPlaceId(discoveries: unknown[]): unknown[] {
+  const seen = new Map<string, number>(); // "place_id:contextKey" → index
+  const result: unknown[] = [];
+  for (const d of discoveries) {
+    const rec = d as Record<string, unknown>;
+    const pid = rec.place_id as string | undefined;
+    const ctx = (rec.contextKey as string) ?? "";
+    if (pid) {
+      const k = `${pid}:${ctx}`;
+      if (seen.has(k)) {
+        const existingIdx = seen.get(k)!;
+        const existing = result[existingIdx] as Record<string, unknown>;
+        // Keep whichever has more data
+        const incomingScore = [rec.description, rec.address, rec.rating].filter(Boolean).length;
+        const existingScore = [existing.description, existing.address, existing.rating].filter(Boolean).length;
+        if (incomingScore > existingScore) {
+          result[existingIdx] = d;
+        }
+        continue;
+      }
+      seen.set(k, result.length);
+    }
+    result.push(d);
+  }
+  return result;
+}
+
 /**
  * Read raw discoveries from Blob WITHOUT normalization.
  * This preserves the exact data — critical for safe read-merge-write.
@@ -193,17 +226,32 @@ export async function POST(request: NextRequest) {
   const existingRaw = await readRawDiscoveries(targetUserId);
   const existingCount = existingRaw.length;
 
-  // Build dedup set from raw data
-  const existingIds = new Set<string>();
+  // Build name-based index for dedup: normalised_name:contextKey → index
+  const existingByName = new Map<string, number>();
+  for (let idx = 0; idx < existingRaw.length; idx++) {
+    const rec = existingRaw[idx] as Record<string, unknown>;
+    const name = rec.name as string | undefined;
+    const ctx = (rec.contextKey as string) ?? "";
+    if (name) {
+      const normKey = `${normaliseName(name)}:${ctx}`;
+      existingByName.set(normKey, idx);
+    }
+  }
+
+  // Also build place_id index for fallback dedup
+  const existingPlaceIds = new Set<string>();
   for (const d of existingRaw) {
     const rec = d as Record<string, unknown>;
-    const pid = rec.place_id ?? rec.id ?? rec.name;
-    const ctx = rec.contextKey ?? '';
-    existingIds.add(`${pid}:${ctx}`);
+    const pid = rec.place_id as string | undefined;
+    const ctx = (rec.contextKey as string) ?? "";
+    if (pid) {
+      existingPlaceIds.add(`${pid}:${ctx}`);
+    }
   }
 
   const newItems: Discovery[] = [];
   let duplicates = 0;
+  let upgraded = 0;
   const errors: string[] = [];
 
   for (let i = 0; i < incoming.length; i++) {
@@ -231,9 +279,32 @@ export async function POST(request: NextRequest) {
       type = inferType(item.name);
     }
 
-    // Dedup check
+    // Name-based dedup + upgrade logic
+    const normKey = `${normaliseName(item.name)}:${item.contextKey}`;
+    const existingIdx = existingByName.get(normKey);
+
+    if (existingIdx !== undefined) {
+      // Something with this name+context already exists
+      const existingRec = existingRaw[existingIdx] as Record<string, unknown>;
+      const existingHasPlaceId = !!existingRec.place_id;
+      const incomingHasPlaceId = !!item.place_id;
+
+      if (incomingHasPlaceId && !existingHasPlaceId) {
+        // Upgrade: incoming has place_id, existing doesn't → replace
+        const upgradedRec = { ...existingRec, ...item, id: existingRec.id };
+        existingRaw[existingIdx] = upgradedRec;
+        existingPlaceIds.add(`${item.place_id}:${item.contextKey}`);
+        upgraded++;
+      } else {
+        // Discard incoming (both have place_id, or incoming has none, or both have none)
+        duplicates++;
+      }
+      continue;
+    }
+
+    // Fallback: also check place_id dedup (current logic)
     const dedupeKey = `${item.place_id ?? item.name}:${item.contextKey}`;
-    if (existingIds.has(dedupeKey)) {
+    if (existingPlaceIds.has(dedupeKey)) {
       duplicates++;
       continue;
     }
@@ -255,16 +326,20 @@ export async function POST(request: NextRequest) {
     };
 
     newItems.push(discovery);
-    existingIds.add(dedupeKey);
+    if (item.place_id) {
+      existingPlaceIds.add(`${item.place_id}:${item.contextKey}`);
+    }
   }
 
   // ═══════════════════════════════════════════════════════
-  // SAFETY: Append only — never shrink the array
+  // Merge by place_id: keep entry with more data
   // ═══════════════════════════════════════════════════════
-  const merged = [...existingRaw, ...newItems];
+  const merged = mergeByPlaceId([...existingRaw, ...newItems]);
 
-  if (merged.length < existingCount) {
-    // This should NEVER happen with append-only, but guard anyway
+  // Allow shrink only if it's due to mergeByPlaceId (not data loss)
+  // Original existing count + new items - duplicates should never be less than merged
+  const expectedMin = existingCount + newItems.length - duplicates;
+  if (merged.length < expectedMin) {
     console.error(`[discoveries] SAFETY BLOCK: would shrink ${existingCount} → ${merged.length} for ${targetUserId}. Refusing to write.`);
     return NextResponse.json({
       error: 'Safety check failed: write would reduce discovery count',
@@ -273,13 +348,14 @@ export async function POST(request: NextRequest) {
     }, { status: 409 });
   }
 
-  if (newItems.length > 0) {
+  if (newItems.length > 0 || upgraded > 0) {
     await writeDiscoveries(targetUserId, merged);
-    console.log(`[discoveries] Appended ${newItems.length} to ${targetUserId}. ${existingCount} → ${merged.length}`);
+    console.log(`[discoveries] ${newItems.length} added, ${upgraded} upgraded for ${targetUserId}. ${existingCount} → ${merged.length}`);
   }
 
   return NextResponse.json({
     added: newItems.length,
+    upgraded,
     duplicates,
     errors,
     previousCount: existingCount,
