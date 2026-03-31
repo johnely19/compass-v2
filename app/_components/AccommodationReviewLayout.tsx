@@ -18,6 +18,42 @@ interface AccommodationReviewLayoutProps {
   tab: Tab;
 }
 
+/* ---- Weighted preference score (module scope — used by sort AND card badge) ---- */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function preferenceScore(d: Discovery): number {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const c = (d as any)._cottage as Record<string, any> | undefined;
+  if (!c) return 0;
+
+  const scores = (c.scores ?? {}) as Record<string, number>;
+  const gates  = (c.gates  ?? {}) as Record<string, boolean>;
+  const pricePerWeek = c.pricePerWeek as number | null | undefined;
+
+  // Weighted components (Disco scores are 0–5 scale)
+  const swimming  = (scores.swimming  ?? 0) * 5;   // 25 max — top priority
+  const quiet     = (scores.quiet     ?? 0) * 4;   // 20 max
+  const amenities = (scores.amenities ?? 0) * 3;   // 15 max
+  const location  = (scores.location  ?? 0) * 3;   // 15 max
+
+  // Budget score (0–10)
+  let budgetScore = 5; // neutral if unknown
+  if (pricePerWeek != null) {
+    if (pricePerWeek <= 2500)      budgetScore = 10;
+    else if (pricePerWeek <= 3500) budgetScore = 6;
+    else if (pricePerWeek <= 5000) budgetScore = 3;
+    else                           budgetScore = 0;
+  }
+
+  // Gate bonuses (0–15)
+  const gateBonus =
+    (gates.dockAccess  ? 8 : 0) +
+    (gates.shoreline   ? 4 : 0) +
+    (gates.private     ? 2 : 0) +
+    (gates.threeWeeks  ? 1 : 0);
+
+  return swimming + quiet + amenities + location + budgetScore + gateBonus;
+}
+
 /* ---- Amenity icons (top 5) ---- */
 const AMENITY_ICONS: Record<string, string> = {
   dock: '⛵', 'dock access': '⛵', kayaks: '🛶', paddleboard: '🏄',
@@ -131,10 +167,9 @@ function AccommodationCard({
           }}
         >
           {/* Preference score badge */}
-          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-          {(discovery as any)._prefScore > 0 && (
+          {preferenceScore(discovery) > 0 && (
             <span className="accomm-hero-match" style={{ background: 'rgba(37,99,235,0.85)' }}>
-              ⭐ {Math.round((discovery as any)._prefScore)}
+              🎯 {Math.round(preferenceScore(discovery))}
             </span>
           )}
           {platform && (
@@ -270,55 +305,19 @@ export default function AccommodationReviewLayout({
       return false;
     });
 
-    // Weighted preference score — John's priorities
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const preferenceScore = (d: typeof result[0]): number => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const c = (d as any)._cottage as Record<string, any> | undefined;
-      if (!c) return 0;
-      const scores = (c.scores ?? {}) as Record<string, number>;
-      const gates = (c.gates ?? {}) as Record<string, boolean>;
-      const pricePerWeek = c.pricePerWeek as number | undefined | null;
+    // Sort by weighted preference score (module-level preferenceScore fn)
+    result = result.sort((a, b) => {
+      const scoreA = preferenceScore(a);
+      const scoreB = preferenceScore(b);
+      if (scoreB !== scoreA) return scoreB - scoreA;
+      // Tiebreak: cards with hero image first
+      const hasHeroA = !!resolveImageUrlClient(a.heroImage);
+      const hasHeroB = !!resolveImageUrlClient(b.heroImage);
+      if (hasHeroA !== hasHeroB) return hasHeroA ? -1 : 1;
+      return 0;
+    });
 
-      // Core scores (each 0–10 scale, weighted)
-      const swimming  = (scores.swimming  ?? 0) * 25;   // 25% — top priority
-      const quiet     = (scores.quiet     ?? 0) * 20;   // 20%
-      const amenities = (scores.amenities ?? 0) * 15;   // 15%
-      const location  = (scores.location  ?? 0) * 15;   // 15%
-
-      // Budget score (10% total)
-      let budgetScore = 5; // neutral if unknown
-      if (pricePerWeek != null) {
-        if (pricePerWeek <= 2500)      budgetScore = 10;
-        else if (pricePerWeek <= 3500) budgetScore = 5;
-        else if (pricePerWeek <= 5000) budgetScore = 2;
-        else                           budgetScore = 0;
-      }
-      const budget = budgetScore;
-
-      // Gate bonuses (up to 15 points)
-      const gateScore =
-        (gates.dockAccess ? 8 : 0) +
-        (gates.shoreline  ? 4 : 0) +
-        (gates.private    ? 2 : 0) +
-        (gates.threeWeeks ? 1 : 0);
-
-      // Completeness tiebreaker (0–5)
-      const hasHero  = !!resolveImageUrlClient(d.heroImage) ? 2 : 0;
-      const hasPrice = pricePerWeek != null ? 2 : 0;
-      const hasVibes = (c.vibeTags?.length > 0) ? 1 : 0;
-
-      return swimming + quiet + amenities + location + budget + gateScore + hasHero + hasPrice + hasVibes;
-    };
-
-    // Sort by weighted preference score (higher = better match)
-    result = result.sort((a, b) => preferenceScore(b) - preferenceScore(a));
-
-    // Attach score to each item for badge display
-    return result.map(d => ({
-      ...d,
-      _prefScore: preferenceScore(d),
-    }));
+    return result;
   }, [discoveries, userId, context.key, tab]);
 
   return (
