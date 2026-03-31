@@ -119,10 +119,12 @@ function AccommodationCard({
       <Link href={`/placecards/${placeId}?context=${encodeURIComponent(contextKey)}`} className="accomm-card-hero-link">
         <div
           className="accomm-card-hero"
-          style={{
-            background: hero
-              ? `url(${hero}) center/cover no-repeat`
-              : GRADIENT,
+          style={hero ? {
+            backgroundImage: `url(${hero})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          } : {
+            background: GRADIENT,
           }}
         >
           {matchScore != null && (
