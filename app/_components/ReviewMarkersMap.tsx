@@ -21,11 +21,40 @@ function getCoords(d: Discovery): { lat: number; lng: number } | null {
   return null;
 }
 
-export default function ReviewMarkersMap({ discoveries, contextLabel, city }: ReviewMarkersMapProps) {
-  // Only show unreviewed places with coordinates
-  const mappable = discoveries
+function buildGeoJsonUrl(discoveries: Discovery[]): string {
+  const features = discoveries
     .filter(d => getCoords(d) !== null)
-    .slice(0, 26); // Static Maps supports up to 26 labeled markers
+    .map((d, i) => {
+      const coords = getCoords(d)!;
+      const label = LABELS[i] || String(i + 1);
+      return {
+        type: 'Feature' as const,
+        geometry: {
+          type: 'Point' as const,
+          coordinates: [coords.lng, coords.lat],
+        },
+        properties: {
+          name: `${label} ${d.name}`,
+          description: (d as unknown as Record<string, unknown>).address as string || '',
+          'marker-symbol': String(i + 1),
+        },
+      };
+    });
+
+  const geojson = JSON.stringify({
+    type: 'FeatureCollection',
+    features,
+  });
+
+  return `https://geojson.io/#data=data:application/json,${encodeURIComponent(geojson)}`;
+}
+
+export default function ReviewMarkersMap({ discoveries, contextLabel, city }: ReviewMarkersMapProps) {
+  // Only show places with coordinates — no slice limit for interactive map
+  const allMappable = discoveries.filter(d => getCoords(d) !== null);
+
+  // Static Maps supports up to 26 labeled markers
+  const mappable = allMappable.slice(0, 26);
 
   if (mappable.length === 0) return null;
 
@@ -47,33 +76,49 @@ export default function ReviewMarkersMap({ discoveries, contextLabel, city }: Re
 
   const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?size=800x640&scale=2&center=${centerLat},${centerLng}&${markerParams}&key=${MAPS_KEY}`;
 
-  // Google Maps URL — open centered on midpoint at the right zoom
-  // Best native experience: each place links individually from its card.
-  // This map click opens Google Maps centered on the cluster so user can explore.
-  const mapsUrl = `https://www.google.com/maps/@${centerLat},${centerLng},13z`;
+  // geojson.io URL — opens an interactive map showing ALL places with numbered markers
+  // Uses allMappable (no 26-limit) so every discovered place appears
+  const interactiveMapsUrl = buildGeoJsonUrl(allMappable);
 
   return (
-    <div style={{ margin: '0 0 var(--space-md)', borderRadius: 12, overflow: 'hidden', position: 'relative' }}>
-      <a href={mapsUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
-        <img
-          src={staticMapUrl}
-          alt={`Map of ${mappable.length} places to review`}
-          style={{ width: '100%', height: 'auto', display: 'block', maxHeight: 640, objectFit: 'cover' }}
-        />
-      </a>
-      <div style={{
-        position: 'absolute',
-        bottom: 8,
-        left: 8,
-        background: 'rgba(0,0,0,0.65)',
-        color: 'white',
-        fontSize: '0.75rem',
-        padding: '4px 10px',
-        borderRadius: 20,
-        backdropFilter: 'blur(4px)',
-      }}>
-        📍 {mappable.length} place{mappable.length !== 1 ? 's' : ''} to review
-        {discoveries.length > mappable.length ? ` · ${discoveries.length - mappable.length} without location` : ''}
+    <div style={{ margin: '0 0 var(--space-md)' }}>
+      <div style={{ borderRadius: 12, overflow: 'hidden', position: 'relative' }}>
+        <a href={interactiveMapsUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+          <img
+            src={staticMapUrl}
+            alt={`Map of ${mappable.length} places to review`}
+            style={{ width: '100%', height: 'auto', display: 'block', maxHeight: 640, objectFit: 'cover' }}
+          />
+        </a>
+        <div style={{
+          position: 'absolute',
+          bottom: 8,
+          left: 8,
+          background: 'rgba(0,0,0,0.65)',
+          color: 'white',
+          fontSize: '0.75rem',
+          padding: '4px 10px',
+          borderRadius: 20,
+          backdropFilter: 'blur(4px)',
+        }}>
+          📍 {allMappable.length} place{allMappable.length !== 1 ? 's' : ''} to review
+          {discoveries.length > allMappable.length ? ` · ${discoveries.length - allMappable.length} without location` : ''}
+        </div>
+      </div>
+      <div style={{ textAlign: 'right', marginTop: 6 }}>
+        <a
+          href={interactiveMapsUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: '0.8rem',
+            color: 'var(--color-accent, #4A90E2)',
+            textDecoration: 'none',
+            opacity: 0.85,
+          }}
+        >
+          View all in Maps →
+        </a>
       </div>
     </div>
   );
