@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import type { PlaceCard, DiscoveryType } from '../_lib/types';
+import type { PlaceCard, DiscoveryType, Discovery } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
 import TriageWidget from './TriageWidget';
+import ProvenanceSection from './ProvenanceSection';
 import RatingWidget from './widgets/RatingWidget';
 import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
@@ -219,9 +220,10 @@ interface PlaceCardDetailProps {
   card: PlaceCard;
   userId?: string;
   contextKey?: string;
+  discovery?: Partial<Discovery>;
 }
 
-export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardDetailProps) {
+export default function PlaceCardDetail({ card, userId, contextKey, discovery }: PlaceCardDetailProps) {
   const typeMeta = getTypeMeta(card.type);
   const data = card.data ?? { description: '', highlights: [], images: [] };
 
@@ -409,6 +411,22 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
         {narrativeBlocks.filter(b => /vibe|review/i.test(normalizeBlockTitle(b.title))).map((block, i) => (
           <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
         ))}
+
+        {/* Provenance section — why this place was recommended */}
+        {discovery && discovery.source && (
+          <ProvenanceSection
+            source={discovery.source}
+            discoveredAt={discovery.discoveredAt || undefined}
+            sourceUrl={discovery.sourceUrl}
+            sourceName={discovery.sourceName}
+            theme={discovery.theme}
+            verified={discovery.verified}
+            rating={discovery.rating}
+            ratingCount={discovery.ratingCount}
+            description={discovery.description}
+            placeName={card.name}
+          />
+        )}
 
         {/* Interior gallery — below fold, for applicable types */}
         {hasInteriorGallery && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (

@@ -6,7 +6,7 @@ import { resolveImageUrl } from '../../_lib/image-url';
 import { PlaceCardStore } from '../../_lib/place-card-store';
 import PlaceCardDetail from '../../_components/PlaceCardDetail';
 import AccommodationCard from '../../_components/AccommodationCard';
-import type { PlaceCard } from '../../_lib/types';
+import type { PlaceCard, Discovery } from '../../_lib/types';
 
 interface CottageEntry {
   id: string; name: string; platform?: string; url?: string;
@@ -162,6 +162,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
               placeId={synCard.place_id || ''}
               userId={user.id}
               contextKey={contextKey}
+              discovery={match}
             />
           );
         }
@@ -170,6 +171,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
             card={synCard}
             userId={user.id}
             contextKey={contextKey}
+            discovery={match}
           />
         );
       }
@@ -181,10 +183,14 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
 
   // Determine context: URL param > first matching context from user's discoveries
   let contextKey = contextFromUrl;
-  if (!contextKey && user) {
+  let discoveryData: Partial<Discovery> | undefined;
+  if (user) {
     const discData = await getUserDiscoveries(user.id);
     const match = discData?.discoveries?.find(d => d.place_id === placeId);
-    if (match) contextKey = match.contextKey;
+    if (match) {
+      if (!contextKey) contextKey = match.contextKey;
+      discoveryData = match;
+    }
   }
 
   // Accommodation type gets the dedicated rental card UI
@@ -195,6 +201,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
         placeId={card.place_id || ''}
         userId={user?.id}
         contextKey={contextKey}
+        discovery={discoveryData}
       />
     );
   }
@@ -204,6 +211,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
       card={card}
       userId={user?.id}
       contextKey={contextKey}
+      discovery={discoveryData}
     />
   );
 }

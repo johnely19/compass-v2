@@ -6287,3 +6287,79 @@ body {
   color: var(--text-muted);
   margin: 1.5rem 0 0.5rem;
 }
+
+/* ── Provenance Section ── */
+.provenance-section {
+  border-top: 1px solid var(--card-border);
+  padding-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.provenance-title {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.provenance-why {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.provenance-meta {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.provenance-date {
+  color: var(--text-muted);
+}
+
+.provenance-verified {
+  color: #16a34a;
+}
+
+.provenance-rating {
+  color: var(--text-secondary);
+}
+
+.provenance-sources {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.provenance-source-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.provenance-source-pill:hover {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.provenance-source-text {
+  background: transparent;
+  border: none;
+  padding-left: 0;
+  color: var(--text-muted);
+}
