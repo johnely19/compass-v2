@@ -420,12 +420,11 @@ export default function AdminClient() {
 
       {/* ---- Workers (sub-agents) ---- */}
       {workers.length > 0 && (
-        <>
-          <h2 className="section-label">Workers</h2>
-          <div className="worker-grid">
+        <Section title="Workers" emoji="🔨" count={workers.length}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '0.75rem', width: '100%' }}>
             {workers.map(w => <WorkerCard key={w.sessionKey} worker={w} />)}
           </div>
-        </>
+        </Section>
       )}
 
       {/* ---- Disco Activity ---- */}
