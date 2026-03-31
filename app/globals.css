@@ -5586,16 +5586,21 @@ body {
 
 .accomm-card {
   display: flex;
-  flex-direction: column;           /* VERTICAL now */
-  background: #ffffff;
+  flex-direction: column;
+  background: var(--bg-card, #fff);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
-  transition: box-shadow var(--transition-base);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s, transform 0.2s;
   max-width: 680px;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.accomm-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
 }
 
 .accomm-card:hover {
@@ -5609,8 +5614,8 @@ body {
 }
 
 .accomm-card-hero {
-  width: 100%;                      /* full width */
-  height: 200px;                    /* 200px tall */
+  width: 100%;
+  height: 240px;                    /* taller — more photo impact */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -5631,11 +5636,11 @@ body {
 }
 
 .accomm-card-name {
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.2rem;
   color: var(--text-primary);
   text-decoration: none;
-  line-height: 1.3;
+  line-height: 1.25;
   flex: 1;
 }
 .accomm-card-name:hover { color: var(--accent); }
