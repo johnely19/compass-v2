@@ -422,7 +422,14 @@ export default function AdminClient() {
       {workers.length > 0 && (
         <Section title="Workers" emoji="🔨" count={workers.length}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))', gap: '0.75rem', width: '100%' }}>
-            {workers.map(w => <WorkerCard key={w.sessionKey} worker={w} />)}
+            {workers
+              .filter(w => {
+                // Filter out UUID-style sessions (no structured name)
+                const sub = w.sessionKey.replace(/^agent:main:subagent:/, '');
+                const parts = sub.split('-');
+                return parts.length >= 4 && !sub.match(/^[0-9a-f]{8}-[0-9a-f]{4}/);
+              })
+              .map(w => <WorkerCard key={w.sessionKey} worker={w} />)}
           </div>
         </Section>
       )}
