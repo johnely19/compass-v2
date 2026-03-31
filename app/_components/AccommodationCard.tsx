@@ -130,6 +130,11 @@ interface AccommodationData {
   lng?: number;
   latitude?: number;
   longitude?: number;
+  // Solar, air quality, pollen data (enriched)
+  solarPeakHrsJuly?: number;
+  airQualityJuly?: { aqi: number; category: string };
+  pollenJulyTree?: string;
+  pollenJulyGrass?: string;
 }
 
 interface AccommodationCardProps {
@@ -363,6 +368,46 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               <div className="accommodation-nearby-row">
                 <span>🏘️</span>
                 <span>Nearest town: {nearestTown}</span>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Solar, Air Quality, Pollen widgets */}
+        {(data.solarPeakHrsJuly || data.airQualityJuly || data.pollenJulyTree || data.pollenJulyGrass) && (
+          <div className="accommodation-section accommodation-environment">
+            {/* Solar widget */}
+            {data.solarPeakHrsJuly && (
+              <div className="accommodation-env-row">
+                <span>☀️</span>
+                <span>
+                  Sun exposure {' '}
+                  {data.solarPeakHrsJuly < 4 ? 'Low' :
+                   data.solarPeakHrsJuly < 5 ? 'Moderate' :
+                   data.solarPeakHrsJuly < 6 ? 'Good' : 'High'}
+                  {' · ~'}{data.solarPeakHrsJuly.toFixed(1)}{' peak hrs/day in July'}
+                </span>
+              </div>
+            )}
+            {/* Air Quality widget */}
+            {data.airQualityJuly && (
+              <div className="accommodation-env-row">
+                <span>🌬️</span>
+                <span>
+                  Air quality {' '}{data.airQualityJuly.category}{' (AQI '}{data.airQualityJuly.aqi}{')'}
+                </span>
+              </div>
+            )}
+            {/* Pollen widget */}
+            {(data.pollenJulyTree || data.pollenJulyGrass) && (
+              <div className="accommodation-env-row">
+                <span>🌿</span>
+                <span>
+                  Pollen {' '}
+                  {data.pollenJulyTree && `Tree: ${data.pollenJulyTree}`}
+                  {data.pollenJulyTree && data.pollenJulyGrass && ' · '}
+                  {data.pollenJulyGrass && `Grass: ${data.pollenJulyGrass}`}
+                </span>
               </div>
             )}
           </div>
