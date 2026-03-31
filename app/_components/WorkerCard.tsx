@@ -19,6 +19,13 @@ const ROLE_COLORS: Record<string, string> = {
   architect: '#3b82f6',
 };
 
+const ROLE_SHORT: Record<string, string> = {
+  developer: 'dev',
+  tester:    'tester',
+  reviewer:  'reviewer',
+  architect: 'architect',
+};
+
 const LEVEL_LABEL: Record<string, string> = {
   junior: 'Junior',
   medior: 'Medior',
@@ -67,7 +74,7 @@ export default function WorkerCard({ worker }: {
             {name}
           </div>
           <div style={{ color: 'var(--text-muted)', fontSize: '0.72rem' }}>
-            {LEVEL_LABEL[level] || level} {role}
+            {LEVEL_LABEL[level] || level} {ROLE_SHORT[role] || role}
           </div>
         </div>
         <span style={{
@@ -83,10 +90,6 @@ export default function WorkerCard({ worker }: {
 
       <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem', marginBottom: 6 }}>
         {shortModel} · {timeAgo(worker.startedAt)}
-      </div>
-
-      <div style={{ color: 'var(--text-muted)', fontSize: '0.7rem', marginBottom: 4 }}>
-        {project}
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: 6 }}>
