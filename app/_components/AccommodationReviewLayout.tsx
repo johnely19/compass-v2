@@ -323,15 +323,19 @@ export default function AccommodationReviewLayout({
 
   return (
     <div className={`accomm-review-layout ${showMap ? 'accomm-review-layout--split' : ''}`}>
+      {/* Map drawer handle — pinned to right edge, vertically centered */}
+      <button
+        className={`accomm-map-handle ${showMap ? 'accomm-map-handle--open' : ''}`}
+        onClick={() => setShowMap(v => !v)}
+        title={showMap ? 'Hide map' : 'Show map'}
+        aria-label={showMap ? 'Hide map' : 'Show map'}
+      >
+        <span className="accomm-map-handle-icon">🗺</span>
+        <span className="accomm-map-handle-label">{showMap ? '◀' : '▶'}</span>
+      </button>
+
       {/* Card list */}
       <div className="accomm-review-list">
-        {/* Map toggle tab */}
-        <button
-          className={`accomm-map-toggle ${showMap ? 'accomm-map-toggle--active' : ''}`}
-          onClick={() => setShowMap(v => !v)}
-        >
-          🗺 {showMap ? 'Hide Map' : 'Show Map'}
-        </button>
 
         {filtered.map((d, idx) => (
           <AccommodationCard
