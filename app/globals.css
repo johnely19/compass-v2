@@ -6367,3 +6367,518 @@ body {
   padding-left: 0;
   color: var(--text-muted);
 }
+
+/* ── AccommodationCard Hipcamp/Vacasa Redesign ── */
+
+/* Photo Grid */
+.accom-photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+  height: 300px;
+}
+
+.accom-photo-hero {
+  position: relative;
+  grid-row: span 2;
+  overflow: hidden;
+}
+
+.accom-photo-hero .accom-aerial-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(0,0,0,0.55);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+}
+
+.accom-photo-grid-secondary {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 4px;
+}
+
+.accom-photo-secondary {
+  position: relative;
+  overflow: hidden;
+}
+
+.accom-photo-viewall {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+}
+
+.accom-photo-viewall:hover {
+  background: rgba(0,0,0,0.85);
+}
+
+/* Two-column layout */
+.accom-two-col {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  align-items: start;
+  padding: var(--space-xl);
+}
+
+@media (max-width: 768px) {
+  .accom-two-col {
+    grid-template-columns: 1fr;
+    padding: var(--space-md);
+    gap: var(--space-lg);
+  }
+}
+
+/* Left content column */
+.accom-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.accom-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.accom-title-type {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.accom-title-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .accom-title-name { font-size: 1.5rem; }
+}
+
+/* Quick specs row */
+.accom-specs-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  flex-wrap: wrap;
+}
+
+.accom-specs-row span:nth-child(odd) {
+  opacity: 0.8;
+}
+
+/* AI Guest Summary */
+.accom-ai-summary {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-md);
+}
+
+.accom-ai-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.accom-ai-rating {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.accom-ai-label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.accom-ai-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Feature Callouts */
+.accom-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (max-width: 768px) {
+  .accom-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+.accom-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+}
+
+.accom-feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.accom-feature-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.accom-feature-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.accom-feature-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Lake-specific section */
+.accom-lake-section {
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(3, 105, 161, 0.08) 100%);
+  border: 1px solid rgba(14, 165, 233, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.accom-lake-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.accom-lake-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
+}
+
+.accom-lake-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.accom-lake-icon {
+  font-size: 1.25rem;
+}
+
+.accom-lake-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.accom-lake-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.accom-lake-value {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Sleeping arrangements */
+.accom-bedrooms {
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--card-border);
+}
+
+.accom-bedrooms-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.accom-bedroom-cards {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.accom-bedroom-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+}
+
+.accom-bedroom-name {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.accom-bedroom-type {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* Description */
+.accom-description {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--card-border);
+}
+
+.accom-description-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.accom-description-text {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Amenities grid */
+.accom-amenities-section {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--card-border);
+}
+
+.accom-amenities-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-md) 0;
+}
+
+.accom-amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-sm);
+}
+
+.accom-amenity-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-xs) var(--space-sm);
+  font-size: 0.85rem;
+}
+
+.accom-amenity-item-icon {
+  font-size: 1rem;
+}
+
+.accom-amenity-item-label {
+  color: var(--text-secondary);
+}
+
+/* Nearby */
+.accom-nearby {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--card-border);
+}
+
+.accom-nearby-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.accom-nearby-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Environment */
+.accom-environment {
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--card-border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.accom-env-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Triage */
+.accom-triage {
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--card-border);
+}
+
+/* Right sticky price card */
+.accom-price-card {
+  position: sticky;
+  top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding: var(--space-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 768px) {
+  .accom-price-card {
+    display: none;
+  }
+}
+
+.accom-price-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.accom-price-main > span:first-child {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.accom-price-night {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.accom-price-details {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.accom-price-avail {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+}
+
+.accom-price-cta {
+  display: block;
+  width: 100%;
+  padding: var(--space-md);
+  text-align: center;
+  color: white !important;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.accom-price-cta:hover {
+  opacity: 0.9;
+}
+
+.accom-price-maps,
+.accom-price-earth {
+  display: block;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-decoration: none;
+  padding: var(--space-sm) 0;
+}
+
+.accom-price-maps:hover,
+.accom-price-earth:hover {
+  text-decoration: underline;
+}
+
+.accom-trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--card-border);
+}
+
+.accom-trust-badge {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Mobile sticky price bar */
+.accom-mobile-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  background: var(--bg-card);
+  border-top: 1px solid var(--card-border);
+  box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  z-index: 100;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .accom-mobile-bar {
+    display: flex;
+  }
+}
+
+.accom-mobile-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.accom-mobile-cta {
+  padding: var(--space-sm) var(--space-md);
+  color: white !important;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
