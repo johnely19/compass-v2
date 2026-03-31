@@ -1,5 +1,7 @@
 'use client';
 
+const MAPS_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || 'AIzaSyCp9YqbC3QoNS3DCG4FzNChAgUgMPWD6pw';
+
 interface MapWidgetProps {
   placeId?: string;
   lat?: number;
@@ -30,20 +32,20 @@ export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLa
   let iframeSrc: string;
   if (lat && lng) {
     // Use view embed centered on coords at zoom 10
-    iframeSrc = `https://www.google.com/maps/embed/v1/view?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&center=${lat},${lng}&zoom=10`;
+    iframeSrc = `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${lat},${lng}&zoom=10`;
   } else if (fromAddress) {
     // Directions embed with walking mode
     const origin = encodeURIComponent(fromAddress);
     const dest = placeId
       ? `place_id%3A${placeId}`
       : encodeURIComponent(name);
-    iframeSrc = `https://www.google.com/maps/embed/v1/directions?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&origin=${origin}&destination=${dest}&mode=walking`;
+    iframeSrc = `https://www.google.com/maps/embed/v1/directions?key=${MAPS_KEY}&origin=${origin}&destination=${dest}&mode=walking`;
   } else if (placeId) {
     // Use Maps Embed API with place_id (most reliable zoom)
-    iframeSrc = `https://www.google.com/maps/embed/v1/place?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&q=place_id:${placeId}&zoom=16`;
+    iframeSrc = `https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=place_id:${placeId}&zoom=16`;
   } else {
     // Name-based search embed
-    iframeSrc = `https://www.google.com/maps/embed/v1/search?key=AIzaSyCp9YqbC3QoNS3DCG4FzNChAg&q=${encodeURIComponent(name)}`;
+    iframeSrc = `https://www.google.com/maps/embed/v1/search?key=${MAPS_KEY}&q=${encodeURIComponent(name)}`;
   }
 
   const label = fromLabel || (fromAddress ? fromAddress.split(',')[0] : null);
