@@ -12,9 +12,28 @@
     "swimScore": 4,
     "swimType": "Sandy",
     "swimVerdict": "Sandy beach access via ~90 shared stairs (flights of 6-8 steps with platforms). Shared with sister cottage Shades of Blue.",
-    "amenities": ["WiFi", "Satellite TV", "Amazon FireStick", "Large Screen TV", "Dishwasher", "Full Kitchen", "Fire Pit", "Gas BBQ", "2 Picnic Tables", "Snug/Reading Nook", "Dog Friendly"],
-    "coordinates": {"lat": 43.573, "lng": -81.698},
-    "driveTimes": {"groceries": "2 min (Bayfield)", "restaurants": "2 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "Satellite TV",
+      "Amazon FireStick",
+      "Large Screen TV",
+      "Dishwasher",
+      "Full Kitchen",
+      "Fire Pit",
+      "Gas BBQ",
+      "2 Picnic Tables",
+      "Snug/Reading Nook",
+      "Dog Friendly"
+    ],
+    "coordinates": {
+      "lat": 43.573,
+      "lng": -81.698
+    },
+    "driveTimes": {
+      "groceries": "2 min (Bayfield)",
+      "restaurants": "2 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Rates page mentions 2026 rates but calendar rendering unclear. Weekly-only in July/August (Sun-Sun). Inquiry needed for specific weeks.",
     "notes": "Classic rustic 3-season lakefront cottage. 2BR main cottage + 2BR bunkie. Max 8 people. 2.3km from Bayfield downtown. No linens/towels provided. $500 refundable security deposit. Sister cottage to Shades of Blue. Beds: BR1 single bunks (sleeps 2), BR2 queen (2), BR3 double (2), BR4 single-over-double bunk + single (3)."
@@ -32,9 +51,25 @@
     "swimScore": 5,
     "swimType": "Sandy/Waterfront",
     "swimVerdict": "Directly on Lake Huron waterfront with spacious lot. Double-wide lot backing right onto the water.",
-    "amenities": ["WiFi", "Gas Fireplace", "Dishwasher", "Laundry", "BBQ", "Firepit", "3 Decks", "Bunkie House"],
-    "coordinates": {"lat": 43.565, "lng": -81.700},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "Gas Fireplace",
+      "Dishwasher",
+      "Laundry",
+      "BBQ",
+      "Firepit",
+      "3 Decks",
+      "Bunkie House"
+    ],
+    "coordinates": {
+      "lat": 43.565,
+      "lng": -81.7
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "VRBO listing — check availability on platform. 15 min drive to Grand Bend.",
     "notes": "3 bedrooms + bunkie house with bunk beds. 2 full bathrooms. Double wide lot with three decks. Directly on Lake Huron waterfront. Host named Heather — described as excellent. Reviews praise spaciousness exceeding photos. 5 min to Bayfield, 15 min to Grand Bend."
@@ -52,9 +87,22 @@
     "swimScore": 3,
     "swimType": "Mixed sand/stone",
     "swimVerdict": "Lake access with variable lakebed — sandy or stoney depending on conditions. Sand typically found 3ft out. Good for stone collecting. Not weedy or slimy. Water shoes recommended.",
-    "amenities": ["WiFi", "Lake View", "Lake Access", "Dog Friendly (2 dogs)", "Noise Monitor"],
-    "coordinates": {"lat": 43.560, "lng": -81.695},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "Lake View",
+      "Lake Access",
+      "Dog Friendly (2 dogs)",
+      "Noise Monitor"
+    ],
+    "coordinates": {
+      "lat": 43.56,
+      "lng": -81.695
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing/availability. License #BWSTR25-019.",
     "notes": "3BR, 1 bath, sleeps 6. Max 2 dogs allowed (pet addendum required). Parking limited to 3 vehicles. Noise/temp/wifi monitoring device. Primary renter must be over 25. Parties strictly prohibited. Max occupancy 6 at all times."
@@ -72,9 +120,39 @@
     "swimScore": 3,
     "swimType": "Sandy (stairs)",
     "swimVerdict": "Lake access via approx 45 stairs to beach. Includes kayaks, paddleboard & lake mat for water activities.",
-    "amenities": ["WiFi", "AC", "Gas Fireplace", "TV with FireStick", "Netflix", "Prime Video", "Piano", "Games", "Cedar Barrel Sauna", "EV Charger", "Kayaks", "Paddleboard", "Lake Mat", "Hammock", "Espresso Maker", "Propane BBQ", "Charcoal BBQ", "Fire Pit", "Dishwasher", "Ice Maker", "Private Balcony", "Dog Friendly (2 pets)"],
-    "coordinates": {"lat": 43.555, "lng": -81.690},
-    "driveTimes": {"groceries": "10 min (Bayfield)", "restaurants": "10 min (Bayfield)", "dianaKlaus": "1h 10min"},
+    "amenities": [
+      "WiFi",
+      "AC",
+      "Gas Fireplace",
+      "TV with FireStick",
+      "Netflix",
+      "Prime Video",
+      "Piano",
+      "Games",
+      "Cedar Barrel Sauna",
+      "EV Charger",
+      "Kayaks",
+      "Paddleboard",
+      "Lake Mat",
+      "Hammock",
+      "Espresso Maker",
+      "Propane BBQ",
+      "Charcoal BBQ",
+      "Fire Pit",
+      "Dishwasher",
+      "Ice Maker",
+      "Private Balcony",
+      "Dog Friendly (2 pets)"
+    ],
+    "coordinates": {
+      "lat": 43.555,
+      "lng": -81.69
+    },
+    "driveTimes": {
+      "groceries": "10 min (Bayfield)",
+      "restaurants": "10 min (Bayfield)",
+      "dianaKlaus": "1h 10min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing. $500 security deposit, $75 booking fee, $125 cleaning fee. Linen rental $20/person.",
     "notes": "Standout property — newly added AC, panoramic window cedar barrel sauna (wood provided), EV charger. Upstairs master with NEW king bed, 2 downstairs queens. Upstairs + downstairs 3pc bathrooms with showers. Well-equipped kitchen with espresso maker, Ninja blender, ice maker. 10 min from Bayfield. Max 5 occupancy. License #BWSTR25-063."
@@ -92,9 +170,26 @@
     "swimScore": 4,
     "swimType": "Sandy/Lakefront",
     "swimVerdict": "Lakefront property designed to take advantage of lake views from every angle — kitchen, fireplace, hot tub, gazebo, and beach. Direct lake view and access.",
-    "amenities": ["WiFi", "AC", "Gas Fireplace", "Hot Tub", "Lake View", "Lake Access", "Gazebo", "Dog Friendly (2 pets)", "Noise Monitor"],
-    "coordinates": {"lat": 43.562, "lng": -81.697},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "AC",
+      "Gas Fireplace",
+      "Hot Tub",
+      "Lake View",
+      "Lake Access",
+      "Gazebo",
+      "Dog Friendly (2 pets)",
+      "Noise Monitor"
+    ],
+    "coordinates": {
+      "lat": 43.562,
+      "lng": -81.697
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Summer weekly rentals Sun-Sun. Contact CottageStays for pricing. Max occupancy 4 per listing terms (task says sleeps 5).",
     "notes": "Open concept with reclaimed barn wood beams, thick stone walls, full wall of windows. Hot tub with lake views. Designed for immersive lakefront experience. Max occupancy listed as 4 on rental terms (original brief says sleeps 5). Parking limited to 3 vehicles. License #BWSTR25-054."
@@ -112,9 +207,26 @@
     "swimScore": 4,
     "swimType": "Sandy/Lakefront",
     "swimVerdict": "Lake view and lake access. Exceptional Bayfield beach cottage with stunning lake views inside and out.",
-    "amenities": ["WiFi", "Gas Fireplace", "Hot Tub", "AC", "Lake View", "Lake Access", "Parking", "Dog Friendly (1 dog)", "Noise Monitor"],
-    "coordinates": {"lat": 43.567, "lng": -81.699},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "Gas Fireplace",
+      "Hot Tub",
+      "AC",
+      "Lake View",
+      "Lake Access",
+      "Parking",
+      "Dog Friendly (1 dog)",
+      "Noise Monitor"
+    ],
+    "coordinates": {
+      "lat": 43.567,
+      "lng": -81.699
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Also listed on VRBO (#9548393ha) at ~$215/night avg and Airbnb (#47579306). Summer weekly rentals Sun-Sun via CottageStays. $257/night on Tripadvisor.",
     "notes": "2BR, 1 bath, sleeps 4. Queen bed in master. Hot tub. Gas fireplace. Stunning lake views from inside. Full-size appliances, plenty of counter space. Max 1 well-behaved dog. Professionally managed by Jennifer at CottageStays. License #BWSTR25-072."
@@ -132,9 +244,26 @@
     "swimScore": 4,
     "swimType": "Sandy/Lakefront",
     "swimVerdict": "Lake view and lake access. Unforgettable sunsets from the property.",
-    "amenities": ["WiFi", "AC", "Gas Fireplace", "Hot Tub", "King Bed", "Lake View", "Lake Access", "Dog Friendly (1 dog)", "Noise Monitor"],
-    "coordinates": {"lat": 43.564, "lng": -81.698},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "AC",
+      "Gas Fireplace",
+      "Hot Tub",
+      "King Bed",
+      "Lake View",
+      "Lake Access",
+      "Dog Friendly (1 dog)",
+      "Noise Monitor"
+    ],
+    "coordinates": {
+      "lat": 43.564,
+      "lng": -81.698
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Summer weekly rentals. Contact CottageStays for pricing/availability. Winter cancellation policy is flexible (full refund if weather prevents travel).",
     "notes": "2BR, 1.5 bath, sleeps 5. King bed — great for couples. Hot tub. Bright interiors. Perfect for family adventures or romantic escapes. Max 1 dog allowed. May have outdoor camera. License #BWSTR25-156."
@@ -152,9 +281,29 @@
     "swimScore": 5,
     "swimType": "Sandy/Lakefront",
     "swimVerdict": "Lakefront with lots of beach! Lower sunset deck with seating overlooking lake. Direct lake view and lake access. Paddleboard & lake mat rentals available mid-June to mid-Sept.",
-    "amenities": ["WiFi", "Wood Fireplace", "TV with Roku", "DVD Library", "Propane BBQ", "Outdoor Shower", "Lower Sunset Deck", "Adirondack Chairs", "Outdoor Dining with Umbrella", "Paddleboard Rentals", "Lake Mat Rentals", "Dog Friendly (1 small pet)"],
-    "coordinates": {"lat": 43.568, "lng": -81.700},
-    "driveTimes": {"groceries": "5 min (Bayfield)", "restaurants": "5 min (Bayfield)", "dianaKlaus": "1h 15min"},
+    "amenities": [
+      "WiFi",
+      "Wood Fireplace",
+      "TV with Roku",
+      "DVD Library",
+      "Propane BBQ",
+      "Outdoor Shower",
+      "Lower Sunset Deck",
+      "Adirondack Chairs",
+      "Outdoor Dining with Umbrella",
+      "Paddleboard Rentals",
+      "Lake Mat Rentals",
+      "Dog Friendly (1 small pet)"
+    ],
+    "coordinates": {
+      "lat": 43.568,
+      "lng": -81.7
+    },
+    "driveTimes": {
+      "groceries": "5 min (Bayfield)",
+      "restaurants": "5 min (Bayfield)",
+      "dianaKlaus": "1h 15min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Summer weekly rentals. $500 security deposit, $75 booking fee, $150 cleaning fee. Linen rental $20/person.",
     "notes": "Vintage lakefront cottage with character. 2BR (both double beds) + pullout sofa. Half bathroom inside + outdoor shower only (no full indoor shower). Wood fireplace — real cottage feel. Lower sunset deck. Parking limited to 2 vehicles. Max 1 small pet. Playpen/highchair available on request. Kitchen: stove, oven, microwave, toaster, drip coffee maker, kettle, fridge."
@@ -172,9 +321,32 @@
     "swimScore": 4,
     "swimType": "Sandy/Private access",
     "swimVerdict": "Private beach access via short walk down the hill. Uncrowded beach. Parking at beach can be arranged for those who can't manage the incline.",
-    "amenities": ["WiFi", "AC", "Satellite TV", "46\" HD TV", "Netflix", "Linens Provided", "Towels Provided", "Washing Machine", "Propane BBQ", "Campfire Pit", "Wrap-Around Deck", "Water Cooler", "Iron & Board", "Hair Dryer", "Dog Friendly"],
-    "coordinates": {"lat": 43.776, "lng": -81.635},
-    "driveTimes": {"groceries": "5 min (general store) / 15 min (Goderich)", "restaurants": "15 min (Goderich)", "dianaKlaus": "1h 30min"},
+    "amenities": [
+      "WiFi",
+      "AC",
+      "Satellite TV",
+      "46\" HD TV",
+      "Netflix",
+      "Linens Provided",
+      "Towels Provided",
+      "Washing Machine",
+      "Propane BBQ",
+      "Campfire Pit",
+      "Wrap-Around Deck",
+      "Water Cooler",
+      "Iron & Board",
+      "Hair Dryer",
+      "Dog Friendly"
+    ],
+    "coordinates": {
+      "lat": 43.776,
+      "lng": -81.635
+    },
+    "driveTimes": {
+      "groceries": "5 min (general store) / 15 min (Goderich)",
+      "restaurants": "15 min (Goderich)",
+      "dianaKlaus": "1h 30min"
+    },
     "julyStatus": "unknown",
     "julyNotes": "Weekly rate C$1,889-2,080. Summer weeks sell out early. Book via secure site at huronbeaches.ca. Cancellation: 30+ days = full refund less $50 fee.",
     "notes": "Step above usual cottage — described as 'conveniences of home with comfort of an excellent hotel.' Queen + double/single bunk beds (sleeps 5 max). Premium mattresses, fine linens & towels PROVIDED (unique among listings). Air conditioned. At end of dead-end road — very quiet. Hosts June & Keith nearby but leave you alone. 2h25min from Toronto. Pet fee C$60. C$400 pre-auth deposit. Also listed on CottagesInCanada (DI-25253) and TripAdvisor."

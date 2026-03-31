@@ -129,6 +129,9 @@ interface AccommodationData {
   lng?: number;
   latitude?: number;
   longitude?: number;
+  // Aerial view video from Google Aerial View API
+  aerialVideoUrl?: string | null;
+  aerialVideoUrlWebm?: string | null;
 }
 
 interface AccommodationCardProps {
@@ -199,26 +202,53 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   return (
     <div className="accommodation-card">
       {/* ── Hero ── */}
-      <div
-        className="accommodation-hero"
-        style={{
-          minHeight: 'min(45vw, 320px)',
-          background: heroImage
-            ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
-            : LAKE_GRADIENT,
-        }}
-      >
-        <div className="accommodation-hero-overlay">
-          <div className="accommodation-hero-top">
-            <span className="accommodation-type-badge">🏡 Cottage</span>
-            {matchScore && (
-              <span className="accommodation-match-badge">⭐ {matchScore}/5</span>
-            )}
+      {data.aerialVideoUrl ? (
+        <div className="accommodation-hero" style={{ position: 'relative', minHeight: 'min(45vw, 320px)', borderRadius: '12px 12px 0 0', overflow: 'hidden' }}>
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster={heroImage || undefined}
+            style={{ width: '100%', height: '300px', objectFit: 'cover', display: 'block' }}
+          >
+            {data.aerialVideoUrlWebm && <source src={data.aerialVideoUrlWebm} type="video/webm" />}
+            <source src={data.aerialVideoUrl} type="video/mp4" />
+          </video>
+          <div className="accommodation-hero-overlay" style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0) 40%, rgba(0,0,0,0.75) 100%)' }}>
+            <div className="accommodation-hero-top">
+              <span className="accommodation-type-badge">🏡 Cottage</span>
+              {matchScore && <span className="accommodation-match-badge">⭐ {matchScore}/5</span>}
+            </div>
+            <h1 className="accommodation-name">{name}</h1>
+            {region && <p className="accommodation-location">📍 {region}</p>}
           </div>
-          <h1 className="accommodation-name">{name}</h1>
-          {region && <p className="accommodation-location">📍 {region}</p>}
+          <div style={{ position: 'absolute', bottom: '8px', left: '10px', background: 'rgba(0,0,0,0.55)', color: '#fff', borderRadius: '6px', padding: '3px 8px', fontSize: '11px', backdropFilter: 'blur(4px)' }}>
+            🛸 Aerial view
+          </div>
         </div>
-      </div>
+      ) : (
+        <div
+          className="accommodation-hero"
+          style={{
+            minHeight: 'min(45vw, 320px)',
+            background: heroImage
+              ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
+              : LAKE_GRADIENT,
+          }}
+        >
+          <div className="accommodation-hero-overlay">
+            <div className="accommodation-hero-top">
+              <span className="accommodation-type-badge">🏡 Cottage</span>
+              {matchScore && (
+                <span className="accommodation-match-badge">⭐ {matchScore}/5</span>
+              )}
+            </div>
+            <h1 className="accommodation-name">{name}</h1>
+            {region && <p className="accommodation-location">📍 {region}</p>}
+          </div>
+        </div>
+      )}
 
       {/* ── Body ── */}
       <div className="accommodation-body">
@@ -375,6 +405,17 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
           lng={data.lng || data.longitude}
           name={`${name}${region ? ', ' + region : ''}`}
         />
+
+        <div style={{ textAlign: 'center', marginTop: '8px', paddingBottom: '4px' }}>
+          <a
+            href={`https://earth.google.com/web/search/${encodeURIComponent(`${name}${region ? ', ' + region : ''}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: '13px', color: '#0ea5e9', textDecoration: 'none' }}
+          >
+            🌍 View in Google Earth 3D →
+          </a>
+        </div>
 
       </div>
     </div>
