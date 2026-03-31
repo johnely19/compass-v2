@@ -41,7 +41,6 @@ const AMENITY_ICONS: Record<string, { icon: string; label: string }> = {
   baby: { icon: '👶', label: 'Baby Gear' },
 };
 
-// Desired display order
 const AMENITY_PRIORITY = [
   'dock', 'dock access', 'private beach', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe',
   'wifi', 'kitchen', 'full kitchen', 'washer', 'dryer', 'washer/dryer',
@@ -80,15 +79,7 @@ function swimIcon(swimType: string): string {
   return '🌊';
 }
 
-function quietLabel(score: number | undefined): string {
-  if (!score) return '';
-  if (score >= 5) return 'Very remote — deep quiet';
-  if (score >= 4) return 'Rural — peaceful';
-  if (score >= 3) return 'Near-town — some activity';
-  return 'Active area';
-}
-
-/* ---- Grouped amenity sets ---- */
+/* ---- Grouped amenity sets (unused currently but kept for future) ---- */
 const OUTDOOR_AMENITIES = new Set(['dock', 'dock access', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe', 'firepit', 'fire pit', 'bbq', 'boat launch', 'private beach', 'hot tub', 'hottub', 'sauna', 'pet friendly', 'pets', 'parking']);
 const INDOOR_AMENITIES = new Set(['wifi', 'kitchen', 'full kitchen', 'washer', 'dryer', 'washer/dryer', 'dishwasher', 'ac', 'air conditioning', 'tv', 'baby', 'games', 'fireplace']);
 
@@ -100,7 +91,6 @@ interface AccommodationData {
   heroImage?: string | null;
   heroSource?: string;
   images?: Array<{ path: string; category: string }>;
-  // Cottage-specific fields
   platform?: string;
   listing_url?: string;
   url?: string;
@@ -134,17 +124,14 @@ interface AccommodationData {
   lng?: number;
   latitude?: number;
   longitude?: number;
-  // Additional lake-specific fields
   vibeTags?: string[];
   dockType?: string;
   beachType?: string;
   waterEquipment?: string[];
-  // Solar, air quality, pollen data (enriched)
   solarPeakHrsJuly?: number;
   airQualityJuly?: { aqi: number; category: string };
   pollenJulyTree?: string;
   pollenJulyGrass?: string;
-  // Aerial View drone video (enriched by enrich-aerial-view.mjs)
   aerialVideoUrl?: string | null;
   aerialVideoUrlWebm?: string | null;
 }
@@ -157,14 +144,14 @@ interface AccommodationCardProps {
   discovery?: Partial<Discovery>;
 }
 
-/* ---- Feature callout component ---- */
+/* ---- Feature callout sub-component ---- */
 function AccommodationFeature({ icon, title, description }: { icon: string; title: string; description: string }) {
   return (
-    <div className="flex gap-3">
-      <span className="text-xl shrink-0">{icon}</span>
-      <div>
-        <div className="font-medium text-gray-900">{title}</div>
-        <div className="text-sm text-gray-600">{description}</div>
+    <div className="ac-feature">
+      <span className="ac-feature-icon">{icon}</span>
+      <div className="ac-feature-text">
+        <div className="ac-feature-title">{title}</div>
+        <div className="ac-feature-desc">{description}</div>
       </div>
     </div>
   );
@@ -173,154 +160,16 @@ function AccommodationFeature({ icon, title, description }: { icon: string; titl
 /* ---- Sleeping arrangement card ---- */
 function SleepingCard({ label, details }: { label: string; details: string }) {
   return (
-    <div className="bg-gray-50 rounded-lg p-3 text-center">
-      <div className="font-medium text-gray-900 text-sm">{label}</div>
-      <div className="text-gray-600 text-xs mt-1">{details}</div>
-    </div>
-  );
-}
-
-/* ---- Sticky price card component (desktop) ---- */
-function PriceCardDesktop({
-  priceStr,
-  perNight,
-  beds,
-  sleeps,
-  julyAvailable,
-  platformInfo,
-  listingUrl,
-  googleMapsUrl,
-}: {
-  priceStr: string | null;
-  perNight: number | null;
-  beds: number | undefined;
-  sleeps: number | undefined;
-  julyAvailable: boolean | undefined;
-  platformInfo: { label: string; colour: string };
-  listingUrl: string | null;
-  googleMapsUrl: string | null;
-}) {
-  return (
-    <div className="hidden md:block sticky top-20 bg-white rounded-xl border border-gray-200 p-5 shadow-sm">
-      {/* Price */}
-      <div className="mb-4">
-        {priceStr && (
-          <div className="text-2xl font-bold text-gray-900">
-            {priceStr.split(' · ')[0]}
-          </div>
-        )}
-        {perNight && (
-          <div className="text-gray-500 text-sm">
-            ~ ${perNight} / night
-          </div>
-        )}
-      </div>
-
-      {/* Specs */}
-      <div className="text-gray-700 text-sm mb-4">
-        {beds && `${beds} bed${beds !== 1 ? 's' : ''}`}
-        {beds && sleeps && ' · '}
-        {sleeps && `sleeps ${sleeps}`}
-      </div>
-
-      {/* July availability */}
-      {julyAvailable !== undefined && (
-        <div className="mb-4">
-          <span className={`inline-flex items-center px-2.5 py-1 rounded-full text-sm font-medium ${
-            julyAvailable ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'
-          }`}>
-            {julyAvailable ? '✅ July Available' : '❌ July Unavailable'}
-          </span>
-        </div>
-      )}
-
-      {/* CTA Button */}
-      {listingUrl && (
-        <a
-          href={listingUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-lg text-white font-medium transition-opacity hover:opacity-90"
-          style={{ background: platformInfo.colour }}
-        >
-          View on {platformInfo.label} ↗
-        </a>
-      )}
-
-      {/* Maps link */}
-      {googleMapsUrl && (
-        <a
-          href={googleMapsUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 mt-3 text-gray-600 hover:text-gray-900 text-sm"
-        >
-          📍 View in Maps →
-        </a>
-      )}
-
-      {/* Trust badges */}
-      <div className="mt-4 pt-4 border-t border-gray-100 space-y-2">
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>✓</span> <span>Verified listing</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>✓</span> <span>Direct booking</span>
-        </div>
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>📞</span> <span>Contact owner</span>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-/* ---- Mobile bottom bar component ---- */
-function PriceBarMobile({
-  priceStr,
-  perNight,
-  platformInfo,
-  listingUrl,
-}: {
-  priceStr: string | null;
-  perNight: number | null;
-  platformInfo: { label: string; colour: string };
-  listingUrl: string | null;
-}) {
-  return (
-    <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 z-50">
-      <div className="flex items-center justify-between gap-4">
-        <div>
-          {priceStr && (
-            <div className="font-bold text-gray-900">
-              {priceStr.split(' · ')[0]}
-            </div>
-          )}
-          {perNight && (
-            <div className="text-gray-500 text-sm">
-              ~${perNight}/night
-            </div>
-          )}
-        </div>
-        {listingUrl && (
-          <a
-            href={listingUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-6 py-3 rounded-lg text-white font-medium"
-            style={{ background: platformInfo.colour }}
-          >
-            View
-          </a>
-        )}
-      </div>
+    <div className="ac-sleeping-card">
+      <div className="ac-sleeping-label">{label}</div>
+      <div className="ac-sleeping-details">{details}</div>
     </div>
   );
 }
 
 export default function AccommodationCard({ data, placeId, userId, contextKey, discovery }: AccommodationCardProps) {
   const name = data.name || 'Cottage';
-  const region = data.address || data.city || '';
+  const region = data.region || data.address || data.city || '';
   const summary = data.description || '';
 
   // Resolve all images
@@ -330,7 +179,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
     ? resolveImageUrlClient(data.heroImage)
     : heroImg ? resolveImageUrlClient(heroImg.path) : null;
 
-  // Get up to 5 images for photo grid
+  // Build photo grid (up to 5)
   const photoGridImages = allImages.slice(0, 5).map(img => resolveImageUrlClient(img.path));
   if (heroImage && !photoGridImages.includes(heroImage)) {
     photoGridImages.unshift(heroImage);
@@ -338,18 +187,17 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
   const displayPhotos = photoGridImages.slice(0, 5);
 
   const LAKE_GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
-
   const hasAerialVideo = !!data.aerialVideoUrl;
 
   // Vitals
   const pricePerWeek = data.pricePerWeek || data.price_per_week;
   const pricePerNight = data.price_per_night;
   const priceStr = formatPrice(pricePerWeek, pricePerNight);
-  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : null;
+  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : (pricePerNight ? Math.round(pricePerNight) : null);
   const beds = data.beds || data.bedrooms;
   const sleeps = data.sleeps || data.max_guests || data.guests;
 
-  // Drive time — handle string, driveTimeLabel, or object
+  // Drive time
   let driveTime: string | null = null;
   if (data.driveTimeLabel) {
     driveTime = data.driveTimeLabel;
@@ -357,7 +205,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
     driveTime = data.drive_from_toronto;
   } else if (data.driveTimes?.dianaKlaus?.minutes) {
     const m = data.driveTimes.dianaKlaus.minutes;
-    driveTime = m >= 60 ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}min` : ''}from Toronto`.trim() : `${m}min from Toronto`;
+    driveTime = m >= 60 ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}min` : ''} from Toronto`.trim() : `${m}min from Toronto`;
   }
 
   // Swimming
@@ -367,14 +215,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
   const beachType = data.beachType || '';
   const dockType = data.dockType || '';
 
-  // Quiet/setting
-  const quietScore = data.scores?.quiet;
+  // Setting
   const settingTags = data.setting_tags || [];
   const vibeTags = data.vibeTags || [];
 
   // Amenities
   const amenities = sortAmenities(data.amenities || []);
   const waterEquipment = data.waterEquipment || [];
+  const hasPets = amenities.some(a => a.toLowerCase() === 'pets' || a.toLowerCase() === 'pet friendly');
 
   // Nearby
   const nearestGrocery = data.nearest_grocery || data.driveTimes?.groceries?.name;
@@ -387,7 +235,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
   // Platform branding
   const platformInfo = getPlatformInfo(data.platform);
 
-  // Google Maps deep-link (only when placeId looks like a Google Place ID)
+  // Google Maps deep-link
   const googleMapsUrl: string | null = placeId && placeId.startsWith('ChIJ')
     ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
     : null;
@@ -409,34 +257,29 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
       ? Math.round(Object.values(rawScores).reduce((a, b) => a + b, 0) / Object.values(rawScores).length * 10) / 10
       : null);
 
-  // AI Guest Summary - build from swimVerdict + vibeTags + notes
+  // AI Guest Summary — synthesize from swimVerdict + vibeTags + notes
   const guestSummary = (() => {
     const parts: string[] = [];
-    if (swimVerdict) parts.push(swimVerdict);
-    if (vibeTags.length > 0 && parts.length < 2) parts.push(vibeTags.slice(0, 2).join(' · '));
+    if (swimVerdict) parts.push(swimVerdict.split('.').slice(0, 2).join('.'));
+    if (vibeTags.length > 0 && parts.length < 2) parts.push(vibeTags.slice(0, 3).join('. '));
     if (data.notes && parts.length < 2) {
       const noteSentence = data.notes.split('.')[0] || '';
       if (noteSentence.length < 150) parts.push(noteSentence);
     }
-    return parts.join('. ').slice(0, 200);
+    return parts.join('. ').slice(0, 250);
   })();
 
-  // Feature callouts - lake-specific as first-class UI
+  // Feature callouts — lake-specific as first-class UI (our differentiator)
   const features = (() => {
     const f: { icon: string; title: string; desc: string }[] = [];
 
-    // Beach type
-    if (beachType) {
+    // Beach / swimming type
+    if (beachType || swimType) {
+      const st = beachType || swimType;
       f.push({
-        icon: '🏖️',
-        title: beachType.includes('sandy') ? 'Sandy beach' : beachType.includes('rocky') ? 'Rocky shore' : 'Beach',
-        desc: beachType,
-      });
-    } else if (swimType) {
-      f.push({
-        icon: swimIcon(swimType),
-        title: swimType.includes('sandy') ? 'Sandy beach' : swimType.includes('dock') ? 'Dock swimming' : swimType.includes('rocky') ? 'Rocky shore' : 'Swimming',
-        desc: swimType,
+        icon: swimIcon(st),
+        title: st.toLowerCase().includes('sandy') ? 'Sandy beach' : st.toLowerCase().includes('dock') ? 'Dock swimming' : st.toLowerCase().includes('rocky') ? 'Rocky shore' : 'Swimming',
+        desc: swimVerdict ? (swimVerdict.split('.')[0] || st) : st,
       });
     }
 
@@ -444,177 +287,153 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
     if (driveTime) {
       f.push({
         icon: '🚗',
-        title: driveTime.includes('h') ? driveTime.split(' ')[0] + 'h drive' : driveTime,
+        title: driveTime,
         desc: 'From downtown Toronto',
       });
     }
 
     // Privacy/setting
-    if (settingTags.includes('private') || settingTags.includes('very private')) {
-      f.push({
-        icon: '🌲',
-        title: 'Very private',
-        desc: 'No visible neighbours, crown land border',
-      });
-    } else if (vibeTags.includes('secluded') || vibeTags.includes('remote')) {
-      f.push({
-        icon: '🌲',
-        title: 'Secluded',
-        desc: vibeTags.join(', '),
-      });
+    if (settingTags.some(t => t.toLowerCase().includes('private'))) {
+      f.push({ icon: '🌲', title: 'Very private', desc: 'No visible neighbours' });
+    } else if (vibeTags.some(t => ['secluded', 'remote', 'quiet'].includes(t.toLowerCase()))) {
+      f.push({ icon: '🌲', title: 'Secluded', desc: vibeTags.slice(0, 2).join(', ') });
     }
 
     // Dock
     if (dockType || amenities.some(a => a.toLowerCase().includes('dock'))) {
-      f.push({
-        icon: '⛵',
-        title: dockType || 'Dock included',
-        desc: 'Deep water access',
-      });
+      f.push({ icon: '⛵', title: dockType || 'Dock included', desc: 'Deep water access' });
     }
 
     // Water equipment
-    if (waterEquipment.length > 0 || amenities.some(a => ['kayaks', 'paddleboard', 'canoe', 'kayaks/canoe'].includes(a.toLowerCase()))) {
-      const equip = waterEquipment.length > 0 ? waterEquipment : amenities.filter(a => ['kayaks', 'paddleboard', 'canoe', 'kayaks/canoe'].includes(a.toLowerCase()));
+    const waterGear = waterEquipment.length > 0
+      ? waterEquipment
+      : amenities.filter(a => ['kayaks', 'paddleboard', 'canoe', 'kayaks/canoe'].includes(a.toLowerCase()));
+    if (waterGear.length > 0) {
       f.push({
         icon: '🛶',
-        title: (equip[0] || 'Water equipment').charAt(0).toUpperCase() + (equip[0] || 'water equipment').slice(1),
-        desc: equip.join(', '),
+        title: waterGear.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(', '),
+        desc: 'Included with rental',
       });
     }
 
     // Lake name
     if (waterBody) {
-      f.push({
-        icon: '🌊',
-        title: waterBody,
-        desc: 'Water body',
-      });
+      f.push({ icon: '🌊', title: waterBody, desc: 'Water body' });
     }
 
     return f.slice(0, 4);
   })();
 
-  // Description - 2-3 sentences
-  const shortDescription = summary.split('.').slice(0, 2).join('.').slice(0, 300);
+  // Short description (2-3 sentences)
+  const shortDescription = summary !== name ? summary.split('.').slice(0, 3).join('.').slice(0, 300) : '';
+
+  // Title format: "Cottage in [Region]"
+  const titleText = region ? `Cottage in ${region}` : name;
 
   return (
-    <div className="accommodation-card pb-20 md:pb-0">
+    <div className="ac-card">
       {/* ── Photo Grid ── */}
-      <div className="relative">
-        {/* Desktop: 5-photo grid */}
-        <div className="hidden md:grid grid-cols-5 gap-0.5 h-[350px] overflow-hidden rounded-t-xl">
-          {/* Hero: 50% width, full height */}
-          <div className="col-span-2 row-span-2 relative">
-            {displayPhotos[0] ? (
-              <img
-                src={displayPhotos[0]}
-                alt={`${name} - main photo`}
-                className="w-full h-full object-cover"
-              />
+      <div className="ac-photo-section">
+        {/* Desktop: Hipcamp-style 5-photo grid */}
+        <div className="ac-photo-grid">
+          {/* Hero: large left photo (~50% width, full height) */}
+          <div className="ac-photo-hero">
+            {hasAerialVideo ? (
+              <>
+                <video
+                  autoPlay muted loop playsInline
+                  poster={displayPhotos[0] || undefined}
+                  className="ac-photo-img"
+                >
+                  {data.aerialVideoUrlWebm && <source src={data.aerialVideoUrlWebm} type="video/webm" />}
+                  <source src={data.aerialVideoUrl!} type="video/mp4" />
+                </video>
+                <span className="ac-aerial-badge">🛸 Aerial view</span>
+              </>
+            ) : displayPhotos[0] ? (
+              <img src={displayPhotos[0]} alt={`${name} - main photo`} className="ac-photo-img" />
             ) : (
-              <div className="w-full h-full" style={{ background: LAKE_GRADIENT }} />
+              <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
             )}
           </div>
-          {/* 2x2 grid of smaller photos */}
+          {/* Right: 2x2 grid */}
           {[1, 2, 3, 4].map(idx => (
-            <div key={idx} className="relative">
+            <div key={idx} className={`ac-photo-small${idx === 4 ? ' ac-photo-last' : ''}`}>
               {displayPhotos[idx] ? (
-                <img
-                  src={displayPhotos[idx]}
-                  alt={`${name} - photo ${idx + 1}`}
-                  className="w-full h-full object-cover"
-                />
+                <img src={displayPhotos[idx]} alt={`${name} - photo ${idx + 1}`} className="ac-photo-img" />
               ) : (
-                <div className="w-full h-full bg-gray-100" />
+                <div className="ac-photo-img ac-photo-placeholder" />
+              )}
+              {idx === 4 && googleMapsPhotosUrl && displayPhotos.length >= 3 && (
+                <a href={googleMapsPhotosUrl} target="_blank" rel="noopener noreferrer" className="ac-view-photos-btn">
+                  View {allImages.length || ''} photos ↗
+                </a>
               )}
             </div>
           ))}
         </div>
 
-        {/* View all photos overlay */}
-        {googleMapsPhotosUrl && displayPhotos.length >= 5 && (
-          <a
-            href={googleMapsPhotosUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hidden md:flex absolute bottom-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-2 rounded-lg text-sm font-medium text-gray-800 hover:bg-white transition-colors items-center gap-1"
-          >
-            View all photos ↗
-          </a>
-        )}
-
-        {/* Mobile: horizontal scrollable strip */}
-        <div className="md:hidden flex gap-1 overflow-x-auto snap-x snap-mandatory h-[200px] pb-2">
-          {displayPhotos.length > 0 ? (
-            displayPhotos.map((photo, idx) => (
-              <div key={idx} className="shrink-0 w-full h-full snap-center relative">
-                {photo ? (
-                  <img
-                    src={photo}
-                    alt={`${name} - photo ${idx + 1}`}
-                    className="w-full h-full object-cover rounded-lg"
-                  />
-                ) : (
-                  <div className="w-full h-full rounded-lg" style={{ background: LAKE_GRADIENT }} />
-                )}
-              </div>
-            ))
-          ) : (
-            <div className="shrink-0 w-full h-full rounded-lg" style={{ background: LAKE_GRADIENT }} />
+        {/* Mobile: horizontal scroll strip */}
+        <div className="ac-photo-strip">
+          {displayPhotos.length > 0 ? displayPhotos.map((photo, idx) => (
+            <div key={idx} className="ac-photo-strip-item">
+              {photo ? (
+                <img src={photo} alt={`${name} - photo ${idx + 1}`} className="ac-photo-img" />
+              ) : (
+                <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
+              )}
+            </div>
+          )) : (
+            <div className="ac-photo-strip-item">
+              <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
+            </div>
           )}
         </div>
 
         {/* Match score badge */}
         {matchScore && (
-          <span className="absolute top-3 left-3 bg-black/50 backdrop-blur-sm text-white text-sm px-2.5 py-1 rounded-full">
-            ⭐ {matchScore}/5
-          </span>
+          <span className="ac-score-badge">⭐ {matchScore}/5</span>
         )}
       </div>
 
       {/* ── Two-Column Content ── */}
-      <div className="md:grid md:grid-cols-[1fr_320px] md:gap-8 p-4 md:p-6">
-
-        {/* Left Column: Main Content */}
-        <div className="space-y-6">
+      <div className="ac-content">
+        {/* Left Column */}
+        <div className="ac-main">
           {/* Title */}
-          <div>
-            <h1 className="text-2xl font-bold text-gray-900">
-              Cottage in {region || 'Ontario'}
-            </h1>
-          </div>
+          <h1 className="ac-title">{titleText}</h1>
+          {region && titleText !== `Cottage in ${region}` && (
+            <p className="ac-subtitle">📍 {region}</p>
+          )}
+          {data.platform && (
+            <p className="ac-platform-label">
+              Listed on{' '}
+              <span style={{ fontWeight: 600, color: platformInfo.colour }}>{platformInfo.label}</span>
+            </p>
+          )}
 
-          {/* Quick specs row */}
-          <div className="flex flex-wrap gap-4 text-sm text-gray-700">
-            {sleeps && (
-              <span>🧑‍🤝‍🧑 Sleeps {sleeps}</span>
-            )}
-            {beds && (
-              <span>🛏 {beds} bed{beds !== 1 ? 's' : ''}</span>
-            )}
-            {data.baths && (
-              <span>🚿 {data.baths} bath{data.baths !== 1 ? 's' : ''}</span>
-            )}
-            {amenities.includes('pets') || amenities.includes('pet friendly') && (
-              <span>🐾 Pets OK</span>
-            )}
+          {/* Quick specs icon row */}
+          <div className="ac-specs-row">
+            {sleeps && <span className="ac-spec">🧑‍🤝‍🧑 Sleeps {sleeps}</span>}
+            {beds && <span className="ac-spec">🛏 {beds} bed{beds !== 1 ? 's' : ''}</span>}
+            {data.baths && <span className="ac-spec">🚿 {data.baths} bath{data.baths !== 1 ? 's' : ''}</span>}
+            {hasPets && <span className="ac-spec">🐾 Pets OK</span>}
           </div>
 
           {/* AI Guest Summary Box */}
           {guestSummary && (
-            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
-              <div className="flex items-center gap-2 mb-2">
-                <span className="text-amber-500">⭐</span>
-                <span className="font-medium text-gray-900">What guests say...</span>
+            <div className="ac-guest-summary">
+              <div className="ac-guest-summary-header">
+                <span className="ac-guest-summary-star">⭐</span>
+                <span className="ac-guest-summary-label">What guests say...</span>
               </div>
-              <p className="text-gray-700 text-sm italic">"{guestSummary}"</p>
+              <p className="ac-guest-summary-text">&ldquo;{guestSummary}&rdquo;</p>
             </div>
           )}
 
-          {/* Feature Callouts */}
+          {/* Feature Callouts (Hipcamp style) */}
           {features.length > 0 && (
-            <div className="space-y-3">
+            <div className="ac-features">
               {features.map((f, idx) => (
                 <AccommodationFeature key={idx} icon={f.icon} title={f.title} description={f.desc} />
               ))}
@@ -623,20 +442,20 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
 
           {/* Description */}
           {shortDescription && (
-            <div>
-              <p className="text-gray-600 text-sm leading-relaxed">{shortDescription}</p>
+            <div className="ac-description">
+              <p>{shortDescription}</p>
             </div>
           )}
 
           {/* Sleeping Arrangements */}
           {beds && beds > 0 && (
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">{beds} bedroom{beds !== 1 ? 's' : ''}</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="ac-sleeping-section">
+              <h3 className="ac-section-heading">{beds} bedroom{beds !== 1 ? 's' : ''}</h3>
+              <div className="ac-sleeping-grid">
                 {Array.from({ length: Math.min(beds, 4) }).map((_, idx) => (
                   <SleepingCard
                     key={idx}
-                    label={`Bedroom ${idx + 1}`}
+                    label={idx === 0 ? 'Master' : `Bedroom ${idx + 1}`}
                     details={idx === 0 ? '1 queen bed' : idx === 1 ? '2 twin beds' : '1 double bed'}
                   />
                 ))}
@@ -646,15 +465,15 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
 
           {/* Amenities Grid */}
           {amenities.length > 0 && (
-            <div>
-              <h3 className="font-semibold text-gray-900 mb-3">Amenities</h3>
-              <div className="grid grid-cols-2 gap-2">
+            <div className="ac-amenities-section">
+              <h3 className="ac-section-heading">Amenities</h3>
+              <div className="ac-amenities-grid">
                 {amenities.slice(0, 12).map(a => {
                   const { icon, label } = getAmenityDisplay(a);
                   return (
-                    <div key={a} className="flex items-center gap-2 text-sm text-gray-700">
-                      <span>{icon}</span>
-                      <span>{label}</span>
+                    <div key={a} className="ac-amenity-item">
+                      <span className="ac-amenity-icon">{icon}</span>
+                      <span className="ac-amenity-label">{label}</span>
                     </div>
                   );
                 })}
@@ -662,44 +481,59 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
             </div>
           )}
 
-          {/* Actions row (mobile-friendly) */}
-          <div className="flex flex-col sm:flex-row gap-3 pt-4 border-t border-gray-100">
-            {listingUrl && (
-              <a
-                href={listingUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-white font-medium transition-opacity hover:opacity-90"
-                style={{ background: platformInfo.colour }}
-              >
-                View on {platformInfo.label} ↗
-              </a>
-            )}
-            {googleMapsUrl && (
-              <a
-                href={googleMapsUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-gray-300 text-gray-700 hover:bg-gray-50"
-              >
-                📍 View in Maps →
-              </a>
-            )}
-          </div>
-
-          {/* Triage widget */}
-          {userId && contextKey && (
-            <div className="pt-4 border-t border-gray-100">
-              <TriageWidget
-                userId={userId}
-                contextKey={contextKey}
-                contextLabel=""
-                placeId={placeId}
-              />
+          {/* Nearby */}
+          {(nearestGrocery || nearestTown) && (
+            <div className="ac-nearby-section">
+              <h3 className="ac-section-heading">Nearby</h3>
+              {nearestGrocery && (
+                <div className="ac-nearby-row">
+                  <span>🛒</span>
+                  <span>{nearestGrocery}{groceryMins ? ` — ${groceryMins}min` : ''}</span>
+                </div>
+              )}
+              {nearestTown && (
+                <div className="ac-nearby-row">
+                  <span>🏘️</span>
+                  <span>Nearest town: {nearestTown}</span>
+                </div>
+              )}
             </div>
           )}
 
-          {/* Provenance section */}
+          {/* Environment widgets */}
+          {(data.solarPeakHrsJuly || data.airQualityJuly || data.pollenJulyTree || data.pollenJulyGrass) && (
+            <div className="ac-env-section">
+              {data.solarPeakHrsJuly && (
+                <div className="ac-env-row">
+                  <span>☀️</span>
+                  <span>
+                    Sun exposure{' '}
+                    {data.solarPeakHrsJuly < 4 ? 'Low' : data.solarPeakHrsJuly < 5 ? 'Moderate' : data.solarPeakHrsJuly < 6 ? 'Good' : 'High'}
+                    {' · ~'}{data.solarPeakHrsJuly.toFixed(1)} peak hrs/day in July
+                  </span>
+                </div>
+              )}
+              {data.airQualityJuly && (
+                <div className="ac-env-row">
+                  <span>🌬️</span>
+                  <span>Air quality {data.airQualityJuly.category} (AQI {data.airQualityJuly.aqi})</span>
+                </div>
+              )}
+              {(data.pollenJulyTree || data.pollenJulyGrass) && (
+                <div className="ac-env-row">
+                  <span>🌿</span>
+                  <span>
+                    Pollen{' '}
+                    {data.pollenJulyTree && `Tree: ${data.pollenJulyTree}`}
+                    {data.pollenJulyTree && data.pollenJulyGrass && ' · '}
+                    {data.pollenJulyGrass && `Grass: ${data.pollenJulyGrass}`}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Provenance */}
           {(discovery?.source || data.platform) && (
             <ProvenanceSection
               source={discovery?.source || (data.platform ? `platform:${data.platform}` : 'disco:cottage-scan')}
@@ -715,15 +549,17 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
             />
           )}
 
-          {/* Google Earth 3D link */}
+          {/* Triage */}
+          {userId && contextKey && (
+            <div className="ac-triage">
+              <TriageWidget userId={userId} contextKey={contextKey} contextLabel="" placeId={placeId} />
+            </div>
+          )}
+
+          {/* Google Earth link */}
           {googleEarthUrl && (
-            <div>
-              <a
-                href={googleEarthUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-gray-900 text-sm"
-              >
+            <div className="ac-earth-link">
+              <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer">
                 🌍 View in Google Earth 3D →
               </a>
             </div>
@@ -736,67 +572,86 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
             lng={data.lng || data.longitude}
             name={`${name}${region ? ', ' + region : ''}`}
           />
-
-          {/* Environment widgets (Solar, Air Quality, Pollen) */}
-          {(data.solarPeakHrsJuly || data.airQualityJuly || data.pollenJulyTree || data.pollenJulyGrass) && (
-            <div className="space-y-3 pt-4 border-t border-gray-100">
-              {data.solarPeakHrsJuly && (
-                <div className="flex items-start gap-2 text-sm">
-                  <span>☀️</span>
-                  <span>
-                    Sun exposure {' '}
-                    {data.solarPeakHrsJuly < 4 ? 'Low' :
-                     data.solarPeakHrsJuly < 5 ? 'Moderate' :
-                     data.solarPeakHrsJuly < 6 ? 'Good' : 'High'}
-                    {' · ~'}{data.solarPeakHrsJuly.toFixed(1)}{' peak hrs/day in July'}
-                  </span>
-                </div>
-              )}
-              {data.airQualityJuly && (
-                <div className="flex items-start gap-2 text-sm">
-                  <span>🌬️</span>
-                  <span>
-                    Air quality {' '}{data.airQualityJuly.category}{' (AQI '}{data.airQualityJuly.aqi}{')'}
-                  </span>
-                </div>
-              )}
-              {(data.pollenJulyTree || data.pollenJulyGrass) && (
-                <div className="flex items-start gap-2 text-sm">
-                  <span>🌿</span>
-                  <span>
-                    Pollen {' '}
-                    {data.pollenJulyTree && `Tree: ${data.pollenJulyTree}`}
-                    {data.pollenJulyTree && data.pollenJulyGrass && ' · '}
-                    {data.pollenJulyGrass && `Grass: ${data.pollenJulyGrass}`}
-                  </span>
-                </div>
-              )}
-            </div>
-          )}
         </div>
 
         {/* Right Column: Sticky Price Card (desktop only) */}
-        <div className="hidden md:block">
-          <PriceCardDesktop
-            priceStr={priceStr}
-            perNight={perNight}
-            beds={beds}
-            sleeps={sleeps}
-            julyAvailable={data.july_available}
-            platformInfo={platformInfo}
-            listingUrl={listingUrl}
-            googleMapsUrl={googleMapsUrl}
-          />
-        </div>
+        <aside className="ac-sidebar">
+          <div className="ac-price-card">
+            {/* Price */}
+            {priceStr && (
+              <div className="ac-price-main">
+                {priceStr.split(' · ')[0]}
+              </div>
+            )}
+            {perNight && (
+              <div className="ac-price-secondary">~ ${perNight} / night</div>
+            )}
+
+            {/* Specs */}
+            <div className="ac-price-specs">
+              {beds && `${beds} bed${beds !== 1 ? 's' : ''}`}
+              {beds && sleeps && ' · '}
+              {sleeps && `sleeps ${sleeps}`}
+            </div>
+
+            {/* July availability */}
+            {data.july_available !== undefined && (
+              <div className="ac-price-availability">
+                <span className={`ac-avail-badge ${data.july_available ? 'ac-avail-yes' : 'ac-avail-no'}`}>
+                  {data.july_available ? '✅ July Available' : '❌ July Unavailable'}
+                </span>
+              </div>
+            )}
+
+            {/* CTA Button — platform-colored */}
+            {listingUrl && (
+              <a
+                href={listingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ac-price-cta"
+                style={{ background: platformInfo.colour }}
+              >
+                View on {platformInfo.label} ↗
+              </a>
+            )}
+
+            {/* Maps link */}
+            {googleMapsUrl && (
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="ac-price-maps">
+                📍 View in Maps →
+              </a>
+            )}
+
+            {/* Trust badges */}
+            <div className="ac-trust-badges">
+              <div className="ac-trust-badge">✓ Verified listing</div>
+              <div className="ac-trust-badge">✓ Direct booking</div>
+              <div className="ac-trust-badge">📞 Contact owner</div>
+            </div>
+          </div>
+        </aside>
       </div>
 
-      {/* Mobile bottom price bar */}
-      <PriceBarMobile
-        priceStr={priceStr}
-        perNight={perNight}
-        platformInfo={platformInfo}
-        listingUrl={listingUrl}
-      />
+      {/* ── Mobile Bottom Price Bar ── */}
+      <div className="ac-mobile-bar">
+        <div className="ac-mobile-bar-price">
+          {priceStr && <div className="ac-mobile-bar-amount">{priceStr.split(' · ')[0]}</div>}
+          {perNight && <div className="ac-mobile-bar-night">~${perNight}/night</div>}
+          {!priceStr && <div className="ac-mobile-bar-amount">{name}</div>}
+        </div>
+        {listingUrl && (
+          <a
+            href={listingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ac-mobile-bar-cta"
+            style={{ background: platformInfo.colour }}
+          >
+            View ↗
+          </a>
+        )}
+      </div>
     </div>
   );
 }
