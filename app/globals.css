@@ -2690,11 +2690,11 @@ a:hover {
     font-size: 16px; /* Prevent iOS zoom on focus */
   }
 
-  /* Filter bar: horizontal scroll for type chips */
+  /* Filter bar: on mobile, horizontal scroll; on desktop keep wrap */
   .filter-chips {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-bottom: var(--space-xs);
