@@ -46,6 +46,8 @@ interface TripPlanningWidgetProps {
   accommodation?: AccommodationData;
   bookingStatus?: string;
   savedCount?: number;
+  purpose?: string;
+  people?: Array<{ name: string; relation?: string }>;
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
@@ -97,7 +99,7 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
 }
 
 export default function TripPlanningWidget({
-  userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0,
+  userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0, purpose, people,
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
   const [travelExpanded, setTravelExpanded] = useState(false);
@@ -271,7 +273,7 @@ export default function TripPlanningWidget({
       )}
 
       {/* Row 3: Trip Notes — always-visible transparent input with thin border */}
-      <TripIntelInput contextKey={contextKey} inlineMode />
+      <TripIntelInput contextKey={contextKey} inlineMode purpose={purpose} people={people} />
 
     </div>
   );

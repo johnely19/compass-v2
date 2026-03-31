@@ -6,6 +6,8 @@ interface TripIntelInputProps {
   contextKey: string;
   onSaved?: () => void;
   inlineMode?: boolean; // always-visible transparent input row
+  purpose?: string;
+  people?: Array<{ name: string; relation?: string }>;
 }
 
 interface SaveResult {
@@ -15,12 +17,13 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved, inlineMode }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<SaveResult | null>(null);
   const [error, setError] = useState('');
+  const [expandOpen, setExpandOpen] = useState(false);
 
   async function handleSave() {
     if (!text.trim()) return;
@@ -49,25 +52,53 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode }: Trip
     }
   }
 
+  async function handleArchive() {
+    if (!confirm('Archive this trip? You can restore it later.')) return;
+    setLoading(true);
+    try {
+      const res = await fetch('/api/contexts/lifecycle', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contextKey, action: 'archive' }),
+      });
+      if (res.ok) {
+        window.location.href = '/';
+      } else {
+        setError('Failed to archive trip');
+      }
+    } catch {
+      setError('Error archiving trip');
+    } finally {
+      setLoading(false);
+    }
+  }
+
   // Inline mode: always-visible single-line input (the "Trip Notes" row in the widget)
   if (inlineMode) {
     return (
       <div className="tpw-notes-row">
         <span className="tpw-label">Trip Notes</span>
-        <input
-          type="text"
-          className="tpw-notes-input"
-          placeholder="Add details, people, plans..."
-          value={text}
-          onChange={e => setText(e.target.value)}
-          onKeyDown={e => { if (e.key === 'Enter' && text.trim()) handleSave(); }}
-          disabled={loading}
-        />
-        {text.trim() && (
-          <button className="tpw-notes-save" onClick={handleSave} disabled={loading}>
-            {loading ? '…' : '↵'}
-          </button>
-        )}
+        <button className="tpw-notes-edit-link" onClick={() => setExpandOpen(e => !e)}>
+          {expandOpen ? '↑ cancel' : 'edit ↓'}
+        </button>
+        <div className={`tpw-notes-expand ${expandOpen ? 'open' : ''}`}>
+          <div className="tpw-notes-expand-body">
+            {purpose && <div className="tpw-notes-expand-purpose">Purpose: {purpose}</div>}
+            {people && people.length > 0 && (
+              <div>
+                {people.map((p, i) => (
+                  <span key={i} className="tpw-notes-expand-person">
+                    {p.name}
+                    {p.relation && <span className="tpw-notes-expand-person-rel">({p.relation})</span>}
+                  </span>
+                ))}
+              </div>
+            )}
+            <button className="tpw-archive-btn" onClick={handleArchive} disabled={loading}>
+              Archive trip
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

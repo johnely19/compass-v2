@@ -8,7 +8,6 @@ import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
-import TripIntelWidget, { type TripIntelData } from './TripIntelWidget';
 
 interface HomeClientProps {
   userId: string;
@@ -192,7 +191,9 @@ export default function HomeClient({
               </div>
 
               {/* Desktop: trip planning widget inline with header */}
-              {ctx.type === 'trip' && (
+              {ctx.type === 'trip' && (() => {
+                const raw = ctx as unknown as Record<string, unknown>;
+                return (
                 <div className="section-header-trip-widget">
                   <TripPlanningWidget
                     userId={userId}
@@ -201,9 +202,11 @@ export default function HomeClient({
                     accommodation={contextMeta[ctx.key]?.accommodation as never}
                     bookingStatus={contextMeta[ctx.key]?.bookingStatus}
                     savedCount={counts.saved}
+                    purpose={raw.purpose as string | undefined}
+                    people={raw.people as Array<{ name: string; relation?: string }> | undefined}
                   />
                 </div>
-              )}
+                );})()}
 
               <div className="section-header-right">
                 {ctx.type !== 'trip' && counts.saved > 0 && (
@@ -226,7 +229,9 @@ export default function HomeClient({
             </div>
 
             {/* Mobile: trip planning widget below header */}
-            {ctx.type === 'trip' && (
+            {ctx.type === 'trip' && (() => {
+              const raw = ctx as unknown as Record<string, unknown>;
+              return (
               <div className="section-trip-widget-mobile">
                 <TripPlanningWidget
                   userId={userId}
@@ -235,22 +240,11 @@ export default function HomeClient({
                   accommodation={contextMeta[ctx.key]?.accommodation as never}
                   bookingStatus={contextMeta[ctx.key]?.bookingStatus}
                   savedCount={counts.saved}
+                  purpose={raw.purpose as string | undefined}
+                  people={raw.people as Array<{ name: string; relation?: string }> | undefined}
                 />
               </div>
-            )}
-
-            {/* Trip Intelligence — purpose, people, schedule, anchors */}
-            {ctx.type === 'trip' && (() => {
-              const raw = ctx as unknown as Record<string, unknown>;
-              const hasIntel = raw.purpose || (raw.people as unknown[])?.length || (raw.schedule as unknown[])?.length || (raw.anchor_experiences as unknown[])?.length;
-              if (!hasIntel) return null;
-              return (
-                <TripIntelWidget
-                  intel={raw as unknown as TripIntelData}
-                  tripKey={ctx.key}
-                />
-              );
-            })()}
+              );})()}
 
             {discoveries.length > 0 ? (
               <PlaceGrid
