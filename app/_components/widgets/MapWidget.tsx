@@ -1,5 +1,7 @@
 'use client';
 
+import { useState } from 'react';
+
 const MAPS_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY || 'AIzaSyCp9YqbC3QoNS3DCG4FzNChAgUgMPWD6pw';
 
 interface MapWidgetProps {
@@ -16,35 +18,33 @@ interface MapWidgetProps {
 }
 
 export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLabel, height = 280 }: MapWidgetProps) {
-  const destination = placeId
-    ? `place_id:${placeId}`
-    : name;
+  const [embedFailed, setEmbedFailed] = useState(false);
+
+  const destination = placeId ? `place_id:${placeId}` : name;
   const destinationEncoded = encodeURIComponent(destination);
 
-  // Direct link to Google Maps
+  // Direct link to Google Maps (opens native app on mobile)
   const mapsLink = fromAddress
     ? `https://www.google.com/maps/dir/?api=1&origin=${encodeURIComponent(fromAddress)}&destination=${destinationEncoded}&travelmode=walking`
     : placeId
       ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
       : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`;
 
-  // Build iframe src — use Google Maps embed API (no key needed for basic embeds)
+  // Static map image (fallback — Maps Static API, always works)
+  const center = lat && lng ? `${lat},${lng}` : encodeURIComponent(name);
+  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${center}&zoom=13&size=600x${height}&scale=2&markers=color:red%7C${center}&key=${MAPS_KEY}`;
+
+  // Embed iframe src
   let iframeSrc: string;
   if (lat && lng) {
-    // Use view embed centered on coords at zoom 10
-    iframeSrc = `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${lat},${lng}&zoom=10`;
+    iframeSrc = `https://www.google.com/maps/embed/v1/view?key=${MAPS_KEY}&center=${lat},${lng}&zoom=12`;
   } else if (fromAddress) {
-    // Directions embed with walking mode
     const origin = encodeURIComponent(fromAddress);
-    const dest = placeId
-      ? `place_id%3A${placeId}`
-      : encodeURIComponent(name);
+    const dest = placeId ? `place_id%3A${placeId}` : encodeURIComponent(name);
     iframeSrc = `https://www.google.com/maps/embed/v1/directions?key=${MAPS_KEY}&origin=${origin}&destination=${dest}&mode=walking`;
   } else if (placeId) {
-    // Use Maps Embed API with place_id (most reliable zoom)
     iframeSrc = `https://www.google.com/maps/embed/v1/place?key=${MAPS_KEY}&q=place_id:${placeId}&zoom=16`;
   } else {
-    // Name-based search embed
     iframeSrc = `https://www.google.com/maps/embed/v1/search?key=${MAPS_KEY}&q=${encodeURIComponent(name)}`;
   }
 
@@ -58,16 +58,30 @@ export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLa
         </p>
       )}
       <div className="map-widget-frame">
-        <iframe
-          src={iframeSrc}
-          width="100%"
-          height={height}
-          style={{ border: 0, borderRadius: 8, display: 'block' }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          title={fromAddress ? `Walking directions to ${name}` : name}
-        />
+        {embedFailed ? (
+          // Static map fallback — clickable, opens Google Maps
+          <a href={mapsLink} target="_blank" rel="noopener noreferrer" style={{ display: 'block' }}>
+            <img
+              src={staticMapUrl}
+              alt={`Map of ${name}`}
+              width="100%"
+              height={height}
+              style={{ borderRadius: 8, display: 'block', objectFit: 'cover', cursor: 'pointer' }}
+            />
+          </a>
+        ) : (
+          <iframe
+            src={iframeSrc}
+            width="100%"
+            height={height}
+            style={{ border: 0, borderRadius: 8, display: 'block' }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title={fromAddress ? `Walking directions to ${name}` : name}
+            onError={() => setEmbedFailed(true)}
+          />
+        )}
       </div>
       <a
         href={mapsLink}
@@ -75,7 +89,7 @@ export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLa
         rel="noopener noreferrer"
         className="map-widget-open-link"
       >
-        Open in Google Maps ↗
+        View in Google Maps →
       </a>
     </div>
   );
