@@ -1,6 +1,7 @@
 'use client';
 
 import { resolveImageUrlClient } from '../_lib/image-url';
+import { getPlatformInfo } from '../_lib/platform';
 import TriageWidget from './TriageWidget';
 import MapWidget from './widgets/MapWidget';
 
@@ -200,6 +201,9 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   // Listing URL
   const listingUrl = data.listing_url || data.url;
 
+  // Platform branding
+  const platformInfo = getPlatformInfo(data.platform);
+
   // Google Maps deep-link (only when placeId looks like a Google Place ID)
   const googleMapsUrl = placeId && placeId.startsWith('ChIJ')
     ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
@@ -348,6 +352,22 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               <span>{driveTime}</span>
             </div>
           )}
+          {data.platform && (
+            <div className="accommodation-vital">
+              <span className="accommodation-vital-icon">🏷️</span>
+              <span>
+                Listed on{' '}
+                <span
+                  style={{
+                    fontWeight: 600,
+                    color: platformInfo.colour,
+                  }}
+                >
+                  {platformInfo.label}
+                </span>
+              </span>
+            </div>
+          )}
         </div>
 
         {/* Summary prose */}
@@ -486,9 +506,14 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               href={listingUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-primary accommodation-cta"
+              className="btn accommodation-cta"
+              style={{
+                background: platformInfo.colour,
+                color: 'white',
+                borderColor: platformInfo.colour,
+              }}
             >
-              View Listing ↗
+              ● View on {platformInfo.label} ↗
             </a>
           )}
           {googleMapsUrl && (

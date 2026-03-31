@@ -5517,6 +5517,20 @@ body {
   backdrop-filter: blur(4px);
 }
 
+/* Platform badge — top-right of hero */
+.accomm-hero-platform {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+  backdrop-filter: blur(4px);
+  pointer-events: none;
+}
+
 /* Tags (kept for compatibility) */
 .accomm-card-tags {
   display: flex;
