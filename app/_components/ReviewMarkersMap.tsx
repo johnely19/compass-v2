@@ -47,9 +47,10 @@ export default function ReviewMarkersMap({ discoveries, contextLabel, city }: Re
 
   const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?size=800x320&scale=2&center=${centerLat},${centerLng}&${markerParams}&key=${MAPS_KEY}`;
 
-  // Google Maps link showing all places as a search
-  const searchQuery = city || contextLabel;
-  const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(searchQuery)}`;
+  // Google Maps URL — open centered on midpoint at the right zoom
+  // Best native experience: each place links individually from its card.
+  // This map click opens Google Maps centered on the cluster so user can explore.
+  const mapsUrl = `https://www.google.com/maps/@${centerLat},${centerLng},13z`;
 
   return (
     <div style={{ margin: '0 0 var(--space-md)', borderRadius: 12, overflow: 'hidden', position: 'relative' }}>
