@@ -309,17 +309,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
-        {/* ── Google Maps CTA — prominent, below hero ── */}
-        {googleMapsUrl && (
-          <a
-            href={googleMapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="place-detail-maps-cta"
-          >
-            View in Google Maps →
-          </a>
-        )}
+        {/* Google Maps CTA removed — single link lives in the actions row below the map */}
 
         {/* ── ABOVE THE FOLD: hours first, then food strip, identity, narrative ── */}
 
@@ -356,10 +346,10 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         <div className="place-detail-v2-identity">
           {address && (
             googleMapsUrl ? (
-              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row">
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="place-detail-v2-identity-row place-detail-v2-identity-link-row">
                 <span className="place-detail-v2-identity-icon">📍</span>
                 <span>{address}</span>
-                <span className="place-detail-v2-identity-link">↗</span>
+                <span className="place-detail-v2-identity-link">View in Google Maps ↗</span>
               </a>
             ) : (
               <div className="place-detail-v2-identity-row">
@@ -460,12 +450,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
 
         {/* ── Compact actions row ── */}
         <div className="place-detail-actions-row">
-          {googleMapsUrl && (
-            <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
-               className="place-detail-action-btn place-detail-action-maps">
-              View in Google Maps →
-            </a>
-          )}
+          {/* Maps link moved to address row above */}
           {googleEarthUrl && (
             <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
                className="place-detail-action-btn">

@@ -30,6 +30,7 @@ These are hard targets. Every PR that touches the homepage, place cards, or revi
 - **No layout shift on triage button press**
 - **System fonts only:** `-apple-system, BlinkMacSystemFont, 'Segoe UI'` — no web font CDN calls
 - **No component library dependencies** — hand-written CSS only (no shadcn, radix, headless UI)
+- **Light mode only** — dark mode is explicitly deprioritized. The app is built for a beautiful, consistent light UI. No `prefers-color-scheme: dark` media queries. One design, done beautifully.
 
 ---
 

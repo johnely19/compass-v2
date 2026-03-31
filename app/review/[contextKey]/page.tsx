@@ -40,9 +40,16 @@ export default async function ReviewContextPage({ params }: Props) {
   const sharedManifest = user?.isOwner ? loadSharedManifest() : null;
   const context = manifest?.contexts.find(c => c.key === contextKey)
     ?? sharedManifest?.contexts?.find((c: { key: string }) => c.key === contextKey);
-  const discoveries = (discoveriesData?.discoveries ?? []).filter(
-    d => d.contextKey === contextKey,
-  );
+  const discoveries = (discoveriesData?.discoveries ?? []).filter(d => {
+    if (d.contextKey !== contextKey) return false;
+    // Only show fully-built discoveries (must have name + address or description or rating)
+    if (!d.name || d.name === 'Unknown Place') return false;
+    const rec = d as unknown as Record<string, unknown>;
+    const hasAddress = !!(rec.address as string);
+    const hasDescription = !!(rec.description || rec.summary);
+    const hasRating = d.rating != null && d.rating > 0;
+    return hasAddress || hasDescription || hasRating;
+  });
 
   if (!context) {
     return (

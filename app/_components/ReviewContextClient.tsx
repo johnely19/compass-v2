@@ -7,7 +7,7 @@ import { getTriageState, getTriageEntry } from '../_lib/triage';
 import { haversineDistance, formatDistance, isWalkable } from '../_lib/distance';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
-import TripRouteMap from './TripRouteMap';
+import ReviewMarkersMap from './ReviewMarkersMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
@@ -190,9 +190,13 @@ export default function ReviewContextClient({
         )}
       </div>
 
-      {/* Route map — only for non-accommodation trip contexts */}
-      {context.type === 'trip' && !useAccommodationLayout && (
-        <TripRouteMap contextKey={context.key} />
+      {/* Markers map — show all unreviewed places as pins, no route */}
+      {!useAccommodationLayout && filtered.length > 0 && tab === 'unreviewed' && (
+        <ReviewMarkersMap
+          discoveries={filtered}
+          contextLabel={context.label}
+          city={context.city}
+        />
       )}
 
       <div className="review-tabs">
@@ -218,11 +222,15 @@ export default function ReviewContextClient({
       ) : (
         <div className="review-list">
           {(() => {
-            // Group by neighbourhood
+            // Only group by neighbourhood for Toronto-local contexts
+            // For trips (nyc, cottage, etc.) skip grouping — addresses aren't Toronto neighbourhoods
+            const isToronto = context.city?.toLowerCase().includes('toronto') && context.type !== 'trip';
             const groups: { name: string; items: typeof filtered }[] = [];
-            let lastNeighbourhood = '';
+            let lastNeighbourhood = '__init__';
             for (const d of filtered) {
-              const hood = getNeighbourhood((d as unknown as Record<string,string>).address).name;
+              const hood = isToronto
+                ? getNeighbourhood((d as unknown as Record<string,string>).address).name
+                : 'Places';
               if (hood !== lastNeighbourhood) {
                 groups.push({ name: hood, items: [] });
                 lastNeighbourhood = hood;

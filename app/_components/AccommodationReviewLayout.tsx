@@ -18,6 +18,42 @@ interface AccommodationReviewLayoutProps {
   tab: Tab;
 }
 
+/* ---- Weighted preference score (module scope — used by sort AND card badge) ---- */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function preferenceScore(d: Discovery): number {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const c = (d as any)._cottage as Record<string, any> | undefined;
+  if (!c) return 0;
+
+  const scores = (c.scores ?? {}) as Record<string, number>;
+  const gates  = (c.gates  ?? {}) as Record<string, boolean>;
+  const pricePerWeek = c.pricePerWeek as number | null | undefined;
+
+  // Weighted components (Disco scores are 0–5 scale)
+  const swimming  = (scores.swimming  ?? 0) * 5;   // 25 max — top priority
+  const quiet     = (scores.quiet     ?? 0) * 4;   // 20 max
+  const amenities = (scores.amenities ?? 0) * 3;   // 15 max
+  const location  = (scores.location  ?? 0) * 3;   // 15 max
+
+  // Budget score (0–10)
+  let budgetScore = 5; // neutral if unknown
+  if (pricePerWeek != null) {
+    if (pricePerWeek <= 2500)      budgetScore = 10;
+    else if (pricePerWeek <= 3500) budgetScore = 6;
+    else if (pricePerWeek <= 5000) budgetScore = 3;
+    else                           budgetScore = 0;
+  }
+
+  // Gate bonuses (0–15)
+  const gateBonus =
+    (gates.dockAccess  ? 8 : 0) +
+    (gates.shoreline   ? 4 : 0) +
+    (gates.private     ? 2 : 0) +
+    (gates.threeWeeks  ? 1 : 0);
+
+  return swimming + quiet + amenities + location + budgetScore + gateBonus;
+}
+
 /* ---- Amenity icons (top 5) ---- */
 const AMENITY_ICONS: Record<string, string> = {
   dock: '⛵', 'dock access': '⛵', kayaks: '🛶', paddleboard: '🏄',
@@ -130,8 +166,11 @@ function AccommodationCard({
             background: GRADIENT,
           }}
         >
-          {matchScore != null && (
-            <span className="accomm-hero-match">⭐ {matchScore}</span>
+          {/* Preference score badge */}
+          {preferenceScore(discovery) > 0 && (
+            <span className="accomm-hero-match" style={{ background: 'rgba(37,99,235,0.85)' }}>
+              🎯 {Math.round(preferenceScore(discovery))}
+            </span>
           )}
           {platform && (
             <span
@@ -249,6 +288,7 @@ export default function AccommodationReviewLayout({
   userId, context, discoveries, tab,
 }: AccommodationReviewLayoutProps) {
   const [, setRefresh] = useState(0);
+  const [showMap, setShowMap] = useState(false);
   useEffect(() => {
     const h = () => setRefresh(n => n + 1);
     window.addEventListener('triage-changed', h);
@@ -265,49 +305,37 @@ export default function AccommodationReviewLayout({
       return false;
     });
 
-    // Sort by bookability priority
+    // Sort by weighted preference score (module-level preferenceScore fn)
     result = result.sort((a, b) => {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const cottageA = (a as any)._cottage as Record<string, any> | undefined;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const cottageB = (b as any)._cottage as Record<string, any> | undefined;
-
+      const scoreA = preferenceScore(a);
+      const scoreB = preferenceScore(b);
+      if (scoreB !== scoreA) return scoreB - scoreA;
+      // Tiebreak: cards with hero image first
       const hasHeroA = !!resolveImageUrlClient(a.heroImage);
-      const hasPriceA = cottageA?.pricePerWeek != null;
-      const hasVibesA = cottageA?.vibeTags && cottageA.vibeTags.length > 0;
-      const swimScoreA = cottageA?.scores?.swimming ?? 0;
-
       const hasHeroB = !!resolveImageUrlClient(b.heroImage);
-      const hasPriceB = cottageB?.pricePerWeek != null;
-      const hasVibesB = cottageB?.vibeTags && cottageB.vibeTags.length > 0;
-      const swimScoreB = cottageB?.scores?.swimming ?? 0;
-
-      // Priority groups
-      const getPriority = (hasHero: boolean, hasPrice: boolean, hasVibes: boolean) => {
-        if (hasHero && hasPrice && hasVibes) return 1;
-        if (hasHero && hasPrice) return 2;
-        if (hasHero) return 3;
-        return 4;
-      };
-
-      const priorityA = getPriority(hasHeroA, hasPriceA, hasVibesA);
-      const priorityB = getPriority(hasHeroB, hasPriceB, hasVibesB);
-
-      if (priorityA !== priorityB) {
-        return priorityA - priorityB;
-      }
-
-      // Within same group, sort by swim score (higher first)
-      return swimScoreB - swimScoreA;
+      if (hasHeroA !== hasHeroB) return hasHeroA ? -1 : 1;
+      return 0;
     });
 
     return result;
   }, [discoveries, userId, context.key, tab]);
 
   return (
-    <div className="accomm-review-layout">
+    <div className={`accomm-review-layout ${showMap ? 'accomm-review-layout--split' : ''}`}>
+      {/* Map drawer handle — pinned to right edge, vertically centered */}
+      <button
+        className={`accomm-map-handle ${showMap ? 'accomm-map-handle--open' : ''}`}
+        onClick={() => setShowMap(v => !v)}
+        title={showMap ? 'Hide map' : 'Show map'}
+        aria-label={showMap ? 'Hide map' : 'Show map'}
+      >
+        <span className="accomm-map-handle-icon">🗺</span>
+        <span className="accomm-map-handle-label">{showMap ? '◀' : '▶'}</span>
+      </button>
+
       {/* Card list */}
       <div className="accomm-review-list">
+
         {filtered.map((d, idx) => (
           <AccommodationCard
             key={`${d.id}-${idx}`}
@@ -325,10 +353,12 @@ export default function AccommodationReviewLayout({
         )}
       </div>
 
-      {/* Sticky map sidebar */}
-      <div className="accomm-map-column">
-        <AccommodationMapSidebar discoveries={discoveries} />
-      </div>
+      {/* Map panel — hidden until toggled */}
+      {showMap && (
+        <div className="accomm-map-column">
+          <AccommodationMapSidebar discoveries={discoveries} />
+        </div>
+      )}
     </div>
   );
 }

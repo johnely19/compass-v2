@@ -11,38 +11,44 @@
 /* ---- 1. CSS Custom Properties ---- */
 
 :root {
-  color-scheme: light dark;
+  color-scheme: light;
 
-  /* Colors — Light mode */
-  --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
+  /* Colors — Light mode only */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
   --bg-elevated: #ffffff;
-  --text-primary: #0c1929;
-  --text-secondary: #475569;
-  --text-muted: #64748b;
+  --bg-card: #ffffff;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
 
   /* Accent palette */
-  --accent: #1e3a5f;
-  --accent-hover: #2d5a87;
-  --accent-light: #4a7eb8;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --accent-light: #eff6ff;
   --warm-coral: #e07a5f;
   --warm-amber: #f4a261;
 
   /* Cards */
-  --card-bg: rgba(255, 255, 255, 0.85);
-  --card-border: rgba(30, 58, 95, 0.12);
-  --card-shadow: 0 4px 24px rgba(12, 25, 41, 0.08);
-  --card-shadow-hover: 0 8px 32px rgba(12, 25, 41, 0.14);
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 6px 24px rgba(0,0,0,0.14);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.14);
 
   /* Buttons */
-  --btn-primary-bg: #1e3a5f;
-  --btn-primary-hover: #2d5a87;
+  --btn-primary-bg: #2563eb;
+  --btn-primary-hover: #1d4ed8;
   --btn-primary-text: #ffffff;
 
   /* Semantic */
-  --success: #4ade80;
-  --warning: #fbbf24;
-  --danger: #f87171;
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
 
   /* Layout */
   --radius-sm: 6px;
@@ -66,50 +72,6 @@
 }
 
 /* Dark mode (auto) */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg-primary: #060d18;
-    --bg-secondary: #0a1628;
-    --bg-elevated: #0f1e32;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
-
-    --accent: #3b82f6;
-    --accent-hover: #60a5fa;
-    --accent-light: #93c5fd;
-
-    --card-bg: rgba(15, 30, 50, 0.85);
-    --card-border: rgba(59, 130, 246, 0.15);
-    --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-    --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
-
-    --btn-primary-bg: #3b82f6;
-    --btn-primary-hover: #60a5fa;
-  }
-}
-
-/* Dark mode (explicit) */
-[data-theme="dark"] {
-  --bg-primary: #060d18;
-  --bg-secondary: #0a1628;
-  --bg-elevated: #0f1e32;
-  --text-primary: #f1f5f9;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
-
-  --accent: #3b82f6;
-  --accent-hover: #60a5fa;
-  --accent-light: #93c5fd;
-
-  --card-bg: rgba(15, 30, 50, 0.85);
-  --card-border: rgba(59, 130, 246, 0.15);
-  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
-  --card-shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.35);
-
-  --btn-primary-bg: #3b82f6;
-  --btn-primary-hover: #60a5fa;
-}
 
 
 /* ---- 2. Reset & Base ---- */
@@ -1386,6 +1348,8 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-xs);
+  max-width: 100%;
+  overflow: visible;
 }
 
 .filter-chip {
@@ -2236,9 +2200,9 @@ a:hover {
   max-width: 400px;
   padding: var(--space-sm) var(--space-md);
   font-size: 0.95rem;
-  border: 1px solid var(--border);
+  border: 1px solid rgba(148, 163, 184, 0.35);
   border-radius: var(--radius);
-  background: var(--bg);
+  background: rgba(148, 163, 184, 0.06);
   color: var(--text);
 }
 
@@ -2249,13 +2213,11 @@ a:hover {
 
 @media (min-width: 768px) {
   .browse-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-lg);
+    display: block;
   }
 
   .filter-section {
-    flex-shrink: 0;
+    margin-bottom: var(--space-md);
   }
 }
 
@@ -2728,11 +2690,11 @@ a:hover {
     font-size: 16px; /* Prevent iOS zoom on focus */
   }
 
-  /* Filter bar: horizontal scroll for type chips */
+  /* Filter bar: on mobile, horizontal scroll; on desktop keep wrap */
   .filter-chips {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     scrollbar-width: none;
     -ms-overflow-style: none;
     padding-bottom: var(--space-xs);
@@ -3298,8 +3260,7 @@ body {
    ============================================================ */
 
 .place-detail-v2 {
-  max-width: 720px;
-  margin: 0 auto;
+  max-width: 100%;
   padding-bottom: var(--space-2xl);
 }
 
@@ -4359,6 +4320,7 @@ body {
 .place-browse-triage {
   display: flex;
   justify-content: flex-end;
+}
 
 /* ── Hot page place cards with images ── */
 .hot-place-card {
@@ -5452,9 +5414,16 @@ body {
 /* Two-column layout: cards (65%) + map (35%) */
 .accomm-review-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr;  /* full width by default */
   gap: var(--space-lg);
   align-items: start;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.accomm-review-layout--split {
+  grid-template-columns: 1fr 1fr;  /* 50/50 when map is visible */
+  max-width: 100%;
 }
 
 .accomm-review-list {
@@ -5464,10 +5433,62 @@ body {
   min-width: 0;
 }
 
-/* Map column — sticky */
+/* Map drawer handle — fixed to right edge, vertically centered */
+.accomm-map-handle {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 36px;
+  padding: 16px 0;
+  background: white;
+  border: 1px solid var(--card-border);
+  border-right: none;
+  border-radius: 8px 0 0 8px;
+  box-shadow: -2px 0 12px rgba(0,0,0,0.10);
+  cursor: pointer;
+  transition: background 0.15s, box-shadow 0.15s;
+}
+
+.accomm-map-handle:hover {
+  background: #f8f9fa;
+  box-shadow: -4px 0 20px rgba(0,0,0,0.15);
+}
+
+.accomm-map-handle--open {
+  background: var(--accent, #2563eb);
+  color: white;
+  border-color: var(--accent, #2563eb);
+}
+
+.accomm-map-handle--open:hover {
+  background: color-mix(in srgb, var(--accent, #2563eb) 85%, black);
+}
+
+.accomm-map-handle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.accomm-map-handle-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  color: inherit;
+  opacity: 0.7;
+}
+
+/* Map column — sticky when split */
 .accomm-map-column {
   position: sticky;
-  top: calc(60px + var(--space-md)); /* below nav */
+  top: calc(60px + var(--space-md));
+  height: calc(100vh - 80px);
+  overflow: hidden;
 }
 
 .accomm-map-sidebar {
@@ -5492,16 +5513,21 @@ body {
 
 .accomm-card {
   display: flex;
-  flex-direction: column;           /* VERTICAL now */
-  background: #ffffff;
+  flex-direction: column;
+  background: var(--bg-card, #fff);
   border: 1px solid var(--card-border);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.10);
-  transition: box-shadow var(--transition-base);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.2s, transform 0.2s;
   max-width: 680px;
   width: 100%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.accomm-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  transform: translateY(-2px);
 }
 
 .accomm-card:hover {
@@ -5515,8 +5541,8 @@ body {
 }
 
 .accomm-card-hero {
-  width: 100%;                      /* full width */
-  height: 200px;                    /* 200px tall */
+  width: 100%;
+  height: 240px;                    /* taller — more photo impact */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -5537,11 +5563,11 @@ body {
 }
 
 .accomm-card-name {
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: 800;
+  font-size: 1.2rem;
   color: var(--text-primary);
   text-decoration: none;
-  line-height: 1.3;
+  line-height: 1.25;
   flex: 1;
 }
 .accomm-card-name:hover { color: var(--accent); }

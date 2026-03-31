@@ -83,14 +83,7 @@ export default function MapWidget({ placeId, lat, lng, name, fromAddress, fromLa
           />
         )}
       </div>
-      <a
-        href={mapsLink}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="map-widget-open-link"
-      >
-        View in Google Maps →
-      </a>
+      {/* Link removed — place cards show a single Maps link in their actions row */}
     </div>
   );
 }
