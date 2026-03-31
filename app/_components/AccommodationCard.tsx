@@ -95,6 +95,7 @@ interface AccommodationData {
   address?: string;
   city?: string;
   heroImage?: string | null;
+  heroSource?: string;
   images?: Array<{ path: string; category: string }>;
   // Cottage-specific fields
   platform?: string;
@@ -208,11 +209,29 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
         className="accommodation-hero"
         style={{
           minHeight: 'min(45vw, 320px)',
+          position: 'relative',
           background: heroImage
             ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
             : LAKE_GRADIENT,
         }}
       >
+        {data.heroSource === 'street-view' && (
+          <span
+            style={{
+              position: 'absolute',
+              top: 8,
+              right: 8,
+              background: 'rgba(0,0,0,0.55)',
+              color: 'white',
+              fontSize: '0.7rem',
+              padding: '2px 8px',
+              borderRadius: '12px',
+              backdropFilter: 'blur(4px)',
+            }}
+          >
+            📷 Street view
+          </span>
+        )}
         <div className="accommodation-hero-overlay">
           <div className="accommodation-hero-top">
             <span className="accommodation-type-badge">🏡 Cottage</span>
