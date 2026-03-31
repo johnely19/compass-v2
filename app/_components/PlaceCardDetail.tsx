@@ -255,6 +255,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
     : null;
 
+  // Google Earth 3D link — useful for spatial context on outdoor/area types
+  const EARTH_TYPES = new Set(['accommodation', 'neighbourhood', 'park', 'architecture', 'experience', 'development']);
+  const googleEarthUrl = EARTH_TYPES.has(card.type)
+    ? `https://earth.google.com/web/search/${encodeURIComponent([card.name, city || address?.split(',').slice(-2, -1)[0]?.trim()].filter(Boolean).join(' '))}`
+    : null;
+
   // Photo gallery — exclude hero, categorize
   const foodPhotos = allImages.filter(i => ['food', 'drinks'].includes(i.category) && i !== heroImg);
   const interiorPhotos = allImages.filter(i => ['interior_vibe', 'interior_detail'].includes(i.category) && i !== heroImg);
@@ -440,6 +446,12 @@ export default function PlaceCardDetail({ card, userId, contextKey }: PlaceCardD
             <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
                className="place-detail-action-btn place-detail-action-maps">
               View in Google Maps →
+            </a>
+          )}
+          {googleEarthUrl && (
+            <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
+               className="place-detail-action-btn">
+              🌍 Google Earth 3D →
             </a>
           )}
           <ShareButton name={card.name} />
