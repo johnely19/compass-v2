@@ -182,6 +182,21 @@ export interface UserChat {
   updatedAt: string;
 }
 
+// ---- Overnight Genius Report ----
+
+export interface OvernightSection {
+  title: string;   // e.g. "NEW IDEA", "WILD IDEA"
+  content: string; // the actual content for that section
+}
+
+export interface OvernightReport {
+  userId: string;
+  date: string;      // YYYY-MM-DD
+  greeting: string;  // "GOOD MORNING. HERE IS WHAT I CAME UP WITH LAST NIGHT."
+  sections: OvernightSection[];  // exactly 6 sections in order
+  generatedAt: string;  // ISO timestamp
+}
+
 // ---- User Document Types ----
 
 export type UserDocType =
