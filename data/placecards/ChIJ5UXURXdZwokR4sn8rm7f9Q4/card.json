@@ -6,5 +6,13 @@
   "city": "",
   "rating": 4.5,
   "hero_image": null,
-  "stub": true
+  "stub": true,
+  "data": {
+    "address": "151 Loisaida Ave, New York, NY 10009",
+    "neighborhood": "Alphabet City / Loisaida",
+    "rating": 4.5,
+    "reviewCount": 389,
+    "googlePlacesUrl": "https://www.google.com/maps/place/?q=place_id:ChIJ5UXURXdZwokR4sn8rm7f9Q4",
+    "description": "You're going to feel the bass before you see the stage. Nublu on Loisaida has been the East Village's most genuinely underground jazz and world music room for two decades \u2014 a narrow, low-ceilinged bar where the musicians play close enough to touch. The crowd is real, the booking is eclectic, and the sound system is serious. One weakness: no website worth checking, so follow their Instagram or just show up."
+  }
 }
