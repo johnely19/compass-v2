@@ -13,7 +13,7 @@ export default function Nav({ userName, isOwner }: NavProps) {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/placecards', label: 'Places' },
+    { href: '/placecards', label: 'My Places' },
     { href: '/review', label: 'Review' },
     { href: '/hot', label: 'Hot' },
   ];

@@ -4361,6 +4361,76 @@ body {
   justify-content: flex-end;
 }
 
+/* Context label on place cards */
+.place-browse-context {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  background: var(--color-surface-2, rgba(0,0,0,0.04));
+  border-radius: 10px;
+  padding: 1px 7px;
+}
+
+/* Context filter pill bar */
+.context-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.context-pill {
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border, #ddd);
+  background: transparent;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--color-text);
+  transition: background 0.12s, border-color 0.12s;
+}
+
+.context-pill:hover {
+  background: var(--color-surface-2, #f5f5f5);
+}
+
+.context-pill-active {
+  background: var(--color-accent, #1a73e8);
+  border-color: var(--color-accent, #1a73e8);
+  color: #fff;
+}
+
+/* Admin view toggle */
+.admin-view-toggle {
+  display: flex;
+  gap: 0;
+  border: 1px solid var(--color-border, #ddd);
+  border-radius: 6px;
+  overflow: hidden;
+  font-size: 0.8rem;
+}
+
+.admin-toggle-btn {
+  padding: 4px 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: background 0.12s;
+}
+
+.admin-toggle-btn:hover {
+  background: var(--color-surface-2, #f5f5f5);
+}
+
+.admin-toggle-btn.active {
+  background: var(--color-surface-2, #f0f0f0);
+  color: var(--color-text);
+  font-weight: 500;
+}
+
 /* ── Hot page place cards with images ── */
 .hot-place-card {
   position: relative;

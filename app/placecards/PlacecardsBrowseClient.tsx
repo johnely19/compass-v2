@@ -13,29 +13,42 @@ export interface PlaceCardData {
   type: DiscoveryType;
   city: string;
   rating: number | null;
+  contextKey: string;
+  heroImage?: string | null;
+}
+
+export interface ContextItem {
+  key: string;
+  label: string;
 }
 
 export interface PlacecardsBrowseClientProps {
   cards: PlaceCardData[];
   availableTypes: DiscoveryType[];
+  availableContexts?: ContextItem[];
+  contextLabels?: Record<string, string>;
   userId?: string;
+  isOwner?: boolean;
+  adminViewAll?: boolean;
 }
 
 type SortOption = 'name-asc' | 'name-desc' | 'type';
 
-interface FilterState {
-  types: DiscoveryType[];
-  minRating: number | null;
-}
-
 export default function PlacecardsBrowseClient({
-  cards, userId,
+  cards,
+  userId,
   availableTypes,
+  availableContexts = [],
+  contextLabels = {},
+  isOwner = false,
+  adminViewAll = false,
 }: PlacecardsBrowseClientProps) {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedTypes, setSelectedTypes] = useState<DiscoveryType[]>([]);
+  const [selectedContext, setSelectedContext] = useState<string>('');
   const [minRating, setMinRating] = useState<number | null>(null);
   const [sortOption, setSortOption] = useState<SortOption>('name-asc');
+  const viewMode = adminViewAll ? 'all' : 'mine';
 
   const toggleType = useCallback((type: DiscoveryType) => {
     setSelectedTypes((prev) =>
@@ -47,14 +60,24 @@ export default function PlacecardsBrowseClient({
     setSelectedTypes([]);
     setMinRating(null);
     setSearchQuery('');
+    setSelectedContext('');
   }, []);
 
-  const hasActiveFilters = selectedTypes.length > 0 || minRating !== null || searchQuery !== '';
+  const hasActiveFilters =
+    selectedTypes.length > 0 ||
+    minRating !== null ||
+    searchQuery !== '' ||
+    selectedContext !== '';
 
   const filteredCards = useMemo(() => {
     let result = cards;
 
-    // Filter by search query (name)
+    // Context filter
+    if (selectedContext) {
+      result = result.filter((card) => card.contextKey === selectedContext);
+    }
+
+    // Search query (name)
     if (searchQuery) {
       const query = searchQuery.toLowerCase();
       result = result.filter((card) =>
@@ -62,12 +85,12 @@ export default function PlacecardsBrowseClient({
       );
     }
 
-    // Filter by type
+    // Type filter
     if (selectedTypes.length > 0) {
       result = result.filter((card) => selectedTypes.includes(card.type));
     }
 
-    // Filter by rating
+    // Rating filter
     if (minRating !== null) {
       result = result.filter((card) => card.rating !== null && card.rating >= minRating);
     }
@@ -87,18 +110,58 @@ export default function PlacecardsBrowseClient({
     });
 
     return result;
-  }, [cards, searchQuery, selectedTypes, minRating, sortOption]);
+  }, [cards, searchQuery, selectedTypes, minRating, sortOption, selectedContext]);
+
+  const countLabel =
+    filteredCards.length === cards.length
+      ? `${cards.length} place${cards.length === 1 ? '' : 's'}`
+      : `${filteredCards.length} of ${cards.length} places`;
 
   return (
     <main className="page">
       <div className="page-header">
-        <h1>Places</h1>
-        <p className="text-muted">
-          {filteredCards.length === cards.length
-            ? `${cards.length} place cards`
-            : `${filteredCards.length} of ${cards.length} place cards`}
-        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
+          <h1>{adminViewAll ? 'All Cards (admin)' : 'My Places'}</h1>
+          {isOwner && (
+            <div className="admin-view-toggle">
+              <Link
+                href="/placecards"
+                className={`admin-toggle-btn ${viewMode === 'mine' ? 'active' : ''}`}
+              >
+                My Places
+              </Link>
+              <Link
+                href="/placecards?view=all"
+                className={`admin-toggle-btn ${viewMode === 'all' ? 'active' : ''}`}
+              >
+                All Cards (admin)
+              </Link>
+            </div>
+          )}
+        </div>
+        <p className="text-muted">{countLabel}</p>
       </div>
+
+      {/* Context filter pills */}
+      {availableContexts.length > 0 && (
+        <div className="context-filter-bar">
+          <button
+            className={`context-pill ${selectedContext === '' ? 'context-pill-active' : ''}`}
+            onClick={() => setSelectedContext('')}
+          >
+            All contexts
+          </button>
+          {availableContexts.map((ctx) => (
+            <button
+              key={ctx.key}
+              className={`context-pill ${selectedContext === ctx.key ? 'context-pill-active' : ''}`}
+              onClick={() => setSelectedContext(ctx.key === selectedContext ? '' : ctx.key)}
+            >
+              {ctx.label}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Filter Bar */}
       <div className="browse-controls">
@@ -106,7 +169,7 @@ export default function PlacecardsBrowseClient({
           <input
             type="text"
             className="browse-search-input"
-            placeholder="Search places..."
+            placeholder="Search my places..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
           />
@@ -173,35 +236,48 @@ export default function PlacecardsBrowseClient({
 
       {/* Cards Grid */}
       <div className="grid grid-auto">
-        {filteredCards.map((card) => (
-          <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
-            <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
-              <div className="card-body">
-                <h3 className="place-browse-name">{card.name}</h3>
-                <TypeBadge type={card.type} />
-                {card.city && (
-                  <span className="place-browse-city">{card.city}</span>
-                )}
-                {card.rating !== null && (
-                  <span className="place-browse-rating">{card.rating.toFixed(1)}★</span>
-                )}
-              </div>
-            </Link>
-            {userId && (
-              <div className="place-browse-triage">
-                <TriageButtons
-                  userId={userId}
-                  contextKey="radar:toronto-experiences"
-                  placeId={card.placeId}
-                  size="sm"
-                />
-              </div>
-            )}
-          </div>
-        ))}
+        {filteredCards.map((card) => {
+          const ctxLabel = contextLabels[card.contextKey];
+          return (
+            <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
+              <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
+                <div className="card-body">
+                  <h3 className="place-browse-name">{card.name}</h3>
+                  <TypeBadge type={card.type} />
+                  {card.city && (
+                    <span className="place-browse-city">{card.city}</span>
+                  )}
+                  {card.rating !== null && (
+                    <span className="place-browse-rating">{card.rating.toFixed(1)}★</span>
+                  )}
+                  {ctxLabel && !selectedContext && (
+                    <span className="place-browse-context">{ctxLabel}</span>
+                  )}
+                </div>
+              </Link>
+              {userId && (
+                <div className="place-browse-triage">
+                  <TriageButtons
+                    userId={userId}
+                    contextKey={card.contextKey}
+                    placeId={card.placeId}
+                    size="sm"
+                  />
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
-      {filteredCards.length === 0 && (
+      {filteredCards.length === 0 && cards.length === 0 && (
+        <div className="place-grid-empty">
+          <p>You haven&apos;t discovered any places yet.</p>
+          <p className="text-muted">Start a chat to explore places and they&apos;ll appear here.</p>
+        </div>
+      )}
+
+      {filteredCards.length === 0 && cards.length > 0 && (
         <div className="place-grid-empty">
           <p>No places match your filters.</p>
           <button className="filter-clear" onClick={clearFilters}>
