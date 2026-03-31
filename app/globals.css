@@ -4359,6 +4359,41 @@ body {
 .place-browse-triage {
   display: flex;
   justify-content: flex-end;
+  padding: 0 var(--space-sm) var(--space-sm);
+}
+
+/* ── My Places hero thumbnail ── */
+.place-browse-hero-link {
+  display: block;
+}
+
+.place-browse-hero {
+  width: 100%;
+  height: 120px;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+/* ── My Places context-grouped layout ── */
+.my-places-grouped {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.my-places-context-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.my-places-context-heading {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--card-border);
+}
 
 /* ── Hot page place cards with images ── */
 .hot-place-card {
