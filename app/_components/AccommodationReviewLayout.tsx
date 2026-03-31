@@ -130,8 +130,12 @@ function AccommodationCard({
             background: GRADIENT,
           }}
         >
-          {matchScore != null && (
-            <span className="accomm-hero-match">⭐ {matchScore}</span>
+          {/* Preference score badge */}
+          {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+          {(discovery as any)._prefScore > 0 && (
+            <span className="accomm-hero-match" style={{ background: 'rgba(37,99,235,0.85)' }}>
+              ⭐ {Math.round((discovery as any)._prefScore)}
+            </span>
           )}
           {platform && (
             <span
@@ -265,43 +269,55 @@ export default function AccommodationReviewLayout({
       return false;
     });
 
-    // Sort by bookability priority
-    result = result.sort((a, b) => {
+    // Weighted preference score — John's priorities
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const preferenceScore = (d: typeof result[0]): number => {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const cottageA = (a as any)._cottage as Record<string, any> | undefined;
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const cottageB = (b as any)._cottage as Record<string, any> | undefined;
+      const c = (d as any)._cottage as Record<string, any> | undefined;
+      if (!c) return 0;
+      const scores = (c.scores ?? {}) as Record<string, number>;
+      const gates = (c.gates ?? {}) as Record<string, boolean>;
+      const pricePerWeek = c.pricePerWeek as number | undefined | null;
 
-      const hasHeroA = !!resolveImageUrlClient(a.heroImage);
-      const hasPriceA = cottageA?.pricePerWeek != null;
-      const hasVibesA = cottageA?.vibeTags && cottageA.vibeTags.length > 0;
-      const swimScoreA = cottageA?.scores?.swimming ?? 0;
+      // Core scores (each 0–10 scale, weighted)
+      const swimming  = (scores.swimming  ?? 0) * 25;   // 25% — top priority
+      const quiet     = (scores.quiet     ?? 0) * 20;   // 20%
+      const amenities = (scores.amenities ?? 0) * 15;   // 15%
+      const location  = (scores.location  ?? 0) * 15;   // 15%
 
-      const hasHeroB = !!resolveImageUrlClient(b.heroImage);
-      const hasPriceB = cottageB?.pricePerWeek != null;
-      const hasVibesB = cottageB?.vibeTags && cottageB.vibeTags.length > 0;
-      const swimScoreB = cottageB?.scores?.swimming ?? 0;
-
-      // Priority groups
-      const getPriority = (hasHero: boolean, hasPrice: boolean, hasVibes: boolean) => {
-        if (hasHero && hasPrice && hasVibes) return 1;
-        if (hasHero && hasPrice) return 2;
-        if (hasHero) return 3;
-        return 4;
-      };
-
-      const priorityA = getPriority(hasHeroA, hasPriceA, hasVibesA);
-      const priorityB = getPriority(hasHeroB, hasPriceB, hasVibesB);
-
-      if (priorityA !== priorityB) {
-        return priorityA - priorityB;
+      // Budget score (10% total)
+      let budgetScore = 5; // neutral if unknown
+      if (pricePerWeek != null) {
+        if (pricePerWeek <= 2500)      budgetScore = 10;
+        else if (pricePerWeek <= 3500) budgetScore = 5;
+        else if (pricePerWeek <= 5000) budgetScore = 2;
+        else                           budgetScore = 0;
       }
+      const budget = budgetScore;
 
-      // Within same group, sort by swim score (higher first)
-      return swimScoreB - swimScoreA;
-    });
+      // Gate bonuses (up to 15 points)
+      const gateScore =
+        (gates.dockAccess ? 8 : 0) +
+        (gates.shoreline  ? 4 : 0) +
+        (gates.private    ? 2 : 0) +
+        (gates.threeWeeks ? 1 : 0);
 
-    return result;
+      // Completeness tiebreaker (0–5)
+      const hasHero  = !!resolveImageUrlClient(d.heroImage) ? 2 : 0;
+      const hasPrice = pricePerWeek != null ? 2 : 0;
+      const hasVibes = (c.vibeTags?.length > 0) ? 1 : 0;
+
+      return swimming + quiet + amenities + location + budget + gateScore + hasHero + hasPrice + hasVibes;
+    };
+
+    // Sort by weighted preference score (higher = better match)
+    result = result.sort((a, b) => preferenceScore(b) - preferenceScore(a));
+
+    // Attach score to each item for badge display
+    return result.map(d => ({
+      ...d,
+      _prefScore: preferenceScore(d),
+    }));
   }, [discoveries, userId, context.key, tab]);
 
   return (
