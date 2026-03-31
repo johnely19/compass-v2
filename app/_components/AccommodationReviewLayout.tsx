@@ -253,6 +253,7 @@ export default function AccommodationReviewLayout({
   userId, context, discoveries, tab,
 }: AccommodationReviewLayoutProps) {
   const [, setRefresh] = useState(0);
+  const [showMap, setShowMap] = useState(false);
   useEffect(() => {
     const h = () => setRefresh(n => n + 1);
     window.addEventListener('triage-changed', h);
@@ -321,9 +322,17 @@ export default function AccommodationReviewLayout({
   }, [discoveries, userId, context.key, tab]);
 
   return (
-    <div className="accomm-review-layout">
+    <div className={`accomm-review-layout ${showMap ? 'accomm-review-layout--split' : ''}`}>
       {/* Card list */}
       <div className="accomm-review-list">
+        {/* Map toggle tab */}
+        <button
+          className={`accomm-map-toggle ${showMap ? 'accomm-map-toggle--active' : ''}`}
+          onClick={() => setShowMap(v => !v)}
+        >
+          🗺 {showMap ? 'Hide Map' : 'Show Map'}
+        </button>
+
         {filtered.map((d, idx) => (
           <AccommodationCard
             key={`${d.id}-${idx}`}
@@ -341,10 +350,12 @@ export default function AccommodationReviewLayout({
         )}
       </div>
 
-      {/* Sticky map sidebar */}
-      <div className="accomm-map-column">
-        <AccommodationMapSidebar discoveries={discoveries} />
-      </div>
+      {/* Map panel — hidden until toggled */}
+      {showMap && (
+        <div className="accomm-map-column">
+          <AccommodationMapSidebar discoveries={discoveries} />
+        </div>
+      )}
     </div>
   );
 }

@@ -5507,9 +5507,16 @@ body {
 /* Two-column layout: cards (65%) + map (35%) */
 .accomm-review-layout {
   display: grid;
-  grid-template-columns: 1fr 340px;
+  grid-template-columns: 1fr;  /* full width by default */
   gap: var(--space-lg);
   align-items: start;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.accomm-review-layout--split {
+  grid-template-columns: 1fr 1fr;  /* 50/50 when map is visible */
+  max-width: 100%;
 }
 
 .accomm-review-list {
@@ -5519,10 +5526,37 @@ body {
   min-width: 0;
 }
 
-/* Map column — sticky */
+.accomm-map-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  margin-bottom: var(--space-md);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-light, #eff6ff);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.accomm-map-toggle:hover {
+  background: color-mix(in srgb, var(--accent) 15%, white);
+}
+
+.accomm-map-toggle--active {
+  background: var(--accent);
+  color: white;
+}
+
+/* Map column — sticky when split */
 .accomm-map-column {
   position: sticky;
-  top: calc(60px + var(--space-md)); /* below nav */
+  top: calc(60px + var(--space-md));
+  height: calc(100vh - 80px);
+  overflow: hidden;
 }
 
 .accomm-map-sidebar {
