@@ -6,5 +6,9 @@
   "city": "",
   "rating": 4.4,
   "hero_image": null,
-  "stub": true
+  "stub": true,
+  "narrative": {
+    "blocks": [],
+    "summary": "You're in a small Brooklyn wine bar that's earned its 4.8 stars through consistency\u2014intimate, natural wine focused, the kind of place that feels like a secret even though everyone knows about it. Not a destination, just a really good option when you want something low-key and well-curated."
+  }
 }

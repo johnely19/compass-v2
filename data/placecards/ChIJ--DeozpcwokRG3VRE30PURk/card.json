@@ -12,9 +12,9 @@
       "Tuesday: Closed",
       "Wednesday: Closed",
       "Thursday: Closed",
-      "Friday: 10:00 PM – 6:00 AM",
-      "Saturday: 10:00 PM – 12:00 AM",
-      "Sunday: 12:00 AM – 10:00 PM"
+      "Friday: 10:00\u202fPM\u2009\u2013\u20096:00\u202fAM",
+      "Saturday: 10:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 12:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.3,
     "review_count": 1850,
@@ -26,18 +26,18 @@
     "url": "https://www.timeout.com/newyork/queens/ridgewood-queens-neighborhood-guide"
   },
   "narrative": {
-    "summary": "16,000 sq ft indoor/outdoor space — part beer garden, part dance venue, part chill backyard with hammocks. Beloved Mister Sunday parties. Spring opening means the garden is back. 4.3★ (1846 reviews). Perfect for a warm-weather visit with Dessa.",
+    "summary": "You're on a residential block in Ridgewood where Queens bleeds into Glendale, stepping through the door into 16,000 square feet that unfolds like a secret compound\u2014beer garden on one side, dance floor inside, hammocks strung in back. Mister Sunday is the Sunday day party that made this place a pilgrimage destination. The weakness: it doesn't open until spring, and the winter version is a much quieter beast.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a residential block in Ridgewood where Queens bleeds into Glendale, and then you step through the door into 16,000 square feet that unfolds like a secret compound. There's an actual dance floor with festival-grade sound, a sprawling beer garden strung with lights, and hammocks tucked into corners where you can collapse between sets. They give you a little speech at the entrance about phones staying in your pocket—it works, the crowd's here to move, not to document.",
+        "body": "You're on a residential block in Ridgewood where Queens bleeds into Glendale, and then you step through the door into 16,000 square feet that unfolds like a secret compound. There's an actual dance floor with festival-grade sound, a sprawling beer garden strung with lights, and hammocks tucked into corners where you can collapse between sets. They give you a little speech at the entrance about phones staying in your pocket\u2014it works, the crowd's here to move, not to document.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a venue with a bar program and the kind of snacks that make sense at 1 AM when you've been dancing for four hours. Expect drinks that run the full spectrum, from beer-garden basics to cocktails that hold up through a long night. The kitchen keeps it simple: the kind of bites you can eat standing up between DJs, priced so you can stay all day without thinking about it.",
+        "body": "This isn't a restaurant\u2014it's a venue with a bar program and the kind of snacks that make sense at 1 AM when you've been dancing for four hours. Expect drinks that run the full spectrum, from beer-garden basics to cocktails that hold up through a long night. The kitchen keeps it simple: the kind of bites you can eat standing up between DJs, priced so you can stay all day without thinking about it.",
         "id": "block-the-food-1"
       },
       {
@@ -50,7 +50,7 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Fun venue. Regularly has 12-hour plus events with DJs. Lots of my favorite DJs from Europe end up playing here. Great sound system, and unique atmosphere. Almost feels like a music festival inside.\n\nThere’s a fairly strict no phone policy, which helps add to the energy of the dance floor. Lots of drink options at the bar. Tons of places to sit down and relax, or even meditate.\"\n\n⭐⭐⭐⭐⭐ \"We ended up here after a show at Silo so we probably got there at like 2 am, it was the perfect place to go after hours. I'm sure it's great earlier in the night as well. My friend took us here and it couldn't have been more perfect. I love the little speech the give in the front entrance before letting you in, it made me feel safe. Idk if they had food but they have tons of snacks and delicious drinks, they even had coconut water for me because I needed to hydrate. It was such a good experience. The outdoor area is huge and now that I'm remembering I think they had food out there. They had tons of tables and beautiful lighting, they even had fall decorations out there. It was so cozy. I really appreciated that they had bathrooms outside. Then we went indoors to dance and it was such a cool dance floor with plants everywhere and cool lighting on the ceiling. I didn't want to leave! I was wishing they had heat lamps outside (maybe they do). All in all, it was perfect and I'd highly recommend checking it out.\"\n\n⭐⭐⭐⭐⭐ \"Wow, so fun. Went for the first time for an all-nighter and had an amazing experience. It reminded me of places I've been to in Europe. My rating is about the overall experience, but a large part of this rating is because of the staff. While waiting in line there was a guy behind me who was very drunk and he was saying slurs and verbally abusing (who I think) was his girlfriend. One of the bouncer's caught wind of this and told this guy that he and his friend's couldn't go in. He then started yelling racist language at the bouncer and was trying to provoke him into a fight. The bouncer was so level headed and got him out of there. After seeing all that happen, I knew Nowadays was a space space. Nowadays cares about the safety and comfort of their guests, and that's what makes it so good! Some other things I loved: the beautiful (and huge) outdoor space, the no-phones on the dance floor rule, the friendly people. Will definitely be back. Thank you Nowadays staff ❤️\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Fun venue. Regularly has 12-hour plus events with DJs. Lots of my favorite DJs from Europe end up playing here. Great sound system, and unique atmosphere. Almost feels like a music festival inside.\n\nThere\u2019s a fairly strict no phone policy, which helps add to the energy of the dance floor. Lots of drink options at the bar. Tons of places to sit down and relax, or even meditate.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We ended up here after a show at Silo so we probably got there at like 2 am, it was the perfect place to go after hours. I'm sure it's great earlier in the night as well. My friend took us here and it couldn't have been more perfect. I love the little speech the give in the front entrance before letting you in, it made me feel safe. Idk if they had food but they have tons of snacks and delicious drinks, they even had coconut water for me because I needed to hydrate. It was such a good experience. The outdoor area is huge and now that I'm remembering I think they had food out there. They had tons of tables and beautiful lighting, they even had fall decorations out there. It was so cozy. I really appreciated that they had bathrooms outside. Then we went indoors to dance and it was such a cool dance floor with plants everywhere and cool lighting on the ceiling. I didn't want to leave! I was wishing they had heat lamps outside (maybe they do). All in all, it was perfect and I'd highly recommend checking it out.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wow, so fun. Went for the first time for an all-nighter and had an amazing experience. It reminded me of places I've been to in Europe. My rating is about the overall experience, but a large part of this rating is because of the staff. While waiting in line there was a guy behind me who was very drunk and he was saying slurs and verbally abusing (who I think) was his girlfriend. One of the bouncer's caught wind of this and told this guy that he and his friend's couldn't go in. He then started yelling racist language at the bouncer and was trying to provoke him into a fight. The bouncer was so level headed and got him out of there. After seeing all that happen, I knew Nowadays was a space space. Nowadays cares about the safety and comfort of their guests, and that's what makes it so good! Some other things I loved: the beautiful (and huge) outdoor space, the no-phones on the dance floor rule, the friendly people. Will definitely be back. Thank you Nowadays staff \u2764\ufe0f\""
       }
     ]
   }

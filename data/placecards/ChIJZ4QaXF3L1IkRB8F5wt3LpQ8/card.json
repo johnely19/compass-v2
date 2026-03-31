@@ -9,11 +9,11 @@
     "type": "bar",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 PM – 2:00 AM",
-      "Wednesday: 5:00 PM – 2:00 AM",
-      "Thursday: 5:00 PM – 2:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.7,
@@ -26,18 +26,18 @@
     "url": "https://www.google.com/maps/place/?q=place_id:ChIJZ4QaXF3L1IkRB8F5wt3LpQ8"
   },
   "narrative": {
-    "summary": "Speakeasy-ish, old-world railcar glamour; strong rating + late-night hours Tue–Sat.",
+    "summary": "You're in the historic St. Lawrence district, ducking through an unmarked entrance that drops you into what feels like a 1920s Pullman car reimagined as a cocktail den. The lighting is low enough that your eyes adjust slowly\u2014by the time they do, you're already ordering a second round. Speakeasy-ish, old-world railcar glamour, late-night hours Tuesday through Saturday.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the historic St. Lawrence district, ducking through an unmarked entrance that drops you into what feels like a 1920s Pullman car reimagined as a cocktail den. The lighting is low and amber, all dark wood paneling and jewel-toned velvet banquettes that run along the walls. It's narrow and intimate—maybe a dozen tables max—with a polished bar taking up most of the real estate, the kind of place where everyone's voice drops half an octave the moment they step inside.",
+        "body": "You're in the historic St. Lawrence district, ducking through an unmarked entrance that drops you into what feels like a 1920s Pullman car reimagined as a cocktail den. The lighting is low and amber, all dark wood paneling and jewel-toned velvet banquettes that run along the walls. It's narrow and intimate\u2014maybe a dozen tables max\u2014with a polished bar taking up most of the real estate, the kind of place where everyone's voice drops half an octave the moment they step inside.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a cocktail bar first, so come for the drinks—classic builds done properly, plus a rotating menu of house originals that lean theatrical without tipping into gimmick. Expect to spend $18–22 per cocktail, which tracks for the effort and the setting. They run themed menus (Valentine's Day trios, seasonal specials), and the bartenders know their way around both a Negroni and whatever agave-forward experiment they're testing that week.",
+        "body": "This is a cocktail bar first, so come for the drinks\u2014classic builds done properly, plus a rotating menu of house originals that lean theatrical without tipping into gimmick. Expect to spend $18\u201322 per cocktail, which tracks for the effort and the setting. They run themed menus (Valentine's Day trios, seasonal specials), and the bartenders know their way around both a Negroni and whatever agave-forward experiment they're testing that week.",
         "id": "block-the-food-1"
       },
       {
@@ -50,7 +50,7 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The typical speakeasy fashion entrance sets up an exciting journey. Then the interior, lighting, ambiance, service, … all come together organically to echo the mysterious and intimate theme.\n\nDrinks are great. Pricy-ish as you would expect from this kind of establishments, but tasty!\"\n\n⭐⭐⭐⭐⭐ \"The valentines day drinks were all amazing. We enjoyed all 3. We are definitively coming back to try their regular drinks. Ambiance was dark and cozy\"\n\n⭐⭐⭐⭐ \"Great atmosphere, good music, mellow vibe for an easy night out. Covering all the classic cocktails, with a few original twists from the kitchen, it's a good all-round experience. The staff can be a little pushy, but otherwise, it's a nice spot for a slow-and-easy Saturday.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The typical speakeasy fashion entrance sets up an exciting journey. Then the interior, lighting, ambiance, service, \u2026 all come together organically to echo the mysterious and intimate theme.\n\nDrinks are great. Pricy-ish as you would expect from this kind of establishments, but tasty!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The valentines day drinks were all amazing. We enjoyed all 3. We are definitively coming back to try their regular drinks. Ambiance was dark and cozy\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great atmosphere, good music, mellow vibe for an easy night out. Covering all the classic cocktails, with a few original twists from the kitchen, it's a good all-round experience. The staff can be a little pushy, but otherwise, it's a nice spot for a slow-and-easy Saturday.\""
       }
     ]
   }

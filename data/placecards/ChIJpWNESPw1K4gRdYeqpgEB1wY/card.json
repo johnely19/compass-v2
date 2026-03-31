@@ -12,31 +12,31 @@
     "text": "grocerybusiness.ca"
   },
   "narrative": {
-    "summary": "Opened May 2025 inside a stunning 1902 heritage post office building. Butcher + artisan pantry. The building alone is worth the visit — architecture meets food. 4.8★, 73 reviews. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "You're inside a stunning 1902 heritage post office building where the architect understood the bones\u2014marble counter running the full length of one wall, ceiling detail that makes you stop mid-sentence. The space is part butcher counter, part market shelves, all vaulted heritage charm. The building alone is worth the visit, but the meat and artisan goods justify the trip.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on West Queen West, just past the Gladstone, in a 1902 heritage post office building that makes most new constructions look like cardboard. Inside, it's butcher counter and market stalls—the kind of layout where century-old bones meet refrigerated cases full of dry-aged ribeyes and Mennonite eggs. The architecture does half the work: high ceilings, original details, and a tight produce section that feels more curated pantry than grocery aisle.",
+        "body": "You're on West Queen West, just past the Gladstone, in a 1902 heritage post office building that makes most new constructions look like cardboard. Inside, it's butcher counter and market stalls\u2014the kind of layout where century-old bones meet refrigerated cases full of dry-aged ribeyes and Mennonite eggs. The architecture does half the work: high ceilings, original details, and a tight produce section that feels more curated pantry than grocery aisle.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a butcher shop first—serious cuts you won't find at the chains, priced shockingly fair for the quality—but the play is in what they're making in-house. Fresh pasta, sandwiches built to order, and a frozen section that goes deeper than you'd expect from a neighbourhood spot. The meat selection runs from everyday steaks to the stuff you'd normally need a dedicated butcher for, and the pantry items skew artisan without the usual markups. It's provisioning, not dining, but the prepared food proves they know what to do with what they're selling.",
+        "body": "This is a butcher shop first\u2014serious cuts you won't find at the chains, priced shockingly fair for the quality\u2014but the play is in what they're making in-house. Fresh pasta, sandwiches built to order, and a frozen section that goes deeper than you'd expect from a neighbourhood spot. The meat selection runs from everyday steaks to the stuff you'd normally need a dedicated butcher for, and the pantry items skew artisan without the usual markups. It's provisioning, not dining, but the prepared food proves they know what to do with what they're selling.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Stop in when you're stocking up for the week and want to actually look forward to cooking—or when you need a fast lunch and the house-made sandwiches sound better than another sad desk salad. Also worth a deliberate visit if you care about architecture and want to see a heritage building put to proper use.",
+        "body": "Stop in when you're stocking up for the week and want to actually look forward to cooking\u2014or when you need a fast lunch and the house-made sandwiches sound better than another sad desk salad. Also worth a deliberate visit if you care about architecture and want to see a heritage building put to proper use.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Pretty unbelievable prices for the quality of meat! This place won’t stay quiet for long as more people realize this. Better than the budget grocery stores, and runs laps around them in quality. Mennonite eggs. Massive selection of meats that you can’t get unless you’re at a butcher. Tight little produce section, great frozen food selection, wide array of pantry items.\"\n\n⭐⭐⭐⭐⭐ \"I live right by the store and was so excited when they opened. The neighbourhood definitely needed this. Fresh meat selections, sometimes even cheaper than Freshco, and the quality is top notch!! I heard that prepared food like pasta and sandwiches are made in house and they are SO GOOD!! I wish to see a little more selection of fruits and veggies too but it’s definitely my new go-to grocery store!\"\n\n⭐⭐⭐⭐⭐ \"This will definitely be my new go to grocery store. Very clean, value priced, staff is very welcoming. Great selection of meats- prime cuts available. You won’t be disappointed.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Pretty unbelievable prices for the quality of meat! This place won\u2019t stay quiet for long as more people realize this. Better than the budget grocery stores, and runs laps around them in quality. Mennonite eggs. Massive selection of meats that you can\u2019t get unless you\u2019re at a butcher. Tight little produce section, great frozen food selection, wide array of pantry items.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I live right by the store and was so excited when they opened. The neighbourhood definitely needed this. Fresh meat selections, sometimes even cheaper than Freshco, and the quality is top notch!! I heard that prepared food like pasta and sandwiches are made in house and they are SO GOOD!! I wish to see a little more selection of fruits and veggies too but it\u2019s definitely my new go-to grocery store!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This will definitely be my new go to grocery store. Very clean, value priced, staff is very welcoming. Great selection of meats- prime cuts available. You won\u2019t be disappointed.\""
       }
     ]
   }

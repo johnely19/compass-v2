@@ -8,13 +8,13 @@
     "address": "Little Italy / College",
     "type": "restaurant",
     "hours": [
-      "Monday: 8:00 AM – 10:00 PM",
-      "Tuesday: 8:00 AM – 10:00 PM",
-      "Wednesday: 8:00 AM – 10:00 PM",
-      "Thursday: 8:00 AM – 10:00 PM",
-      "Friday: 8:00 AM – 10:00 PM",
-      "Saturday: 8:00 AM – 10:00 PM",
-      "Sunday: 8:00 AM – 10:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 68,
@@ -25,31 +25,31 @@
     "text": "Discovered via bottegavolo.com"
   },
   "narrative": {
-    "summary": "Natural wine imports (Keep6 agency) + craft beer from their hidden in-house brewery. Coffee bar too. Triple-threat: café, bottle shop, nano-brewery. 4.4★ (68 reviews).",
+    "summary": "You're on College just west of Grace, walking into an old cinema gutted but not sanitized\u2014original bones, high ceilings, rows of bottles where film reels once sat. Natural wine imports (Keep6 agency) plus craft beer from their hidden in-house brewery in the back room most people don't find on first visit. Triple threat: caf\u00e9, bottle shop, nano-brewery.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "On College just west of Grace, you're walking into an old cinema that's been gutted but not sanitized—original bones, high ceilings, rows of bottles lining shelves where film reels once sat. The front is all coffee bar and retail, natural wines stacked like a collector's library, then it opens into a dining room with wooden tables and a view straight back to the nano-brewery tanks. It's part European bottle shop, part neighbourhood hang, lit warm enough that you want to settle in.",
+        "body": "On College just west of Grace, you're walking into an old cinema that's been gutted but not sanitized\u2014original bones, high ceilings, rows of bottles lining shelves where film reels once sat. The front is all coffee bar and retail, natural wines stacked like a collector's library, then it opens into a dining room with wooden tables and a view straight back to the nano-brewery tanks. It's part European bottle shop, part neighbourhood hang, lit warm enough that you want to settle in.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu skews Italian but stays loose—fresh pasta, seasonal small plates, whatever Julian and the kitchen are excited about that week. Expect things like house-made focaccia still hot from the oven, crudo with good olive oil, something grilled and simple that lets the ingredients speak. The real draw is pairing it all with natural wines from their Keep6 imports or a house-brewed beer you won't find anywhere else. Plates run reasonable for what you're getting, and the whole point is to linger and try a few things.",
+        "body": "The menu skews Italian but stays loose\u2014fresh pasta, seasonal small plates, whatever Julian and the kitchen are excited about that week. Expect things like house-made focaccia still hot from the oven, crudo with good olive oil, something grilled and simple that lets the ingredients speak. The real draw is pairing it all with natural wines from their Keep6 imports or a house-brewed beer you won't find anywhere else. Plates run reasonable for what you're getting, and the whole point is to linger and try a few things.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your spot when you want to eat well without the ceremony—a weeknight dinner where you're just as interested in the wine list as the menu, or when you're introducing someone to natural wines and need food that won't compete. Also ideal for a solo meal at the bar with a book and a bottle you've been curious about.",
+        "body": "This is your spot when you want to eat well without the ceremony\u2014a weeknight dinner where you're just as interested in the wine list as the menu, or when you're introducing someone to natural wines and need food that won't compete. Also ideal for a solo meal at the bar with a book and a bottle you've been curious about.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Three of us ladies decided to indulge in a delightful dinner at Bottega Volo on College Street, and it was truly an unforgettable experience. Julian, the owner, graciously introduced himself and his warmth and professionalism added to the charm of the evening. He recommended several dishes, and we eagerly tried them all. The food was exceptionally fresh, piping hot, and absolutely delicious. The atmosphere was inviting, and the service was impeccable. We had such a wonderful time that we’re already looking forward to exploring more exciting options from their menu!\"\n\n⭐⭐⭐⭐⭐ \"Amazing spot. If you’re looking for special wines, beer and food that you can’t find anywhere else, this is the place. Love that they’ve taken over the old cinema and kept it authentic. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Favourite spot in little Italy hands down. Coffee and Italian pastries in the morning, amazing sandwiches for lunch, and arguably one of the best pantries in the city. The staff is always kind and helpful when trying to choose something from their massive wine selection.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Three of us ladies decided to indulge in a delightful dinner at Bottega Volo on College Street, and it was truly an unforgettable experience. Julian, the owner, graciously introduced himself and his warmth and professionalism added to the charm of the evening. He recommended several dishes, and we eagerly tried them all. The food was exceptionally fresh, piping hot, and absolutely delicious. The atmosphere was inviting, and the service was impeccable. We had such a wonderful time that we\u2019re already looking forward to exploring more exciting options from their menu!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing spot. If you\u2019re looking for special wines, beer and food that you can\u2019t find anywhere else, this is the place. Love that they\u2019ve taken over the old cinema and kept it authentic. Highly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Favourite spot in little Italy hands down. Coffee and Italian pastries in the morning, amazing sandwiches for lunch, and arguably one of the best pantries in the city. The staff is always kind and helpful when trying to choose something from their massive wine selection.\""
       }
     ]
   }

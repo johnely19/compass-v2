@@ -5,16 +5,16 @@
     "place_id": "ChIJ16XlVQBbwokRgf0iOTiIPiU",
     "name": "Golden Ratio",
     "city": "NYC",
-    "address": "Clinton Hill (216½ Greene Ave)",
+    "address": "Clinton Hill (216\u00bd Greene Ave)",
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:30 PM – 12:00 AM",
-      "Thursday: 5:30 PM – 12:00 AM",
-      "Friday: 5:30 PM – 12:00 AM",
-      "Saturday: 1:00 PM – 12:00 AM",
-      "Sunday: 1:00 – 10:00 PM"
+      "Wednesday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 1:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 1:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 40,
@@ -26,31 +26,31 @@
     "url": "https://www.bonappetit.com/story/best-bars-new-york-city"
   },
   "narrative": {
-    "summary": "Zero-waste cocktail bar from the Cafe Mado/Place des Fêtes team. Every drink comes spirited + NA. Greenmarket scraps turned into cocktails via collab with Acid Spirits distillery. Bon Appétit's Best Bars in NYC list, Feb 2026. 4.3★ (40 reviews). Short ride from Bushwick.",
+    "summary": "You're on a quiet Greene Avenue block in Clinton Hill, half an address painted on the door. Inside, the room runs narrow and warm\u2014a bar where you can watch the process of turning Greenmarket scraps into cocktails via collab with Acid Spirits distillery. The zero-waste concept means the menu changes with what's available\u2014you can't plan ahead, but that's the point.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Greene Ave block in Clinton Hill, half an address painted on the door. Inside, the room runs narrow and warm—low lighting, a few small tables, and a bar where you can watch bartenders turn vegetable scraps and greenmarket discards into something you'd actually want to drink. It feels more like someone's very well-stocked living room than a cocktail showpiece.",
+        "body": "You're on a quiet Greene Ave block in Clinton Hill, half an address painted on the door. Inside, the room runs narrow and warm\u2014low lighting, a few small tables, and a bar where you can watch bartenders turn vegetable scraps and greenmarket discards into something you'd actually want to drink. It feels more like someone's very well-stocked living room than a cocktail showpiece.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a zero-waste cocktail program first, but the kitchen backs it up with a tight menu of small plates that share the same resourcefulness. You'll find things like fried hake with potatoes, flatbread that's worth ordering, and a couple of desserts that people keep mentioning in reviews. The Cafe Mado and Place des Fêtes team is behind it, so expect that same thoughtful approach—nothing wasted, everything considered. Small plates run affordable enough to order three or four and still have money for the real draw: the drinks.",
+        "body": "This is a zero-waste cocktail program first, but the kitchen backs it up with a tight menu of small plates that share the same resourcefulness. You'll find things like fried hake with potatoes, flatbread that's worth ordering, and a couple of desserts that people keep mentioning in reviews. The Cafe Mado and Place des F\u00eates team is behind it, so expect that same thoughtful approach\u2014nothing wasted, everything considered. Small plates run affordable enough to order three or four and still have money for the real draw: the drinks.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your date night spot when one of you isn't drinking, or when you both are but don't want to make a thing of it—every cocktail comes spirited and non-alcoholic, no questions asked. Also ideal for a Tuesday when you want something low-key but not boring, somewhere you can actually talk.",
+        "body": "This is your date night spot when one of you isn't drinking, or when you both are but don't want to make a thing of it\u2014every cocktail comes spirited and non-alcoholic, no questions asked. Also ideal for a Tuesday when you want something low-key but not boring, somewhere you can actually talk.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This is the place. Really lovely service and a full menu that offers drinks with and without alcohol. We had the fried hake and potatoes, plus the flatbread and both desserts. Will be coming back.\"\n\n⭐⭐⭐⭐⭐ \"Went here on a date night. Finally a cocktail bar that takes non-alcoholic drinks seriously! The vibe was warm, the drinks were cold and the food was fantastic.\"\n\n⭐⭐⭐⭐⭐ \"This is the most inspired place to go out for drinks, whether you consume alcohol or not. And all the small plates are delicious! Friendly, knowledgable, and passionate servers too.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is the place. Really lovely service and a full menu that offers drinks with and without alcohol. We had the fried hake and potatoes, plus the flatbread and both desserts. Will be coming back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went here on a date night. Finally a cocktail bar that takes non-alcoholic drinks seriously! The vibe was warm, the drinks were cold and the food was fantastic.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is the most inspired place to go out for drinks, whether you consume alcohol or not. And all the small plates are delicious! Friendly, knowledgable, and passionate servers too.\""
       }
     ]
   }

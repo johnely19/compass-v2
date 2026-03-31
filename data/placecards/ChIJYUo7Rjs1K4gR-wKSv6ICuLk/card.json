@@ -7,12 +7,12 @@
     "type": "restaurant",
     "place_id": "ChIJYUo7Rjs1K4gR-wKSv6ICuLk",
     "hours": [
-      "Monday: 5:30 – 10:00 PM",
-      "Tuesday: 5:30 – 10:00 PM",
-      "Wednesday: 5:30 – 10:00 PM",
-      "Thursday: 5:30 – 10:00 PM",
-      "Friday: 5:30 – 10:30 PM",
-      "Saturday: 5:30 – 10:30 PM",
+      "Monday: 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:30\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 5:30\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 5:30\u2009\u2013\u200910:30\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.5,
@@ -25,31 +25,31 @@
     "url": "https://www.thestar.com/life/food-and-drink/torontos-13-best-date-night-restaurants-recommended-by-the-citys-top-chefs/article_7af33279-eeeb-4906-8702-4355a6892dc1.html"
   },
   "narrative": {
-    "summary": "Cozy French wine bar that Toronto's top chefs choose for their own date nights — featured in Toronto Star's 'Best Date Night Restaurants' (Feb 2026). Intimate room, natural wines, seasonal French plates. 4.5★ (581 reviews). The kind of place where the meal becomes a conversation. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "You're on a residential stretch of Harbord Village, the kind of block where a wine bar feels like a secret kept by people who know. Inside, it's tight\u2014low light, close quarters, the acoustics that make every conversation feel private even when you're elbow-to-elbow with strangers. The menu rewrites itself weekly: sea urchin one night, lamb heart the next, trout folded into buttery pastry with leeks\u2014French in spirit but never fussy.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a residential stretch of Harbord Village, the kind of block where a wine bar feels like a secret kept by people who know. Inside, it's tight—maybe a dozen seats at most, a few small tables and a bar where you can watch hands work over cutting boards and cocktail tins. Low light, close quarters, the acoustics that make every conversation feel private even when you're elbow-to-elbow with strangers.",
+        "body": "You're on a residential stretch of Harbord Village, the kind of block where a wine bar feels like a secret kept by people who know. Inside, it's tight\u2014maybe a dozen seats at most, a few small tables and a bar where you can watch hands work over cutting boards and cocktail tins. Low light, close quarters, the acoustics that make every conversation feel private even when you're elbow-to-elbow with strangers.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu rewrites itself weekly, pulling from whatever's good—sea urchin one night, lamb heart the next, trout folded into buttery pastry with leeks. It's French in spirit but not in the white-tablecloth sense: seasonal plates that feel considered but never fussy, the kind of cooking that makes you order a third thing just to see what they do with it. Natural wines run deep, and if you're sitting at the bar, you'll watch small dishes come together in real time. Expect to spend around $60-80 per person with a couple glasses of wine.",
+        "body": "The menu rewrites itself weekly, pulling from whatever's good\u2014sea urchin one night, lamb heart the next, trout folded into buttery pastry with leeks. It's French in spirit but not in the white-tablecloth sense: seasonal plates that feel considered but never fussy, the kind of cooking that makes you order a third thing just to see what they do with it. Natural wines run deep, and if you're sitting at the bar, you'll watch small dishes come together in real time. Expect to spend around $60-80 per person with a couple glasses of wine.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Date night when you want a place that doesn't announce itself—the kind of spot where you forget to take photos past the first course. Also ideal for a solo seat at the bar if you're in the mood to eat well and watch the room work.",
+        "body": "Date night when you want a place that doesn't announce itself\u2014the kind of spot where you forget to take photos past the first course. Also ideal for a solo seat at the bar if you're in the mood to eat well and watch the room work.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Date night with the lady - we got lost in the tasty food and awesome service, so we didn’t take any photos beyond the first course… that’s how it should be, right!? Highlights were the sea urchin and steak, both incredible. Had fun trying lamb heart. Seems like their menu is always getting shuffled - I’d recommend exploring and trying something new on your visit. It’ll be great.\"\n\n⭐⭐⭐⭐⭐ \"Great spot with amazing service. It’s a small, cozy space so doesn’t feel snobby/too snobby. We sat at the bar and was cool watching them prep cocktails and small dishes. The menu changes weekly.\nWe had the tuna (very soft and flavourful), lamb tartar (very mild and stuffed olives were great) and the very unique trout and leek pastry puff. The French toast was a cool savoury dessert. The server was very knowledgeable.\"\n\n⭐⭐⭐⭐ \"Dreyfus is absolutely incredible and without a doubt one of the best restaurants in the city. The various dishes are perfectly executed and full of flavour in exquisite combinations that work flawlessly. The ever changing menu is relatively small but works fantastically since you can order a few dishes and sample almost everything. I’ve been to the restaurant maybe 5 times and I was positively surprised every single one of them.\n\nThe only slight negative part of my last visit was the service. Our server was very nonchalant when explaining the dishes and recommended two wines that my table didn’t enjoy at all. On top of that, she said one of the bottles was “somewhere around $90” but when the bill arrived it was 130 - sorry but 50% more expensive than advertised is not ok - not because of the money, as a principle.\n\nI highly recommend this place to anyone that loves food. Definitely worth a night out.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Date night with the lady - we got lost in the tasty food and awesome service, so we didn\u2019t take any photos beyond the first course\u2026 that\u2019s how it should be, right!? Highlights were the sea urchin and steak, both incredible. Had fun trying lamb heart. Seems like their menu is always getting shuffled - I\u2019d recommend exploring and trying something new on your visit. It\u2019ll be great.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great spot with amazing service. It\u2019s a small, cozy space so doesn\u2019t feel snobby/too snobby. We sat at the bar and was cool watching them prep cocktails and small dishes. The menu changes weekly.\nWe had the tuna (very soft and flavourful), lamb tartar (very mild and stuffed olives were great) and the very unique trout and leek pastry puff. The French toast was a cool savoury dessert. The server was very knowledgeable.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Dreyfus is absolutely incredible and without a doubt one of the best restaurants in the city. The various dishes are perfectly executed and full of flavour in exquisite combinations that work flawlessly. The ever changing menu is relatively small but works fantastically since you can order a few dishes and sample almost everything. I\u2019ve been to the restaurant maybe 5 times and I was positively surprised every single one of them.\n\nThe only slight negative part of my last visit was the service. Our server was very nonchalant when explaining the dishes and recommended two wines that my table didn\u2019t enjoy at all. On top of that, she said one of the bottles was \u201csomewhere around $90\u201d but when the bill arrived it was 130 - sorry but 50% more expensive than advertised is not ok - not because of the money, as a principle.\n\nI highly recommend this place to anyone that loves food. Definitely worth a night out.\""
       }
     ]
   }

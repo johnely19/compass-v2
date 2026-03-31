@@ -8,13 +8,13 @@
     "address": "Little Italy (College St)",
     "type": "bar",
     "hours": [
-      "Monday: 5:00 – 11:00 PM",
-      "Tuesday: 5:00 – 11:00 PM",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 PM – 1:00 AM",
-      "Saturday: 5:00 PM – 1:00 AM",
-      "Sunday: 5:00 – 11:00 PM"
+      "Monday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Sunday: 5:00\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 5,
     "review_count": 22,
@@ -25,31 +25,31 @@
     "text": "Discovered via toronto.com"
   },
   "narrative": {
-    "summary": "Pompette team replaced Vinoteca Pompette with intentional wine-bar concept. 5.0 rating, 18 reviews.",
+    "summary": "You're on College Street in a room the Pompette team rebuilt as a proper wine bar\u2014dim lighting, a focused counter where you can talk to whoever's pouring, a list that favors growers you haven't heard of yet. The 18 reviews and perfect score signal this is still finding its regulars. Come ready to try something you won't find at the typical wine bar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on College Street in Little Italy, in the spot where Vinoteca Pompette used to be. The Pompette team rebuilt it as a proper wine bar—think dim lighting, a focused counter where you can watch bartenders work, and a handful of small tables that fill up fast. It's tight enough that you'll overhear conversations, but the energy feels intentional, not cramped.",
+        "body": "You're on College Street in Little Italy, in the spot where Vinoteca Pompette used to be. The Pompette team rebuilt it as a proper wine bar\u2014think dim lighting, a focused counter where you can watch bartenders work, and a handful of small tables that fill up fast. It's tight enough that you'll overhear conversations, but the energy feels intentional, not cramped.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is snack-forward Italian bar food—devilled eggs with something sharp and creamy, char-blistered artichokes that arrive glistening, crispy smashed potatoes with enough salt and fat to make you order another cocktail. The menu's small by design, built for grazing between drinks rather than a full meal. Expect plates in the $10-18 range, sized to share or not.",
+        "body": "This is snack-forward Italian bar food\u2014devilled eggs with something sharp and creamy, char-blistered artichokes that arrive glistening, crispy smashed potatoes with enough salt and fat to make you order another cocktail. The menu's small by design, built for grazing between drinks rather than a full meal. Expect plates in the $10-18 range, sized to share or not.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Date night when you want conversation over a long string of drinks and small plates, or when you're catching up with someone you haven't seen in years and need a server who'll notice. The bartenders here pay attention—they'll bring out aged cognac if the moment calls for it.",
+        "body": "Date night when you want conversation over a long string of drinks and small plates, or when you're catching up with someone you haven't seen in years and need a server who'll notice. The bartenders here pay attention\u2014they'll bring out aged cognac if the moment calls for it.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Met up with drinks for a friend and was really pleased at this spot!\n\nThe cocktails were delicious (Spicy Margherita ftw) and the service really stood out. Both servers were really friendly and even brought out complementary congnac for my friend and I (haven’t seen each other in 10 years, hence the 10 year-aged cognac - very attentive of our server!).\n\nThanks for a great time! Would highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Took my boyfriend here for date night :) devilled eggs and artichokes were standouts as well as the cynar orange cocktail\"\n\n⭐⭐⭐⭐⭐ \"Amazing drinks, friendly staff and great atmosphere. The crispy potato and artichokes were absolutely delicious. Highly recommended!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Met up with drinks for a friend and was really pleased at this spot!\n\nThe cocktails were delicious (Spicy Margherita ftw) and the service really stood out. Both servers were really friendly and even brought out complementary congnac for my friend and I (haven\u2019t seen each other in 10 years, hence the 10 year-aged cognac - very attentive of our server!).\n\nThanks for a great time! Would highly recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Took my boyfriend here for date night :) devilled eggs and artichokes were standouts as well as the cynar orange cocktail\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing drinks, friendly staff and great atmosphere. The crispy potato and artichokes were absolutely delicious. Highly recommended!\""
       }
     ]
   }

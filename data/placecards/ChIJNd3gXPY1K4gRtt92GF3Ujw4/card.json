@@ -9,11 +9,11 @@
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 4:00 – 11:00 PM",
-      "Wednesday: 4:00 – 11:00 PM",
-      "Thursday: 4:00 – 11:00 PM",
-      "Friday: 4:00 PM – 12:00 AM",
-      "Saturday: 4:00 PM – 12:00 AM",
+      "Tuesday: 4:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 4:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 4:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 4:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 4:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.6,
@@ -25,31 +25,31 @@
     "text": "Discovered via streetsoftoronto.com"
   },
   "narrative": {
-    "summary": "Just opened inside historic Gladstone House, reviving the legendary Melody Bar space. Monthly Dinner & Drag with Tynomi Banks, rotating live shows. Soulful retro-inspired restaurant + music venue. 4.6★ (32 reviews — brand new).",
+    "summary": "You're on Queen West at Gladstone, inside the Victorian-era hotel where the Melody Bar used to pack in crowds. The room leans into cassette-tape nostalgia without being cloying\u2014the food is serious even if drag nights are the headline. Monthly Dinner & Drag with Tynomi Banks keeps the energy high.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Queen West at Gladstone, inside the Victorian-era hotel where the Melody Bar used to pack in crowds decades ago. Walk into a room that leans into the cassette-tape nostalgia without overdoing it—velvet banquettes, warm Edison bulbs, a stage that hosts rotating live music and monthly drag shows. It feels like a lounge that actually wants you to stay past dinner.",
+        "body": "You're on Queen West at Gladstone, inside the Victorian-era hotel where the Melody Bar used to pack in crowds decades ago. Walk into a room that leans into the cassette-tape nostalgia without overdoing it\u2014velvet banquettes, warm Edison bulbs, a stage that hosts rotating live music and monthly drag shows. It feels like a lounge that actually wants you to stay past dinner.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu skews retro comfort with a few sharp pivots—think corn ribs that guests can't stop talking about, cocktails with names like Kiss Cam and Extra Dirty Martini that taste as good as they sound cheeky. This isn't fine dining; it's soulful, shareable plates designed to complement the music and the scene. Expect mains and shareables that won't wreck your budget, priced to keep you ordering another round.",
+        "body": "The menu skews retro comfort with a few sharp pivots\u2014think corn ribs that guests can't stop talking about, cocktails with names like Kiss Cam and Extra Dirty Martini that taste as good as they sound cheeky. This isn't fine dining; it's soulful, shareable plates designed to complement the music and the scene. Expect mains and shareables that won't wreck your budget, priced to keep you ordering another round.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Book the monthly Dinner & Drag with Tynomi Banks if you want a full night out, or slip in on a weeknight when live music's on and you can snag a banquette without a wait. It's the kind of place that rewards repeat visits—once to scope it, twice to settle in.",
+        "body": "Book the monthly Dinner & Drag with Tynomi Banks if you want a full night out, or slip in on a weeknight when live music's on and you can snag a banquette without a wait. It's the kind of place that rewards repeat visits\u2014once to scope it, twice to settle in.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Cassette is quickly becoming my number one restaurant. This was already my second visit, and I loved it just as much as the first. The interior and overall vibe are amazing, and even the music was perfect.\n\nI especially loved the cocktail menu — the names are adorable and the drinks taste great. My top recommendations are the Extra Dirty Martini and the Kiss Cam.\n\nA huge thank-you to Alex, the manager, for taking such good care of our table. It made the whole experience even better. I’ll definitely be coming back again!\"\n\n⭐⭐⭐⭐⭐ \"I went to the Tynomi Banks Drag Show and she was honestly the funniest! Would definitely come back for another show.\nService, food, and drinks were also great, specially the corn ribs, they’re insane!!!\"\n\n⭐⭐⭐⭐ \"Love the vibe here. I visited during the Saturday sound sommelier. The throwback music set a perfect ambiance. It was loud enough to enjoy but not so loud that you can’t have a conversation. I only had drinks and I wasn’t a huge fan of their house cocktail menu, but there’s always the option to order a classic. I’ll definitely be back and maybe try the food as well.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Cassette is quickly becoming my number one restaurant. This was already my second visit, and I loved it just as much as the first. The interior and overall vibe are amazing, and even the music was perfect.\n\nI especially loved the cocktail menu \u2014 the names are adorable and the drinks taste great. My top recommendations are the Extra Dirty Martini and the Kiss Cam.\n\nA huge thank-you to Alex, the manager, for taking such good care of our table. It made the whole experience even better. I\u2019ll definitely be coming back again!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I went to the Tynomi Banks Drag Show and she was honestly the funniest! Would definitely come back for another show.\nService, food, and drinks were also great, specially the corn ribs, they\u2019re insane!!!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Love the vibe here. I visited during the Saturday sound sommelier. The throwback music set a perfect ambiance. It was loud enough to enjoy but not so loud that you can\u2019t have a conversation. I only had drinks and I wasn\u2019t a huge fan of their house cocktail menu, but there\u2019s always the option to order a classic. I\u2019ll definitely be back and maybe try the food as well.\""
       }
     ]
   }

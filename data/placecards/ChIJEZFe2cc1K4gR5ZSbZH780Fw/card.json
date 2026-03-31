@@ -17,31 +17,31 @@
     "text": "aburihana.com"
   },
   "narrative": {
-    "summary": "Fine Japanese institution announcing reimagined dining room + shared-plates format for late Spring 2026. Contemporary Japanese fine dining, 4.6★ (283 reviews). $$$$. Worth watching for the relaunch. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "You're in Yorkville watching wagyu carved with a focus that makes the room feel quieter than it is. Counter seating puts you close enough to watch knife work happen in real time. The reimagined dining room is moving toward shared plates, which will make the counter even more the place to be.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet stretch of Yorkville Avenue, the kind of block where glass doors open into hushed dining rooms with real ambition. Inside, counter seating puts you close enough to watch knife work and flame, while private rooms with sliding screens handle the serious occasions. The place is going dark for a full redesign in late spring 2026—new layout, shared-plates format—so what you see now won't be what you get next year.",
+        "body": "You're on a quiet stretch of Yorkville Avenue, the kind of block where glass doors open into hushed dining rooms with real ambition. Inside, counter seating puts you close enough to watch knife work and flame, while private rooms with sliding screens handle the serious occasions. The place is going dark for a full redesign in late spring 2026\u2014new layout, shared-plates format\u2014so what you see now won't be what you get next year.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is contemporary Japanese fine dining at the high end, the kind where each dish arrives with a story and ingredients you don't see everywhere—one reviewer singles out something called 'the Rose,' whatever blooms in that preparation. The kitchen runs through duck, mushrooms, and a procession of plates that hover around the $$$$-tier, though recent chef turnover means the menu's in flux ahead of the relaunch. Counter seats let you watch the theatrics: fire, precise cuts, plating that earns the price tag.",
+        "body": "This is contemporary Japanese fine dining at the high end, the kind where each dish arrives with a story and ingredients you don't see everywhere\u2014one reviewer singles out something called 'the Rose,' whatever blooms in that preparation. The kitchen runs through duck, mushrooms, and a procession of plates that hover around the $$$$-tier, though recent chef turnover means the menu's in flux ahead of the relaunch. Counter seats let you watch the theatrics: fire, precise cuts, plating that earns the price tag.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Book this for a special occasion where the food matters as much as the room—an anniversary, a celebration that needs weight. If you care about design and how a dining room evolves, circle back after the spring 2026 reopening to see what they've rebuilt.",
+        "body": "Book this for a special occasion where the food matters as much as the room\u2014an anniversary, a celebration that needs weight. If you care about design and how a dining room evolves, circle back after the spring 2026 reopening to see what they've rebuilt.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Amazing restaurant! Food is amazing, each dish has a story and a unique flavor. My favorite was the Rose. The service is stellar, best I've ever experienced. The restaurant decor is upscale and being able to watch the food prepared is always magical. A must visit restaurant. Ask questions, smile and enjoy!\"\n\n⭐⭐⭐⭐ \"Dined at Aburi Hana prior to head chef departing. Food was excellent. Unfortunately, the desserts did not meet the standards of the other dishes. Ordered tea but had to ask repeatedly to have the teapot refilled with hot water…perhaps the hot water kettle should be left for the diners to refill themselves while in a private room.\"\n\n⭐⭐⭐⭐ \"Great service and the menu was very well crafted. The duck and mushroom dish left a bit to be desired and was quite tough. I would say overall the Japanese dishes were extremely well crafted while the more Canadian inspired dishes felt a bit unrefined. Would definitely still come back to try it again.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing restaurant! Food is amazing, each dish has a story and a unique flavor. My favorite was the Rose. The service is stellar, best I've ever experienced. The restaurant decor is upscale and being able to watch the food prepared is always magical. A must visit restaurant. Ask questions, smile and enjoy!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Dined at Aburi Hana prior to head chef departing. Food was excellent. Unfortunately, the desserts did not meet the standards of the other dishes. Ordered tea but had to ask repeatedly to have the teapot refilled with hot water\u2026perhaps the hot water kettle should be left for the diners to refill themselves while in a private room.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great service and the menu was very well crafted. The duck and mushroom dish left a bit to be desired and was quite tough. I would say overall the Japanese dishes were extremely well crafted while the more Canadian inspired dishes felt a bit unrefined. Would definitely still come back to try it again.\""
       }
     ]
   }

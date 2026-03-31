@@ -7,13 +7,13 @@
     "type": "restaurant",
     "place_id": "ChIJWUhoPQhdwokRYsDwo5qMnMU",
     "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
-      "Sunday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM"
+      "Monday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 1795,
@@ -25,31 +25,31 @@
     "url": "https://www.nyctourism.com/articles/on-my-way-nyc-yara-herrera-local-guide-ridgewood/"
   },
   "narrative": {
-    "summary": "The anchor restaurant of Ridgewood's food scene. Mediterranean-leaning, seasonal, 4.5★ (1789 reviews). TimeOut and every neighborhood guide names it as the must-eat in the area. Literally in Dessa's neighborhood. $$. Strong Williamsburg–Bushwick–Ridgewood corridor fit with the design-forward food/art energy John tracks.",
+    "summary": "You're in Ridgewood at the neighborhood restaurant that's become a destination\u2014James Beard nominated, natural wine, market-driven menu, always packed. The kind of place that makes you want to move to the neighborhood. Gets busy; either book ahead or be prepared to wait.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Ridgewood corner where Onderdonk Ave feels more residential than restaurant row. Inside, natural light floods through big storefront windows onto blonde wood tables and a compact open kitchen where you can watch pasta get plated. It's the kind of room that fills up with neighbors who've been here a dozen times—tight quarters, minimal décor, all the energy coming from the food and the hum of conversation.",
+        "body": "You're on a quiet Ridgewood corner where Onderdonk Ave feels more residential than restaurant row. Inside, natural light floods through big storefront windows onto blonde wood tables and a compact open kitchen where you can watch pasta get plated. It's the kind of room that fills up with neighbors who've been here a dozen times\u2014tight quarters, minimal d\u00e9cor, all the energy coming from the food and the hum of conversation.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The cooking here is seasonal and Mediterranean-leaning, with pasta that justifies the hype—ricotta tortellini and a two-sheet lasagna that regulars order every time. Start with the wood-fired polenta bread dragged through Calabrian chili butter, maybe the house-made mortadella, and a leafy herb salad that's more interesting than it sounds. The menu shifts with what's good, but littleneck clam pasta and whole roasted fish show up when they're fresh, and mains hover around the mid-twenties.",
+        "body": "The cooking here is seasonal and Mediterranean-leaning, with pasta that justifies the hype\u2014ricotta tortellini and a two-sheet lasagna that regulars order every time. Start with the wood-fired polenta bread dragged through Calabrian chili butter, maybe the house-made mortadella, and a leafy herb salad that's more interesting than it sounds. The menu shifts with what's good, but littleneck clam pasta and whole roasted fish show up when they're fresh, and mains hover around the mid-twenties.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your neighborhood spot if you live nearby, or the place you trek to when you want to see what Ridgewood's about. Book ahead for weekend dinners—it's small and everyone knows to come here.",
+        "body": "This is your neighborhood spot if you live nearby, or the place you trek to when you want to see what Ridgewood's about. Book ahead for weekend dinners\u2014it's small and everyone knows to come here.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Delicious delicious delicious. I’m so glad we decided to dine here on our trip. The food was phenomenal. I don’t think there is a bad thing on the menu. The tortellini and the lasagna were so good. The fish was fresh and so yummy. The polenta bread with the chili butter was so good and the mortadella was delish as well.\"\n\n⭐⭐⭐⭐ \"I highly highly recommend the leafy greens and herb salad, calabrian chili wood fired polenta bread combined with the house made mortadella, two sheet lasagna, and lastly, the littleneck clam pasta. I personally loved the crispy potatoes \"war style\" but do think the pungent lemongrass dip can be polarizing.\nThe fluke crudo was so unfresh that it made me lose my usually robust appetite (and taste-wise was very disappointing compared to other crudos), but the server was hospitable and took it off the cheque. The pork t-bone was tasty but not as remarkable as the other dishes.\nRolo's is very ingredient-forward and works with flavors in a unique way.\n\nMinus the fluke crudo, 5/5 dining experience.\"\n\n⭐⭐⭐⭐⭐ \"Made reservations walked in and was pleasantly surprised..this is a busy establishment reservations are recommended..Natalie who was our waitress was an absolute doll. So informative with a wealth of knowledge about the food. The food hands down was a ten out of ten. We ordered the crispy potatoes for the table, yum and yum. A second order was made immediately don't judge. I ordered the eggs with the polenta bread sooo good.my friend ordered the French toast which was to die for..need I say more. The food is very filling and so very delicious.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Delicious delicious delicious. I\u2019m so glad we decided to dine here on our trip. The food was phenomenal. I don\u2019t think there is a bad thing on the menu. The tortellini and the lasagna were so good. The fish was fresh and so yummy. The polenta bread with the chili butter was so good and the mortadella was delish as well.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"I highly highly recommend the leafy greens and herb salad, calabrian chili wood fired polenta bread combined with the house made mortadella, two sheet lasagna, and lastly, the littleneck clam pasta. I personally loved the crispy potatoes \"war style\" but do think the pungent lemongrass dip can be polarizing.\nThe fluke crudo was so unfresh that it made me lose my usually robust appetite (and taste-wise was very disappointing compared to other crudos), but the server was hospitable and took it off the cheque. The pork t-bone was tasty but not as remarkable as the other dishes.\nRolo's is very ingredient-forward and works with flavors in a unique way.\n\nMinus the fluke crudo, 5/5 dining experience.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Made reservations walked in and was pleasantly surprised..this is a busy establishment reservations are recommended..Natalie who was our waitress was an absolute doll. So informative with a wealth of knowledge about the food. The food hands down was a ten out of ten. We ordered the crispy potatoes for the table, yum and yum. A second order was made immediately don't judge. I ordered the eggs with the polenta bread sooo good.my friend ordered the French toast which was to die for..need I say more. The food is very filling and so very delicious.\""
       }
     ]
   }
