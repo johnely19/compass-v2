@@ -41,6 +41,7 @@ function adaptCottage(c: CottageEntry): PlaceCard {
       images: normalizedImages,
       heroImage: c.heroImage ? resolveImageUrl(c.heroImage) || c.heroImage : undefined,
       // Pass through all cottage-specific fields for AccommodationCard
+      name: c.name,
       address: c.region || 'Ontario',
       city: c.region || 'Ontario',
       region: c.region,

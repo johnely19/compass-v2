@@ -4429,6 +4429,230 @@ body {
   padding-bottom: var(--space-2xl);
 }
 
+.accommodation-section {
+  padding: var(--space-md) var(--space-md) 0;
+}
+
+.accommodation-section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: var(--space-sm);
+  color: var(--text-primary);
+}
+
+.accommodation-amenities {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 6px 12px;
+}
+
+.accommodation-amenity {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.accommodation-amenity-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.accommodation-amenity-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.accommodation-hero {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.accommodation-hero-overlay {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-md);
+}
+
+.accommodation-hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.accommodation-type-badge {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  color: white;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.accommodation-match-badge {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(6px);
+  color: white;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+}
+
+.accommodation-name {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  margin: var(--space-md) 0 4px;
+}
+
+.accommodation-location {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.85);
+}
+
+.accommodation-body {
+  padding: var(--space-md);
+}
+
+.accommodation-vitals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+}
+
+.accommodation-vital {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.accommodation-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-sm);
+}
+
+.accommodation-vibe-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-md);
+}
+
+.accommodation-vibe-tag {
+  background: color-mix(in srgb, var(--accent) 15%, var(--bg-secondary));
+  color: var(--accent);
+  border-radius: 20px;
+  padding: 3px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.accommodation-narrative {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.accommodation-actions {
+  display: flex;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.accommodation-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.accommodation-cta-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.accommodation-cta-secondary {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+}
+
+.accommodation-maps-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.accommodation-maps-link:hover { text-decoration: underline; }
+
+.accommodation-nearby-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.accommodation-notes {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: var(--space-sm) var(--space-md);
+}
+
+.accommodation-environment {
+  padding-top: var(--space-md);
+}
+
+.accommodation-env-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 8px;
+}
+
+.accommodation-env-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 0.8rem;
+}
+
+.accommodation-env-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.accommodation-env-value {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
 /* ── Photo Gallery ── */
 .ac-photo-gallery {
   position: relative;
