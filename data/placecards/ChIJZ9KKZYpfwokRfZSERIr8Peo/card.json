@@ -13,32 +13,32 @@
     "location": "427 Troutman St, Brooklyn, NY 11237, USA"
   },
   "narrative": {
-    "summary": "📍 The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA",
+    "summary": "\ud83d\udccd The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA",
     "blocks": [
       {
         "id": "block-1",
         "title": "The Bushwick Collective",
-        "body": "📍 The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA"
+        "body": "\ud83d\udccd The Bushwick Collective\n427 Troutman St, Brooklyn, NY 11237, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNYC's premier street art hub - founded 2011 by Joe Ficalora, features works by artists from around the world, free and open air"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNYC's premier street art hub - founded 2011 by Joe Ficalora, features works by artists from around the world, free and open air"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu link not publicly available in Google data."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu link not publicly available in Google data."
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (231 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: n/a\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (231 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: n/a\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 427 Troutman St, Brooklyn, NY 11237, USA\n\n• walking: 1 hour 42 mins • 4.5 mi\n• transit: 36 mins • 5.8 mi\n• driving: 25 mins • 5.9 mi (traffic: 26 mins)\n• bicycling: 35 mins • 5.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (25 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 427 Troutman St, Brooklyn, NY 11237, USA\n\n\u2022 walking: 1 hour 42 mins \u2022 4.5 mi\n\u2022 transit: 36 mins \u2022 5.8 mi\n\u2022 driving: 25 mins \u2022 5.9 mi (traffic: 26 mins)\n\u2022 bicycling: 35 mins \u2022 5.4 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (25 mins)"
       }
     ]
   },
@@ -94,5 +94,6 @@
         "distanceText": "5.8 mi"
       }
     ]
-  }
+  },
+  "type": "gallery"
 }

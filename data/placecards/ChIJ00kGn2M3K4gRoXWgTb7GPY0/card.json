@@ -8,13 +8,13 @@
     "address": "Junction / Ripley Ave (next door)",
     "type": "shop",
     "hours": [
-      "Monday: 9:00 AM – 6:00 PM",
-      "Tuesday: 9:00 AM – 6:00 PM",
-      "Wednesday: 9:00 AM – 6:00 PM",
-      "Thursday: 9:00 AM – 6:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
+      "Monday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 228,
@@ -25,32 +25,33 @@
     "text": "Google Places"
   },
   "narrative": {
-    "summary": "The café/bakery spinoff. Fresh pastries, espresso, grab-and-go gourmet. 4.8★ (228 reviews). Same family, lighter format. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "The caf\u00e9/bakery spinoff. Fresh pastries, espresso, grab-and-go gourmet. 4.8\u2605 (228 reviews). Same family, lighter format. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Ripley Avenue in the Junction, next door to the original Cheese Boutique warehouse. Walk into the café and you get clean white tile, a working espresso bar, and glass cases stacked with pastries and prepared foods. There's a small seating area with actual tables now—they added more recently—so you can sit with your cappuccino instead of just grabbing and going.",
+        "body": "You're on Ripley Avenue in the Junction, next door to the original Cheese Boutique warehouse. Walk into the caf\u00e9 and you get clean white tile, a working espresso bar, and glass cases stacked with pastries and prepared foods. There's a small seating area with actual tables now\u2014they added more recently\u2014so you can sit with your cappuccino instead of just grabbing and going.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is the lighter, faster format from the same family that runs the gourmet provisions shop next door. Think hot pressed sandwiches (the crispy ones get called out constantly), fresh-baked morning pastries, and a full grab-and-go selection of prepared meals and cheese plates. The espresso setup is legit, and everything skews toward easy luxury—the kind of lunch or breakfast you'd want on a neighbourhood walk when you're willing to spend a bit more than café standard. Expect $12-18 for sandwiches, pastries around $4-7.",
+        "body": "This is the lighter, faster format from the same family that runs the gourmet provisions shop next door. Think hot pressed sandwiches (the crispy ones get called out constantly), fresh-baked morning pastries, and a full grab-and-go selection of prepared meals and cheese plates. The espresso setup is legit, and everything skews toward easy luxury\u2014the kind of lunch or breakfast you'd want on a neighbourhood walk when you're willing to spend a bit more than caf\u00e9 standard. Expect $12-18 for sandwiches, pastries around $4-7.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Weekday lunch with a friend when you want good coffee and an actual seat—locals say weekends get slammed. Also smart for a design-district errand run when you need provisions that feel a step up.",
+        "body": "Weekday lunch with a friend when you want good coffee and an actual seat\u2014locals say weekends get slammed. Also smart for a design-district errand run when you need provisions that feel a step up.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"LOVE, LOVE, LOVE going to the Cheese Boutique Café at lunchtime during the week (too busy on weekends for me) with a friend to enjoy my favourite hot crispy sandwich, dessert and cappuccino to catch up!\n\nLove the new cozy seating in the Café eating area!\n\nI always have to stop by their flower shop next door to \"smell the roses,\" being a gardener myself! 😃 🤣\n\nCONGRATULATIONS to the owners and entire team for making the Cheese Boutique a landmark in Toronto over the years!\n\nBRAVO and many blessings to continue your well-deserved success for many years to come! 🌟🌟🌟🌟🌟 ❤️\"\n\n⭐⭐⭐⭐⭐ \"I wish I had more time. It was a very quick stop cause I thought it doughnuts and coffee / snacks. It’s soo much more. The pictures will tell you a story, but I didn’t even scratch the surface. It’s hard to find the entrance if you haven’t been, so if you go in the flower store, it’s ok, it’s attached together. The flower shop looked very pretty. Then you enter the actual store, and wow. They had it all, and the most interesting stuff, and the most common stuff, but prices were high. Everywhere in the store. But what do you expect, downtown Toronto and I counted 15+ employees. Which is fair, they had so many departments. And a very nice spacious sitting area if you want to enjoy your food or drink warm. Also lots of “fresh” food variety. Lots of subs, wraps, sweets etc etc. I definitely have to go back and make a more detailed review. But this is a start.  I’ll go again. But I suggest you check it out. But be ready to spend good money if you’re buying stuff.\"\n\n⭐⭐⭐⭐⭐ \"read my review about this place on the main location. Here’s some additional photos.\n\nOmg, this place is such a hidden gem tucked away in the city. I actually stumbled on it by accident while biking through the neighborhood on a weekend, and I can’t believe I hadn’t seen it on social media before. Honestly feels like the kind of spot Toronto has been missing.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"LOVE, LOVE, LOVE going to the Cheese Boutique Caf\u00e9 at lunchtime during the week (too busy on weekends for me) with a friend to enjoy my favourite hot crispy sandwich, dessert and cappuccino to catch up!\n\nLove the new cozy seating in the Caf\u00e9 eating area!\n\nI always have to stop by their flower shop next door to \"smell the roses,\" being a gardener myself! \ud83d\ude03 \ud83e\udd23\n\nCONGRATULATIONS to the owners and entire team for making the Cheese Boutique a landmark in Toronto over the years!\n\nBRAVO and many blessings to continue your well-deserved success for many years to come! \ud83c\udf1f\ud83c\udf1f\ud83c\udf1f\ud83c\udf1f\ud83c\udf1f \u2764\ufe0f\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I wish I had more time. It was a very quick stop cause I thought it doughnuts and coffee / snacks. It\u2019s soo much more. The pictures will tell you a story, but I didn\u2019t even scratch the surface. It\u2019s hard to find the entrance if you haven\u2019t been, so if you go in the flower store, it\u2019s ok, it\u2019s attached together. The flower shop looked very pretty. Then you enter the actual store, and wow. They had it all, and the most interesting stuff, and the most common stuff, but prices were high. Everywhere in the store. But what do you expect, downtown Toronto and I counted 15+ employees. Which is fair, they had so many departments. And a very nice spacious sitting area if you want to enjoy your food or drink warm. Also lots of \u201cfresh\u201d food variety. Lots of subs, wraps, sweets etc etc. I definitely have to go back and make a more detailed review. But this is a start.  I\u2019ll go again. But I suggest you check it out. But be ready to spend good money if you\u2019re buying stuff.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"read my review about this place on the main location. Here\u2019s some additional photos.\n\nOmg, this place is such a hidden gem tucked away in the city. I actually stumbled on it by accident while biking through the neighborhood on a weekend, and I can\u2019t believe I hadn\u2019t seen it on social media before. Honestly feels like the kind of spot Toronto has been missing.\""
       }
     ]
-  }
+  },
+  "type": "shop"
 }

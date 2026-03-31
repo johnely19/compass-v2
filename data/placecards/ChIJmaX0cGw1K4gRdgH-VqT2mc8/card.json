@@ -9,12 +9,12 @@
     "type": "grocery",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 9:00 AM – 11:00 PM",
-      "Wednesday: 9:00 AM – 11:00 PM",
-      "Thursday: 9:00 AM – 11:00 PM",
-      "Friday: 9:00 AM – 11:00 PM",
-      "Saturday: 9:00 AM – 11:00 PM",
-      "Sunday: 9:00 AM – 11:00 PM"
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 4.2,
     "review_count": 958,
@@ -24,7 +24,8 @@
     "text": "Discovered via stacktmarket.com"
   },
   "narrative": {
-    "summary": "Shipping container market — architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2★ (958 reviews).",
+    "summary": "Shipping container market \u2014 architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2\u2605 (958 reviews).",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

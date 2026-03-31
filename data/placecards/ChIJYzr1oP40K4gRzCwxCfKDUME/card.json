@@ -8,13 +8,13 @@
     "address": "Dundas West / Trinity Bellwoods",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 6:00 PM",
-      "Tuesday: 11:00 AM – 6:00 PM",
-      "Wednesday: 11:00 AM – 6:00 PM",
-      "Thursday: 11:00 AM – 6:00 PM",
-      "Friday: 11:00 AM – 6:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
-      "Sunday: 10:00 AM – 5:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 139,
@@ -30,13 +30,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Dundas West strip near Trinity Bellwoods, where VdeV's windows stop you mid-stride with curated vignettes that change like gallery installations. Inside, vintage French schoolhouse chairs sit alongside industrial metal shelving, everything arranged with the kind of precision that makes browsing feel intentional. The Montreal aesthetic is evident—concrete floors, white walls, and that edited mix of old and new where a ceramic vase costs what it should and feels worth it.",
+        "body": "You're on the Dundas West strip near Trinity Bellwoods, where VdeV's windows stop you mid-stride with curated vignettes that change like gallery installations. Inside, vintage French schoolhouse chairs sit alongside industrial metal shelving, everything arranged with the kind of precision that makes browsing feel intentional. The Montreal aesthetic is evident\u2014concrete floors, white walls, and that edited mix of old and new where a ceramic vase costs what it should and feels worth it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Goods",
-        "body": "This isn't a restaurant—it's a home goods shop that solves the problem of where to find furniture and objects that don't look like everyone else's apartment. You'll find French linens, handmade ceramics, vintage glassware, and furniture pieces that split the difference between investment and impulse buy. The selection leans heavily into natural materials and muted tones, with enough personality (sculptural candles, quirky matchboxes, unexpected textiles) that gift shopping doesn't feel like a chore. Expect to leave with something you didn't know you needed, priced fairly for the curation.",
+        "body": "This isn't a restaurant\u2014it's a home goods shop that solves the problem of where to find furniture and objects that don't look like everyone else's apartment. You'll find French linens, handmade ceramics, vintage glassware, and furniture pieces that split the difference between investment and impulse buy. The selection leans heavily into natural materials and muted tones, with enough personality (sculptural candles, quirky matchboxes, unexpected textiles) that gift shopping doesn't feel like a chore. Expect to leave with something you didn't know you needed, priced fairly for the curation.",
         "id": "block-the-goods-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I love this store! You can find everything you need for your home. I was so happy when I found this boutique with a vintage style. Finally a place to find unique furniture!! I always go there when I need to buy a gift. The staff always have great recommendations:)\"\n\n⭐⭐⭐⭐⭐ \"Incredible store. High quality home pieces to make your space unique and intersting while still being cozy. Its also a great store for gift shopping. As well the staff is really nice and has great customer service.\"\n\n⭐⭐⭐⭐⭐ \"I struggle to think of a better gift and home good store west of Yonge. This place is endlessly charming, and you will find products that delight yourself or impress your friends and family as thoughtful gifts. Whether you’re shopping for a homeowner or renter, man or woman, young or old, you’ll find something for anyone in your life from $25-$100+ and you’ll probably get yourself some nice decor on the way.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I love this store! You can find everything you need for your home. I was so happy when I found this boutique with a vintage style. Finally a place to find unique furniture!! I always go there when I need to buy a gift. The staff always have great recommendations:)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Incredible store. High quality home pieces to make your space unique and intersting while still being cozy. Its also a great store for gift shopping. As well the staff is really nice and has great customer service.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I struggle to think of a better gift and home good store west of Yonge. This place is endlessly charming, and you will find products that delight yourself or impress your friends and family as thoughtful gifts. Whether you\u2019re shopping for a homeowner or renter, man or woman, young or old, you\u2019ll find something for anyone in your life from $25-$100+ and you\u2019ll probably get yourself some nice decor on the way.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

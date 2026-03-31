@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJsWiClCo1K4gRclG33Mzc3qM",
-    "name": "The Power Plant — Jeneen Frei Njootli: The skies closed themselves when we averted our gaze",
+    "name": "The Power Plant \u2014 Jeneen Frei Njootli: The skies closed themselves when we averted our gaze",
     "city": "Toronto",
     "address": "Harbourfront (231 Queens Quay W)",
     "type": "gallery"
@@ -12,7 +12,8 @@
     "text": "Discovered via theglobeandmail.com"
   },
   "narrative": {
-    "summary": "Vuntut Gwitchin artist. Materiality, land, Indigenous futurism. Showing alongside Lucy Raven. Free admission. CLOSES MARCH 22. 4.4★ (572 reviews).",
+    "summary": "Vuntut Gwitchin artist. Materiality, land, Indigenous futurism. Showing alongside Lucy Raven. Free admission. CLOSES MARCH 22. 4.4\u2605 (572 reviews).",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

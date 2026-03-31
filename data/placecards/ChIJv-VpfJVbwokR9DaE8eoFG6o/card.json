@@ -12,7 +12,8 @@
     "price_level": 2,
     "location": "30 Lafayette Ave, Brooklyn, NY 11217",
     "lat": 40.686532,
-    "lng": -73.97767689999999
+    "lng": -73.97767689999999,
+    "type": "theatre"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n30 Lafayette Ave, Fort Greene \u2014 Brooklyn Academy of Music, the Peter Jay Sharp Building\n\nRobert Wilson's final major production. Melville's Moby Dick reimagined as avant-garde theater with indie-rock score by Anna Calvi. In German and English with supertitles. April 29\u2013May 3, 2026.",
@@ -47,5 +48,6 @@
   "discovery": {
     "text": "Discovered by Disco via neighbourhood research",
     "url": "https://www.bam.org/moby-dick"
-  }
+  },
+  "type": "theatre"
 }

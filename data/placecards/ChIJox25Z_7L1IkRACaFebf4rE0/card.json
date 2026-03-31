@@ -12,32 +12,33 @@
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
-    "summary": "Marc Thuet's bakery-cafe relocated to new Leslieville spot from 235 Carlaw. French-trained master baker. Croissants, bread, sandwiches, prepared foods. 4.7★ (20 reviews).",
+    "summary": "Marc Thuet's bakery-cafe relocated to new Leslieville spot from 235 Carlaw. French-trained master baker. Croissants, bread, sandwiches, prepared foods. 4.7\u2605 (20 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find Marc Thuet's bakery on a quiet Leslieville block, relocated just down Carlaw into a brighter, airier space. Walk in and you're met with light flooding through large windows, a handful of seats scattered near the counter, and shelves stocked with dried pasta and jarred sauces alongside the morning's bread. It's a bakery first—cases of pastries, loaves wrapped in paper—but there's room to sit with your coffee if you want to eat here.",
+        "body": "You'll find Marc Thuet's bakery on a quiet Leslieville block, relocated just down Carlaw into a brighter, airier space. Walk in and you're met with light flooding through large windows, a handful of seats scattered near the counter, and shelves stocked with dried pasta and jarred sauces alongside the morning's bread. It's a bakery first\u2014cases of pastries, loaves wrapped in paper\u2014but there's room to sit with your coffee if you want to eat here.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Thuet is a French-trained baker, and the croissants prove it—properly laminated, shattering when you bite in, with a soft, buttery interior. The almond croissant comes loaded with almond paste, not the token smear you find elsewhere. Beyond pastries, expect éclairs filled to order, choux à la crème that regulars swear by, and sturdy European-style bread loaves. There are also sandwiches and prepared foods to take home, with most pastries running under $8.",
+        "body": "Thuet is a French-trained baker, and the croissants prove it\u2014properly laminated, shattering when you bite in, with a soft, buttery interior. The almond croissant comes loaded with almond paste, not the token smear you find elsewhere. Beyond pastries, expect \u00e9clairs filled to order, choux \u00e0 la cr\u00e8me that regulars swear by, and sturdy European-style bread loaves. There are also sandwiches and prepared foods to take home, with most pastries running under $8.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is a Saturday morning errand destination—grab croissants for the house, a loaf of bread, maybe an éclair you'll eat in the car. Come early if you want first pick of the pastries.",
+        "body": "This is a Saturday morning errand destination\u2014grab croissants for the house, a loaf of bread, maybe an \u00e9clair you'll eat in the car. Come early if you want first pick of the pastries.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"They've relocated from their old location which was slightly north. This new location is a lot brighter.\n\nI really liked their croissants for their taste and value. Their almond croissant was flakely and generously filled with almond paste. I also tried their cookie, but thought it was okay.\n\nWould recommend and come back.\"\n\n⭐⭐⭐⭐⭐ \"My favorite croissant in the city. Marc is a genius and I'm very happy to have him in our neighborhood. The eclair is the best I've had in my life. His chou à la crème also, amazing. The breads,  outstanding.  Merci!\"\n\n⭐⭐⭐⭐⭐ \"Heard that this coffee spot moved from down the street. Very beautiful interior with some seating and also sale of dried goodies such as pasta sauces and noodles.\n\nThey have some amazing croissants that are perfectly crispy and soft and buttery on the inside. The cookie was a tad too sweet but was baked very well.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"They've relocated from their old location which was slightly north. This new location is a lot brighter.\n\nI really liked their croissants for their taste and value. Their almond croissant was flakely and generously filled with almond paste. I also tried their cookie, but thought it was okay.\n\nWould recommend and come back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"My favorite croissant in the city. Marc is a genius and I'm very happy to have him in our neighborhood. The eclair is the best I've had in my life. His chou \u00e0 la cr\u00e8me also, amazing. The breads,  outstanding.  Merci!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Heard that this coffee spot moved from down the street. Very beautiful interior with some seating and also sale of dried goodies such as pasta sauces and noodles.\n\nThey have some amazing croissants that are perfectly crispy and soft and buttery on the inside. The cookie was a tad too sweet but was baked very well.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

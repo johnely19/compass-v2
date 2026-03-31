@@ -18,7 +18,7 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll spot the turquoise bay-and-gable Victorian from a block away on one of Kensington's quieter residential edges. Inside, natural light floods through tall windows onto blonde wood tables, and there's that rare thing—a back patio that actually feels removed from the chaos. The front fills with laptop people; the back patio is where you can hear yourself think.",
+        "body": "You'll spot the turquoise bay-and-gable Victorian from a block away on one of Kensington's quieter residential edges. Inside, natural light floods through tall windows onto blonde wood tables, and there's that rare thing\u2014a back patio that actually feels removed from the chaos. The front fills with laptop people; the back patio is where you can hear yourself think.",
         "id": "block-the-space-0"
       },
       {
@@ -30,15 +30,16 @@
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Mid-morning on a weekday when you need to reset between errands, or a slow weekend afternoon on the back patio with a book. This isn't a workspace or a hangout spot—it's for the deliberate pause the Swedes built into their day.",
+        "body": "Mid-morning on a weekday when you need to reset between errands, or a slow weekend afternoon on the back patio with a book. This isn't a workspace or a hangout spot\u2014it's for the deliberate pause the Swedes built into their day.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"The very definition of “cute”!\nIf you’re looking for a peaceful spot near Kensington, this place is a gem. The natural lighting is lovely, warm, and inviting. I tried their fika iced latte and the walnut-hazelnut brownie — both were delicious. They also offer savoury food options. There’s both a front and back patio, perfect for enjoying a quiet moment.\"\n\n⭐⭐⭐⭐⭐ \"I had their Strawberry Matcha drink back in the summer and it was great. There’s also a beautiful and spacious patio, which is perfect on a sunny day.\n\nA minor downside for me was that they didn’t take Amex, but nothing to take away from the overall experience.\"\n\n⭐⭐⭐⭐⭐ \"Stellar Scandinavian coffee shop that is a specialty/craft/third wave coffee shop. It hits the trifecta. 1. Great coffee- their house roast is good but also is a multi roaster and had several high end roasters available. Pretty rare these days. 2. Great aesthetics and comfortable. This place has out front and outdoor back patio seating as well as indoor dining. 3. Great place to hang out with friends and catch up. Definitely good for that. Best coffee in Toronto!!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"The very definition of \u201ccute\u201d!\nIf you\u2019re looking for a peaceful spot near Kensington, this place is a gem. The natural lighting is lovely, warm, and inviting. I tried their fika iced latte and the walnut-hazelnut brownie \u2014 both were delicious. They also offer savoury food options. There\u2019s both a front and back patio, perfect for enjoying a quiet moment.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I had their Strawberry Matcha drink back in the summer and it was great. There\u2019s also a beautiful and spacious patio, which is perfect on a sunny day.\n\nA minor downside for me was that they didn\u2019t take Amex, but nothing to take away from the overall experience.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Stellar Scandinavian coffee shop that is a specialty/craft/third wave coffee shop. It hits the trifecta. 1. Great coffee- their house roast is good but also is a multi roaster and had several high end roasters available. Pretty rare these days. 2. Great aesthetics and comfortable. This place has out front and outdoor back patio seating as well as indoor dining. 3. Great place to hang out with friends and catch up. Definitely good for that. Best coffee in Toronto!!\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

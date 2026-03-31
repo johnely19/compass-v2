@@ -8,13 +8,13 @@
     "address": "Caledonia / Ronald Ave",
     "type": "grocery",
     "hours": [
-      "Monday: 9:30 AM – 5:30 PM",
-      "Tuesday: 9:30 AM – 5:30 PM",
-      "Wednesday: 9:30 AM – 5:30 PM",
-      "Thursday: 9:30 AM – 5:30 PM",
-      "Friday: 9:30 AM – 5:30 PM",
-      "Saturday: 9:30 AM – 5:30 PM",
-      "Sunday: 12:00 – 5:00 PM"
+      "Monday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Tuesday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Wednesday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Thursday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Friday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Saturday: 9:30\u202fAM\u2009\u2013\u20095:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.1,
     "review_count": 284,
@@ -26,7 +26,8 @@
     "text": "Discovered via elte.com"
   },
   "narrative": {
-    "summary": "Toronto design institution—massive showroom with curated European + contemporary lines.",
+    "summary": "Toronto design institution\u2014massive showroom with curated European + contemporary lines.",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 5:00 – 11:00 PM",
-      "Sunday: 5:00 – 11:00 PM"
+      "Wednesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 178,
@@ -26,18 +26,18 @@
     "url": "https://www.bargobo.com"
   },
   "narrative": {
-    "summary": "'The Hi-Fi Wine Bar At The End Of The World.' All vinyl, all the time. Natural wine, cocktails, tasty food. Union Street in Strathcona. Happy hour 5-6 & 10-11. The record-flipping + natty wine combo is peak John. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "'The Hi-Fi Wine Bar At The End Of The World.' All vinyl, all the time. Natural wine, cocktails, tasty food. Union Street in Strathcona. Happy hour 5-6 & 10-11. The record-flipping + natty wine combo is peak John. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find Bar Gobo on Union Street in Strathcona, tucked into the kind of block where industrial buildings are slowly becoming interesting. Inside, it's small—maybe a dozen seats at most—with a turntable spinning vinyl all night and natural light that gives way to warm, low bulbs after dark. The space feels more like someone's obsessively curated living room than a wine bar, all deliberate lines and carefully chosen surfaces.",
+        "body": "You'll find Bar Gobo on Union Street in Strathcona, tucked into the kind of block where industrial buildings are slowly becoming interesting. Inside, it's small\u2014maybe a dozen seats at most\u2014with a turntable spinning vinyl all night and natural light that gives way to warm, low bulbs after dark. The space feels more like someone's obsessively curated living room than a wine bar, all deliberate lines and carefully chosen surfaces.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu is short and shifts, but the kitchen knows what it's doing with texture and richness. That steak and gnocchi everyone mentions? Melt-in-your-mouth tender, the kind of cooking that makes you order a second glass of whatever natural wine they've poured you. The house-made focaccia shows up in reviews for a reason—it's the kind of bread you tear apart while the record flips. Expect small plates that work with wine, nothing fussy, everything considered.",
+        "body": "The menu is short and shifts, but the kitchen knows what it's doing with texture and richness. That steak and gnocchi everyone mentions? Melt-in-your-mouth tender, the kind of cooking that makes you order a second glass of whatever natural wine they've poured you. The house-made focaccia shows up in reviews for a reason\u2014it's the kind of bread you tear apart while the record flips. Expect small plates that work with wine, nothing fussy, everything considered.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Went here for their dine out menu on a Sunday and will be coming back for the steak and gnocchi courses alone. They were melt in your mouth delicious. Really wanted to give this place 5 stars but felt the dessert course let them down which is a shame as everything else on their dine out menu was so tasty and delectable. The ambience was great too, the music wasn't too loud. The space is small but intimate and cozy. The staff were friendly and attentive. It's a shame their steak and gnocchi dishes are only available for dine out but will be coming back with a different friend to experience it.\"\n\n⭐⭐⭐⭐⭐ \"Bar Gobo is an absolute hidden gem. Staff is wonderful, music is on point and the food is creative and delicious. Everything we ordered was great, including the house-made focaccia, cabbage salad and delicata squash, but the stars for me were definitely the chicken liver mousse bites, the oyster and the mushroom pasta. We loved it so much went twice on our trip. Highly, highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Such a great spot. Great interior design, music, service, and overall atmosphere. The tartare was a bit acidic & monotone but the rest of the food was perfectly executed. A must!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Went here for their dine out menu on a Sunday and will be coming back for the steak and gnocchi courses alone. They were melt in your mouth delicious. Really wanted to give this place 5 stars but felt the dessert course let them down which is a shame as everything else on their dine out menu was so tasty and delectable. The ambience was great too, the music wasn't too loud. The space is small but intimate and cozy. The staff were friendly and attentive. It's a shame their steak and gnocchi dishes are only available for dine out but will be coming back with a different friend to experience it.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Bar Gobo is an absolute hidden gem. Staff is wonderful, music is on point and the food is creative and delicious. Everything we ordered was great, including the house-made focaccia, cabbage salad and delicata squash, but the stars for me were definitely the chicken liver mousse bites, the oyster and the mushroom pasta. We loved it so much went twice on our trip. Highly, highly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a great spot. Great interior design, music, service, and overall atmosphere. The tartare was a bit acidic & monotone but the rest of the food was perfectly executed. A must!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

@@ -14,13 +14,13 @@
     "phone": "(604) 898-6665",
     "website": "http://thewatershedgrill.com/",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 11:00 PM",
-      "Saturday: 10:00 AM – 11:00 PM",
-      "Sunday: 10:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "price_level": 2,
     "rating": 4.5,
@@ -35,13 +35,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Brackendale, just north of Squamish proper, where Government Road runs along the river and the parking lot fits maybe five cars if everyone's polite. Inside, it's the kind of neighborhood spot where locals know to arrive early—wooden tables, windows that frame the water, and a laid-back room that fills up fast on weekends.",
+        "body": "You're in Brackendale, just north of Squamish proper, where Government Road runs along the river and the parking lot fits maybe five cars if everyone's polite. Inside, it's the kind of neighborhood spot where locals know to arrive early\u2014wooden tables, windows that frame the water, and a laid-back room that fills up fast on weekends.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into comfort territory—thick lasagna with meat sauce, chicken pot pie (though it's more of a bowl situation with puff pastry on top than a fully encased pie), and a chicken brie burger that consistently lands. Daily specials rotate through roast beef and soup-and-salad combos, and the fries get mentioned often enough that you should order them. It's hearty, unfussy cooking that occasionally looks better on Instagram than it does on your plate.",
+        "body": "The menu leans into comfort territory\u2014thick lasagna with meat sauce, chicken pot pie (though it's more of a bowl situation with puff pastry on top than a fully encased pie), and a chicken brie burger that consistently lands. Daily specials rotate through roast beef and soup-and-salad combos, and the fries get mentioned often enough that you should order them. It's hearty, unfussy cooking that occasionally looks better on Instagram than it does on your plate.",
         "id": "block-the-food-1"
       },
       {
@@ -54,12 +54,13 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Local vibes. They have daily specials. Ipa in can didn't taste fresh, lolked under and it was dated from september. Soup and salad were good. The lasagna was huge, the meat sauce was thick but there wasn't enough to my taste.\n\nRoast beef was a bit disapointing, didn't look close to their instagram promo. The plate was loaded with Well done tiny slices. Gravy was good\"\n\n⭐⭐⭐⭐⭐ \"Great vibes at this beautiful location near the river. Very limited parking (5 spots max). The drinks were delicious, chicken brie burger was a 5/5; however the chicken pot pie was more just a bowl of filling with the puff pastry on top. Tasted good but was lacking in the amount of pastry. The fries were the best we've had.\"\n\n⭐⭐⭐⭐⭐ \"Watershed Grill is a very charming restaurant in an excellent location at Eagle Run, with a relaxed, local atmosphere that feels welcoming and authentic.\n\nThe staff were friendly, attentive, and professional, which made the experience even more enjoyable.\n\nWe tried the Roasted Tomato Soup and the Chicken Vegetable Soup. The roasted tomato soup was outstanding — rich, creamy, and full of flavor, and it paired perfectly with the garlic bread. The chicken vegetable soup was also warm, comforting, and well prepared.\n\nThe Fish and Chips were very crispy, fresh, and delicious, exactly how they should be. The Poutine was also very good and satisfying.\n\nOverall, Watershed Grill offers great food, a pleasant atmosphere, and excellent service. Highly recommended, and we would definitely come back again.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Local vibes. They have daily specials. Ipa in can didn't taste fresh, lolked under and it was dated from september. Soup and salad were good. The lasagna was huge, the meat sauce was thick but there wasn't enough to my taste.\n\nRoast beef was a bit disapointing, didn't look close to their instagram promo. The plate was loaded with Well done tiny slices. Gravy was good\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great vibes at this beautiful location near the river. Very limited parking (5 spots max). The drinks were delicious, chicken brie burger was a 5/5; however the chicken pot pie was more just a bowl of filling with the puff pastry on top. Tasted good but was lacking in the amount of pastry. The fries were the best we've had.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Watershed Grill is a very charming restaurant in an excellent location at Eagle Run, with a relaxed, local atmosphere that feels welcoming and authentic.\n\nThe staff were friendly, attentive, and professional, which made the experience even more enjoyable.\n\nWe tried the Roasted Tomato Soup and the Chicken Vegetable Soup. The roasted tomato soup was outstanding \u2014 rich, creamy, and full of flavor, and it paired perfectly with the garlic bread. The chicken vegetable soup was also warm, comforting, and well prepared.\n\nThe Fish and Chips were very crispy, fresh, and delicious, exactly how they should be. The Poutine was also very good and satisfying.\n\nOverall, Watershed Grill offers great food, a pleasant atmosphere, and excellent service. Highly recommended, and we would definitely come back again.\""
       }
     ]
   },
   "discovery": {
     "text": "Discovered by Disco research agent",
     "url": "http://thewatershedgrill.com/"
-  }
+  },
+  "type": "restaurant"
 }

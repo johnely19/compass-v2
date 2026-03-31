@@ -8,13 +8,13 @@
     "address": "Queen West (883 Queen St W) + Junction + Forest Hill",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 6:00 PM",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 7:00 PM",
-      "Sunday: 11:00 AM – 6:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 462,
@@ -25,7 +25,8 @@
     "text": "Discovered via typebooks.ca"
   },
   "narrative": {
-    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7★ (461 reviews).",
+    "summary": "Three-location indie with strong literary fiction and design book sections. Queen West flagship is the anchor. Open 7 days. 4.7\u2605 (461 reviews).",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

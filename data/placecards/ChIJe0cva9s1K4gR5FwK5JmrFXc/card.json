@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 9:00 AM – 6:00 PM",
-      "Thursday: 9:00 AM – 6:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 4:00 PM",
-      "Sunday: 10:00 AM – 4:00 PM"
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20094:00\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 372,
@@ -26,7 +26,8 @@
     "url": "https://www.chuonthis.ca/best-bakeries-toronto/"
   },
   "narrative": {
-    "summary": "Canelés as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
+    "summary": "Canel\u00e9s as the signature; independent French-leaning; 4.8 rating with 365 reviews. Cool local favorite.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

@@ -8,13 +8,13 @@
     "address": "University of Toronto",
     "type": "bar",
     "hours": [
-      "Monday: 8:30 AM – 11:00 PM",
-      "Tuesday: 8:30 AM – 11:00 PM",
-      "Wednesday: 8:30 AM – 11:00 PM",
-      "Thursday: 8:30 AM – 11:00 PM",
-      "Friday: 8:30 AM – 11:00 PM",
-      "Saturday: 9:00 AM – 10:00 PM",
-      "Sunday: 10:00 AM – 10:00 PM"
+      "Monday: 8:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 8:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 8:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 8:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 8:30\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 485,
@@ -24,18 +24,18 @@
     "text": "Discovered via globeandmail.com"
   },
   "narrative": {
-    "summary": "You're standing in front of Fort Book—Toronto's most divisive brutalist icon, fourteen storeys of raw concrete that makes you either gawk or recoil. Come late April when cherry blossoms ring the perimeter and everyone gets the Instagram shot without fighting High Park crowds. Access requires a U of T student card, so bring someone who's actually enrolled if you want to get inside.",
+    "summary": "You're standing in front of Fort Book\u2014Toronto's most divisive brutalist icon, fourteen storeys of raw concrete that makes you either gawk or recoil. Come late April when cherry blossoms ring the perimeter and everyone gets the Instagram shot without fighting High Park crowds. Access requires a U of T student card, so bring someone who's actually enrolled if you want to get inside.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on St. George Street in the heart of U of T's campus, facing a fourteen-storey concrete fortress that locals call Fort Book—all raw cement, triangular projections, and that uncompromising geometric brutalism that makes you either gawk or recoil. Inside, you'll find 1,200 study spaces across warren-like floors: individual carrels tucked into concrete alcoves, long tables under fluorescent light, and those signature triangular windows that slice the daylight into strange angles. Spring softens the severity—cherry blossoms ring the building's perimeter, turning the brutalist monument unexpectedly tender.",
+        "body": "You're on St. George Street in the heart of U of T's campus, facing a fourteen-storey concrete fortress that locals call Fort Book\u2014all raw cement, triangular projections, and that uncompromising geometric brutalism that makes you either gawk or recoil. Inside, you'll find 1,200 study spaces across warren-like floors: individual carrels tucked into concrete alcoves, long tables under fluorescent light, and those signature triangular windows that slice the daylight into strange angles. Spring softens the severity\u2014cherry blossoms ring the building's perimeter, turning the brutalist monument unexpectedly tender.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a research library, not a restaurant—you're here for books, silence, and one of Toronto's most divisive architectural landmarks. There's no kitchen, no menu, just the kind of focused energy that comes from hundreds of students grinding through problem sets and dissertations. Bring your own coffee and snacks if you're planning to stay, or hit one of the campus cafés nearby when you need fuel.",
+        "body": "This is a research library, not a restaurant\u2014you're here for books, silence, and one of Toronto's most divisive architectural landmarks. There's no kitchen, no menu, just the kind of focused energy that comes from hundreds of students grinding through problem sets and dissertations. Bring your own coffee and snacks if you're planning to stay, or hit one of the campus caf\u00e9s nearby when you need fuel.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Not sure about the library itself as a whole, but great place to see the cherry blossoms in Toronto 🌸 I really appreciate the accessibility of the cherry blossom trees. Way easier to get to than High Park!\n\nI’ll come back for the flowers next year, and maybe even go inside the library itself next time!\"\n\n⭐⭐⭐⭐⭐ \"Robarts, as U of Toronto faculty and student would affectionately called it, has been around since 1973. It is U of Toronto’s largest library and is a popular place to study with its many study pods. Its brutalist architecture with its massive, raw cement and unusual geometric design is a must-see for design and urban architecture buffs. The added bonus of cherry blossoms on its compound brought a touch of beauty not often seen at a library. The library is not opened to public.\"\n\n⭐⭐⭐⭐⭐ \"Robarts Library at the University of Toronto is one of the best libraries I’ve ever seen. It boasts an extensive collection of books, journals, and digital resources, making it a key destination for research across all disciplines. The library offers a variety of study spaces, from quiet corners for individual work to areas designed for group collaboration, all equipped with modern technology and research tools. Access requires a U of T student card, ensuring it remains a dedicated space for academic work. Robarts is a true hub for learning and research at the university.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Not sure about the library itself as a whole, but great place to see the cherry blossoms in Toronto \ud83c\udf38 I really appreciate the accessibility of the cherry blossom trees. Way easier to get to than High Park!\n\nI\u2019ll come back for the flowers next year, and maybe even go inside the library itself next time!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Robarts, as U of Toronto faculty and student would affectionately called it, has been around since 1973. It is U of Toronto\u2019s largest library and is a popular place to study with its many study pods. Its brutalist architecture with its massive, raw cement and unusual geometric design is a must-see for design and urban architecture buffs. The added bonus of cherry blossoms on its compound brought a touch of beauty not often seen at a library. The library is not opened to public.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Robarts Library at the University of Toronto is one of the best libraries I\u2019ve ever seen. It boasts an extensive collection of books, journals, and digital resources, making it a key destination for research across all disciplines. The library offers a variety of study spaces, from quiet corners for individual work to areas designed for group collaboration, all equipped with modern technology and research tools. Access requires a U of T student card, ensuring it remains a dedicated space for academic work. Robarts is a true hub for learning and research at the university.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

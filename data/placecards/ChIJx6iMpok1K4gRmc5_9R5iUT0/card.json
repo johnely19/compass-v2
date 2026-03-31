@@ -15,5 +15,6 @@
   "narrative": {
     "summary": "High-energy live-music room (often jazz/world) with late hours; good for dancing + discovery nights.",
     "blocks": []
-  }
+  },
+  "type": "theatre"
 }

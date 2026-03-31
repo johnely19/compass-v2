@@ -12,7 +12,7 @@
     "text": "Discovered via development tracker"
   },
   "narrative": {
-    "summary": "Woodcliffe's boutique condo directly across from the Summerhill LCBO and North Toronto Station (restored by Woodcliffe in 2003). Originally a 14-storey, 67-suite boutique building — now revised to 32 storeys with 64 suites plus office space. Facade designed to extend the neighbourhood's traditional character along Yonge while the tower embraces contemporary architecture. Brian Gluckstein interiors.",
+    "summary": "Woodcliffe's boutique condo directly across from the Summerhill LCBO and North Toronto Station (restored by Woodcliffe in 2003). Originally a 14-storey, 67-suite boutique building \u2014 now revised to 32 storeys with 64 suites plus office space. Facade designed to extend the neighbourhood's traditional character along Yonge while the tower embraces contemporary architecture. Brian Gluckstein interiors.",
     "blocks": []
   },
   "development": {
@@ -32,7 +32,7 @@
       }
     ],
     "developer": "Woodcliffe Landmark Properties",
-    "architect": "architects—Alliance (revised from KPMB Architects)",
+    "architect": "architects\u2014Alliance (revised from KPMB Architects)",
     "neighbourhood": "Summerhill / Rosedale",
     "transitContext": "Immediate access to Summerhill Station (Line 1).",
     "sources": [
@@ -41,7 +41,7 @@
         "url": "https://www.woodcliffe.ca/portfolio/yonge-and-birch-residences"
       },
       {
-        "name": "UrbanToronto — Revision (Nov 2025)",
+        "name": "UrbanToronto \u2014 Revision (Nov 2025)",
         "url": "https://urbantoronto.ca/news/2025/11/yonge-and-birch-revisions-add-office-space-cut-units-summerhill.59787"
       },
       {
@@ -57,5 +57,6 @@
         "url": "https://urbantoronto.ca/forum/threads/toronto-yonge-and-birch-residences-133-7m-32s-woodcliffe-a%E2%80%94a.30670/"
       }
     ]
-  }
+  },
+  "type": "development"
 }

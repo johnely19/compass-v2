@@ -15,67 +15,67 @@
     "user_rating_count": 2865,
     "location": "132 Yonge St, Toronto, ON M5C 1X3, Canada",
     "hours": [
-      "Monday: 8:00 AM – 9:00 PM",
-      "Tuesday: 8:00 AM – 9:00 PM",
-      "Wednesday: 8:00 AM – 9:00 PM",
-      "Thursday: 8:00 AM – 9:00 PM",
-      "Friday: 8:00 AM – 9:30 PM",
-      "Saturday: 8:00 AM – 9:30 PM",
+      "Monday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20099:30\u202fPM",
       "Sunday: Closed"
     ],
     "review_count": 2870
   },
   "narrative": {
-    "summary": "You're on Yonge in the Financial District, splitting between a café downstairs where espresso machines hiss and an upstairs dining room that's quieter, with clean lines and warm wood. The kitchen works in that northern Italian register—cod on celery purée so smooth it's almost a sauce, tuna treated with restraint. Expect $25-35 for pasta, $40-50 for mains, and a wine list that knows what it's doing.",
+    "summary": "You're on Yonge in the Financial District, splitting between a caf\u00e9 downstairs where espresso machines hiss and an upstairs dining room that's quieter, with clean lines and warm wood. The kitchen works in that northern Italian register\u2014cod on celery pur\u00e9e so smooth it's almost a sauce, tuna treated with restraint. Expect $25-35 for pasta, $40-50 for mains, and a wine list that knows what it's doing.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Yonge Street in the Financial District, and Sud Forno splits itself across two floors—a café downstairs where light hits marble counters and espresso machines hiss, then a dining room upstairs that opens up into something quieter. The design leans Italian modernist: clean lines, warm wood, enough space between tables that you can actually hear your conversation. Upstairs is where you linger.",
+        "body": "You're on Yonge Street in the Financial District, and Sud Forno splits itself across two floors\u2014a caf\u00e9 downstairs where light hits marble counters and espresso machines hiss, then a dining room upstairs that opens up into something quieter. The design leans Italian modernist: clean lines, warm wood, enough space between tables that you can actually hear your conversation. Upstairs is where you linger.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen works in that northern Italian register—precise technique, quality product, nothing overdone. Cod comes on celery purée so smooth it's almost a sauce, tuna gets treated with the same restraint. Expect to spend around $25-35 for pasta, closer to $40-50 for mains, and the wine list knows what it's doing.",
+        "body": "The kitchen works in that northern Italian register\u2014precise technique, quality product, nothing overdone. Cod comes on celery pur\u00e9e so smooth it's almost a sauce, tuna gets treated with the same restraint. Expect to spend around $25-35 for pasta, closer to $40-50 for mains, and the wine list knows what it's doing.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Sud Forno",
-        "body": "📍 Sud Forno\n132 Yonge St, Toronto, ON M5C 1X3, Canada"
+        "body": "\ud83d\udccd Sud Forno\n132 Yonge St, Toronto, ON M5C 1X3, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nContemporary Italian bakery-café energy with casual all-day dining and coffee bar flow."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nContemporary Italian bakery-caf\u00e9 energy with casual all-day dining and coffee bar flow."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\nItalian bakery + café + prepared dishes.\nMenu link: https://www.terroni.com/locations/sud-forno-temperance"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\nItalian bakery + caf\u00e9 + prepared dishes.\nMenu link: https://www.terroni.com/locations/sud-forno-temperance"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.1 (2865 reviews)\nPrice level: $$\nPhone: (416) 955-1100\nWebsite: https://www.terroni.com/locations/sud-forno-temperance\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.1 (2865 reviews)\nPrice level: $$\nPhone: (416) 955-1100\nWebsite: https://www.terroni.com/locations/sud-forno-temperance\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 132 Yonge St, Toronto, ON M5C 1X3, Canada\n\n• walking: 58 mins • 4.3 km\n• transit: 16 mins • 4.4 km\n• driving: 15 mins • 5.6 km (traffic: 12 mins)\n• bicycling: 17 mins • 4.9 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (16 mins vs 15 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 132 Yonge St, Toronto, ON M5C 1X3, Canada\n\n\u2022 walking: 58 mins \u2022 4.3 km\n\u2022 transit: 16 mins \u2022 4.4 km\n\u2022 driving: 15 mins \u2022 5.6 km (traffic: 12 mins)\n\u2022 bicycling: 17 mins \u2022 4.9 km\n\nBest modality: TRANSIT \u2b50\nWhy: Transit is close to driving time (16 mins vs 15 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Sud Forno is a wonderful spot!\nThe café on the first floor is stylish and beautifully designed. The café latte and pastries were both delicious.\nUpstairs, the restaurant is perfect for a relaxed meal with friends. We were able to chat comfortably while enjoying authentic Italian food.\nHighly recommend for both coffee and a leisurely meal!\"\n\n⭐⭐⭐⭐⭐ \"There’s not much to say! A bit of what you fancy does you good! And a stop at Sud Forno on our way to Montreal is a must for our family. Service: superb, wine: excellent and the food: incredibly delicious!\n\nPicture:\nCod with celery puree, Tonnarelli alla Norcina\nitalian black truffle shavings, homemade spicy sausage, pecorino, garlic\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Sud Forno is a wonderful spot!\nThe caf\u00e9 on the first floor is stylish and beautifully designed. The caf\u00e9 latte and pastries were both delicious.\nUpstairs, the restaurant is perfect for a relaxed meal with friends. We were able to chat comfortably while enjoying authentic Italian food.\nHighly recommend for both coffee and a leisurely meal!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"There\u2019s not much to say! A bit of what you fancy does you good! And a stop at Sud Forno on our way to Montreal is a must for our family. Service: superb, wine: excellent and the food: incredibly delicious!\n\nPicture:\nCod with celery puree, Tonnarelli alla Norcina\nitalian black truffle shavings, homemade spicy sausage, pecorino, garlic\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "WINE LIST\n⭐ Italian Wine Selection\n   Curated selection of imported Italian wines",
+        "body": "WINE LIST\n\u2b50 Italian Wine Selection\n   Curated selection of imported Italian wines",
         "sections": [
           {
             "name": "WINE LIST",
@@ -144,5 +144,6 @@
         "distanceText": "4.4 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

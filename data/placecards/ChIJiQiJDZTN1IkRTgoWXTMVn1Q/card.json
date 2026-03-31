@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJiQiJDZTN1IkRTgoWXTMVn1Q",
-    "name": "ÉTAPE 22",
+    "name": "\u00c9TAPE 22",
     "city": "Toronto",
     "address": "Avenue & Davenport (182 Davenport Rd, Lower Level)",
     "type": "restaurant"
@@ -12,18 +12,18 @@
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
-    "summary": "Minimalist cycling apparel + coffee shop. Design-forward retail/café hybrid. 5.0★ (29 reviews). Near John's area. Soft-opened March 2026.",
+    "summary": "Minimalist cycling apparel + coffee shop. Design-forward retail/caf\u00e9 hybrid. 5.0\u2605 (29 reviews). Near John's area. Soft-opened March 2026.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find it below street level at Avenue and Davenport, tucked into the lower level where minimalist cycling apparel hangs on clean white walls alongside an espresso bar. The studio feels deliberately spare—polished concrete, carefully curated bike kits from MAAP and ASSOS displayed like gallery pieces, a few stools where you can sip espresso while running your hand over Italian chamois pads. It's half retail shrine to cycling culture, half café, all designed with the kind of restraint that makes you notice every stitch.",
+        "body": "You'll find it below street level at Avenue and Davenport, tucked into the lower level where minimalist cycling apparel hangs on clean white walls alongside an espresso bar. The studio feels deliberately spare\u2014polished concrete, carefully curated bike kits from MAAP and ASSOS displayed like gallery pieces, a few stools where you can sip espresso while running your hand over Italian chamois pads. It's half retail shrine to cycling culture, half caf\u00e9, all designed with the kind of restraint that makes you notice every stitch.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a café menu—it's espresso, full stop, pulled by owners Mitch and Henry who know as much about extraction as they do about gear ratios. The coffee program is tight and serious, the kind of place where your cortado arrives with actual latte art and tastes like they give a damn. Expect to pay café prices (espresso drinks around $4-6), but you're here for the vibe as much as the caffeine, browsing $300 bib shorts between sips.",
+        "body": "This isn't a caf\u00e9 menu\u2014it's espresso, full stop, pulled by owners Mitch and Henry who know as much about extraction as they do about gear ratios. The coffee program is tight and serious, the kind of place where your cortado arrives with actual latte art and tastes like they give a damn. Expect to pay caf\u00e9 prices (espresso drinks around $4-6), but you're here for the vibe as much as the caffeine, browsing $300 bib shorts between sips.",
         "id": "block-the-food-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I went to visit Etape22 in Toronto over the weekend and it is one of the best bike / cycling apparel experiences I've had. It doesn't matter if you are a beginner or expert in cycling, the owners make you feel welcome and have amazing cycling knowledge. It was really interesting learning about some of the brands they carry (MAAP, Universal Colours, ASSOS, etc.) and what makes their cycling kits unique. They also have great coffee which was yummy to sip on while perusing through their cycling apparel. Overall, one of the best cycling retail / coffee shop experiences in Toronto!\"\n\n⭐⭐⭐⭐⭐ \"Both Mitch and Henry are great guys and very tentative to your orders and needs. Not only is the studio space gorgeous they also brew a great espresso ;)\"\n\n⭐⭐⭐⭐⭐ \"Hidden gem in midtown! Mitch and Henry are super nice and helpful regarding everything cycling related!\n\nEasily become my favorite cycling shop in the city!\n\nCoffee is also great for mid/post ride stop:)\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I went to visit Etape22 in Toronto over the weekend and it is one of the best bike / cycling apparel experiences I've had. It doesn't matter if you are a beginner or expert in cycling, the owners make you feel welcome and have amazing cycling knowledge. It was really interesting learning about some of the brands they carry (MAAP, Universal Colours, ASSOS, etc.) and what makes their cycling kits unique. They also have great coffee which was yummy to sip on while perusing through their cycling apparel. Overall, one of the best cycling retail / coffee shop experiences in Toronto!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Both Mitch and Henry are great guys and very tentative to your orders and needs. Not only is the studio space gorgeous they also brew a great espresso ;)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Hidden gem in midtown! Mitch and Henry are super nice and helpful regarding everything cycling related!\n\nEasily become my favorite cycling shop in the city!\n\nCoffee is also great for mid/post ride stop:)\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

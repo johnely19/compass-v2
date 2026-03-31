@@ -12,7 +12,8 @@
     "text": "Discovered via avenue-road.com"
   },
   "narrative": {
-    "summary": "Gallery-like furniture showroom in a 1907 Victorian warehouse. Interior by Sebastian Herkner. Carries Christophe Delcourt, Raf Simons textiles, Obumex bespoke kitchens. Originally designed by Yabu Pushelberg. More art installation than furniture store. 4.5★ (27 reviews).",
+    "summary": "Gallery-like furniture showroom in a 1907 Victorian warehouse. Interior by Sebastian Herkner. Carries Christophe Delcourt, Raf Simons textiles, Obumex bespoke kitchens. Originally designed by Yabu Pushelberg. More art installation than furniture store. 4.5\u2605 (27 reviews).",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

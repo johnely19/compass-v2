@@ -8,13 +8,13 @@
     "address": "Fashion District / Richmond W",
     "type": "bar",
     "hours": [
-      "Monday: 7:30 AM – 5:00 PM",
-      "Tuesday: 7:30 AM – 5:00 PM",
-      "Wednesday: 7:30 AM – 5:00 PM",
-      "Thursday: 7:30 AM – 5:00 PM",
-      "Friday: 7:30 AM – 5:00 PM",
-      "Saturday: 8:00 AM – 5:00 PM",
-      "Sunday: 8:00 AM – 5:00 PM"
+      "Monday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 37,
@@ -31,13 +31,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the edge of the Fashion District where Richmond curves west, in a clean-lined space that opened in October 2025. Inside, it's all modern minimalism—white walls, natural light through street-facing windows, enough breathing room between tables that you can settle in with a laptop for hours. Come Wednesday through Sunday after 5pm, though, and there's a second act: a speakeasy entrance hidden off Graffiti Alley that transforms the whole operation.",
+        "body": "You're on the edge of the Fashion District where Richmond curves west, in a clean-lined space that opened in October 2025. Inside, it's all modern minimalism\u2014white walls, natural light through street-facing windows, enough breathing room between tables that you can settle in with a laptop for hours. Come Wednesday through Sunday after 5pm, though, and there's a second act: a speakeasy entrance hidden off Graffiti Alley that transforms the whole operation.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "By day, you're here for the pastry case and the matcha program—the latter light enough that it doesn't taste like sweetened grass clippings. The lemon scones come out properly baked, with that crucial balance between crumbly andStructureException. The menu runs deeper than most new cafes bother with, enough options that you're not stuck choosing between a croissant or a muffin. After dark, the speakeasy menu takes over, though the focus stays on drinks done with the same attention to detail.",
+        "body": "By day, you're here for the pastry case and the matcha program\u2014the latter light enough that it doesn't taste like sweetened grass clippings. The lemon scones come out properly baked, with that crucial balance between crumbly andStructureException. The menu runs deeper than most new cafes bother with, enough options that you're not stuck choosing between a croissant or a muffin. After dark, the speakeasy menu takes over, though the focus stays on drinks done with the same attention to detail.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I tried one of their matcha drinks and really enjoyed how light and well-balanced it was. The lemon scone I tried was also perfectly baked, simple but very satisfying. The cafe feels cozy and comfortable, making it easy to stay as long as you like without feeling rushed.\n\nIt seems like the place has recently opened, and everything felt clean and modern. There are plenty of menu options to choose from, which was a nice surprise.\nThe owner was also very kind and welcoming, which made the experience even better. Overall, a great spot to relax and enjoy good drinks and pastries. Highly recommend!!\"\n\n⭐⭐⭐⭐⭐ \"Went to the soft launch & was very impressed. The crew that put this together is so dedicated to the craft & put a lot of attention to detail and effort into this space. I can tell it will be the new neighbourhood hang out & work space. They have charging ports tucked into the furniture, nice natural light and wifi, plus great drinks! Would definitely recommend you check out this place!\"\n\n⭐⭐⭐⭐⭐ \"Very pretty cafe with high ceilings and modern decor\nGood coffee\nHad the veggie breakfast sandwich which was oily for me but they had other bakery options and protein bars too.\nEmpty early morning on a sunday but got quite busy soon!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I tried one of their matcha drinks and really enjoyed how light and well-balanced it was. The lemon scone I tried was also perfectly baked, simple but very satisfying. The cafe feels cozy and comfortable, making it easy to stay as long as you like without feeling rushed.\n\nIt seems like the place has recently opened, and everything felt clean and modern. There are plenty of menu options to choose from, which was a nice surprise.\nThe owner was also very kind and welcoming, which made the experience even better. Overall, a great spot to relax and enjoy good drinks and pastries. Highly recommend!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went to the soft launch & was very impressed. The crew that put this together is so dedicated to the craft & put a lot of attention to detail and effort into this space. I can tell it will be the new neighbourhood hang out & work space. They have charging ports tucked into the furniture, nice natural light and wifi, plus great drinks! Would definitely recommend you check out this place!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very pretty cafe with high ceilings and modern decor\nGood coffee\nHad the veggie breakfast sandwich which was oily for me but they had other bakery options and protein bars too.\nEmpty early morning on a sunday but got quite busy soon!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

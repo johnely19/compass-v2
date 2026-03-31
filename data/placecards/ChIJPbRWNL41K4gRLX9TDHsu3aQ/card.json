@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:30 PM – 12:00 AM",
-      "Thursday: 5:30 PM – 12:00 AM",
-      "Friday: 5:30 PM – 2:00 AM",
-      "Saturday: 5:30 PM – 2:00 AM",
-      "Sunday: 5:30 PM – 12:00 AM"
+      "Wednesday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 4.8,
     "review_count": 137
@@ -29,13 +29,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "Tucked near Kensington and College, you walk into a dimly-lit 60s fever dream where mushroom lamps glow along the bar and moody lighting turns everyone into supporting characters in a Tarantino film. Tiny corridor tables let the overflow crowd start drinking while they wait—this place packs in tight, and the noise level climbs fast. It's a cocktail bar first, with Asian-inflected snacks to keep you anchored.",
+        "body": "Tucked near Kensington and College, you walk into a dimly-lit 60s fever dream where mushroom lamps glow along the bar and moody lighting turns everyone into supporting characters in a Tarantino film. Tiny corridor tables let the overflow crowd start drinking while they wait\u2014this place packs in tight, and the noise level climbs fast. It's a cocktail bar first, with Asian-inflected snacks to keep you anchored.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into playful, elevated bar food with an Asian edge—think stracciatella toast piled with chili oil, soy bean, and dill that soaks into thick sourdough, or the caviar fish filet that's exactly what it sounds like: a bougie Filet-O-Fish that somehow delivers on the promise. The drinks are the real draw here, but the snacks punch above typical cocktail-bar territory. You're looking at small plates in the $12-18 range, meant for sharing or not.",
+        "body": "The menu leans into playful, elevated bar food with an Asian edge\u2014think stracciatella toast piled with chili oil, soy bean, and dill that soaks into thick sourdough, or the caviar fish filet that's exactly what it sounds like: a bougie Filet-O-Fish that somehow delivers on the promise. The drinks are the real draw here, but the snacks punch above typical cocktail-bar territory. You're looking at small plates in the $12-18 range, meant for sharing or not.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I love that they have tiny tables on the corridor so people waiting for a table can get started on a drink.\n\nThe caviar fish filet sandwich was delicious. If you like the filet o fish at McDonald’s, here’s a great bougie version.\n\nThe ambience was a bit noisy and hard to have any conversation. Everyone was just shouting at each other. But it’s a lively bar and I guess par for the course.\n\nVery cute decor - I love the little mushroom lamps on the bar.\"\n\n⭐⭐⭐⭐⭐ \"We had a magical experience at this unique asian-inspired cocktail bar! The strachiatella toast was definitely my favourite — the sourdough was the perfect vessel for the chili oil, soy bean, dill dip. The caviar fish filet was also perfect — reminded me of a high-end filet-o-fish!\n\nService was great and very attentive. The atmosphere is super retro and vibey. It’s a perfect cozy spot for a date!\"\n\n⭐⭐⭐⭐⭐ \"Have you ever tried a durian cocktail? Lonely Diner did the unthinkable and made the world’s most controversial fruit… fun. Their Forbidden Fruit is a clarified milk punch. It's velvety, light, with just a \"hint\" of durian custardy funk. Clean, smooth, and way too easy to drink 😂.\n\nCocktail highlights:\n\n• Gochu On My Mind: boozy, layered, spirit-forward. Definitely not for anyone who avoids a strong pour, but every sip evolves. It's bold and silky with a slow-building gochugaru heat. A spicy, umami mashup of Old Fashioned + Manhattan (i think).\n\n• Revitalizer: first sip hits with galangal, then comes the lift of lemongrass before it settles into a hint of eucalyptus finish that lingers long after. It’s light yet complex, crisp yet grounding.\n\n• Bohemian Raspberry: tart, creamy, and cheeky all at once.\n\nWe also went full send on the entire snack menu and here are the highlights:\n\n• Caviar Fish Filet: tangy, creamy, crispy. Definitely a fan favorite\n\n• Betel Leaf Beef Sliders: my favorite! First bite and my eyes did the full 🤩\n\n• Shrimp Nori Bites\n• Sesame Baby Corn\n\nLonely Diner is full of surprises. The drinks taste like a science experiment gone VERY right. With a lineup of talent from BarChef, After Seven, Big Trouble and Midnight Market, the bar was already set high, and they more than delivered. 10/10 would come back.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I love that they have tiny tables on the corridor so people waiting for a table can get started on a drink.\n\nThe caviar fish filet sandwich was delicious. If you like the filet o fish at McDonald\u2019s, here\u2019s a great bougie version.\n\nThe ambience was a bit noisy and hard to have any conversation. Everyone was just shouting at each other. But it\u2019s a lively bar and I guess par for the course.\n\nVery cute decor - I love the little mushroom lamps on the bar.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We had a magical experience at this unique asian-inspired cocktail bar! The strachiatella toast was definitely my favourite \u2014 the sourdough was the perfect vessel for the chili oil, soy bean, dill dip. The caviar fish filet was also perfect \u2014 reminded me of a high-end filet-o-fish!\n\nService was great and very attentive. The atmosphere is super retro and vibey. It\u2019s a perfect cozy spot for a date!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Have you ever tried a durian cocktail? Lonely Diner did the unthinkable and made the world\u2019s most controversial fruit\u2026 fun. Their Forbidden Fruit is a clarified milk punch. It's velvety, light, with just a \"hint\" of durian custardy funk. Clean, smooth, and way too easy to drink \ud83d\ude02.\n\nCocktail highlights:\n\n\u2022 Gochu On My Mind: boozy, layered, spirit-forward. Definitely not for anyone who avoids a strong pour, but every sip evolves. It's bold and silky with a slow-building gochugaru heat. A spicy, umami mashup of Old Fashioned + Manhattan (i think).\n\n\u2022 Revitalizer: first sip hits with galangal, then comes the lift of lemongrass before it settles into a hint of eucalyptus finish that lingers long after. It\u2019s light yet complex, crisp yet grounding.\n\n\u2022 Bohemian Raspberry: tart, creamy, and cheeky all at once.\n\nWe also went full send on the entire snack menu and here are the highlights:\n\n\u2022 Caviar Fish Filet: tangy, creamy, crispy. Definitely a fan favorite\n\n\u2022 Betel Leaf Beef Sliders: my favorite! First bite and my eyes did the full \ud83e\udd29\n\n\u2022 Shrimp Nori Bites\n\u2022 Sesame Baby Corn\n\nLonely Diner is full of surprises. The drinks taste like a science experiment gone VERY right. With a lineup of talent from BarChef, After Seven, Big Trouble and Midnight Market, the bar was already set high, and they more than delivered. 10/10 would come back.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

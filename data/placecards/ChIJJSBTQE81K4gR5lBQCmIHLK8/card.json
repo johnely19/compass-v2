@@ -10,10 +10,10 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 12:00 – 6:00 PM",
-      "Thursday: 12:00 – 6:00 PM",
-      "Friday: 12:00 – 6:00 PM",
-      "Saturday: 10:00 AM – 3:00 PM",
+      "Wednesday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.1,
@@ -30,27 +30,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "On a residential stretch of Roncesvalles, you'll find a storefront packed floor-to-ceiling with textiles and home goods that demand your attention all at once. The current installation features fish-scale patterned pieces alongside stacks of kilim-inspired floor pillows, woven storage crates in saturated colors, and modern textiles draped across fixtures. Your eyes won't know where to land first—it's deliberately overstuffed in the best way, more curated chaos than minimalist showroom.",
+        "body": "On a residential stretch of Roncesvalles, you'll find a storefront packed floor-to-ceiling with textiles and home goods that demand your attention all at once. The current installation features fish-scale patterned pieces alongside stacks of kilim-inspired floor pillows, woven storage crates in saturated colors, and modern textiles draped across fixtures. Your eyes won't know where to land first\u2014it's deliberately overstuffed in the best way, more curated chaos than minimalist showroom.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—313 Design Market is an artisan-focused home goods store specializing in textiles, storage solutions, and decorative objects. You'll find colorful crates perfect for corralling clutter, photo frame accessories, incense (though staff knowledge on burn times can be hit-or-miss), and kilim-inspired pillows and throws. Prices lean higher for what appear to be artisan-quality pieces, so ask questions and do your research before committing to pricier items.",
+        "body": "This isn't a restaurant\u2014313 Design Market is an artisan-focused home goods store specializing in textiles, storage solutions, and decorative objects. You'll find colorful crates perfect for corralling clutter, photo frame accessories, incense (though staff knowledge on burn times can be hit-or-miss), and kilim-inspired pillows and throws. Prices lean higher for what appear to be artisan-quality pieces, so ask questions and do your research before committing to pricier items.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You're furnishing a new place or finally ready to replace that sad IKEA storage bin with something that actually looks intentional. Come when you have time to browse without rushing—this isn't an in-and-out errand situation.",
+        "body": "You're furnishing a new place or finally ready to replace that sad IKEA storage bin with something that actually looks intentional. Come when you have time to browse without rushing\u2014this isn't an in-and-out errand situation.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"When I first walked into the store, my eyes were darting everywhere because there are too many beautiful things. Such a good inventory of storage and curated items to make the house a home.\n\nI bought a colorful crate for my office drawer, and different photo frame accessories. Happy with all my purchases and will definitely return another time.\"\n\n⭐⭐⭐⭐ \"Great place to buy colourful crates and unique items. Sometimes the staff doesn’t know the products too well - I asked one employee to weigh in on incense (specifically how fast it would burn, thinking it would burn more slowly based on the price $$$ and material), but the person had no idea and so I ended up purchasing it and being disappointed. I will do more research before next purchase, but will definitely go back to this store.\"\n\n⭐⭐⭐⭐⭐ \"An amazing store with such a great range of products to bring some beauty to your home, 313 has something for all budgets. I purchased some pillows and they were able to hold them for me until I could come back with a car.\n\nCustomer service was great in the summer when I was able to shop in person and they also had free local delivery that I was able to use in lockdown.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"When I first walked into the store, my eyes were darting everywhere because there are too many beautiful things. Such a good inventory of storage and curated items to make the house a home.\n\nI bought a colorful crate for my office drawer, and different photo frame accessories. Happy with all my purchases and will definitely return another time.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great place to buy colourful crates and unique items. Sometimes the staff doesn\u2019t know the products too well - I asked one employee to weigh in on incense (specifically how fast it would burn, thinking it would burn more slowly based on the price $$$ and material), but the person had no idea and so I ended up purchasing it and being disappointed. I will do more research before next purchase, but will definitely go back to this store.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"An amazing store with such a great range of products to bring some beauty to your home, 313 has something for all budgets. I purchased some pillows and they were able to hold them for me until I could come back with a car.\n\nCustomer service was great in the summer when I was able to shop in person and they also had free local delivery that I was able to use in lockdown.\""
       }
     ]
-  }
+  },
+  "type": "grocery"
 }

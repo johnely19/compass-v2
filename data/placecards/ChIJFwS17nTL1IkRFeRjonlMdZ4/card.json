@@ -10,10 +10,10 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 6:00 PM – 2:00 AM",
-      "Thursday: 6:00 PM – 2:00 AM",
-      "Friday: 6:00 PM – 2:00 AM",
-      "Saturday: 6:00 PM – 2:00 AM",
+      "Wednesday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Thursday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.4,
@@ -31,27 +31,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Gerrard East in Leslieville, past the vintage shops and brunch spots, looking for a door that doesn't advertise itself. Inside, it's all velvet pews, gilded saints watching from the walls, and votive candles throwing shadows across dark wood booths—a speakeasy built like a fallen cathedral. The bar glows against the religious kitsch, and by midnight on weekends, bodies pack in close enough that you're shoulder-to-shoulder with strangers under plastic cherubs.",
+        "body": "You're on Gerrard East in Leslieville, past the vintage shops and brunch spots, looking for a door that doesn't advertise itself. Inside, it's all velvet pews, gilded saints watching from the walls, and votive candles throwing shadows across dark wood booths\u2014a speakeasy built like a fallen cathedral. The bar glows against the religious kitsch, and by midnight on weekends, bodies pack in close enough that you're shoulder-to-shoulder with strangers under plastic cherubs.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a bar that happens to sling pizza. The slices come hot from the kitchen all night, sometimes handed out free at coat check or when the staff feels generous, the kind of thin, greasy wedges that taste perfect at 1am when you've had three cocktails. You're here for the drinks and the scene, but the pizza is better than it needs to be, which is exactly what makes it work. Think of it as fuel, not a meal.",
+        "body": "This isn't a restaurant\u2014it's a bar that happens to sling pizza. The slices come hot from the kitchen all night, sometimes handed out free at coat check or when the staff feels generous, the kind of thin, greasy wedges that taste perfect at 1am when you've had three cocktails. You're here for the drinks and the scene, but the pizza is better than it needs to be, which is exactly what makes it work. Think of it as fuel, not a meal.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You want a late night that feels like a secret—Thursday through Saturday after 11pm, when the DJ's going and the crowd's loose enough to dance between the pews. Book ahead if you need a table, or just show up ready to stand and see where the night takes you.",
+        "body": "You want a late night that feels like a secret\u2014Thursday through Saturday after 11pm, when the DJ's going and the crowd's loose enough to dance between the pews. Book ahead if you need a table, or just show up ready to stand and see where the night takes you.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I don’t usually wait in lines to get in places. But on new years my friend got me a ticket, so we waited. They had slices of pizza at the coat check (which were amazing!) That the bar gave everyone for free!! Champagne to celebrate at the countdown. Was a great way to ring in the new year. Def recommend 🎉🎉🎉\"\n\n⭐⭐⭐⭐ \"Great stop for after dinner drinks and dancing.\n1980s dance party theme was fun with music to remember.  Got pretty packed as the night went on, and if you want somewhere to sit, make sure you make a reservation.\n\nGood mix of people in many age categories, everyone having fun.\n\nThe pizza was being pumped out all night and smelled delicious, so I grabbed a slice on the way out.  It definitely hit the spot for the drive home.\nWould like to try dinner and a fresh hot pizza next time as pizza sitting in the warmer probably didn't do itself justice.\n\nLooking forward to another night there.\"\n\n⭐⭐⭐⭐⭐ \"Great atmosphere and energy all around. The ambiance strikes a perfect balance between lively retro and comfortable — good lighting, great music, and a vibe that makes it easy to relax and enjoy the night. The crowd felt welcoming and the overall setup of the space made it feel upscale without being pretentious.\nOne thing that really stood out was the cleanliness. The floors, seating areas, and bar were well maintained throughout the night, and the washrooms were surprisingly clean for a busy spot. It’s clear the staff, and specifically Alicia; take pride in keeping the place looking good.\nOverall, it’s a great spot if you’re looking for a fun night out with a good vibe, solid atmosphere, and a clean environment. Definitely a place I’d come back to, and strongly recommend.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I don\u2019t usually wait in lines to get in places. But on new years my friend got me a ticket, so we waited. They had slices of pizza at the coat check (which were amazing!) That the bar gave everyone for free!! Champagne to celebrate at the countdown. Was a great way to ring in the new year. Def recommend \ud83c\udf89\ud83c\udf89\ud83c\udf89\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great stop for after dinner drinks and dancing.\n1980s dance party theme was fun with music to remember.  Got pretty packed as the night went on, and if you want somewhere to sit, make sure you make a reservation.\n\nGood mix of people in many age categories, everyone having fun.\n\nThe pizza was being pumped out all night and smelled delicious, so I grabbed a slice on the way out.  It definitely hit the spot for the drive home.\nWould like to try dinner and a fresh hot pizza next time as pizza sitting in the warmer probably didn't do itself justice.\n\nLooking forward to another night there.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great atmosphere and energy all around. The ambiance strikes a perfect balance between lively retro and comfortable \u2014 good lighting, great music, and a vibe that makes it easy to relax and enjoy the night. The crowd felt welcoming and the overall setup of the space made it feel upscale without being pretentious.\nOne thing that really stood out was the cleanliness. The floors, seating areas, and bar were well maintained throughout the night, and the washrooms were surprisingly clean for a busy spot. It\u2019s clear the staff, and specifically Alicia; take pride in keeping the place looking good.\nOverall, it\u2019s a great spot if you\u2019re looking for a fun night out with a good vibe, solid atmosphere, and a clean environment. Definitely a place I\u2019d come back to, and strongly recommend.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

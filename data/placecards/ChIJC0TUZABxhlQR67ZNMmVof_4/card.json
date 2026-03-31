@@ -8,12 +8,12 @@
     "address": "Downtown",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 9:00 PM",
-      "Tuesday: 11:00 AM – 9:00 PM",
-      "Wednesday: 11:00 AM – 9:00 PM",
-      "Thursday: 11:00 AM – 9:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
+      "Monday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.7,
@@ -22,36 +22,37 @@
     "website": "https://www.lataqueria.com/pinchetaco"
   },
   "discovery": {
-    "text": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
+    "text": "Vancouver's best tacos \u2014 authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ \u2014 budget-friendly.",
     "url": "https://www.quora.com/What-are-the-best-restaurants-to-try-when-visiting-Vancouver-BC-What-should-you-try-while-youre-there"
   },
   "narrative": {
-    "summary": "Vancouver's best tacos — authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ — budget-friendly.",
+    "summary": "Vancouver's best tacos \u2014 authentic Mexican street food. Multiple locations, downtown Seymour St is most central. Quick, affordable, delicious. Perfect for a casual lunch between exploring. Rating 4.7/5. $ \u2014 budget-friendly.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Seymour in the thick of downtown, tucked into a narrow storefront that feels more Mexico City side street than Vancouver high-rise district. Inside it's compact and unfussy—tiled walls, a counter where you order, maybe a handful of stools if you're lucky. The energy is quick-service but not assembly line: someone calls your name when your tacos are up, and on a grey afternoon, the bright citrus and char smells cut through the Pacific Northwest gloom.",
+        "body": "You're on Seymour in the thick of downtown, tucked into a narrow storefront that feels more Mexico City side street than Vancouver high-rise district. Inside it's compact and unfussy\u2014tiled walls, a counter where you order, maybe a handful of stools if you're lucky. The energy is quick-service but not assembly line: someone calls your name when your tacos are up, and on a grey afternoon, the bright citrus and char smells cut through the Pacific Northwest gloom.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Mexican street food done right—corn tortillas pressed to order, fillings like al pastor with pineapple, carne asada, and baja-style beer-battered fish. The balance is what gets you: the bite of lime, the heat from salsa verde, the freshness of cilantro and white onion that tastes like it was chopped five minutes ago. Tacos run about $5-6 each, which means you can eat well and still have money left for whatever you're doing next.",
+        "body": "This is Mexican street food done right\u2014corn tortillas pressed to order, fillings like al pastor with pineapple, carne asada, and baja-style beer-battered fish. The balance is what gets you: the bite of lime, the heat from salsa verde, the freshness of cilantro and white onion that tastes like it was chopped five minutes ago. Tacos run about $5-6 each, which means you can eat well and still have money left for whatever you're doing next.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your midday reset between meetings or museum visits—the kind of place that feeds you fast but doesn't feel rushed. Come when you want real food without the ceremony, and when a proper taco sounds better than another sad desk lunch.",
+        "body": "This is your midday reset between meetings or museum visits\u2014the kind of place that feeds you fast but doesn't feel rushed. Come when you want real food without the ceremony, and when a proper taco sounds better than another sad desk lunch.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"⭐️⭐️⭐️⭐️⭐️\n\nStopped into Pinche Taco Shop on a cold Vancouver afternoon and left feeling like I’d been on a mini vacation.\n\nRight from the moment I walked in I was greeted which honestly already put this place ahead of most spots these days. I had pretty much made up my mind about what I wanted, and the guy taking my order confirmed I was making the right choice. Food came out quickly and everything tasted incredibly fresh bright flavours, great balance, and exactly the kind of warmth you’re craving when it’s grey outside.\n\nWhat really stood out though was the service. When I left he actually said goodbye and used my name. In a world of phones, zero eye contact, and rushed interactions, that small moment made a big impression.\n\nGreat food, fast service, and genuine hospitality. I’ll absolutely be back.\"\n\n⭐⭐⭐⭐⭐ \"Awesome space with nice vibes. I tried the pork and chicken tacos. Both a 5/5\n\nI just wish the tacos were wallet friendly. I paid around $21 for 2 tacos after tips. Personally, $6-7 per taco would be the sweet spot.\"\n\n⭐⭐⭐⭐⭐ \"I visited this place right before a party event, and honestly, it couldn’t have been a more perfect choice for me and my friends. The atmosphere was vibrant without being overwhelming, and the staff made us feel welcomed from the moment we walked in.\nDo yourself a favor and don’t leave without trying the Trompo de Sirloin. It’s tender, flavorful, and perfectly seasoned, easily one of the best mexican dishes I’ve had in a long time.\nAnd then comes their only dessert. At first I wondered why there was just one option… but once you try it, you immediately understand. They don’t need anything else. It’s the kind of dessert that makes the whole table go quiet for a second because everyone is too busy enjoying it. Can’t wait to go back!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\u2b50\ufe0f\n\nStopped into Pinche Taco Shop on a cold Vancouver afternoon and left feeling like I\u2019d been on a mini vacation.\n\nRight from the moment I walked in I was greeted which honestly already put this place ahead of most spots these days. I had pretty much made up my mind about what I wanted, and the guy taking my order confirmed I was making the right choice. Food came out quickly and everything tasted incredibly fresh bright flavours, great balance, and exactly the kind of warmth you\u2019re craving when it\u2019s grey outside.\n\nWhat really stood out though was the service. When I left he actually said goodbye and used my name. In a world of phones, zero eye contact, and rushed interactions, that small moment made a big impression.\n\nGreat food, fast service, and genuine hospitality. I\u2019ll absolutely be back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Awesome space with nice vibes. I tried the pork and chicken tacos. Both a 5/5\n\nI just wish the tacos were wallet friendly. I paid around $21 for 2 tacos after tips. Personally, $6-7 per taco would be the sweet spot.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I visited this place right before a party event, and honestly, it couldn\u2019t have been a more perfect choice for me and my friends. The atmosphere was vibrant without being overwhelming, and the staff made us feel welcomed from the moment we walked in.\nDo yourself a favor and don\u2019t leave without trying the Trompo de Sirloin. It\u2019s tender, flavorful, and perfectly seasoned, easily one of the best mexican dishes I\u2019ve had in a long time.\nAnd then comes their only dessert. At first I wondered why there was just one option\u2026 but once you try it, you immediately understand. They don\u2019t need anything else. It\u2019s the kind of dessert that makes the whole table go quiet for a second because everyone is too busy enjoying it. Can\u2019t wait to go back!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

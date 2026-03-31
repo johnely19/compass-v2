@@ -8,13 +8,13 @@
     "address": "Christie Pits / Koreatown",
     "type": "grocery",
     "hours": [
-      "Monday: 8:00 AM – 8:00 PM",
-      "Tuesday: 8:00 AM – 8:00 PM",
-      "Wednesday: 8:00 AM – 8:00 PM",
-      "Thursday: 8:00 AM – 8:00 PM",
-      "Friday: 8:00 AM – 8:00 PM",
-      "Saturday: 8:00 AM – 8:00 PM",
-      "Sunday: 9:00 AM – 7:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20097:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 1930,
@@ -25,7 +25,8 @@
     "text": "blogto.com"
   },
   "narrative": {
-    "summary": "Independent grocer punching above its weight. Exceptional produce, local suppliers, craft brands you won't find at chains. 4.5★ (1927 reviews). Community institution. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "Independent grocer punching above its weight. Exceptional produce, local suppliers, craft brands you won't find at chains. 4.5\u2605 (1927 reviews). Community institution. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

@@ -11,35 +11,36 @@
     "website": "https://namirestaurant.ca/",
     "price_level": 3,
     "rating": 4.3,
-    "location": "55 Adelaide St E, Toronto, ON M5C 1K6"
+    "location": "55 Adelaide St E, Toronto, ON M5C 1K6",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAdelaide & Church — The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984.",
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAdelaide & Church \u2014 The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAdelaide & Church — The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAdelaide & Church \u2014 The iconic illuminated wave facade designed by Raymond Moriyama (Ontario Science Centre, Toronto Reference Library) has beckoned diners since 1984."
       },
       {
         "id": "block-2",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nStep through and you're transported — tatami rooms where you sit on the floor, kimono-wearing servers, one of the city's only robata bars where chefs grill over open flame in front of you. The sushi bar puts you eye-level with masters at work."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nStep through and you're transported \u2014 tatami rooms where you sit on the floor, kimono-wearing servers, one of the city's only robata bars where chefs grill over open flame in front of you. The sushi bar puts you eye-level with masters at work."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🍣 Sushi & Sashimi\n• Omakase — market price ⭐\n• Sushi Pizza — invented here in the 1980s ⭐\n• Sashimi Deluxe — market fresh selection\n• Chirashi — scattered sushi rice bowl\n\n🔥 Robata (Grilled)\n• Black Cod — flown in from Japan ⭐\n• Wagyu Beef\n• Yakitori selection\n• Seafood robata platter\n\n🍲 Specialties\n• Sukiyaki — traditional hot pot\n• Bento Box — complete meal\n• Tempura selection\n\n🥢 A La Carte\n• Hand rolls\n• Onigiri\n• Various appetizers\n\nNote: Much of the fish is flown in from Japan. Omakase recommended for the full experience."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud83c\udf63 Sushi & Sashimi\n\u2022 Omakase \u2014 market price \u2b50\n\u2022 Sushi Pizza \u2014 invented here in the 1980s \u2b50\n\u2022 Sashimi Deluxe \u2014 market fresh selection\n\u2022 Chirashi \u2014 scattered sushi rice bowl\n\n\ud83d\udd25 Robata (Grilled)\n\u2022 Black Cod \u2014 flown in from Japan \u2b50\n\u2022 Wagyu Beef\n\u2022 Yakitori selection\n\u2022 Seafood robata platter\n\n\ud83c\udf72 Specialties\n\u2022 Sukiyaki \u2014 traditional hot pot\n\u2022 Bento Box \u2014 complete meal\n\u2022 Tempura selection\n\n\ud83e\udd62 A La Carte\n\u2022 Hand rolls\n\u2022 Onigiri\n\u2022 Various appetizers\n\nNote: Much of the fish is flown in from Japan. Omakase recommended for the full experience."
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$\n\nDinner for 2: $120-180 (with drinks)\nOmakase: $85-150pp\n\n⚠️ FINAL DAY: MARCH 7, 2026\n\nReservations: Tock (exploretock.com/namijapaneserestaurant)\nWalk-ins: Limited availability\n\n📞 (416) 362-7373\n🌐 namirestaurant.ca\n\n𝗛𝗢𝗨𝗥𝗦\nTue–Fri: 11:30am–3pm, 5–10pm\nSat: 5–10pm\nSun–Mon: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Happy hour 5-7pm Wed — discounted drinks, quiet before dinner rush\n• Lunch Tue-Fri for lighter crowds\n• Book tatami room for special occasions (5+ people required)\n• Final days will be packed — reserve NOW\n\n𝗟𝗘𝗚𝗔𝗖𝗬\nHosted: Meryl Streep, U2, Rolling Stones, Meg Ryan, Russell Crowe, Carrie Fisher, Japanese Royal Family\nBirthplace of sushi pizza (chef Kaoru Ohsada, 1980s)\n40+ years defining Japanese dining in Toronto"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$\n\nDinner for 2: $120-180 (with drinks)\nOmakase: $85-150pp\n\n\u26a0\ufe0f FINAL DAY: MARCH 7, 2026\n\nReservations: Tock (exploretock.com/namijapaneserestaurant)\nWalk-ins: Limited availability\n\n\ud83d\udcde (416) 362-7373\n\ud83c\udf10 namirestaurant.ca\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nTue\u2013Fri: 11:30am\u20133pm, 5\u201310pm\nSat: 5\u201310pm\nSun\u2013Mon: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Happy hour 5-7pm Wed \u2014 discounted drinks, quiet before dinner rush\n\u2022 Lunch Tue-Fri for lighter crowds\n\u2022 Book tatami room for special occasions (5+ people required)\n\u2022 Final days will be packed \u2014 reserve NOW\n\n\ud835\udddf\ud835\uddd8\ud835\uddda\ud835\uddd4\ud835\uddd6\ud835\uddec\nHosted: Meryl Streep, U2, Rolling Stones, Meg Ryan, Russell Crowe, Carrie Fisher, Japanese Royal Family\nBirthplace of sushi pizza (chef Kaoru Ohsada, 1980s)\n40+ years defining Japanese dining in Toronto"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 55 Adelaide St E, Toronto, ON M5C 1K6\n\n• walking: 1 hour 1 min • 4.6 km\n• transit: 19 mins • 5.0 km\n• driving: 16 mins • 5.7 km (traffic: 12 mins)\n• bicycling: 18 mins • 5.2 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (19 mins vs 16 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 55 Adelaide St E, Toronto, ON M5C 1K6\n\n\u2022 walking: 1 hour 1 min \u2022 4.6 km\n\u2022 transit: 19 mins \u2022 5.0 km\n\u2022 driving: 16 mins \u2022 5.7 km (traffic: 12 mins)\n\u2022 bicycling: 18 mins \u2022 5.2 km\n\nBest modality: TRANSIT \u2b50\nWhy: Transit is close to driving time (19 mins vs 16 mins)"
       }
     ]
   },
@@ -95,5 +96,6 @@
         "distanceText": "5.0 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

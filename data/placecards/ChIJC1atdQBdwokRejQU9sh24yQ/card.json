@@ -9,12 +9,12 @@
     "type": "bar",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 12:00 AM",
-      "Friday: 5:00 PM – 1:00 AM",
-      "Saturday: 2:00 PM – 1:00 AM",
-      "Sunday: 2:00 PM – 12:00 AM"
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Saturday: 2:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Sunday: 2:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 4.8,
     "review_count": 85,
@@ -26,32 +26,33 @@
     "url": "https://www.bonappetit.com/story/where-to-stay-new-york-city-food-lovers"
   },
   "narrative": {
-    "summary": "The 'insanely fun soju spot' per Bon Appétit's March 2026 NYC food guide. Korean-inspired cocktails, soju-forward. 4.8★ (85 reviews). On the Bushwick→Ridgewood walk.",
+    "summary": "The 'insanely fun soju spot' per Bon App\u00e9tit's March 2026 NYC food guide. Korean-inspired cocktails, soju-forward. 4.8\u2605 (85 reviews). On the Bushwick\u2192Ridgewood walk.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Bushwick block between Maria Hernandez Park and the Ridgewood border, the kind of stretch that still feels residential until you spot the unmarked door. Inside, low Korean-style tables anchor the room—you're sitting close to the ground on cushions, knees bent, sharing space in a way that makes everything feel immediate. The lighting's dim enough to feel like night even at 7pm, and the music hits exactly right.",
+        "body": "You're on a quiet Bushwick block between Maria Hernandez Park and the Ridgewood border, the kind of stretch that still feels residential until you spot the unmarked door. Inside, low Korean-style tables anchor the room\u2014you're sitting close to the ground on cushions, knees bent, sharing space in a way that makes everything feel immediate. The lighting's dim enough to feel like night even at 7pm, and the music hits exactly right.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a soju bar with serious anju—Korean drinking snacks that are substantial enough to build a meal around. The gochujang fried ribs are sticky and aggressive, the kimchi carbonara somehow works (cream and funk in balance), and the dubu nuggets are better than calling them 'tofu' suggests. Every table starts with banchan that includes a cranberry kimchi you won't find anywhere else. It's all in the $12-18 range, designed for sharing across those low tables with soju-forward cocktails or makgeolli if you want something cloudy and alive.",
+        "body": "This is a soju bar with serious anju\u2014Korean drinking snacks that are substantial enough to build a meal around. The gochujang fried ribs are sticky and aggressive, the kimchi carbonara somehow works (cream and funk in balance), and the dubu nuggets are better than calling them 'tofu' suggests. Every table starts with banchan that includes a cranberry kimchi you won't find anywhere else. It's all in the $12-18 range, designed for sharing across those low tables with soju-forward cocktails or makgeolli if you want something cloudy and alive.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is for the night when you want to drink well and eat progressively—bring three friends, order too much, and settle in at one of those low tables. It's the kind of spot that works best when you're ready to commit to the vibe for a few hours.",
+        "body": "This is for the night when you want to drink well and eat progressively\u2014bring three friends, order too much, and settle in at one of those low tables. It's the kind of spot that works best when you're ready to commit to the vibe for a few hours.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Cool atmosphere. Fun drinks. Really nice low to the ground tables that I personally fancied. We got the fried ribs, the tofu, and the kimchi carbonara. Everything was hella delicious. Beautiful textures and spice profiles. Great place to share plates with friends. Super fast service\"\n\n⭐⭐⭐⭐⭐ \"1 The fries are super good. 2 All the ferments and pickles in the banchan are professionally made - the cranberry kimchi is bonkers and wholly unique. 3 The cocktails are good even if the texture of makgeoli is new to you. 4 10/10 music tn\"\n\n⭐⭐⭐⭐⭐ \"Such a cool experience. We really enjoyed the delicious and inventive cocktails, as well as the truly memorable (and substantial) anju/bar snacks. Our favorites were the kimchi carbonara and the gochujang fried ribs, but the dubu nuggets were a surprise hit. Don't sleep on the Space Spam cocktail! What a unique treasure in Bushwick!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Cool atmosphere. Fun drinks. Really nice low to the ground tables that I personally fancied. We got the fried ribs, the tofu, and the kimchi carbonara. Everything was hella delicious. Beautiful textures and spice profiles. Great place to share plates with friends. Super fast service\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"1 The fries are super good. 2 All the ferments and pickles in the banchan are professionally made - the cranberry kimchi is bonkers and wholly unique. 3 The cocktails are good even if the texture of makgeoli is new to you. 4 10/10 music tn\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a cool experience. We really enjoyed the delicious and inventive cocktails, as well as the truly memorable (and substantial) anju/bar snacks. Our favorites were the kimchi carbonara and the gochujang fried ribs, but the dubu nuggets were a surprise hit. Don't sleep on the Space Spam cocktail! What a unique treasure in Bushwick!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

@@ -12,7 +12,7 @@
     "text": "Discovered via development tracker"
   },
   "narrative": {
-    "summary": "Fitzrovia's first project from their $1B DevCore Fund. Replaces a 14-storey mid-century office building (Ontario Ministry of Environment). 100-year lease structure — 'rent to build rentals.' 631 purpose-built rental units with childcare. Locals in the affluent Avenue & St Clair area are strongly opposed, calling it a 'giant monolith' that threatens neighbourhood character. Designed by the prestigious Hariri Pontarini Architects.",
+    "summary": "Fitzrovia's first project from their $1B DevCore Fund. Replaces a 14-storey mid-century office building (Ontario Ministry of Environment). 100-year lease structure \u2014 'rent to build rentals.' 631 purpose-built rental units with childcare. Locals in the affluent Avenue & St Clair area are strongly opposed, calling it a 'giant monolith' that threatens neighbourhood character. Designed by the prestigious Hariri Pontarini Architects.",
     "blocks": []
   },
   "development": {
@@ -41,15 +41,15 @@
         "url": "https://urbantoronto.ca/news/2024/12/49-storey-rental-tower-would-replace-mid-century-office-building-avenue-st-clair.57516"
       },
       {
-        "name": "Storeys — Fitzrovia Proposal",
+        "name": "Storeys \u2014 Fitzrovia Proposal",
         "url": "https://storeys.com/fitzrovia-rental-development-st-clair-west/"
       },
       {
-        "name": "BlogTO — Soaring Tower (Dec 2024)",
+        "name": "BlogTO \u2014 Soaring Tower (Dec 2024)",
         "url": "https://www.blogto.com/real-estate-toronto/2024/12/135-st-clair-avenue-west-toronto/"
       },
       {
-        "name": "BlogTO — Local Opposition (Sep 2025)",
+        "name": "BlogTO \u2014 Local Opposition (Sep 2025)",
         "url": "https://www.blogto.com/real-estate-toronto/2025/09/135-st-clair-ave-w-toronto-opposition/"
       },
       {
@@ -57,5 +57,6 @@
         "url": "https://deerparkresidents.ca/2025/09/25/135-st-clair-ave-west/"
       }
     ]
-  }
+  },
+  "type": "development"
 }

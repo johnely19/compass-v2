@@ -13,67 +13,67 @@
     "user_rating_count": 411,
     "location": "68-22 Forest Ave, Queens, NY 11385, USA",
     "hours": [
-      "Monday: 5:00 – 10:00 PM",
+      "Monday: 5:00\u2009\u2013\u200910:00\u202fPM",
       "Tuesday: Closed",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
-      "Saturday: 11:00 AM – 3:00 PM, 5:00 – 11:00 PM",
-      "Sunday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM"
+      "Wednesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "review_count": 427
   },
   "narrative": {
-    "summary": "📍 Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA",
+    "summary": "\ud83d\udccd Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "Forest Avenue in Ridgewood still feels like a neighborhood where people actually live, and Hellbender sits on that line between local bar and destination restaurant. Inside, tables pack close enough that you'll catch pieces of other conversations—save the gossip for post-dinner. They bring your milk for coffee in a tiny ceramic cow pitcher, the kind of detail that shouldn't matter but does.",
+        "body": "Forest Avenue in Ridgewood still feels like a neighborhood where people actually live, and Hellbender sits on that line between local bar and destination restaurant. Inside, tables pack close enough that you'll catch pieces of other conversations\u2014save the gossip for post-dinner. They bring your milk for coffee in a tiny ceramic cow pitcher, the kind of detail that shouldn't matter but does.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into comfort—egg tostadas at brunch, shrimp tacos that people order multiple rounds of, crispy potatoes you'll want as insurance against small portions. The cooking is thoughtful without announcing itself, the kind of place where technique shows up in texture and seasoning rather than descriptions. Expect to spend around $15-20 per plate and maybe order one more thing than you planned.",
+        "body": "The menu leans into comfort\u2014egg tostadas at brunch, shrimp tacos that people order multiple rounds of, crispy potatoes you'll want as insurance against small portions. The cooking is thoughtful without announcing itself, the kind of place where technique shows up in texture and seasoning rather than descriptions. Expect to spend around $15-20 per plate and maybe order one more thing than you planned.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Hellbender",
-        "body": "📍 Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA"
+        "body": "\ud83d\udccd Hellbender\n68-22 Forest Ave, Queens, NY 11385, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nMexican American cuisine by Yara Herrera - Esquire Best New Restaurants award winner, glowing NYT review, truly local spot"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMexican American cuisine by Yara Herrera - Esquire Best New Restaurants award winner, glowing NYT review, truly local spot"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://hellbendernyc.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://hellbendernyc.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.3 (411 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: http://hellbendernyc.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.3 (411 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: http://hellbendernyc.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 68-22 Forest Ave, Queens, NY 11385, USA\n\n• walking: 2 hours 9 mins • 5.7 mi\n• transit: 49 mins • 7.3 mi\n• driving: 31 mins • 8.3 mi (traffic: 30 mins)\n• bicycling: 41 mins • 6.3 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (31 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 68-22 Forest Ave, Queens, NY 11385, USA\n\n\u2022 walking: 2 hours 9 mins \u2022 5.7 mi\n\u2022 transit: 49 mins \u2022 7.3 mi\n\u2022 driving: 31 mins \u2022 8.3 mi (traffic: 30 mins)\n\u2022 bicycling: 41 mins \u2022 6.3 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (31 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Cute local bar and restaurant in Ridgewood.  It’s smart to make reservations especially for brunch and dinner times.  The tables are pretty close together so keep secrets till later.\n\nThe food is comforting and thoughtfully done but felt portions were on the small side.  We ordered the egg tostada, shrimp tacos, and a side of potatoes to share.  I loved the adorable little cow milk pitcher. It just made me smile.\n\nThe servers were kind and attentive even though they were pretty slammed.\"\n\n⭐⭐⭐⭐⭐ \"From the moment me and friend walked in we felt like “yeah we’re about to have a good meal and good time.” Our waitress Lillian made our entire 1st time experience simply amazing. She was so personable, warm and explained the menu/drinks 👌🏾. The fried Oxacan cheese - 10/10, the roasted mushroom tacos - 10/10, himachi dish - 10/10, 3 cheese empanada 10/10, lamb dish -  a little gamey for my palette, but still good 7.5/10 and the drinks -10/10. Even though it was crowded it was still comfortable - we will definitely be returning for their famous brunch and dinner again and again! Hellbender is top tier!\"\n\n⭐⭐⭐⭐⭐ \"Came here for brunch on a Sunday, had a reservation. Sat at the bar for a drink before we went to our table. Drinks were really good we had a few each, service was great. We ordered a few different things, the bloody Maria mignonette with the oysters was tasty and a little spicy. The pork tacos were incredible and of course we got the masa pancakes which were delicious but so filling. The jello of the day was a Concord grape jello with peanut butter drizzle and a homemade whipped cream which was really really good. Would love to come back here. And the bathrooms are huge!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Cute local bar and restaurant in Ridgewood.  It\u2019s smart to make reservations especially for brunch and dinner times.  The tables are pretty close together so keep secrets till later.\n\nThe food is comforting and thoughtfully done but felt portions were on the small side.  We ordered the egg tostada, shrimp tacos, and a side of potatoes to share.  I loved the adorable little cow milk pitcher. It just made me smile.\n\nThe servers were kind and attentive even though they were pretty slammed.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"From the moment me and friend walked in we felt like \u201cyeah we\u2019re about to have a good meal and good time.\u201d Our waitress Lillian made our entire 1st time experience simply amazing. She was so personable, warm and explained the menu/drinks \ud83d\udc4c\ud83c\udffe. The fried Oxacan cheese - 10/10, the roasted mushroom tacos - 10/10, himachi dish - 10/10, 3 cheese empanada 10/10, lamb dish -  a little gamey for my palette, but still good 7.5/10 and the drinks -10/10. Even though it was crowded it was still comfortable - we will definitely be returning for their famous brunch and dinner again and again! Hellbender is top tier!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Came here for brunch on a Sunday, had a reservation. Sat at the bar for a drink before we went to our table. Drinks were really good we had a few each, service was great. We ordered a few different things, the bloody Maria mignonette with the oysters was tasty and a little spicy. The pork tacos were incredible and of course we got the masa pancakes which were delicious but so filling. The jello of the day was a Concord grape jello with peanut butter drizzle and a homemade whipped cream which was really really good. Would love to come back here. And the bathrooms are huge!\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "APPETIZERS\n• Guacamole and Chips\n• Fried Oaxacan Cheese\n• Kohlrabi Salad\n   oro blanco grapefruit, mint, citrus vinaigrette\n• Endive Salad\n   radicchio, salsa macha, fried shallots\n⭐ Shrimp Ceviche\n   spicy celery juice, green pico de gallo, pineapple\n• Tuna Carpaccio\n   sikil pak, pickled shishito, olive oil\n\nMAIN COURSES\n⭐ Head-on Wild Gulf Prawns\n   habanero pineapple butter\n• Three Cheese Empanada\n   ricotta, quesillo, cotija, thai basil, salsa cruda\n• Calamari a la Plancha\n   chorizo, ayocote beans, salsa ranchera\n• Chicken Milanesa\n   morita chile, cabbage slaw, cilantro macho mayo\n⭐ Skirt Steak\n   chipotle butter, charred spring onion\n\nSIDES\n• Green Rice\n   poblano, cilantro\n• Refried Beans\n• Tamari Pickled Shishitos\n• Heirloom Corn Tortillas\n\nDESSERTS\n• Churros\n   dulce de leche, hazelnuts\n• Arroz con Leche\n   strawberry, rhubarb\n• Jello of the Day",
+        "body": "APPETIZERS\n\u2022 Guacamole and Chips\n\u2022 Fried Oaxacan Cheese\n\u2022 Kohlrabi Salad\n   oro blanco grapefruit, mint, citrus vinaigrette\n\u2022 Endive Salad\n   radicchio, salsa macha, fried shallots\n\u2b50 Shrimp Ceviche\n   spicy celery juice, green pico de gallo, pineapple\n\u2022 Tuna Carpaccio\n   sikil pak, pickled shishito, olive oil\n\nMAIN COURSES\n\u2b50 Head-on Wild Gulf Prawns\n   habanero pineapple butter\n\u2022 Three Cheese Empanada\n   ricotta, quesillo, cotija, thai basil, salsa cruda\n\u2022 Calamari a la Plancha\n   chorizo, ayocote beans, salsa ranchera\n\u2022 Chicken Milanesa\n   morita chile, cabbage slaw, cilantro macho mayo\n\u2b50 Skirt Steak\n   chipotle butter, charred spring onion\n\nSIDES\n\u2022 Green Rice\n   poblano, cilantro\n\u2022 Refried Beans\n\u2022 Tamari Pickled Shishitos\n\u2022 Heirloom Corn Tortillas\n\nDESSERTS\n\u2022 Churros\n   dulce de leche, hazelnuts\n\u2022 Arroz con Leche\n   strawberry, rhubarb\n\u2022 Jello of the Day",
         "sections": [
           {
             "name": "APPETIZERS",
@@ -259,5 +259,6 @@
         "distanceText": "7.3 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

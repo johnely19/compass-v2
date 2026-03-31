@@ -11,40 +11,41 @@
     "website": "https://www.notteristorante.ca/",
     "price_level": 3,
     "rating": 4.5,
-    "location": "9 Church St, Toronto, ON M5E 1M2"
+    "location": "9 Church St, Toronto, ON M5E 1M2",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nChurch & Front — The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe.",
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nChurch & Front \u2014 The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nChurch & Front — The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nChurch & Front \u2014 The former Amano Trattoria, reinvented for late nights and affordability. Same kitchen, same standards, more relaxed vibe."
       },
       {
         "id": "block-2",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nFresh paint, new wallpaper and art — the rebrand brought visual energy while keeping the warmth. The salumi bar now anchors the room, where chef Angeloni slices and chats with guests. As evening deepens, lights drop and music picks up."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nFresh paint, new wallpaper and art \u2014 the rebrand brought visual energy while keeping the warmth. The salumi bar now anchors the room, where chef Angeloni slices and chats with guests. As evening deepens, lights drop and music picks up."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🧀 Salumi Bar (Mix & match small plates)\n• Finocchiona\n• Nonna's pickled tomatoes\n• Chicken liver mousse with Treviso jam ⭐\n• Assorted assagini (small bites)\n\n🍕 Roman-Style Pizza (72hr fermented, 5 flours)\n• Crazy Calabrese — $24 ⭐\n• Margherita\n• Seasonal varieties\n\n🍝 Fresh Pasta (Made in-house daily)\n• Spaghetti Allo Scoglio — $26\n• Lobster Ravioli — fresh, not fishy ⭐\n• Seasonal pasta rotations\n\n🥩 Large Plates\n• 12oz Bone-in Veal Parm — panko crust, 40-clove tomato sauce, fresh mozz — $56 ⭐\n• After 9pm: 28oz Bistecca Fiorentina — $99 (Social Club) / $160 (regular)\n\nNote: Everything made in-house or locally sourced. Chef Angeloni is in the kitchen nightly."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud83e\uddc0 Salumi Bar (Mix & match small plates)\n\u2022 Finocchiona\n\u2022 Nonna's pickled tomatoes\n\u2022 Chicken liver mousse with Treviso jam \u2b50\n\u2022 Assorted assagini (small bites)\n\n\ud83c\udf55 Roman-Style Pizza (72hr fermented, 5 flours)\n\u2022 Crazy Calabrese \u2014 $24 \u2b50\n\u2022 Margherita\n\u2022 Seasonal varieties\n\n\ud83c\udf5d Fresh Pasta (Made in-house daily)\n\u2022 Spaghetti Allo Scoglio \u2014 $26\n\u2022 Lobster Ravioli \u2014 fresh, not fishy \u2b50\n\u2022 Seasonal pasta rotations\n\n\ud83e\udd69 Large Plates\n\u2022 12oz Bone-in Veal Parm \u2014 panko crust, 40-clove tomato sauce, fresh mozz \u2014 $56 \u2b50\n\u2022 After 9pm: 28oz Bistecca Fiorentina \u2014 $99 (Social Club) / $160 (regular)\n\nNote: Everything made in-house or locally sourced. Chef Angeloni is in the kitchen nightly."
       },
       {
         "id": "block-4",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍷 Happy Hours (4-6pm & after 9pm daily)\n• House wine — $8/glass\n• Cocktails — $12\n\n🥃 Extensive amaro selection\nFlat pricing for Social Club members\n\n🍸 Classic cocktails, spritz, mocktails"
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf77 Happy Hours (4-6pm & after 9pm daily)\n\u2022 House wine \u2014 $8/glass\n\u2022 Cocktails \u2014 $12\n\n\ud83e\udd43 Extensive amaro selection\nFlat pricing for Social Club members\n\n\ud83c\udf78 Classic cocktails, spritz, mocktails"
       },
       {
         "id": "block-5",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$-$$$\n\nDinner for 2: $80-120 (with drinks)\nAperitivo hour: $40-60 for 2\nLate-night steak: $99 (Social Club price)\n\nReservations: OpenTable\nWalk-ins: Bar seating available\n\n📞 (647) 349-7297\n🌐 notteristorante.ca\n\n𝗛𝗢𝗨𝗥𝗦\nMon: 4–10pm\nTue–Thu: 4–11pm\nFri–Sat: 4pm–12am\nSun: 4–10pm\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Aperitivo hour 4-6pm — $8 wine, salumi grazing\n• After 9pm for late-night pricing + energy\n• Perfect pre/post-theatre (St. Lawrence Centre nearby)\n• Friday/Saturday late for the full \"Notte\" vibe\n\n💡 TIP: Join free Notte Social Club online — unlocks $99 bistecca, flat amaro pricing, complimentary bread"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$-$$$\n\nDinner for 2: $80-120 (with drinks)\nAperitivo hour: $40-60 for 2\nLate-night steak: $99 (Social Club price)\n\nReservations: OpenTable\nWalk-ins: Bar seating available\n\n\ud83d\udcde (647) 349-7297\n\ud83c\udf10 notteristorante.ca\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon: 4\u201310pm\nTue\u2013Thu: 4\u201311pm\nFri\u2013Sat: 4pm\u201312am\nSun: 4\u201310pm\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Aperitivo hour 4-6pm \u2014 $8 wine, salumi grazing\n\u2022 After 9pm for late-night pricing + energy\n\u2022 Perfect pre/post-theatre (St. Lawrence Centre nearby)\n\u2022 Friday/Saturday late for the full \"Notte\" vibe\n\n\ud83d\udca1 TIP: Join free Notte Social Club online \u2014 unlocks $99 bistecca, flat amaro pricing, complimentary bread"
       },
       {
         "id": "block-6",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 9 Church St, Toronto, ON M5E 1M2\n\n• walking: 1 hour 7 mins • 4.9 km\n• transit: 21 mins • 5.1 km\n• driving: 17 mins • 5.8 km (traffic: 14 mins)\n• bicycling: 20 mins • 5.6 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (17 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 9 Church St, Toronto, ON M5E 1M2\n\n\u2022 walking: 1 hour 7 mins \u2022 4.9 km\n\u2022 transit: 21 mins \u2022 5.1 km\n\u2022 driving: 17 mins \u2022 5.8 km (traffic: 14 mins)\n\u2022 bicycling: 20 mins \u2022 5.6 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (17 mins)"
       }
     ]
   },
@@ -100,5 +101,6 @@
         "distanceText": "5.1 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

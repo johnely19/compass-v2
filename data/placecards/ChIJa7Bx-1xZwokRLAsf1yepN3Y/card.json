@@ -16,50 +16,50 @@
     "location": "124 Bedford Ave, Brooklyn, NY 11211, USA"
   },
   "narrative": {
-    "summary": "📍 Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA",
+    "summary": "\ud83d\udccd Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a Williamsburg corner where Bedford meets the residential blocks, in a room that feels more like a neighborhood pub than a Brooklyn scene. Dark wood booths line the walls, the bar runs along one side, and the lighting stays dim enough that you'll want to claim one of those booths and stay through dinner. The kitchen moves at its own pace—order that spicy chicken sandwich and settle in.",
+        "body": "You're on a Williamsburg corner where Bedford meets the residential blocks, in a room that feels more like a neighborhood pub than a Brooklyn scene. Dark wood booths line the walls, the bar runs along one side, and the lighting stays dim enough that you'll want to claim one of those booths and stay through dinner. The kitchen moves at its own pace\u2014order that spicy chicken sandwich and settle in.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu bounces between American comfort and unexpected heat—that spicy chicken sandwich everyone mentions comes on a bao bun with enough chili oil to make you pause between bites. You're looking at $16-22 for mains, and the kitchen changes their fryer oil daily, which explains why regulars always add a side of fries. Skip the chicken nuggets and stick with what they do well: the source bowl, the house salad with crispy chicken, anything that lets them show off their fryer discipline.",
+        "body": "The menu bounces between American comfort and unexpected heat\u2014that spicy chicken sandwich everyone mentions comes on a bao bun with enough chili oil to make you pause between bites. You're looking at $16-22 for mains, and the kitchen changes their fryer oil daily, which explains why regulars always add a side of fries. Skip the chicken nuggets and stick with what they do well: the source bowl, the house salad with crispy chicken, anything that lets them show off their fryer discipline.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Allswell",
-        "body": "📍 Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA"
+        "body": "\ud83d\udccd Allswell\n124 Bedford Ave, Brooklyn, NY 11211, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nBrooklyn neighborhood restaurant vibe with warm room energy and comfort-forward menu approach."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nBrooklyn neighborhood restaurant vibe with warm room energy and comfort-forward menu approach."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\nContemporary comfort-driven plates, cocktails, and seasonal specials.\nMenu link: http://www.allswellnyc.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\nContemporary comfort-driven plates, cocktails, and seasonal specials.\nMenu link: http://www.allswellnyc.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (1029 reviews)\nPrice level: $$\nPhone: (347) 799-2743\nWebsite: http://www.allswellnyc.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.5 (1029 reviews)\nPrice level: $$\nPhone: (347) 799-2743\nWebsite: http://www.allswellnyc.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 124 Bedford Ave, Brooklyn, NY 11211, USA\n\n• walking: 1 hour 2 mins • 2.8 mi\n• transit: 28 mins • 3.5 mi\n• driving: 20 mins • 4.6 mi (traffic: 20 mins)\n• bicycling: 21 mins • 3.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 124 Bedford Ave, Brooklyn, NY 11211, USA\n\n\u2022 walking: 1 hour 2 mins \u2022 2.8 mi\n\u2022 transit: 28 mins \u2022 3.5 mi\n\u2022 driving: 20 mins \u2022 4.6 mi (traffic: 20 mins)\n\u2022 bicycling: 21 mins \u2022 3.4 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (20 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"This place has the best spicy chicken sandwich in town, hands down! The Bao is incredibly spicy, so consider yourself warned if you don't handle a lot of heat well.\n\nWhile the chicken sandwich is a must-try, the chicken nuggets were forgettable.\n\nService/kitchen is a bit slow\"\n\n⭐⭐⭐⭐⭐ \"Allswell is a weekly spot for me. I love sitting in the booth at the bar and catching up with my favorite bartender, James. I usually alternate between the source bowl and the house salad with crispy chicken, but I always order a side of fries (they change their oil daily). I also really appreciate that they make a proper, in-house ají hot sauce.\n\nJames is a true mixologist—an experienced, vetted bartender—and the bar offers an excellent selection of both cocktails and mocktails. The ambiance is warm and old-school Brooklyn, with exposed wood beams and stained-glass chandeliers. Consistent every time.\"\n\n⭐⭐⭐⭐⭐ \"We’ve eaten here a couple times in the last few months and it’s rarely let us done. Surprisingly some of the best huevos rancheros in Williamsburg are delivered here. The eggs Benedict are great and the French toast. The only let down was the egg tacos which seemed very uninspired and kinda bland. But we will forgive them for that just this once.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"This place has the best spicy chicken sandwich in town, hands down! The Bao is incredibly spicy, so consider yourself warned if you don't handle a lot of heat well.\n\nWhile the chicken sandwich is a must-try, the chicken nuggets were forgettable.\n\nService/kitchen is a bit slow\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Allswell is a weekly spot for me. I love sitting in the booth at the bar and catching up with my favorite bartender, James. I usually alternate between the source bowl and the house salad with crispy chicken, but I always order a side of fries (they change their oil daily). I also really appreciate that they make a proper, in-house aj\u00ed hot sauce.\n\nJames is a true mixologist\u2014an experienced, vetted bartender\u2014and the bar offers an excellent selection of both cocktails and mocktails. The ambiance is warm and old-school Brooklyn, with exposed wood beams and stained-glass chandeliers. Consistent every time.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We\u2019ve eaten here a couple times in the last few months and it\u2019s rarely let us done. Surprisingly some of the best huevos rancheros in Williamsburg are delivered here. The eggs Benedict are great and the French toast. The only let down was the egg tacos which seemed very uninspired and kinda bland. But we will forgive them for that just this once.\""
       }
     ]
   },
@@ -115,5 +115,6 @@
         "distanceText": "3.5 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

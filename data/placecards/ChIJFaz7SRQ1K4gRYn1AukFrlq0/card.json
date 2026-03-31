@@ -8,13 +8,13 @@
     "address": "Baldwin Village / Chinatown edge",
     "type": "restaurant",
     "hours": [
-      "Monday: 8:00 AM – 6:00 PM",
-      "Tuesday: 8:00 AM – 6:00 PM",
-      "Wednesday: 8:00 AM – 6:00 PM",
-      "Thursday: 8:00 AM – 6:00 PM",
-      "Friday: 8:00 AM – 6:00 PM",
-      "Saturday: 8:00 AM – 6:00 PM",
-      "Sunday: 8:00 AM – 6:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 286
@@ -29,13 +29,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the edge where Baldwin Village blurs into Chinatown, tucked into a narrow storefront that unfolds like a telescope—what looks like a single room keeps going, deeper than you expect. The DJ booth anchors one end, the pour-over station the other, with Nintendo figurines lining shelves above a long communal table that runs the length of the space. It's a hi-fi listening bar that happens to serve exceptional coffee, or maybe the other way around, depending on the time of day.",
+        "body": "You're on the edge where Baldwin Village blurs into Chinatown, tucked into a narrow storefront that unfolds like a telescope\u2014what looks like a single room keeps going, deeper than you expect. The DJ booth anchors one end, the pour-over station the other, with Nintendo figurines lining shelves above a long communal table that runs the length of the space. It's a hi-fi listening bar that happens to serve exceptional coffee, or maybe the other way around, depending on the time of day.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is coffee as curation—they're pulling beans from Brooklyn's SEY and Copenhagen's La Cabra alongside their own in-house roast, each one brewed to order behind the bar. The hojicha latte comes silky and toasted, the kind of thing that makes you rethink what a latte can be, while the straight espresso pours show off the precision you'd expect from baristas who treat extraction times like gospel. Drinks run $5-8, which feels right for coffee this considered.",
+        "body": "This is coffee as curation\u2014they're pulling beans from Brooklyn's SEY and Copenhagen's La Cabra alongside their own in-house roast, each one brewed to order behind the bar. The hojicha latte comes silky and toasted, the kind of thing that makes you rethink what a latte can be, while the straight espresso pours show off the precision you'd expect from baristas who treat extraction times like gospel. Drinks run $5-8, which feels right for coffee this considered.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"One of the most beautiful coffee shops I've ever seen! They have Nintendo figurines, a spacious seating area, and expert baristas. I ordered a hojicha latte and my partner ordered a regular latte. Both lattes were deliciously smooth and well made.\n\nThe best part of this coffee shop is again the vibes and atmosphere. It has a long narrow and deep space, but it goes really deep. As in this cafe looks bigger than than you think once you move further down the place.\n\nI really enjoyed the overall feeling I got from being here and again the vibes here are amazing. Great place to study or hangout with friends!\"\n\n⭐⭐⭐⭐⭐ \"Quite rare to find a coffee shop like this that opens early! Been here several times and the drinks and service have been top notch.\n\nIt's generally packed inside so YMMV if you can secure a spot. Come early enough, and there will be plenty around.\n\nThe music being played by these gigantic vintage speakers further bring out the uniqueness of this cafe too. If you prefer a quieter environment, the seats in the far back are your best bet.\"\n\n⭐⭐⭐⭐⭐ \"Beautiful and cozy cafe with variety of sitting and relaxing atmosphere. Love that you can enjoy coffee for several hours, there’s no rush and no haste.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"One of the most beautiful coffee shops I've ever seen! They have Nintendo figurines, a spacious seating area, and expert baristas. I ordered a hojicha latte and my partner ordered a regular latte. Both lattes were deliciously smooth and well made.\n\nThe best part of this coffee shop is again the vibes and atmosphere. It has a long narrow and deep space, but it goes really deep. As in this cafe looks bigger than than you think once you move further down the place.\n\nI really enjoyed the overall feeling I got from being here and again the vibes here are amazing. Great place to study or hangout with friends!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Quite rare to find a coffee shop like this that opens early! Been here several times and the drinks and service have been top notch.\n\nIt's generally packed inside so YMMV if you can secure a spot. Come early enough, and there will be plenty around.\n\nThe music being played by these gigantic vintage speakers further bring out the uniqueness of this cafe too. If you prefer a quieter environment, the seats in the far back are your best bet.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Beautiful and cozy cafe with variety of sitting and relaxing atmosphere. Love that you can enjoy coffee for several hours, there\u2019s no rush and no haste.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

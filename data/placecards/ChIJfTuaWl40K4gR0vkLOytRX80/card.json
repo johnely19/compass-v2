@@ -9,12 +9,12 @@
     "type": "grocery",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 12:00 – 5:00 PM",
-      "Wednesday: 12:00 – 5:00 PM",
-      "Thursday: 12:00 – 7:00 PM",
-      "Friday: 12:00 – 7:00 PM",
-      "Saturday: 12:00 – 5:00 PM",
-      "Sunday: 12:00 – 5:00 PM"
+      "Tuesday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 102,
@@ -25,7 +25,8 @@
     "text": "Discovered via muddygeorge.com"
   },
   "narrative": {
-    "summary": "Curated menswear boutique with signature olive interior. Owner Altaf Baksh known for transforming wardrobes — 4.9 rating.",
+    "summary": "Curated menswear boutique with signature olive interior. Owner Altaf Baksh known for transforming wardrobes \u2014 4.9 rating.",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

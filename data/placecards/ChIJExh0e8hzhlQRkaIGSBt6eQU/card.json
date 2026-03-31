@@ -8,12 +8,12 @@
     "address": "South Granville",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 – 11:00 PM",
-      "Tuesday: 5:00 – 11:00 PM",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 5:00 – 11:00 PM",
+      "Monday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200911:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.6,
@@ -27,18 +27,18 @@
     "url": "https://bc.vitis.ca/where-to-drink-natural-wine-in-vancouver/"
   },
   "narrative": {
-    "summary": "Vancouver's definitive natural wine bar. Intimate, tiny, exceptional natural wine list — BC favourites like Bella and Thorn & Burrow, grower Champagne, Loire Chenin Blancs. Farm-to-table bites. Innovative cocktails. Next to The Acorn restaurant. John's exact vibe. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Vancouver's definitive natural wine bar. Intimate, tiny, exceptional natural wine list \u2014 BC favourites like Bella and Thorn & Burrow, grower Champagne, Loire Chenin Blancs. Farm-to-table bites. Innovative cocktails. Next to The Acorn restaurant. John's exact vibe. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on South Granville, tucked right next to The Acorn, and the entrance is easy to miss if you're not looking. Inside, it's deliberately small—maybe a dozen seats total, a narrow bar lined with bottles backlit against dark wood, and a few tables pressed close enough that you'll catch snippets of your neighbour's conversation. The light is low and amber, the kind that makes every glass of wine look better than it probably should.",
+        "body": "You're on South Granville, tucked right next to The Acorn, and the entrance is easy to miss if you're not looking. Inside, it's deliberately small\u2014maybe a dozen seats total, a narrow bar lined with bottles backlit against dark wood, and a few tables pressed close enough that you'll catch snippets of your neighbour's conversation. The light is low and amber, the kind that makes every glass of wine look better than it probably should.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a natural wine bar first, but the kitchen knows what it's doing with clean, ingredient-forward small plates that don't compete with what's in your glass. The beef croquettes are rich and crisp-edged, the sablefish comes perfectly flaked, and there's a warm chocolate cookie with roasted coconut ice cream that people order even when they're not hungry. Cocktails rotate frequently—recently that's meant things like the Red Door, layered and balanced, and house sodas that actually taste like something. Expect to spend around $15-20 per plate, more if you're chasing BC naturals or grower Champagne.",
+        "body": "This is a natural wine bar first, but the kitchen knows what it's doing with clean, ingredient-forward small plates that don't compete with what's in your glass. The beef croquettes are rich and crisp-edged, the sablefish comes perfectly flaked, and there's a warm chocolate cookie with roasted coconut ice cream that people order even when they're not hungry. Cocktails rotate frequently\u2014recently that's meant things like the Red Door, layered and balanced, and house sodas that actually taste like something. Expect to spend around $15-20 per plate, more if you're chasing BC naturals or grower Champagne.",
         "id": "block-the-food-1"
       },
       {
@@ -51,8 +51,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This bar has officially made it to my list of favourites. We stopped by last night for a drink and dessert, and it did not disappoint. The warm chocolate cookie with roasted coconut ice cream was absolutely delicious, and my cocktail was both creative and full of flavour. I also tried my husband’s feature soda cocktail, it was refreshing and perfectly balanced.\n\nWe’ll definitely be back, especially since the featured cocktails change often. The selection of scotches, whiskeys, gin, and other spirits is impressive, and the service was warm and welcoming. A great spot all around!\"\n\n⭐⭐⭐⭐ \"Charming, intimate cocktail bar with daily features and small plates. The Red Door cocktail was a standout—layered, balanced, and delicious. Loved the beef croquette and sablefish too. Portions are small but high quality. No happy hour, but worth it. Great spot for creative drinks. Highly recommend booking ahead!\"\n\n⭐⭐⭐⭐⭐ \"I ordered a cocktail called I believed “Mr. soy boy”? It was so good! I had two. Definitely going back to try more.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This bar has officially made it to my list of favourites. We stopped by last night for a drink and dessert, and it did not disappoint. The warm chocolate cookie with roasted coconut ice cream was absolutely delicious, and my cocktail was both creative and full of flavour. I also tried my husband\u2019s feature soda cocktail, it was refreshing and perfectly balanced.\n\nWe\u2019ll definitely be back, especially since the featured cocktails change often. The selection of scotches, whiskeys, gin, and other spirits is impressive, and the service was warm and welcoming. A great spot all around!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Charming, intimate cocktail bar with daily features and small plates. The Red Door cocktail was a standout\u2014layered, balanced, and delicious. Loved the beef croquette and sablefish too. Portions are small but high quality. No happy hour, but worth it. Great spot for creative drinks. Highly recommend booking ahead!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I ordered a cocktail called I believed \u201cMr. soy boy\u201d? It was so good! I had two. Definitely going back to try more.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

@@ -14,62 +14,62 @@
     "user_rating_count": 7,
     "location": "319 Bowery, New York, NY 10003, USA",
     "hours": [
-      "Monday: 4:00 – 10:30 PM",
-      "Tuesday: 4:00 – 10:30 PM",
-      "Wednesday: 4:00 – 10:30 PM",
-      "Thursday: 4:00 – 10:30 PM",
-      "Friday: 4:00 – 11:30 PM",
-      "Saturday: 12:00 – 11:30 PM",
-      "Sunday: 12:00 – 10:30 PM"
+      "Monday: 4:00\u2009\u2013\u200910:30\u202fPM",
+      "Tuesday: 4:00\u2009\u2013\u200910:30\u202fPM",
+      "Wednesday: 4:00\u2009\u2013\u200910:30\u202fPM",
+      "Thursday: 4:00\u2009\u2013\u200910:30\u202fPM",
+      "Friday: 4:00\u2009\u2013\u200911:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200911:30\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:30\u202fPM"
     ],
     "review_count": 10
   },
   "narrative": {
-    "summary": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA",
+    "summary": "\ud83d\udccd SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Bowery, where the Whole Foods crowd meets old-guard graffiti artists, and SoZo sits in that in-between with clean lines and blonde wood. The counter seats maybe ten—close enough to watch the chef's hands work but not so tight you're in your neighbor's conversation. Low ambient light catches the ceramic plates and sake bottles lined up behind the bar like a ceramics collection that actually gets used.",
+        "body": "You're on the Bowery, where the Whole Foods crowd meets old-guard graffiti artists, and SoZo sits in that in-between with clean lines and blonde wood. The counter seats maybe ten\u2014close enough to watch the chef's hands work but not so tight you're in your neighbor's conversation. Low ambient light catches the ceramic plates and sake bottles lined up behind the bar like a ceramics collection that actually gets used.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Each piece of nigiri gets just enough—a brush of nikiri, a whisper of yuzu, maybe charred scallion—so you taste the fish first and the flourish second. The fish itself is pristine, sliced with precision, though you might wish for slightly thicker cuts if you're used to West Coast portions. Expect to spend around $150-200 for the full omakase, more if you're working through their sake list, which you should.",
+        "body": "Each piece of nigiri gets just enough\u2014a brush of nikiri, a whisper of yuzu, maybe charred scallion\u2014so you taste the fish first and the flourish second. The fish itself is pristine, sliced with precision, though you might wish for slightly thicker cuts if you're used to West Coast portions. Expect to spend around $150-200 for the full omakase, more if you're working through their sake list, which you should.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Sozo Sip Bar + Omakase",
-        "body": "📍 SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA"
+        "body": "\ud83d\udccd SoZo Sip Bar + Omakase\n319 Bowery, New York, NY 10003, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nAffordable 15-course omakase for $89 on the Bowery. Smoked salmon sushi, uni temaki, toro hand rolls, plus mochi. Speakeasy sip bar with rare sakes and Japanese whisky. Just opened March 2026. 5.0 rating. Great value for quality omakase."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAffordable 15-course omakase for $89 on the Bowery. Smoked salmon sushi, uni temaki, toro hand rolls, plus mochi. Speakeasy sip bar with rare sakes and Japanese whisky. Just opened March 2026. 5.0 rating. Great value for quality omakase."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 5 (7 reviews)\nPrice level: n/a\nPhone: (646) 666-0003\nWebsite: https://www.sozo-nyc.com/\n\nHours:\nMonday: 4:00 – 10:30 PM\nTuesday: 4:00 – 10:30 PM\nWednesday: 4:00 – 10:30 PM\nThursday: 4:00 – 10:30 PM\nFriday: 4:00 – 11:30 PM\nSaturday: 12:00 – 11:30 PM\nSunday: 12:00 – 10:30 PM"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (7 reviews)\nPrice level: n/a\nPhone: (646) 666-0003\nWebsite: https://www.sozo-nyc.com/\n\nHours:\nMonday: 4:00\u2009\u2013\u200910:30\u202fPM\nTuesday: 4:00\u2009\u2013\u200910:30\u202fPM\nWednesday: 4:00\u2009\u2013\u200910:30\u202fPM\nThursday: 4:00\u2009\u2013\u200910:30\u202fPM\nFriday: 4:00\u2009\u2013\u200911:30\u202fPM\nSaturday: 12:00\u2009\u2013\u200911:30\u202fPM\nSunday: 12:00\u2009\u2013\u200910:30\u202fPM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 319 Bowery, New York, NY 10003, USA\n\n• walking: 10 mins • 0.4 mi\n• transit: 8 mins • 0.6 mi\n• driving: 4 mins • 0.5 mi (traffic: 4 mins)\n• bicycling: 4 mins • 0.4 mi\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (10 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 319 Bowery, New York, NY 10003, USA\n\n\u2022 walking: 10 mins \u2022 0.4 mi\n\u2022 transit: 8 mins \u2022 0.6 mi\n\u2022 driving: 4 mins \u2022 0.5 mi (traffic: 4 mins)\n\u2022 bicycling: 4 mins \u2022 0.4 mi\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (10 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The chef curated each course with such care — every piece was perfectly balanced, fresh, and beautifully presented.\"\n\n⭐⭐⭐⭐⭐ \"Excellent service, fantastic sake, clean and fresh fish with unique combinations of flavor. Truly excellent. Could have larger slices of fish, but doesn’t leave you needing more food.\"\n\n⭐⭐⭐⭐⭐ \"In a city flooded with new omakase openings, it’s rare to find one that feels this dialed-in from day one.\n\nThe food is outstanding— exceptionally fresh and beautifully executed. Each piece is delicately layered with flavor—just enough to enhance the fish, not mask it. The warm and polished service elevates the dining experience. The space is chic and sophisticated, with a NYC-meets-Tokyo aesthetic. Perfect for a date night.\n\nIt's an incredible value for omakase (I’ve tried more than my fair share across all price points.) I don't write reviews often, but I had to share this standout debut. I’m already looking forward to returning.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The chef curated each course with such care \u2014 every piece was perfectly balanced, fresh, and beautifully presented.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Excellent service, fantastic sake, clean and fresh fish with unique combinations of flavor. Truly excellent. Could have larger slices of fish, but doesn\u2019t leave you needing more food.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"In a city flooded with new omakase openings, it\u2019s rare to find one that feels this dialed-in from day one.\n\nThe food is outstanding\u2014 exceptionally fresh and beautifully executed. Each piece is delicately layered with flavor\u2014just enough to enhance the fish, not mask it. The warm and polished service elevates the dining experience. The space is chic and sophisticated, with a NYC-meets-Tokyo aesthetic. Perfect for a date night.\n\nIt's an incredible value for omakase (I\u2019ve tried more than my fair share across all price points.) I don't write reviews often, but I had to share this standout debut. I\u2019m already looking forward to returning.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "OMAKASE\n⭐ Chef's Seasonal Tasting — $89\n   15 Courses",
+        "body": "OMAKASE\n\u2b50 Chef's Seasonal Tasting \u2014 $89\n   15 Courses",
         "sections": [
           {
             "name": "OMAKASE",
@@ -138,5 +138,6 @@
         "distanceText": "0.6 mi"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

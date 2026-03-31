@@ -8,13 +8,13 @@
     "address": "Ossington",
     "type": "restaurant",
     "hours": [
-      "Monday: 6:00 PM – 1:00 AM",
+      "Monday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
       "Tuesday: Closed",
-      "Wednesday: 6:00 PM – 1:00 AM",
-      "Thursday: 6:00 PM – 1:00 AM",
-      "Friday: 6:00 PM – 2:00 AM",
-      "Saturday: 6:00 PM – 2:00 AM",
-      "Sunday: 6:00 PM – 1:00 AM"
+      "Wednesday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Thursday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Friday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM"
     ],
     "rating": 4.3,
     "review_count": 1053,
@@ -30,27 +30,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Ossington, where the streetcar rattles past and the cool-kid restaurants pack in shoulder-to-shoulder. Inside, it's dimly lit with a bar that anchors the room—always a bartender holding down the front while the kitchen works behind. The space feels comfortably full most nights, not precious, just a neighbourhood spot where people actually go more than once.",
+        "body": "You're on Ossington, where the streetcar rattles past and the cool-kid restaurants pack in shoulder-to-shoulder. Inside, it's dimly lit with a bar that anchors the room\u2014always a bartender holding down the front while the kitchen works behind. The space feels comfortably full most nights, not precious, just a neighbourhood spot where people actually go more than once.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into Korean-fusion comfort food—the kind that sounds better after a couple drinks and tastes even better when it arrives. The Philly sandwich and kimchi poutine are mainstays, both rich and a little irreverent in that Ossington way. It's late-night-friendly food that doesn't feel like an afterthought, though the cocktails can pour light depending on who's working the bar. Expect to spend around $18-25 for mains, less if you're just grazing.",
+        "body": "The menu leans into Korean-fusion comfort food\u2014the kind that sounds better after a couple drinks and tastes even better when it arrives. The Philly sandwich and kimchi poutine are mainstays, both rich and a little irreverent in that Ossington way. It's late-night-friendly food that doesn't feel like an afterthought, though the cocktails can pour light depending on who's working the bar. Expect to spend around $18-25 for mains, less if you're just grazing.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your spot when you want something casual with a bit of edge—a weeknight dinner that doesn't require a reservation three weeks out, or late hours when most kitchens have already closed. It's the place you end up at once a year and remember why you keep coming back.",
+        "body": "This is your spot when you want something casual with a bit of edge\u2014a weeknight dinner that doesn't require a reservation three weeks out, or late hours when most kitchens have already closed. It's the place you end up at once a year and remember why you keep coming back.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"We usually go to this little neighbourhood spot when we want a casual bite and a drink, but with a bit of a twist. Oddseul is always comfortably full and almost always has two heroes working, one in the front and one in the back.\n\nThis time, we tried the philly sandwich and the kimchi poutine. Both were delicious and very comforting. The drink I ordered wasn’t very strong, which I’ve noticed with their cocktails before, sometimes I like that, sometimes I don’t.\n\nAlthough I slightly prefer its sister spot, we somehow end up here at least once a year. And it’s always nice.\"\n\n⭐⭐⭐⭐ \"Our group was in the area and decided on some takeout. We ordered from here as it was clearly able to take orders. What we did discover when arriving for the pickup is that the order was a little big for the kitchen to put together. We ended up waiting around 20 minutes more then expected. The restraunt was not full but steady. The food was all decent and broken down into individual portions.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"We usually go to this little neighbourhood spot when we want a casual bite and a drink, but with a bit of a twist. Oddseul is always comfortably full and almost always has two heroes working, one in the front and one in the back.\n\nThis time, we tried the philly sandwich and the kimchi poutine. Both were delicious and very comforting. The drink I ordered wasn\u2019t very strong, which I\u2019ve noticed with their cocktails before, sometimes I like that, sometimes I don\u2019t.\n\nAlthough I slightly prefer its sister spot, we somehow end up here at least once a year. And it\u2019s always nice.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Our group was in the area and decided on some takeout. We ordered from here as it was clearly able to take orders. What we did discover when arriving for the pickup is that the order was a little big for the kitchen to put together. We ended up waiting around 20 minutes more then expected. The restraunt was not full but steady. The food was all decent and broken down into individual portions.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

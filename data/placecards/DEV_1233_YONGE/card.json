@@ -12,11 +12,11 @@
     "text": "Discovered via development tracker"
   },
   "narrative": {
-    "summary": "The most controversial development in Summerhill. Originally a modest 13-storey proposal, it has ballooned to 49-53 storeys — right at Summerhill Station. Replaces an existing 3-storey rental building. Includes 40 rental replacement units. Grey brick base with white metal tower. The jump from 13 to 53 storeys is aggressive and has drawn significant neighbourhood opposition.",
+    "summary": "The most controversial development in Summerhill. Originally a modest 13-storey proposal, it has ballooned to 49-53 storeys \u2014 right at Summerhill Station. Replaces an existing 3-storey rental building. Includes 40 rental replacement units. Grey brick base with white metal tower. The jump from 13 to 53 storeys is aggressive and has drawn significant neighbourhood opposition.",
     "blocks": []
   },
   "development": {
-    "status": "Under review — City hearing April 1",
+    "status": "Under review \u2014 City hearing April 1",
     "storeys": "49-53 storeys (163.5m)",
     "units": "724-764 units (studios, 1BR, 2BR, 3BR)",
     "keyDates": [
@@ -28,7 +28,7 @@
       {
         "label": "Major revision",
         "date": "2023-05-10",
-        "note": "Jumped to 49 storeys, 764 units — 36 extra storeys"
+        "note": "Jumped to 49 storeys, 764 units \u2014 36 extra storeys"
       },
       {
         "label": "Latest revision",
@@ -38,7 +38,7 @@
       {
         "label": "City committee hearing",
         "date": "2026-04-01",
-        "note": "Bousfields presenting to committee — 2 weeks away!"
+        "note": "Bousfields presenting to committee \u2014 2 weeks away!"
       }
     ],
     "developer": "Plazacorp / Firm Capital (operating as 1233Y Development LP)",
@@ -51,11 +51,11 @@
         "url": "https://urbantoronto.ca/database/projects/1233-yonge.46977"
       },
       {
-        "name": "Storeys — Revised Proposal (June 2023)",
+        "name": "Storeys \u2014 Revised Proposal (June 2023)",
         "url": "https://storeys.com/revised-proposal-49-storeys-yonge-street-summerhill-station/"
       },
       {
-        "name": "BlogTO — Keeps Getting Taller (Nov 2024)",
+        "name": "BlogTO \u2014 Keeps Getting Taller (Nov 2024)",
         "url": "https://www.blogto.com/real-estate-toronto/2024/11/1233-yonge-street-toronto/"
       },
       {
@@ -63,5 +63,6 @@
         "url": "https://summerhillresidentsassociation.ca/f/new-development-1233-yonge-st-and-9-woodlawn-east"
       }
     ]
-  }
+  },
+  "type": "development"
 }

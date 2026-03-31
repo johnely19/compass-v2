@@ -8,13 +8,13 @@
     "address": "Dundas West / Trinity Bellwoods",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 7:00 PM",
-      "Tuesday: 10:00 AM – 7:00 PM",
-      "Wednesday: 10:00 AM – 7:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 7:00 PM",
-      "Sunday: 10:00 AM – 7:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 301,
@@ -25,32 +25,33 @@
     "url": "https://6ixretail.com/2026/02/little-ghosts-books-toronto/"
   },
   "narrative": {
-    "summary": "Bookstore + cafe with exceptional curation—4.9 rating (highest in category). Cozy, browseable, perfect Sunday drop-in.",
+    "summary": "Bookstore + cafe with exceptional curation\u20144.9 rating (highest in category). Cozy, browseable, perfect Sunday drop-in.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Dundas West near Trinity Bellwoods, where the storefront glows with what regulars call a spectral light—dim enough to feel like a secret, bright enough to read spine titles from across the room. Inside, dark wood shelving runs floor to ceiling, packed tight with horror and paranormal titles that spill onto small tables where a cafe counter serves coffee between stacks of paperbacks. It's small, densely packed, the kind of place where you edge sideways past other browsers and end up staying two hours without noticing.",
+        "body": "You're on Dundas West near Trinity Bellwoods, where the storefront glows with what regulars call a spectral light\u2014dim enough to feel like a secret, bright enough to read spine titles from across the room. Inside, dark wood shelving runs floor to ceiling, packed tight with horror and paranormal titles that spill onto small tables where a cafe counter serves coffee between stacks of paperbacks. It's small, densely packed, the kind of place where you edge sideways past other browsers and end up staying two hours without noticing.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The cafe side is minimal—think coffee, pastries, the occasional sandwich—but it's good enough to anchor a long browsing session without feeling like an afterthought. You're here for a cortado and a croissant while you flip through a first edition ghost story, not a full meal. Prices are standard Toronto cafe: a coffee and pastry will run you under $10, which buys you as much reading time as you want.",
+        "body": "The cafe side is minimal\u2014think coffee, pastries, the occasional sandwich\u2014but it's good enough to anchor a long browsing session without feeling like an afterthought. You're here for a cortado and a croissant while you flip through a first edition ghost story, not a full meal. Prices are standard Toronto cafe: a coffee and pastry will run you under $10, which buys you as much reading time as you want.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Sunday afternoon when you need to disappear into someone else's nightmares for a while, or solo on a weekday morning when the shop is quiet and you can actually hear yourself think. This is a one-person, one-book, one-coffee kind of place—not a group hang.",
+        "body": "Sunday afternoon when you need to disappear into someone else's nightmares for a while, or solo on a weekday morning when the shop is quiet and you can actually hear yourself think. This is a one-person, one-book, one-coffee kind of place\u2014not a group hang.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Step inside Little Ghosts Books and you'll realize this isn't your average, dusty, old bookshop—it's more like a cleverly curated cabinet of curiosities for the darkly inclined, lit by a spectral glow you can't quite place.\n\nIf your literary tastes lean toward the macabre, the supernatural, or the wonderfully weird, you've found your crypt. Little Ghosts Books absolutely nails its focus. They don't just dabble in horror and the paranormal; they've committed to it with a passion that's frankly spine-tingling. Their shelves are loaded with everything from classic ghost stories that will chill you to the bone to modern, visceral horror that will make you question locking your doors at night (if you aren't already locking them, that is!).\n\nWhat truly makes this place unique is their fantastic support of local authors. It’s thrilling to see homegrown talent side-by-side with big names, offering unique, regional perspectives on the things that go bump in the night—stories perhaps too close to home. The selection is top-tier; seriously, I’ve found hard-to-find gems and completely new-to-me titles every time I've gone, almost as if they were waiting, just for me.\n\nBut a great selection is only half the story. The staff here are the true MVPs. These aren't just people who sell books; they're knowledgable guides through the gloom. Ask them for a recommendation, and you won't get a vague shrug—you'll get a detailed, passionate pitch about why you need to read the obscure folk horror novel they just finished. It's clear they love the genres they sell, and that enthusiasm is contagious (and very, very helpful!).\n\nSo, skip the big chains and their predictable thrillers. Head to Little Ghosts Books. It's the perfect place to get spooked, support local literature, and find your next favourite nightmare.\"\n\n⭐⭐⭐⭐⭐ \"I love that the worker there was so enthusiastic and eager to share their love of books with others. It made the atmosphere feel much more warm and welcoming, listening to others speak passionately about literature. The spooky/horror aesthetic sealed the deal for me. Definitely stop by if you ever visit Toronto! They have a little coffee shop, as well (books, coffee, and ghosts - how can you even go wrong?).\"\n\n⭐⭐⭐⭐⭐ \"This is my favourite bookstore in Toronto! Their service is amazing, super helpful with recommendations and they even have their own published books (in which I had to buy). Their coffee is also amazing and the barista even shared some ghost stories with us! 👻\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Step inside Little Ghosts Books and you'll realize this isn't your average, dusty, old bookshop\u2014it's more like a cleverly curated cabinet of curiosities for the darkly inclined, lit by a spectral glow you can't quite place.\n\nIf your literary tastes lean toward the macabre, the supernatural, or the wonderfully weird, you've found your crypt. Little Ghosts Books absolutely nails its focus. They don't just dabble in horror and the paranormal; they've committed to it with a passion that's frankly spine-tingling. Their shelves are loaded with everything from classic ghost stories that will chill you to the bone to modern, visceral horror that will make you question locking your doors at night (if you aren't already locking them, that is!).\n\nWhat truly makes this place unique is their fantastic support of local authors. It\u2019s thrilling to see homegrown talent side-by-side with big names, offering unique, regional perspectives on the things that go bump in the night\u2014stories perhaps too close to home. The selection is top-tier; seriously, I\u2019ve found hard-to-find gems and completely new-to-me titles every time I've gone, almost as if they were waiting, just for me.\n\nBut a great selection is only half the story. The staff here are the true MVPs. These aren't just people who sell books; they're knowledgable guides through the gloom. Ask them for a recommendation, and you won't get a vague shrug\u2014you'll get a detailed, passionate pitch about why you need to read the obscure folk horror novel they just finished. It's clear they love the genres they sell, and that enthusiasm is contagious (and very, very helpful!).\n\nSo, skip the big chains and their predictable thrillers. Head to Little Ghosts Books. It's the perfect place to get spooked, support local literature, and find your next favourite nightmare.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I love that the worker there was so enthusiastic and eager to share their love of books with others. It made the atmosphere feel much more warm and welcoming, listening to others speak passionately about literature. The spooky/horror aesthetic sealed the deal for me. Definitely stop by if you ever visit Toronto! They have a little coffee shop, as well (books, coffee, and ghosts - how can you even go wrong?).\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is my favourite bookstore in Toronto! Their service is amazing, super helpful with recommendations and they even have their own published books (in which I had to buy). Their coffee is also amazing and the barista even shared some ghost stories with us! \ud83d\udc7b\""
       }
     ]
-  }
+  },
+  "type": "shop"
 }

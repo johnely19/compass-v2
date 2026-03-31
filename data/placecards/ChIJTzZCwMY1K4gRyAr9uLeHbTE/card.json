@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 5:00 – 10:00 PM",
-      "Saturday: 5:00 – 10:00 PM",
-      "Sunday: 5:00 – 10:00 PM"
+      "Wednesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 89,
@@ -26,18 +26,18 @@
     "url": "https://foodism.ca/eat-drink/bars-restaurants/best-new-italian-restaurants-toronto/"
   },
   "narrative": {
-    "summary": "You're on Roncesvalles in the old Cubana spot, stepping into red sauce theater—checkered floors, dark wood booths, tables packed close enough that you catch fragments of other conversations. A Giulietta alum runs the kitchen with from-scratch pasta: veal parm, beef tartare, tagliatelle with ragu that clings to every ribbon, and garlic bread that makes you order a second round before your mains hit. This is your Friday night spot when you want the energy of a full room and don't mind waiting for a table.",
+    "summary": "You're on Roncesvalles in the old Cubana spot, stepping into red sauce theater\u2014checkered floors, dark wood booths, tables packed close enough that you catch fragments of other conversations. A Giulietta alum runs the kitchen with from-scratch pasta: veal parm, beef tartare, tagliatelle with ragu that clings to every ribbon, and garlic bread that makes you order a second round before your mains hit. This is your Friday night spot when you want the energy of a full room and don't mind waiting for a table.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Roncesvalles in the old Cubana spot, and the transformation is total. Inside, it's red sauce theater: checkered floors, dark wood booths, the kind of low lighting that makes everyone look good and feel like a regular. There's energy here—tables packed close enough that you catch fragments of other conversations, the open kitchen throwing heat and noise into the room.",
+        "body": "You're on Roncesvalles in the old Cubana spot, and the transformation is total. Inside, it's red sauce theater: checkered floors, dark wood booths, the kind of low lighting that makes everyone look good and feel like a regular. There's energy here\u2014tables packed close enough that you catch fragments of other conversations, the open kitchen throwing heat and noise into the room.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Italian-American done right by a Giulietta alum who knows how to work pasta from scratch. The menu leans into red-sauce classics—think veal parm, beef tartare, tagliatelle with ragu that clings to every ribbon. The garlic bread arrives drenched in butter and herbs, the kind that makes you order a second round before your mains hit. Mozzarella sticks get made in-house, calamari comes properly tender, and everything tastes like someone actually cares.",
+        "body": "This is Italian-American done right by a Giulietta alum who knows how to work pasta from scratch. The menu leans into red-sauce classics\u2014think veal parm, beef tartare, tagliatelle with ragu that clings to every ribbon. The garlic bread arrives drenched in butter and herbs, the kind that makes you order a second round before your mains hit. Mozzarella sticks get made in-house, calamari comes properly tender, and everything tastes like someone actually cares.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I’m obsessed. Best Italian I’ve had in a long time. Telling all my friends to come here!! Service was amazing. The staff had great attention to detail and the food was delicious. Felt like it was made with love which is how Italian food should taste.\n\nMy favourite was the beef tartare and the veal!\n\nGRAZIE\"\n\n⭐⭐⭐⭐⭐ \"Love the vibe of this place, I think it's safe to say we've found a good spot for Friday night hangouts!!\n\nCalamari and the mozarella sticks were great but special mention to the garlic bread. It just oozes with so much flavour, what a great way to start our dinner. For our mains we had Ragu, chicken parm and the tagliatelle was the best one for me. For both desserts, all of us thought they were both very good.\n\nService was very good, Chef Julien made sure to comeby and ask us if were having a good time.\n\nProps to everyone! Will definitely be coming back.\"\n\n⭐⭐⭐⭐⭐ \"Me and my wife had an amazing experience at Proper the service was amazing and attentive. Julian the head chef made us feel welcomed.\n\nThe appetizer we got were the mozzarella sticks super cheesy and delicious, the meat balls which were full of flavour, and the garlic bread was so creamy and melts in your mouth.\n\nFor the mains we got the Ravioli al Ragu and the cheesy flavour just burst after the first bite and the shrimp fra divialo had no shortage on shrimp. Lastly the tiramisu was so moist and perfect way to end the meal. We will definitely be back!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I\u2019m obsessed. Best Italian I\u2019ve had in a long time. Telling all my friends to come here!! Service was amazing. The staff had great attention to detail and the food was delicious. Felt like it was made with love which is how Italian food should taste.\n\nMy favourite was the beef tartare and the veal!\n\nGRAZIE\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Love the vibe of this place, I think it's safe to say we've found a good spot for Friday night hangouts!!\n\nCalamari and the mozarella sticks were great but special mention to the garlic bread. It just oozes with so much flavour, what a great way to start our dinner. For our mains we had Ragu, chicken parm and the tagliatelle was the best one for me. For both desserts, all of us thought they were both very good.\n\nService was very good, Chef Julien made sure to comeby and ask us if were having a good time.\n\nProps to everyone! Will definitely be coming back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Me and my wife had an amazing experience at Proper the service was amazing and attentive. Julian the head chef made us feel welcomed.\n\nThe appetizer we got were the mozzarella sticks super cheesy and delicious, the meat balls which were full of flavour, and the garlic bread was so creamy and melts in your mouth.\n\nFor the mains we got the Ravioli al Ragu and the cheesy flavour just burst after the first bite and the shrimp fra divialo had no shortage on shrimp. Lastly the tiramisu was so moist and perfect way to end the meal. We will definitely be back!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

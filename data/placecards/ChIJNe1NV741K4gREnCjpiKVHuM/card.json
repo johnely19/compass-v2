@@ -9,11 +9,11 @@
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 – 10:30 PM",
-      "Wednesday: 5:00 – 10:30 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 PM – 12:00 AM",
-      "Saturday: 5:00 PM – 12:00 AM",
+      "Tuesday: 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200910:30\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.4,
@@ -30,13 +30,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Yorkville, a few blocks from the museum strip, where the February refresh swapped moody red lighting for white tablecloths and chrome accents that catch the light. The room still hums with energy—high ceilings, close-set tables, enough noise that you lean in to hear each other. They cut those four-foot belt noodles tableside, which means you're watching someone's dinner get made while you eat yours.",
+        "body": "You're in Yorkville, a few blocks from the museum strip, where the February refresh swapped moody red lighting for white tablecloths and chrome accents that catch the light. The room still hums with energy\u2014high ceilings, close-set tables, enough noise that you lean in to hear each other. They cut those four-foot belt noodles tableside, which means you're watching someone's dinner get made while you eat yours.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Cantonese cooking shot through with technique and theater—the kind of place that takes General Tao chicken seriously enough to make it a must-order, and backs it up with strip loin and green scallion fried rice that reviewers name-check unprompted. The expanded menu leans into both showstoppers (those belt noodles, cut fresh at your table) and meticulously executed classics, with crispy chicken that arrives golden and crackling. Expect to spend more than your usual Chinese spot—this is special-occasion pricing for cooking that earns it.",
+        "body": "This is Cantonese cooking shot through with technique and theater\u2014the kind of place that takes General Tao chicken seriously enough to make it a must-order, and backs it up with strip loin and green scallion fried rice that reviewers name-check unprompted. The expanded menu leans into both showstoppers (those belt noodles, cut fresh at your table) and meticulously executed classics, with crispy chicken that arrives golden and crackling. Expect to spend more than your usual Chinese spot\u2014this is special-occasion pricing for cooking that earns it.",
         "id": "block-the-food-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"We had such an amazing dinner here! The vibe at MIMI is unmatched—the red lighting and the decor create this cool, high-energy atmosphere that’s perfect for a night out.\n\nThe food definitely lived up to the hype. The four-foot belt noodles were the highlight; watching them being cut tableside is such a cool experience, and the texture was spot on. We also loved the Green Scallion Fried Rice and the crispy chicken.\n\nThe service was 10/10 and the presentation is beautiful. Just a heads up that it is definitely on the higher end of the price scale for Chinese food, but for the quality and the overall experience, it’s well worth it for a special occasion.\"\n\n⭐⭐⭐⭐⭐ \"Great experience!\nBest items to get were\n1. the General Tao chicken is a MUST (generic, sure, but so good!!!)\n2. Strip loin is a MUST.\n3. Lamb fried rice\n4. Potatoes (so incredibly flavourful)\n5. Char Sui\n6. Dessert - Cookies & Crème (unreal)\"\n\n⭐⭐⭐⭐⭐ \"Had the valentines tasting menu with my gf and it was spectacular. Staff was great and super helpful with everything. Food was great plus we added on the 4ft noodle which was a fun and delicious experience. My favourite dishes were the duck, fried rice, and char siu ribs.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"We had such an amazing dinner here! The vibe at MIMI is unmatched\u2014the red lighting and the decor create this cool, high-energy atmosphere that\u2019s perfect for a night out.\n\nThe food definitely lived up to the hype. The four-foot belt noodles were the highlight; watching them being cut tableside is such a cool experience, and the texture was spot on. We also loved the Green Scallion Fried Rice and the crispy chicken.\n\nThe service was 10/10 and the presentation is beautiful. Just a heads up that it is definitely on the higher end of the price scale for Chinese food, but for the quality and the overall experience, it\u2019s well worth it for a special occasion.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great experience!\nBest items to get were\n1. the General Tao chicken is a MUST (generic, sure, but so good!!!)\n2. Strip loin is a MUST.\n3. Lamb fried rice\n4. Potatoes (so incredibly flavourful)\n5. Char Sui\n6. Dessert - Cookies & Cr\u00e8me (unreal)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had the valentines tasting menu with my gf and it was spectacular. Staff was great and super helpful with everything. Food was great plus we added on the 4ft noodle which was a fun and delicious experience. My favourite dishes were the duck, fried rice, and char siu ribs.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

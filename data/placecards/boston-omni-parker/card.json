@@ -22,19 +22,19 @@
       {
         "type": "prose",
         "title": "The Place",
-        "body": "The Parker House has been running since 1855 — it's the kind of hotel where you can feel the weight of the place. The list of former residents and workers is genuinely absurd: Malcolm X worked here as a busboy, Ho Chi Minh as a baker, Charles Dickens read A Christmas Carol here for its American premiere. The Boston cream pie was invented in the kitchen downstairs. It's a grand old dame that still cleans up well.",
+        "body": "The Parker House has been running since 1855 \u2014 it's the kind of hotel where you can feel the weight of the place. The list of former residents and workers is genuinely absurd: Malcolm X worked here as a busboy, Ho Chi Minh as a baker, Charles Dickens read A Christmas Carol here for its American premiere. The Boston cream pie was invented in the kitchen downstairs. It's a grand old dame that still cleans up well.",
         "id": "block-the-place-0"
       },
       {
         "type": "prose",
         "title": "Location",
-        "body": "Dead centre of everything historical — literally on the Freedom Trail, steps from the Old South Meeting House, King's Chapel, and Faneuil Hall. Government Center T station is a minute away. This is the base if the historical sites are the priority.",
+        "body": "Dead centre of everything historical \u2014 literally on the Freedom Trail, steps from the Old South Meeting House, King's Chapel, and Faneuil Hall. Government Center T station is a minute away. This is the base if the historical sites are the priority.",
         "id": "block-location-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Anytime — it's a year-round institution. Late August for summer weather and outdoor dining nearby. Order the Boston cream pie in the dining room at least once.",
+        "body": "Anytime \u2014 it's a year-round institution. Late August for summer weather and outdoor dining nearby. Order the Boston cream pie in the dining room at least once.",
         "id": "block-go-when-2"
       }
     ]
@@ -42,7 +42,13 @@
   "_hotel": {
     "priceRange": "$$$",
     "vibe": "grand historic, central, classic Boston",
-    "highlights": ["America's oldest hotel", "birthplace of Boston cream pie", "Freedom Trail location", "serious history"],
+    "highlights": [
+      "America's oldest hotel",
+      "birthplace of Boston cream pie",
+      "Freedom Trail location",
+      "serious history"
+    ],
     "bestFor": "History lovers, central location, classic experience"
-  }
+  },
+  "type": "accommodation"
 }

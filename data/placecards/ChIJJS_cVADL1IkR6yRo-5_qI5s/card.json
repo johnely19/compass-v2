@@ -14,26 +14,27 @@
     "text": "Discovered via destinationtoronto.com"
   },
   "narrative": {
-    "summary": "You're inside Daniels Spectrum in Regent Park, stepping into a 310-seat performance venue with clean architectural lines, tiered seating, and warm wood paneling—acoustics legitimately excellent enough that a whisper three rows back carries with startling clarity. Check the programming schedule and go when there's a show you actually want to see—indie theatre, contemporary dance, or intimate music series that takes full advantage of what this room can do. There's no kitchen here, so grab dinner beforehand in the neighborhood.",
+    "summary": "You're inside Daniels Spectrum in Regent Park, stepping into a 310-seat performance venue with clean architectural lines, tiered seating, and warm wood paneling\u2014acoustics legitimately excellent enough that a whisper three rows back carries with startling clarity. Check the programming schedule and go when there's a show you actually want to see\u2014indie theatre, contemporary dance, or intimate music series that takes full advantage of what this room can do. There's no kitchen here, so grab dinner beforehand in the neighborhood.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Regent Park, inside the Daniels Spectrum arts hub—a modern cultural complex that's reshaped this corner of the city. Ada Slaight Hall is the 310-seat performance venue here, all clean architectural lines and tiered seating wrapped in warm wood paneling. The acoustics are legitimately excellent, engineered for chamber music and contemporary performance, which means every sound—whether it's a cello or someone whispering three rows back—carries with startling clarity.",
+        "body": "You're in Regent Park, inside the Daniels Spectrum arts hub\u2014a modern cultural complex that's reshaped this corner of the city. Ada Slaight Hall is the 310-seat performance venue here, all clean architectural lines and tiered seating wrapped in warm wood paneling. The acoustics are legitimately excellent, engineered for chamber music and contemporary performance, which means every sound\u2014whether it's a cello or someone whispering three rows back\u2014carries with startling clarity.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a performance venue. There's no kitchen, no menu, nothing to order beyond what you'd find at a theatre concession during intermission. If you're coming for a show, grab dinner beforehand somewhere else in the neighborhood. The draw here is what's happening on stage, not what's on a plate.",
+        "body": "This isn't a restaurant\u2014it's a performance venue. There's no kitchen, no menu, nothing to order beyond what you'd find at a theatre concession during intermission. If you're coming for a show, grab dinner beforehand somewhere else in the neighborhood. The draw here is what's happening on stage, not what's on a plate.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Check the programming schedule and go when there's a performance you actually want to see—indie theatre, contemporary dance, or one of the intimate music series that takes full advantage of the acoustics. This is an under-the-radar venue that punches above its weight for what ends up on its stage.",
+        "body": "Check the programming schedule and go when there's a performance you actually want to see\u2014indie theatre, contemporary dance, or one of the intimate music series that takes full advantage of the acoustics. This is an under-the-radar venue that punches above its weight for what ends up on its stage.",
         "id": "block-go-when-2"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

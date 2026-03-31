@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJv1iSxz3L1IkRWKjK5Dt19Us",
-    "name": "Soulpepper — Detroit: Music of the Motor City",
+    "name": "Soulpepper \u2014 Detroit: Music of the Motor City",
     "city": "Toronto",
     "address": "Distillery District (Tank House Lane)",
     "type": "restaurant"
@@ -12,32 +12,33 @@
     "text": "Discovered via soulpepper.ca"
   },
   "narrative": {
-    "summary": "Original Soulpepper production about the collapse and rebirth of Detroit through Motown, jazz, hip hop, and Detroit rock. Sold out in 2023 run, returning March 19–29. Physically dynamic, movement-driven theatre.",
+    "summary": "Original Soulpepper production about the collapse and rebirth of Detroit through Motown, jazz, hip hop, and Detroit rock. Sold out in 2023 run, returning March 19\u201329. Physically dynamic, movement-driven theatre.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the Distillery District on Tank House Lane, walking into one of the Victorian-era industrial buildings where brick walls still hold the cold from a century of storage. The theatre seats wrap around the stage in tight rows—this is the kind of room where you feel the performers' sweat and breath, where a whispered line carries. Before the show, there's a cafe with wooden tables and big windows looking out onto cobblestones, open until 7:30 if you need to grab something quick.",
+        "body": "You're in the Distillery District on Tank House Lane, walking into one of the Victorian-era industrial buildings where brick walls still hold the cold from a century of storage. The theatre seats wrap around the stage in tight rows\u2014this is the kind of room where you feel the performers' sweat and breath, where a whispered line carries. Before the show, there's a cafe with wooden tables and big windows looking out onto cobblestones, open until 7:30 if you need to grab something quick.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a theatre, not a restaurant—the cafe serves pre-show snacks and light dinner options to get you fed before curtain. Think sandwiches, salads, maybe a soup, the kind of reasonable grab-and-go that keeps you from scrambling for dinner in the hour before an 8pm show. It's functional, priced to not gouge you, and designed to get you seated with twenty minutes to spare.",
+        "body": "This is a theatre, not a restaurant\u2014the cafe serves pre-show snacks and light dinner options to get you fed before curtain. Think sandwiches, salads, maybe a soup, the kind of reasonable grab-and-go that keeps you from scrambling for dinner in the hour before an 8pm show. It's functional, priced to not gouge you, and designed to get you seated with twenty minutes to spare.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Book for the March 19–29 run of Detroit: Music of the Motor City if you want theatre that moves—literally, bodies in motion, sweat and sound filling that tight brick room. Last year's run sold out, so don't wait on this one.",
+        "body": "Book for the March 19\u201329 run of Detroit: Music of the Motor City if you want theatre that moves\u2014literally, bodies in motion, sweat and sound filling that tight brick room. Last year's run sold out, so don't wait on this one.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Theatre:\nWhat an outstanding theatre Soul pepper is.\nLocated in the distillery district loop, this place exudes a wonderful vibe. I enjoyed the theatre and the 🍿 movie nights here.The staff is very helpful and cordial.\n\nParking:\nSufficient parking on street level and underground available.\n\nCafe:\nThey have a nice reasonable cafe,open till 7.30 pm. Good to grab a quick snack and some dinner.\n\nI loved the fact that soul pepper regularly arranges yoga sessions in Aug mornings for free for health enthusiasts.\"\n\n⭐⭐⭐⭐⭐ \"Cannot say enough great things about this venue and the entertainment it provides. The setting is intimate, the singers and musicians are so enormously talented and the narrator is brilliant. I love music but getting the history and interesting juicy bits in a story form makes the music that much more enjoyable! Thank you all for an amazing performance of revolutionary women in jazz!!!\"\n\n⭐⭐⭐⭐⭐ \"Had the best experience! Got in for free since I’m under 25, saw the coolest political musical drama, and even got to talk to the cast after about my career goals and what inspired them.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Theatre:\nWhat an outstanding theatre Soul pepper is.\nLocated in the distillery district loop, this place exudes a wonderful vibe. I enjoyed the theatre and the \ud83c\udf7f movie nights here.The staff is very helpful and cordial.\n\nParking:\nSufficient parking on street level and underground available.\n\nCafe:\nThey have a nice reasonable cafe,open till 7.30 pm. Good to grab a quick snack and some dinner.\n\nI loved the fact that soul pepper regularly arranges yoga sessions in Aug mornings for free for health enthusiasts.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Cannot say enough great things about this venue and the entertainment it provides. The setting is intimate, the singers and musicians are so enormously talented and the narrator is brilliant. I love music but getting the history and interesting juicy bits in a story form makes the music that much more enjoyable! Thank you all for an amazing performance of revolutionary women in jazz!!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had the best experience! Got in for free since I\u2019m under 25, saw the coolest political musical drama, and even got to talk to the cast after about my career goals and what inspired them.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

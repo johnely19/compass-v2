@@ -8,13 +8,13 @@
     "address": "Junction",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 5,
     "review_count": 18,
@@ -24,18 +24,18 @@
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
-    "summary": "You're on Dundas West in the Junction, in a stripped-down storefront that feels more like a wellness club café than a sit-down restaurant—clean white walls, a build-your-own-bowl counter, post-workout types hunched over grain bowls. Chef Hemant Bhagwani and a clinical nutritionist developed the menu, which means you're eating sprouted grains, fermented vegetables, and harissa chicken marinated with actual intention. Everything's designed for quick turnover, so this is your post-workout spot when you want something that won't undo what you just did to your body.",
+    "summary": "You're on Dundas West in the Junction, in a stripped-down storefront that feels more like a wellness club caf\u00e9 than a sit-down restaurant\u2014clean white walls, a build-your-own-bowl counter, post-workout types hunched over grain bowls. Chef Hemant Bhagwani and a clinical nutritionist developed the menu, which means you're eating sprouted grains, fermented vegetables, and harissa chicken marinated with actual intention. Everything's designed for quick turnover, so this is your post-workout spot when you want something that won't undo what you just did to your body.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Dundas West in the Junction, in a stripped-down storefront that feels more like a wellness club café than a sit-down restaurant. Clean white walls, a build-your-own-bowl counter up front, and a handful of tables where post-workout types sit hunched over grain bowls. It's bright, functional, the kind of place where you order at the counter and everything's designed for quick turnover.",
+        "body": "You're on Dundas West in the Junction, in a stripped-down storefront that feels more like a wellness club caf\u00e9 than a sit-down restaurant. Clean white walls, a build-your-own-bowl counter up front, and a handful of tables where post-workout types sit hunched over grain bowls. It's bright, functional, the kind of place where you order at the counter and everything's designed for quick turnover.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Chef Hemant Bhagwani and a clinical nutritionist developed the menu here, which means you're eating sprouted grains, fermented vegetables, and harissa chicken that's been marinated with actual intention. You build your own bowl—choose your base, your protein, pile on the toppings—and everything skews Mediterranean with a health-first backbone. The chickpeas are sprouted, the sauces are house-fermented, and bowls run around $15-18, which feels fair for food this considered.",
+        "body": "Chef Hemant Bhagwani and a clinical nutritionist developed the menu here, which means you're eating sprouted grains, fermented vegetables, and harissa chicken that's been marinated with actual intention. You build your own bowl\u2014choose your base, your protein, pile on the toppings\u2014and everything skews Mediterranean with a health-first backbone. The chickpeas are sprouted, the sauces are house-fermented, and bowls run around $15-18, which feels fair for food this considered.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This was a great meal! I built my own salad bowl (harissa chicken) and everything was delicious and fresh. The servers were knowledgeable and kind. Definitely a great addition to the junction. I will be back!\"\n\n⭐⭐⭐⭐⭐ \"We just attended recovery day at the wellness club and was famished after the workout.  We googled healthy eats in the area and couldn’t be happier with the service and the food. It was the best bowl I’ve ever had!\"\n\n⭐⭐⭐⭐⭐ \"Healthy, delicious, quick, affordable. What’s not to like! A nice cozy and tasty spot in the heart of the Junction!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This was a great meal! I built my own salad bowl (harissa chicken) and everything was delicious and fresh. The servers were knowledgeable and kind. Definitely a great addition to the junction. I will be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We just attended recovery day at the wellness club and was famished after the workout.  We googled healthy eats in the area and couldn\u2019t be happier with the service and the food. It was the best bowl I\u2019ve ever had!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Healthy, delicious, quick, affordable. What\u2019s not to like! A nice cozy and tasty spot in the heart of the Junction!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

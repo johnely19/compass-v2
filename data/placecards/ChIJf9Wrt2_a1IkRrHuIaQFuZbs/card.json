@@ -8,11 +8,11 @@
     "address": "Scarborough",
     "type": "grocery",
     "hours": [
-      "Monday: 9:30 AM – 4:30 PM",
-      "Tuesday: 9:30 AM – 4:30 PM",
-      "Wednesday: 9:30 AM – 4:30 PM",
-      "Thursday: 9:30 AM – 4:30 PM",
-      "Friday: 9:30 AM – 4:30 PM",
+      "Monday: 9:30\u202fAM\u2009\u2013\u20094:30\u202fPM",
+      "Tuesday: 9:30\u202fAM\u2009\u2013\u20094:30\u202fPM",
+      "Wednesday: 9:30\u202fAM\u2009\u2013\u20094:30\u202fPM",
+      "Thursday: 9:30\u202fAM\u2009\u2013\u20094:30\u202fPM",
+      "Friday: 9:30\u202fAM\u2009\u2013\u20094:30\u202fPM",
       "Saturday: Closed",
       "Sunday: Closed"
     ],
@@ -26,5 +26,6 @@
   "narrative": {
     "summary": "John Andrews' 1964 brutalist masterpiece - one of Canada's most studied architectural works, surprisingly human in scale",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

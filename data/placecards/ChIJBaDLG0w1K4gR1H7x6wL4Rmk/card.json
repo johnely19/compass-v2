@@ -9,12 +9,12 @@
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 6:00 PM – 1:00 AM",
-      "Wednesday: 6:00 PM – 1:00 AM",
-      "Thursday: 6:00 PM – 2:00 AM",
-      "Friday: 6:00 PM – 2:00 AM",
-      "Saturday: 6:00 PM – 2:00 AM",
-      "Sunday: 6:00 PM – 1:00 AM"
+      "Tuesday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Wednesday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Thursday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 6:00\u202fPM\u2009\u2013\u20091:00\u202fAM"
     ],
     "rating": 4.6,
     "review_count": 301,
@@ -29,27 +29,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Ossington's restaurant strip, ducking into what feels like a speakeasy that actually wants you to find it. Inside, dim lighting glows off polished wood and dark walls, with the bar as the clear focal point—this is where Troy Gilchrist and his team, including bartender Atlas, work their modern cocktail tech. It's moody without being precious, designed for watching drinks get built as much as drinking them.",
+        "body": "You're on Ossington's restaurant strip, ducking into what feels like a speakeasy that actually wants you to find it. Inside, dim lighting glows off polished wood and dark walls, with the bar as the clear focal point\u2014this is where Troy Gilchrist and his team, including bartender Atlas, work their modern cocktail tech. It's moody without being precious, designed for watching drinks get built as much as drinking them.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen puts out Pan-Asian bar food that's more than an afterthought—the Beef Rib pulls its weight as an actual reason to visit, not just something to soak up alcohol. You'll find dishes that match the cocktail program's ambition, though desserts like the calamansi tart can lean more stunning than punchy (all meringue drama, muted citrus). This is a cocktail bar first, but one where you can actually eat dinner.",
+        "body": "The kitchen puts out Pan-Asian bar food that's more than an afterthought\u2014the Beef Rib pulls its weight as an actual reason to visit, not just something to soak up alcohol. You'll find dishes that match the cocktail program's ambition, though desserts like the calamansi tart can lean more stunning than punchy (all meringue drama, muted citrus). This is a cocktail bar first, but one where you can actually eat dinner.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Come for a date when you want conversation lubricated by genuinely interesting drinks—the Seeing Green cocktail's earned its fans—or with a small group who'll appreciate watching the bartenders work. Skip it if you're looking for a quick casual bite; this is for settling in.",
+        "body": "Come for a date when you want conversation lubricated by genuinely interesting drinks\u2014the Seeing Green cocktail's earned its fans\u2014or with a small group who'll appreciate watching the bartenders work. Skip it if you're looking for a quick casual bite; this is for settling in.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I really liked this place. I visited with my friends and had a great experience — the atmosphere, drinks, and food were all excellent. We especially loved the Beef Rib (food) and the ‘Seeing Green’ cocktail. A great place to meet friends or go on a date.\nHighly recommend!\"\n\n⭐⭐⭐⭐ \"Phenomenal atmosphere and drinks, and our waiter/ bartender Nick was very knowledgeable about the drinks.\n\nThe drinks were creative and top notch, definitely unique twists and worth the visit for their interesting flavours and delightful presentation.\n\nMy only critique, the calamansi tart (which looked stunning) had a very muted calamansi flavour and it was overwhelmed by the richness meringue and tart shell (which were phenomenal on their own, but would have been better with a more tart lemon or lime curd).\n\nPhenomenal ambiance and decor, would definitely go back and try their savory offerings and other food options!\"\n\n⭐⭐⭐⭐⭐ \"No Vacancy is one of those Ossington spots that instantly pulls you in with its intimate and warm vibe. It's not only a great place to hang out with your friends but also ideal for a date night.\n\nWe tried a mix of dishes and drinks, and everything was pretty decent. Cocktails are fun and creative. The mix of Japanese influences with inventive twists makes it worth coming back just to try new drinks each time.\n\nOverall, they nail the balance of atmosphere, creativity, and quality. It can be a little pricier than your average night out, but I think it's worth it for the experience.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I really liked this place. I visited with my friends and had a great experience \u2014 the atmosphere, drinks, and food were all excellent. We especially loved the Beef Rib (food) and the \u2018Seeing Green\u2019 cocktail. A great place to meet friends or go on a date.\nHighly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Phenomenal atmosphere and drinks, and our waiter/ bartender Nick was very knowledgeable about the drinks.\n\nThe drinks were creative and top notch, definitely unique twists and worth the visit for their interesting flavours and delightful presentation.\n\nMy only critique, the calamansi tart (which looked stunning) had a very muted calamansi flavour and it was overwhelmed by the richness meringue and tart shell (which were phenomenal on their own, but would have been better with a more tart lemon or lime curd).\n\nPhenomenal ambiance and decor, would definitely go back and try their savory offerings and other food options!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"No Vacancy is one of those Ossington spots that instantly pulls you in with its intimate and warm vibe. It's not only a great place to hang out with your friends but also ideal for a date night.\n\nWe tried a mix of dishes and drinks, and everything was pretty decent. Cocktails are fun and creative. The mix of Japanese influences with inventive twists makes it worth coming back just to try new drinks each time.\n\nOverall, they nail the balance of atmosphere, creativity, and quality. It can be a little pricier than your average night out, but I think it's worth it for the experience.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

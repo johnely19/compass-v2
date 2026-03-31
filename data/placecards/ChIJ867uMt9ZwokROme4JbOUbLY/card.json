@@ -11,40 +11,41 @@
     "website": "https://www.johnnysbk.com/",
     "price_level": 2,
     "rating": 4.9,
-    "location": "642 Lorimer St, Brooklyn, NY 11211"
+    "location": "642 Lorimer St, Brooklyn, NY 11211",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLorimer & Jackson — Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots.",
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nLorimer & Jackson \u2014 Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLorimer & Jackson — Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nLorimer & Jackson \u2014 Corner spot with rotisserie chickens spinning in the window. Named after the Tang family patriarch who dreamed of upgrading from the hole-in-the-wall spots."
       },
       {
         "id": "block-2",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗧𝗢𝗥𝗬\n\nThree generations of the Tang family have fed New Yorkers since 1973, when grandfather Yuen Jam Tan opened Peking BBQ in Woodside with nothing but Peruvian recipes and determination. Grandkids Stephanie and John Jr. finally realized their father Johnny's dream — a full-service, full-bar restaurant celebrating their Chifa (Chinese-Peruvian) heritage."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde7\ud835\udde2\ud835\udde5\ud835\uddec\n\nThree generations of the Tang family have fed New Yorkers since 1973, when grandfather Yuen Jam Tan opened Peking BBQ in Woodside with nothing but Peruvian recipes and determination. Grandkids Stephanie and John Jr. finally realized their father Johnny's dream \u2014 a full-service, full-bar restaurant celebrating their Chifa (Chinese-Peruvian) heritage."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n🍗 Rotisserie (True to 1970s family recipes)\n• Rotisserie Chicken — quarter/half/whole ⭐\n  • Half chicken combo w/ yuca fries & salad — $25\n  • Quarter chicken combo — ~$18\n• Spare Ribs — sweet & funky, \"small\" 3 slabs — $14 ⭐\n\n🍜 Chifa Classics\n• Lomo Saltado — beefy, well-seasoned, rice + fries — $28 ⭐\n• Vegetable Lo Mein — bright, crunchy, vegetable-forward — $16\n• Arroz Chaufa — Peruvian fried rice\n• Jalea — Peruvian seafood platter\n\n🍔 Other\n• Johnny's Smashburger — Asian pickles, aji verde\n• Wok-charred seasonal greens\n• Caesar salad\n• Yuca fries\n\n🍨 Dessert\n• Chocolate chip cookie — dulce de leche, black sesame, vanilla ice cream ⭐\n\nNote: Everything comes with aji verde, the spicy creamy jalapeño-cilantro sauce that livens everything up."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud83c\udf57 Rotisserie (True to 1970s family recipes)\n\u2022 Rotisserie Chicken \u2014 quarter/half/whole \u2b50\n  \u2022 Half chicken combo w/ yuca fries & salad \u2014 $25\n  \u2022 Quarter chicken combo \u2014 ~$18\n\u2022 Spare Ribs \u2014 sweet & funky, \"small\" 3 slabs \u2014 $14 \u2b50\n\n\ud83c\udf5c Chifa Classics\n\u2022 Lomo Saltado \u2014 beefy, well-seasoned, rice + fries \u2014 $28 \u2b50\n\u2022 Vegetable Lo Mein \u2014 bright, crunchy, vegetable-forward \u2014 $16\n\u2022 Arroz Chaufa \u2014 Peruvian fried rice\n\u2022 Jalea \u2014 Peruvian seafood platter\n\n\ud83c\udf54 Other\n\u2022 Johnny's Smashburger \u2014 Asian pickles, aji verde\n\u2022 Wok-charred seasonal greens\n\u2022 Caesar salad\n\u2022 Yuca fries\n\n\ud83c\udf68 Dessert\n\u2022 Chocolate chip cookie \u2014 dulce de leche, black sesame, vanilla ice cream \u2b50\n\nNote: Everything comes with aji verde, the spicy creamy jalape\u00f1o-cilantro sauce that livens everything up."
       },
       {
         "id": "block-4",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 Frozen cocktails — $14\n• Chicha Morada (rum) — dark purple, reportedly quite potent ⭐\n• Frozen Lychee Pisco Sour ⭐\n\n🍺 Beer\n• Tsingtao 12oz — $6\n\n🍸 House cocktails — $15"
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf79 Frozen cocktails \u2014 $14\n\u2022 Chicha Morada (rum) \u2014 dark purple, reportedly quite potent \u2b50\n\u2022 Frozen Lychee Pisco Sour \u2b50\n\n\ud83c\udf7a Beer\n\u2022 Tsingtao 12oz \u2014 $6\n\n\ud83c\udf78 House cocktails \u2014 $15"
       },
       {
         "id": "block-5",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nDinner for 2: $60-80 (with drinks)\n\nReservations: Walk-in only (currently)\n\n📞 (718) 535-8554\n🌐 johnnysbk.com\n📸 @johnnysbk\n\n𝗛𝗢𝗨𝗥𝗦\nTue–Thu: 5–10pm\nFri–Sat: 5–10:30pm\nSun: 5–10pm\nMon: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early Tuesday (5-6pm) — no wait, neighborhood-quiet\n• Weekend evenings fill with families by 6pm\n• Watch the rotisserie through the window while you wait\n• 5 blocks from Arnold's place — perfect neighborhood dinner"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$\n\nDinner for 2: $60-80 (with drinks)\n\nReservations: Walk-in only (currently)\n\n\ud83d\udcde (718) 535-8554\n\ud83c\udf10 johnnysbk.com\n\ud83d\udcf8 @johnnysbk\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nTue\u2013Thu: 5\u201310pm\nFri\u2013Sat: 5\u201310:30pm\nSun: 5\u201310pm\nMon: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Early Tuesday (5-6pm) \u2014 no wait, neighborhood-quiet\n\u2022 Weekend evenings fill with families by 6pm\n\u2022 Watch the rotisserie through the window while you wait\n\u2022 5 blocks from Arnold's place \u2014 perfect neighborhood dinner"
       },
       {
         "id": "block-6",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 642 Lorimer St, Brooklyn, NY 11211\n\n• walking: 1 hour 8 mins • 3.1 mi\n• transit: 29 mins • 3.9 mi\n• driving: 17 mins • 4.1 mi (traffic: 17 mins)\n• bicycling: 22 mins • 3.4 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (17 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 642 Lorimer St, Brooklyn, NY 11211\n\n\u2022 walking: 1 hour 8 mins \u2022 3.1 mi\n\u2022 transit: 29 mins \u2022 3.9 mi\n\u2022 driving: 17 mins \u2022 4.1 mi (traffic: 17 mins)\n\u2022 bicycling: 22 mins \u2022 3.4 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (17 mins)"
       }
     ]
   },
@@ -100,5 +101,6 @@
         "distanceText": "3.9 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

@@ -5,7 +5,7 @@
     "place_id": "ChIJP__8oJI1K4gRWRrfrLAox-E",
     "name": "Next Stop Japan Marketplace",
     "city": "Toronto",
-    "address": "Queen West (938 Queen St W — Welcome Market)",
+    "address": "Queen West (938 Queen St W \u2014 Welcome Market)",
     "type": "grocery",
     "rating": 4.4,
     "review_count": 33,
@@ -20,27 +20,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the middle of Queen West's gallery strip, where 938 sits as a rotating pop-up hub. This weekend it transforms into a Japanese cultural experience—tatami mats for tea ceremonies, demo tables where you'll watch knife sharpening and wagashi shaping, and a curated marketplace of rare Japanese brands you won't find at the usual spots. The layout shifts between demonstration zones and vendor tables displaying everything from vintage textiles to handmade ceramics.",
+        "body": "You're in the middle of Queen West's gallery strip, where 938 sits as a rotating pop-up hub. This weekend it transforms into a Japanese cultural experience\u2014tatami mats for tea ceremonies, demo tables where you'll watch knife sharpening and wagashi shaping, and a curated marketplace of rare Japanese brands you won't find at the usual spots. The layout shifts between demonstration zones and vendor tables displaying everything from vintage textiles to handmade ceramics.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a free immersive pop-up running March 20-22 that brings traditional Japanese culture into tactile focus. You'll see wagashi (traditional sweets) being made by hand, participate in actual tea ceremonies, and watch knife demonstrations that show why Japanese blade craft matters. The marketplace carries rare Japanese brands and artisan goods you'd normally need a flight to Kyoto to access, all curated by people who know the difference between tourist kitsch and the real thing.",
+        "body": "This isn't a restaurant\u2014it's a free immersive pop-up running March 20-22 that brings traditional Japanese culture into tactile focus. You'll see wagashi (traditional sweets) being made by hand, participate in actual tea ceremonies, and watch knife demonstrations that show why Japanese blade craft matters. The marketplace carries rare Japanese brands and artisan goods you'd normally need a flight to Kyoto to access, all curated by people who know the difference between tourist kitsch and the real thing.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Block out Saturday or Sunday afternoon when you can actually linger through the tea ceremony and watch the full wagashi demo without rushing. This aligns perfectly if you're into Japanese aesthetics—it's the kind of thing where you show up for one demonstration and leave three hours later with a hand-forged knife and newfound opinions about matcha.",
+        "body": "Block out Saturday or Sunday afternoon when you can actually linger through the tea ceremony and watch the full wagashi demo without rushing. This aligns perfectly if you're into Japanese aesthetics\u2014it's the kind of thing where you show up for one demonstration and leave three hours later with a hand-forged knife and newfound opinions about matcha.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"One of the best local pop-up markets in Queen West (and Toronto). So much that even Toronto Life has mentioned them recently! They add so much vibrancy to the neighbourhood and their selection for local small businesses (handmade, vintage, and curated) is always so on point.\n\nI have bought some amazing pieces here for my home and wardrobe. I HIGHLY RECOMMEND that anyone local or tourists visiting Toronto also check out The Welcome Market. ❤️❤️❤️\"\n\n⭐⭐⭐⭐ \"Very cute market with adorable products!\n\nMy constructive feedback would be a more diverse array of vendors for more items in other categories beyond candles / jewelry.\"\n\n⭐⭐⭐⭐⭐ \"This place is absolutely a must visit in Toronto! The local artists are all fantastic and you will spend money on something. It’s amazing. Whenever friends or family visit me in Toronto I bring them here!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"One of the best local pop-up markets in Queen West (and Toronto). So much that even Toronto Life has mentioned them recently! They add so much vibrancy to the neighbourhood and their selection for local small businesses (handmade, vintage, and curated) is always so on point.\n\nI have bought some amazing pieces here for my home and wardrobe. I HIGHLY RECOMMEND that anyone local or tourists visiting Toronto also check out The Welcome Market. \u2764\ufe0f\u2764\ufe0f\u2764\ufe0f\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Very cute market with adorable products!\n\nMy constructive feedback would be a more diverse array of vendors for more items in other categories beyond candles / jewelry.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This place is absolutely a must visit in Toronto! The local artists are all fantastic and you will spend money on something. It\u2019s amazing. Whenever friends or family visit me in Toronto I bring them here!\""
       }
     ]
-  }
+  },
+  "type": "grocery"
 }

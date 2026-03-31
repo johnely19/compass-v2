@@ -13,32 +13,33 @@
     "url": "https://www.blogto.com/bakery/jupiter-bakehouse-toronto/"
   },
   "narrative": {
-    "summary": "Canadian-grain-only bakery; 4.9 rating; took over the Glory Hole Doughnuts space—strong local lineage.",
+    "summary": "Canadian-grain-only bakery; 4.9 rating; took over the Glory Hole Doughnuts space\u2014strong local lineage.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Gerrard East strip in Little India, stepping into what Glory Hole Doughnuts used to call home. Inside, it's bright and packed—a small bakery counter where you can watch the staff wrap loaves in paper, a few shelves lined with naturally leavened rounds, and a lineup that snakes toward the door most mornings. The energy is neighbourhood bakery, not cafe: people grab their sourdough and go.",
+        "body": "You're on the Gerrard East strip in Little India, stepping into what Glory Hole Doughnuts used to call home. Inside, it's bright and packed\u2014a small bakery counter where you can watch the staff wrap loaves in paper, a few shelves lined with naturally leavened rounds, and a lineup that snakes toward the door most mornings. The energy is neighbourhood bakery, not cafe: people grab their sourdough and go.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Everything here starts with Canadian grain, stone-milled and fermented into sourdough with proper structure—open crumb, blistered crust, the kind of bread that tastes like time. The olive fougasse has the salt and chew you want from French flatbread, and the truffle manchego danish is a savoury-sweet hit that locals return for obsessively. You'll also find baguettes, pretzels with varying commitment to salt, and a rotating lineup of pastries. Loaves run $8-12, pastries $5-8.",
+        "body": "Everything here starts with Canadian grain, stone-milled and fermented into sourdough with proper structure\u2014open crumb, blistered crust, the kind of bread that tastes like time. The olive fougasse has the salt and chew you want from French flatbread, and the truffle manchego danish is a savoury-sweet hit that locals return for obsessively. You'll also find baguettes, pretzels with varying commitment to salt, and a rotating lineup of pastries. Loaves run $8-12, pastries $5-8.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go early on a weekday if you want first pick of the fougasse and don't want to wait. Otherwise, embrace the weekend crowd—it's part of the ritual now, and the staff moves fast enough that the line feels worth it.",
+        "body": "Go early on a weekday if you want first pick of the fougasse and don't want to wait. Otherwise, embrace the weekend crowd\u2014it's part of the ritual now, and the staff moves fast enough that the line feels worth it.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"The olive fougasse (French flatbread) is a delight, spot-on flavour and texture. The everything bagel pretzel? Fine, but not worth the price. It had the right rise and chew, but lacked salt aka those dense, crunchy bits that make a pretzel satisfying. The sourdough looked gorgeous; great rise, lovely air pockets. I’d recommend the fougasse and sourdough baguette, and I’m curious enough to try the sweeter pastries next time.\"\n\n⭐⭐⭐⭐⭐ \"I’ve been to Jupiter a handful of times now and it’s easy to see why it’s consistently jam packed. The staff is kind, warm and knowledgeable about their product. They’re quick and efficient while delivering great service, and incredible bread and pastry. The truffle manchego danish is genuinely one of the best things I’ve ever tasted! Such a great neighbourhood spot, we love you Jupiter!!\"\n\n⭐⭐⭐⭐⭐ \"Stopped by this place today for a snow day treat and coffee, and I will say I was blown away by how good the espresso in my cortado was. Chandler was pulling the shots and has a decade of barista experience (and it SHOWS) and her recommendation for the tiramisu danish was unreal. It was unbelievably good and i will go back for it over and over. Also chat with Austin, who has a wealth of knowledge and experience about/in the Toronto food scene. This place and these people are genuinely trying to bring good coffee, incredible baked goods, and loving vibes to the neighbourhood and it’s so welcomed. Sincerely appreciated them both and this place is worth having a break AND a coffee at (so rare); easily one of only two good coffee spots this side of Carlaw. Anyway, off my soap box — go check this place out! They run out of the goods by 2pm on Sundays so go early!\n\nEDIT: forgot to mention that this is run by one of the head guys/bakers from Blackbird SO YOU KNOW THIS IS GOOD / WILL BE THE FUTURE OF GOOD BREAD IN THIS CITY!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"The olive fougasse (French flatbread) is a delight, spot-on flavour and texture. The everything bagel pretzel? Fine, but not worth the price. It had the right rise and chew, but lacked salt aka those dense, crunchy bits that make a pretzel satisfying. The sourdough looked gorgeous; great rise, lovely air pockets. I\u2019d recommend the fougasse and sourdough baguette, and I\u2019m curious enough to try the sweeter pastries next time.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I\u2019ve been to Jupiter a handful of times now and it\u2019s easy to see why it\u2019s consistently jam packed. The staff is kind, warm and knowledgeable about their product. They\u2019re quick and efficient while delivering great service, and incredible bread and pastry. The truffle manchego danish is genuinely one of the best things I\u2019ve ever tasted! Such a great neighbourhood spot, we love you Jupiter!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Stopped by this place today for a snow day treat and coffee, and I will say I was blown away by how good the espresso in my cortado was. Chandler was pulling the shots and has a decade of barista experience (and it SHOWS) and her recommendation for the tiramisu danish was unreal. It was unbelievably good and i will go back for it over and over. Also chat with Austin, who has a wealth of knowledge and experience about/in the Toronto food scene. This place and these people are genuinely trying to bring good coffee, incredible baked goods, and loving vibes to the neighbourhood and it\u2019s so welcomed. Sincerely appreciated them both and this place is worth having a break AND a coffee at (so rare); easily one of only two good coffee spots this side of Carlaw. Anyway, off my soap box \u2014 go check this place out! They run out of the goods by 2pm on Sundays so go early!\n\nEDIT: forgot to mention that this is run by one of the head guys/bakers from Blackbird SO YOU KNOW THIS IS GOOD / WILL BE THE FUTURE OF GOOD BREAD IN THIS CITY!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

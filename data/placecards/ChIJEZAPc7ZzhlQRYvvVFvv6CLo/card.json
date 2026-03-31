@@ -8,13 +8,13 @@
     "address": "Kitsilano",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 – 9:30 PM",
-      "Tuesday: 5:00 – 9:30 PM",
-      "Wednesday: 12:00 – 2:00 PM, 5:00 – 9:30 PM",
-      "Thursday: 12:00 – 2:00 PM, 5:00 – 9:30 PM",
-      "Friday: 12:00 – 2:00 PM, 5:00 – 10:00 PM",
-      "Saturday: 12:00 – 2:00 PM, 5:00 – 10:00 PM",
-      "Sunday: 5:00 – 9:30 PM"
+      "Monday: 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u20099:30\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 1293,
@@ -23,35 +23,35 @@
     "website": "http://www.maenam.ca/"
   },
   "discovery": {
-    "text": "Elevated Thai by chef Angus An — West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",
+    "text": "Elevated Thai by chef Angus An \u2014 West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",
     "url": "https://www.eater.com/maps/best-vancouver-restaurants-bc-canada"
   },
   "narrative": {
-    "summary": "Elevated Thai by chef Angus An — West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",
+    "summary": "Elevated Thai by chef Angus An \u2014 West Coast farm-to-table meets Bangkok. One of Vancouver's most beloved restaurants, in the heart of Kits. Locals consistently cite it as a must-try. Perfect if Billy stays near Kitsilano. Rating 4.4/5 (1,292 reviews). $$$ but worth it.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on West 4th in the heart of Kitsilano, a couple blocks from the beach. Inside, tables are packed close—close enough that you'll hear your neighbor's conversation during the dinner rush—with warm wood finishes and minimal decoration that keeps the focus on the plates. The noise builds as the room fills, especially if you're seated near the entrance where servers navigate the narrow path between bar and kitchen.",
+        "body": "You're on West 4th in the heart of Kitsilano, a couple blocks from the beach. Inside, tables are packed close\u2014close enough that you'll hear your neighbor's conversation during the dinner rush\u2014with warm wood finishes and minimal decoration that keeps the focus on the plates. The noise builds as the room fills, especially if you're seated near the entrance where servers navigate the narrow path between bar and kitchen.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Chef Angus An is doing precise, ingredient-driven Thai that pulls from Vancouver's farms and fishmongers—think banana blossom salad with snap and funk, curries built on fresh-ground spice pastes, sweetness and heat calibrated to let you taste everything underneath. The cooking has the sharpness and balance you'd find in Bangkok, but the produce is decidedly West Coast. Mains run $$$, and while most dishes justify it, a few reviewers note the seafood can be inconsistent for the price point. Save room for the cashew cake.",
+        "body": "Chef Angus An is doing precise, ingredient-driven Thai that pulls from Vancouver's farms and fishmongers\u2014think banana blossom salad with snap and funk, curries built on fresh-ground spice pastes, sweetness and heat calibrated to let you taste everything underneath. The cooking has the sharpness and balance you'd find in Bangkok, but the produce is decidedly West Coast. Mains run $$$, and while most dishes justify it, a few reviewers note the seafood can be inconsistent for the price point. Save room for the cashew cake.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is date night in Kits—the kind where you both actually care about the food and don't mind elbowing proximity to strangers. If you're staying nearby, it's the neighborhood spot locals will tell you not to skip.",
+        "body": "This is date night in Kits\u2014the kind where you both actually care about the food and don't mind elbowing proximity to strangers. If you're staying nearby, it's the neighborhood spot locals will tell you not to skip.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"The dishes were full of flavor, with a great balance of sweetness, spice, and acidity. The spices and herbs instantly reminded me of Thailand. The banana blossom salad was especially memorable — my first time trying it, and a very interesting experience. The desserts, panna cotta and cashew cake, were also quite good.\n\nThe only drawback is the pricing, which feels a bit high for the seafood quality, could be better or more consistent. Service was excellent and the staff were very friendly, though the space is somewhat cramped and can get noisy, especially near the entrance.\"\n\n⭐⭐⭐⭐⭐ \"Incredible on all fronts. Every dish featured high-quality ingredients and delivered bold, memorable flavors. The cocktail was fun, the service was top-notch, and the restaurant itself is beautifully decorated. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Very friendly staff. The Dine out dinner menu had enough options for us to choose from. You could probably enjoy the same menu more than once.\n\nAtmosphere lost points because there’s a large freezing draft every time the door opens. Not much they can really do about that though.. bring an extra blanket or a coat if you feel cold easily.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"The dishes were full of flavor, with a great balance of sweetness, spice, and acidity. The spices and herbs instantly reminded me of Thailand. The banana blossom salad was especially memorable \u2014 my first time trying it, and a very interesting experience. The desserts, panna cotta and cashew cake, were also quite good.\n\nThe only drawback is the pricing, which feels a bit high for the seafood quality, could be better or more consistent. Service was excellent and the staff were very friendly, though the space is somewhat cramped and can get noisy, especially near the entrance.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Incredible on all fronts. Every dish featured high-quality ingredients and delivered bold, memorable flavors. The cocktail was fun, the service was top-notch, and the restaurant itself is beautifully decorated. Highly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very friendly staff. The Dine out dinner menu had enough options for us to choose from. You could probably enjoy the same menu more than once.\n\nAtmosphere lost points because there\u2019s a large freezing draft every time the door opens. Not much they can really do about that though.. bring an extra blanket or a coat if you feel cold easily.\""
       }
     ]
   },
@@ -70,5 +70,6 @@
       "path": "https://platform.eater.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/24406405/Anh_and_Chi_Streetside_Platter_Photographed_by_Leila_Kwok_1.jpg?quality=90&strip=all&crop=0,10.75214828329,100,78.49570343342",
       "caption": "Source image"
     }
-  ]
+  ],
+  "type": "restaurant"
 }

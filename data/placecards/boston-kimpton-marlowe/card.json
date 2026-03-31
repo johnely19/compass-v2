@@ -22,19 +22,19 @@
       {
         "type": "prose",
         "title": "The Place",
-        "body": "The Marlowe sits right on the Charles River in Cambridge, between Harvard and MIT territory. It's got the Kimpton DNA — deliberately quirky, wine hour every evening, bikes to borrow, pets welcome — but the Charles River views and proximity to the academic world give it a distinctly Cambridge character. The rooftop terrace in late August is excellent.",
+        "body": "The Marlowe sits right on the Charles River in Cambridge, between Harvard and MIT territory. It's got the Kimpton DNA \u2014 deliberately quirky, wine hour every evening, bikes to borrow, pets welcome \u2014 but the Charles River views and proximity to the academic world give it a distinctly Cambridge character. The rooftop terrace in late August is excellent.",
         "id": "block-the-place-0"
       },
       {
         "type": "prose",
         "title": "Location",
-        "body": "Cambridge puts you in the college-town energy John was asking about — Harvard Square is minutes away, MIT a short walk. Red Line into downtown Boston is easy. This is the base for someone who wants intellectual atmosphere, river views, and to drift between Kendall Square's restaurants and the Yard.",
+        "body": "Cambridge puts you in the college-town energy John was asking about \u2014 Harvard Square is minutes away, MIT a short walk. Red Line into downtown Boston is easy. This is the base for someone who wants intellectual atmosphere, river views, and to drift between Kendall Square's restaurants and the Yard.",
         "id": "block-location-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Early September when students are back — Harvard Yard fills up, the restaurants around Porter and Harvard Squares get that buzzing semester energy, and the weather is still warm enough for the rooftop.",
+        "body": "Early September when students are back \u2014 Harvard Yard fills up, the restaurants around Porter and Harvard Squares get that buzzing semester energy, and the weather is still warm enough for the rooftop.",
         "id": "block-go-when-2"
       }
     ]
@@ -42,7 +42,13 @@
   "_hotel": {
     "priceRange": "$$$",
     "vibe": "quirky boutique, riverside, intellectual neighbourhood",
-    "highlights": ["Charles River views", "Cambridge location", "Kimpton wine hour", "bikes to borrow"],
+    "highlights": [
+      "Charles River views",
+      "Cambridge location",
+      "Kimpton wine hour",
+      "bikes to borrow"
+    ],
     "bestFor": "College-town energy + nice hotel comfort"
-  }
+  },
+  "type": "accommodation"
 }

@@ -15,27 +15,27 @@
     "location": "P33G+7F, Brooklyn, NY 11237, USA"
   },
   "narrative": {
-    "summary": "📍 Maria Hernandez Park\nP33G+7F, Brooklyn, NY 11237, USA",
+    "summary": "\ud83d\udccd Maria Hernandez Park\nP33G+7F, Brooklyn, NY 11237, USA",
     "blocks": [
       {
         "id": "block-1",
         "title": "Maria Hernandez Park",
-        "body": "📍 Maria Hernandez Park\nP33G+7F, Brooklyn, NY 11237, USA"
+        "body": "\ud83d\udccd Maria Hernandez Park\nP33G+7F, Brooklyn, NY 11237, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nReliable Bushwick local hangout anchor cited by local city editors; good daytime reset point between art/studio stops."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nReliable Bushwick local hangout anchor cited by local city editors; good daytime reset point between art/studio stops."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.3 (3348 reviews)\nPrice level: n/a\nPhone: (212) 639-9675\nWebsite: http://www.nycgovparks.org/parks/maria-hernandez-park\n\nHours:\nMonday: 6:00 AM – 10:00 PM\nTuesday: 6:00 AM – 10:00 PM\nWednesday: 6:00 AM – 10:00 PM\nThursday: 6:00 AM – 10:00 PM\nFriday: 6:00 AM – 10:00 PM\nSaturday: 6:00 AM – 10:00 PM\nSunday: 6:00 AM – 10:00 PM"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.3 (3348 reviews)\nPrice level: n/a\nPhone: (212) 639-9675\nWebsite: http://www.nycgovparks.org/parks/maria-hernandez-park\n\nHours:\nMonday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nTuesday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nWednesday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nThursday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nFriday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nSaturday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM\nSunday: 6:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: P33G+7F, Brooklyn, NY 11237, USA\n\n• walking: 1 hour 40 mins • 4.4 mi\n• transit: 39 mins • 5.9 mi\n• driving: 28 mins • 6.0 mi (traffic: 29 mins)\n• bicycling: 36 mins • 5.2 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (28 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: P33G+7F, Brooklyn, NY 11237, USA\n\n\u2022 walking: 1 hour 40 mins \u2022 4.4 mi\n\u2022 transit: 39 mins \u2022 5.9 mi\n\u2022 driving: 28 mins \u2022 6.0 mi (traffic: 29 mins)\n\u2022 bicycling: 36 mins \u2022 5.2 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (28 mins)"
       }
     ]
   },
@@ -91,5 +91,6 @@
         "distanceText": "5.9 mi"
       }
     ]
-  }
+  },
+  "type": "park"
 }

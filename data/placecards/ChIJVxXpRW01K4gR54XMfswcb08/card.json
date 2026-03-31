@@ -8,13 +8,13 @@
     "address": "Roncesvalles / Dundas West (2057 Dundas St W)",
     "type": "cafe",
     "hours": [
-      "Monday: 8:30 AM – 6:00 PM",
-      "Tuesday: 8:30 AM – 6:00 PM",
-      "Wednesday: 8:30 AM – 6:00 PM",
-      "Thursday: 8:30 AM – 6:00 PM",
-      "Friday: 8:30 AM – 6:00 PM",
-      "Saturday: 9:30 AM – 9:00 PM",
-      "Sunday: 9:30 AM – 6:00 PM"
+      "Monday: 8:30\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 8:30\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 8:30\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 8:30\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 8:30\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 9:30\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 208,
@@ -25,31 +25,31 @@
     "text": "highnotes.ca"
   },
   "narrative": {
-    "summary": "Coffee-by-day, vinyl-bar-by-evening. Neighbourhood listening room with a 4.9★ rating from 208 reviews. Curated record selection. Quieter, more contemplative than the nightlife spots. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "Coffee-by-day, vinyl-bar-by-evening. Neighbourhood listening room with a 4.9\u2605 rating from 208 reviews. Curated record selection. Quieter, more contemplative than the nightlife spots. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet stretch of Dundas West where the storefronts still have personality. Inside, two floors of vinyl bins organized by genre—hip hop gets serious real estate—and enough breathing room between the racks that you can actually flip through without elbowing someone. The coffee bar runs along one side, and by evening the lights drop low enough that the listening stations feel like private booths.",
+        "body": "You're on a quiet stretch of Dundas West where the storefronts still have personality. Inside, two floors of vinyl bins organized by genre\u2014hip hop gets serious real estate\u2014and enough breathing room between the racks that you can actually flip through without elbowing someone. The coffee bar runs along one side, and by evening the lights drop low enough that the listening stations feel like private booths.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a coffee program, not a kitchen—espresso drinks pulled properly, beans rotated seasonally, the kind of flat white that doesn't need a pour pattern to prove itself. They're licensed, so you can pivot to a beer or natural wine when the sun goes down and you're three records deep into your hunt. Everything stays under $8.",
+        "body": "This is a coffee program, not a kitchen\u2014espresso drinks pulled properly, beans rotated seasonally, the kind of flat white that doesn't need a pour pattern to prove itself. They're licensed, so you can pivot to a beer or natural wine when the sun goes down and you're three records deep into your hunt. Everything stays under $8.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Very cool spot! A hidden gem in Toronto. Love the concept. They are licensed and also have great coffee. Two storey vinyl shop. I was there on a Sunday and they had live music which was a nice touch. Great selection of hip hop. I asked them if could hunt down a album for me and they found it within a week. Very helpful staff!\"\n\n⭐⭐⭐⭐⭐ \"Finally had a chance to stop by and was so impressed by how clean and tidy this little shop was. The selection of records are well curated, and they also have caffeine to help fuel your shopping experience! Ryan, one of the owners, was so lovely, greeted us and made us our coffees. They’ve got a great little nook by the front of the shop for you to sip your cuppa and watch the streetcars go by. Overall, great vibe and such a welcome addition to our neighborhood. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Amazing Space.  Can get lost in there for hours.   The staff and management are awesome human beings.   Never a dull convo (I don’t talk to much people). Helene and Nicola make the visits priceless.  Looking for a nice beverage or nice fresh baked goods. With the option to dig for records. Priceless. Go Visit\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very cool spot! A hidden gem in Toronto. Love the concept. They are licensed and also have great coffee. Two storey vinyl shop. I was there on a Sunday and they had live music which was a nice touch. Great selection of hip hop. I asked them if could hunt down a album for me and they found it within a week. Very helpful staff!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Finally had a chance to stop by and was so impressed by how clean and tidy this little shop was. The selection of records are well curated, and they also have caffeine to help fuel your shopping experience! Ryan, one of the owners, was so lovely, greeted us and made us our coffees. They\u2019ve got a great little nook by the front of the shop for you to sip your cuppa and watch the streetcars go by. Overall, great vibe and such a welcome addition to our neighborhood. Will definitely be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing Space.  Can get lost in there for hours.   The staff and management are awesome human beings.   Never a dull convo (I don\u2019t talk to much people). Helene and Nicola make the visits priceless.  Looking for a nice beverage or nice fresh baked goods. With the option to dig for records. Priceless. Go Visit\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "COFFEE\n• Espresso\n   Consciousness for everyone with each sip\n• Americano\n• Cappuccino\n⭐ Latte\n• Macchiato",
+        "body": "COFFEE\n\u2022 Espresso\n   Consciousness for everyone with each sip\n\u2022 Americano\n\u2022 Cappuccino\n\u2b50 Latte\n\u2022 Macchiato",
         "sections": [
           {
             "name": "COFFEE",
@@ -89,5 +89,6 @@
         ]
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

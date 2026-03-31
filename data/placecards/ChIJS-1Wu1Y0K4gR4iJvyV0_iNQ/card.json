@@ -8,13 +8,13 @@
     "address": "Dundas West (Trinity Bellwoods edge)",
     "type": "bar",
     "hours": [
-      "Monday: 12:00 – 5:00 PM",
-      "Tuesday: 12:00 – 6:00 PM",
-      "Wednesday: 12:00 – 6:00 PM",
-      "Thursday: 12:00 – 6:00 PM",
-      "Friday: 12:00 – 6:00 PM",
-      "Saturday: 12:00 – 6:00 PM",
-      "Sunday: 12:00 – 5:00 PM"
+      "Monday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.2,
     "review_count": 80,
@@ -36,21 +36,22 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a lifestyle shop with a small coffee program. You're here for the browse, maybe a cortado while you decide between a geometric candle holder or locally made jewelry. The pantry section leans into specialty oils, tinned fish, and the kind of artisan crackers that cost $12 but photograph beautifully. Think gift shopping for people with taste, not a meal.",
+        "body": "This isn't a restaurant\u2014it's a lifestyle shop with a small coffee program. You're here for the browse, maybe a cortado while you decide between a geometric candle holder or locally made jewelry. The pantry section leans into specialty oils, tinned fish, and the kind of artisan crackers that cost $12 but photograph beautifully. Think gift shopping for people with taste, not a meal.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Saturday morning when you need a birthday gift that says you actually paid attention, or a weekday afternoon when you want to kill twenty minutes wandering through things you don't need but suddenly want. Bring your own tote—everything here deserves better than a plastic bag.",
+        "body": "Saturday morning when you need a birthday gift that says you actually paid attention, or a weekday afternoon when you want to kill twenty minutes wandering through things you don't need but suddenly want. Bring your own tote\u2014everything here deserves better than a plastic bag.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Nice store, the products look like they’re inspired by modern art, clean lines solid colours. A nice selection of baggu items, quite pricey though. Sad to see the negative reviews for service, the woman working when I was there was perfectly nice!\"\n\n⭐⭐⭐⭐⭐ \"Consciously curated & design-minded, this little jewel of a shop is one of the best places to find gifts for you or yours. Excellent independent lifestyle, jewelry, home & design brands here, with an rad coffee bar to boot. The owner and staff are the sweetest and awesome at helping you pick the perfect gift. A++++\"\n\n⭐⭐⭐⭐⭐ \"Amazing store full of fun and unique finds. I love the incense they offer. The shop owner is extremely sweet and helpful. Highly recommend!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Nice store, the products look like they\u2019re inspired by modern art, clean lines solid colours. A nice selection of baggu items, quite pricey though. Sad to see the negative reviews for service, the woman working when I was there was perfectly nice!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Consciously curated & design-minded, this little jewel of a shop is one of the best places to find gifts for you or yours. Excellent independent lifestyle, jewelry, home & design brands here, with an rad coffee bar to boot. The owner and staff are the sweetest and awesome at helping you pick the perfect gift. A++++\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing store full of fun and unique finds. I love the incense they offer. The shop owner is extremely sweet and helpful. Highly recommend!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

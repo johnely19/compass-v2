@@ -8,13 +8,13 @@
     "address": "Ossington (93 Ossington Ave)",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 12:00 – 2:30 PM, 5:00 – 10:00 PM",
-      "Thursday: 12:00 – 2:30 PM, 5:00 – 10:00 PM",
-      "Friday: 12:00 – 2:30 PM, 5:00 – 10:00 PM",
-      "Saturday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM",
-      "Sunday: 11:00 AM – 3:00 PM, 5:00 – 10:00 PM"
+      "Monday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20092:30\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 1066,
@@ -25,32 +25,33 @@
     "text": "houseandhome.com"
   },
   "narrative": {
-    "summary": "Michelin-awarded Vietnamese from Vancouver. House & Home featured their beef pasta stir-fry as a 2026 food trend highlight. 4.5★ (1045 reviews), 4.7 on OpenTable (639 reviews). Cool Vietnamese street food with chef-driven intention. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Michelin-awarded Vietnamese from Vancouver. House & Home featured their beef pasta stir-fry as a 2026 food trend highlight. 4.5\u2605 (1045 reviews), 4.7 on OpenTable (639 reviews). Cool Vietnamese street food with chef-driven intention. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Ossington south of Dundas, where the strip still swings between scrappy and polished. Inside, the room runs narrow with banquette seating hugging one wall, dark wood tables, and paper lanterns strung overhead—especially striking during Lunar New Year when red decorations crowd the corners. It's street food elevated just enough: clean lines, warm lighting, loud enough that you can eat messily without worry.",
+        "body": "You're on Ossington south of Dundas, where the strip still swings between scrappy and polished. Inside, the room runs narrow with banquette seating hugging one wall, dark wood tables, and paper lanterns strung overhead\u2014especially striking during Lunar New Year when red decorations crowd the corners. It's street food elevated just enough: clean lines, warm lighting, loud enough that you can eat messily without worry.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Vancouver's Michelin-awarded Vietnamese cooking transplanted east—chef-driven but still rooted in the hawker stall urgency that made the original Lunch Lady famous. The beef carpaccio gets thinly pounded and dressed with fish sauce and lime, the XO garlic noodles are a slick tangle of umami, and the beef pasta stir-fry (House & Home called it a 2026 trend) marries Italian shapes with wok hei heat. Pho comes in bowls big enough to split, soft shell crab arrives shatteringly crisp, and the Che Ba Mau dessert—layered beans, coconut, and crushed ice—cools you down after all that chili oil.",
+        "body": "This is Vancouver's Michelin-awarded Vietnamese cooking transplanted east\u2014chef-driven but still rooted in the hawker stall urgency that made the original Lunch Lady famous. The beef carpaccio gets thinly pounded and dressed with fish sauce and lime, the XO garlic noodles are a slick tangle of umami, and the beef pasta stir-fry (House & Home called it a 2026 trend) marries Italian shapes with wok hei heat. Pho comes in bowls big enough to split, soft shell crab arrives shatteringly crisp, and the Che Ba Mau dessert\u2014layered beans, coconut, and crushed ice\u2014cools you down after all that chili oil.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Bring someone who cares about design and actually likes to eat—this hits both registers without trying to impress. It's the kind of place where you order too much, eat in focused silence for a stretch, then look up and realize you need to come back next month.",
+        "body": "Bring someone who cares about design and actually likes to eat\u2014this hits both registers without trying to impress. It's the kind of place where you order too much, eat in focused silence for a stretch, then look up and realize you need to come back next month.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I've been meaning to come here for a while but wow this whole meal blew me away. Everything was so flavourful and it was hard to pick a dish I loved the most. I had to eat in silence just to savour how good the food was!\n\nMy favourite dishes were probably the beef carpaccio and the Che Ba Mau dessert. But you can't go wrong I'd highly recommend the soft shell crab and the pho was excellent and definitely shareable for two.\n\nSerena was a wonderful server as well shoutout to her! Atmosphere was lovely especially with all the decorations for Lunar New Year!\n\nI've eaten a lot of nice food in the city but this is definitely one spot that left a really strong impression on me. I'll definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Might just be my favourite Toronto restaurant. The XO garlic noodles alone are enough to warrant this reaction. The interior is very classy and authentic; there's a mix of traditional Vietnamese decor, and the seating is very nice. The overall atmosphere is lively.\n\nThe food is absolutely spectacular, such a great fusion of Vietnamese flavours and dishes. The dessert is also great, such a nice Viet twist on common desserts, with traditional flavours and just incredible food. The service is also great. I have been about 3 times since I first tried this place a few months ago!\"\n\n⭐⭐⭐⭐ \"Drove all the way from Buffalo durning what was just a major snow storm in Toronto. But I am so glad that we got the chance to eat here. First of all the service was top notch. Quick and all of the staff was very friendly and personable. I loved the ambiance, from the decorations to the hip music. Cool looking bar as well. The food and cocktails were very good. We shared several plates between the 3 of us girls. My favorite was the Wagyu pho, the beef carpaccio, and the octopus skewers. Our server was so nice and was surprised we drove all the way there in a snow storm that she let us sample their famous sticky rice cake dessert. Let me tell you it was delicious. From the cake to the homemade gelato. Little things like that made the whole experience more Memorable. I would return again, hopefully when the weather is better!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I've been meaning to come here for a while but wow this whole meal blew me away. Everything was so flavourful and it was hard to pick a dish I loved the most. I had to eat in silence just to savour how good the food was!\n\nMy favourite dishes were probably the beef carpaccio and the Che Ba Mau dessert. But you can't go wrong I'd highly recommend the soft shell crab and the pho was excellent and definitely shareable for two.\n\nSerena was a wonderful server as well shoutout to her! Atmosphere was lovely especially with all the decorations for Lunar New Year!\n\nI've eaten a lot of nice food in the city but this is definitely one spot that left a really strong impression on me. I'll definitely be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Might just be my favourite Toronto restaurant. The XO garlic noodles alone are enough to warrant this reaction. The interior is very classy and authentic; there's a mix of traditional Vietnamese decor, and the seating is very nice. The overall atmosphere is lively.\n\nThe food is absolutely spectacular, such a great fusion of Vietnamese flavours and dishes. The dessert is also great, such a nice Viet twist on common desserts, with traditional flavours and just incredible food. The service is also great. I have been about 3 times since I first tried this place a few months ago!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Drove all the way from Buffalo durning what was just a major snow storm in Toronto. But I am so glad that we got the chance to eat here. First of all the service was top notch. Quick and all of the staff was very friendly and personable. I loved the ambiance, from the decorations to the hip music. Cool looking bar as well. The food and cocktails were very good. We shared several plates between the 3 of us girls. My favorite was the Wagyu pho, the beef carpaccio, and the octopus skewers. Our server was so nice and was surprised we drove all the way there in a snow storm that she let us sample their famous sticky rice cake dessert. Let me tell you it was delicious. From the cake to the homemade gelato. Little things like that made the whole experience more Memorable. I would return again, hopefully when the weather is better!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

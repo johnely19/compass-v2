@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Higher-end jazz supper club format, good food alongside music, Ted the manager gets personal mentions",
     "blocks": []
-  }
+  },
+  "type": "music-venue"
 }

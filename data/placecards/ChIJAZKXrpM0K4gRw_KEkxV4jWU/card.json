@@ -8,12 +8,12 @@
     "address": "The Annex / Bathurst (779 Bathurst St)",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 6:00 PM",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 10:00 AM – 6:00 PM",
-      "Friday: 10:00 AM – 6:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
+      "Monday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.7,
@@ -25,7 +25,8 @@
     "text": "Discovered via adifferentbooklist.com"
   },
   "narrative": {
-    "summary": "Black-owned for 30+ years. Specializes in literature from the Global South, Caribbean and African diasporas. Community hub with readings and panels. García Márquez territory. 4.7★ (285 reviews).",
+    "summary": "Black-owned for 30+ years. Specializes in literature from the Global South, Caribbean and African diasporas. Community hub with readings and panels. Garc\u00eda M\u00e1rquez territory. 4.7\u2605 (285 reviews).",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

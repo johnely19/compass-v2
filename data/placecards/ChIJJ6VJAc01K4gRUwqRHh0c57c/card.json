@@ -12,57 +12,57 @@
     "website": "http://www.barpiquette.com/",
     "location": "1084 Queen St W, Toronto, ON M6J 1H8, Canada",
     "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 PM – 12:00 AM",
-      "Saturday: 4:00 PM – 12:00 AM",
-      "Sunday: 4:00 – 10:00 PM"
+      "Monday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 4:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 4:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 353
   },
   "narrative": {
-    "summary": "You're on a scruffy stretch of Queen West where low lighting and close-set tables make it feel like you've stumbled into someone's very good dinner party—the kind where everyone's drinking natural wine and nobody's checking their phone. The Euro small-plates cooking actually understands restraint—creamy burrata, properly smoked trout whipped into a dip you'll want more bread for, duck crostini that people photograph and then immediately eat. Plan for $60-80 a person if you're sharing three or four plates and drinking wine that isn't on every other list in the city.",
+    "summary": "You're on a scruffy stretch of Queen West where low lighting and close-set tables make it feel like you've stumbled into someone's very good dinner party\u2014the kind where everyone's drinking natural wine and nobody's checking their phone. The Euro small-plates cooking actually understands restraint\u2014creamy burrata, properly smoked trout whipped into a dip you'll want more bread for, duck crostini that people photograph and then immediately eat. Plan for $60-80 a person if you're sharing three or four plates and drinking wine that isn't on every other list in the city.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a scruffy stretch of Queen West where the rent hasn't totally squeezed out the interesting spots yet. Inside, low lighting and close-set tables make it feel like you've stumbled into someone's very good dinner party—the kind where everyone's drinking natural wine and nobody's checking their phone. It's small enough that you can hear the kitchen working behind you.",
+        "body": "You're on a scruffy stretch of Queen West where the rent hasn't totally squeezed out the interesting spots yet. Inside, low lighting and close-set tables make it feel like you've stumbled into someone's very good dinner party\u2014the kind where everyone's drinking natural wine and nobody's checking their phone. It's small enough that you can hear the kitchen working behind you.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Euro small-plates cooking that actually understands restraint—creamy burrata, properly smoked trout whipped into a dip you'll want more bread for, duck crostini that people photograph and then immediately eat. The mortadella sandwich is the kind of simple-sounding thing that makes you realize the kitchen knows what it's doing. You'll spend $60-80 a person if you're sharing three or four plates and drinking wine that isn't on every other list in the city.",
+        "body": "This is Euro small-plates cooking that actually understands restraint\u2014creamy burrata, properly smoked trout whipped into a dip you'll want more bread for, duck crostini that people photograph and then immediately eat. The mortadella sandwich is the kind of simple-sounding thing that makes you realize the kitchen knows what it's doing. You'll spend $60-80 a person if you're sharing three or four plates and drinking wine that isn't on every other list in the city.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "Bar Piquette",
-        "body": "📍 Bar Piquette\n1084 Queen St W, Toronto, ON M6J 1H8, Canada"
+        "body": "\ud83d\udccd Bar Piquette\n1084 Queen St W, Toronto, ON M6J 1H8, Canada"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (353 reviews)\nPhone: (416) 533-7745\nWebsite: http://www.barpiquette.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.5 (353 reviews)\nPhone: (416) 533-7745\nWebsite: http://www.barpiquette.com/"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1084 Queen St W, Toronto, ON M6J 1H8, Canada\n\n• walking: 1 hour 39 mins • 7.3 km\n• transit: 42 mins • 8.0 km\n• driving: 24 mins • 7.7 km (traffic: 18 mins)\n• bicycling: 27 mins • 7.9 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (24 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1084 Queen St W, Toronto, ON M6J 1H8, Canada\n\n\u2022 walking: 1 hour 39 mins \u2022 7.3 km\n\u2022 transit: 42 mins \u2022 8.0 km\n\u2022 driving: 24 mins \u2022 7.7 km (traffic: 18 mins)\n\u2022 bicycling: 27 mins \u2022 7.9 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (24 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Bar Piquette is a great cozy spot for small plates and good wine. Although I didn’t get a photo of it their duck crostinis are ABSOLUTELY DIVINE. Smoked trout dip was delicious! The ambience is perfect for a whimsical or romantic night out if you want to start light with drinks and apps. Definitely recommend.\"\n\n⭐⭐⭐⭐ \"Had a date night at Bar Piquette, The atmosphere was cozy and perfect for a relaxed evening over great food and wine. We shared the squash, duck crostini, burrata, and the mortadella sandwich every dish was beautifully balanced and full of flavor, although my favorite was the duck and the mortadella.\n\nWe also picked a lovely bottle of wine that paired perfectly with everything. Highly recommend for anyone looking for an intimate spot with top-notch small plates and a great vibe.\"\n\n⭐⭐⭐⭐⭐ \"Great vibes for fall. $12 on selected wines and good shareable portions. The duck crosonti was a perfect sweet and salty mix. The burrata could’ve had more to it. Mushroom duxelle with the garlic aoili is a great combination. Love the seasonal menu!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Bar Piquette is a great cozy spot for small plates and good wine. Although I didn\u2019t get a photo of it their duck crostinis are ABSOLUTELY DIVINE. Smoked trout dip was delicious! The ambience is perfect for a whimsical or romantic night out if you want to start light with drinks and apps. Definitely recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Had a date night at Bar Piquette, The atmosphere was cozy and perfect for a relaxed evening over great food and wine. We shared the squash, duck crostini, burrata, and the mortadella sandwich every dish was beautifully balanced and full of flavor, although my favorite was the duck and the mortadella.\n\nWe also picked a lovely bottle of wine that paired perfectly with everything. Highly recommend for anyone looking for an intimate spot with top-notch small plates and a great vibe.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great vibes for fall. $12 on selected wines and good shareable portions. The duck crosonti was a perfect sweet and salty mix. The burrata could\u2019ve had more to it. Mushroom duxelle with the garlic aoili is a great combination. Love the seasonal menu!\""
       }
     ]
   },
@@ -118,5 +118,6 @@
         "distanceText": "8.0 km"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

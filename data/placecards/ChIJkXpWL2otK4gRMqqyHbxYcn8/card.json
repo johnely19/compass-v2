@@ -12,7 +12,7 @@
     "text": "Discovered via blogto.com"
   },
   "narrative": {
-    "summary": "Canada's biggest contemporary art fair returns March 26-29. 250+ juried Canadian artists. Opening Night Party Thu Mar 26 6-10pm. Buy directly from artists. Enercare Centre. 4.3★ (6006 reviews).",
+    "summary": "Canada's biggest contemporary art fair returns March 26-29. 250+ juried Canadian artists. Opening Night Party Thu Mar 26 6-10pm. Buy directly from artists. Enercare Centre. 4.3\u2605 (6006 reviews).",
     "blocks": [
       {
         "type": "prose",
@@ -23,7 +23,7 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's Canada's largest contemporary art fair, four days of buying directly from the artists who made the work. You're walking booth to booth looking at paintings, sculpture, photography, textiles, all juried, all for sale, with price tags that range from accessible prints to investment pieces. The Opening Night Party on Thursday runs 6-10pm if you want first pick and a glass of wine in hand while you browse. Admission gets you the full run of the fair, plus whatever conversations you fall into with the people who actually made what's on the walls.",
+        "body": "This isn't a restaurant\u2014it's Canada's largest contemporary art fair, four days of buying directly from the artists who made the work. You're walking booth to booth looking at paintings, sculpture, photography, textiles, all juried, all for sale, with price tags that range from accessible prints to investment pieces. The Opening Night Party on Thursday runs 6-10pm if you want first pick and a glass of wine in hand while you browse. Admission gets you the full run of the fair, plus whatever conversations you fall into with the people who actually made what's on the walls.",
         "id": "block-the-food-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Wednesday. November 12, 2025.\nHad an absolute blast at Royal Agricultural Winter Fair 2025. Took pictures of schedule if you intend to go. Great food and vendors from across entire Ontario. Amazing dog show. Had a great time watching horseshoeing competition and Horse show. Good program. A lot of things to do. Come early. Worth every penny spend. I'd be back in 2026 for sure 😉\"\n\n⭐⭐⭐⭐⭐ \"Great venue space for big projects events. I recently went to the HYROX fitness event, Whisky Tasting event & the Waterfront marathon expo. Location is near by the lake with providing TTC service via Streetcars and plenty of parking with a fee.\"\n\n⭐⭐⭐⭐⭐ \"Amazing home show. Lots of great inventions, food and entertainment. Parking was easy. Getting in was easy. All around five star experience for sure. A stand out booth was 416 Security Solutions with their unbreakable glass doors and windows. Truly amazing and  potentially life saving.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wednesday. November 12, 2025.\nHad an absolute blast at Royal Agricultural Winter Fair 2025. Took pictures of schedule if you intend to go. Great food and vendors from across entire Ontario. Amazing dog show. Had a great time watching horseshoeing competition and Horse show. Good program. A lot of things to do. Come early. Worth every penny spend. I'd be back in 2026 for sure \ud83d\ude09\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great venue space for big projects events. I recently went to the HYROX fitness event, Whisky Tasting event & the Waterfront marathon expo. Location is near by the lake with providing TTC service via Streetcars and plenty of parking with a fee.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing home show. Lots of great inventions, food and entertainment. Parking was easy. Getting in was easy. All around five star experience for sure. A stand out booth was 416 Security Solutions with their unbreakable glass doors and windows. Truly amazing and  potentially life saving.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

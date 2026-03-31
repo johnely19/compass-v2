@@ -16,11 +16,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 4:00 – 10:00 PM",
-      "Thursday: 4:00 – 10:00 PM",
-      "Friday: 4:00 – 11:00 PM",
-      "Saturday: 3:00 – 11:00 PM",
-      "Sunday: 3:00 – 10:00 PM"
+      "Wednesday: 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 4:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 4:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 3:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 3:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "price_level": null,
     "rating": 4.9,
@@ -35,13 +35,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Loggers Lane in Squamish, tucked into a low-key spot that feels more neighborhood hideaway than highway pit stop. Inside, the vibe leans warm and unfussy—wooden tables, mood lighting that actually works, and wallpaper in the bathroom quirky enough that multiple people have mentioned it unprompted. The layout encourages lingering, with sight lines to the kitchen and a general sense that the staff knows half the room by name.",
+        "body": "You're on Loggers Lane in Squamish, tucked into a low-key spot that feels more neighborhood hideaway than highway pit stop. Inside, the vibe leans warm and unfussy\u2014wooden tables, mood lighting that actually works, and wallpaper in the bathroom quirky enough that multiple people have mentioned it unprompted. The layout encourages lingering, with sight lines to the kitchen and a general sense that the staff knows half the room by name.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu shifts seasonally but anchors around smart, ingredient-forward plates that punch above Squamish's usual casual dining tier. Tartars show up frequently in reviews—clearly they're doing something right with raw fish and acid balance—and the tacos have earned enough of a cult following to stay permanent. Portions are generous without being punishing, flavors lean bright and layered, and pricing sits comfortably in that sweet spot where you're not calculating the tip before dessert. Expect dishes that feel considered but not fussy, the kind of cooking that makes you want to come back next week to see what changed.",
+        "body": "The menu shifts seasonally but anchors around smart, ingredient-forward plates that punch above Squamish's usual casual dining tier. Tartars show up frequently in reviews\u2014clearly they're doing something right with raw fish and acid balance\u2014and the tacos have earned enough of a cult following to stay permanent. Portions are generous without being punishing, flavors lean bright and layered, and pricing sits comfortably in that sweet spot where you're not calculating the tip before dessert. Expect dishes that feel considered but not fussy, the kind of cooking that makes you want to come back next week to see what changed.",
         "id": "block-the-food-1"
       },
       {
@@ -54,12 +54,13 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Such a cozy little gem in Squamish! The atmosphere is warm and welcoming, and the level of food is truly impressive — rare to find around Vancouver. Our waitress was amazing, very attentive, and explained each dish in detail. Tartars were absolutely incredible! Definitely a place I’ll be coming back to.\"\n\n⭐⭐⭐⭐⭐ \"This spot is great vibes all around. The folks are wonderfully engaging, ambiance and view lifts the mood, even the washroom wallpaper charms.  The food? Absolute delight, great flavors, good portions, awesome pricing, and just the right amount of healthy.  This place claims fave neighborhood resto status for me.  Menu items change seasonally, keeps things fresh! But the tacos is a sacred constant.  Try it to know why.\"\n\n⭐⭐⭐⭐⭐ \"Such a cool spot to come on a date night! I love that I could find desserts that I could actually eat with no dairy and no gluten! The drinks were very fun and tasty! Also our waitress was friendly and attentive ☺️\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a cozy little gem in Squamish! The atmosphere is warm and welcoming, and the level of food is truly impressive \u2014 rare to find around Vancouver. Our waitress was amazing, very attentive, and explained each dish in detail. Tartars were absolutely incredible! Definitely a place I\u2019ll be coming back to.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This spot is great vibes all around. The folks are wonderfully engaging, ambiance and view lifts the mood, even the washroom wallpaper charms.  The food? Absolute delight, great flavors, good portions, awesome pricing, and just the right amount of healthy.  This place claims fave neighborhood resto status for me.  Menu items change seasonally, keeps things fresh! But the tacos is a sacred constant.  Try it to know why.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a cool spot to come on a date night! I love that I could find desserts that I could actually eat with no dairy and no gluten! The drinks were very fun and tasty! Also our waitress was friendly and attentive \u263a\ufe0f\""
       }
     ]
   },
   "discovery": {
     "text": "Discovered by Disco research agent",
     "url": "https://thebrokenseal.ca/"
-  }
+  },
+  "type": "restaurant"
 }

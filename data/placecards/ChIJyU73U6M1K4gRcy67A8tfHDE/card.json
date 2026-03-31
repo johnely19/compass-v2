@@ -12,32 +12,33 @@
     "text": "Discovered via TheBestToronto 2025"
   },
   "narrative": {
-    "summary": "You're just north of the Roncesvalles strip, stepping into a hybrid cafe-yoga studio-flower workshop that feels deliberately removed from the bustle—low soul music, light wood, a meditation area in back where the yoga mats aren't just decoration. The focus is on precision espresso drinks made with lighter-roasted beans: cortados and lattes that look almost too pretty to drink. This is your weekday morning reset—the vibe discourages laptop camping, and there's no weekend brunch menu.",
+    "summary": "You're just north of the Roncesvalles strip, stepping into a hybrid cafe-yoga studio-flower workshop that feels deliberately removed from the bustle\u2014low soul music, light wood, a meditation area in back where the yoga mats aren't just decoration. The focus is on precision espresso drinks made with lighter-roasted beans: cortados and lattes that look almost too pretty to drink. This is your weekday morning reset\u2014the vibe discourages laptop camping, and there's no weekend brunch menu.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find this hybrid cafe-yoga studio-flower workshop just north of the main Roncesvalles strip, occupying a corner that feels deliberately removed from the bustle. Walk in and you're hit with low soul music, light wood surfaces, and an unexpectedly calm layout that reveals a meditation area in back—the yoga mats aren't just decoration. It's the kind of place designed to slow you down, with flowers arranged in deliberate clusters and enough breathing room between tables that you're not overhearing anyone's conversation.",
+        "body": "You'll find this hybrid cafe-yoga studio-flower workshop just north of the main Roncesvalles strip, occupying a corner that feels deliberately removed from the bustle. Walk in and you're hit with low soul music, light wood surfaces, and an unexpectedly calm layout that reveals a meditation area in back\u2014the yoga mats aren't just decoration. It's the kind of place designed to slow you down, with flowers arranged in deliberate clusters and enough breathing room between tables that you're not overhearing anyone's conversation.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The focus here is on precision espresso drinks made with lighter-roasted beans—cortados and lattes that look almost too pretty to drink, executed with the kind of attention you'd expect from baristas who actually care about their craft. The chia pudding shows up repeatedly in reviews for good reason, plated with the same care as the coffee. This isn't a full breakfast menu operation; think quality cafe fare where a latte and something light will run you under $15, and that's the point.",
+        "body": "The focus here is on precision espresso drinks made with lighter-roasted beans\u2014cortados and lattes that look almost too pretty to drink, executed with the kind of attention you'd expect from baristas who actually care about their craft. The chia pudding shows up repeatedly in reviews for good reason, plated with the same care as the coffee. This isn't a full breakfast menu operation; think quality cafe fare where a latte and something light will run you under $15, and that's the point.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your weekday morning reset when you need to recalibrate before the day starts, or a solo afternoon when you want to sit with a book and not feel rushed. Skip it if you're looking for weekend brunch energy or anywhere to linger over laptops—the vibe discourages camping.",
+        "body": "This is your weekday morning reset when you need to recalibrate before the day starts, or a solo afternoon when you want to sit with a book and not feel rushed. Skip it if you're looking for weekend brunch energy or anywhere to linger over laptops\u2014the vibe discourages camping.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This is a very cozy and calm cafe. The latte and chia pudding were both delicious and so pretty. I love the calm soul music playing and the meditation area in the back is also quite cool.\"\n\n⭐⭐⭐⭐⭐ \"This is an absolutely beautiful and serene coffee shop just a little bit north of the usual roncesvalles strech. I have visited this coffee shop many times and never had anything but an amazing cup of coffee and attentive, knowledgeable, and friendly service.\n\nOn my last visit, I had a Cortado, which is my usual order here, but have had numerous espresso based drinks and every one of them have been executed perfectly. Although the bean roast is a bit lighter than what I usually prefer, the craftsmanship of the baristas still produce a perfect expresso based drink\n\nThis is not only a must do coffee shop if you are in the Roncesvalles area, but is worth the trip just to experience the great coffee and Serene atmosphere!\"\n\n⭐⭐⭐⭐ \"Several visits to the cafe. Always thought to give their yoga workshops a try but the times… anyway, it’s a laptop friendly cafe with great drink options. Not only coffees, teas and also smoothies. They also have food options and baked goods. Tried their banana walnut muffin… delish!\n\nThe minus one star was because of my most recent visit - one of the staff members continued to cough for several hours without putting on a mask… funnily enough, the staff who wasn’t coughing was wearing one. It made me somewhat nervous so I took off without finishing my second drink.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is a very cozy and calm cafe. The latte and chia pudding were both delicious and so pretty. I love the calm soul music playing and the meditation area in the back is also quite cool.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is an absolutely beautiful and serene coffee shop just a little bit north of the usual roncesvalles strech. I have visited this coffee shop many times and never had anything but an amazing cup of coffee and attentive, knowledgeable, and friendly service.\n\nOn my last visit, I had a Cortado, which is my usual order here, but have had numerous espresso based drinks and every one of them have been executed perfectly. Although the bean roast is a bit lighter than what I usually prefer, the craftsmanship of the baristas still produce a perfect expresso based drink\n\nThis is not only a must do coffee shop if you are in the Roncesvalles area, but is worth the trip just to experience the great coffee and Serene atmosphere!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Several visits to the cafe. Always thought to give their yoga workshops a try but the times\u2026 anyway, it\u2019s a laptop friendly cafe with great drink options. Not only coffees, teas and also smoothies. They also have food options and baked goods. Tried their banana walnut muffin\u2026 delish!\n\nThe minus one star was because of my most recent visit - one of the staff members continued to cough for several hours without putting on a mask\u2026 funnily enough, the staff who wasn\u2019t coughing was wearing one. It made me somewhat nervous so I took off without finishing my second drink.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

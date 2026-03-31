@@ -8,13 +8,13 @@
     "address": "King West (Waterworks)",
     "type": "bar",
     "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 2:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
-      "Sunday: 5:00 PM – 12:00 AM"
+      "Monday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 4.5,
     "review_count": 144,
@@ -29,27 +29,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You climb the stairs from Waterworks Food Hall in King West and emerge into something completely different—a dimly lit bar that leans into the building's industrial past with high ceilings, dark wood, and brass fixtures that catch the low light. The bar itself anchors the room, and the whole setup feels like a hidden club above the market buzz below, quiet enough to actually talk but designed to make you linger.",
+        "body": "You climb the stairs from Waterworks Food Hall in King West and emerge into something completely different\u2014a dimly lit bar that leans into the building's industrial past with high ceilings, dark wood, and brass fixtures that catch the low light. The bar itself anchors the room, and the whole setup feels like a hidden club above the market buzz below, quiet enough to actually talk but designed to make you linger.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu here weaves through Toronto's waterworks history with more than just concept—servers will walk you through different types of water if you're curious, a nod to the building's origins that somehow doesn't feel gimmicky. The real focus is the award-winning cocktail program, where drinks are built around the industrial narrative with the kind of precision that keeps regulars coming back. It's a bar first, but the new menu brings in enough to snack on while you work through their list.",
+        "body": "The menu here weaves through Toronto's waterworks history with more than just concept\u2014servers will walk you through different types of water if you're curious, a nod to the building's origins that somehow doesn't feel gimmicky. The real focus is the award-winning cocktail program, where drinks are built around the industrial narrative with the kind of precision that keeps regulars coming back. It's a bar first, but the new menu brings in enough to snack on while you work through their list.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is where you take someone when you want to feel like you know something they don't—a weeknight escape when you need a proper cocktail and atmosphere that feels intentional without the King West scene.",
+        "body": "This is where you take someone when you want to feel like you know something they don't\u2014a weeknight escape when you need a proper cocktail and atmosphere that feels intentional without the King West scene.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This is one of my favorite cocktail bars in the city. I’ve come here multiple times and I have always had a consistent and fantastic experience.\n\nThis is an unexpected bar sitting at the top of the food-hall. You simply do not expect the grandeur and allure of the space as you make your way up. You’re transported in Civil Works’ universe. Additionally, music adds to the ambience without being too loud. The menu is creatively woven with the story of the building. Please don’t hesitate to ask your servers questions as they do a much better job at storytelling. I love that they offer different types of water as a nod to the history of the space. I’ve never tried the different waters but I appreciate the intentionality.\n\nService: The service is amazing, I’d like to call out Mo and Rob who I’ve had the pleasure to be served by. Not only are they welcoming, but they’re also passionate and knowledgeable about their craft making the experience all the better. The menu is extensive which can be overwhelming to some, when and if in doubt, lean on your server.\n\nMenu: Creative, extensive & thoughtfully navigable with the help of descriptions, categorization and charts that facilitate the decision making process.\n\nDrinks: The cocktails are amazing. Even those that may not be to my liking are executed with mastery. In the extremely rare instances that I didn’t enjoy a drink, it was a matter of personal taste preferences not of skill.\n\nBonus: I believe the bar has a partnership with a couple food merchants in the food-hall, allowing you to order and have it served to you!\"\n\n⭐⭐⭐⭐ \"Very nice cocktails and ambience, however service is not as attentive as a regular bar, given the nature of the seating/roaming.\nHand Laundry - a warm cocktail with sweet/savoury flavours, like a salted caramel vibe.\"\n\n⭐⭐⭐⭐ \"This is the upstairs mezzanine style cocktail bar at Waterworks Food Hall. Opening hours are 5pm to late each day. The interior seating area is gorgeous, Art Deco themed arrangement Lots of tables were already reserved during our midweek visit. However, they had a handful set aside for walk ins.\n\nDrink list is a nice range of signature cocktail specials to go along with their beer and wine drinks. Drinks were mixed very well. I particularly enjoyed their take on an Old Fashioned. Don't hesitate to ask for recommendations if helpful. Otherwise, just enjoy the good drinks and great vibes with friends or date at Civil Works Bar. Will gladly return during future visits to Toronto.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is one of my favorite cocktail bars in the city. I\u2019ve come here multiple times and I have always had a consistent and fantastic experience.\n\nThis is an unexpected bar sitting at the top of the food-hall. You simply do not expect the grandeur and allure of the space as you make your way up. You\u2019re transported in Civil Works\u2019 universe. Additionally, music adds to the ambience without being too loud. The menu is creatively woven with the story of the building. Please don\u2019t hesitate to ask your servers questions as they do a much better job at storytelling. I love that they offer different types of water as a nod to the history of the space. I\u2019ve never tried the different waters but I appreciate the intentionality.\n\nService: The service is amazing, I\u2019d like to call out Mo and Rob who I\u2019ve had the pleasure to be served by. Not only are they welcoming, but they\u2019re also passionate and knowledgeable about their craft making the experience all the better. The menu is extensive which can be overwhelming to some, when and if in doubt, lean on your server.\n\nMenu: Creative, extensive & thoughtfully navigable with the help of descriptions, categorization and charts that facilitate the decision making process.\n\nDrinks: The cocktails are amazing. Even those that may not be to my liking are executed with mastery. In the extremely rare instances that I didn\u2019t enjoy a drink, it was a matter of personal taste preferences not of skill.\n\nBonus: I believe the bar has a partnership with a couple food merchants in the food-hall, allowing you to order and have it served to you!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Very nice cocktails and ambience, however service is not as attentive as a regular bar, given the nature of the seating/roaming.\nHand Laundry - a warm cocktail with sweet/savoury flavours, like a salted caramel vibe.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"This is the upstairs mezzanine style cocktail bar at Waterworks Food Hall. Opening hours are 5pm to late each day. The interior seating area is gorgeous, Art Deco themed arrangement Lots of tables were already reserved during our midweek visit. However, they had a handful set aside for walk ins.\n\nDrink list is a nice range of signature cocktail specials to go along with their beer and wine drinks. Drinks were mixed very well. I particularly enjoyed their take on an Old Fashioned. Don't hesitate to ask for recommendations if helpful. Otherwise, just enjoy the good drinks and great vibes with friends or date at Civil Works Bar. Will gladly return during future visits to Toronto.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

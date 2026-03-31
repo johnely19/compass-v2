@@ -17,27 +17,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Queen West, past the vintage shops and into the stretch where things get a bit more polished. Inside, Frankie Solarik styled this like an 1800s Parisian pharmacy—glass apothecary bottles line dark wood shelves, low lighting catches on brass fixtures, and there are velvet couches near the back where you can tuck in for hours. It's theatrical without tipping into theme park, the kind of place where the bartenders wear vests and actually know what they're doing.",
+        "body": "You're on Queen West, past the vintage shops and into the stretch where things get a bit more polished. Inside, Frankie Solarik styled this like an 1800s Parisian pharmacy\u2014glass apothecary bottles line dark wood shelves, low lighting catches on brass fixtures, and there are velvet couches near the back where you can tuck in for hours. It's theatrical without tipping into theme park, the kind of place where the bartenders wear vests and actually know what they're doing.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Solarik's experiential cocktail concept, so drinks lead—think Kyoto Foret with its layered botanicals, or champagne cut with absinthe, cucumber, and basil that drinks lighter than it sounds. The food menu exists to keep you anchored: truffle lobster rolls, dry-aged duck, things rich enough to justify another round. You're here for the bar program first, but the kitchen knows how to make you stay past one drink.",
+        "body": "This is Solarik's experiential cocktail concept, so drinks lead\u2014think Kyoto Foret with its layered botanicals, or champagne cut with absinthe, cucumber, and basil that drinks lighter than it sounds. The food menu exists to keep you anchored: truffle lobster rolls, dry-aged duck, things rich enough to justify another round. You're here for the bar program first, but the kitchen knows how to make you stay past one drink.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is a date spot, especially if you want somewhere dark and a little dramatic after dinner on the Ossington strip. Come late—they're open until 2am on weekends—and claim one of those back couches when you're ready to settle in properly.",
+        "body": "This is a date spot, especially if you want somewhere dark and a little dramatic after dinner on the Ossington strip. Come late\u2014they're open until 2am on weekends\u2014and claim one of those back couches when you're ready to settle in properly.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Great cocktail bar. Didn't try the food, but the drinks are pretty good. Had the Kyoto Foret and Normandy Orchard.  Wasn't a fan of the Orchard one - too sweet for my taste and really close to tasting like apple juice.\n\nGreat ambiance and service. We sat on the couch (bench) near the back and it's a nice spot for a date.  Recommend coming by for a drink or parking yourself there for the night.  Perfect for after a dinner on the Ossington strip.\"\n\n⭐⭐⭐⭐⭐ \"Had such a great time at Bar Prequel and Co. Apothecary! The champagne and Absinthe was a standout for me, the delicate flavours of the champagne, balancing out with the freshness of the cucumber and basil made this drink. The food as well was phenomenal. From the truffle lobster rolls to the dry aged duck, there is so much love and passion the staff clearly demonstrates through their food, drinks, and service. Some of the dishes such as the pommes frites did come out lukewarm instead of hot, but all in all, I had such a great time here, definitely worth going again!!!\"\n\n⭐⭐⭐⭐⭐ \"The staff treat you like you come from old money. It's an AMAZING experience and I will absolutely be coming back time and time again.\nSuch a great idea, great experience, calm, dark and moody atmosphere, with a twist. Love it!\nThe food is absolutely delicious. We still dream about it.\nThe Truffle Lobster Rolls are a must-have!\n\nThank you to the entire staff for keeping the vibe for every guest while you're there, it feels like you've stepped into a whole new world.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great cocktail bar. Didn't try the food, but the drinks are pretty good. Had the Kyoto Foret and Normandy Orchard.  Wasn't a fan of the Orchard one - too sweet for my taste and really close to tasting like apple juice.\n\nGreat ambiance and service. We sat on the couch (bench) near the back and it's a nice spot for a date.  Recommend coming by for a drink or parking yourself there for the night.  Perfect for after a dinner on the Ossington strip.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had such a great time at Bar Prequel and Co. Apothecary! The champagne and Absinthe was a standout for me, the delicate flavours of the champagne, balancing out with the freshness of the cucumber and basil made this drink. The food as well was phenomenal. From the truffle lobster rolls to the dry aged duck, there is so much love and passion the staff clearly demonstrates through their food, drinks, and service. Some of the dishes such as the pommes frites did come out lukewarm instead of hot, but all in all, I had such a great time here, definitely worth going again!!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The staff treat you like you come from old money. It's an AMAZING experience and I will absolutely be coming back time and time again.\nSuch a great idea, great experience, calm, dark and moody atmosphere, with a twist. Love it!\nThe food is absolutely delicious. We still dream about it.\nThe Truffle Lobster Rolls are a must-have!\n\nThank you to the entire staff for keeping the vibe for every guest while you're there, it feels like you've stepped into a whole new world.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

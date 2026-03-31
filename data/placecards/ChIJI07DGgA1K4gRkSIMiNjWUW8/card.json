@@ -13,18 +13,18 @@
     "text": "streetsoftoronto.com"
   },
   "narrative": {
-    "summary": "Tokyo's cult organic matcha cafe — first North American location. Opened on Ossington strip. Ceremonial-grade matcha, minimal design, Japanese precision. No rating yet (brand new). Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Tokyo's cult organic matcha cafe \u2014 first North American location. Opened on Ossington strip. Ceremonial-grade matcha, minimal design, Japanese precision. No rating yet (brand new). Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Ossington strip, where Tokyo's cult matcha brand just opened its first North American outpost. Inside, it's all pale wood, white walls, and the kind of minimal restraint that only comes from actual Japanese design—not the Instagram version. A few small tables, clean lines, and light that makes the green tea look even greener.",
+        "body": "You're on the Ossington strip, where Tokyo's cult matcha brand just opened its first North American outpost. Inside, it's all pale wood, white walls, and the kind of minimal restraint that only comes from actual Japanese design\u2014not the Instagram version. A few small tables, clean lines, and light that makes the green tea look even greener.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a cafe that happens to serve matcha—it's ceremonial-grade organic matcha flown in from Tokyo, prepared with the precision you'd expect from a place that built its reputation in Japan. The drinks are the point: traditional matcha whisked to order, matcha lattes made properly, seasonal specials that follow what's happening in the Tokyo locations. There's minimal food, mostly Japanese pastries and small sweets designed to complement the tea, with drinks running $6-12.",
+        "body": "This isn't a cafe that happens to serve matcha\u2014it's ceremonial-grade organic matcha flown in from Tokyo, prepared with the precision you'd expect from a place that built its reputation in Japan. The drinks are the point: traditional matcha whisked to order, matcha lattes made properly, seasonal specials that follow what's happening in the Tokyo locations. There's minimal food, mostly Japanese pastries and small sweets designed to complement the tea, with drinks running $6-12.",
         "id": "block-the-food-1"
       },
       {
@@ -34,5 +34,6 @@
         "id": "block-go-when-2"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

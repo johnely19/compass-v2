@@ -12,7 +12,8 @@
     "text": "yelp"
   },
   "narrative": {
-    "summary": "Artisan chocolates, confections, premium pantry gifts. 4.5★. Boutique feel, handmade quality. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Artisan chocolates, confections, premium pantry gifts. 4.5\u2605. Boutique feel, handmade quality. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Art gallery + cocktail bar hybrid\u2014rotating exhibits + late-night drinks. 4.6 rating, 498 reviews. Open til 2am. The 'discovery' vibe.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }
