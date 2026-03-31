@@ -189,6 +189,11 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   // Listing URL
   const listingUrl = data.listing_url || data.url;
 
+  // Google Maps deep-link (only when placeId looks like a Google Place ID)
+  const googleMapsUrl = placeId && placeId.startsWith('ChIJ')
+    ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
+    : null;
+
   // Match score
   const rawScores = data.scores as Record<string, number> | undefined;
   const matchScore = data.match_score ||
@@ -354,6 +359,16 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               className="btn btn-primary accommodation-cta"
             >
               View Listing ↗
+            </a>
+          )}
+          {googleMapsUrl && (
+            <a
+              href={googleMapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="accommodation-maps-link"
+            >
+              View in Google Maps →
             </a>
           )}
           {userId && contextKey && (
