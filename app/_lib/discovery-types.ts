@@ -64,6 +64,9 @@ const TYPE_ALIASES: Record<string, DiscoveryType> = {
   'event': 'experience',
   'cultural-center': 'experience',
 
+  // Streets / Great Streets
+  'street': 'neighbourhood',
+
   // Other
   'restaurant-cluster': 'restaurant',
   'food-market': 'experience',
