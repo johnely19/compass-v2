@@ -218,11 +218,15 @@ export default function ReviewContextClient({
       ) : (
         <div className="review-list">
           {(() => {
-            // Group by neighbourhood
+            // Only group by neighbourhood for Toronto-local contexts
+            // For trips (nyc, cottage, etc.) skip grouping — addresses aren't Toronto neighbourhoods
+            const isToronto = context.city?.toLowerCase().includes('toronto') && context.type !== 'trip';
             const groups: { name: string; items: typeof filtered }[] = [];
             let lastNeighbourhood = '';
             for (const d of filtered) {
-              const hood = getNeighbourhood((d as unknown as Record<string,string>).address).name;
+              const hood = isToronto
+                ? getNeighbourhood((d as unknown as Record<string,string>).address).name
+                : '';
               if (hood !== lastNeighbourhood) {
                 groups.push({ name: hood, items: [] });
                 lastNeighbourhood = hood;
