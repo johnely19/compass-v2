@@ -5,7 +5,6 @@
    No Blob for place cards — edit card.json, commit, deploy done.
    ============================================================ */
 
-import { put } from '@vercel/blob';
 import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 import type { DiscoveryType } from './types';
@@ -79,17 +78,5 @@ export class PlaceCardStore {
       .sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  /** Write a card to Blob (requires server-side token).
-   *  NOTE: This is kept for user data only (discoveries, triage, chat, etc.).
-   *  Place cards are filesystem-only and should NOT be written here.
-   */
-  static async upsertCard(placeId: string, card: Record<string, unknown>): Promise<void> {
-    await put(`place-cards/${placeId}/card.json`, JSON.stringify(card, null, 2), {
-      access: 'public',
-      contentType: 'application/json',
-      addRandomSuffix: false,
-    });
-    // Invalidate index cache
-    PlaceCardStore.indexCache = null;
-  }
 }
+
