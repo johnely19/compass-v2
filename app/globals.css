@@ -4420,7 +4420,7 @@ body {
 
 
 /* ============================================================
-   Accommodation Card (#80) — Rental/Cottage UI
+   Accommodation Card — Hipcamp-style detail (#134)
    ============================================================ */
 
 .accommodation-card {
@@ -4429,54 +4429,52 @@ body {
   padding-bottom: var(--space-2xl);
 }
 
-/* Hero */
-.accommodation-hero {
+/* ── Photo Gallery ── */
+.ac-photo-gallery {
+  position: relative;
   width: 100%;
-  min-height: 40vh;
+}
+
+.ac-photo-gallery-scroll {
   display: flex;
-  align-items: flex-end;
-  background-size: cover;
-  background-position: center;
-}
-
-@media (min-width: 768px) {
-  .accommodation-hero {
-    min-height: 50vh;
-    border-radius: var(--radius-lg);
-    margin: var(--space-md);
-  }
-}
-
-.accommodation-hero-overlay {
-  width: 100%;
-  padding: var(--space-xl) var(--space-md) var(--space-md);
-}
-
-.accommodation-hero-top {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
-  margin-bottom: var(--space-sm);
-  flex-wrap: wrap;
-}
-
-.accommodation-type-badge {
-  display: inline-flex;
-  align-items: center;
   gap: 4px;
-  padding: 4px 12px;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(4px);
-  border-radius: 100px;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: white;
-  border: 1px solid rgba(255,255,255,0.3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.ac-photo-gallery-scroll::-webkit-scrollbar { display: none; }
+
+.ac-photo-gallery-item {
+  flex: 0 0 75%;
+  scroll-snap-align: start;
+}
+@media (min-width: 480px) {
+  .ac-photo-gallery-item { flex: 0 0 48%; }
+}
+@media (min-width: 768px) {
+  .ac-photo-gallery-item { flex: 0 0 32%; }
+  .ac-photo-gallery-scroll { gap: 6px; border-radius: var(--radius-lg); overflow: hidden; }
+  .ac-photo-gallery { margin: var(--space-md) var(--space-md) 0; }
 }
 
-.accommodation-match-badge {
+.ac-photo-gallery-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+@media (min-width: 768px) {
+  .ac-photo-gallery-img { height: 280px; }
+}
+
+.ac-photo-match-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
   padding: 4px 10px;
-  background: rgba(251,191,36,0.25);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
   border: 1px solid rgba(251,191,36,0.5);
   border-radius: 100px;
   font-size: 0.78rem;
@@ -4484,199 +4482,191 @@ body {
   color: #fbbf24;
 }
 
-.accommodation-hero-triage {
-  margin-left: auto;
+.ac-photo-gallery-empty {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.ac-photo-gallery-empty-text { font-size: 3rem; }
 
-.accommodation-name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #fff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-  margin: 0 0 var(--space-xs);
-  line-height: 1.2;
-}
-
-.accommodation-location {
-  font-size: 0.85rem;
-  color: rgba(255,255,255,0.85);
-  margin: 0;
-}
-
-/* Body */
-.accommodation-body {
+/* ── Body ── */
+.ac-body {
   padding: var(--space-lg) var(--space-md);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
 }
-
 @media (min-width: 768px) {
-  .accommodation-body {
-    padding: var(--space-xl);
-  }
+  .ac-body { padding: var(--space-xl); }
 }
 
-/* Vitals row */
-.accommodation-vitals {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
-  background: var(--bg-secondary);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-md);
+/* ── Header: Name + Location ── */
+.ac-header { display: flex; flex-direction: column; gap: var(--space-xs); }
+.ac-name {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
 }
-
-.accommodation-vital {
-  display: flex;
-  align-items: center;
-  gap: var(--space-sm);
+.ac-location {
   font-size: 0.9rem;
-  color: var(--text-primary);
-}
-
-.accommodation-vital-icon {
-  width: 24px;
-  flex-shrink: 0;
-  text-align: center;
-}
-
-/* Narrative */
-.accommodation-narrative {
-  background: var(--bg-secondary);
-  border: 1px solid var(--card-border);
-  border-radius: var(--radius-md);
-  padding: var(--space-lg);
-}
-
-.accommodation-narrative p {
-  color: var(--text-primary);
-  font-size: 0.95rem;
-  line-height: 1.75;
+  color: var(--text-muted);
   margin: 0;
 }
 
-/* Sections */
-.accommodation-section {
+/* ── Vibe Tags ── */
+.ac-vibe-tags {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-sm);
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+.ac-vibe-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
 }
 
-.accommodation-section-title {
-  font-size: 0.75rem;
+/* ── Stats Line ── */
+.ac-stats-line {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: var(--space-sm) 0;
+  border-top: 1px solid var(--card-border);
+  border-bottom: 1px solid var(--card-border);
+}
+
+/* ── Swim Verdict ── */
+.ac-swim-verdict {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: rgba(14,165,233,0.08);
+  border: 1px solid rgba(14,165,233,0.2);
+  border-radius: var(--radius-md);
+}
+.ac-swim-verdict-icon { font-size: 1.2rem; flex-shrink: 0; }
+.ac-swim-verdict-text {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  font-style: italic;
+  line-height: 1.5;
+}
+
+/* ── Amenities (grouped) ── */
+.ac-amenities-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.ac-amenities-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+.ac-amenities-group-title {
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--text-muted);
-  margin: 0 0 var(--space-xs);
+  margin: 0;
 }
-
-/* Swimming & Setting */
-.accommodation-setting-row {
+.ac-amenities-row {
   display: flex;
-  align-items: flex-start;
-  gap: var(--space-sm);
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  padding: var(--space-xs) 0;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
 }
-
-.accommodation-setting-row > span:first-child {
-  flex-shrink: 0;
-  width: 24px;
-  text-align: center;
-}
-
-.accommodation-setting-desc {
-  font-style: italic;
-  color: var(--text-muted);
-}
-
-.accommodation-setting-tags {
-  color: var(--text-muted);
-  font-size: 0.85rem;
-}
-
-.accommodation-notes {
-  margin-top: var(--space-sm);
-  padding: var(--space-sm) var(--space-md);
-  background: var(--bg-elevated);
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--card-border);
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
-.accommodation-notes p { margin: 0; color: inherit; }
-
-/* Amenities grid */
-.accommodation-amenities {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-  gap: var(--space-sm);
-}
-
-.accommodation-amenity {
-  display: flex;
+.ac-amenity-chip {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: var(--space-sm) var(--space-md);
+  gap: 6px;
+  padding: 6px 12px;
   background: var(--bg-secondary);
   border: 1px solid var(--card-border);
   border-radius: var(--radius-sm);
-}
-
-.accommodation-amenity-icon {
-  font-size: 1.1rem;
-  flex-shrink: 0;
-}
-
-.accommodation-amenity-label {
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
+.ac-amenity-chip-icon { font-size: 1rem; }
 
-/* Nearby */
-.accommodation-nearby-row {
+/* ── Price Block ── */
+.ac-price-block {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  padding: var(--space-xs) 0;
-  border-bottom: 1px solid rgba(148,163,184,0.08);
-}
-
-.accommodation-nearby-row:last-child { border-bottom: none; }
-
-/* Actions */
-.accommodation-actions {
-  display: flex;
-  gap: var(--space-md);
-  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.accommodation-cta {
-  font-size: 1rem;
-  padding: var(--space-md) var(--space-xl);
+  gap: var(--space-sm);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
   border-radius: var(--radius-md);
+}
+.ac-price-main {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+.ac-price-amount { font-weight: 700; font-size: 1.1rem; }
+.ac-price-nightly { color: var(--text-muted); font-size: 0.9rem; }
+.ac-price-est { color: var(--text-muted); font-size: 0.85rem; }
+.ac-price-avail {
+  padding: 4px 12px;
+  border-radius: 100px;
+  font-size: 0.8rem;
   font-weight: 600;
 }
+.ac-price-avail-yes { background: rgba(34,197,94,0.12); color: #22c55e; }
+.ac-price-avail-no { background: rgba(239,68,68,0.12); color: #ef4444; }
 
-.accommodation-action-triage {
+/* ── Action Buttons ── */
+.ac-actions {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+.ac-action-btn {
   flex: 1;
+  min-width: 140px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+.ac-action-maps {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+}
+.ac-action-maps:hover {
+  background: var(--bg-elevated);
 }
 
+/* ── Triage ── */
+.ac-triage-row {
+  padding-top: var(--space-sm);
+}
+
+/* ── Mobile tweaks ── */
 @media (max-width: 640px) {
-  .accommodation-amenities {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .accommodation-name { font-size: 1.5rem; }
-  .accommodation-hero { min-height: 45vw; }
+  .ac-name { font-size: 1.5rem; }
+  .ac-photo-gallery-img { height: 180px; }
+  .ac-actions { flex-direction: column; }
+  .ac-action-btn { min-width: 100%; }
 }
 
 
