@@ -410,7 +410,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         {discovery && discovery.source && (
           <ProvenanceSection
             source={discovery.source}
-            discoveredAt={discovery.discoveredAt || ''}
+            discoveredAt={discovery.discoveredAt || undefined}
             sourceUrl={discovery.sourceUrl}
             sourceName={discovery.sourceName}
             theme={discovery.theme}
@@ -418,7 +418,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
             rating={discovery.rating}
             ratingCount={discovery.ratingCount}
             description={discovery.description}
-            contextKey={contextKey}
+            placeName={card.name}
           />
         )}
 

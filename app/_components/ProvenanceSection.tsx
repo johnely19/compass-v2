@@ -4,7 +4,7 @@ import type { Discovery } from '../_lib/types';
 
 interface ProvenanceProps {
   source: string;
-  discoveredAt: string;
+  discoveredAt?: string;
   sourceUrl?: string;
   sourceName?: string;
   theme?: string;
@@ -13,6 +13,7 @@ interface ProvenanceProps {
   ratingCount?: number;
   description?: string;
   contextKey?: string;
+  placeName?: string;
 }
 
 /** Map source strings to display names */
@@ -30,8 +31,8 @@ function getSourceDisplayName(source: string, sourceName?: string): string {
 
   if (sourceMap[source]) return sourceMap[source];
 
-  // Default: capitalize the source string
-  return source.replace(/^disco:/, '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+  // Default: strip known prefixes and capitalize
+  return source.replace(/^(disco:|platform:)/, '').replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
 }
 
 /** Format a date nicely */
@@ -62,8 +63,9 @@ function buildWhyText(props: ProvenanceProps): string {
 
   // Construct the explanation
   const sourceDisplay = getSourceDisplayName(source, sourceName);
-  const dateStr = formatDate(discoveredAt);
-  let text = `Discovered via ${sourceDisplay} on ${dateStr}`;
+  let text = discoveredAt
+    ? `Discovered via ${sourceDisplay} on ${formatDate(discoveredAt)}`
+    : `Discovered via ${sourceDisplay}`;
 
   if (theme) {
     text += ` — ${theme}.`;
@@ -85,12 +87,12 @@ export default function ProvenanceSection(props: ProvenanceProps) {
     rating,
     ratingCount,
     description,
-    contextKey,
+    placeName,
   } = props;
 
   const sourceDisplay = getSourceDisplayName(source, sourceName);
   const whyText = buildWhyText(props);
-  const formattedDate = formatDate(discoveredAt);
+  const formattedDate = discoveredAt ? formatDate(discoveredAt) : null;
 
   return (
     <div className="provenance-section">
@@ -99,8 +101,8 @@ export default function ProvenanceSection(props: ProvenanceProps) {
       <p className="provenance-why">{whyText}</p>
 
       <div className="provenance-meta">
-        <span className="provenance-date">Found {formattedDate}</span>
-        {verified && <span className="provenance-verified"> · ✅ Verified via Google Places</span>}
+        {formattedDate && <span className="provenance-date">Found {formattedDate}</span>}
+        {verified && <span className="provenance-verified">{formattedDate ? ' · ' : ''}✅ Verified via Google Places</span>}
         {rating && (
           <span className="provenance-rating">
             {' · ⭐ '}{rating.toFixed(1)}
@@ -126,7 +128,7 @@ export default function ProvenanceSection(props: ProvenanceProps) {
         )}
         {verified && (
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contextKey || '')}`}
+            href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(placeName || '')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="provenance-source-pill"

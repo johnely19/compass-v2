@@ -506,7 +506,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
         {(discovery?.source || data.platform) && (
           <ProvenanceSection
             source={discovery?.source || (data.platform ? `platform:${data.platform}` : 'disco:cottage-scan')}
-            discoveredAt={discovery?.discoveredAt || new Date().toISOString()}
+            discoveredAt={discovery?.discoveredAt || undefined}
             sourceUrl={discovery?.sourceUrl || data.url || data.listing_url}
             sourceName={discovery?.sourceName || data.platform}
             theme={discovery?.theme}
@@ -514,7 +514,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
             rating={discovery?.rating || data.scores?.overall}
             ratingCount={discovery?.ratingCount}
             description={discovery?.description || data.description}
-            contextKey={contextKey}
+            placeName={name}
           />
         )}
 
