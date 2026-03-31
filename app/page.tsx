@@ -90,10 +90,22 @@ export default async function HomePage() {
     ...localDisc.filter(d => !blobIds.has(d.id)),
   ];
 
+  // Filter out discoveries that are not fully built
+  // A discovery must have at minimum: a name AND (address OR description OR rating)
+  const fullyBuilt = discoveries.filter(d => {
+    if (!d.name || d.name === 'Unknown Place') return false;
+    const rec = d as unknown as Record<string, unknown>;
+    const hasAddress = !!(rec.address as string);
+    const hasDescription = !!(rec.description || rec.summary);
+    const hasRating = d.rating != null && d.rating > 0;
+    return hasAddress || hasDescription || hasRating;
+  });
+  const discoveries_final = fullyBuilt;
+
   // Enrich discoveries with resolved image URLs
   // Priority: heroImage field (already resolved) > manifest fallback > Blob place-cards/
   const BLOB_BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
-  const enrichedDiscoveries = discoveries.map(d => {
+  const enrichedDiscoveries = discoveries_final.map(d => {
     // 1. Use heroImage if present
     let heroImage: string | null = resolveImageUrl(d.heroImage);
     // 2. Fall back to manifest (local fs)
