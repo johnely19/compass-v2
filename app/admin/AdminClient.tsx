@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import WorkerCard from '../_components/WorkerCard';
+import CopyErrorReportButton from '../_components/CopyErrorReportButton';
 
 /* ---- Types ---- */
 
@@ -158,6 +159,86 @@ const AGENT_COLORS: Record<string, string> = {
 const AGENT_ROLES: Record<string, string> = { main: 'Orchestrator', devclaw: 'Development', disco: 'Discovery & Research' };
 const AGENT_ORDER: Record<string, number> = { main: 0, devclaw: 1, disco: 2 };
 
+/* ---- Error Report Builder ---- */
+
+function buildErrorReport(
+  discoActivity: DiscoActivityData | null,
+  crons: CronJob[],
+  workers: WorkerInfo[],
+  stats: AgentHealthStats | null,
+): string {
+  const now = new Date();
+  const dateStr = now.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+  const timeStr = now.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+
+  const lines: string[] = [];
+  lines.push(`🔴 Compass Error Report — ${dateStr}, ${timeStr}`);
+  lines.push('');
+
+  // Disco errors
+  const discoErrorJobs = discoActivity?.jobs.filter(j => j.consecutiveErrors > 0) ?? [];
+  if (discoActivity && (discoActivity.errorsToday > 0 || discoErrorJobs.length > 0)) {
+    lines.push('Disco Activity:');
+    for (const job of discoErrorJobs) {
+      const errPlural = job.consecutiveErrors === 1 ? 'error' : 'errors';
+      const errMsg = job.lastError ? `${job.lastError}` : 'unknown error';
+      const lastRun = job.lastRun ? formatRelativeTime(job.lastRun) : 'never';
+      lines.push(`• ${job.name}: ${errMsg} (${job.consecutiveErrors} consecutive ${errPlural})`);
+      lines.push(`  Last run: ${lastRun} | Job ID: ${job.id.slice(0, 8)}`);
+    }
+    // Fallback: show raw errorDetails if no per-job breakdown
+    if (discoErrorJobs.length === 0 && discoActivity.errorDetails.length > 0) {
+      for (const e of discoActivity.errorDetails) {
+        lines.push(`• ${e}`);
+      }
+    }
+    lines.push('');
+  }
+
+  // Cron errors
+  const cronErrors = crons.filter(j => (j.consecutiveErrors ?? 0) > 0);
+  if (cronErrors.length > 0) {
+    lines.push('Cron Health:');
+    for (const job of cronErrors) {
+      const errMsg = job.lastError || 'unknown error';
+      const lastRun = job.lastRun ? formatRelativeTime(job.lastRun) : 'never';
+      const nextRun = job.nextRun ? formatRelativeTime(job.nextRun) : '—';
+      lines.push(`• ${job.name}: ${errMsg} (${job.consecutiveErrors} consecutive)`);
+      lines.push(`  Last run: ${lastRun} | Next: ${nextRun}`);
+    }
+    lines.push('');
+  }
+
+  // System context
+  lines.push('System:');
+  if (workers.length > 0) {
+    const workerNames = workers
+      .map(w => {
+        const sub = w.sessionKey.replace(/^agent:main:subagent:/, '');
+        const parts = sub.split('-');
+        // Format: project-role-level-name → "Name level"
+        if (parts.length >= 4) {
+          const name = parts.slice(3).map(p => p.charAt(0).toUpperCase() + p.slice(1)).join(' ');
+          const level = parts[2];
+          return `${name} ${level}`;
+        }
+        return sub;
+      })
+      .join(', ');
+    lines.push(`• Active workers: ${workers.length} (${workerNames})`);
+  }
+  if (discoActivity) {
+    const lastRunStr = discoActivity.lastRunAtMs ? formatRelativeTime(discoActivity.lastRunAtMs) : 'never';
+    lines.push(`• Last successful Disco run: ${lastRunStr}`);
+    lines.push(`• Discoveries today: ${discoActivity.discoveriesToday}`);
+  }
+  if (stats) {
+    lines.push(`• Place cards: ${stats.placeCards} | Cottages: ${stats.cottages}`);
+  }
+
+  return lines.join('\n');
+}
+
 /* ---- Collapsible Section ---- */
 
 function Section({ title, emoji, count, children }: {
@@ -299,7 +380,14 @@ export default function AdminClient() {
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{fmtDuration(job.lastDuration)}</td>
                   <td style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>{job.nextRun ? formatRelativeTime(job.nextRun) : '—'}</td>
                   <td style={{ textAlign: 'center', color: (job.consecutiveErrors ?? 0) > 0 ? '#f44336' : 'var(--text-muted)' }}>
-                    {(job.consecutiveErrors ?? 0) > 0 ? job.consecutiveErrors : '—'}
+                    {(job.consecutiveErrors ?? 0) > 0 ? (
+                      <div style={{ display: 'flex', alignItems: 'center', gap: 6, justifyContent: 'center' }}>
+                        <span>{job.consecutiveErrors}</span>
+                        <CopyErrorReportButton
+                          report={buildErrorReport(discoActivity, [job], workers, stats)}
+                        />
+                      </div>
+                    ) : '—'}
                   </td>
                 </tr>
                 );
@@ -500,6 +588,15 @@ export default function AdminClient() {
                 color: '#f44336',
               }}>
                 {discoActivity.errorDetails.map((e, i) => <div key={i}>{e}</div>)}
+              </div>
+            )}
+
+            {/* Copy error report button — shown when there are active errors */}
+            {(discoActivity.errorsToday > 0 || discoActivity.jobs.some(j => j.consecutiveErrors > 0)) && (
+              <div style={{ marginTop: 'var(--space-sm)' }}>
+                <CopyErrorReportButton
+                  report={buildErrorReport(discoActivity, crons, workers, stats)}
+                />
               </div>
             )}
 
