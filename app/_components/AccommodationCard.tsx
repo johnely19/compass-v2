@@ -93,17 +93,7 @@ function buildFeatureCallouts(data: AccommodationData): FeatureCallout[] {
   }
 
   // Drive time
-  let driveTime: string | null = null;
-  if (data.driveTimeLabel) {
-    driveTime = data.driveTimeLabel;
-  } else if (data.drive_from_toronto) {
-    driveTime = data.drive_from_toronto;
-  } else if (data.driveTimes?.dianaKlaus?.minutes) {
-    const m = data.driveTimes.dianaKlaus.minutes;
-    driveTime = m >= 60
-      ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? ` ${m % 60}min` : ''}`.trim()
-      : `${m}min`;
-  }
+  const driveTime = getDriveTime(data);
   if (driveTime) {
     callouts.push({
       icon: '🚗',
@@ -150,6 +140,187 @@ function buildFeatureCallouts(data: AccommodationData): FeatureCallout[] {
   }
 
   return callouts.slice(0, 4);
+}
+
+/* ================================================================
+   Drive time helper
+   ================================================================ */
+function getDriveTime(data: AccommodationData): string | null {
+  if (data.driveTimeLabel) return data.driveTimeLabel;
+  if (data.drive_from_toronto) return data.drive_from_toronto;
+  if (data.driveTimes?.dianaKlaus?.minutes) {
+    const m = data.driveTimes.dianaKlaus.minutes;
+    return m >= 60
+      ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}min` : ''}`.trim()
+      : `${m}min`;
+  }
+  return null;
+}
+
+/* ================================================================
+   AI Guest Summary builder
+   ================================================================ */
+function buildGuestSummary(data: AccommodationData): string | null {
+  const parts: string[] = [];
+
+  // Swimming/waterfront
+  const swimVerdict = data.swimVerdict || '';
+  const swimType = data.swimType || data.swim_quality || '';
+  if (swimVerdict && !swimVerdict.toLowerCase().includes('unconfirmed')) {
+    // Extract first sentence of swim verdict
+    const firstSentence = swimVerdict.split(/[.!]/).filter(Boolean)[0]?.trim();
+    if (firstSentence) parts.push(firstSentence + '.');
+  } else if (swimType) {
+    parts.push(`${swimType} waterfront access.`);
+  }
+
+  // Quiet/privacy
+  const quietScore = data.scores?.quiet;
+  if (quietScore && quietScore >= 5) {
+    parts.push('Very private — no visible neighbours.');
+  } else if (quietScore && quietScore >= 4) {
+    parts.push('Peaceful rural setting.');
+  }
+
+  // Vibe tags
+  const vibeTags = data.vibeTags || data.setting_tags || [];
+  if (vibeTags.length > 0 && parts.length < 2) {
+    parts.push(vibeTags.slice(0, 3).join(', ') + '.');
+  }
+
+  // Key amenity highlight
+  const amenities = (data.amenities || []).map(a => a.toLowerCase());
+  if (parts.length < 2) {
+    const highlights: string[] = [];
+    if (amenities.includes('dock') || amenities.includes('dock access')) highlights.push('dock access');
+    if (amenities.includes('kayaks') || amenities.includes('kayaks/canoe')) highlights.push('kayaks included');
+    if (amenities.includes('firepit') || amenities.includes('fire pit')) highlights.push('firepit');
+    if (amenities.includes('hot tub') || amenities.includes('hottub')) highlights.push('hot tub');
+    if (highlights.length > 0) {
+      parts.push(`Includes ${highlights.join(', ')}.`);
+    }
+  }
+
+  if (parts.length === 0) return null;
+  return parts.slice(0, 2).join(' ');
+}
+
+/* ================================================================
+   Lake-specific fields builder
+   ================================================================ */
+interface LakeField {
+  icon: string;
+  label: string;
+  value: string;
+}
+
+function buildLakeFields(data: AccommodationData): LakeField[] {
+  const fields: LakeField[] = [];
+  const amenities = (data.amenities || []).map(a => a.toLowerCase());
+
+  // Dock type
+  if (amenities.includes('dock') || amenities.includes('dock access')) {
+    fields.push({
+      icon: '🚤',
+      label: 'Dock',
+      value: amenities.includes('boat launch') ? 'Deep water dock with launch' : 'Dock access',
+    });
+  }
+
+  // Water equipment
+  const waterGear: string[] = [];
+  if (amenities.includes('kayaks') || amenities.includes('kayaks/canoe')) waterGear.push('Kayaks');
+  if (amenities.includes('paddleboard')) waterGear.push('Paddleboard');
+  if (amenities.includes('canoe')) waterGear.push('Canoe');
+  if (waterGear.length > 0) {
+    fields.push({
+      icon: '🛶',
+      label: 'Water equipment',
+      value: waterGear.join(', ') + ' included',
+    });
+  }
+
+  // Beach type
+  const swimType = (data.swimType || data.swim_quality || '').toLowerCase();
+  if (swimType) {
+    let beachDesc = swimType;
+    if (swimType.includes('sandy')) beachDesc = 'Sandy beach';
+    else if (swimType.includes('rocky')) beachDesc = 'Rocky shoreline';
+    else if (swimType.includes('dock')) beachDesc = 'Dock entry (deep water)';
+    fields.push({
+      icon: '🏊',
+      label: 'Beach type',
+      value: beachDesc.charAt(0).toUpperCase() + beachDesc.slice(1),
+    });
+  }
+
+  // Water clarity / swim verdict summary
+  const swimVerdict = data.swimVerdict || '';
+  if (swimVerdict && !swimVerdict.toLowerCase().includes('unconfirmed')) {
+    const clarity = swimVerdict.toLowerCase();
+    let clarityLabel = 'Confirmed swimmable';
+    if (clarity.includes('crystal clear') || clarity.includes('clean')) clarityLabel = 'Crystal clear — confirmed';
+    else if (clarity.includes('sandy')) clarityLabel = 'Sandy bottom — confirmed';
+    else if (clarity.includes('weeds')) clarityLabel = 'Some weeds noted';
+    fields.push({
+      icon: '🌊',
+      label: 'Water clarity',
+      value: clarityLabel,
+    });
+  }
+
+  // Lake / water body name
+  if (data.water_body) {
+    fields.push({
+      icon: '📍',
+      label: 'Lake',
+      value: data.water_body,
+    });
+  }
+
+  return fields;
+}
+
+/* ================================================================
+   Sleeping arrangements from notes
+   ================================================================ */
+interface BedroomInfo {
+  name: string;
+  beds: string;
+}
+
+function parseBedrooms(data: AccommodationData): BedroomInfo[] {
+  const notes = data.notes || '';
+  const bedrooms: BedroomInfo[] = [];
+
+  // Try to extract bedroom info from notes (patterns like "BR1", "master", "bedroom")
+  // Common patterns: "Queen bed (BR1)", "master (Q)", "2 singles", etc.
+  const brPattern = /(?:(?:BR\d|Bedroom\s*\d|Master|Room\s*\d)[^.;,]*?(?:queen|king|double|single|twin|bunk)[^.;,]*)|(?:(?:queen|king|double|single|twin|bunk)[^.;,]*?(?:BR\d|bedroom|master|room))/gi;
+  const matches = notes.match(brPattern);
+
+  if (matches && matches.length > 0) {
+    matches.forEach((m, i) => {
+      const clean = m.trim();
+      const name = clean.match(/master|BR\d|Bedroom\s*\d|Room\s*\d/i)?.[0] || `Bedroom ${i + 1}`;
+      const bedType = clean.match(/(?:\d+\s*)?(?:queen|king|double|single|twin|bunk)(?:\s*bed)?s?/gi)?.join(', ') || clean;
+      bedrooms.push({
+        name: name.replace(/BR(\d)/, 'Bedroom $1'),
+        beds: bedType.charAt(0).toUpperCase() + bedType.slice(1),
+      });
+    });
+  }
+
+  // Fallback: if no parsed bedrooms but we have a bed count, show generic
+  if (bedrooms.length === 0 && data.beds) {
+    for (let i = 1; i <= Math.min(data.beds, 4); i++) {
+      bedrooms.push({
+        name: `Bedroom ${i}`,
+        beds: i === 1 ? '1 bed' : '1 bed',
+      });
+    }
+  }
+
+  return bedrooms;
 }
 
 /* ================================================================
@@ -254,7 +425,6 @@ function AccommodationFeature({ icon, title, desc }: FeatureCallout) {
 export default function AccommodationCard({ data, placeId, userId, contextKey }: AccommodationCardProps) {
   const name = data.name || 'Cottage';
   const region = data.region || data.address || data.city || '';
-  const description = data.description || '';
 
   // ── Resolve all photo URLs ──
   const rawImages = data.images || [];
@@ -262,7 +432,6 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
     .map(img => resolveImageUrlClient(typeof img === 'string' ? img : img.path))
     .filter(Boolean) as string[];
   const heroUrl = data.heroImage ? resolveImageUrlClient(data.heroImage) : allPhotoUrls[0] || null;
-  // Ensure hero is first, then remaining unique photos
   const galleryPhotos: string[] = [];
   if (heroUrl) galleryPhotos.push(heroUrl);
   for (const url of allPhotoUrls) {
@@ -276,11 +445,18 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   const pricePerNight = data.pricePerNight || data.price_per_night || (pricePerWeek ? Math.round(pricePerWeek / 7) : null);
   const priceEstimated = data.priceEstimated;
   const beds = data.beds || data.bedrooms;
+  const baths = data.baths;
   const sleeps = data.sleeps || data.max_guests || data.guests;
+  const threeWeekTotal = pricePerWeek ? pricePerWeek * 3 : null;
 
   // ── Platform branding ──
   const platformInfo = getPlatformInfo(data.platform);
   const listingUrl = data.listing_url || data.url;
+
+  // ── Pets OK? ──
+  const amenities = data.amenities || [];
+  const amenitiesLower = amenities.map(a => a.toLowerCase());
+  const petsOk = amenitiesLower.includes('pet friendly') || amenitiesLower.includes('pets');
 
   // ── Google Maps URLs ──
   const mapsUrl = buildGoogleMapsUrl(data, placeId);
@@ -296,8 +472,18 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
   // ── Feature callouts ──
   const features = buildFeatureCallouts(data);
 
-  // ── Amenities ──
-  const amenities = sortAmenities(data.amenities || []);
+  // ── AI guest summary ──
+  const guestSummary = buildGuestSummary(data);
+
+  // ── Lake-specific fields ──
+  const lakeFields = buildLakeFields(data);
+
+  // ── Sleeping arrangements ──
+  const bedrooms = parseBedrooms(data);
+
+  // ── Sorted amenities (excluding lake-specific ones already shown) ──
+  const lakeAmenityKeys = new Set(['dock', 'dock access', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe', 'private beach', 'boat launch']);
+  const nonLakeAmenities = sortAmenities(amenities.filter(a => !lakeAmenityKeys.has(a.toLowerCase())));
 
   // ── Nearby ──
   const nearestGrocery = data.nearest_grocery || data.driveTimes?.groceries?.name;
@@ -309,10 +495,23 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
     ? `https://earth.google.com/web/search/${encodeURIComponent([name, region].filter(Boolean).join(' '))}`
     : null;
 
-  // ── Stats items for price card ──
-  const statsItems: string[] = [];
-  if (beds) statsItems.push(`${beds} bed${beds !== 1 ? 's' : ''}`);
-  if (sleeps) statsItems.push(`sleeps ${sleeps}`);
+  // ── Vacasa-style title ──
+  const waterBody = data.water_body;
+  let titleLine: string;
+  if (waterBody) {
+    titleLine = `Waterfront Cottage near ${region}`;
+  } else {
+    titleLine = `Cottage in ${region}`;
+  }
+  // Use name if different from generic description
+  const showName = name !== data.description && name !== 'Cottage';
+
+  // ── Quick specs for icon row ──
+  const quickSpecs: Array<{ icon: string; text: string }> = [];
+  if (sleeps) quickSpecs.push({ icon: '🧑‍🤝‍🧑', text: `Sleeps ${sleeps}` });
+  if (beds) quickSpecs.push({ icon: '🛏', text: `${beds} bed${beds !== 1 ? 's' : ''}` });
+  if (baths) quickSpecs.push({ icon: '🚿', text: `${baths} bath${baths !== 1 ? 's' : ''}` });
+  if (petsOk) quickSpecs.push({ icon: '🐾', text: 'Pets OK' });
 
   return (
     <div className="hc-card">
@@ -344,8 +543,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
                     loading="lazy"
                     className="hc-photo-img"
                   />
-                  {/* "View all" button overlay on last small photo */}
-                  {i === 3 && galleryPhotos.length > 5 && (
+                  {i === Math.min(galleryPhotos.length - 2, 3) && galleryPhotos.length > 5 && (
                     <a
                       href={mapsPhotosUrl}
                       target="_blank"
@@ -376,7 +574,6 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
             ))}
           </div>
 
-          {/* Match score badge */}
           {matchScore != null && (
             <span className="hc-photo-badge">⭐ {matchScore}/5</span>
           )}
@@ -395,21 +592,60 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
         {/* ── LEFT COLUMN ── */}
         <div className="hc-main">
 
-          {/* Name + Region + Platform */}
+          {/* Vacasa-style title: "Cottage in Region" */}
           <div className="hc-header">
-            <h1 className="hc-name">{name}</h1>
-            <p className="hc-subline">
-              📍 {region}
-              {data.platform && (
-                <>
-                  {' · '}
-                  <span style={{ color: platformInfo.colour, fontWeight: 600 }}>
-                    {platformInfo.label}
-                  </span>
-                </>
-              )}
-            </p>
+            <p className="hc-type-line">{titleLine}</p>
+            {showName && <h1 className="hc-name">{name}</h1>}
+            {data.platform && (
+              <p className="hc-subline">
+                Listed on{' '}
+                <span style={{ color: platformInfo.colour, fontWeight: 600 }}>
+                  {platformInfo.label}
+                </span>
+              </p>
+            )}
           </div>
+
+          {/* Quick specs icon row */}
+          {quickSpecs.length > 0 && (
+            <div className="hc-quick-specs">
+              {quickSpecs.map((spec, i) => (
+                <span key={i} className="hc-quick-spec">
+                  <span className="hc-quick-spec-icon">{spec.icon}</span>
+                  {spec.text}
+                </span>
+              ))}
+            </div>
+          )}
+
+          {/* AI Guest Summary */}
+          {guestSummary && (
+            <div className="hc-guest-summary">
+              {matchScore != null && (
+                <span className="hc-guest-summary-score">⭐ {matchScore}</span>
+              )}
+              <span className="hc-guest-summary-label">What we know</span>
+              <p className="hc-guest-summary-text">&ldquo;{guestSummary}&rdquo;</p>
+            </div>
+          )}
+
+          {/* Lake-specific fields — our competitive advantage */}
+          {lakeFields.length > 0 && (
+            <div className="hc-lake-section">
+              <h3 className="hc-section-title">Waterfront Details</h3>
+              <div className="hc-lake-grid">
+                {lakeFields.map((field, i) => (
+                  <div key={i} className="hc-lake-field">
+                    <span className="hc-lake-field-icon">{field.icon}</span>
+                    <div className="hc-lake-field-text">
+                      <span className="hc-lake-field-label">{field.label}</span>
+                      <span className="hc-lake-field-value">{field.value}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Feature Callouts */}
           {features.length > 0 && (
@@ -420,26 +656,35 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
             </div>
           )}
 
-          {/* Description */}
-          {description && description !== name && (
-            <div className="hc-description">
-              <p>{description}</p>
+          {/* Sleeping Arrangements */}
+          {bedrooms.length > 0 && (
+            <div className="hc-bedrooms-section">
+              <h3 className="hc-section-title">Sleeping Arrangements</h3>
+              <div className="hc-bedrooms-scroll">
+                {bedrooms.map((br, i) => (
+                  <div key={i} className="hc-bedroom-card">
+                    <span className="hc-bedroom-icon">🛏</span>
+                    <span className="hc-bedroom-name">{br.name}</span>
+                    <span className="hc-bedroom-beds">{br.beds}</span>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
 
-          {/* Notes (detailed property info) */}
+          {/* Notes (property details) */}
           {data.notes && (
             <div className="hc-notes">
               <p>{data.notes}</p>
             </div>
           )}
 
-          {/* Amenities grid (2 columns) */}
-          {amenities.length > 0 && (
+          {/* Amenities grid (non-lake amenities — lake ones shown in Waterfront section) */}
+          {nonLakeAmenities.length > 0 && (
             <div className="hc-amenities-section">
               <h3 className="hc-section-title">Amenities</h3>
               <div className="hc-amenities-grid">
-                {amenities.map(a => {
+                {nonLakeAmenities.map(a => {
                   const { icon, label } = getAmenityDisplay(a);
                   return (
                     <div key={a} className="hc-amenity">
@@ -511,6 +756,7 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
         {/* ── RIGHT COLUMN: Sticky Price Card (desktop) ── */}
         <div className="hc-sidebar">
           <div className="hc-price-card">
+            {/* Price headline */}
             {pricePerWeek ? (
               <div className="hc-price-headline">
                 {priceEstimated && <span className="hc-price-est">~est. </span>}
@@ -527,10 +773,20 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               </div>
             )}
 
-            {/* Stats */}
-            {statsItems.length > 0 && (
-              <div className="hc-price-stats">{statsItems.join(' · ')}</div>
+            {/* 3-week total estimate */}
+            {threeWeekTotal && (
+              <div className="hc-price-total">
+                3 weeks: ~CA${threeWeekTotal.toLocaleString()}
+                <span className="hc-price-total-note"> · See listing for fees</span>
+              </div>
             )}
+
+            {/* Stats */}
+            <div className="hc-price-stats">
+              {beds && <span>{beds} bed{beds !== 1 ? 's' : ''}</span>}
+              {beds && sleeps && <span> · </span>}
+              {sleeps && <span>{sleeps} guests</span>}
+            </div>
 
             {/* July availability */}
             {data.july_available !== undefined && (
@@ -552,6 +808,13 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
               </a>
             )}
 
+            {/* Trust badges */}
+            <div className="hc-trust-badges">
+              {data.platform && <span className="hc-trust-badge">✓ Verified listing</span>}
+              {listingUrl && !listingUrl.includes('airbnb') && <span className="hc-trust-badge">✓ Direct booking</span>}
+              {listingUrl && <span className="hc-trust-badge">📞 Contact owner</span>}
+            </div>
+
             {/* CTA: Google Maps */}
             <a
               href={mapsUrl}
@@ -571,6 +834,18 @@ export default function AccommodationCard({ data, placeId, userId, contextKey }:
                 className="hc-cta-tertiary"
               >
                 🌍 Google Earth 3D →
+              </a>
+            )}
+
+            {/* Aerial video link */}
+            {data.aerialVideoUrl && (
+              <a
+                href={data.aerialVideoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hc-cta-tertiary"
+              >
+                🛸 Aerial View →
               </a>
             )}
           </div>

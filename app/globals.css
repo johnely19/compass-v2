@@ -4571,10 +4571,178 @@ body {
   line-height: 1.2;
 }
 @media (min-width: 769px) { .hc-name { font-size: 2.2rem; } }
-.hc-subline {
-  font-size: 0.95rem;
+.hc-type-line {
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
   margin: 0;
+}
+.hc-subline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ── Quick Specs Icon Row (Vacasa-style) ── */
+.hc-quick-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  padding: var(--space-sm) 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+.hc-quick-spec {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  white-space: nowrap;
+}
+.hc-quick-spec:not(:last-child)::after {
+  content: '·';
+  margin-left: var(--space-sm);
+  color: var(--text-muted);
+}
+.hc-quick-spec-icon { font-size: 1rem; }
+
+/* ── AI Guest Summary (Vacasa/Airbnb-style) ── */
+.hc-guest-summary {
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  position: relative;
+}
+.hc-guest-summary-score {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-right: var(--space-xs);
+}
+.hc-guest-summary-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.hc-guest-summary-text {
+  margin: var(--space-xs) 0 0;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* ── Lake-Specific Fields (competitive advantage) ── */
+.hc-lake-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.hc-lake-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+@media (max-width: 480px) {
+  .hc-lake-grid { grid-template-columns: 1fr; }
+}
+.hc-lake-field {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  padding: var(--space-sm);
+  background: rgba(14,165,233,0.04);
+  border: 1px solid rgba(14,165,233,0.12);
+  border-radius: var(--radius-sm);
+}
+.hc-lake-field-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+.hc-lake-field-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.hc-lake-field-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+.hc-lake-field-value {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ── Sleeping Arrangements (Vacasa/Airbnb-style) ── */
+.hc-bedrooms-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+.hc-bedrooms-scroll {
+  display: flex;
+  gap: var(--space-sm);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: var(--space-xs);
+}
+.hc-bedrooms-scroll::-webkit-scrollbar { display: none; }
+.hc-bedroom-card {
+  flex: 0 0 auto;
+  min-width: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+.hc-bedroom-icon { font-size: 1.4rem; }
+.hc-bedroom-name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.hc-bedroom-beds {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Trust Badges (Vacasa-style) ── */
+.hc-trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-sm) 0;
+}
+.hc-trust-badge {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ── 3-week price total ── */
+.hc-price-total {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: var(--space-xs) 0;
+}
+.hc-price-total-note {
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
 
 /* ── Feature Callouts ── */
