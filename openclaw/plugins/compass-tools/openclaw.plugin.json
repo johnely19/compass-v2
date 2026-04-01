@@ -1,0 +1,19 @@
+{
+  "id": "compass-tools",
+  "name": "Compass Concierge Tools",
+  "description": "Provides Compass-specific tools for the Concierge agent: add discoveries, save places, update trips, and create contexts via the Compass internal API.",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "compassApiUrl": {
+        "type": "string",
+        "description": "Base URL of the Compass app (e.g. https://compass-v2-lake.vercel.app)"
+      },
+      "compassApiKey": {
+        "type": "string",
+        "description": "Internal API key for authenticating with Compass endpoints"
+      }
+    },
+    "additionalProperties": false
+  }
+}
