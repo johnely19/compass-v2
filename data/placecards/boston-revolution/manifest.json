@@ -1,0 +1,41 @@
+{
+  "place_id": "boston-revolution",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqHSsOsoLTU9pfMZFNHW5V8ng4LF267fDrYXMVd-UEVB22AXaPfiSSTjwkUc0k3POil7MR6y5iRC40ZAJvCuq8TgOxD8InleRoc=s4800-w1024",
+      "category": "exterior",
+      "order": 1,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-2",
+      "path": "https://lh3.googleusercontent.com/place-photos/AL8-SNETYw12UmGhHIF5r_5NFwi5_XnHzwpnhyQvMeZgg_LOOMWy7CPWwzIpltwwDjdMqsCxAxx2hRrhwZ0wWDRMeb7B3DKlBZFcQCkvguJYxGKRyb9KrHbIhdJbBMWt_KG734SwgalCAONOISFi0w=s4800-w1200",
+      "category": "general",
+      "order": 2,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-3",
+      "path": "https://lh3.googleusercontent.com/place-photos/AL8-SNHYWdp0W6x-SjCbZbEaCuBYVrzeizrLfjQGcXJpVVSLsavIQo98gNoz9ELMCNxRGkZkhrTrOVXAZw2hJMpG2l_HM414wws_7U04zjtRJA6DD1cMqKzZsSB1uOY-EeW4ZrH-HzpOag6TWkIZfg=s4800-w1200",
+      "category": "general",
+      "order": 3,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-4",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqEXRM0kmysGLeehxd3UcddU4m4sNHqoCAc3D8_Fhbte04pq7I0MJ-R1lRJ6ZLNtfVb0OW6gKWMl1tRWlMuph81WudVTO3rNadI=s4800-w600",
+      "category": "general",
+      "order": 4,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-5",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqFxdYBeZ9vqMaAOT2sK876WDt0wJ8h19PXhy-kZAZmPN__XFKDU1N_Egq4lQMPWj3wF78Nr_n44utBvRen8xZi6VtUmL6p7LAo=s4800-w600",
+      "category": "general",
+      "order": 5,
+      "source": "google-places"
+    }
+  ],
+  "_enriched": "2026-04-01T15:51:54.238Z"
+}

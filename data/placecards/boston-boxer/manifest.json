@@ -1,0 +1,41 @@
+{
+  "place_id": "boston-boxer",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqFzsn-4lyb2Pj-eSadJY1B0cspRmOwnKSsSY6iHV3S5pxQG1fXvZMoxT9gYgY8fBXFpZO_XCXPQi1m21NOWMZ4x9dyUOkaP2c8=s4800-w1200",
+      "category": "exterior",
+      "order": 1,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-2",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqHWlswy1CZumYwapSwTFhiOJE6A8TxGf9vfRfSQPCw8TJi8zi8xpPkHHlvCc-MqsMmfqY6aOBoD7kF0JB3jl-nQwlP--gMOijs=s4800-w1200",
+      "category": "general",
+      "order": 2,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-3",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqFQb_n_DuC5COfibt27F3QClKhRc2hXXPtN4aIMdj9RIjY3VuEJjzVn-4fTitSUHOCcbIEg9dLegBz-WKelErrJkQn_d4nGSCU=s4800-w1200",
+      "category": "general",
+      "order": 3,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-4",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqEwUEIFxE2wRLRlh6fBrrfwPkZbN7GR1OnBsyeBBmfT9TOYmL-Vcnh0JnYFPUcFgJh6WKY5XxCVsk2N666TwEagFTDbAmRnqkc=s4800-w1200",
+      "category": "general",
+      "order": 4,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-5",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqHnyX7e2PLmOffXyNVagKNw_PJ1NCBdqVSVSPkHH_ez8OzYN29Mao1besgTntcgb_driFr44ZHjGkT3SRoWTbxaAeL5Z1eIy04=s4800-w1200",
+      "category": "general",
+      "order": 5,
+      "source": "google-places"
+    }
+  ],
+  "_enriched": "2026-04-01T15:51:47.387Z"
+}
