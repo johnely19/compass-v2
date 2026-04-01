@@ -6,7 +6,7 @@
     "name": "Toronto Dominion Centre",
     "city": "Toronto",
     "address": "Financial District",
-    "type": "grocery",
+    "type": "architecture",
     "hours": [
       "Monday: Open 24 hours",
       "Tuesday: Open 24 hours",
@@ -28,5 +28,5 @@
     "summary": "Mies van der Rohe's black glass modernist complex - the first wave of skyscrapers that define downtown, still pristine",
     "blocks": []
   },
-  "type": "grocery"
+  "type": "architecture"
 }

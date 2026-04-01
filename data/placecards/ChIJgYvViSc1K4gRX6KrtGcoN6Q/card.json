@@ -7,33 +7,33 @@
     "name": "Chez Wa",
     "city": "Toronto",
     "address": "617 College St, Toronto, ON M6G 1B5, Canada",
-    "type": "accommodation",
+    "type": "restaurant",
     "rating": 5,
     "user_rating_count": 2,
     "location": "617 College St, Toronto, ON M6G 1B5, Canada"
   },
   "narrative": {
-    "summary": "\ud83d\udccd Chez Wa\n617 College St, Toronto, ON M6G 1B5, Canada",
+    "summary": "📍 Chez Wa\n617 College St, Toronto, ON M6G 1B5, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Chez Wa",
-        "body": "\ud83d\udccd Chez Wa\n617 College St, Toronto, ON M6G 1B5, Canada"
+        "body": "📍 Chez Wa\n617 College St, Toronto, ON M6G 1B5, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNew permanent wine-bar concept in Little Italy; intimate, date-focused atmosphere with current operational listing and hours."
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNew permanent wine-bar concept in Little Italy; intimate, date-focused atmosphere with current operational listing and hours."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: n/a\n\nHours:\nMonday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nTuesday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nWednesday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nThursday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nFriday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nSaturday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM\nSunday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: n/a\nWebsite: n/a\n\nHours:\nMonday: 11:00 AM – 11:00 PM\nTuesday: 11:00 AM – 11:00 PM\nWednesday: 11:00 AM – 11:00 PM\nThursday: 11:00 AM – 11:00 PM\nFriday: 11:00 AM – 11:00 PM\nSaturday: 11:00 AM – 11:00 PM\nSunday: 11:00 AM – 11:00 PM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 617 College St, Toronto, ON M6G 1B5, Canada\n\n\u2022 walking: 1 hour 15 mins \u2022 5.5 km\n\u2022 transit: 41 mins \u2022 7.2 km\n\u2022 driving: 19 mins \u2022 5.8 km (traffic: 14 mins)\n\u2022 bicycling: 20 mins \u2022 5.8 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (19 mins)"
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 617 College St, Toronto, ON M6G 1B5, Canada\n\n• walking: 1 hour 15 mins • 5.5 km\n• transit: 41 mins • 7.2 km\n• driving: 19 mins • 5.8 km (traffic: 14 mins)\n• bicycling: 20 mins • 5.8 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (19 mins)"
       }
     ]
   },
@@ -90,5 +90,5 @@
       }
     ]
   },
-  "type": "accommodation"
+  "type": "restaurant"
 }

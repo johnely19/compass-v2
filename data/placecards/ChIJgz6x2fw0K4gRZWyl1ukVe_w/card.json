@@ -7,7 +7,7 @@
     "name": "Le Swan",
     "city": "Toronto",
     "address": "892 Queen St W, Toronto, ON M6J 1G3, Canada",
-    "type": "accommodation",
+    "type": "restaurant",
     "phone": "(416) 536-4440",
     "website": "http://www.leswan.ca/",
     "rating": 4.6,
@@ -15,27 +15,27 @@
     "location": "892 Queen St W, Toronto, ON M6J 1G3, Canada"
   },
   "narrative": {
-    "summary": "\ud83d\udccd Le Swan\n892 Queen St W, Toronto, ON M6J 1G3, Canada",
+    "summary": "📍 Le Swan\n892 Queen St W, Toronto, ON M6J 1G3, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Le Swan",
-        "body": "\ud83d\udccd Le Swan\n892 Queen St W, Toronto, ON M6J 1G3, Canada"
+        "body": "📍 Le Swan\n892 Queen St W, Toronto, ON M6J 1G3, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nFrench-leaning, dimly lit Ossington bistro with strong date-night fit and established operations."
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nFrench-leaning, dimly lit Ossington bistro with strong date-night fit and established operations."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (966 reviews)\nPrice level: n/a\nPhone: (416) 536-4440\nWebsite: http://www.leswan.ca/\n\nHours:\nMonday: 5:00\u2009\u2013\u200911:00\u202fPM\nTuesday: 5:00\u2009\u2013\u200911:00\u202fPM\nWednesday: 5:00\u2009\u2013\u200911:00\u202fPM\nThursday: 5:00\u2009\u2013\u200911:00\u202fPM\nFriday: 5:00\u2009\u2013\u200911:00\u202fPM\nSaturday: 5:00\u2009\u2013\u200911:00\u202fPM\nSunday: 5:00\u2009\u2013\u200911:00\u202fPM"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (966 reviews)\nPrice level: n/a\nPhone: (416) 536-4440\nWebsite: http://www.leswan.ca/\n\nHours:\nMonday: 5:00 – 11:00 PM\nTuesday: 5:00 – 11:00 PM\nWednesday: 5:00 – 11:00 PM\nThursday: 5:00 – 11:00 PM\nFriday: 5:00 – 11:00 PM\nSaturday: 5:00 – 11:00 PM\nSunday: 5:00 – 11:00 PM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 892 Queen St W, Toronto, ON M6J 1G3, Canada\n\n\u2022 walking: 1 hour 32 mins \u2022 6.8 km\n\u2022 transit: 41 mins \u2022 7.6 km\n\u2022 driving: 24 mins \u2022 7.1 km (traffic: 18 mins)\n\u2022 bicycling: 24 mins \u2022 7.2 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (24 mins)"
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 892 Queen St W, Toronto, ON M6J 1G3, Canada\n\n• walking: 1 hour 32 mins • 6.8 km\n• transit: 41 mins • 7.6 km\n• driving: 24 mins • 7.1 km (traffic: 18 mins)\n• bicycling: 24 mins • 7.2 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (24 mins)"
       }
     ]
   },
@@ -92,5 +92,5 @@
       }
     ]
   },
-  "type": "accommodation"
+  "type": "restaurant"
 }

@@ -6,15 +6,15 @@
     "name": "Toronto City Hall",
     "city": "Toronto",
     "address": "Downtown (Queen & Bay)",
-    "type": "grocery",
+    "type": "architecture",
     "hours": [
-      "Monday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Tuesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Wednesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Thursday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Friday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
-      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
-      "Sunday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
+      "Monday: 8:00 AM – 8:00 PM",
+      "Tuesday: 8:00 AM – 8:00 PM",
+      "Wednesday: 8:00 AM – 8:00 PM",
+      "Thursday: 8:00 AM – 8:00 PM",
+      "Friday: 8:00 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 6:00 PM",
+      "Sunday: 10:00 AM – 6:00 PM"
     ],
     "rating": 4.4,
     "review_count": 1123,
@@ -25,8 +25,8 @@
     "text": "Discovered via re-thinkingthefuture.com"
   },
   "narrative": {
-    "summary": "Viljo Revell's 1965 modernist icon\u2014twin curving towers cradle flying-saucer council chamber. Nathan Phillips Square is Toronto's civic soul.",
+    "summary": "Viljo Revell's 1965 modernist icon—twin curving towers cradle flying-saucer council chamber. Nathan Phillips Square is Toronto's civic soul.",
     "blocks": []
   },
-  "type": "grocery"
+  "type": "architecture"
 }

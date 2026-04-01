@@ -7,7 +7,7 @@
     "name": "Farm Boy (Dupont)",
     "city": "Toronto",
     "address": "744 Dupont St, Toronto, ON M6G 1Z6, Canada",
-    "type": "accommodation",
+    "type": "grocery",
     "phone": "(416) 533-9856",
     "website": "https://www.farmboy.ca/stores/dupont/",
     "rating": 4.2,
@@ -15,27 +15,27 @@
     "location": "744 Dupont St, Toronto, ON M6G 1Z6, Canada"
   },
   "narrative": {
-    "summary": "\ud83d\udccd Farm Boy (Dupont)\n744 Dupont St, Toronto, ON M6G 1Z6, Canada",
+    "summary": "📍 Farm Boy (Dupont)\n744 Dupont St, Toronto, ON M6G 1Z6, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Farm Boy (dupont",
-        "body": "\ud83d\udccd Farm Boy (Dupont)\n744 Dupont St, Toronto, ON M6G 1Z6, Canada"
+        "body": "📍 Farm Boy (Dupont)\n744 Dupont St, Toronto, ON M6G 1Z6, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nConsistently strong produce quality and prepared-food program; practical premium weekly shop candidate."
+        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nConsistently strong produce quality and prepared-food program; practical premium weekly shop candidate."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.2 (379 reviews)\nPrice level: n/a\nPhone: (416) 533-9856\nWebsite: https://www.farmboy.ca/stores/dupont/\n\nHours:\nMonday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM\nTuesday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM\nWednesday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM\nThursday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM\nFriday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM\nSaturday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM\nSunday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM"
+        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.2 (379 reviews)\nPrice level: n/a\nPhone: (416) 533-9856\nWebsite: https://www.farmboy.ca/stores/dupont/\n\nHours:\nMonday: 8:00 AM – 9:00 PM\nTuesday: 8:00 AM – 9:00 PM\nWednesday: 8:00 AM – 9:00 PM\nThursday: 8:00 AM – 9:00 PM\nFriday: 8:00 AM – 9:00 PM\nSaturday: 8:00 AM – 8:00 PM\nSunday: 8:00 AM – 8:00 PM"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 744 Dupont St, Toronto, ON M6G 1Z6, Canada\n\n\u2022 walking: 52 mins \u2022 3.8 km\n\u2022 transit: 28 mins \u2022 4.2 km\n\u2022 driving: 12 mins \u2022 4.0 km (traffic: 8 mins)\n\u2022 bicycling: 16 mins \u2022 4.3 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (12 mins)"
+        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 744 Dupont St, Toronto, ON M6G 1Z6, Canada\n\n• walking: 52 mins • 3.8 km\n• transit: 28 mins • 4.2 km\n• driving: 12 mins • 4.0 km (traffic: 8 mins)\n• bicycling: 16 mins • 4.3 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (12 mins)"
       }
     ]
   },
@@ -92,5 +92,5 @@
       }
     ]
   },
-  "type": "accommodation"
+  "type": "grocery"
 }

@@ -6,15 +6,15 @@
     "name": "Revue Cinema",
     "city": "Toronto",
     "address": "Roncesvalles",
-    "type": "experience"
+    "type": "theatre"
   },
   "discovery": {
     "text": "Discovered via https://revuecinema.ca/",
     "url": "https://revuecinema.ca/"
   },
   "narrative": {
-    "summary": "Heritage 1912 single-screen, community-run nonprofit since 2006. Best rep programming in Toronto\u2014classics, cult, singalongs, burlesque nights. The soul of Toronto indie cinema.",
+    "summary": "Heritage 1912 single-screen, community-run nonprofit since 2006. Best rep programming in Toronto—classics, cult, singalongs, burlesque nights. The soul of Toronto indie cinema.",
     "blocks": []
   },
-  "type": "experience"
+  "type": "theatre"
 }
