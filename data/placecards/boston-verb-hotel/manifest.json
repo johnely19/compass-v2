@@ -1,0 +1,41 @@
+{
+  "place_id": "boston-verb-hotel",
+  "images": [
+    {
+      "id": "photo-1",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqEEgmDzWzo-p7W--3KFdGFSzpKdYsjNVMFmSW01U-g2qvusO7g9k3SFOHjmeDMRqQU-4Sl4Fv9EspgQC-xzXo9ktdV0__LyqE0=s4800-w1200",
+      "category": "exterior",
+      "order": 1,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-2",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqEv9Ol_pD5LaQ2wmNNz4uKJkY8U2SYb-AQry2NLSlBsxy1uLYz4run0rlEXTOeOH5CIP-YpqBuW2UJhyEdezU6jSwClcC2mdAo=s4800-w1200",
+      "category": "general",
+      "order": 2,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-3",
+      "path": "https://lh3.googleusercontent.com/place-photos/AL8-SNFQ8lLv-aQBJtv2IFUfIPce-JkU8KBLZvaxpawJyfJY3jPVcvxZGDO53t4zaqC0OgCvlRB_25zAeKusqWnbYZhGyH9cS971CDGdruZxrp8zWnPzExC0qGF_D8RxIe9WApl2Yl8MWpolZWJE=s4800-w1200",
+      "category": "general",
+      "order": 3,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-4",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqGiU_xGnJiLyXxgBIhoCtLMYcPBl-hyuY8pzOH_FFcg0-qtIkCK9DTHd6NkbKtwxZsbJ2t1PU9gPYwtHsw6LTfALYJy1FEtMng=s4800-w1200",
+      "category": "general",
+      "order": 4,
+      "source": "google-places"
+    },
+    {
+      "id": "photo-5",
+      "path": "https://lh3.googleusercontent.com/places/ANXAkqEGV7o-NNbvGJA4rxU3ca18PlyRe74wa9FW-5JEIKH7g07A5M5koHkLH-MrFHUgb9A4DaiXPMucxqKiHbqloAMWYrlZ-wGCjf8=s4800-w579",
+      "category": "general",
+      "order": 5,
+      "source": "google-places"
+    }
+  ],
+  "_enriched": "2026-04-01T15:51:55.902Z"
+}

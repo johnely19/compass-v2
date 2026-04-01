@@ -41,7 +41,6 @@ const AMENITY_ICONS: Record<string, { icon: string; label: string }> = {
   baby: { icon: '👶', label: 'Baby Gear' },
 };
 
-// Desired display order
 const AMENITY_PRIORITY = [
   'dock', 'dock access', 'private beach', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe',
   'wifi', 'kitchen', 'full kitchen', 'washer', 'dryer', 'washer/dryer',
@@ -65,7 +64,7 @@ function getAmenityDisplay(key: string) {
 function formatPrice(perWeek?: number | null, perNight?: number | null): string | null {
   if (!perWeek && !perNight) return null;
   const parts = [];
-  if (perWeek) parts.push(`$${perWeek.toLocaleString()}/wk`);
+  if (perWeek) parts.push(`$${perWeek.toLocaleString()}/week`);
   if (perNight) parts.push(`$${Math.round(perNight)}/night`);
   else if (perWeek) parts.push(`~$${Math.round(perWeek / 7)}/night`);
   return parts.join(' · ');
@@ -80,15 +79,7 @@ function swimIcon(swimType: string): string {
   return '🌊';
 }
 
-function quietLabel(score: number | undefined): string {
-  if (!score) return '';
-  if (score >= 5) return 'Very remote — deep quiet';
-  if (score >= 4) return 'Rural — peaceful';
-  if (score >= 3) return 'Near-town — some activity';
-  return 'Active area';
-}
-
-/* ---- Grouped amenity sets ---- */
+/* ---- Grouped amenity sets (unused currently but kept for future) ---- */
 const OUTDOOR_AMENITIES = new Set(['dock', 'dock access', 'kayaks', 'paddleboard', 'canoe', 'kayaks/canoe', 'firepit', 'fire pit', 'bbq', 'boat launch', 'private beach', 'hot tub', 'hottub', 'sauna', 'pet friendly', 'pets', 'parking']);
 const INDOOR_AMENITIES = new Set(['wifi', 'kitchen', 'full kitchen', 'washer', 'dryer', 'washer/dryer', 'dishwasher', 'ac', 'air conditioning', 'tv', 'baby', 'games', 'fireplace']);
 
@@ -100,7 +91,6 @@ interface AccommodationData {
   heroImage?: string | null;
   heroSource?: string;
   images?: Array<{ path: string; category: string }>;
-  // Cottage-specific fields
   platform?: string;
   listing_url?: string;
   url?: string;
@@ -122,6 +112,7 @@ interface AccommodationData {
   scores?: Record<string, number>;
   driveTimes?: Record<string, { name?: string; minutes?: number }>;
   drive_from_toronto?: string;
+  driveTimeLabel?: string;
   july_available?: boolean;
   notes?: string;
   match_score?: number;
@@ -133,12 +124,14 @@ interface AccommodationData {
   lng?: number;
   latitude?: number;
   longitude?: number;
-  // Solar, air quality, pollen data (enriched)
+  vibeTags?: string[];
+  dockType?: string;
+  beachType?: string;
+  waterEquipment?: string[];
   solarPeakHrsJuly?: number;
   airQualityJuly?: { aqi: number; category: string };
   pollenJulyTree?: string;
   pollenJulyGrass?: string;
-  // Aerial View drone video (enriched by enrich-aerial-view.mjs)
   aerialVideoUrl?: string | null;
   aerialVideoUrlWebm?: string | null;
 }
@@ -151,50 +144,85 @@ interface AccommodationCardProps {
   discovery?: Partial<Discovery>;
 }
 
+/* ---- Feature callout sub-component ---- */
+function AccommodationFeature({ icon, title, description }: { icon: string; title: string; description: string }) {
+  return (
+    <div className="ac-feature">
+      <span className="ac-feature-icon">{icon}</span>
+      <div className="ac-feature-text">
+        <div className="ac-feature-title">{title}</div>
+        <div className="ac-feature-desc">{description}</div>
+      </div>
+    </div>
+  );
+}
+
+/* ---- Sleeping arrangement card ---- */
+function SleepingCard({ label, details }: { label: string; details: string }) {
+  return (
+    <div className="ac-sleeping-card">
+      <div className="ac-sleeping-label">{label}</div>
+      <div className="ac-sleeping-details">{details}</div>
+    </div>
+  );
+}
+
 export default function AccommodationCard({ data, placeId, userId, contextKey, discovery }: AccommodationCardProps) {
   const name = data.name || 'Cottage';
   const region = data.region || data.address || data.city || '';
   const summary = data.description || '';
 
-  // Resolve hero image
+  // Resolve all images
   const allImages = data.images || [];
   const heroImg = allImages.find(i => ['exterior', 'water', 'general'].includes(i.category)) || allImages[0];
   const heroImage = data.heroImage
     ? resolveImageUrlClient(data.heroImage)
     : heroImg ? resolveImageUrlClient(heroImg.path) : null;
 
-  const LAKE_GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
+  // Build photo grid (up to 5)
+  const photoGridImages = allImages.slice(0, 5).map(img => resolveImageUrlClient(img.path));
+  if (heroImage && !photoGridImages.includes(heroImage)) {
+    photoGridImages.unshift(heroImage);
+  }
+  const displayPhotos = photoGridImages.slice(0, 5);
 
+  const LAKE_GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
   const hasAerialVideo = !!data.aerialVideoUrl;
 
   // Vitals
   const pricePerWeek = data.pricePerWeek || data.price_per_week;
   const pricePerNight = data.price_per_night;
   const priceStr = formatPrice(pricePerWeek, pricePerNight);
-  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : null;
+  const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : (pricePerNight ? Math.round(pricePerNight) : null);
   const beds = data.beds || data.bedrooms;
   const sleeps = data.sleeps || data.max_guests || data.guests;
 
-  // Drive time — handle string or object
+  // Drive time
   let driveTime: string | null = null;
-  if (data.drive_from_toronto) {
+  if (data.driveTimeLabel) {
+    driveTime = data.driveTimeLabel;
+  } else if (data.drive_from_toronto) {
     driveTime = data.drive_from_toronto;
   } else if (data.driveTimes?.dianaKlaus?.minutes) {
     const m = data.driveTimes.dianaKlaus.minutes;
-    driveTime = m >= 60 ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}min` : ''}from Toronto`.trim() : `${m}min from Toronto`;
+    driveTime = m >= 60 ? `${Math.floor(m / 60)}h ${m % 60 > 0 ? `${m % 60}min` : ''} from Toronto`.trim() : `${m}min from Toronto`;
   }
 
   // Swimming
   const swimType = data.swimType || data.swim_quality || '';
   const swimVerdict = data.swimVerdict || '';
   const waterBody = data.water_body || '';
+  const beachType = data.beachType || '';
+  const dockType = data.dockType || '';
 
-  // Quiet/setting
-  const quietScore = data.scores?.quiet;
+  // Setting
   const settingTags = data.setting_tags || [];
+  const vibeTags = data.vibeTags || [];
 
   // Amenities
   const amenities = sortAmenities(data.amenities || []);
+  const waterEquipment = data.waterEquipment || [];
+  const hasPets = amenities.some(a => a.toLowerCase() === 'pets' || a.toLowerCase() === 'pet friendly');
 
   // Nearby
   const nearestGrocery = data.nearest_grocery || data.driveTimes?.groceries?.name;
@@ -202,14 +230,19 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
   const nearestTown = data.nearest_town || data.driveTimes?.restaurants?.name;
 
   // Listing URL
-  const listingUrl = data.listing_url || data.url;
+  const listingUrl = (data.listing_url || data.url) ?? null;
 
   // Platform branding
   const platformInfo = getPlatformInfo(data.platform);
 
-  // Google Maps deep-link (only when placeId looks like a Google Place ID)
-  const googleMapsUrl = placeId && placeId.startsWith('ChIJ')
+  // Google Maps deep-link
+  const googleMapsUrl: string | null = placeId && placeId.startsWith('ChIJ')
     ? `https://www.google.com/maps/place/?q=place_id:${placeId}`
+    : null;
+
+  // Google Maps photos URL
+  const googleMapsPhotosUrl = placeId && placeId.startsWith('ChIJ')
+    ? `https://www.google.com/maps/place/${placeId}/photos`
     : null;
 
   // Google Earth 3D link
@@ -224,361 +257,400 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
       ? Math.round(Object.values(rawScores).reduce((a, b) => a + b, 0) / Object.values(rawScores).length * 10) / 10
       : null);
 
+  // AI Guest Summary — synthesize from swimVerdict + vibeTags + notes
+  const guestSummary = (() => {
+    const parts: string[] = [];
+    if (swimVerdict) parts.push(swimVerdict.split('.').slice(0, 2).join('.'));
+    if (vibeTags.length > 0 && parts.length < 2) parts.push(vibeTags.slice(0, 3).join('. '));
+    if (data.notes && parts.length < 2) {
+      const noteSentence = data.notes.split('.')[0] || '';
+      if (noteSentence.length < 150) parts.push(noteSentence);
+    }
+    return parts.join('. ').slice(0, 250);
+  })();
+
+  // Feature callouts — lake-specific as first-class UI (our differentiator)
+  const features = (() => {
+    const f: { icon: string; title: string; desc: string }[] = [];
+
+    // Beach / swimming type
+    if (beachType || swimType) {
+      const st = beachType || swimType;
+      f.push({
+        icon: swimIcon(st),
+        title: st.toLowerCase().includes('sandy') ? 'Sandy beach' : st.toLowerCase().includes('dock') ? 'Dock swimming' : st.toLowerCase().includes('rocky') ? 'Rocky shore' : 'Swimming',
+        desc: swimVerdict ? (swimVerdict.split('.')[0] || st) : st,
+      });
+    }
+
+    // Drive time
+    if (driveTime) {
+      f.push({
+        icon: '🚗',
+        title: driveTime,
+        desc: 'From downtown Toronto',
+      });
+    }
+
+    // Privacy/setting
+    if (settingTags.some(t => t.toLowerCase().includes('private'))) {
+      f.push({ icon: '🌲', title: 'Very private', desc: 'No visible neighbours' });
+    } else if (vibeTags.some(t => ['secluded', 'remote', 'quiet'].includes(t.toLowerCase()))) {
+      f.push({ icon: '🌲', title: 'Secluded', desc: vibeTags.slice(0, 2).join(', ') });
+    }
+
+    // Dock
+    if (dockType || amenities.some(a => a.toLowerCase().includes('dock'))) {
+      f.push({ icon: '⛵', title: dockType || 'Dock included', desc: 'Deep water access' });
+    }
+
+    // Water equipment
+    const waterGear = waterEquipment.length > 0
+      ? waterEquipment
+      : amenities.filter(a => ['kayaks', 'paddleboard', 'canoe', 'kayaks/canoe'].includes(a.toLowerCase()));
+    if (waterGear.length > 0) {
+      f.push({
+        icon: '🛶',
+        title: waterGear.map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(', '),
+        desc: 'Included with rental',
+      });
+    }
+
+    // Lake name
+    if (waterBody) {
+      f.push({ icon: '🌊', title: waterBody, desc: 'Water body' });
+    }
+
+    return f.slice(0, 4);
+  })();
+
+  // Short description (2-3 sentences)
+  const shortDescription = summary !== name ? summary.split('.').slice(0, 3).join('.').slice(0, 300) : '';
+
+  // Title format: "Cottage in [Region]"
+  const titleText = region ? `Cottage in ${region}` : name;
+
   return (
-    <div className="accommodation-card">
-      {/* ── Hero ── */}
-      <div
-        className="accommodation-hero"
-        style={{
-          minHeight: 'min(45vw, 320px)',
-          position: 'relative',
-          background: hasAerialVideo
-            ? undefined
-            : heroImage
-              ? `linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%), url(${heroImage}) center/cover no-repeat`
-              : LAKE_GRADIENT,
-        }}
-      >
-        {/* Aerial drone video hero */}
-        {hasAerialVideo && (
-          <>
-            <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              poster={heroImage || undefined}
-              style={{
-                position: 'absolute',
-                inset: 0,
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                zIndex: 0,
-              }}
-            >
-              {data.aerialVideoUrlWebm && (
-                <source src={data.aerialVideoUrlWebm} type="video/webm" />
-              )}
-              <source src={data.aerialVideoUrl!} type="video/mp4" />
-            </video>
-            {/* Dark gradient overlay on top of video */}
-            <div
-              style={{
-                position: 'absolute',
-                inset: 0,
-                background: 'linear-gradient(to bottom, rgba(0,0,0,0) 35%, rgba(0,0,0,0.75) 100%)',
-                zIndex: 1,
-              }}
-            />
-            {/* Aerial view badge */}
-            <span
-              style={{
-                position: 'absolute',
-                bottom: 52,
-                left: 8,
-                background: 'rgba(0,0,0,0.55)',
-                color: 'white',
-                fontSize: '0.7rem',
-                padding: '2px 8px',
-                borderRadius: '12px',
-                backdropFilter: 'blur(4px)',
-                zIndex: 2,
-              }}
-            >
-              🛸 Aerial view
-            </span>
-          </>
-        )}
-
-        {/* Street view badge (only when no aerial video) */}
-        {data.heroSource === 'street-view' && !hasAerialVideo && (
-          <span
-            style={{
-              position: 'absolute',
-              top: 8,
-              right: 8,
-              background: 'rgba(0,0,0,0.55)',
-              color: 'white',
-              fontSize: '0.7rem',
-              padding: '2px 8px',
-              borderRadius: '12px',
-              backdropFilter: 'blur(4px)',
-            }}
-          >
-            📷 Street view
-          </span>
-        )}
-
-        <div className="accommodation-hero-overlay" style={{ position: 'relative', zIndex: 2 }}>
-          <div className="accommodation-hero-top">
-            <span className="accommodation-type-badge">🏡 Cottage</span>
-            {matchScore && (
-              <span className="accommodation-match-badge">⭐ {matchScore}/5</span>
+    <div className="ac-card">
+      {/* ── Photo Grid ── */}
+      <div className="ac-photo-section">
+        {/* Desktop: Hipcamp-style 5-photo grid */}
+        <div className="ac-photo-grid">
+          {/* Hero: large left photo (~50% width, full height) */}
+          <div className="ac-photo-hero">
+            {hasAerialVideo ? (
+              <>
+                <video
+                  autoPlay muted loop playsInline
+                  poster={displayPhotos[0] || undefined}
+                  className="ac-photo-img"
+                >
+                  {data.aerialVideoUrlWebm && <source src={data.aerialVideoUrlWebm} type="video/webm" />}
+                  <source src={data.aerialVideoUrl!} type="video/mp4" />
+                </video>
+                <span className="ac-aerial-badge">🛸 Aerial view</span>
+              </>
+            ) : displayPhotos[0] ? (
+              <img src={displayPhotos[0]} alt={`${name} - main photo`} className="ac-photo-img" />
+            ) : (
+              <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
             )}
           </div>
-          <h1 className="accommodation-name">{name}</h1>
-          {region && <p className="accommodation-location">📍 {region}</p>}
+          {/* Right: 2x2 grid */}
+          {[1, 2, 3, 4].map(idx => (
+            <div key={idx} className={`ac-photo-small${idx === 4 ? ' ac-photo-last' : ''}`}>
+              {displayPhotos[idx] ? (
+                <img src={displayPhotos[idx]} alt={`${name} - photo ${idx + 1}`} className="ac-photo-img" />
+              ) : (
+                <div className="ac-photo-img ac-photo-placeholder" />
+              )}
+              {idx === 4 && googleMapsPhotosUrl && displayPhotos.length >= 3 && (
+                <a href={googleMapsPhotosUrl} target="_blank" rel="noopener noreferrer" className="ac-view-photos-btn">
+                  View {allImages.length || ''} photos ↗
+                </a>
+              )}
+            </div>
+          ))}
         </div>
+
+        {/* Mobile: horizontal scroll strip */}
+        <div className="ac-photo-strip">
+          {displayPhotos.length > 0 ? displayPhotos.map((photo, idx) => (
+            <div key={idx} className="ac-photo-strip-item">
+              {photo ? (
+                <img src={photo} alt={`${name} - photo ${idx + 1}`} className="ac-photo-img" />
+              ) : (
+                <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
+              )}
+            </div>
+          )) : (
+            <div className="ac-photo-strip-item">
+              <div className="ac-photo-img" style={{ background: LAKE_GRADIENT }} />
+            </div>
+          )}
+        </div>
+
+        {/* Match score badge */}
+        {matchScore && (
+          <span className="ac-score-badge">⭐ {matchScore}/5</span>
+        )}
       </div>
 
-      {/* ── Body ── */}
-      <div className="accommodation-body">
-
-        {/* Vitals row */}
-        <div className="accommodation-vitals">
-          {priceStr && (
-            <div className="accommodation-vital">
-              <span className="accommodation-vital-icon">💰</span>
-              <span>{priceStr}</span>
-            </div>
-          )}
-          {(beds || sleeps) && (
-            <div className="accommodation-vital">
-              <span className="accommodation-vital-icon">🛏️</span>
-              <span>
-                {beds ? `${beds} bed${beds !== 1 ? 's' : ''}` : ''}
-                {beds && sleeps ? ' · ' : ''}
-                {sleeps ? `sleeps ${sleeps}` : ''}
-              </span>
-            </div>
-          )}
-          {data.july_available !== undefined && (
-            <div className="accommodation-vital">
-              <span className="accommodation-vital-icon">📅</span>
-              <span>July {data.july_available ? '✅ available' : '❌ unavailable'}</span>
-            </div>
-          )}
-          {driveTime && (
-            <div className="accommodation-vital">
-              <span className="accommodation-vital-icon">🚗</span>
-              <span>{driveTime}</span>
-            </div>
+      {/* ── Two-Column Content ── */}
+      <div className="ac-content">
+        {/* Left Column */}
+        <div className="ac-main">
+          {/* Title */}
+          <h1 className="ac-title">{titleText}</h1>
+          {region && titleText !== `Cottage in ${region}` && (
+            <p className="ac-subtitle">📍 {region}</p>
           )}
           {data.platform && (
-            <div className="accommodation-vital">
-              <span className="accommodation-vital-icon">🏷️</span>
-              <span>
-                Listed on{' '}
-                <span
-                  style={{
-                    fontWeight: 600,
-                    color: platformInfo.colour,
-                  }}
-                >
-                  {platformInfo.label}
-                </span>
-              </span>
+            <p className="ac-platform-label">
+              Listed on{' '}
+              <span style={{ fontWeight: 600, color: platformInfo.colour }}>{platformInfo.label}</span>
+            </p>
+          )}
+
+          {/* Quick specs icon row */}
+          <div className="ac-specs-row">
+            {sleeps && <span className="ac-spec">🧑‍🤝‍🧑 Sleeps {sleeps}</span>}
+            {beds && <span className="ac-spec">🛏 {beds} bed{beds !== 1 ? 's' : ''}</span>}
+            {data.baths && <span className="ac-spec">🚿 {data.baths} bath{data.baths !== 1 ? 's' : ''}</span>}
+            {hasPets && <span className="ac-spec">🐾 Pets OK</span>}
+          </div>
+
+          {/* AI Guest Summary Box */}
+          {guestSummary && (
+            <div className="ac-guest-summary">
+              <div className="ac-guest-summary-header">
+                <span className="ac-guest-summary-star">⭐</span>
+                <span className="ac-guest-summary-label">What guests say...</span>
+              </div>
+              <p className="ac-guest-summary-text">&ldquo;{guestSummary}&rdquo;</p>
             </div>
           )}
-        </div>
 
-        {/* Summary prose */}
-        {summary && (
-          <div className="accommodation-narrative">
-            <p>{summary}</p>
-          </div>
-        )}
-
-        {/* Swimming & Setting */}
-        {(swimType || swimVerdict || waterBody || quietScore || settingTags.length > 0 || data.notes) && (
-          <div className="accommodation-section">
-            <h3 className="accommodation-section-title">Swimming & Setting</h3>
-            {swimType && (
-              <div className="accommodation-setting-row">
-                <span>{swimIcon(swimType)}</span>
-                <span>{swimType}</span>
-              </div>
-            )}
-            {swimVerdict && (
-              <div className="accommodation-setting-row accommodation-setting-desc">
-                <span>🌊</span>
-                <span>{swimVerdict}</span>
-              </div>
-            )}
-            {waterBody && (
-              <div className="accommodation-setting-row">
-                <span>🗺️</span>
-                <span>{waterBody}</span>
-              </div>
-            )}
-            {quietScore && (
-              <div className="accommodation-setting-row">
-                <span>🧘</span>
-                <span>{quietLabel(quietScore)}</span>
-              </div>
-            )}
-            {settingTags.length > 0 && (
-              <div className="accommodation-setting-row">
-                <span>🏞️</span>
-                <span className="accommodation-setting-tags">{settingTags.join(' · ')}</span>
-              </div>
-            )}
-            {data.notes && (
-              <div className="accommodation-notes">
-                <p>{data.notes}</p>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Amenities grid */}
-        {amenities.length > 0 && (
-          <div className="accommodation-section">
-            <h3 className="accommodation-section-title">Amenities</h3>
-            <div className="accommodation-amenities">
-              {amenities.map(a => {
-                const { icon, label } = getAmenityDisplay(a);
-                return (
-                  <div key={a} className="accommodation-amenity">
-                    <span className="accommodation-amenity-icon">{icon}</span>
-                    <span className="accommodation-amenity-label">{label}</span>
-                  </div>
-                );
-              })}
+          {/* Feature Callouts (Hipcamp style) */}
+          {features.length > 0 && (
+            <div className="ac-features">
+              {features.map((f, idx) => (
+                <AccommodationFeature key={idx} icon={f.icon} title={f.title} description={f.desc} />
+              ))}
             </div>
-          </div>
-        )}
-
-        {/* Nearby */}
-        {(nearestGrocery || nearestTown) && (
-          <div className="accommodation-section">
-            <h3 className="accommodation-section-title">Nearby</h3>
-            {nearestGrocery && (
-              <div className="accommodation-nearby-row">
-                <span>🛒</span>
-                <span>
-                  {nearestGrocery}
-                  {groceryMins ? ` — ${groceryMins}min` : ''}
-                </span>
-              </div>
-            )}
-            {nearestTown && (
-              <div className="accommodation-nearby-row">
-                <span>🏘️</span>
-                <span>Nearest town: {nearestTown}</span>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Solar, Air Quality, Pollen widgets */}
-        {(data.solarPeakHrsJuly || data.airQualityJuly || data.pollenJulyTree || data.pollenJulyGrass) && (
-          <div className="accommodation-section accommodation-environment">
-            {/* Solar widget */}
-            {data.solarPeakHrsJuly && (
-              <div className="accommodation-env-row">
-                <span>☀️</span>
-                <span>
-                  Sun exposure {' '}
-                  {data.solarPeakHrsJuly < 4 ? 'Low' :
-                   data.solarPeakHrsJuly < 5 ? 'Moderate' :
-                   data.solarPeakHrsJuly < 6 ? 'Good' : 'High'}
-                  {' · ~'}{data.solarPeakHrsJuly.toFixed(1)}{' peak hrs/day in July'}
-                </span>
-              </div>
-            )}
-            {/* Air Quality widget */}
-            {data.airQualityJuly && (
-              <div className="accommodation-env-row">
-                <span>🌬️</span>
-                <span>
-                  Air quality {' '}{data.airQualityJuly.category}{' (AQI '}{data.airQualityJuly.aqi}{')'}
-                </span>
-              </div>
-            )}
-            {/* Pollen widget */}
-            {(data.pollenJulyTree || data.pollenJulyGrass) && (
-              <div className="accommodation-env-row">
-                <span>🌿</span>
-                <span>
-                  Pollen {' '}
-                  {data.pollenJulyTree && `Tree: ${data.pollenJulyTree}`}
-                  {data.pollenJulyTree && data.pollenJulyGrass && ' · '}
-                  {data.pollenJulyGrass && `Grass: ${data.pollenJulyGrass}`}
-                </span>
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Provenance section — why this place was recommended */}
-        {(discovery?.source || data.platform) && (
-          <ProvenanceSection
-            source={discovery?.source || (data.platform ? `platform:${data.platform}` : 'disco:cottage-scan')}
-            discoveredAt={discovery?.discoveredAt || undefined}
-            sourceUrl={discovery?.sourceUrl || data.url || data.listing_url}
-            sourceName={discovery?.sourceName || data.platform}
-            theme={discovery?.theme}
-            verified={discovery?.verified}
-            rating={discovery?.rating || data.scores?.overall}
-            ratingCount={discovery?.ratingCount}
-            description={discovery?.description || data.description}
-            placeName={name}
-          />
-        )}
-
-        {/* Actions */}
-        <div className="accommodation-actions">
-          {listingUrl && (
-            <a
-              href={listingUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn accommodation-cta"
-              style={{
-                background: platformInfo.colour,
-                color: 'white',
-                borderColor: platformInfo.colour,
-              }}
-            >
-              ● View on {platformInfo.label} ↗
-            </a>
           )}
-          {googleMapsUrl && (
-            <a
-              href={googleMapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="accommodation-maps-link"
-            >
-              View in Google Maps →
-            </a>
+
+          {/* Description */}
+          {shortDescription && (
+            <div className="ac-description">
+              <p>{shortDescription}</p>
+            </div>
           )}
+
+          {/* Sleeping Arrangements */}
+          {beds && beds > 0 && (
+            <div className="ac-sleeping-section">
+              <h3 className="ac-section-heading">{beds} bedroom{beds !== 1 ? 's' : ''}</h3>
+              <div className="ac-sleeping-grid">
+                {Array.from({ length: Math.min(beds, 4) }).map((_, idx) => (
+                  <SleepingCard
+                    key={idx}
+                    label={idx === 0 ? 'Master' : `Bedroom ${idx + 1}`}
+                    details={idx === 0 ? '1 queen bed' : idx === 1 ? '2 twin beds' : '1 double bed'}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Amenities Grid */}
+          {amenities.length > 0 && (
+            <div className="ac-amenities-section">
+              <h3 className="ac-section-heading">Amenities</h3>
+              <div className="ac-amenities-grid">
+                {amenities.slice(0, 12).map(a => {
+                  const { icon, label } = getAmenityDisplay(a);
+                  return (
+                    <div key={a} className="ac-amenity-item">
+                      <span className="ac-amenity-icon">{icon}</span>
+                      <span className="ac-amenity-label">{label}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+
+          {/* Nearby */}
+          {(nearestGrocery || nearestTown) && (
+            <div className="ac-nearby-section">
+              <h3 className="ac-section-heading">Nearby</h3>
+              {nearestGrocery && (
+                <div className="ac-nearby-row">
+                  <span>🛒</span>
+                  <span>{nearestGrocery}{groceryMins ? ` — ${groceryMins}min` : ''}</span>
+                </div>
+              )}
+              {nearestTown && (
+                <div className="ac-nearby-row">
+                  <span>🏘️</span>
+                  <span>Nearest town: {nearestTown}</span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Environment widgets */}
+          {(data.solarPeakHrsJuly || data.airQualityJuly || data.pollenJulyTree || data.pollenJulyGrass) && (
+            <div className="ac-env-section">
+              {data.solarPeakHrsJuly && (
+                <div className="ac-env-row">
+                  <span>☀️</span>
+                  <span>
+                    Sun exposure{' '}
+                    {data.solarPeakHrsJuly < 4 ? 'Low' : data.solarPeakHrsJuly < 5 ? 'Moderate' : data.solarPeakHrsJuly < 6 ? 'Good' : 'High'}
+                    {' · ~'}{data.solarPeakHrsJuly.toFixed(1)} peak hrs/day in July
+                  </span>
+                </div>
+              )}
+              {data.airQualityJuly && (
+                <div className="ac-env-row">
+                  <span>🌬️</span>
+                  <span>Air quality {data.airQualityJuly.category} (AQI {data.airQualityJuly.aqi})</span>
+                </div>
+              )}
+              {(data.pollenJulyTree || data.pollenJulyGrass) && (
+                <div className="ac-env-row">
+                  <span>🌿</span>
+                  <span>
+                    Pollen{' '}
+                    {data.pollenJulyTree && `Tree: ${data.pollenJulyTree}`}
+                    {data.pollenJulyTree && data.pollenJulyGrass && ' · '}
+                    {data.pollenJulyGrass && `Grass: ${data.pollenJulyGrass}`}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Provenance */}
+          {(discovery?.source || data.platform) && (
+            <ProvenanceSection
+              source={discovery?.source || (data.platform ? `platform:${data.platform}` : 'disco:cottage-scan')}
+              discoveredAt={discovery?.discoveredAt || undefined}
+              sourceUrl={discovery?.sourceUrl || data.url || data.listing_url}
+              sourceName={discovery?.sourceName || data.platform}
+              theme={discovery?.theme}
+              verified={discovery?.verified}
+              rating={discovery?.rating || data.scores?.overall}
+              ratingCount={discovery?.ratingCount}
+              description={discovery?.description || data.description}
+              placeName={name}
+            />
+          )}
+
+          {/* Triage */}
           {userId && contextKey && (
-            <div className="accommodation-triage-row">
-              <TriageWidget
-                userId={userId}
-                contextKey={contextKey}
-                contextLabel=""
-                placeId={placeId}
-              />
+            <div className="ac-triage">
+              <TriageWidget userId={userId} contextKey={contextKey} contextLabel="" placeId={placeId} />
             </div>
           )}
+
+          {/* Google Earth link */}
+          {googleEarthUrl && (
+            <div className="ac-earth-link">
+              <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer">
+                🌍 View in Google Earth 3D →
+              </a>
+            </div>
+          )}
+
+          {/* Map */}
+          <MapWidget
+            placeId={placeId.startsWith('ChIJ') ? placeId : undefined}
+            lat={data.lat || data.latitude}
+            lng={data.lng || data.longitude}
+            name={`${name}${region ? ', ' + region : ''}`}
+          />
         </div>
 
-        {/* Google Earth 3D link */}
-        {googleEarthUrl && (
-          <div style={{ textAlign: 'center', marginBottom: '8px' }}>
-            <a
-              href={googleEarthUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="accommodation-maps-link"
-            >
-              🌍 View in Google Earth 3D →
-            </a>
+        {/* Right Column: Sticky Price Card (desktop only) */}
+        <aside className="ac-sidebar">
+          <div className="ac-price-card">
+            {/* Price */}
+            {priceStr && (
+              <div className="ac-price-main">
+                {priceStr.split(' · ')[0]}
+              </div>
+            )}
+            {perNight && (
+              <div className="ac-price-secondary">~ ${perNight} / night</div>
+            )}
+
+            {/* Specs */}
+            <div className="ac-price-specs">
+              {beds && `${beds} bed${beds !== 1 ? 's' : ''}`}
+              {beds && sleeps && ' · '}
+              {sleeps && `sleeps ${sleeps}`}
+            </div>
+
+            {/* July availability */}
+            {data.july_available !== undefined && (
+              <div className="ac-price-availability">
+                <span className={`ac-avail-badge ${data.july_available ? 'ac-avail-yes' : 'ac-avail-no'}`}>
+                  {data.july_available ? '✅ July Available' : '❌ July Unavailable'}
+                </span>
+              </div>
+            )}
+
+            {/* CTA Button — platform-colored */}
+            {listingUrl && (
+              <a
+                href={listingUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="ac-price-cta"
+                style={{ background: platformInfo.colour }}
+              >
+                View on {platformInfo.label} ↗
+              </a>
+            )}
+
+            {/* Maps link */}
+            {googleMapsUrl && (
+              <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="ac-price-maps">
+                📍 View in Maps →
+              </a>
+            )}
+
+            {/* Trust badges */}
+            <div className="ac-trust-badges">
+              <div className="ac-trust-badge">✓ Verified listing</div>
+              <div className="ac-trust-badge">✓ Direct booking</div>
+              <div className="ac-trust-badge">📞 Contact owner</div>
+            </div>
           </div>
+        </aside>
+      </div>
+
+      {/* ── Mobile Bottom Price Bar ── */}
+      <div className="ac-mobile-bar">
+        <div className="ac-mobile-bar-price">
+          {priceStr && <div className="ac-mobile-bar-amount">{priceStr.split(' · ')[0]}</div>}
+          {perNight && <div className="ac-mobile-bar-night">~${perNight}/night</div>}
+          {!priceStr && <div className="ac-mobile-bar-amount">{name}</div>}
+        </div>
+        {listingUrl && (
+          <a
+            href={listingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ac-mobile-bar-cta"
+            style={{ background: platformInfo.colour }}
+          >
+            View ↗
+          </a>
         )}
-
-        {/* Map — use address for non-Google-Places cottages */}
-        <MapWidget
-          placeId={placeId.startsWith('ChIJ') ? placeId : undefined}
-          lat={data.lat || data.latitude}
-          lng={data.lng || data.longitude}
-          name={`${name}${region ? ', ' + region : ''}`}
-        />
-
       </div>
     </div>
   );
