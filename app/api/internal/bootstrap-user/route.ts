@@ -12,10 +12,21 @@ export async function POST(_request: NextRequest) {
   if (!user) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   if (user.isOwner) return NextResponse.json({ error: 'Owner cannot be bootstrapped' }, { status: 400 });
 
-  // Do not re-seed if user already has discoveries
+  // Do not re-seed if user already has discoveries (including AI-generated ones)
   const existing = await getUserData(user.id, 'discoveries');
   if (existing?.discoveries && existing.discoveries.length > 0) {
     return NextResponse.json({ ok: true, seeded: 0, reason: 'already has discoveries' });
+  }
+
+  // Check if onboarding-complete is still running (recently created manifest but no discoveries yet)
+  // Give AI discovery a few seconds head start before falling back to seeds
+  const manifest = await getUserData(user.id, 'manifest') as UserManifest | null;
+  if (manifest?.updatedAt) {
+    const manifestAge = Date.now() - new Date(manifest.updatedAt).getTime();
+    // If manifest was just created (< 10s ago), the AI discovery is probably still running
+    if (manifestAge < 10_000) {
+      return NextResponse.json({ ok: true, seeded: 0, reason: 'waiting for ai-discovery' });
+    }
   }
 
   const seedPath = path.join(process.cwd(), 'data', 'seed-discoveries.json');
@@ -29,8 +40,6 @@ export async function POST(_request: NextRequest) {
   } catch {
     return NextResponse.json({ error: 'Failed to read seed data' }, { status: 500 });
   }
-
-  const manifest = await getUserData(user.id, 'manifest') as UserManifest | null;
 
   let targetContextKey = 'radar:toronto-experiences';
   if (manifest?.contexts) {

@@ -87,8 +87,21 @@ export default function OnboardingClient({ userName, city: defaultCity }: Onboar
 
       const data = await res.json();
 
-      // Seed initial discoveries in background (fire and forget)
-      fetch('/api/internal/bootstrap-user', { method: 'POST' }).catch(() => {});
+      // Trigger AI-powered discovery run in background (fire and forget)
+      // This generates personalized discoveries based on the user's city + interests
+      // Falls back to seed data via bootstrap-user if AI generation fails
+      fetch('/api/internal/onboarding-complete', { method: 'POST' })
+        .then(r => r.json())
+        .then(result => {
+          // If AI generation failed or returned 0, fall back to seed data
+          if (!result.ok || result.generated === 0 || result.fallback) {
+            fetch('/api/internal/bootstrap-user', { method: 'POST' }).catch(() => {});
+          }
+        })
+        .catch(() => {
+          // AI endpoint failed entirely — fall back to seed data
+          fetch('/api/internal/bootstrap-user', { method: 'POST' }).catch(() => {});
+        });
 
       // Redirect to first context review page so they see discoveries immediately
       const firstContextKey = data.contexts?.[0]?.key;
