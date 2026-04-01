@@ -1,0 +1,9 @@
+{
+  "name": "@compass/openclaw-tools",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "OpenClaw plugin providing Compass Concierge tools for writing discoveries, managing trips, and handling user data via the Compass internal API.",
+  "openclaw": {
+    "extensions": ["./index.ts"]
+  }
+}
