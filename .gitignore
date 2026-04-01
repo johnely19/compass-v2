@@ -45,3 +45,6 @@ next-env.d.ts
 qa/screenshots/latest/
 qa/screenshots/diffs/
 qa/last-report.json
+
+# staging dev server logs
+logs/*.log
