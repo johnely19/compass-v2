@@ -3,7 +3,7 @@ import path from 'path';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
-import { getManifestHeroImage } from '../_lib/image-url';
+import { getManifestHeroImage } from '../_lib/image-url.server';
 import HotClient from './HotClient';
 
 export const dynamic = 'force-dynamic';
