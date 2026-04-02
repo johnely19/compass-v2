@@ -11,7 +11,8 @@
 
 import { NextRequest, NextResponse } from 'next/server';
 import { getCurrentUser } from '../../../_lib/user';
-import { getUserData, setUserData } from '../../../_lib/user-data';
+import { getUserData } from '../../../_lib/user-data';
+import { mergeAndWriteDiscoveries } from '../../../_lib/discovery-write';
 import type {
   UserManifest,
   UserPreferences,
@@ -278,14 +279,8 @@ export async function POST(_request: NextRequest) {
     return NextResponse.json({ ok: true, generated: 0, fallback: true });
   }
 
-  // Merge with any existing discoveries
-  const existingDiscoveries = existing?.discoveries || [];
-  const merged = [...allDiscoveries, ...existingDiscoveries];
-
-  await setUserData(user.id, 'discoveries', {
-    discoveries: merged,
-    updatedAt: new Date().toISOString(),
-  } as UserDiscoveries);
+  // Merge-only write — never overwrites existing discoveries (#204)
+  const mergeResult = await mergeAndWriteDiscoveries(user.id, allDiscoveries);
 
   console.log(
     `[onboarding-complete] ✅ Total: ${allDiscoveries.length} discoveries across ${results.length} contexts for user ${user.id}`,

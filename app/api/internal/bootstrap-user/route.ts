@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import { getCurrentUser } from '../../../_lib/user';
-import { getUserData, setUserData } from '../../../_lib/user-data';
+import { getUserData } from '../../../_lib/user-data';
+import { mergeAndWriteDiscoveries } from '../../../_lib/discovery-write';
 import type { UserDiscoveries, Discovery, UserManifest } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -58,12 +59,8 @@ export async function POST(_request: NextRequest) {
     city: userCity,
   }));
 
-  const discoveries: UserDiscoveries = {
-    discoveries: seededDiscoveries,
-    updatedAt: now,
-  };
+  // Merge-only write — never overwrites existing discoveries (#204)
+  const result = await mergeAndWriteDiscoveries(user.id, seededDiscoveries);
 
-  await setUserData(user.id, 'discoveries', discoveries);
-
-  return NextResponse.json({ ok: true, seeded: seededDiscoveries.length, contextKey: targetContextKey });
+  return NextResponse.json({ ok: true, seeded: result.added, contextKey: targetContextKey });
 }

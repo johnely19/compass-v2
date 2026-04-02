@@ -117,6 +117,7 @@ export interface Discovery {
   verified?: boolean;    // verified via Google Places
   ratingCount?: number; // review count from Google Places
   description?: string; // Disco description
+  savedAt?: string;     // ISO string — once set, this discovery is immutable (#204)
 }
 
 export interface UserDiscoveries {
