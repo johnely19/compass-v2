@@ -7,7 +7,8 @@
  */
 
 import { put, list } from '@vercel/blob';
-import { mergeAndWriteDiscoveries, markDiscoverySaved } from '../../discovery-write';
+import { mergeAndWriteDiscoveries } from '../../discovery-write';
+import { savePlaceToSaved, discoveryToSavedPlace } from '../../saved-places';
 import type { Discovery, DiscoveryType } from '../../types';
 
 export interface SaveDiscoveryInput {
@@ -74,7 +75,11 @@ export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): 
     // 1. Merge-only write to discoveries (never overwrites)
     await mergeAndWriteDiscoveries(userId, [discovery]);
 
-    // 2. Write triage state = saved
+    // 2. Write-through to saved.json (append-only, #204)
+    const savedPlace = discoveryToSavedPlace(discovery, 'chat:save');
+    await savePlaceToSaved(userId, savedPlace);
+
+    // 3. Write triage state = saved
     const store = await loadTriageStore(userId);
     if (!store[input.contextKey]) {
       store[input.contextKey] = { triage: {}, seen: {} };

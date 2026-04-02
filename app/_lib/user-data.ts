@@ -242,3 +242,6 @@ export async function getUserDiscoveries(userId: string): Promise<UserDiscoverie
 export async function getUserChat(userId: string): Promise<UserChat | null> {
   return getUserData(userId, 'chat');
 }
+
+// Re-export saved places functions for convenience (#204)
+export { getSavedPlaces, savePlaceToSaved, getActiveSaved, getSavedCountsByContext } from './saved-places';

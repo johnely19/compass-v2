@@ -12,7 +12,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { list, put, del } from '@vercel/blob';
 import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
 import path from 'path';
-import { reconcileSavedDiscoveries } from '../../../_lib/discovery-write';
+import { reconcileSavedDiscoveries, getSavedDiscoveryIds } from '../../../_lib/discovery-write';
+import { reconcileSavedPlaces } from '../../../_lib/saved-places';
+import type { Discovery as DiscoveryFull } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30; // 30s limit — fast validation only
@@ -159,18 +161,35 @@ export async function POST(request: NextRequest) {
 
     // ═══════════════════════════════════════════════════════
     // Reconcile: verify all saved triage entries have discoveries (#204)
+    // Also reconcile saved.json against triage+discoveries
     // ═══════════════════════════════════════════════════════
     let reconciliation = { orphanedSaves: [] as string[], totalSaved: 0, totalDiscoveries: 0 };
+    let savedReconciliation = { recovered: 0, orphaned: 0 };
     try {
       reconciliation = await reconcileSavedDiscoveries(userId);
       if (reconciliation.orphanedSaves.length > 0) {
         console.warn(`[validate-discoveries] ${userId}: ${reconciliation.orphanedSaves.length} orphaned saves detected!`);
       }
+
+      // Also reconcile saved.json: ensure every triage save has a saved.json entry
+      const savedIds = await getSavedDiscoveryIds(userId);
+      const triageSavedMap = new Map<string, { contextKey: string; discoveryId: string }>();
+      for (const savedId of savedIds) {
+        const disc = discoveries.find(d => d.id === savedId);
+        if (disc?.contextKey) {
+          triageSavedMap.set(savedId, { contextKey: disc.contextKey, discoveryId: savedId });
+        }
+      }
+      savedReconciliation = await reconcileSavedPlaces(
+        userId,
+        triageSavedMap,
+        discoveries as unknown as DiscoveryFull[],
+      );
     } catch (e) {
       console.error('[validate-discoveries] Reconciliation error:', e);
     }
 
-    console.log(`[validate-discoveries] ${userId}: cityFixed=${cityFixed} stubCreated=${stubCreated} orphanedSaves=${reconciliation.orphanedSaves.length}`);
+    console.log(`[validate-discoveries] ${userId}: cityFixed=${cityFixed} stubCreated=${stubCreated} orphanedSaves=${reconciliation.orphanedSaves.length} savedRecovered=${savedReconciliation.recovered}`);
     return NextResponse.json({
       ok: true,
       cityFixed,
@@ -180,6 +199,10 @@ export async function POST(request: NextRequest) {
         orphanedSaves: reconciliation.orphanedSaves.length,
         totalSaved: reconciliation.totalSaved,
         totalDiscoveries: reconciliation.totalDiscoveries,
+      },
+      savedPlacesReconciliation: {
+        recovered: savedReconciliation.recovered,
+        orphaned: savedReconciliation.orphaned,
       },
     });
 

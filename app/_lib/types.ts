@@ -118,10 +118,40 @@ export interface Discovery {
   ratingCount?: number; // review count from Google Places
   description?: string; // Disco description
   savedAt?: string;     // ISO string — once set, this discovery is immutable (#204)
+  why?: string;         // Why this place was recommended
 }
 
 export interface UserDiscoveries {
   discoveries: Discovery[];
+  updatedAt: string;
+}
+
+// ---- Saved Places (canonical, append-only store — #204) ----
+
+export interface SavedPlace {
+  place_id?: string;
+  name: string;
+  address?: string;
+  city: string;
+  type: DiscoveryType;
+  rating?: number;
+  contextKey: string;
+  savedAt: string;        // ISO string — when user saved this
+  unsavedAt?: string;     // ISO string — when user unsaved (null = still saved)
+  source: string;         // "triage:save", "chat:save"
+  description?: string;
+  why?: string;
+  heroImage?: string;
+  lat?: number;
+  lng?: number;
+  discoveryId?: string;   // link back to discovery record
+  sourceUrl?: string;
+  sourceName?: string;
+  ratingCount?: number;
+}
+
+export interface SavedPlacesStore {
+  saved: SavedPlace[];
   updatedAt: string;
 }
 
