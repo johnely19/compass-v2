@@ -4,7 +4,11 @@ import { getUserProfile, getUserPreferences, getUserManifest, getUserDiscoveries
 import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
 import { buildUserContext } from '../../_lib/chat/user-context';
 import { sendChatMessage as sendAnthropicFallback } from '../../_lib/chat/anthropic-client';
+import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
 import type { ChatMessage, Discovery } from '../../_lib/types';
+
+/** Maximum message length to prevent abuse */
+const MAX_MESSAGE_LENGTH = 4000;
 
 const OPENCLAW_TIMEOUT_MS = 90_000; // longer timeout for streaming — tool calls can take time
 
@@ -116,10 +120,32 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
     }
 
+    // ─── Rate limiting ───────────────────────────────────────────
+    const rateResult = checkRateLimit(user.id);
+    if (!rateResult.allowed) {
+      const retrySeconds = Math.ceil(rateResult.retryAfterMs / 1000);
+      return NextResponse.json(
+        {
+          error: 'Rate limit exceeded',
+          reply: `You've been chatting a lot! 😅 Give me ${retrySeconds > 120 ? `${Math.ceil(retrySeconds / 60)} minutes` : `${retrySeconds} seconds`} and we can pick back up.`,
+          messageId: `${Date.now()}-rate-limit`,
+        },
+        { status: 429, headers: rateLimitHeaders(rateResult) },
+      );
+    }
+
     const { message, history: clientHistory } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json({ error: 'message is required' }, { status: 400 });
+    }
+
+    // ─── Input validation ────────────────────────────────────────
+    if (message.length > MAX_MESSAGE_LENGTH) {
+      return NextResponse.json(
+        { error: 'Message too long', reply: "That's a bit much — keep it under 4,000 characters? 📝", messageId: `${Date.now()}-validation` },
+        { status: 400 },
+      );
     }
 
     // Load user data in parallel
@@ -226,6 +252,7 @@ export async function POST(request: NextRequest) {
           'Cache-Control': 'no-cache',
           Connection: 'keep-alive',
           'X-Message-Id': messageId,
+          ...rateLimitHeaders(rateResult),
         },
       });
     }
@@ -253,7 +280,10 @@ export async function POST(request: NextRequest) {
     const messageId = `${Date.now()}-concierge`;
     persistChatData(user.id, message, reply!, messageId, history).catch(() => {});
 
-    return NextResponse.json({ reply, messageId });
+    return NextResponse.json(
+      { reply, messageId },
+      { headers: rateLimitHeaders(rateResult) },
+    );
   } catch (err) {
     console.error('[api/chat]', err instanceof Error ? err.message : err);
     return NextResponse.json({
