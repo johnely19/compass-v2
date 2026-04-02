@@ -992,6 +992,34 @@ a:hover {
   cursor: not-allowed;
 }
 
+/* Streaming cursor — blinking caret after streamed text */
+.chat-stream-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--color-text-secondary, #999);
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: blink-cursor 0.8s steps(2) infinite;
+}
+
+@keyframes blink-cursor {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Tool-use status indicator */
+.chat-tool-status {
+  font-style: italic;
+  opacity: 0.8;
+  animation: pulse-tool 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-tool {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
 @media (max-width: 640px) {
   .chat-panel {
     width: calc(100vw - var(--space-lg) * 2);
