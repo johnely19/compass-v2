@@ -7,6 +7,7 @@
 import { put, list } from '@vercel/blob';
 import { getUserData, setUserData } from '../../user-data';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
+import { resolveCity } from './resolve-city';
 
 export interface SaveDiscoveryInput {
   name: string;
@@ -57,12 +58,15 @@ export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): 
   try {
     const discoveryId = `disco_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
+    // Derive city from actual place data, not from LLM context (fixes #187)
+    const resolvedCity = await resolveCity(input.place_id, input.address, input.city);
+
     const discovery: Discovery = {
       id: discoveryId,
       place_id: input.place_id,
       name: input.name,
       address: input.address,
-      city: input.city,
+      city: resolvedCity,
       type: input.type || 'restaurant',
       rating: input.rating,
       contextKey: input.contextKey,
@@ -99,7 +103,7 @@ export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): 
     store[input.contextKey]!.seen![discoveryId] = {
       firstSeen: new Date().toISOString(),
       name: input.name,
-      city: input.city,
+      city: resolvedCity,
       type: input.type || 'restaurant',
     };
 
