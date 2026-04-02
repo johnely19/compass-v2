@@ -1,0 +1,87 @@
+# Compass Concierge — OpenClaw Agent Configuration
+# Security-hardened tool policy for public-facing Compass users.
+#
+# This agent serves end-users via the Compass chat widget.
+# It must NEVER have access to shell execution, file system, or admin tools.
+
+agent:
+  id: concierge
+  name: Compass Concierge
+  description: Travel companion for Compass users — discovers places, manages trips, searches the web.
+
+  # Model configuration
+  model: anthropic/claude-sonnet-4-20250514
+  maxTokens: 2048
+
+  # Workspace files (identity + personality)
+  workspace:
+    soul: ./SOUL.md
+    identity: ./IDENTITY.md
+
+  # ─── TOOL POLICY ───────────────────────────────────────────────
+  # Principle of least privilege: only allow tools the Concierge needs.
+  # Everything else is implicitly denied.
+  tools:
+    policy: allowlist   # Only explicitly listed tools are available
+
+    allow:
+      # Built-in OpenClaw tools for research
+      - web_search          # Search the web for current info
+      - web_fetch           # Fetch and extract content from URLs
+      - goplaces            # Google Places API lookups
+      - image               # Analyze images (user-shared photos)
+
+      # Compass plugin tools (provided by compass-tools plugin)
+      - compass_add_discovery    # Push discoveries to user's Compass
+      - compass_save_discovery   # Save/triage a discovery
+      - compass_update_trip      # Update trip dates/accommodation/focus
+      - compass_create_context   # Create new trip/outing/radar
+
+    # Explicitly deny dangerous tools (defense in depth — allowlist already blocks these,
+    # but explicit deny prevents accidental allowlist expansion)
+    deny:
+      - exec                # Shell command execution
+      - write               # File system write
+      - edit                # File system edit
+      - read                # File system read
+      - process             # Background process management
+      - cron                # Cron job management
+      - sessions_spawn      # Spawn sub-agents
+      - sessions_send       # Send to other sessions
+      - sessions_yield      # Yield to sub-agents
+      - config_diff         # Config management
+      - config_reset        # Config reset
+      - work_finish         # DevClaw workflow
+      - task_create         # DevClaw task creation
+      - image_generate      # Image generation (not needed for concierge)
+
+  # ─── SESSION ISOLATION ─────────────────────────────────────────
+  # Each Compass user gets an isolated session.
+  # Session key format: compass:user:{userId}
+  # Set via x-openclaw-session-key header from the Vercel proxy.
+  session:
+    isolation: per-key     # Sessions are isolated by key
+    keyFormat: "compass:user:{userId}"
+    maxHistory: 50         # Max messages retained per session
+    compactThreshold: 40   # Trigger compaction at this count
+
+  # ─── SAFETY CONSTRAINTS ────────────────────────────────────────
+  safety:
+    # The concierge should stay on topic
+    topicScope:
+      - travel
+      - food and dining
+      - culture and arts
+      - architecture
+      - music and nightlife
+      - local experiences
+      - trip planning
+      - accommodation
+
+    # Content guardrails
+    guardrails:
+      rejectOffTopic: true        # Politely redirect off-topic requests
+      rejectJailbreaks: true      # Detect and refuse prompt injection attempts
+      noCodeExecution: true       # Never generate or execute code
+      noSystemAccess: true        # Never reference system internals
+      noOtherUsers: true          # Never discuss or access other users' data
