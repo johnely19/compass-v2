@@ -9,12 +9,12 @@
     "type": "bar",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 1:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
-      "Sunday: 5:00 PM – 12:00 AM"
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 4.7,
     "review_count": 320,
@@ -30,27 +30,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You descend into this Cumberland Street speakeasy and hit a wall of candlelight—dozens of them—and the Orient Express fantasy in full effect: velvet banquettes, warm amber light pooling on dark wood, train-car intimacy despite the space extending back further than you'd guess from street level. The bar runs long enough for solo perching, but the real move is one of those tucked-away tables where you can settle in until 2am on a Saturday and lose track of the city above.",
+        "body": "You descend into this Cumberland Street speakeasy and hit a wall of candlelight\u2014dozens of them\u2014and the Orient Express fantasy in full effect: velvet banquettes, warm amber light pooling on dark wood, train-car intimacy despite the space extending back further than you'd guess from street level. The bar runs long enough for solo perching, but the real move is one of those tucked-away tables where you can settle in until 2am on a Saturday and lose track of the city above.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a cocktail bar first, and the drinks come with the kind of theatre that justifies Yorkville prices—the Space Mule arrives with smoking cinnamon embers and citrus that announces itself before the glass touches down. They carve ice spheres by hand for whisky drinkers working through the extensive back bar, and the focus stays firmly on what you're drinking, not eating. Expect cocktails in the $18-24 range and a menu built for grazing, not dinner.",
+        "body": "This is a cocktail bar first, and the drinks come with the kind of theatre that justifies Yorkville prices\u2014the Space Mule arrives with smoking cinnamon embers and citrus that announces itself before the glass touches down. They carve ice spheres by hand for whisky drinkers working through the extensive back bar, and the focus stays firmly on what you're drinking, not eating. Expect cocktails in the $18-24 range and a menu built for grazing, not dinner.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is where you take a nightcap seriously—post-dinner somewhere else, or the anchor for a late Saturday when you want craft over volume and a room that rewards staying put. Skip it if you're hungry or in a rush.",
+        "body": "This is where you take a nightcap seriously\u2014post-dinner somewhere else, or the anchor for a late Saturday when you want craft over volume and a room that rewards staying put. Skip it if you're hungry or in a rush.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"An upscale cocktail bar in the heart of Yorkville, C-suite nevertheless feels like an escape— a brief weekend trip away from the city. Immediately upon entering you are struck by the lovely scent of dozens of candles, the Orient-Express inspired decor, and warm lighting that bathes the setting. The cocktails are elaborate and excellent, taking advantage not just taste but every sense, in the Space Mule: smells of citrus and fresh cinnamon, gentle crackles of embers, and a bombastic visual presentation compliment the rich and surprisingly complex flavours.\n\nFor those that prefer to keep it simple, they have an extensive whisky menu, which I had on the rocks paired with a beautifully carved sphere of ice. As you had your drinks, there was pleasant music throughout the night, at a reserved volume that clearly implied spurring flowing conversations were the main goal of the setting. The service was truly excellent, the servers knowledgeable, friendly, and very professional.\n\nOverall C-Suite is a truly one of a kind experience with its decor, cocktails, and vibe all being idiosyncratic and excellent. I would note that the prices for their signature cocktails were somewhat eye watering on first glance, and it certainly is an upscale option, but when witnessing the bartenders make your drink you do get the sense that to the extent that anything justifies a $40 cocktail, the time, skill, and passion put into not just the drinks but the whole experience by their staff certainly would. I would recommend C-Suite to anyone that enjoys cocktails, particularly as a place to end off the night of a memorable event such a birthday, anniversary, or other celebration that you do not want to forget.\"\n\n⭐⭐⭐⭐⭐ \"Absolutely love this speakeasy style secret bar! Their bespoke experience is unreal. The bartenders are dynamic, intriguing, and you’ll want to come back just to hang out with them. Visited this place 2 days in a row because I just couldn’t resist. Love the personalised drink experience and the complimentary truffle chips straight from France. The 70s/80s music is always so befitting for the ambiance. Will definitely be a regular here!\"\n\n⭐⭐⭐⭐⭐ \"I can highly recommend the bar experience. If you have never done it, it's a lot if fun. Albert and Fei created delicious and innovative cocktails, we enjoyed their company. In fact, all staff we encountered were kind and fun. The ambiance is wonderful, dim lighting, great music, beautiful decor, a very cool 'speakeasy' vibe. Great for ladies night or a date night, or even a night cap!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"An upscale cocktail bar in the heart of Yorkville, C-suite nevertheless feels like an escape\u2014 a brief weekend trip away from the city. Immediately upon entering you are struck by the lovely scent of dozens of candles, the Orient-Express inspired decor, and warm lighting that bathes the setting. The cocktails are elaborate and excellent, taking advantage not just taste but every sense, in the Space Mule: smells of citrus and fresh cinnamon, gentle crackles of embers, and a bombastic visual presentation compliment the rich and surprisingly complex flavours.\n\nFor those that prefer to keep it simple, they have an extensive whisky menu, which I had on the rocks paired with a beautifully carved sphere of ice. As you had your drinks, there was pleasant music throughout the night, at a reserved volume that clearly implied spurring flowing conversations were the main goal of the setting. The service was truly excellent, the servers knowledgeable, friendly, and very professional.\n\nOverall C-Suite is a truly one of a kind experience with its decor, cocktails, and vibe all being idiosyncratic and excellent. I would note that the prices for their signature cocktails were somewhat eye watering on first glance, and it certainly is an upscale option, but when witnessing the bartenders make your drink you do get the sense that to the extent that anything justifies a $40 cocktail, the time, skill, and passion put into not just the drinks but the whole experience by their staff certainly would. I would recommend C-Suite to anyone that enjoys cocktails, particularly as a place to end off the night of a memorable event such a birthday, anniversary, or other celebration that you do not want to forget.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Absolutely love this speakeasy style secret bar! Their bespoke experience is unreal. The bartenders are dynamic, intriguing, and you\u2019ll want to come back just to hang out with them. Visited this place 2 days in a row because I just couldn\u2019t resist. Love the personalised drink experience and the complimentary truffle chips straight from France. The 70s/80s music is always so befitting for the ambiance. Will definitely be a regular here!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I can highly recommend the bar experience. If you have never done it, it's a lot if fun. Albert and Fei created delicious and innovative cocktails, we enjoyed their company. In fact, all staff we encountered were kind and fun. The ambiance is wonderful, dim lighting, great music, beautiful decor, a very cool 'speakeasy' vibe. Great for ladies night or a date night, or even a night cap!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

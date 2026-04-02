@@ -12,32 +12,33 @@
     "text": "Discovered via ladystravelblog"
   },
   "narrative": {
-    "summary": "You're stepping into a hidden Little Italy alley where the nondescript exterior gives way to three distinct seating areas—light wood, clean lines, the kind of setup where you could disappear into a corner with a book or camp out with your laptop for hours. The bagels are the move: proper chewy rounds with garlic and herb cream cheese that actually tastes like both garlic and herbs. Oat cortados pull smooth and balanced, and you're looking at under $15 for bagel and coffee—the kind of pricing that makes this a regular habit.",
+    "summary": "You're stepping into a hidden Little Italy alley where the nondescript exterior gives way to three distinct seating areas\u2014light wood, clean lines, the kind of setup where you could disappear into a corner with a book or camp out with your laptop for hours. The bagels are the move: proper chewy rounds with garlic and herb cream cheese that actually tastes like both garlic and herbs. Oat cortados pull smooth and balanced, and you're looking at under $15 for bagel and coffee\u2014the kind of pricing that makes this a regular habit.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find this outpost tucked down a Little Italy alley, unassuming from the street until you step inside. The nondescript exterior gives way to three distinct seating areas—light wood, clean lines, the kind of setup where you could disappear into a corner with a book or camp out with your laptop for hours. It's the Boxcar aesthetic translated to a hideaway: stylish without trying, the kind of place that fills up with regulars who know what they're here for.",
+        "body": "You'll find this outpost tucked down a Little Italy alley, unassuming from the street until you step inside. The nondescript exterior gives way to three distinct seating areas\u2014light wood, clean lines, the kind of setup where you could disappear into a corner with a book or camp out with your laptop for hours. It's the Boxcar aesthetic translated to a hideaway: stylish without trying, the kind of place that fills up with regulars who know what they're here for.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The bagels are the move—proper chewy rounds topped with things like garlic and herb cream cheese that actually tastes like both garlic and herbs. The coffee program is serious: oat cortados pull smooth and balanced, Americanos come out clean and strong. Chocolate croissants show up too, though they play second fiddle to the bagel operation. You're looking at under $15 for bagel and coffee, the kind of pricing that makes this a regular habit rather than an occasion.",
+        "body": "The bagels are the move\u2014proper chewy rounds topped with things like garlic and herb cream cheese that actually tastes like both garlic and herbs. The coffee program is serious: oat cortados pull smooth and balanced, Americanos come out clean and strong. Chocolate croissants show up too, though they play second fiddle to the bagel operation. You're looking at under $15 for bagel and coffee, the kind of pricing that makes this a regular habit rather than an occasion.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your weekday sanctuary—come solo on a Tuesday morning when you need to think, or bring someone who appreciates a good hideaway over a scene. It's built for lingering, not rushing.",
+        "body": "This is your weekday sanctuary\u2014come solo on a Tuesday morning when you need to think, or bring someone who appreciates a good hideaway over a scene. It's built for lingering, not rushing.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"a little hidden location but inside is so stylish and cozy! i got a bagel with garlic and herbs spread it was really really good and my americano was good too. very nice ambiance and vibes, if i didnt live so far i would come back very often!\"\n\n⭐⭐⭐⭐⭐ \"Great vibes. Tucked away in a laneway it looks very non descript on the outside, but on the inside it's very cozy.\n\nOrdered a cortado and chocolate croissant. Cortado was great. Croissant was okay.\"\n\n⭐⭐⭐⭐⭐ \"I’ve been on the cafe hunt for years now, and I think I found my favourite.\n\nThis has it all; immaculate vibes across three seating areas for socializing or diving into a book, unreal oat cortados; and friendly professional staff.\n\nI love this spot. Might be the ideal happy place for those seeking peace.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"a little hidden location but inside is so stylish and cozy! i got a bagel with garlic and herbs spread it was really really good and my americano was good too. very nice ambiance and vibes, if i didnt live so far i would come back very often!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great vibes. Tucked away in a laneway it looks very non descript on the outside, but on the inside it's very cozy.\n\nOrdered a cortado and chocolate croissant. Cortado was great. Croissant was okay.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I\u2019ve been on the cafe hunt for years now, and I think I found my favourite.\n\nThis has it all; immaculate vibes across three seating areas for socializing or diving into a book, unreal oat cortados; and friendly professional staff.\n\nI love this spot. Might be the ideal happy place for those seeking peace.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

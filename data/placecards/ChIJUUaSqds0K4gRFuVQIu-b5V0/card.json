@@ -9,11 +9,11 @@
     "type": "shop",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 11:00 AM – 6:00 PM",
-      "Wednesday: 11:00 AM – 6:00 PM",
-      "Thursday: 11:00 AM – 6:00 PM",
-      "Friday: 11:00 AM – 6:00 PM",
-      "Saturday: 11:00 AM – 6:00 PM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.6,
@@ -25,32 +25,33 @@
     "text": "Discovered via swipe.com"
   },
   "narrative": {
-    "summary": "Toronto's premier architecture + design bookstore. City's largest selection of architecture, urbanism, and graphic design books. Independent. Inside 401 Richmond — the creative nerve centre. Book launches, design objects. 4.6★ (92 reviews).",
+    "summary": "Toronto's premier architecture + design bookstore. City's largest selection of architecture, urbanism, and graphic design books. Independent. Inside 401 Richmond \u2014 the creative nerve centre. Book launches, design objects. 4.6\u2605 (92 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're inside 401 Richmond, that converted industrial building that houses half of Toronto's creative class. Swipe occupies a ground-floor corner where white walls meet polished concrete, shelves arranged in precise grids holding stacked spines and deliberate objects—minimalist planters, Japanese stationery, sculptural bookends. The lighting's gallery-bright, and everything's displayed like it matters, because here it does.",
+        "body": "You're inside 401 Richmond, that converted industrial building that houses half of Toronto's creative class. Swipe occupies a ground-floor corner where white walls meet polished concrete, shelves arranged in precise grids holding stacked spines and deliberate objects\u2014minimalist planters, Japanese stationery, sculptural bookends. The lighting's gallery-bright, and everything's displayed like it matters, because here it does.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Collection",
-        "body": "This is where architects and designers come to find what Amazon doesn't stock—monographs on Brutalism, limited-run journals from Tokyo, heavyweight books on urban planning that cost what they weigh. Beyond the books, you'll find Muji-adjacent desk objects, graphic design posters, and houseware that looks like it belongs in a Kinfolk spread. Prices reflect the curation: books run $30-80, objects higher, but you're paying for what you won't see anywhere else in the city.",
+        "body": "This is where architects and designers come to find what Amazon doesn't stock\u2014monographs on Brutalism, limited-run journals from Tokyo, heavyweight books on urban planning that cost what they weigh. Beyond the books, you'll find Muji-adjacent desk objects, graphic design posters, and houseware that looks like it belongs in a Kinfolk spread. Prices reflect the curation: books run $30-80, objects higher, but you're paying for what you won't see anywhere else in the city.",
         "id": "block-the-collection-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Weekday afternoons when you need to buy a gift for someone whose taste intimidates you, or when you want to lose an hour browsing without small talk. Also smart before a book launch here—they host them regularly, and you'll want to scope the space first.",
+        "body": "Weekday afternoons when you need to buy a gift for someone whose taste intimidates you, or when you want to lose an hour browsing without small talk. Also smart before a book launch here\u2014they host them regularly, and you'll want to scope the space first.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Anyone interested in design, unique objects, and unique books really needs to go here. It's a place where you easily get cought up browsing and find no shortage of things that would be neat to have. They sell quite a wide variety of things. Must see for yourself.\"\n\n⭐⭐⭐⭐⭐ \"Lots of unique and great gift ideas for the design/creative folks in your life! Definitely a place to stop by for that interesting gift for someone's birthday or Christmas. Love the professional graphic design related items and lots of diverse products from houseware, books, stationary, toys and greeting cards to name a few. Everything is well laid out and very nice showcase of the products. Also ask the staff if you need assistance, they can search up items on their computers!\"\n\n⭐⭐⭐⭐⭐ \"If you love design,  will love this store. It’s like half a bookstore and half home decor. They have a variety of other items too. I actually discovered this retailer from a Instagram account who was showing some of their items. I have been in twice since then and this is now where I get cool gifts for all my family and friends. Everything I have gotten from here has been adored  by whoever I gave it to. I feel like I’m not sophisticated enough to understand more of their technical books, magazines and design aesthetic but I have found the staff to be exceptionally helpful and while I felt that way. They definitely make you feel like you are, which is so refreshing because the design world can be snooty. This is such a cool spot downtown and really they just have cool things that are unique and almost defy trend. If you go you will definitely become a more styled person, you can’t be around such beauty and style and not pick some of it up. Also the store itself like the building, is also just beautiful.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Anyone interested in design, unique objects, and unique books really needs to go here. It's a place where you easily get cought up browsing and find no shortage of things that would be neat to have. They sell quite a wide variety of things. Must see for yourself.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Lots of unique and great gift ideas for the design/creative folks in your life! Definitely a place to stop by for that interesting gift for someone's birthday or Christmas. Love the professional graphic design related items and lots of diverse products from houseware, books, stationary, toys and greeting cards to name a few. Everything is well laid out and very nice showcase of the products. Also ask the staff if you need assistance, they can search up items on their computers!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"If you love design,  will love this store. It\u2019s like half a bookstore and half home decor. They have a variety of other items too. I actually discovered this retailer from a Instagram account who was showing some of their items. I have been in twice since then and this is now where I get cool gifts for all my family and friends. Everything I have gotten from here has been adored  by whoever I gave it to. I feel like I\u2019m not sophisticated enough to understand more of their technical books, magazines and design aesthetic but I have found the staff to be exceptionally helpful and while I felt that way. They definitely make you feel like you are, which is so refreshing because the design world can be snooty. This is such a cool spot downtown and really they just have cool things that are unique and almost defy trend. If you go you will definitely become a more styled person, you can\u2019t be around such beauty and style and not pick some of it up. Also the store itself like the building, is also just beautiful.\""
       }
     ]
-  }
+  },
+  "type": "shop"
 }

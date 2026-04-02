@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJrwXyy4k1K4gRIm6Cx5vSe8c",
-    "name": "Pho Le 錦麗 (Baldwin)",
+    "name": "Pho Le \u9326\u9e97 (Baldwin)",
     "city": "Toronto",
     "address": "Baldwin Village (51 Baldwin St)",
     "type": "restaurant"
@@ -12,12 +12,12 @@
     "text": "Discovered via blogto.com"
   },
   "narrative": {
-    "summary": "Saigon pho institution (est. 1970, 50+ years). Michelin Bib Gourmand in Ho Chi Minh City. Herbs and spices flown in from Vietnam. Just opened downtown — their first location outside Richmond Hill. 3.7★ (3 reviews — brand new).",
+    "summary": "Saigon pho institution (est. 1970, 50+ years). Michelin Bib Gourmand in Ho Chi Minh City. Herbs and spices flown in from Vietnam. Just opened downtown \u2014 their first location outside Richmond Hill. 3.7\u2605 (3 reviews \u2014 brand new).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "Baldwin Village's narrow pedestrian stretch just got its first outpost of a Saigon institution that's been slinging pho since 1970. You're walking into a brand-new space that still smells like fresh paint, with simple tables and fluorescent lighting that doesn't apologize for itself—this is about the bowl, not the ambiance.",
+        "body": "Baldwin Village's narrow pedestrian stretch just got its first outpost of a Saigon institution that's been slinging pho since 1970. You're walking into a brand-new space that still smells like fresh paint, with simple tables and fluorescent lighting that doesn't apologize for itself\u2014this is about the bowl, not the ambiance.",
         "id": "block-the-space-0"
       },
       {
@@ -29,15 +29,16 @@
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You need a proper lunch reset on Baldwin—something honest and filling that won't slow you down for the rest of the day. Or when you're chasing a specific craving and want a bowl from a kitchen that's been perfecting it for half a century.",
+        "body": "You need a proper lunch reset on Baldwin\u2014something honest and filling that won't slow you down for the rest of the day. Or when you're chasing a specific craving and want a bowl from a kitchen that's been perfecting it for half a century.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Pho Le is what Baldwin St needed: excellent Pho. I came here during their soft opening.\n\nI got the combo: 1 soup plus 1 appetizer. Fresh spring roll was absolutely amazing: fresh, and the sauce that cane with it was outstanding. The House special pho was great, you can taste the cleanness in the soup without any MSG added, perfectly balanced meaty flavours with a hint of sweetness that comes from the vegetables. Paying an extra $3 and you get upside your Pho. My, however, was lacking beed slices, hence the low rating. Passed the comment to the servers. I will come back again and try the other dishes. Did not have dessert or any of their speciality drinks, as I was full.\"\n\n⭐⭐⭐⭐⭐ \"I’ve gone twice in less than 24hrs!  For dinner and then for lunch the next day.\nOrdered: Bun Rieu, Pho Ga (chicken) and the combo pho dac biet + appetizer (spring rolls) and added the Thai green tea.\nI loved the pho dac biet, spring rolls and Thai green tea!  So delicious!\nWill definitely be coming back!\"\n\n⭐⭐⭐⭐⭐ \"I highly recommend the Pho Dac Biet combo with fried chicken wings in fish sauce. The broth is sweet and fragrant with the aroma of beef bones, rich and flavorful. The meat is tender and juicy. The prices are reasonable, the service is good, and the space is clean and cozy. I will definitely come back to try other dishes!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Pho Le is what Baldwin St needed: excellent Pho. I came here during their soft opening.\n\nI got the combo: 1 soup plus 1 appetizer. Fresh spring roll was absolutely amazing: fresh, and the sauce that cane with it was outstanding. The House special pho was great, you can taste the cleanness in the soup without any MSG added, perfectly balanced meaty flavours with a hint of sweetness that comes from the vegetables. Paying an extra $3 and you get upside your Pho. My, however, was lacking beed slices, hence the low rating. Passed the comment to the servers. I will come back again and try the other dishes. Did not have dessert or any of their speciality drinks, as I was full.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I\u2019ve gone twice in less than 24hrs!  For dinner and then for lunch the next day.\nOrdered: Bun Rieu, Pho Ga (chicken) and the combo pho dac biet + appetizer (spring rolls) and added the Thai green tea.\nI loved the pho dac biet, spring rolls and Thai green tea!  So delicious!\nWill definitely be coming back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I highly recommend the Pho Dac Biet combo with fried chicken wings in fish sauce. The broth is sweet and fragrant with the aroma of beef bones, rich and flavorful. The meat is tender and juicy. The prices are reasonable, the service is good, and the space is clean and cozy. I will definitely come back to try other dishes!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

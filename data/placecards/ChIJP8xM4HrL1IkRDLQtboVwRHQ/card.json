@@ -9,11 +9,11 @@
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 6:00 – 10:30 PM",
-      "Wednesday: 6:00 – 10:30 PM",
-      "Thursday: 6:00 – 10:30 PM",
-      "Friday: 6:00 – 10:30 PM",
-      "Saturday: 6:00 – 10:30 PM",
+      "Tuesday: 6:00\u2009\u2013\u200910:30\u202fPM",
+      "Wednesday: 6:00\u2009\u2013\u200910:30\u202fPM",
+      "Thursday: 6:00\u2009\u2013\u200910:30\u202fPM",
+      "Friday: 6:00\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 6:00\u2009\u2013\u200910:30\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 5,
@@ -25,32 +25,33 @@
     "text": "Discovered via torontolife.com"
   },
   "narrative": {
-    "summary": "6-seat private dining in a Leslieville apartment. One seating nightly at 6:30pm, French-driven tasting menu guided by host Spike. Bookable on OpenTable. Toronto Life featured it as 'you practically need to apply.' 5.0★. The ultimate intimate dining.",
+    "summary": "6-seat private dining in a Leslieville apartment. One seating nightly at 6:30pm, French-driven tasting menu guided by host Spike. Bookable on OpenTable. Toronto Life featured it as 'you practically need to apply.' 5.0\u2605. The ultimate intimate dining.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You climb the stairs of a Leslieville walk-up on Logan Ave and ring the bell at an apartment door. Inside, Spike has set a single table for six in his living room—actual dining chairs, real flatware, the kind of lighting that makes everyone look good. It's exactly what it sounds like: dinner in someone's home, except that someone is cooking a full French tasting menu while pouring your wine.",
+        "body": "You climb the stairs of a Leslieville walk-up on Logan Ave and ring the bell at an apartment door. Inside, Spike has set a single table for six in his living room\u2014actual dining chairs, real flatware, the kind of lighting that makes everyone look good. It's exactly what it sounds like: dinner in someone's home, except that someone is cooking a full French tasting menu while pouring your wine.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Spike runs a multi-course French-driven tasting menu that changes based on what he's cooking that night—no static menu, no choices, just what arrives in front of you. The format is classic private dining: each course lands with an explanation, wine gets topped up between bites, and the pacing follows the room's conversation. Expect the kind of technique-forward cooking that would cost $200+ at a proper restaurant, delivered in an apartment where you can hear the chef working ten feet away. Book on OpenTable for the single 6:30pm seating—there's only one per night.",
+        "body": "Spike runs a multi-course French-driven tasting menu that changes based on what he's cooking that night\u2014no static menu, no choices, just what arrives in front of you. The format is classic private dining: each course lands with an explanation, wine gets topped up between bites, and the pacing follows the room's conversation. Expect the kind of technique-forward cooking that would cost $200+ at a proper restaurant, delivered in an apartment where you can hear the chef working ten feet away. Book on OpenTable for the single 6:30pm seating\u2014there's only one per night.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You're celebrating something that matters with five other people who actually like each other. This is the dinner you book when a regular restaurant—no matter how good—feels too impersonal, and you want an entire evening, not just a table.",
+        "body": "You're celebrating something that matters with five other people who actually like each other. This is the dinner you book when a regular restaurant\u2014no matter how good\u2014feels too impersonal, and you want an entire evening, not just a table.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Not just a 'dinner' but a beautiful evening dining experience. The chef hosted 6 of us for the entire evening and meticioulslcy  created some the most delicious dishes we've ever had!  To date, this is my favourite dining experience and beautiful manner in which to spend an evening in an exclusive setting with friends. Definitely elevating the dining scene in Toronto. Highly recommended.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Not just a 'dinner' but a beautiful evening dining experience. The chef hosted 6 of us for the entire evening and meticioulslcy  created some the most delicious dishes we've ever had!  To date, this is my favourite dining experience and beautiful manner in which to spend an evening in an exclusive setting with friends. Definitely elevating the dining scene in Toronto. Highly recommended.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

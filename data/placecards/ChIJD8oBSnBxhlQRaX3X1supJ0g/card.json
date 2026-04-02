@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:30 – 11:00 PM",
-      "Thursday: 5:30 – 11:00 PM",
-      "Friday: 5:30 PM – 12:00 AM",
-      "Saturday: 5:30 PM – 12:00 AM",
-      "Sunday: 5:30 – 11:00 PM"
+      "Wednesday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 5:30\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 5:30\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 1696,
@@ -27,32 +27,33 @@
     "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-from-the-michelin-guide-vancouver-2025"
   },
   "narrative": {
-    "summary": "Michelin 1-star Japanese-Italian fusion in a gorgeous second-floor Chinatown space. Jazz-bar atmosphere meets izakaya meets Italian trattoria. Architecture-obsessed John will love the room. One of Canada's most celebrated restaurants. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Michelin 1-star Japanese-Italian fusion in a gorgeous second-floor Chinatown space. Jazz-bar atmosphere meets izakaya meets Italian trattoria. Architecture-obsessed John will love the room. One of Canada's most celebrated restaurants. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You climb a narrow staircase in Chinatown to find a jewel-box second floor that shouldn't exist—curved banquettes in oxblood leather, art deco brass fixtures, and a long bar backlit like a 1960s Tokyo jazz club. The room splits the difference between izakaya and Italian supper club, all warm wood and dim pendant lights, with enough architectural detail to keep you scanning the ceiling between courses. It's the kind of space where the design does as much work as the kitchen.",
+        "body": "You climb a narrow staircase in Chinatown to find a jewel-box second floor that shouldn't exist\u2014curved banquettes in oxblood leather, art deco brass fixtures, and a long bar backlit like a 1960s Tokyo jazz club. The room splits the difference between izakaya and Italian supper club, all warm wood and dim pendant lights, with enough architectural detail to keep you scanning the ceiling between courses. It's the kind of space where the design does as much work as the kitchen.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The Japanese-Italian fusion here isn't gimmick—it's decades of immigrant cooking logic made Michelin-official. You'll find things like truffle pasta that leans more Piedmont than Tokyo, octopus salad with citrus and olive oil, and pork dishes that pull from both larders without announcing it. The omakase gives you the range family-style, though portions run small and prices run high for what lands on the plate. Expect hits and occasional misses—whole fish can skew dry, but when the kitchen nails it, you see why this place has the reputation it does.",
+        "body": "The Japanese-Italian fusion here isn't gimmick\u2014it's decades of immigrant cooking logic made Michelin-official. You'll find things like truffle pasta that leans more Piedmont than Tokyo, octopus salad with citrus and olive oil, and pork dishes that pull from both larders without announcing it. The omakase gives you the range family-style, though portions run small and prices run high for what lands on the plate. Expect hits and occasional misses\u2014whole fish can skew dry, but when the kitchen nails it, you see why this place has the reputation it does.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Book this for a night when you want to sit in a beautiful room as much as you want to eat—ideally with someone who'll appreciate the architecture between bites. The omakase makes sense for a group dinner where you're sharing and sampling, though solo at the bar with a couple of plates and a drink works just as well if you're here for the vibe.",
+        "body": "Book this for a night when you want to sit in a beautiful room as much as you want to eat\u2014ideally with someone who'll appreciate the architecture between bites. The omakase makes sense for a group dinner where you're sharing and sampling, though solo at the bar with a couple of plates and a drink works just as well if you're here for the vibe.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"We came for a group dinner, all in all it wasn’t bad. First time back in 10 years+. Not my favourite in Vancouver but nice ambiance, professional service, and fairly good pacing. There were some hits and some misses for me, nothing really stood out in particular. Whole fish was a bit dry. Octopus salad, truffle pasta and pork dishes nicely done. We opted for the omakase, I did enjoy the variety but the portions were mid for the price, 1-2 bites per person family style.\"\n\n⭐⭐⭐⭐⭐ \"My wife and I had a wonderful experience at Kissa Tonto this evening. Our server, Roberto, was amazing. Knowledgeable, fun and attentive. Though the entire team works really well to support service and vibe. The food was amazing. We had the omakase which highlighted some staples from the menu but the also elevated some dishes. We will definitely be returning.\"\n\n⭐⭐⭐⭐ \"First time visiting and was quite impressed with service and the flavours. The Japanese & Italian fusion was great but wished the portions were a little larger. Highlight of the night was definitely the steak (off menu) and the tiramisu. The tiramisu biscuit is dipped in plum wine and brandy which gives it a unique and refreshing taste. Notable mention is the green sauce on the octopus salad - had to lick the plate clean as our hostess suggested.\n\nOverall very nice experience and would return to try out some other dishes!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"We came for a group dinner, all in all it wasn\u2019t bad. First time back in 10 years+. Not my favourite in Vancouver but nice ambiance, professional service, and fairly good pacing. There were some hits and some misses for me, nothing really stood out in particular. Whole fish was a bit dry. Octopus salad, truffle pasta and pork dishes nicely done. We opted for the omakase, I did enjoy the variety but the portions were mid for the price, 1-2 bites per person family style.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"My wife and I had a wonderful experience at Kissa Tonto this evening. Our server, Roberto, was amazing. Knowledgeable, fun and attentive. Though the entire team works really well to support service and vibe. The food was amazing. We had the omakase which highlighted some staples from the menu but the also elevated some dishes. We will definitely be returning.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"First time visiting and was quite impressed with service and the flavours. The Japanese & Italian fusion was great but wished the portions were a little larger. Highlight of the night was definitely the steak (off menu) and the tiramisu. The tiramisu biscuit is dipped in plum wine and brandy which gives it a unique and refreshing taste. Notable mention is the green sauce on the octopus salad - had to lick the plate clean as our hostess suggested.\n\nOverall very nice experience and would return to try out some other dishes!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

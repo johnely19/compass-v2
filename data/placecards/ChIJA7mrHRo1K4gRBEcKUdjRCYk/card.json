@@ -7,12 +7,12 @@
     "address": "Address pending",
     "type": "grocery",
     "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 12:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
+      "Monday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.8,
@@ -25,5 +25,6 @@
   "narrative": {
     "summary": "This place surfaced in Disco as a high-signal pick. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

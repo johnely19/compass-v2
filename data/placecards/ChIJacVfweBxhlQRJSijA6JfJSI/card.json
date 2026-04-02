@@ -13,32 +13,33 @@
     "url": "https://604now.com/best-new-restaurants-vancouver-winter-2026/"
   },
   "narrative": {
-    "summary": "NEW (Sep 2025). Japanese snack bar with creative edge. Prawn toast on Chinese doughnut, Ibérico tomahawk. Outstanding cocktail program. Late-night-friendly. The kind of playful, inventive spot John loves. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "NEW (Sep 2025). Japanese snack bar with creative edge. Prawn toast on Chinese doughnut, Ib\u00e9rico tomahawk. Outstanding cocktail program. Late-night-friendly. The kind of playful, inventive spot John loves. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Commercial Drive, walking into a narrow room that feels more Tokyo snack bar than Vancouver casual. Low lighting, a compact bar running one side where you can watch hands moving quickly, maybe a dozen tables total. The vibe skews late-night even at 7pm—music's on, energy's up, and the design choices feel intentional without announcing themselves.",
+        "body": "You're on Commercial Drive, walking into a narrow room that feels more Tokyo snack bar than Vancouver casual. Low lighting, a compact bar running one side where you can watch hands moving quickly, maybe a dozen tables total. The vibe skews late-night even at 7pm\u2014music's on, energy's up, and the design choices feel intentional without announcing themselves.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Japanese cooking with a generous sense of play—prawn toast mounted on Chinese doughnut, an Ibérico tomahawk that's somehow both unexpected and exactly right for a place like this. The kitchen clearly wants you to have fun without losing the thread of technique. Cocktails are on par with the food, calibrated and creative, and they're churning housemade gelato that guests keep mentioning unprompted.",
+        "body": "This is Japanese cooking with a generous sense of play\u2014prawn toast mounted on Chinese doughnut, an Ib\u00e9rico tomahawk that's somehow both unexpected and exactly right for a place like this. The kitchen clearly wants you to have fun without losing the thread of technique. Cocktails are on par with the food, calibrated and creative, and they're churning housemade gelato that guests keep mentioning unprompted.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Late enough that you're eating dinner at 9 or 10, maybe after a gallery opening or when you want the night to keep unfolding. Also strong for a birthday or an anniversary where you don't want white tablecloths—just energy, care, and a kitchen that's clearly awake.",
+        "body": "Late enough that you're eating dinner at 9 or 10, maybe after a gallery opening or when you want the night to keep unfolding. Also strong for a birthday or an anniversary where you don't want white tablecloths\u2014just energy, care, and a kitchen that's clearly awake.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Had a great time at nomo nomo celebrating my friend’s birthday. Our waitress Rachel took amazing care of us. She noticed I didn’t finish the drink I ordered and kindly recommended another one, only charging me for the second drink. She also surprised us with dessert and a birthday candle for my friend, which was such a sweet touch. The service was wonderful and I loved their homemade gelato. We had a great night! 🎂\"\n\n⭐⭐⭐⭐⭐ \"If I could only recommend one restaurant in Vancouver, this would be it.\n\nHonestly, everything we tried was so good, not a single miss. The food is creative, well-balanced, and just genuinely delicious. You can really tell a lot of care goes into each dish.\n\nThe space itself is super cozy, with such a nice, relaxed vibe. Perfect for a date night, a chill dinner with friends, or just a place you want to sit and enjoy your time.\n\nAnd the cocktails… so good. Well-crafted, smooth, and actually memorable (not just pretty).\n\nOverall, amazing food, great drinks, and a lovely atmosphere.\nHighly recommend, this place is a must if you’re in Vancouver. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Nomo Nomo is a perfect spot on Commercial Drive for Japanese Izakaya style dining! Love how everything is in shareable sizes so you can try multiple dishes. Each dish is carefully thought out and complement each other so well. The drinks are so refreshing and innovative. While all the dishes and cocktails are absolutely delicious (you seriously can’t go wrong with any), my personal favourites are the King Salmon, Wagyu Tartare, Red Crab and Tonka and Ume for the drinks!\n\nThe space is designed with so many small details in mind, cool artwork and a cozy vibe. It’s perfect for a date night or catching up with friends/family!\n\nThe service is top-notch! Benedict, Wayne and the whole staff provide such great hospitality and are so friendly!\n\nWould highly recommend this place (they fill up fast so make sure to book a reso)!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had a great time at nomo nomo celebrating my friend\u2019s birthday. Our waitress Rachel took amazing care of us. She noticed I didn\u2019t finish the drink I ordered and kindly recommended another one, only charging me for the second drink. She also surprised us with dessert and a birthday candle for my friend, which was such a sweet touch. The service was wonderful and I loved their homemade gelato. We had a great night! \ud83c\udf82\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"If I could only recommend one restaurant in Vancouver, this would be it.\n\nHonestly, everything we tried was so good, not a single miss. The food is creative, well-balanced, and just genuinely delicious. You can really tell a lot of care goes into each dish.\n\nThe space itself is super cozy, with such a nice, relaxed vibe. Perfect for a date night, a chill dinner with friends, or just a place you want to sit and enjoy your time.\n\nAnd the cocktails\u2026 so good. Well-crafted, smooth, and actually memorable (not just pretty).\n\nOverall, amazing food, great drinks, and a lovely atmosphere.\nHighly recommend, this place is a must if you\u2019re in Vancouver. Will definitely be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Nomo Nomo is a perfect spot on Commercial Drive for Japanese Izakaya style dining! Love how everything is in shareable sizes so you can try multiple dishes. Each dish is carefully thought out and complement each other so well. The drinks are so refreshing and innovative. While all the dishes and cocktails are absolutely delicious (you seriously can\u2019t go wrong with any), my personal favourites are the King Salmon, Wagyu Tartare, Red Crab and Tonka and Ume for the drinks!\n\nThe space is designed with so many small details in mind, cool artwork and a cozy vibe. It\u2019s perfect for a date night or catching up with friends/family!\n\nThe service is top-notch! Benedict, Wayne and the whole staff provide such great hospitality and are so friendly!\n\nWould highly recommend this place (they fill up fast so make sure to book a reso)!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

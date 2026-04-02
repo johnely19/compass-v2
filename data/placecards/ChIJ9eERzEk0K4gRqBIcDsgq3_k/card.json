@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "4.7 rating, established gallery (since 1973) with museum-quality contemporary painting and sculpture",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

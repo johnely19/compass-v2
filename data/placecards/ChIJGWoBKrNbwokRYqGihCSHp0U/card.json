@@ -11,7 +11,8 @@
     "price_level": 3,
     "location": "127 Atlantic Ave, Brooklyn, NY 11201, USA",
     "lat": 40.690897,
-    "lng": -73.9958083
+    "lng": -73.9958083,
+    "type": "restaurant"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nAtlantic Ave at Henry St \u2014 the former Colonie space, now reborn.\n\nA seasonal, chef-driven New American restaurant with natural wine ambitions, opened February 2026 in the Brooklyn Heights space that housed Colonie for over a decade.",
@@ -46,5 +47,6 @@
   "discovery": {
     "text": "Eater NY \u2014 hidden cocktail bar on Atlantic Ave",
     "url": "https://ny.eater.com/maps/best-cocktail-bars-brooklyn"
-  }
+  },
+  "type": "restaurant"
 }

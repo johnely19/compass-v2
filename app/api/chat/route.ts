@@ -4,13 +4,9 @@ import { getUserProfile, getUserPreferences, getUserManifest, getUserDiscoveries
 import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
 import { buildUserContext } from '../../_lib/chat/user-context';
 import { sendChatMessage as sendAnthropicFallback } from '../../_lib/chat/anthropic-client';
-import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
 import type { ChatMessage, Discovery } from '../../_lib/types';
 
-/** Maximum message length to prevent abuse */
-const MAX_MESSAGE_LENGTH = 4000;
-
-const OPENCLAW_TIMEOUT_MS = 90_000; // longer timeout for streaming — tool calls can take time
+const OPENCLAW_TIMEOUT_MS = 30_000;
 
 interface OpenClawMessage {
   role: 'system' | 'user' | 'assistant';
@@ -18,13 +14,13 @@ interface OpenClawMessage {
 }
 
 /**
- * Stream chat completions from the OpenClaw Gateway via SSE.
- * Returns a ReadableStream or null if gateway is unavailable.
+ * Call the OpenClaw Gateway, returning the assistant reply text.
+ * Returns null if unreachable / timed out so the caller can fall back.
  */
-async function streamOpenClaw(
+async function callOpenClaw(
   messages: OpenClawMessage[],
   userId: string,
-): Promise<Response | null> {
+): Promise<string | null> {
   const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL;
   const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
 
@@ -46,67 +42,25 @@ async function streamOpenClaw(
       body: JSON.stringify({
         model: 'openclaw/concierge',
         messages,
-        stream: true,
       }),
       signal: controller.signal,
     });
-
-    clearTimeout(timeout);
 
     if (!res.ok) {
       console.error('[chat/openclaw] Gateway error:', res.status, await res.text().catch(() => ''));
       return null;
     }
 
-    return res;
+    // OpenAI-compatible response shape
+    const data = await res.json();
+    const choice = data?.choices?.[0];
+    return choice?.message?.content ?? null;
   } catch (err: unknown) {
-    clearTimeout(timeout);
     if (err instanceof Error && err.name === 'AbortError') {
       console.warn('[chat/openclaw] Gateway timeout after', OPENCLAW_TIMEOUT_MS, 'ms');
     } else {
       console.error('[chat/openclaw] Gateway unreachable:', err instanceof Error ? err.message : err);
     }
-    return null;
-  }
-}
-
-/**
- * Non-streaming OpenClaw fallback (used if stream: true isn't supported).
- */
-async function callOpenClawSync(
-  messages: OpenClawMessage[],
-  userId: string,
-): Promise<string | null> {
-  const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL;
-  const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
-
-  if (!gatewayUrl || !gatewayToken) return null;
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 30_000);
-
-  try {
-    const res = await fetch(`${gatewayUrl}/v1/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${gatewayToken}`,
-        'x-openclaw-agent-id': 'concierge',
-        'x-openclaw-scopes': 'operator.read,operator.write',
-        'x-openclaw-session-key': `compass:user:${userId}`,
-      },
-      body: JSON.stringify({
-        model: 'openclaw/concierge',
-        messages,
-      }),
-      signal: controller.signal,
-    });
-
-    if (!res.ok) return null;
-
-    const data = await res.json();
-    return data?.choices?.[0]?.message?.content ?? null;
-  } catch {
     return null;
   } finally {
     clearTimeout(timeout);
@@ -115,23 +69,10 @@ async function callOpenClawSync(
 
 export async function POST(request: NextRequest) {
   try {
+    // Get current user from cookie
     const user = await getCurrentUser();
     if (!user) {
       return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
-    }
-
-    // ─── Rate limiting ───────────────────────────────────────────
-    const rateResult = checkRateLimit(user.id);
-    if (!rateResult.allowed) {
-      const retrySeconds = Math.ceil(rateResult.retryAfterMs / 1000);
-      return NextResponse.json(
-        {
-          error: 'Rate limit exceeded',
-          reply: `You've been chatting a lot! 😅 Give me ${retrySeconds > 120 ? `${Math.ceil(retrySeconds / 60)} minutes` : `${retrySeconds} seconds`} and we can pick back up.`,
-          messageId: `${Date.now()}-rate-limit`,
-        },
-        { status: 429, headers: rateLimitHeaders(rateResult) },
-      );
     }
 
     const { message, history: clientHistory } = await request.json();
@@ -140,15 +81,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'message is required' }, { status: 400 });
     }
 
-    // ─── Input validation ────────────────────────────────────────
-    if (message.length > MAX_MESSAGE_LENGTH) {
-      return NextResponse.json(
-        { error: 'Message too long', reply: "That's a bit much — keep it under 4,000 characters? 📝", messageId: `${Date.now()}-validation` },
-        { status: 400 },
-      );
-    }
-
-    // Load user data in parallel
+    // Load user data from blob
     const [profile, preferences, manifest, discoveries] = await Promise.all([
       getUserProfile(user.id),
       getUserPreferences(user.id),
@@ -156,14 +89,16 @@ export async function POST(request: NextRequest) {
       getUserDiscoveries(user.id),
     ]);
 
+    // Build recent discoveries summary
     const recentDiscoveries = (discoveries?.discoveries || [])
       .sort((a: Discovery, b: Discovery) => new Date(b.discoveredAt).getTime() - new Date(a.discoveredAt).getTime())
       .slice(0, 5)
       .map((d: Discovery) => ({ name: d.name, type: d.type, city: d.city }));
 
+    // Get chat history from blob if not provided by client
     const history: ChatMessage[] = clientHistory || (await getChatHistory(user.id));
 
-    // Cap history at last 20 messages, truncate long content
+    // Cap history at last 20 messages and truncate long content
     const MAX_CONTENT = 2000;
     const trimmedHistory: OpenClawMessage[] = (history || []).slice(-20).map((msg: ChatMessage) => ({
       role: (msg.role === 'user' ? 'user' : 'assistant') as 'user' | 'assistant',
@@ -173,93 +108,24 @@ export async function POST(request: NextRequest) {
           : msg.content,
     }));
 
-    const systemContent = buildUserContext(user, profile, preferences, manifest, recentDiscoveries);
+    // Build user context system message
+    const systemContent = buildUserContext(
+      user,
+      profile,
+      preferences,
+      manifest,
+      recentDiscoveries,
+    );
 
+    // Assemble messages for OpenClaw (OpenAI-compatible format)
     const openclawMessages: OpenClawMessage[] = [
       { role: 'system', content: systemContent },
       ...trimmedHistory,
       { role: 'user', content: message },
     ];
 
-    // Try streaming from OpenClaw Gateway
-    const streamRes = await streamOpenClaw(openclawMessages, user.id);
-
-    if (streamRes?.body) {
-      // Proxy SSE stream to the browser, collecting full text for persistence
-      const encoder = new TextEncoder();
-      const decoder = new TextDecoder();
-      let fullReply = '';
-      const messageId = `${Date.now()}-concierge`;
-
-      const readable = new ReadableStream({
-        async start(controller) {
-          const reader = streamRes.body!.getReader();
-
-          try {
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
-
-              const chunk = decoder.decode(value, { stream: true });
-
-              // Parse SSE lines to extract content deltas
-              const lines = chunk.split('\n');
-              for (const line of lines) {
-                if (line.startsWith('data: ')) {
-                  const data = line.slice(6).trim();
-                  if (data === '[DONE]') {
-                    // Send our own [DONE] marker
-                    controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
-                    continue;
-                  }
-
-                  try {
-                    const parsed = JSON.parse(data);
-                    const delta = parsed?.choices?.[0]?.delta;
-                    if (delta?.content) {
-                      fullReply += delta.content;
-                      // Forward the SSE event to the browser
-                      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: delta.content, messageId })}\n\n`));
-                    }
-                    // Surface tool-use status so UI can show "searching..." etc.
-                    if (delta?.tool_calls) {
-                      const toolName = delta.tool_calls[0]?.function?.name;
-                      if (toolName) {
-                        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ tool: toolName, messageId })}\n\n`));
-                      }
-                    }
-                  } catch {
-                    // Not valid JSON — skip
-                  }
-                }
-              }
-            }
-          } catch (err) {
-            console.error('[chat/stream] Stream read error:', err);
-          } finally {
-            controller.close();
-            // Persist completed chat
-            if (fullReply) {
-              persistChatData(user.id, message, fullReply, messageId, history).catch(() => {});
-            }
-          }
-        },
-      });
-
-      return new Response(readable, {
-        headers: {
-          'Content-Type': 'text/event-stream',
-          'Cache-Control': 'no-cache',
-          Connection: 'keep-alive',
-          'X-Message-Id': messageId,
-          ...rateLimitHeaders(rateResult),
-        },
-      });
-    }
-
-    // Fallback: try non-streaming OpenClaw, then direct Anthropic
-    console.warn('[chat] OpenClaw streaming unavailable, trying sync fallback');
-    let reply = await callOpenClawSync(openclawMessages, user.id);
+    // Try OpenClaw Gateway first, fall back to direct Anthropic
+    let reply = await callOpenClaw(openclawMessages, user.id);
 
     if (reply === null) {
       console.warn('[chat] OpenClaw unavailable, falling back to direct Anthropic');
@@ -278,12 +144,11 @@ export async function POST(request: NextRequest) {
     }
 
     const messageId = `${Date.now()}-concierge`;
-    persistChatData(user.id, message, reply!, messageId, history).catch(() => {});
 
-    return NextResponse.json(
-      { reply, messageId },
-      { headers: rateLimitHeaders(rateResult) },
-    );
+    // Persist chat (fire-and-forget with timeout)
+    persistChatData(user.id, message, reply, messageId, history).catch(() => {});
+
+    return NextResponse.json({ reply, messageId });
   } catch (err) {
     console.error('[api/chat]', err instanceof Error ? err.message : err);
     return NextResponse.json({

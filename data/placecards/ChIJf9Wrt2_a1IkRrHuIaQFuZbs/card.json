@@ -6,7 +6,7 @@
     "name": "University of Toronto Scarborough (Andrews Building)",
     "city": "Toronto",
     "address": "Scarborough",
-    "type": "grocery",
+    "type": "architecture",
     "hours": [
       "Monday: 9:30 AM – 4:30 PM",
       "Tuesday: 9:30 AM – 4:30 PM",
@@ -26,5 +26,6 @@
   "narrative": {
     "summary": "John Andrews' 1964 brutalist masterpiece - one of Canada's most studied architectural works, surprisingly human in scale",
     "blocks": []
-  }
+  },
+  "type": "architecture"
 }

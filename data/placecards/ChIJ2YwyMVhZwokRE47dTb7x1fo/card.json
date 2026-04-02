@@ -21,6 +21,8 @@
       "food",
       "point_of_interest",
       "establishment"
-    ]
-  }
+    ],
+    "type": "restaurant"
+  },
+  "type": "restaurant"
 }

@@ -13,7 +13,7 @@
     "url": "https://paradisegrapevine.com/"
   },
   "narrative": {
-    "summary": "Urban winery making wine on-site + natty wine bar; late-night hours Wed–Sat, industrial-cool Geary Ave corridor. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Urban winery making wine on-site + natty wine bar; late-night hours Wed\u2013Sat, industrial-cool Geary Ave corridor. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
@@ -24,7 +24,7 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a natural wine bar first—low-intervention bottles, lots of skin-contact whites, a rotating glass list that leans funky and European. They make wine on-site, so you can taste what's fermenting in those tanks, and the frozen rosé is a summer fixture that's more slushy than frosé. The food is meant to accompany the wine—think snacks and small plates rather than full dinners—and cocktails round out the menu if you're not in a wine mood.",
+        "body": "This is a natural wine bar first\u2014low-intervention bottles, lots of skin-contact whites, a rotating glass list that leans funky and European. They make wine on-site, so you can taste what's fermenting in those tanks, and the frozen ros\u00e9 is a summer fixture that's more slushy than fros\u00e9. The food is meant to accompany the wine\u2014think snacks and small plates rather than full dinners\u2014and cocktails round out the menu if you're not in a wine mood.",
         "id": "block-the-food-1"
       },
       {
@@ -37,8 +37,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Great spot for natural wine. They have a great selection of bottles and glasses. They also do cocktails as well. Really pretty inside.\"\n\n⭐⭐⭐⭐⭐ \"Organized informal wine tasting here during Geary Art Crawl. Everyone loved it…we tried 5 different wines and we loved the varied selection. We also really enjoyed the frozen rose on offer. Will definitely come back to try more of what they have and the food!\"\n\n⭐⭐⭐⭐⭐ \"Such a lovely patio!!! The indoors looks nice as well.\nOur server was super nice and friendly.\nWe only had a quick snack and a couple glasses of wine.\nThe place is pretty busy but we managed to grab a table on their party.\nGo check out their patio before summer is gone!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Great spot for natural wine. They have a great selection of bottles and glasses. They also do cocktails as well. Really pretty inside.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Organized informal wine tasting here during Geary Art Crawl. Everyone loved it\u2026we tried 5 different wines and we loved the varied selection. We also really enjoyed the frozen rose on offer. Will definitely come back to try more of what they have and the food!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a lovely patio!!! The indoors looks nice as well.\nOur server was super nice and friendly.\nWe only had a quick snack and a couple glasses of wine.\nThe place is pretty busy but we managed to grab a table on their party.\nGo check out their patio before summer is gone!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

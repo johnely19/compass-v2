@@ -3,18 +3,18 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJNVuaEwA1K4gRgda7Mfki9DU",
-    "name": "Understory Café",
+    "name": "Understory Caf\u00e9",
     "city": "Toronto",
     "address": "Church St (The Village)",
     "type": "cafe",
     "hours": [
-      "Monday: 8:00 AM – 6:00 PM",
-      "Tuesday: 8:00 AM – 6:00 PM",
-      "Wednesday: 8:00 AM – 6:00 PM",
-      "Thursday: 8:00 AM – 6:00 PM",
-      "Friday: 8:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 103,
@@ -25,31 +25,31 @@
     "url": "https://www.gaycities.com/articles/103738/"
   },
   "narrative": {
-    "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already—strong early signal.",
+    "summary": "Queer-owned, opened Jan 30 2026; 4.9 rating with 88 reviews already\u2014strong early signal.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find it on Church Street in The Village, where Rowan and Dani have built something that feels like a friend's apartment if that friend had exceptional taste in ceramics and ferns. Handmade mugs line the shelves, tiny plants sprout from every surface, and the seating—actual comfortable seating, rare for a café—gives you room to spread out with your laptop or settle in with someone. The washroom is fully accessible, which shouldn't be notable but still is.",
+        "body": "You'll find it on Church Street in The Village, where Rowan and Dani have built something that feels like a friend's apartment if that friend had exceptional taste in ceramics and ferns. Handmade mugs line the shelves, tiny plants sprout from every surface, and the seating\u2014actual comfortable seating, rare for a caf\u00e9\u2014gives you room to spread out with your laptop or settle in with someone. The washroom is fully accessible, which shouldn't be notable but still is.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into careful, considered café fare—the kind of place where the pastries come from a good baker and the coffee program gets real attention. Early reviews mention a breakfast sandwich and soup options that rotate with intention, plus loose leaf tea that arrives in those handmade mugs. Expect to spend $8-15 for breakfast or lunch, less if you're just here for excellent coffee.",
+        "body": "The menu leans into careful, considered caf\u00e9 fare\u2014the kind of place where the pastries come from a good baker and the coffee program gets real attention. Early reviews mention a breakfast sandwich and soup options that rotate with intention, plus loose leaf tea that arrives in those handmade mugs. Expect to spend $8-15 for breakfast or lunch, less if you're just here for excellent coffee.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"A wonderful addition to the community! I visited Understory recently and am totally in love with it. The owners Rowan and Dani are so warm and welcoming, and the cafe itself is an absolute dream! Inside, the cafe feels like a cross between your friend’s living room, a nice wine bar, and a fairy forest. I love the tiny plant decor, handmade mugs, and thoughtful decor. The seating is ample and comfortable, with great table space for working or enjoying coffee. You can tell that a lot of thought went into the details of creating this new space.\n\nP.S. They have a fully accessible washroom, barrier free entrance, low counter for ordering, and variety of seating options, that all seem very accessible to folks using mobility devices!\"\n\n⭐⭐⭐⭐⭐ \"Had a nice little lunch here. The roast beef on a kind of pretzel like bread was pretty tasty. Great vibe overall.\"\n\n⭐⭐⭐⭐⭐ \"So friendly, sweet and kind. Love the coffee and pastries. Just tried the sandwiches today, and they're so good! Great bread, nice price. Such an amazing addition to the neighbourhood.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"A wonderful addition to the community! I visited Understory recently and am totally in love with it. The owners Rowan and Dani are so warm and welcoming, and the cafe itself is an absolute dream! Inside, the cafe feels like a cross between your friend\u2019s living room, a nice wine bar, and a fairy forest. I love the tiny plant decor, handmade mugs, and thoughtful decor. The seating is ample and comfortable, with great table space for working or enjoying coffee. You can tell that a lot of thought went into the details of creating this new space.\n\nP.S. They have a fully accessible washroom, barrier free entrance, low counter for ordering, and variety of seating options, that all seem very accessible to folks using mobility devices!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had a nice little lunch here. The roast beef on a kind of pretzel like bread was pretty tasty. Great vibe overall.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"So friendly, sweet and kind. Love the coffee and pastries. Just tried the sandwiches today, and they're so good! Great bread, nice price. Such an amazing addition to the neighbourhood.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "BEVERAGES\n⭐ Coffee\n   Available by day\n⭐ Wine\n   Available by night",
+        "body": "BEVERAGES\n\u2b50 Coffee\n   Available by day\n\u2b50 Wine\n   Available by night",
         "sections": [
           {
             "name": "BEVERAGES",
@@ -71,5 +71,6 @@
         ]
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

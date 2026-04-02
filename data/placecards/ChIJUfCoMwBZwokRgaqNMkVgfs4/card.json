@@ -9,40 +9,41 @@
     "address": "189 Nassau Ave, Brooklyn, NY 11222",
     "website": "https://bordertown.co",
     "price_level": 2,
-    "location": "189 Nassau Ave, Brooklyn, NY 11222"
+    "location": "189 Nassau Ave, Brooklyn, NY 11222",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNassau Ave at Humboldt St — corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations.",
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNassau Ave at Humboldt St \u2014 corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNassau Ave at Humboldt St — corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNassau Ave at Humboldt St \u2014 corner spot, former Polish grocery\n\nThe pandemic pop-up that became one of NYC's most sought-after tortilla destinations."
       },
       {
         "id": "block-2",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nBig, bright, family-friendly. The tortilla station is right at the counter — watch Jorge roll them to order."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nBig, bright, family-friendly. The tortilla station is right at the counter \u2014 watch Jorge roll them to order."
       },
       {
         "id": "block-3",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n$15 cocktails — made with Mexican agave spirits, balanced for the food.\n\n🍸 Signatures:\n• Desert Negroni — Cardenxe sotol, botanical, smoky\n• Picafresa — strawberry-tequila-mezcal, spicy-sweet\n• Coco Carajillo — topped with coconut cream, dark chocolate\n• Cadillac Margarita\n\n🍺 Caguamas: 32oz Carta Blanca or Tecate wrapped in Mexican newspaper"
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n$15 cocktails \u2014 made with Mexican agave spirits, balanced for the food.\n\n\ud83c\udf78 Signatures:\n\u2022 Desert Negroni \u2014 Cardenxe sotol, botanical, smoky\n\u2022 Picafresa \u2014 strawberry-tequila-mezcal, spicy-sweet\n\u2022 Coco Carajillo \u2014 topped with coconut cream, dark chocolate\n\u2022 Cadillac Margarita\n\n\ud83c\udf7a Caguamas: 32oz Carta Blanca or Tecate wrapped in Mexican newspaper"
       },
       {
         "id": "block-4",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗧𝗮𝗰𝗼𝘀 (flour tortillas made with Sonoran wheat + lard) $5-7\n• Carne con Chile — $7 ⭐\n• Frijoles y Queso — $5 ⭐\n• Pork Chicharrón — $7, with pickled onion\n• Taco of the Day — rotating\n\n𝗣𝗹𝗮𝘁𝗲𝘀 $17-24\n• Frijoles con Veneno — $22, refried beans with carne con chile, tortillas ⭐\n• Costillas en Salsa Verde — pork ribs, zesty sauce, beans, rice, tortillas\n• Mushroom Al Pastor Gringa — $22, cheesy, folded, piña-habanero salsa ⭐\n• Tacos de Nada — $18, potato corn tortillas, tomato broth, queso fresco\n\n𝗦𝗺𝗮𝗹𝗹 𝗣𝗹𝗮𝘁𝗲𝘀\n• Guacamole Norteño — $17, with pork belly chicharrónnes + Oaxacan tlayuda\n\nNote: Flour from Molino La Fama in Hermosillo, Sonora — the real thing. Breakfast tacos coming soon (gas pending)."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud835\udde7\ud835\uddee\ud835\uddf0\ud835\uddfc\ud835\ude00 (flour tortillas made with Sonoran wheat + lard) $5-7\n\u2022 Carne con Chile \u2014 $7 \u2b50\n\u2022 Frijoles y Queso \u2014 $5 \u2b50\n\u2022 Pork Chicharr\u00f3n \u2014 $7, with pickled onion\n\u2022 Taco of the Day \u2014 rotating\n\n\ud835\udde3\ud835\uddf9\ud835\uddee\ud835\ude01\ud835\uddf2\ud835\ude00 $17-24\n\u2022 Frijoles con Veneno \u2014 $22, refried beans with carne con chile, tortillas \u2b50\n\u2022 Costillas en Salsa Verde \u2014 pork ribs, zesty sauce, beans, rice, tortillas\n\u2022 Mushroom Al Pastor Gringa \u2014 $22, cheesy, folded, pi\u00f1a-habanero salsa \u2b50\n\u2022 Tacos de Nada \u2014 $18, potato corn tortillas, tomato broth, queso fresco\n\n\ud835\udde6\ud835\uddfa\ud835\uddee\ud835\uddf9\ud835\uddf9 \ud835\udde3\ud835\uddf9\ud835\uddee\ud835\ude01\ud835\uddf2\ud835\ude00\n\u2022 Guacamole Norte\u00f1o \u2014 $17, with pork belly chicharr\u00f3nnes + Oaxacan tlayuda\n\nNote: Flour from Molino La Fama in Hermosillo, Sonora \u2014 the real thing. Breakfast tacos coming soon (gas pending)."
       },
       {
         "id": "block-5",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nDinner for 2: $70-90 (with drinks)\n\nReservations: Walk-in only — no reservations, neighborhood-first\n\n🌐 bordertown.co\n📸 @bordertownbk\n\n𝗛𝗢𝗨𝗥𝗦\nWed–Thu: 5–10pm\nFri: 5pm–midnight\nSat: 3pm–midnight (bar opens 3pm)\nSun: 3–9pm (bar opens 3pm)\nMon–Tue: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Early weeknight (5–6pm Wed/Thu): Beat the crowd, same tortillas\n• Weekend afternoon (3pm): Start with drinks at the bar, stay for dinner\n• Avoid: Friday/Saturday dinner rush — this place packs out"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$\n\nDinner for 2: $70-90 (with drinks)\n\nReservations: Walk-in only \u2014 no reservations, neighborhood-first\n\n\ud83c\udf10 bordertown.co\n\ud83d\udcf8 @bordertownbk\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nWed\u2013Thu: 5\u201310pm\nFri: 5pm\u2013midnight\nSat: 3pm\u2013midnight (bar opens 3pm)\nSun: 3\u20139pm (bar opens 3pm)\nMon\u2013Tue: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Early weeknight (5\u20136pm Wed/Thu): Beat the crowd, same tortillas\n\u2022 Weekend afternoon (3pm): Start with drinks at the bar, stay for dinner\n\u2022 Avoid: Friday/Saturday dinner rush \u2014 this place packs out"
       },
       {
         "id": "block-6",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 189 Nassau Ave, Brooklyn, NY 11222\n\n• walking: 1 hour 18 mins • 3.5 mi\n• transit: 33 mins • 4.8 mi\n• driving: 18 mins • 4.2 mi (traffic: 18 mins)\n• bicycling: 25 mins • 4.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (18 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 189 Nassau Ave, Brooklyn, NY 11222\n\n\u2022 walking: 1 hour 18 mins \u2022 3.5 mi\n\u2022 transit: 33 mins \u2022 4.8 mi\n\u2022 driving: 18 mins \u2022 4.2 mi (traffic: 18 mins)\n\u2022 bicycling: 25 mins \u2022 4.1 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (18 mins)"
       }
     ]
   },
@@ -98,5 +99,6 @@
         "distanceText": "4.8 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

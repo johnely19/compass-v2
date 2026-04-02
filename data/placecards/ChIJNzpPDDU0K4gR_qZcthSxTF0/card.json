@@ -8,13 +8,13 @@
     "address": "Roncesvalles",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 7:00 PM",
-      "Tuesday: 10:00 AM – 7:00 PM",
-      "Wednesday: 10:00 AM – 7:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
-      "Sunday: 12:00 – 6:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 105,
@@ -25,7 +25,8 @@
     "text": "Discovered via yelp.ca"
   },
   "narrative": {
-    "summary": "Beautifully curated specialty food + gifts. Small, intentional inventory — every item chosen with care. The kind of shop that feels European. 4.8★ (105 reviews).",
+    "summary": "Beautifully curated specialty food + gifts. Small, intentional inventory \u2014 every item chosen with care. The kind of shop that feels European. 4.8\u2605 (105 reviews).",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

@@ -8,13 +8,13 @@
     "address": "Leslieville (1111 Queen St E)",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 – 9:00 PM",
-      "Tuesday: 5:00 – 9:00 PM",
-      "Wednesday: 5:00 – 9:00 PM",
-      "Thursday: 5:00 – 9:00 PM",
-      "Friday: 5:00 – 10:00 PM",
-      "Saturday: 5:00 – 10:00 PM",
-      "Sunday: 5:00 – 9:00 PM"
+      "Monday: 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u20099:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 92,
@@ -25,32 +25,33 @@
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
-    "summary": "Named after Juan Manuel Fangio — racing rival of Alberto Ascari, whose namesake restaurant held this exact address for 14 years. Italian classics with Argentine detours. Playful cocktails. The naming backstory alone is worth the visit. 4.7★ (89 reviews).",
+    "summary": "Named after Juan Manuel Fangio \u2014 racing rival of Alberto Ascari, whose namesake restaurant held this exact address for 14 years. Italian classics with Argentine detours. Playful cocktails. The naming backstory alone is worth the visit. 4.7\u2605 (89 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a stretch of Queen East where Leslieville's still got grit under its fingernails. Inside, the room feels like a Roman trattoria filtered through Buenos Aires — warm lighting bounces off white walls and dark wood tables, with just enough breathing room between seats that you can actually hear your dining companion. There's a low-key elegance here, the kind where the wine glasses are good crystal but nobody's precious about it.",
+        "body": "You're on a stretch of Queen East where Leslieville's still got grit under its fingernails. Inside, the room feels like a Roman trattoria filtered through Buenos Aires \u2014 warm lighting bounces off white walls and dark wood tables, with just enough breathing room between seats that you can actually hear your dining companion. There's a low-key elegance here, the kind where the wine glasses are good crystal but nobody's precious about it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu works that Italian-Argentine thread harder than you'd expect: you'll find osso buco ladled over saffron risotto alongside carne cruda that gets compared to the city's best. The vongole shows up garlicky and bright, shells cracked open in white wine, while the veal chop — a hefty, milk-fed cut — arrives with the kind of crust that only a ripping-hot pan delivers. This is cooking that respects tradition but doesn't worship it, ingredient-forward and generous without trying to reinvent the wheel. Mains run in the high twenties to mid-thirties, and the wine list pulls its weight.",
+        "body": "The menu works that Italian-Argentine thread harder than you'd expect: you'll find osso buco ladled over saffron risotto alongside carne cruda that gets compared to the city's best. The vongole shows up garlicky and bright, shells cracked open in white wine, while the veal chop \u2014 a hefty, milk-fed cut \u2014 arrives with the kind of crust that only a ripping-hot pan delivers. This is cooking that respects tradition but doesn't worship it, ingredient-forward and generous without trying to reinvent the wheel. Mains run in the high twenties to mid-thirties, and the wine list pulls its weight.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is a date-night spot when you want somewhere that feels like you know something the rest of the city doesn't yet — serious enough for an anniversary, loose enough that you can linger over a second bottle without the room stiffening up around you.",
+        "body": "This is a date-night spot when you want somewhere that feels like you know something the rest of the city doesn't yet \u2014 serious enough for an anniversary, loose enough that you can linger over a second bottle without the room stiffening up around you.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Amazing experience at Fangio Trattoria.\n\nBeautiful atmosphere, excellent service, and incredible food. The osso buco with risotto was absolutely delicious and the dessert was the perfect finish. Every dish was thoughtfully prepared and full of flavour.\n\nHighly recommend this place if you enjoy great Italian food.\"\n\n⭐⭐⭐⭐⭐ \"We had an incredible dinner at Fangio Trattoria! We ordered the Carne Cruda, Veal Chop, and Vongole, and every dish was beautifully executed with rich flavour and top-quality ingredients. The veal chop was perfectly cooked, the vongole was fresh and aromatic, and the carne cruda was one of the best we’ve had in the city.\n\nTheir wine list is outstanding — clearly curated with passion and knowledge. We enjoyed a fantastic bottle that paired perfectly with our meal.\n\nA huge thank you to Mathew and the entire team for the warm, attentive, and professional service. They made the whole experience feel special from start to finish.\n\nHighly recommend Fangio Trattoria — we’ll definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"Our favorite date night spot in Leslieville.\n\nFood is very tasty - they finally added the carbonara to their menu and I think about their focaccia very often. We always get exceptional service (would recommend bar seating). Just to note, the restaurant can get loud, but overall has good vibes!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing experience at Fangio Trattoria.\n\nBeautiful atmosphere, excellent service, and incredible food. The osso buco with risotto was absolutely delicious and the dessert was the perfect finish. Every dish was thoughtfully prepared and full of flavour.\n\nHighly recommend this place if you enjoy great Italian food.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We had an incredible dinner at Fangio Trattoria! We ordered the Carne Cruda, Veal Chop, and Vongole, and every dish was beautifully executed with rich flavour and top-quality ingredients. The veal chop was perfectly cooked, the vongole was fresh and aromatic, and the carne cruda was one of the best we\u2019ve had in the city.\n\nTheir wine list is outstanding \u2014 clearly curated with passion and knowledge. We enjoyed a fantastic bottle that paired perfectly with our meal.\n\nA huge thank you to Mathew and the entire team for the warm, attentive, and professional service. They made the whole experience feel special from start to finish.\n\nHighly recommend Fangio Trattoria \u2014 we\u2019ll definitely be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Our favorite date night spot in Leslieville.\n\nFood is very tasty - they finally added the carbonara to their menu and I think about their focaccia very often. We always get exceptional service (would recommend bar seating). Just to note, the restaurant can get loud, but overall has good vibes!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

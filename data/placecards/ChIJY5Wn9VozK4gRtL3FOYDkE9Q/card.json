@@ -12,64 +12,64 @@
     "website": "https://www.capocaccia.ca/",
     "location": "1366 Yonge St, Toronto, ON M4T 3A7, Canada",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 11:00 PM",
-      "Saturday: 11:00 AM – 11:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 892,
     "price_level": 3
   },
   "narrative": {
-    "summary": "You're just south of St. Clair on Yonge, stepping into a trattoria smaller than you'd expect—close-set tables, warm lighting, the kind of space where conversations layer over each other without getting loud. The kitchen knows its way around proper Italian fundamentals: thick paccheri tubes catching chunks of sausage and sweet peppers, fritto di calamari that comes out actually crisp instead of soggy rings. The heated patio works year-round, strung with lights and enclosed enough that you forget you're eating outside in February.",
+    "summary": "You're just south of St. Clair on Yonge, stepping into a trattoria smaller than you'd expect\u2014close-set tables, warm lighting, the kind of space where conversations layer over each other without getting loud. The kitchen knows its way around proper Italian fundamentals: thick paccheri tubes catching chunks of sausage and sweet peppers, fritto di calamari that comes out actually crisp instead of soggy rings. The heated patio works year-round, strung with lights and enclosed enough that you forget you're eating outside in February.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find it just south of St. Clair on Yonge, where the neighborhood shifts from business strip to residential calm. Inside, the trattoria runs smaller than you'd expect—close-set tables, warm lighting that makes everyone look good, the kind of space where conversations layer over each other without getting loud. The heated patio works year-round, strung with lights and enclosed enough that you forget you're eating outside in February.",
+        "body": "You'll find it just south of St. Clair on Yonge, where the neighborhood shifts from business strip to residential calm. Inside, the trattoria runs smaller than you'd expect\u2014close-set tables, warm lighting that makes everyone look good, the kind of space where conversations layer over each other without getting loud. The heated patio works year-round, strung with lights and enclosed enough that you forget you're eating outside in February.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen knows its way around proper Italian fundamentals—thick paccheri tubes catching chunks of sausage and sweet peppers, fritto di calamari that comes out actually crisp instead of the usual soggy rings. Prices land where a neighborhood trattoria should: reasonable enough that you'll come back next week, not just for special occasions. They'll bring focaccia on the side without you asking.",
+        "body": "The kitchen knows its way around proper Italian fundamentals\u2014thick paccheri tubes catching chunks of sausage and sweet peppers, fritto di calamari that comes out actually crisp instead of the usual soggy rings. Prices land where a neighborhood trattoria should: reasonable enough that you'll come back next week, not just for special occasions. They'll bring focaccia on the side without you asking.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "Capocaccia Trattoria",
-        "body": "📍 Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada"
+        "body": "\ud83d\udccd Capocaccia Trattoria\n1366 Yonge St, Toronto, ON M4T 3A7, Canada"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (889 reviews)\nPhone: (416) 921-3141\nWebsite: https://www.capocaccia.ca/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.4 (889 reviews)\nPhone: (416) 921-3141\nWebsite: https://www.capocaccia.ca/"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1366 Yonge St, Toronto, ON M4T 3A7, Canada\n\n• walking: 3 mins • 0.2 km\n• transit: 3 mins • 0.2 km\n• driving: 1 min • 0.2 km (traffic: 1 min)\n• bicycling: 1 min • 0.2 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (3 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1366 Yonge St, Toronto, ON M4T 3A7, Canada\n\n\u2022 walking: 3 mins \u2022 0.2 km\n\u2022 transit: 3 mins \u2022 0.2 km\n\u2022 driving: 1 min \u2022 0.2 km (traffic: 1 min)\n\u2022 bicycling: 1 min \u2022 0.2 km\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (3 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Very nice trattoria, a few minutes walk south of Yonge/St Clair with a cosy and friendly atmosphere. I had the Paccheri salciccia e peperone which was excellent, with a bit of focaccia on the side. The prices were surprisingly reasonable and I'll definitely visit again if I'm in the neighborhood.\"\n\n⭐⭐⭐⭐⭐ \"I definitely think this place is a hidden gem. The patio was very cozy and warm for winter, and the atmosphere was just perfect. The food was excellent. We ordered the fritto di calamari and the pizza diavolina, and the calamari was soooo good. The staff were also friendly and nice.\"\n\n⭐⭐⭐⭐⭐ \"Decided to come here for my 30th birthday with my girlfriend. Really great experience overall. The pizza, pasta, and veal osso buco were all delicious and well prepared, but what stood out most was the service. Jonathan was attentive, professional, and made sure everything ran smoothly without ever feeling intrusive. Couldn’t say enough good things about the overall experience that we had!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very nice trattoria, a few minutes walk south of Yonge/St Clair with a cosy and friendly atmosphere. I had the Paccheri salciccia e peperone which was excellent, with a bit of focaccia on the side. The prices were surprisingly reasonable and I'll definitely visit again if I'm in the neighborhood.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I definitely think this place is a hidden gem. The patio was very cozy and warm for winter, and the atmosphere was just perfect. The food was excellent. We ordered the fritto di calamari and the pizza diavolina, and the calamari was soooo good. The staff were also friendly and nice.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Decided to come here for my 30th birthday with my girlfriend. Really great experience overall. The pizza, pasta, and veal osso buco were all delicious and well prepared, but what stood out most was the service. Jonathan was attentive, professional, and made sure everything ran smoothly without ever feeling intrusive. Couldn\u2019t say enough good things about the overall experience that we had!\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "ANTIPASTI\n• Focaccia Toscana — $7\n   housemade rosemary olive oil focaccia\n• Olive Miste Calde — $10\n   warm Cerignola olives\n• Crochette di Patate e Pecorino — $16\n   potato and pecorino cheese croquettes, 'nduja mayo\n⭐ Carpaccio di Manzo — $24\n   thin sliced beef, truffle emulsion, shallots, bread crumbs, wild arugula, cremini mushrooms, parmigiano\n• Fritto di Calamari — $25\n   deep fried calamari, lemon aioli\n⭐ Polipo alla Griglia — $36-66\n   half or whole grilled Moroccan octopus, cherry tomato emulsion, n'duja mayo potatoes, condimento ragusano\n\nINSALATE\n• Verde — $17\n   radicchio treviso, baby gem, boston lettuce, carrot puree, pickled carrots, citrus vinaigrette\n• Cesare — $17\n   baby romaine, pancetta, parmigiano, anchovies, croutons\n• Cavoletti — $19\n   shaved brussel sprouts, pickled red onion, almonds, pecorino\n• Rucola — $20\n   organic arugula, clementines, parmigiano, citrus dressing\n\nPIZZE\n• Margherita — $21\n   tomato, fior di latte, basil\n• Melina — $24\n   tomato, goat cheese, arugula, prosciutto\n• Dante — $26\n   fior di latte, gorgonzola, pears, prosciutto, honey, walnuts\n• Diavolina — $25\n   tomato, provolone, taleggio, soppressata, nduja, honey\n⭐ Piemonte — $26\n   fior di latte, truffle crema, mixed mushrooms, fontina cheese, chives\n• Burrata — $29\n   tomato, fresh burrata, basil\n\nPASTE\n• Orecchiette e Rapini — $23\n   sauteed rapini, chili, basil, anchovies\n• Spaghettone Cacio e Pepe — $24\n   DOP pecorino Toscano, black pepper",
+        "body": "ANTIPASTI\n\u2022 Focaccia Toscana \u2014 $7\n   housemade rosemary olive oil focaccia\n\u2022 Olive Miste Calde \u2014 $10\n   warm Cerignola olives\n\u2022 Crochette di Patate e Pecorino \u2014 $16\n   potato and pecorino cheese croquettes, 'nduja mayo\n\u2b50 Carpaccio di Manzo \u2014 $24\n   thin sliced beef, truffle emulsion, shallots, bread crumbs, wild arugula, cremini mushrooms, parmigiano\n\u2022 Fritto di Calamari \u2014 $25\n   deep fried calamari, lemon aioli\n\u2b50 Polipo alla Griglia \u2014 $36-66\n   half or whole grilled Moroccan octopus, cherry tomato emulsion, n'duja mayo potatoes, condimento ragusano\n\nINSALATE\n\u2022 Verde \u2014 $17\n   radicchio treviso, baby gem, boston lettuce, carrot puree, pickled carrots, citrus vinaigrette\n\u2022 Cesare \u2014 $17\n   baby romaine, pancetta, parmigiano, anchovies, croutons\n\u2022 Cavoletti \u2014 $19\n   shaved brussel sprouts, pickled red onion, almonds, pecorino\n\u2022 Rucola \u2014 $20\n   organic arugula, clementines, parmigiano, citrus dressing\n\nPIZZE\n\u2022 Margherita \u2014 $21\n   tomato, fior di latte, basil\n\u2022 Melina \u2014 $24\n   tomato, goat cheese, arugula, prosciutto\n\u2022 Dante \u2014 $26\n   fior di latte, gorgonzola, pears, prosciutto, honey, walnuts\n\u2022 Diavolina \u2014 $25\n   tomato, provolone, taleggio, soppressata, nduja, honey\n\u2b50 Piemonte \u2014 $26\n   fior di latte, truffle crema, mixed mushrooms, fontina cheese, chives\n\u2022 Burrata \u2014 $29\n   tomato, fresh burrata, basil\n\nPASTE\n\u2022 Orecchiette e Rapini \u2014 $23\n   sauteed rapini, chili, basil, anchovies\n\u2022 Spaghettone Cacio e Pepe \u2014 $24\n   DOP pecorino Toscano, black pepper",
         "sections": [
           {
             "name": "ANTIPASTI",
@@ -255,5 +255,6 @@
         "distanceText": "0.2 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

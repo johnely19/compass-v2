@@ -13,32 +13,33 @@
     "url": "https://www.destinationvancouver.com/inspirations/food-and-drink/indigenous-dining-and-artisanal-food-in-vancouver"
   },
   "narrative": {
-    "summary": "Vancouver's ONLY Indigenous restaurant. Owner Inez Cook. Signature bannock, wild salmon, game meats. Culturally significant and genuinely delicious. 4.7 rating. Sunday brunch service too. A must for experiencing something you can't get anywhere else. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Vancouver's ONLY Indigenous restaurant. Owner Inez Cook. Signature bannock, wild salmon, game meats. Culturally significant and genuinely delicious. 4.7 rating. Sunday brunch service too. A must for experiencing something you can't get anywhere else. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Fairview block, walking into what feels more like a gathering place than a restaurant—wood tables, Indigenous art on the walls, and the kind of unpretentious warmth that comes from a single owner with a clear vision. Inez Cook runs the room and kitchen with the ease of someone who knows exactly what she's built here. It's intimate without being cramped, the kind of spot where you notice the details—carved pieces, woven textiles—because they're earned, not decorated.",
+        "body": "You're on a quiet Fairview block, walking into what feels more like a gathering place than a restaurant\u2014wood tables, Indigenous art on the walls, and the kind of unpretentious warmth that comes from a single owner with a clear vision. Inez Cook runs the room and kitchen with the ease of someone who knows exactly what she's built here. It's intimate without being cramped, the kind of spot where you notice the details\u2014carved pieces, woven textiles\u2014because they're earned, not decorated.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Vancouver's only Indigenous restaurant, and the menu centers on what that actually means: wild BC salmon, bison, elk, and house-made bannock that's fluffy, golden, and impossible to stop eating. The game sausage comes with blueberry sage sauce and mash that regulars order repeatedly, while the bison bone marrow arrives rich and molten, begging for bannock to scoop it with. You'll also find mushrooms piled on toasted bannock with Brie and that same blueberry sage, plus an Indigenous wine list that's as considered as the food. Mains run around $20-30, and the Dine Out menu—when it's on—consistently delivers.",
+        "body": "This is Vancouver's only Indigenous restaurant, and the menu centers on what that actually means: wild BC salmon, bison, elk, and house-made bannock that's fluffy, golden, and impossible to stop eating. The game sausage comes with blueberry sage sauce and mash that regulars order repeatedly, while the bison bone marrow arrives rich and molten, begging for bannock to scoop it with. You'll also find mushrooms piled on toasted bannock with Brie and that same blueberry sage, plus an Indigenous wine list that's as considered as the food. Mains run around $20-30, and the Dine Out menu\u2014when it's on\u2014consistently delivers.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Sunday brunch if you want the full experience without the evening pressure, or a weeknight dinner when you're ready to eat something you genuinely can't find anywhere else. This is a deliberate choice—the kind of meal that sticks with you, not background noise.",
+        "body": "Sunday brunch if you want the full experience without the evening pressure, or a weeknight dinner when you're ready to eat something you genuinely can't find anywhere else. This is a deliberate choice\u2014the kind of meal that sticks with you, not background noise.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Salmon & Bannock is an absolute gem. The bison bone marrow is my all‑time favorite – rich, indulgent, and perfectly balanced – and this year’s Dine Out bison ribs were so tender they literally melted in your mouth. The Dine Out menu overall was excellent, and their Indigenous wine list is delicious and pairs beautifully with the food. On the regular menu, the game sausage appetizer and main are always a standout: in my opinion, the best sausage, served with blueberry sage sauce, gravy, and amazing mashed potatoes. The mushrooms on toasted bannock with Brie, blueberry sage, and gravy are to die for and a must‑order appetizer. I’m also a big fan of the game sampler, but honestly you can’t go wrong with any of their starters. Service is warm and welcoming, and I can’t wait to come back.\"\n\n⭐⭐⭐⭐⭐ \"Great food and staff is very welcoming! Tried a 3-course menu that did not disappoint. My first time having bannock and I’m completely hooked with it! There was a birthday party on the day I was there, having the vibe of everyone in the restaurant singing happy birthday definitely leveled up the experience.\"\n\n⭐⭐⭐⭐⭐ \"Went there 3 weeks ago during the dining out season. Highly recommend the duck leg and the bison meat, so delicious that we finished so quick then paired a wine flight. Warm service from Bridget, definitely would like to try other interesting ingredients from the menu.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Salmon & Bannock is an absolute gem. The bison bone marrow is my all\u2011time favorite \u2013 rich, indulgent, and perfectly balanced \u2013 and this year\u2019s Dine Out bison ribs were so tender they literally melted in your mouth. The Dine Out menu overall was excellent, and their Indigenous wine list is delicious and pairs beautifully with the food. On the regular menu, the game sausage appetizer and main are always a standout: in my opinion, the best sausage, served with blueberry sage sauce, gravy, and amazing mashed potatoes. The mushrooms on toasted bannock with Brie, blueberry sage, and gravy are to die for and a must\u2011order appetizer. I\u2019m also a big fan of the game sampler, but honestly you can\u2019t go wrong with any of their starters. Service is warm and welcoming, and I can\u2019t wait to come back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great food and staff is very welcoming! Tried a 3-course menu that did not disappoint. My first time having bannock and I\u2019m completely hooked with it! There was a birthday party on the day I was there, having the vibe of everyone in the restaurant singing happy birthday definitely leveled up the experience.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went there 3 weeks ago during the dining out season. Highly recommend the duck leg and the bison meat, so delicious that we finished so quick then paired a wine flight. Warm service from Bridget, definitely would like to try other interesting ingredients from the menu.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

@@ -9,11 +9,11 @@
     "type": "cafe",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:30 PM – 12:30 AM",
-      "Wednesday: 5:30 PM – 2:00 AM",
-      "Thursday: 5:30 PM – 2:00 AM",
-      "Friday: 5:30 PM – 2:00 AM",
-      "Saturday: 5:30 PM – 2:00 AM",
+      "Tuesday: 5:30\u202fPM\u2009\u2013\u200912:30\u202fAM",
+      "Wednesday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Thursday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.4,
@@ -26,32 +26,33 @@
     "text": "Discovered via toronto-travel-guide.com"
   },
   "narrative": {
-    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto — next-gen artists, eclectic programming. 4.4★ (876 reviews). $$",
+    "summary": "Experimental jazz + spoken word in a narrow, dimly lit room. The most cutting-edge jazz spot in Toronto \u2014 next-gen artists, eclectic programming. 4.4\u2605 (876 reviews). $$",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Queen West, past the chain shops, where the street still has some edge. Inside, it's a narrow room with dim lighting that leads to a back performance space—the kind of place where the stage feels close enough to see the spit valves empty. The entrance fee ($10-15) gets you past the front bar into that back room where experimental jazz and spoken word happen inches from your drink.",
+        "body": "You're on Queen West, past the chain shops, where the street still has some edge. Inside, it's a narrow room with dim lighting that leads to a back performance space\u2014the kind of place where the stage feels close enough to see the spit valves empty. The entrance fee ($10-15) gets you past the front bar into that back room where experimental jazz and spoken word happen inches from your drink.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "There isn't any. This is a listening room with a drinks menu—beer, wine, cocktails at reasonable prices for a venue that actually pays musicians. You're here for the next-gen jazz artists and unscripted collaborations, not dinner. Grab food before you come or after the set ends.",
+        "body": "There isn't any. This is a listening room with a drinks menu\u2014beer, wine, cocktails at reasonable prices for a venue that actually pays musicians. You're here for the next-gen jazz artists and unscripted collaborations, not dinner. Grab food before you come or after the set ends.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go on a night when you actually want to hear something you've never heard before—smash jams, experimental sets, spoken word that doesn't play it safe. This isn't background music for conversation; it's a proper listening room where the programming takes risks.",
+        "body": "Go on a night when you actually want to hear something you've never heard before\u2014smash jams, experimental sets, spoken word that doesn't play it safe. This isn't background music for conversation; it's a proper listening room where the programming takes risks.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Had a fantastic time coming here for a jazz night. Inspiring music and stories.  Owner Shawn was great to give a tour of the back room as well. Has a drinks menu. No food. Looking forward to coming back. $15 entrance fee.\"\n\n⭐⭐⭐⭐⭐ \"Funky place for Jazz! I was here for a smash jam of Local Jazz artists that decided to collaborate together unscripted! Super fun and different. Great service too and alcohol price was reasonable. $10 dollars entry fee to the back stage room.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had a fantastic time coming here for a jazz night. Inspiring music and stories.  Owner Shawn was great to give a tour of the back room as well. Has a drinks menu. No food. Looking forward to coming back. $15 entrance fee.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Funky place for Jazz! I was here for a smash jam of Local Jazz artists that decided to collaborate together unscripted! Super fun and different. Great service too and alcohol price was reasonable. $10 dollars entry fee to the back stage room.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

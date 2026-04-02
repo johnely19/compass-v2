@@ -12,7 +12,7 @@
     "text": "Discovered via thestar.com Feb 2026"
   },
   "narrative": {
-    "summary": "Larger 400-seat venue with eclectic programming—genre nights, premieres, cult classics. Good backup when Revue is sold out. Strong 4.6 rating.",
+    "summary": "Larger 400-seat venue with eclectic programming\u2014genre nights, premieres, cult classics. Good backup when Revue is sold out. Strong 4.6 rating.",
     "blocks": [
       {
         "type": "prose",
@@ -23,7 +23,7 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a cinema, so you're working with concession stand snacks—popcorn, candy, the usual—but the real draw is the drinks program. The artisan area up front pours wine and cocktails that go beyond the standard beer-in-a-plastic-cup situation, and the full bar inside means you can actually settle in with something decent during a double feature. Expect to spend around $10-15 on drinks, with snacks running standard concession pricing.",
+        "body": "This is a cinema, so you're working with concession stand snacks\u2014popcorn, candy, the usual\u2014but the real draw is the drinks program. The artisan area up front pours wine and cocktails that go beyond the standard beer-in-a-plastic-cup situation, and the full bar inside means you can actually settle in with something decent during a double feature. Expect to spend around $10-15 on drinks, with snacks running standard concession pricing.",
         "id": "block-the-food-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"It was my first time coming to this theatre and I was pleasantly surprised. The seats were comfortable, spacious, rocked back and forth, lots of leg room and had a cup holder.\nIt was a lot bigger theatre than I thought and the lighting and acoustics were superb. You There is also a concession stand where you can buy snacks, cocktails and other drinks.\nWe saw the Hallmark parody. It started 9 minutes after 2:00 and was only an hour and 20 minutes long. I wish it was longer. The front of this theatre has an artisan area where you can buy wine, other alcoholic drinks and other goodies. And next door is a Green P underground parking. We only paid $10 for 5 hours. This area is surrounded by many restaurants. I would love to come back and see something else.\"\n\n⭐⭐⭐⭐⭐ \"The Royal is such a wonderful venue! ✨ I recently visited for the Candlelight concert with Justin Timberlake’s music, and the whole experience was magical. The atmosphere was intimate and cozy, with the candlelight creating a truly special vibe.\n\nThe sound was excellent, every note was clear and emotional, and the setting made it feel very personal. The staff was friendly and everything was well organized, which added to the enjoyment.\n\nI highly recommend The Royal for anyone who wants to experience concerts in a unique and unforgettable way. I’ll definitely be coming back for more events here! 🎶🕯️\"\n\n⭐⭐⭐⭐⭐ \"Recently we got the opportunity to see The Royal first time from inside for the Candlelight Concert. It's a nice theater not too big, not too small but definitely has a great cozy feel. Its situated in little Italy with nice restaurants close by. So after the event we could further enjoy the beautiful area.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"It was my first time coming to this theatre and I was pleasantly surprised. The seats were comfortable, spacious, rocked back and forth, lots of leg room and had a cup holder.\nIt was a lot bigger theatre than I thought and the lighting and acoustics were superb. You There is also a concession stand where you can buy snacks, cocktails and other drinks.\nWe saw the Hallmark parody. It started 9 minutes after 2:00 and was only an hour and 20 minutes long. I wish it was longer. The front of this theatre has an artisan area where you can buy wine, other alcoholic drinks and other goodies. And next door is a Green P underground parking. We only paid $10 for 5 hours. This area is surrounded by many restaurants. I would love to come back and see something else.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The Royal is such a wonderful venue! \u2728 I recently visited for the Candlelight concert with Justin Timberlake\u2019s music, and the whole experience was magical. The atmosphere was intimate and cozy, with the candlelight creating a truly special vibe.\n\nThe sound was excellent, every note was clear and emotional, and the setting made it feel very personal. The staff was friendly and everything was well organized, which added to the enjoyment.\n\nI highly recommend The Royal for anyone who wants to experience concerts in a unique and unforgettable way. I\u2019ll definitely be coming back for more events here! \ud83c\udfb6\ud83d\udd6f\ufe0f\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Recently we got the opportunity to see The Royal first time from inside for the Candlelight Concert. It's a nice theater not too big, not too small but definitely has a great cozy feel. Its situated in little Italy with nice restaurants close by. So after the event we could further enjoy the beautiful area.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

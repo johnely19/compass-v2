@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJwbrNaCI3K4gRN1Ml4FNr7P4",
-    "name": "Donna Child Fine Art — Magdalena Morey exhibition",
+    "name": "Donna Child Fine Art \u2014 Magdalena Morey exhibition",
     "city": "Toronto",
     "address": "South Etobicoke (365 Evans Ave)",
     "type": "gallery"
@@ -12,18 +12,18 @@
     "text": "donnachildfineart.com"
   },
   "narrative": {
-    "summary": "Contemporary paintings celebrating women. March 4–April 28. Boutique gallery, 5.0★ (18 reviews). Off the beaten path but well-reviewed. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Contemporary paintings celebrating women. March 4\u2013April 28. Boutique gallery, 5.0\u2605 (18 reviews). Off the beaten path but well-reviewed. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in South Etobicoke's industrial stretch on Evans Avenue, far from the gallery districts most people know. Inside, white walls and natural light create the kind of clean, focused atmosphere where Magdalena Morey's contemporary paintings of women can breathe—intimate enough that the 18 five-star reviews make sense, spare enough that couples have used it as a wedding venue.",
+        "body": "You're in South Etobicoke's industrial stretch on Evans Avenue, far from the gallery districts most people know. Inside, white walls and natural light create the kind of clean, focused atmosphere where Magdalena Morey's contemporary paintings of women can breathe\u2014intimate enough that the 18 five-star reviews make sense, spare enough that couples have used it as a wedding venue.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Art",
-        "body": "The Magdalena Morey exhibition runs March 4 through April 28, centering women through contemporary painting in a way that clearly resonates—this isn't a quick browse-and-leave spot. Donna Child has built something rare: a boutique gallery that functions as both serious art space and flexible venue, handling everything from rotating exhibitions to private events with the kind of attention that turns first-time visitors into repeat clients.",
+        "body": "The Magdalena Morey exhibition runs March 4 through April 28, centering women through contemporary painting in a way that clearly resonates\u2014this isn't a quick browse-and-leave spot. Donna Child has built something rare: a boutique gallery that functions as both serious art space and flexible venue, handling everything from rotating exhibitions to private events with the kind of attention that turns first-time visitors into repeat clients.",
         "id": "block-the-art-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"While looking for a unique venue for our intimate wedding, we approached Donna, and knew immediately that her gallery would be perfect.\nDonna & team provided invaluable input during the planning process, & handled the details efficiently & professionally.\nWhen the big day arrived, the gallery was stunning, Donna & Rob were the perfect hosts, and we had an evening that exceeded our high expectations!\nA very sincere Thank You to everyone at Donna Child Fine Art for helping us create memories that will last a lifetime!\nCarrie & Keith\"\n\n⭐⭐⭐⭐⭐ \"A few days ago we hosted a fabolous  evening at Donna Child Fine Art Gallery, Rotary Meets the Community.\nAfter the evening we received rave reviews from everyone that was there. I would like to highlight two of the notes we received:\n\"I totally LOVED your event.  It was inviting, engaging and very ‘classy’.\"\n\"Thank you all for an amazing evening last night. Boy, you really know how to throw a fabulous event.\"\nDonna's impeccable taste comes through the specially curated art pieces that embody elegance and artistry. A true exquisite experience.\nThank you Donna and Rebecca.\"\n\n⭐⭐⭐⭐⭐ \"I highly recommend Donna Child Fine art whether you are looking for a great venue for an event or a home owner looking to frame or purchase art or if you are like me an emerging artist looking for a team to help you get ready for a show.  Donna and the team are true professionals.\n\nAs a venue for an event, I can say as an event planner with 40 years experience, it is an ideal place.  It is beautiful, well laid out and has all the facilities you need for a successful event.\n\nAs a home owner, Donna and Rebecca helped me pick the right frames to show off my artwork in my new condo. They encouraged me to frame my own art and made it look great.\n\nThen when I decided, on the occasion of my 65th birthday to exhibit my photography, Donna and Rebecca helped me frame my show.  They were understanding of my budget and my goals with the show.  With their help my show was a great success.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"While looking for a unique venue for our intimate wedding, we approached Donna, and knew immediately that her gallery would be perfect.\nDonna & team provided invaluable input during the planning process, & handled the details efficiently & professionally.\nWhen the big day arrived, the gallery was stunning, Donna & Rob were the perfect hosts, and we had an evening that exceeded our high expectations!\nA very sincere Thank You to everyone at Donna Child Fine Art for helping us create memories that will last a lifetime!\nCarrie & Keith\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"A few days ago we hosted a fabolous  evening at Donna Child Fine Art Gallery, Rotary Meets the Community.\nAfter the evening we received rave reviews from everyone that was there. I would like to highlight two of the notes we received:\n\"I totally LOVED your event.  It was inviting, engaging and very \u2018classy\u2019.\"\n\"Thank you all for an amazing evening last night. Boy, you really know how to throw a fabulous event.\"\nDonna's impeccable taste comes through the specially curated art pieces that embody elegance and artistry. A true exquisite experience.\nThank you Donna and Rebecca.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I highly recommend Donna Child Fine art whether you are looking for a great venue for an event or a home owner looking to frame or purchase art or if you are like me an emerging artist looking for a team to help you get ready for a show.  Donna and the team are true professionals.\n\nAs a venue for an event, I can say as an event planner with 40 years experience, it is an ideal place.  It is beautiful, well laid out and has all the facilities you need for a successful event.\n\nAs a home owner, Donna and Rebecca helped me pick the right frames to show off my artwork in my new condo. They encouraged me to frame my own art and made it look great.\n\nThen when I decided, on the occasion of my 65th birthday to exhibit my photography, Donna and Rebecca helped me frame my show.  They were understanding of my budget and my goals with the show.  With their help my show was a great success.\""
       }
     ]
-  }
+  },
+  "type": "gallery"
 }

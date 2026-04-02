@@ -12,32 +12,33 @@
     "text": "Discovered via toronto.com"
   },
   "narrative": {
-    "summary": "New jazz lounge from Municipal Goods team (Paris Texas, Pizza Wine Disco). Opened Sept 2025 in former Baby Huey space. Moët champagne vending machine, live jazz trios, martini-forward, maroon interiors by Block Plan Studios. Cheese Boutique collab menu. 4.5★ (207 reviews).",
+    "summary": "New jazz lounge from Municipal Goods team (Paris Texas, Pizza Wine Disco). Opened Sept 2025 in former Baby Huey space. Mo\u00ebt champagne vending machine, live jazz trios, martini-forward, maroon interiors by Block Plan Studios. Cheese Boutique collab menu. 4.5\u2605 (207 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Ossington just south of Dundas, walking into what used to be Baby Huey. The Municipal Goods team draped the whole room in maroon velvet and low amber lighting—Block Plan Studios designed it to feel like a 1970s jazz basement that somehow got a trust fund. There's a Moët vending machine glowing near the entrance, banquettes that swallow you whole, and a small stage where trios play until a DJ takes over later.",
+        "body": "You're on Ossington just south of Dundas, walking into what used to be Baby Huey. The Municipal Goods team draped the whole room in maroon velvet and low amber lighting\u2014Block Plan Studios designed it to feel like a 1970s jazz basement that somehow got a trust fund. There's a Mo\u00ebt vending machine glowing near the entrance, banquettes that swallow you whole, and a small stage where trios play until a DJ takes over later.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a martini lounge first, but the kitchen's doing a collaboration menu with Cheese Boutique that leans into charcuterie, aged imports, and things that pair well with vermouth. It's bar food with good taste—think composed cheese plates, tinned fish, maybe a tartare. The drink list is built around gin and vodka, though champagne flows from that vending machine if you're feeling like a bit.",
+        "body": "This is a martini lounge first, but the kitchen's doing a collaboration menu with Cheese Boutique that leans into charcuterie, aged imports, and things that pair well with vermouth. It's bar food with good taste\u2014think composed cheese plates, tinned fish, maybe a tartare. The drink list is built around gin and vodka, though champagne flows from that vending machine if you're feeling like a bit.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Late night on a Thursday or Friday when you want live music without committing to a concert, or when you're three friends deep into a conversation that needs a soundtrack. The energy shifts as the night goes on—jazz trios early, DJ energy after 11.",
+        "body": "Late night on a Thursday or Friday when you want live music without committing to a concert, or when you're three friends deep into a conversation that needs a soundtrack. The energy shifts as the night goes on\u2014jazz trios early, DJ energy after 11.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Kiki was AMAZING, the best waitress one could ask for girls night! Didn’t get any food but the drinks were great and vibes phenomenal! Live music turned into dj later in the night which kept the energy electric! Loved the atmosphere, def coming back soon!\"\n\n⭐⭐⭐⭐⭐ \"What an absolutely incredible experience!! Kiki was absolutely incredible! She was such a great person to work with and made amazing drink recommendations.  This place is amazing for late night drinks or listening to live music, but whatever you do....go!!!!! Such a vibe!!!!!!\"\n\n⭐⭐⭐⭐⭐ \"Went there for the first time and I had a very enjoyable experience. Our server Maxine was very kind and friendly as well as the rest of the staff. I really love the interior decors and the music. The food is also very good, I had a glass of house wine, the grilled cheese supernova and the maple whisky bread pudding. The pudding is a must, really delicious!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Kiki was AMAZING, the best waitress one could ask for girls night! Didn\u2019t get any food but the drinks were great and vibes phenomenal! Live music turned into dj later in the night which kept the energy electric! Loved the atmosphere, def coming back soon!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"What an absolutely incredible experience!! Kiki was absolutely incredible! She was such a great person to work with and made amazing drink recommendations.  This place is amazing for late night drinks or listening to live music, but whatever you do....go!!!!! Such a vibe!!!!!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went there for the first time and I had a very enjoyable experience. Our server Maxine was very kind and friendly as well as the rest of the staff. I really love the interior decors and the music. The food is also very good, I had a glass of house wine, the grilled cheese supernova and the maple whisky bread pudding. The pudding is a must, really delicious!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

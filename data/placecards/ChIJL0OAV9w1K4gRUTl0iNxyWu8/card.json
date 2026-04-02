@@ -8,13 +8,13 @@
     "address": "Junction Triangle / Sterling Rd (MOCA corridor)",
     "type": "cafe",
     "hours": [
-      "Monday: 8:00 AM – 5:00 PM",
-      "Tuesday: 8:00 AM – 5:00 PM",
-      "Wednesday: 8:00 AM – 5:00 PM",
-      "Thursday: 8:00 AM – 5:00 PM",
-      "Friday: 8:00 AM – 5:00 PM",
-      "Saturday: 8:00 AM – 6:00 PM",
-      "Sunday: 8:00 AM – 6:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 686,
@@ -31,13 +31,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Sterling Road in the Junction Triangle, Toronto's industrial arts corridor where warehouses became galleries. Inside, the high ceilings and exposed brick still hold onto the factory bones, softened by wooden tables and enough seating that even on a packed Saturday you'll find a spot. Art books line the shelves, and the whole operation—roasting equipment visible, bags of beans stacked near the counter—feels more like a working studio than a café trying to look like one.",
+        "body": "You're on Sterling Road in the Junction Triangle, Toronto's industrial arts corridor where warehouses became galleries. Inside, the high ceilings and exposed brick still hold onto the factory bones, softened by wooden tables and enough seating that even on a packed Saturday you'll find a spot. Art books line the shelves, and the whole operation\u2014roasting equipment visible, bags of beans stacked near the counter\u2014feels more like a working studio than a caf\u00e9 trying to look like one.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a roastery first, so the coffee is the point—single-origin beans they'll walk you through, often bright and fragrant Central or South American lots that change with the season. Buy a bag and they'll pull you a complimentary cup from whatever they're featuring that day. It's also a wine bar, which makes sense for the gallery-hopping crowd who drift in after MOCA and want to stay through the afternoon.",
+        "body": "This is a roastery first, so the coffee is the point\u2014single-origin beans they'll walk you through, often bright and fragrant Central or South American lots that change with the season. Buy a bag and they'll pull you a complimentary cup from whatever they're featuring that day. It's also a wine bar, which makes sense for the gallery-hopping crowd who drift in after MOCA and want to stay through the afternoon.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Is this place in the middle of nowhere? Yes. But should you still go? Yes.\n\nI have been getting my beans from Ethica so im pretty excited to go to their roasters, and it doesn’t disappoint. It’s big but cozy, with lots of place to study and work your day away. It’s a Saturday that we went there and it was quite packed, but we still got lots of seats to choose from. The brick wall and the wooden decor gives a bit of ruggedness to the place, almost like an old factory.\n\nMy coffee comes with the purchase of the beans that I got from there, which is always nice. The staff picked a special type of bean for me (I think it’s Colombian) and it was good as usual, fragrant and bright. The place is also filled with art books for customers to read, very on brand on the location being right next to MOCA.\n\nIt’s really nice to just go there and unwind, and look out of the window and seeing all the big industrial buildings where pedestrians are  sparse and rare, and just enjoy the oasis in the middle of nowhere.\"\n\n⭐⭐⭐⭐⭐ \"I live close, so sometimes come in for cup of coffee. I love this place, it’s nice and warm atmosphere. I’ve been looking for good coffee since I moved to Canada. That’s not that easy as I thought. Quality of coffee here is on high level. One of the best I tried in Toronto. Area is peaceful and quiet cause it’s hidden away from crowded streets and I love it so much. Prices are high but reasonable, if you wanna cheap coffee go to Tim Hortons.\nAbsolutely recommend this place 🫶🏻\"\n\n⭐⭐⭐⭐⭐ \"This place is a rarity - it has spacious interior seating and great tasting coffee. There is plenty of seating available inside, even on a late weekend morning. There was also a live DJ that day.\n\nI ordered the flat white with their classic roast, which tasted great. Although I chose the classic roast, it didn’t taste too bitter and the latte art was cute too. They also have a good selection of pastries that seem very tasty, and I would definitely want to come back and try another time.\n\nThe staff seem very friendly here, and will take the time to explain the different roasts to you. When I was trying to take a photo of my drink on the counter, one of the staff kindly moved some other cups out of my way. Thank you!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Is this place in the middle of nowhere? Yes. But should you still go? Yes.\n\nI have been getting my beans from Ethica so im pretty excited to go to their roasters, and it doesn\u2019t disappoint. It\u2019s big but cozy, with lots of place to study and work your day away. It\u2019s a Saturday that we went there and it was quite packed, but we still got lots of seats to choose from. The brick wall and the wooden decor gives a bit of ruggedness to the place, almost like an old factory.\n\nMy coffee comes with the purchase of the beans that I got from there, which is always nice. The staff picked a special type of bean for me (I think it\u2019s Colombian) and it was good as usual, fragrant and bright. The place is also filled with art books for customers to read, very on brand on the location being right next to MOCA.\n\nIt\u2019s really nice to just go there and unwind, and look out of the window and seeing all the big industrial buildings where pedestrians are  sparse and rare, and just enjoy the oasis in the middle of nowhere.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I live close, so sometimes come in for cup of coffee. I love this place, it\u2019s nice and warm atmosphere. I\u2019ve been looking for good coffee since I moved to Canada. That\u2019s not that easy as I thought. Quality of coffee here is on high level. One of the best I tried in Toronto. Area is peaceful and quiet cause it\u2019s hidden away from crowded streets and I love it so much. Prices are high but reasonable, if you wanna cheap coffee go to Tim Hortons.\nAbsolutely recommend this place \ud83e\udef6\ud83c\udffb\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This place is a rarity - it has spacious interior seating and great tasting coffee. There is plenty of seating available inside, even on a late weekend morning. There was also a live DJ that day.\n\nI ordered the flat white with their classic roast, which tasted great. Although I chose the classic roast, it didn\u2019t taste too bitter and the latte art was cute too. They also have a good selection of pastries that seem very tasty, and I would definitely want to come back and try another time.\n\nThe staff seem very friendly here, and will take the time to explain the different roasts to you. When I was trying to take a photo of my drink on the counter, one of the staff kindly moved some other cups out of my way. Thank you!\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

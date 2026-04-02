@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Multi-site collage art exhibition by four contemporary artists (three local, one international) spread throughout Canada's busiest train station. BAND Gallery partnership \u2014 Black-owned gallery, BIPOC creatives. Themes of movement and transformation. Free. Through August 2026.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

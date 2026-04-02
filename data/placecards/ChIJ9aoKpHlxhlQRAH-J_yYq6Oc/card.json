@@ -8,13 +8,13 @@
     "address": "Gastown",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:30 AM – 9:00 PM",
-      "Tuesday: 11:30 AM – 9:00 PM",
-      "Wednesday: 11:30 AM – 9:00 PM",
-      "Thursday: 11:30 AM – 9:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 11:30 AM – 10:00 PM",
-      "Sunday: 11:30 AM – 9:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM"
     ],
     "rating": 4.3,
     "review_count": 3195,
@@ -23,11 +23,11 @@
     "website": "https://www.nuba.ca/"
   },
   "discovery": {
-    "text": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ — very affordable.",
+    "text": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ \u2014 very affordable.",
     "url": "https://www.quora.com/What-are-the-best-restaurants-to-try-when-visiting-Vancouver-BC-What-should-you-try-while-youre-there"
   },
   "narrative": {
-    "summary": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ — very affordable.",
+    "summary": "Vancouver's beloved Lebanese restaurant. Cauliflower is legendary. Warm atmosphere, shareable plates, great for casual dinner with a friend. Multiple locations but Gastown is the original and best. Rating 4.3/5 (3,190 reviews). $$ \u2014 very affordable.",
     "blocks": [
       {
         "type": "prose",
@@ -38,20 +38,20 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Lebanese cooking built around shareable mezze—think creamy hummus, baba ghanouj, and that famous cauliflower everyone orders, fried until crispy and tossed in tahini and pomegranate. The lamb kofta comes with a tangle of sauces on the side, and while portions lean small, everything's priced to let you order three or four plates without wincing. Mains hover around $16-22, which makes it one of the best-value dinners you'll find in Vancouver.",
+        "body": "This is Lebanese cooking built around shareable mezze\u2014think creamy hummus, baba ghanouj, and that famous cauliflower everyone orders, fried until crispy and tossed in tahini and pomegranate. The lamb kofta comes with a tangle of sauces on the side, and while portions lean small, everything's priced to let you order three or four plates without wincing. Mains hover around $16-22, which makes it one of the best-value dinners you'll find in Vancouver.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your casual weeknight dinner with a friend when you want to talk over shared plates and a glass of wine without any fuss. Skip it if you're starving and impatient—it fills up fast and the close quarters mean you're part of the room's energy whether you want to be or not.",
+        "body": "This is your casual weeknight dinner with a friend when you want to talk over shared plates and a glass of wine without any fuss. Skip it if you're starving and impatient\u2014it fills up fast and the close quarters mean you're part of the room's energy whether you want to be or not.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"My boss treated me to lunch at Nuba in Gastown today. When I saw it was downstairs, I was initially worried it might be damp or smelly, but I was totally wrong! As soon as we stepped in, we were greeted by a bustling atmosphere and that amazing, unique Mediterranean aroma. I ordered the lamb kofta and hummus—both were delicious! The variety of sauces on the side really leveled up the flavor. My only minor wish would be for the bread to be served hot and fresh. Overall, a great experience. Highly recommended!\"\n\n⭐⭐⭐⭐ \"Food: I got the lamb kafta. It was a little under seasoned but the sauce made up for it. Wasn't mind blowing but it was okay. Small portion, 2 pieces, I don't think I'd order it again. The red pepper appetizer wasn't that special either. It was sweet, not enough salt and the bread was a little stale. Overall wasn't that satisfied with my meal. I would wanna try the chicken shawarma next time.\n\nService: nice waiters\n\nAtmosphere: relatively quiet, real candles and pretty good vibes.\"\n\n⭐⭐⭐⭐ \"Overall - 4.5/5\nOrdered garden falafel (comes with pita & hummus) and go green juice. Go green was quite refreshing and falafel were really good.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"My boss treated me to lunch at Nuba in Gastown today. When I saw it was downstairs, I was initially worried it might be damp or smelly, but I was totally wrong! As soon as we stepped in, we were greeted by a bustling atmosphere and that amazing, unique Mediterranean aroma. I ordered the lamb kofta and hummus\u2014both were delicious! The variety of sauces on the side really leveled up the flavor. My only minor wish would be for the bread to be served hot and fresh. Overall, a great experience. Highly recommended!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Food: I got the lamb kafta. It was a little under seasoned but the sauce made up for it. Wasn't mind blowing but it was okay. Small portion, 2 pieces, I don't think I'd order it again. The red pepper appetizer wasn't that special either. It was sweet, not enough salt and the bread was a little stale. Overall wasn't that satisfied with my meal. I would wanna try the chicken shawarma next time.\n\nService: nice waiters\n\nAtmosphere: relatively quiet, real candles and pretty good vibes.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Overall - 4.5/5\nOrdered garden falafel (comes with pita & hummus) and go green juice. Go green was quite refreshing and falafel were really good.\""
       }
     ]
   },
@@ -70,5 +70,6 @@
       "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
       "caption": "Source image"
     }
-  ]
+  ],
+  "type": "restaurant"
 }

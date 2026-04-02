@@ -10,40 +10,41 @@
     "phone": "(212) 924-4440",
     "website": "https://cookshopny.com",
     "price_level": 3,
-    "location": "156 10th Avenue"
+    "location": "156 10th Avenue",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nWest Chelsea — one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here — people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries.",
+    "summary": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nWest Chelsea \u2014 one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here \u2014 people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nWest Chelsea — one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here — people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nWest Chelsea \u2014 one block from the High Line\n\nYou walk in and it's all lime-green bentwood chairs, orchids on every surface, a slatted wood ceiling that feels vaguely Scandinavian. The painting of a red tractor on the wall tells you this place takes its farm-to-table thing seriously. There's an energy here \u2014 people lingering over brunch, friends meeting for afternoon drinks before hitting the galleries."
       },
       {
         "id": "block-2",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The weekend essentials:\n• BLT Mary — $18 (bacon, olives, celery salt rim) ⭐\n• Mimosa — $14\n• Cantaloupe Cooler (mocktail) — $10\n• Bloody Maria — $18\n\nThis is a brunch-drinks destination. The BLT Mary is the move — they skewer a strip of crispy bacon right in your drink."
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf79 The weekend essentials:\n\u2022 BLT Mary \u2014 $18 (bacon, olives, celery salt rim) \u2b50\n\u2022 Mimosa \u2014 $14\n\u2022 Cantaloupe Cooler (mocktail) \u2014 $10\n\u2022 Bloody Maria \u2014 $18\n\nThis is a brunch-drinks destination. The BLT Mary is the move \u2014 they skewer a strip of crispy bacon right in your drink."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd9\ud835\udde2\ud835\udde2\ud835\uddd7"
       },
       {
         "id": "block-4",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗕𝗥𝗨𝗡𝗖𝗛 (Sat-Sun) $16-26\n• Raisin Walnut French Toast — $19 (seasonal fruit, almonds) ⭐\n• Fried Egg Sandwich — $18 (jalapeño slaw, brioche)\n• Cornmeal Pancakes — $17 (house butter, maple)\n• Eggs Your Way — $16 (with toast)\n\n𝗟𝗨𝗡𝗖𝗛 $19-28\n• Gem Lettuce Salad — $23 (roast chicken, cucumber, tomato) ⭐\n• Pan Bagnat — $19 (olive oil tuna, tomato, egg, olives)\n• Cookshop Burger — $24 (cheddar, pickles, fries)\n• Grilled Salmon — $28\n\n𝗗𝗜𝗡𝗡𝗘𝗥 $26-42\n• Wood-Roasted Half Chicken — $32 ⭐\n• Hanger Steak — $38\n• Whole Roasted Fish (market) — $42\n• Seasonal Risotto — $26\n\n𝗦𝗜𝗗𝗘𝗦 $9-14\n• Spiced Fries — $12 ⭐\n• Roasted Broccolini — $14\n• Market Vegetables — $12\n\nNote: Menu changes seasonally. Known for sourcing from local farms (Greenmarket adjacent)."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud835\uddd5\ud835\udde5\ud835\udde8\ud835\udde1\ud835\uddd6\ud835\udddb (Sat-Sun) $16-26\n\u2022 Raisin Walnut French Toast \u2014 $19 (seasonal fruit, almonds) \u2b50\n\u2022 Fried Egg Sandwich \u2014 $18 (jalape\u00f1o slaw, brioche)\n\u2022 Cornmeal Pancakes \u2014 $17 (house butter, maple)\n\u2022 Eggs Your Way \u2014 $16 (with toast)\n\n\ud835\udddf\ud835\udde8\ud835\udde1\ud835\uddd6\ud835\udddb $19-28\n\u2022 Gem Lettuce Salad \u2014 $23 (roast chicken, cucumber, tomato) \u2b50\n\u2022 Pan Bagnat \u2014 $19 (olive oil tuna, tomato, egg, olives)\n\u2022 Cookshop Burger \u2014 $24 (cheddar, pickles, fries)\n\u2022 Grilled Salmon \u2014 $28\n\n\ud835\uddd7\ud835\udddc\ud835\udde1\ud835\udde1\ud835\uddd8\ud835\udde5 $26-42\n\u2022 Wood-Roasted Half Chicken \u2014 $32 \u2b50\n\u2022 Hanger Steak \u2014 $38\n\u2022 Whole Roasted Fish (market) \u2014 $42\n\u2022 Seasonal Risotto \u2014 $26\n\n\ud835\udde6\ud835\udddc\ud835\uddd7\ud835\uddd8\ud835\udde6 $9-14\n\u2022 Spiced Fries \u2014 $12 \u2b50\n\u2022 Roasted Broccolini \u2014 $14\n\u2022 Market Vegetables \u2014 $12\n\nNote: Menu changes seasonally. Known for sourcing from local farms (Greenmarket adjacent)."
       },
       {
         "id": "block-5",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$\n\nBrunch for 2: $70-90 (with drinks)\nDinner for 2: $120-160 (with wine)\n\nReservations: Resy (recommended, especially weekends)\nWalk-ins: Possible at the bar, especially weekday lunch\n\n📞 (212) 924-4440\n🌐 cookshopny.com\n📸 @cookshopnyc\n\n𝗛𝗢𝗨𝗥𝗦\nMon: 4:30pm – 11pm (dinner only)\nTue-Fri: 12pm – 3:30pm, 4:30pm – 11pm\nSat: 10am – 3:30pm, 4:30pm – 11pm\nSun: 10am – 3:30pm (brunch only)\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Weekday lunch (12-2pm) — quiet, easy to get a table\n• Saturday brunch early (10-11am) — before the High Line crowds descend\n• Summer: sidewalk tables fill first, reserve ahead\n• Post-gallery: Perfect pre-dinner stop after Chelsea galleries (Thu-Sat)"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$\n\nBrunch for 2: $70-90 (with drinks)\nDinner for 2: $120-160 (with wine)\n\nReservations: Resy (recommended, especially weekends)\nWalk-ins: Possible at the bar, especially weekday lunch\n\n\ud83d\udcde (212) 924-4440\n\ud83c\udf10 cookshopny.com\n\ud83d\udcf8 @cookshopnyc\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMon: 4:30pm \u2013 11pm (dinner only)\nTue-Fri: 12pm \u2013 3:30pm, 4:30pm \u2013 11pm\nSat: 10am \u2013 3:30pm, 4:30pm \u2013 11pm\nSun: 10am \u2013 3:30pm (brunch only)\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Weekday lunch (12-2pm) \u2014 quiet, easy to get a table\n\u2022 Saturday brunch early (10-11am) \u2014 before the High Line crowds descend\n\u2022 Summer: sidewalk tables fill first, reserve ahead\n\u2022 Post-gallery: Perfect pre-dinner stop after Chelsea galleries (Thu-Sat)"
       },
       {
         "id": "block-6",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 156 10th Avenue\n\n• walking: 44 mins • 2.0 mi\n• transit: 25 mins • 2.5 mi\n• driving: 13 mins • 2.2 mi (traffic: 13 mins)\n• bicycling: 14 mins • 2.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 156 10th Avenue\n\n\u2022 walking: 44 mins \u2022 2.0 mi\n\u2022 transit: 25 mins \u2022 2.5 mi\n\u2022 driving: 13 mins \u2022 2.2 mi (traffic: 13 mins)\n\u2022 bicycling: 14 mins \u2022 2.1 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (13 mins)"
       }
     ]
   },
@@ -99,5 +100,6 @@
         "distanceText": "2.5 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

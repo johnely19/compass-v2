@@ -1,34 +1,35 @@
 {
   "place_id": "gs-passeig-de-gracia-barcelona",
+  "type": "neighbourhood",
   "source": "great-streets-book",
   "identity": {
     "place_id": "gs-passeig-de-gracia-barcelona",
-    "name": "Passeig de Gr\u00e0cia",
+    "name": "Passeig de Gràcia",
     "city": "Barcelona",
     "country": "Spain",
-    "address": "Passeig de Gr\u00e0cia, Barcelona, Spain",
+    "address": "Passeig de Gràcia, Barcelona, Spain",
     "neighborhood": "Eixample",
     "type": "street",
     "subtype": "great street"
   },
   "discovery": {
-    "text": "From Allan B. Jacobs' Great Streets (1993). The Eixample's great boulevard \u2014 Gaud\u00ed's Casa Batll\u00f3, Dom\u00e8nech's Casa Lle\u00f3 Morera, Puig's Casa Amatller all on one block (the Block of Discord). Extraordinary streetscape.",
+    "text": "From Allan B. Jacobs' Great Streets (1993). The Eixample's great boulevard — Gaudí's Casa Batlló, Domènech's Casa Lleó Morera, Puig's Casa Amatller all on one block (the Block of Discord). Extraordinary streetscape.",
     "contextKey": "wishlist:great-streets",
     "discoveredAt": "2026-03-28T00:00:00.000Z"
   },
   "narrative": {
-    "summary": "The Eixample's great boulevard \u2014 Gaud\u00ed's Casa Batll\u00f3, Dom\u00e8nech's Casa Lle\u00f3 Morera, Puig's Casa Amatller all on one block (the Block of Discord). Extraordinary streetscape.",
+    "summary": "The Eixample's great boulevard — Gaudí's Casa Batlló, Domènech's Casa Lleó Morera, Puig's Casa Amatller all on one block (the Block of Discord). Extraordinary streetscape.",
     "blocks": [
       {
         "type": "prose",
         "title": "Why Jacobs Chose It",
-        "body": "Wide sidewalks with Gaud\u00ed-designed hexagonal tiles, candelabra lamp posts, grand plane trees, mixed use at every level. One of the densest concentrations of Modernista architecture in the world \u2014 and it all faces a street designed to showcase it.",
+        "body": "Wide sidewalks with Gaudí-designed hexagonal tiles, candelabra lamp posts, grand plane trees, mixed use at every level. One of the densest concentrations of Modernista architecture in the world — and it all faces a street designed to showcase it.",
         "id": "block-jacobs-0"
       },
       {
         "type": "prose",
         "title": "How to Walk It",
-        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
+        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it — the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a café or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
       }
     ]

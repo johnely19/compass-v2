@@ -1,5 +1,6 @@
 {
   "place_id": "gs-bloor-street-west-toronto",
+  "type": "neighbourhood",
   "source": "great-streets-book",
   "identity": {
     "place_id": "gs-bloor-street-west-toronto",
@@ -12,23 +13,23 @@
     "subtype": "great street"
   },
   "discovery": {
-    "text": "From Allan B. Jacobs' Great Streets (1993). One of the few North American streets that earns a mention \u2014 the Annex section from Spadina to Bathurst has the mixed use, scale, and continuous active edges that Jacobs finds absent in most of the continent.",
+    "text": "From Allan B. Jacobs' Great Streets (1993). One of the few North American streets that earns a mention — the Annex section from Spadina to Bathurst has the mixed use, scale, and continuous active edges that Jacobs finds absent in most of the continent.",
     "contextKey": "wishlist:great-streets",
     "discoveredAt": "2026-03-28T00:00:00.000Z"
   },
   "narrative": {
-    "summary": "One of the few North American streets that earns a mention \u2014 the Annex section from Spadina to Bathurst has the mixed use, scale, and continuous active edges that Jacobs finds absent in most of the continent.",
+    "summary": "One of the few North American streets that earns a mention — the Annex section from Spadina to Bathurst has the mixed use, scale, and continuous active edges that Jacobs finds absent in most of the continent.",
     "blocks": [
       {
         "type": "prose",
         "title": "Why Jacobs Chose It",
-        "body": "Victorian commercial buildings maintained at human scale, independent shops and restaurants at ground floor, apartments above, subway creating foot traffic, mature street trees. Worth walking as a local example of what the book is about \u2014 in your own city.",
+        "body": "Victorian commercial buildings maintained at human scale, independent shops and restaurants at ground floor, apartments above, subway creating foot traffic, mature street trees. Worth walking as a local example of what the book is about — in your own city.",
         "id": "block-jacobs-0"
       },
       {
         "type": "prose",
         "title": "How to Walk It",
-        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
+        "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it — the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a café or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
       }
     ]

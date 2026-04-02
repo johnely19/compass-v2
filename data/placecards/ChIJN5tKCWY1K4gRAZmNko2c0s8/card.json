@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJN5tKCWY1K4gRAZmNko2c0s8",
-    "name": "CHÉRIE",
+    "name": "CH\u00c9RIE",
     "city": "Toronto",
     "address": "College & Spadina (233 College St)",
     "type": "gallery"
@@ -12,7 +12,8 @@
     "text": "Discovered via stephaniedickison.com"
   },
   "narrative": {
-    "summary": "Minimalist dessert café — cream tarts, canelés, matcha. Modern, clean aesthetic. 4.7★ (24 reviews). Just opened. Mornings through evening daily.",
+    "summary": "Minimalist dessert caf\u00e9 \u2014 cream tarts, canel\u00e9s, matcha. Modern, clean aesthetic. 4.7\u2605 (24 reviews). Just opened. Mornings through evening daily.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

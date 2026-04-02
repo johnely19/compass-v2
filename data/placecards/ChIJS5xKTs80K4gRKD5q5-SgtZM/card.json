@@ -8,13 +8,13 @@
     "address": "Dundas West/AGO",
     "type": "cafe",
     "hours": [
-      "Monday: 8:00 AM – 6:00 PM",
-      "Tuesday: 8:00 AM – 6:00 PM",
-      "Wednesday: 8:00 AM – 6:00 PM",
-      "Thursday: 8:00 AM – 6:00 PM",
-      "Friday: 8:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 960,
@@ -25,18 +25,18 @@
     "text": "Discovered via Reddit r/askTO"
   },
   "narrative": {
-    "summary": "You're stepping into a compact pour-over shop steps from the AGO where each cup gets brewed individually with the kind of precision that justifies the $10 price tag. The oat lattes hit that sweet spot of foam and espresso balance, made with beans actually chosen for milk drinks rather than fighting against it. It's small—you'll claim one of the few window seats if you're lucky, and this is absolutely not your laptop camp-out.",
+    "summary": "You're stepping into a compact pour-over shop steps from the AGO where each cup gets brewed individually with the kind of precision that justifies the $10 price tag. The oat lattes hit that sweet spot of foam and espresso balance, made with beans actually chosen for milk drinks rather than fighting against it. It's small\u2014you'll claim one of the few window seats if you're lucky, and this is absolutely not your laptop camp-out.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're steps from the AGO on Dundas West, exiting St. Patrick station into a neighbourhood that toggles between gallery crowds and locals. Inside, it's compact—the kind of small where you'll wait for your pour-over watching the barista work an arm's length away, maybe claiming one of the few seats along the window if you're lucky. The counter dominates, and everything feels deliberate and clean, built for coffee first, lingering second.",
+        "body": "You're steps from the AGO on Dundas West, exiting St. Patrick station into a neighbourhood that toggles between gallery crowds and locals. Inside, it's compact\u2014the kind of small where you'll wait for your pour-over watching the barista work an arm's length away, maybe claiming one of the few seats along the window if you're lucky. The counter dominates, and everything feels deliberate and clean, built for coffee first, lingering second.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a pour-over shop that takes its light roasts seriously—each cup brewed individually with the precision you'd expect from somewhere that charges around $10 for a pour-over with house vanilla syrup and milk. The oat lattes hit that sweet spot of foam and espresso balance, made with beans actually chosen for milk drinks rather than fighting against it. You'll find cappuccinos that don't scald your tongue, plus cookies and cakes if you need something solid, though you're really here for what's in the cup.",
+        "body": "This is a pour-over shop that takes its light roasts seriously\u2014each cup brewed individually with the precision you'd expect from somewhere that charges around $10 for a pour-over with house vanilla syrup and milk. The oat lattes hit that sweet spot of foam and espresso balance, made with beans actually chosen for milk drinks rather than fighting against it. You'll find cappuccinos that don't scald your tongue, plus cookies and cakes if you need something solid, though you're really here for what's in the cup.",
         "id": "block-the-food-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Amazing oat latte. Perfect ratio of espresso to oat milk, and the right beans for latte. If you like your lattes foamy, you will love this one. Barista was extremely friendly. Overall just a good experience\"\n\n⭐⭐⭐⭐⭐ \"Recommend:\nPour-over with house vanilla syrup and milk – lovely soy-honey aftertaste, though a bit pricey at around $10.\n\nAlso good:\nCappuccino – balanced and smooth.\n\nSkip:\nCold brew – too bitter for my taste.\"\n\n⭐⭐⭐⭐⭐ \"For those in the Dundas area toward the AGO, The Library is a great place for a good coffee and a quick snack.\n\nThe cafe is small, but offers excellent service and a great selection of coffees and quick snacks, such as cookies, cakes, and more.\n\nIt can be accessed via the St. Patrick subway exit and several subway lines.\n\nThe location is wheelchair-accessible, allowing for entry by customers with disabilities. It also has a spring-operated door.\n\nIt's worth adding to your list of good places for quality coffee.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Amazing oat latte. Perfect ratio of espresso to oat milk, and the right beans for latte. If you like your lattes foamy, you will love this one. Barista was extremely friendly. Overall just a good experience\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Recommend:\nPour-over with house vanilla syrup and milk \u2013 lovely soy-honey aftertaste, though a bit pricey at around $10.\n\nAlso good:\nCappuccino \u2013 balanced and smooth.\n\nSkip:\nCold brew \u2013 too bitter for my taste.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"For those in the Dundas area toward the AGO, The Library is a great place for a good coffee and a quick snack.\n\nThe cafe is small, but offers excellent service and a great selection of coffees and quick snacks, such as cookies, cakes, and more.\n\nIt can be accessed via the St. Patrick subway exit and several subway lines.\n\nThe location is wheelchair-accessible, allowing for entry by customers with disabilities. It also has a spring-operated door.\n\nIt's worth adding to your list of good places for quality coffee.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

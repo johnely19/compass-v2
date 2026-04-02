@@ -12,18 +12,18 @@
     "text": "Discovered via explace.on.ca"
   },
   "narrative": {
-    "summary": "You're at Exhibition Place's Better Living Centre, walking past 250+ independent artists' booths in a fluorescent-lit space that disappears behind the art—come March 26-29 to talk directly to the people who made what catches your eye. This is where you find something specific to hang above your couch, or see what's happening outside the gallery system. Bring a refillable water bottle—bottled water runs close to $7, and the $1.99 spaghetti in the Food Building is worth the pilgrimage.",
+    "summary": "You're at Exhibition Place's Better Living Centre, walking past 250+ independent artists' booths in a fluorescent-lit space that disappears behind the art\u2014come March 26-29 to talk directly to the people who made what catches your eye. This is where you find something specific to hang above your couch, or see what's happening outside the gallery system. Bring a refillable water bottle\u2014bottled water runs close to $7, and the $1.99 spaghetti in the Food Building is worth the pilgrimage.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're at Exhibition Place, the sprawling fairgrounds on Toronto's waterfront where convention halls and arenas spread across acres of pavement. Artist Project takes over the Better Living Centre each March—white walls, industrial ceilings, rows of booth dividers creating a maze of emerging painters, sculptors, and photographers. It's fluorescent-lit and purpose-built, the kind of space that exists to disappear behind what's hanging on the walls.",
+        "body": "You're at Exhibition Place, the sprawling fairgrounds on Toronto's waterfront where convention halls and arenas spread across acres of pavement. Artist Project takes over the Better Living Centre each March\u2014white walls, industrial ceilings, rows of booth dividers creating a maze of emerging painters, sculptors, and photographers. It's fluorescent-lit and purpose-built, the kind of space that exists to disappear behind what's hanging on the walls.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't about the food—it's about the art. You're here March 26-29 to walk past 250+ independent artists' booths, stopping when something catches your eye, talking directly to the people who made it. The Food Building nearby has options if you need fuel, including that oddly beloved $1.99 spaghetti everyone mentions. Bring a refillable water bottle; bottled water runs close to $6-7.",
+        "body": "This isn't about the food\u2014it's about the art. You're here March 26-29 to walk past 250+ independent artists' booths, stopping when something catches your eye, talking directly to the people who made it. The Food Building nearby has options if you need fuel, including that oddly beloved $1.99 spaghetti everyone mentions. Bring a refillable water bottle; bottled water runs close to $6-7.",
         "id": "block-the-food-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Had free passes from the soccer game. Lines were not too bad early, got busier as the day went on. Food building had lots of options and of course the 1.99 spaghetti! We took the train down, easy access right from the GO. Would definitely go back. They have refillable water stations around the grounds, bottles water was 5.80 up to over 7.00 so I would recommend packing some!\"\n\n⭐⭐⭐⭐ \"Went for CNE. much more spread out this year with noticeable vendors missing.  Less sampling and prices used to start at $10 and continues to climb.    Addition of banshell performances was nice. We miss all the buildings and things for kids to do that weren't rides. Grounds were pretty well kept.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had free passes from the soccer game. Lines were not too bad early, got busier as the day went on. Food building had lots of options and of course the 1.99 spaghetti! We took the train down, easy access right from the GO. Would definitely go back. They have refillable water stations around the grounds, bottles water was 5.80 up to over 7.00 so I would recommend packing some!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Went for CNE. much more spread out this year with noticeable vendors missing.  Less sampling and prices used to start at $10 and continues to climb.    Addition of banshell performances was nice. We miss all the buildings and things for kids to do that weren't rides. Grounds were pretty well kept.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

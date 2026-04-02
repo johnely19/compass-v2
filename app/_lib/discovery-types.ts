@@ -33,15 +33,43 @@ export const TYPE_META: Record<DiscoveryType, TypeMeta> = {
 export const ALL_TYPES = Object.keys(TYPE_META) as DiscoveryType[];
 
 const TYPE_ALIASES: Record<string, DiscoveryType> = {
+  // Music venues
   'live-music': 'music-venue',
   'live_music': 'music-venue',
   'live music': 'music-venue',
+  'jazz-club': 'music-venue',
+  'live-music-bar': 'music-venue',
+  'live_music_venue': 'music-venue',
+
+  // Bars
   'wine-bar': 'bar',
+  'wine_bar': 'bar',
+  'wine-bar-restaurant': 'bar',
   'cocktail-bar': 'bar',
+  'club-bar': 'bar',
+
+  // Food/Drink
   'bakery': 'cafe',
   'butcher': 'grocery',
+  'specialty-food': 'grocery',
+  'specialty-shop': 'shop',
+  'grocery_store': 'grocery',
   'bookstore': 'shop',
   'bookshop': 'shop',
+  'bookshop-cafe': 'shop',
+
+  // Entertainment/Events
+  'comedy': 'theatre',
+  'exhibition': 'gallery',
+  'event': 'experience',
+  'cultural-center': 'experience',
+
+  // Streets / Great Streets
+  'street': 'neighbourhood',
+
+  // Other
+  'restaurant-cluster': 'restaurant',
+  'food-market': 'experience',
 };
 
 export function getTypeMeta(type: string): TypeMeta {

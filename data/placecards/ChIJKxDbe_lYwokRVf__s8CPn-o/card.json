@@ -11,7 +11,8 @@
     "price_level": 3,
     "location": "11 W 53rd St, New York, NY 10019, USA",
     "lat": 40.76134920000001,
-    "lng": -73.9773325
+    "lng": -73.9773325,
+    "type": "museum"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n53rd St between 5th and 6th \u2014 the temple of modern art.\n\nThe first major North American Duchamp retrospective in over 50 years. Nearly 300 works spanning six decades. Opens April 12, 2026.",
@@ -36,5 +37,6 @@
   "discovery": {
     "text": "Discovered by Disco via neighbourhood research",
     "url": "https://www.moma.org/"
-  }
+  },
+  "type": "museum"
 }

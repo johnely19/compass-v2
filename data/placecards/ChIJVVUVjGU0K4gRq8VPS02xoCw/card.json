@@ -8,13 +8,13 @@
     "address": "Chinatown Centre (Spadina)",
     "type": "shop",
     "hours": [
-      "Monday: 1:00 – 6:00 PM",
-      "Tuesday: 1:00 – 6:00 PM",
-      "Wednesday: 1:00 – 6:00 PM",
-      "Thursday: 1:00 – 8:00 PM",
-      "Friday: 1:00 – 8:00 PM",
-      "Saturday: 1:00 – 8:00 PM",
-      "Sunday: 1:00 – 6:00 PM"
+      "Monday: 1:00\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 1:00\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 1:00\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 1:00\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 1:00\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 1:00\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 1:00\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 174,
@@ -26,7 +26,8 @@
     "url": "https://www.thevinylfactory.com/features/toronto-best-record-shops-guide"
   },
   "narrative": {
-    "summary": "Meticulously curated Caribbean funk, soca, island soul—legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
+    "summary": "Meticulously curated Caribbean funk, soca, island soul\u2014legendary $5 bins. Also runs respected Invisible City Editions reissue label.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

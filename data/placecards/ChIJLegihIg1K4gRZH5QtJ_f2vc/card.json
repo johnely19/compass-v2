@@ -8,13 +8,13 @@
     "address": "College & Spadina (326 College St)",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 827,
@@ -22,35 +22,36 @@
     "website": "https://www.machidashoten.ca/"
   },
   "discovery": {
-    "text": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe."
+    "text": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9\u2605 (821 reviews). Casual counter-style, perfect father-son vibe."
   },
   "narrative": {
-    "summary": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9★ (821 reviews). Casual counter-style, perfect father-son vibe.",
+    "summary": "Canada's first Yokohama Iekei ramen. House-made noodles, rich tonkotsu-shoyu broth, flame-kissed chashu. 4.9\u2605 (821 reviews). Casual counter-style, perfect father-son vibe.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're at the northeast corner of College and Spadina, ground floor of a low-rise building in the thick of the student-dense strip. Inside, it's counter-style seating wrapping around the open kitchen, stools close enough to watch steam rise from the pots, plus a few small tables along the wall—think functional, bright-lit, and unpretentious, more workshop than dining room.",
+        "body": "You're at the northeast corner of College and Spadina, ground floor of a low-rise building in the thick of the student-dense strip. Inside, it's counter-style seating wrapping around the open kitchen, stools close enough to watch steam rise from the pots, plus a few small tables along the wall\u2014think functional, bright-lit, and unpretentious, more workshop than dining room.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Canada's first Yokohama Iekei ramen, the thicker, heavier style that blends tonkotsu with shoyu and finishes with a pool of chicken oil floating on top. The noodles are made in-house, the chashu gets a quick torch for char, and you'll customize firmness, salt level, and oil quantity before your bowl arrives. That broth—milky, porky, deeply savory—is aggressively rich, the kind that coats your lips and makes you question whether you'll finish, then you do anyway. Bowls run around $16-18.",
+        "body": "This is Canada's first Yokohama Iekei ramen, the thicker, heavier style that blends tonkotsu with shoyu and finishes with a pool of chicken oil floating on top. The noodles are made in-house, the chashu gets a quick torch for char, and you'll customize firmness, salt level, and oil quantity before your bowl arrives. That broth\u2014milky, porky, deeply savory\u2014is aggressively rich, the kind that coats your lips and makes you question whether you'll finish, then you do anyway. Bowls run around $16-18.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go with your dad, your buddy, or solo at the counter on a cold weeknight when you want something that feels like fuel and comfort in equal measure. This isn't a linger-over-wine spot—you're in, you eat, you leave satisfied.",
+        "body": "Go with your dad, your buddy, or solo at the counter on a cold weeknight when you want something that feels like fuel and comfort in equal measure. This isn't a linger-over-wine spot\u2014you're in, you eat, you leave satisfied.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This was my first time trying Iekei ramen in downtown Toronto, and I knew from the very first sip of the pork broth that I’d be coming back. The flavor is seriously impressive—rich, deep, and incredibly satisfying. The added chicken oil takes the broth to another level, giving it that extra layer of amazing umami and richness.\n\nThe noodles had a perfect texture for me. I went with the standard (normal) options for everything—noodle firmness, saltiness, and chicken oil level—but they let you customize it all.\n\nI’m a relatively small eater, and the oily, hearty soup base makes this ramen super filling. I could barely finish my bowl!\n\nThe servers were cheerful and friendly, the place is clean with cool decor, and overall it felt like a great vibe. (I didn’t check out the washroom, though.) Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Hands down the most flavourful ramen I’ve had in Toronto. The Kara Ramen is outstanding — topped with a generous scoop of spicy soybean paste that adds a bold, satisfying kick without overpowering the broth.\n\nThe broth itself is deeply savoury, rich, and beautifully layered with complexity in every sip. You can customize both the noodle firmness and the saltiness of the broth, which makes the experience feel thoughtfully tailored.\n\nEach bowl also comes with a complimentary serving of rice, along with instructions on how to enjoy it with the remaining broth — a simple but brilliant finishing touch.\n\nAn unforgettable ramen experience I’ll definitely be coming back for.\"\n\n⭐⭐⭐⭐⭐ \"If you like some heat, you’ve gotta try the Kara ramen—it’s got the perfect kick. But the real star for me was the broth; it’s so good that I couldn't resist ordering a bowl of rice to mix in at the end. Total soul food. Honestly, it's the best way to eat it!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This was my first time trying Iekei ramen in downtown Toronto, and I knew from the very first sip of the pork broth that I\u2019d be coming back. The flavor is seriously impressive\u2014rich, deep, and incredibly satisfying. The added chicken oil takes the broth to another level, giving it that extra layer of amazing umami and richness.\n\nThe noodles had a perfect texture for me. I went with the standard (normal) options for everything\u2014noodle firmness, saltiness, and chicken oil level\u2014but they let you customize it all.\n\nI\u2019m a relatively small eater, and the oily, hearty soup base makes this ramen super filling. I could barely finish my bowl!\n\nThe servers were cheerful and friendly, the place is clean with cool decor, and overall it felt like a great vibe. (I didn\u2019t check out the washroom, though.) Highly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Hands down the most flavourful ramen I\u2019ve had in Toronto. The Kara Ramen is outstanding \u2014 topped with a generous scoop of spicy soybean paste that adds a bold, satisfying kick without overpowering the broth.\n\nThe broth itself is deeply savoury, rich, and beautifully layered with complexity in every sip. You can customize both the noodle firmness and the saltiness of the broth, which makes the experience feel thoughtfully tailored.\n\nEach bowl also comes with a complimentary serving of rice, along with instructions on how to enjoy it with the remaining broth \u2014 a simple but brilliant finishing touch.\n\nAn unforgettable ramen experience I\u2019ll definitely be coming back for.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"If you like some heat, you\u2019ve gotta try the Kara ramen\u2014it\u2019s got the perfect kick. But the real star for me was the broth; it\u2019s so good that I couldn't resist ordering a bowl of rice to mix in at the end. Total soul food. Honestly, it's the best way to eat it!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

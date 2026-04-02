@@ -11,13 +11,13 @@
     "phone": "(416) 901-2249",
     "website": "https://www.ikkousha.ca/",
     "hours": [
-      "Monday: 11:30 AM – 9:30 PM",
-      "Tuesday: 11:30 AM – 9:30 PM",
-      "Wednesday: 11:30 AM – 9:30 PM",
-      "Thursday: 11:30 AM – 9:30 PM",
-      "Friday: 11:30 AM – 10:30 PM",
-      "Saturday: 11:30 AM – 10:30 PM",
-      "Sunday: 11:30 AM – 9:30 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM"
     ],
     "price_level": 2,
     "rating": 4.6,
@@ -33,13 +33,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Queen West between University and Spadina, where the street still feels a little gritty around the edges. Inside, it's narrow and functional—blonde wood counters, a few high stools facing the open kitchen, tables packed close enough that you hear conversations bleeding together. The air is thick with pork fat and garlic, steam rising from bowls that arrive in steady succession.",
+        "body": "You're on Queen West between University and Spadina, where the street still feels a little gritty around the edges. Inside, it's narrow and functional\u2014blonde wood counters, a few high stools facing the open kitchen, tables packed close enough that you hear conversations bleeding together. The air is thick with pork fat and garlic, steam rising from bowls that arrive in steady succession.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is the tonkotsu-focused location—there's a chicken broth sister spot practically next door, so check the signage before you commit. The broth here is milky and rich, the kind that coats your spoon and doesn't apologize for it, built from pork bones simmered until they surrender everything. You'll find the classics: tonkotsu with chashu pork, spicy miso variations, and a spicy vegetarian bowl that draws its own loyal crowd. Bowls run around $15-18, with add-ons like extra noodles or marinated eggs available if you're still hungry.",
+        "body": "This is the tonkotsu-focused location\u2014there's a chicken broth sister spot practically next door, so check the signage before you commit. The broth here is milky and rich, the kind that coats your spoon and doesn't apologize for it, built from pork bones simmered until they surrender everything. You'll find the classics: tonkotsu with chashu pork, spicy miso variations, and a spicy vegetarian bowl that draws its own loyal crowd. Bowls run around $15-18, with add-ons like extra noodles or marinated eggs available if you're still hungry.",
         "id": "block-the-food-1"
       },
       {
@@ -52,13 +52,13 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"With the frigid temperatures that Toronto is currently experiencing, Ikkousha's Ramen just felt like a nice warm blanket wrap by the fire. We had the Spicy Veg and the Fried chicken and both were excellent! The ingredients felt fresh. The broth very flavorful. The condiments greatly complimentary to the dishes.\n\nThe service was as needed, and the atmosphere was buzzing, a testament to the place. Highly recommend!\"\n\n⭐⭐⭐⭐⭐ \"Very good ramen. I have been trying out many of the options in Toronto and this is one of the best. The unique part about this location as there are two Ikkoushas nearly next to each other. One focused on pork broth and the other on chicken so look closely on the signs outside of each location and pick your preference.\n\nI love tonkotsu broth (pork) in general and this did not disappoint\"\n\n⭐⭐⭐⭐⭐ \"Great everything. Once you enter you feel as the loud streets of Toronto disappear and you are teleported to the quiet streets of Japan. There's soft Japanese music playing in the background. The staff is super friendly. The menu is small 1 small sheet but you really don't need anymore. This was my second or third time trying ramen and I got the basic one with steamed rice and fried chicken. It was perfect. Came within 10 minutes of cooking and when I asked for a fork they polite gave me it. Very nice staff , very tasty food and great atmosphere. If I could give this a 11/10 or even 15/10 it would not give the place justice for how good they are.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"With the frigid temperatures that Toronto is currently experiencing, Ikkousha's Ramen just felt like a nice warm blanket wrap by the fire. We had the Spicy Veg and the Fried chicken and both were excellent! The ingredients felt fresh. The broth very flavorful. The condiments greatly complimentary to the dishes.\n\nThe service was as needed, and the atmosphere was buzzing, a testament to the place. Highly recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very good ramen. I have been trying out many of the options in Toronto and this is one of the best. The unique part about this location as there are two Ikkoushas nearly next to each other. One focused on pork broth and the other on chicken so look closely on the signs outside of each location and pick your preference.\n\nI love tonkotsu broth (pork) in general and this did not disappoint\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great everything. Once you enter you feel as the loud streets of Toronto disappear and you are teleported to the quiet streets of Japan. There's soft Japanese music playing in the background. The staff is super friendly. The menu is small 1 small sheet but you really don't need anymore. This was my second or third time trying ramen and I got the basic one with steamed rice and fried chicken. It was perfect. Came within 10 minutes of cooking and when I asked for a fork they polite gave me it. Very nice staff , very tasty food and great atmosphere. If I could give this a 11/10 or even 15/10 it would not give the place justice for how good they are.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "TONKOTSU RAMEN\n• Signature Tonkotsu\n⭐ Black Tonkotsu\n• Shio Tonkotsu\n• God Fire — $17\n   Spicy\n• Gyokai Tonkotsu\n   魚介豚骨ラーメン\n• Spicy Miso Tonkotsu — $17\n   Spicy\n\nOTHER RAMEN\n• Shoyu Ramen — $16\n   New\n⭐ Spicy Vegetarian Ramen — $18\n   辛味野菜ラーメン\n• Veggie Ramen\n   野菜ラーメン\n\nDRINKS\n• Coke — $3\n• Sprite — $3\n• Calpis — $4\n• Ramune — $4.50\n• Green Tea — $3\n⭐ Sapporo Beer — $9\n   16oz",
+        "body": "TONKOTSU RAMEN\n\u2022 Signature Tonkotsu\n\u2b50 Black Tonkotsu\n\u2022 Shio Tonkotsu\n\u2022 God Fire \u2014 $17\n   Spicy\n\u2022 Gyokai Tonkotsu\n   \u9b5a\u4ecb\u8c5a\u9aa8\u30e9\u30fc\u30e1\u30f3\n\u2022 Spicy Miso Tonkotsu \u2014 $17\n   Spicy\n\nOTHER RAMEN\n\u2022 Shoyu Ramen \u2014 $16\n   New\n\u2b50 Spicy Vegetarian Ramen \u2014 $18\n   \u8f9b\u5473\u91ce\u83dc\u30e9\u30fc\u30e1\u30f3\n\u2022 Veggie Ramen\n   \u91ce\u83dc\u30e9\u30fc\u30e1\u30f3\n\nDRINKS\n\u2022 Coke \u2014 $3\n\u2022 Sprite \u2014 $3\n\u2022 Calpis \u2014 $4\n\u2022 Ramune \u2014 $4.50\n\u2022 Green Tea \u2014 $3\n\u2b50 Sapporo Beer \u2014 $9\n   16oz",
         "sections": [
           {
             "name": "TONKOTSU RAMEN",
@@ -90,7 +90,7 @@
               {
                 "name": "Gyokai Tonkotsu",
                 "price": "",
-                "description": "魚介豚骨ラーメン",
+                "description": "\u9b5a\u4ecb\u8c5a\u9aa8\u30e9\u30fc\u30e1\u30f3",
                 "highlight": false
               },
               {
@@ -113,13 +113,13 @@
               {
                 "name": "Spicy Vegetarian Ramen",
                 "price": "$18",
-                "description": "辛味野菜ラーメン",
+                "description": "\u8f9b\u5473\u91ce\u83dc\u30e9\u30fc\u30e1\u30f3",
                 "highlight": true
               },
               {
                 "name": "Veggie Ramen",
                 "price": "",
-                "description": "野菜ラーメン",
+                "description": "\u91ce\u83dc\u30e9\u30fc\u30e1\u30f3",
                 "highlight": false
               }
             ]
@@ -172,5 +172,6 @@
   "discovery": {
     "text": "Tokyo-style ramen research",
     "url": "https://www.ikkousha.ca/"
-  }
+  },
+  "type": "restaurant"
 }

@@ -8,13 +8,13 @@
     "address": "Kensington Market",
     "type": "cafe",
     "hours": [
-      "Monday: 10:30 AM – 7:30 PM",
-      "Tuesday: 10:45 AM – 7:30 PM",
-      "Wednesday: 10:30 AM – 7:30 PM",
-      "Thursday: 10:30 AM – 7:30 PM",
-      "Friday: 10:30 AM – 8:00 PM",
-      "Saturday: 10:30 AM – 8:00 PM",
-      "Sunday: 10:30 AM – 7:30 PM"
+      "Monday: 10:30\u202fAM\u2009\u2013\u20097:30\u202fPM",
+      "Tuesday: 10:45\u202fAM\u2009\u2013\u20097:30\u202fPM",
+      "Wednesday: 10:30\u202fAM\u2009\u2013\u20097:30\u202fPM",
+      "Thursday: 10:30\u202fAM\u2009\u2013\u20097:30\u202fPM",
+      "Friday: 10:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 10:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 10:30\u202fAM\u2009\u2013\u20097:30\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 368,
@@ -30,27 +30,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You descend into a basement on a Kensington Market side street where the chaos above ground disappears completely. The room is small and deliberately spare—low ceilings, minimal seating, soft lighting that makes you want to whisper. It feels less like a café and more like someone's intentional hideaway that they've agreed to share with you.",
+        "body": "You descend into a basement on a Kensington Market side street where the chaos above ground disappears completely. The room is small and deliberately spare\u2014low ceilings, minimal seating, soft lighting that makes you want to whisper. It feels less like a caf\u00e9 and more like someone's intentional hideaway that they've agreed to share with you.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a tea house disguised as a coffee shop, or maybe the reverse—either way, matcha runs the show here. They layer it with things that sound wrong on paper but work viscerally: blueberry, apple pie spices, white chocolate, hojicha cheesecake flavours that hit strong and earthy first, then sweet. The Taoist name checks out—nothing feels forced or fussy, just thoughtful combinations that land. Expect to spend around $7-9 for drinks that taste more complex than the price suggests.",
+        "body": "This is a tea house disguised as a coffee shop, or maybe the reverse\u2014either way, matcha runs the show here. They layer it with things that sound wrong on paper but work viscerally: blueberry, apple pie spices, white chocolate, hojicha cheesecake flavours that hit strong and earthy first, then sweet. The Taoist name checks out\u2014nothing feels forced or fussy, just thoughtful combinations that land. Expect to spend around $7-9 for drinks that taste more complex than the price suggests.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You need to disconnect from the Kensington Market sensory overload for twenty minutes, or when you want matcha made by people who actually care about it. Solo afternoon sessions work best—bring a book you won't read.",
+        "body": "You need to disconnect from the Kensington Market sensory overload for twenty minutes, or when you want matcha made by people who actually care about it. Solo afternoon sessions work best\u2014bring a book you won't read.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Service? 10000/10 Matcha? 100000/10! I highly recommend because the vibes were unmatched and the matcha was lowkey life changing. The apple pie one made me want to do a backflip. I love strong flavors and the strong flavors in each of my drinks (white chocolate matcha, apple pie matcha, and hojicha cheesecake) were THERE! 🔥🔥🔥🔥 I will be back damn near every day of my trip!\"\n\n⭐⭐⭐⭐⭐ \"I stopped by Wu Wei in Kensington Market and tried their blueberry matcha, and honestly, it was so good! The flavour was really unique — you still get that earthy matcha taste, but the blueberry adds this light sweetness and fruity twist that works perfectly together. It wasn’t too sweet either, which I really appreciated.\n\nThe place itself is small and tucked away underground, so it feels like a little hidden gem. The vibe matches the artsy energy of Kensington — cozy, chill, and very aesthetic. The staff were super nice too and took their time making the drink, which showed in the quality.\n\nIt’s definitely more of a grab-and-go spot (not much seating), but it’s worth the stop if you’re exploring the area. I’ll definitely be back to try their other flavours — this one totally won me over.\"\n\n⭐⭐⭐⭐⭐ \"We heard the matcha here is superb 👀 tried the matcha coconut latte and black sesame latte. The coconut latte cream foam was absolutely phenomenal and had so much coconut flavour. Same with the black sesame foam; I don't like black sesame but I gave it a taste and it was really good and not too heavy.\n\nThe drinks were good but I'm not a matcha snob so I didn't think their matcha was any more exceptional than other places. It was still really good, and I'd definitely come back to try their other drinks, even the non-matcha ones (which were sold out today 😔), but I can't say whether this is the best in the city haha.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Service? 10000/10 Matcha? 100000/10! I highly recommend because the vibes were unmatched and the matcha was lowkey life changing. The apple pie one made me want to do a backflip. I love strong flavors and the strong flavors in each of my drinks (white chocolate matcha, apple pie matcha, and hojicha cheesecake) were THERE! \ud83d\udd25\ud83d\udd25\ud83d\udd25\ud83d\udd25 I will be back damn near every day of my trip!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I stopped by Wu Wei in Kensington Market and tried their blueberry matcha, and honestly, it was so good! The flavour was really unique \u2014 you still get that earthy matcha taste, but the blueberry adds this light sweetness and fruity twist that works perfectly together. It wasn\u2019t too sweet either, which I really appreciated.\n\nThe place itself is small and tucked away underground, so it feels like a little hidden gem. The vibe matches the artsy energy of Kensington \u2014 cozy, chill, and very aesthetic. The staff were super nice too and took their time making the drink, which showed in the quality.\n\nIt\u2019s definitely more of a grab-and-go spot (not much seating), but it\u2019s worth the stop if you\u2019re exploring the area. I\u2019ll definitely be back to try their other flavours \u2014 this one totally won me over.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We heard the matcha here is superb \ud83d\udc40 tried the matcha coconut latte and black sesame latte. The coconut latte cream foam was absolutely phenomenal and had so much coconut flavour. Same with the black sesame foam; I don't like black sesame but I gave it a taste and it was really good and not too heavy.\n\nThe drinks were good but I'm not a matcha snob so I didn't think their matcha was any more exceptional than other places. It was still really good, and I'd definitely come back to try their other drinks, even the non-matcha ones (which were sold out today \ud83d\ude14), but I can't say whether this is the best in the city haha.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

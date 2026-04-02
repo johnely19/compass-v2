@@ -15,61 +15,61 @@
     "location": "185 Howard Ave, Brooklyn, NY 11233, USA",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 12:00 AM",
-      "Friday: 5:00 PM – 12:00 AM",
-      "Saturday: 5:00 PM – 12:00 AM",
-      "Sunday: 5:00 PM – 12:00 AM"
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "review_count": 13
   },
   "narrative": {
-    "summary": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA",
+    "summary": "\ud83d\udccd Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're deep in Bushwick on a stretch of Howard Avenue that still feels residential, walking into what reads immediately as someone's good taste made public. The room is simple—wooden tables, minimal fuss, the kind of lighting that makes everyone look like they're having a better time than they probably are. The owners are usually around, pouring wine and making recommendations like they actually care what you eat.",
+        "body": "You're deep in Bushwick on a stretch of Howard Avenue that still feels residential, walking into what reads immediately as someone's good taste made public. The room is simple\u2014wooden tables, minimal fuss, the kind of lighting that makes everyone look like they're having a better time than they probably are. The owners are usually around, pouring wine and making recommendations like they actually care what you eat.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Italian small plates in the Venetian tradition—cicchetti, which means you're eating ricotta drizzled with honey on toast, not contemplating a full tasting menu. The portions are tight, the flavors are clean, and the wine list is short enough that you won't spiral into choice paralysis. You'll spend $40-60 a person if you're actually hungry and want a few glasses.",
+        "body": "This is Italian small plates in the Venetian tradition\u2014cicchetti, which means you're eating ricotta drizzled with honey on toast, not contemplating a full tasting menu. The portions are tight, the flavors are clean, and the wine list is short enough that you won't spiral into choice paralysis. You'll spend $40-60 a person if you're actually hungry and want a few glasses.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Cicchetti Bk",
-        "body": "📍 Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA"
+        "body": "\ud83d\udccd Cicchetti BK\n185 Howard Ave, Brooklyn, NY 11233, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nVenetian wine bar in Bed-Stuy, opened March 8. Every drink comes with 3 cicchetti (tiny bites). All 15 wines by the glass are $14 each. Parmigiana di melanzane main. Stylish, intimate. Perfect hidden gem energy — brand new, barely any reviews yet."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nVenetian wine bar in Bed-Stuy, opened March 8. Every drink comes with 3 cicchetti (tiny bites). All 15 wines by the glass are $14 each. Parmigiana di melanzane main. Stylish, intimate. Perfect hidden gem energy \u2014 brand new, barely any reviews yet."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: (917) 982-1561\nWebsite: https://cicchettibk.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 5 (2 reviews)\nPrice level: n/a\nPhone: (917) 982-1561\nWebsite: https://cicchettibk.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 185 Howard Ave, Brooklyn, NY 11233, USA\n\n• walking: 2 hours 0 mins • 5.3 mi\n• transit: 42 mins • 8.1 mi\n• driving: 39 mins • 6.5 mi (traffic: 32 mins)\n• bicycling: 44 mins • 6.6 mi\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (42 mins vs 39 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 185 Howard Ave, Brooklyn, NY 11233, USA\n\n\u2022 walking: 2 hours 0 mins \u2022 5.3 mi\n\u2022 transit: 42 mins \u2022 8.1 mi\n\u2022 driving: 39 mins \u2022 6.5 mi (traffic: 32 mins)\n\u2022 bicycling: 44 mins \u2022 6.6 mi\n\nBest modality: TRANSIT \u2b50\nWhy: Transit is close to driving time (42 mins vs 39 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Incredible wine and food! Such delicious small bites and a great way to start off the evening. The ricotta and honey cicchetti was a particular highlight!\"\n\n⭐⭐⭐⭐⭐ \"We LOVED our first visit to Cicchetti! Its simple space and straightforward menu make for a delightfully tasty night out, and I really liked that I didn't have to choose a wine from an encyclopedia. The owners are frequently there IRL and it really feels like a neighborhood spot where you can trust their recommendation and walk away with deliciousness. I didn't know that \"cicchetti\" is a sort of Italian tapas dish with endless variety, so we have many reasons to go back and try the next variation.\"\n\n⭐⭐⭐⭐⭐ \"Good food and even better cocktails at reasonable prices. The meatball and the rugiada cocktails were true highlights for me. A great place to meet and chill with friends.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Incredible wine and food! Such delicious small bites and a great way to start off the evening. The ricotta and honey cicchetti was a particular highlight!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We LOVED our first visit to Cicchetti! Its simple space and straightforward menu make for a delightfully tasty night out, and I really liked that I didn't have to choose a wine from an encyclopedia. The owners are frequently there IRL and it really feels like a neighborhood spot where you can trust their recommendation and walk away with deliciousness. I didn't know that \"cicchetti\" is a sort of Italian tapas dish with endless variety, so we have many reasons to go back and try the next variation.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Good food and even better cocktails at reasonable prices. The meatball and the rugiada cocktails were true highlights for me. A great place to meet and chill with friends.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "CICCHETTI\n⭐ Venetian Small Plates\n   Rotating selection of vegetarian and non-vegetarian cicchetti with bold flavors\n\nWINES\n⭐ White Wines — $14\n   All whites priced uniformly by the glass\n• Red Wines — $14\n   All reds priced uniformly by the glass\n• Neighborhood Pour — $12\n   Rotating weekly selection\n\nCOCKTAILS & SPIRITS\n⭐ Thoughtfully Crafted Cocktails\n   House cocktails taking you on a journey for the senses\n• Brooklyn Spirits\n   Curated selection of spirits\n\nDESSERT\n• Ice Cream from Lady Moo Moo",
+        "body": "CICCHETTI\n\u2b50 Venetian Small Plates\n   Rotating selection of vegetarian and non-vegetarian cicchetti with bold flavors\n\nWINES\n\u2b50 White Wines \u2014 $14\n   All whites priced uniformly by the glass\n\u2022 Red Wines \u2014 $14\n   All reds priced uniformly by the glass\n\u2022 Neighborhood Pour \u2014 $12\n   Rotating weekly selection\n\nCOCKTAILS & SPIRITS\n\u2b50 Thoughtfully Crafted Cocktails\n   House cocktails taking you on a journey for the senses\n\u2022 Brooklyn Spirits\n   Curated selection of spirits\n\nDESSERT\n\u2022 Ice Cream from Lady Moo Moo",
         "sections": [
           {
             "name": "CICCHETTI",
@@ -180,5 +180,6 @@
         "distanceText": "8.1 mi"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

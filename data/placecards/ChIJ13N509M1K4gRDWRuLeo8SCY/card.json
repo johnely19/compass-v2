@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 9:00 AM – 4:00 PM",
-      "Thursday: 9:00 AM – 4:00 PM",
-      "Friday: 9:00 AM – 4:00 PM",
-      "Saturday: 9:00 AM – 4:00 PM",
-      "Sunday: 9:00 AM – 4:00 PM"
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM"
     ],
     "rating": 4.2,
     "review_count": 722,
@@ -26,7 +26,8 @@
     "url": "https://www.emmertoronto.ca/"
   },
   "narrative": {
-    "summary": "Sourdough + double-baked croissants that built a citywide reputation; seasonal focus with local collaborations; 4.2 rating with 720+ reviews—established craft credentials.",
+    "summary": "Sourdough + double-baked croissants that built a citywide reputation; seasonal focus with local collaborations; 4.2 rating with 720+ reviews\u2014established craft credentials.",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

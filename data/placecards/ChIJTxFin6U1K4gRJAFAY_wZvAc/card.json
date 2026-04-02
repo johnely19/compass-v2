@@ -8,13 +8,13 @@
     "address": "Kensington / College",
     "type": "bar",
     "hours": [
-      "Monday: 5:30 PM – 2:00 AM",
-      "Tuesday: 5:30 PM – 2:00 AM",
-      "Wednesday: 5:30 PM – 2:00 AM",
-      "Thursday: 5:30 PM – 2:00 AM",
-      "Friday: 5:30 PM – 2:00 AM",
-      "Saturday: 5:30 PM – 2:00 AM",
-      "Sunday: 5:30 PM – 2:00 AM"
+      "Monday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Tuesday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Wednesday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Thursday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 5:30\u202fPM\u2009\u2013\u20092:00\u202fAM"
     ],
     "rating": 4.9,
     "review_count": 368,
@@ -30,26 +30,26 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a residential stretch of College West, the kind where storefronts tuck into Victorian houses. Inside, the tables press close enough that you'll hear your neighbour's order—speakeasy dimensions without the theatre. Low light, lots of bartenders working the room, the kind of place where tight quarters feel intentional rather than cramped.",
+        "body": "You're on a residential stretch of College West, the kind where storefronts tuck into Victorian houses. Inside, the tables press close enough that you'll hear your neighbour's order\u2014speakeasy dimensions without the theatre. Low light, lots of bartenders working the room, the kind of place where tight quarters feel intentional rather than cramped.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu leans into cocktails you might need explained—the Old Man built on black tea, the Ice and Aura with its translucent clarity—but the bartenders actually know how to walk you through them. Savouries come in threes and fours, meant to pace a night of drinking. Expect to spend thoughtfully: these are $18-22 cocktails with the kind of balance that justifies it.",
+        "body": "The menu leans into cocktails you might need explained\u2014the Old Man built on black tea, the Ice and Aura with its translucent clarity\u2014but the bartenders actually know how to walk you through them. Savouries come in threes and fours, meant to pace a night of drinking. Expect to spend thoughtfully: these are $18-22 cocktails with the kind of balance that justifies it.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Love the drink menu, I feel there's a little bit for everyone. We got the ice and aura, old man, three savouries, a few others. All were amazing but my favorite is the old man.  Truly perfect if you love black tea! They also sell their cocktails by the bottle.\n\nService was good, seating is tight but overall a nice ambiance.\"\n\n⭐⭐⭐⭐⭐ \"A lot of fun at this chic spot for creative cocktails and snacks. Service was on point, lots of bartenders checking in. It was busy but never took too long for drinks.\nIt’s got a speakeasy vibe. I’d recommend reservations.\nThe cocktails were balanced with fun garnishes.\nDefinitely check out the secret menu\"\n\n⭐⭐⭐⭐⭐ \"It was truly the best bar experience I’ve ever had. The cocktail, the atmosphere, the service all exceeded my expectations. Especially the bartenders - Santiago, Eric, and Jacky were amazing:) so hospitable, friendly and professional. I don’t leave reviews often but I had to for this one. We had a great time and it was an unforgettable experience. We got The Heart of Normandy, it was phenomenal.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Love the drink menu, I feel there's a little bit for everyone. We got the ice and aura, old man, three savouries, a few others. All were amazing but my favorite is the old man.  Truly perfect if you love black tea! They also sell their cocktails by the bottle.\n\nService was good, seating is tight but overall a nice ambiance.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"A lot of fun at this chic spot for creative cocktails and snacks. Service was on point, lots of bartenders checking in. It was busy but never took too long for drinks.\nIt\u2019s got a speakeasy vibe. I\u2019d recommend reservations.\nThe cocktails were balanced with fun garnishes.\nDefinitely check out the secret menu\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"It was truly the best bar experience I\u2019ve ever had. The cocktail, the atmosphere, the service all exceeded my expectations. Especially the bartenders - Santiago, Eric, and Jacky were amazing:) so hospitable, friendly and professional. I don\u2019t leave reviews often but I had to for this one. We had a great time and it was an unforgettable experience. We got The Heart of Normandy, it was phenomenal.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "SUITE 115 CLASSICS\n• The Old Man — $23\n   House Hong Kong Milk Tea blend, Neutral Spirit, Whey\n• Life at Suite — $22\n• Dadar Gulung — $23\n• Eleanor's Reverie #2 — $22\n   Bright and refreshing. A crowd pleaser.\n⭐ 115 Boulevardier — $24\n   Brown Butter, Chocolate, Banana, Bearface Whisky, Campari, Sweet Vermouth\n• … and The Sea — $23\n   Roku Gin, Wasabi, Scallop, Dry Vermouth, Dill, Seaweed\n\nSIGNATURE COCKTAILS\n• Ash & Aura — $22\n   Smoky Brazilian grilled pineapple meets a silky, clarified Pina Colada.\n• Uppa Country — $22\n• H&M — $23\n   Thai Basil (Horapha), Mango (Ma Muang), Milagro Silver Tequila, Genmaicha\n• Terminal 3 Espresso Martini — $18\n   Wyborowa Vodka, Coffee Liqueur, Espresso\n⭐ The Tiny Savouries — $23\n   Three mini savoury cocktails, inspired by three different dishes. Charcuterie Board, Taco Tuesday, Ackee & Saltfish\n\nNON-ALCOHOLIC DRINKS\n• Andes Mountain Fizz — $18\n   Lulo fruit, Cucumber, White Bitter Soda, Chamomile\n• Whispering Grove — $18\n   Lapsang Souchong, Mushroom, Fig Leaf, Whey, Citrus. Smoky, & bright citrus, finished with herbal and umami notes.\n\nSMALL PLATES\n• Bar Cashews — $9\n   Shallots, Thai Basil, Coriander, Cumin, Warmed in Viet Fish Sauce\n• Taro & Sweet Potato Chips — $11\n   Thinly sliced, fried in small batch. Tossed with Furikake\n• Mom's Dumplings — $17\n   Pan-fried Chive & Pork Dumplings, House Chili Oil, Soy Gastrique\n• Corn Cheese Ttoebokki — $16\n   Corn Béchamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions\n• Shrimp Toasty — $19\n   Shrimp smothered Brioche, Carrots, Sesame Oil, Mayo\n⭐ Indo Short Ribs — $25\n   AAA Short Rib slow cooked with Indonesian flavours, Naan bites",
+        "body": "SUITE 115 CLASSICS\n\u2022 The Old Man \u2014 $23\n   House Hong Kong Milk Tea blend, Neutral Spirit, Whey\n\u2022 Life at Suite \u2014 $22\n\u2022 Dadar Gulung \u2014 $23\n\u2022 Eleanor's Reverie #2 \u2014 $22\n   Bright and refreshing. A crowd pleaser.\n\u2b50 115 Boulevardier \u2014 $24\n   Brown Butter, Chocolate, Banana, Bearface Whisky, Campari, Sweet Vermouth\n\u2022 \u2026 and The Sea \u2014 $23\n   Roku Gin, Wasabi, Scallop, Dry Vermouth, Dill, Seaweed\n\nSIGNATURE COCKTAILS\n\u2022 Ash & Aura \u2014 $22\n   Smoky Brazilian grilled pineapple meets a silky, clarified Pina Colada.\n\u2022 Uppa Country \u2014 $22\n\u2022 H&M \u2014 $23\n   Thai Basil (Horapha), Mango (Ma Muang), Milagro Silver Tequila, Genmaicha\n\u2022 Terminal 3 Espresso Martini \u2014 $18\n   Wyborowa Vodka, Coffee Liqueur, Espresso\n\u2b50 The Tiny Savouries \u2014 $23\n   Three mini savoury cocktails, inspired by three different dishes. Charcuterie Board, Taco Tuesday, Ackee & Saltfish\n\nNON-ALCOHOLIC DRINKS\n\u2022 Andes Mountain Fizz \u2014 $18\n   Lulo fruit, Cucumber, White Bitter Soda, Chamomile\n\u2022 Whispering Grove \u2014 $18\n   Lapsang Souchong, Mushroom, Fig Leaf, Whey, Citrus. Smoky, & bright citrus, finished with herbal and umami notes.\n\nSMALL PLATES\n\u2022 Bar Cashews \u2014 $9\n   Shallots, Thai Basil, Coriander, Cumin, Warmed in Viet Fish Sauce\n\u2022 Taro & Sweet Potato Chips \u2014 $11\n   Thinly sliced, fried in small batch. Tossed with Furikake\n\u2022 Mom's Dumplings \u2014 $17\n   Pan-fried Chive & Pork Dumplings, House Chili Oil, Soy Gastrique\n\u2022 Corn Cheese Ttoebokki \u2014 $16\n   Corn B\u00e9chamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions\n\u2022 Shrimp Toasty \u2014 $19\n   Shrimp smothered Brioche, Carrots, Sesame Oil, Mayo\n\u2b50 Indo Short Ribs \u2014 $25\n   AAA Short Rib slow cooked with Indonesian flavours, Naan bites",
         "sections": [
           {
             "name": "SUITE 115 CLASSICS",
@@ -79,7 +79,7 @@
                 "highlight": true
               },
               {
-                "name": "… and The Sea",
+                "name": "\u2026 and The Sea",
                 "price": "$23",
                 "description": "Roku Gin, Wasabi, Scallop, Dry Vermouth, Dill, Seaweed"
               }
@@ -151,7 +151,7 @@
               {
                 "name": "Corn Cheese Ttoebokki",
                 "price": "$16",
-                "description": "Corn Béchamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions"
+                "description": "Corn B\u00e9chamel, Nori Salt, Gochu Chili Oil, Corn Chips, Green Onions"
               },
               {
                 "name": "Shrimp Toasty",
@@ -169,5 +169,6 @@
         ]
       }
     ]
-  }
+  },
+  "type": "bar"
 }

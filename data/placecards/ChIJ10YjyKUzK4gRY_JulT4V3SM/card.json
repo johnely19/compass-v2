@@ -14,43 +14,43 @@
     "user_rating_count": 1437,
     "location": "2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
     "hours": [
-      "Monday: 8:00 AM – 8:00 PM",
-      "Tuesday: 8:00 AM – 8:00 PM",
-      "Wednesday: 8:00 AM – 8:00 PM",
-      "Thursday: 8:00 AM – 8:00 PM",
-      "Friday: 8:00 AM – 9:00 PM",
-      "Saturday: 8:00 AM – 9:00 PM",
-      "Sunday: 8:00 AM – 8:00 PM"
+      "Monday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u20098:00\u202fPM"
     ],
     "review_count": 1439
   },
   "narrative": {
-    "summary": "📍 STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
+    "summary": "\ud83d\udccd STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Stock T.c Grocer",
-        "body": "📍 STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada"
+        "body": "\ud83d\udccd STOCK T.C Grocer\n2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nModern specialty grocery stop on Yonge, focused on premium pantry and prepared options."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nModern specialty grocery stop on Yonge, focused on premium pantry and prepared options."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗣𝗥𝗢𝗗𝗨𝗖𝗧𝗦\n\nExpected strengths: curated grocery staples, premium prepared foods, and specialty imports.\nWebsite: http://www.shopstocktc.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde3\ud835\udde5\ud835\udde2\ud835\uddd7\ud835\udde8\ud835\uddd6\ud835\udde7\ud835\udde6\n\nExpected strengths: curated grocery staples, premium prepared foods, and specialty imports.\nWebsite: http://www.shopstocktc.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4 (1437 reviews)\nPrice level: n/a\nPhone: (416) 489-1020\nWebsite: http://www.shopstocktc.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4 (1437 reviews)\nPrice level: n/a\nPhone: (416) 489-1020\nWebsite: http://www.shopstocktc.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada\n\n• walking: 34 mins • 2.4 km\n• transit: 11 mins • 2.5 km\n• driving: 8 mins • 2.4 km (traffic: 5 mins)\n• bicycling: 13 mins • 3.1 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (8 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 2388 Yonge St Ground Floor, Toronto, ON M4P 3J5, Canada\n\n\u2022 walking: 34 mins \u2022 2.4 km\n\u2022 transit: 11 mins \u2022 2.5 km\n\u2022 driving: 8 mins \u2022 2.4 km (traffic: 5 mins)\n\u2022 bicycling: 13 mins \u2022 3.1 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (8 mins)"
       }
     ]
   },
@@ -106,5 +106,6 @@
         "distanceText": "2.5 km"
       }
     ]
-  }
+  },
+  "type": "grocery"
 }

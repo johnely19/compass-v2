@@ -7,30 +7,31 @@
     "name": "WAH Center (Williamsburg Art & Historical Center)",
     "city": "NYC",
     "address": "135 Broadway, Brooklyn, NY 11211, USA",
-    "location": "135 Broadway, Brooklyn, NY 11211, USA"
+    "location": "135 Broadway, Brooklyn, NY 11211, USA",
+    "type": "gallery"
   },
   "narrative": {
-    "summary": "📍 WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA",
+    "summary": "\ud83d\udccd WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA",
     "blocks": [
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "Enter",
-        "body": "📍 WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA"
+        "body": "\ud83d\udccd WAH Center (Williamsburg Art & Historical Center)\n135 Broadway, Brooklyn, NY 11211, USA"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (39 reviews)"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.5 (39 reviews)"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 135 Broadway, Brooklyn, NY 11211, USA\n\n• walking: 47 mins • 2.1 mi\n• transit: 34 mins • 3.9 mi\n• driving: 13 mins • 2.7 mi (traffic: 16 mins)\n• bicycling: 17 mins • 2.7 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 135 Broadway, Brooklyn, NY 11211, USA\n\n\u2022 walking: 47 mins \u2022 2.1 mi\n\u2022 transit: 34 mins \u2022 3.9 mi\n\u2022 driving: 13 mins \u2022 2.7 mi (traffic: 16 mins)\n\u2022 bicycling: 17 mins \u2022 2.7 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (13 mins)"
       }
     ]
   },
@@ -86,5 +87,6 @@
         "distanceText": "3.9 mi"
       }
     ]
-  }
+  },
+  "type": "gallery"
 }

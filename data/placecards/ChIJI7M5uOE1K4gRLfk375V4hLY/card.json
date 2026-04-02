@@ -8,13 +8,13 @@
     "address": "West Queen West / Parkdale edge",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 8:00 PM",
-      "Tuesday: 10:00 AM – 8:00 PM",
-      "Wednesday: 10:00 AM – 8:00 PM",
-      "Thursday: 10:00 AM – 8:00 PM",
-      "Friday: 10:00 AM – 8:00 PM",
-      "Saturday: 10:00 AM – 8:00 PM",
-      "Sunday: 10:00 AM – 8:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20098:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 106,
@@ -26,7 +26,8 @@
     "url": "https://6ixretail.com/2026/02/little-ghosts-books-toronto/"
   },
   "narrative": {
-    "summary": "NEW (Oct 2025)—Toronto's first dedicated romance bookstore. Genre-specific indie bookstores are thriving; this is the latest cool signal. 4.9 rating.",
+    "summary": "NEW (Oct 2025)\u2014Toronto's first dedicated romance bookstore. Genre-specific indie bookstores are thriving; this is the latest cool signal. 4.9 rating.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

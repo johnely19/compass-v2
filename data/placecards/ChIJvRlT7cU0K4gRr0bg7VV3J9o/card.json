@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJvRlT7cU0K4gRr0bg7VV3J9o",
-    "name": "AGO — Moments in Modernism",
+    "name": "AGO \u2014 Moments in Modernism",
     "city": "Toronto",
     "address": "Downtown (Dundas St W)",
     "type": "gallery"
@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Rothko's No.1 White and Red (1962) anchors this modernism survey. On view until April 26. Essential if you care about the movement.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

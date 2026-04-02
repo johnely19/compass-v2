@@ -10,30 +10,31 @@
     "website": "https://www.toronto.com/things-to-do/food-and-drink/pizzeria-badiali-second-location-mirvish-village-toronto/article_788eeda4-dec2-5248-9f9c-b9bb93049bd8.html"
   },
   "discovery": {
-    "text": "Verified find (Disco) — expansion of Pizzeria Badiali (Dovercourt)",
+    "text": "Verified find (Disco) \u2014 expansion of Pizzeria Badiali (Dovercourt)",
     "url": ""
   },
   "narrative": {
-    "summary": "Second location of Toronto’s standout NY-style slice shop, opening in Mirvish Village (Annex). The original Dovercourt location is a proven hit (4.7★, 6,548 reviews). Expect serious demand early.",
+    "summary": "Second location of Toronto\u2019s standout NY-style slice shop, opening in Mirvish Village (Annex). The original Dovercourt location is a proven hit (4.7\u2605, 6,548 reviews). Expect serious demand early.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Markham Street in Mirvish Village, where the Annex sheds its student grit for cleaner lines and newer builds. This is Badiali's expansion from their Dovercourt original—expect the same counter-forward setup where you order by the slice under heat lamps, grab a number, and post up at one of the handful of tables or the window bar. It's built for speed and volume, not lingering, but the pizza's good enough you won't care.",
+        "body": "You're on Markham Street in Mirvish Village, where the Annex sheds its student grit for cleaner lines and newer builds. This is Badiali's expansion from their Dovercourt original\u2014expect the same counter-forward setup where you order by the slice under heat lamps, grab a number, and post up at one of the handful of tables or the window bar. It's built for speed and volume, not lingering, but the pizza's good enough you won't care.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is New York-style pizza done right: wide, foldable slices with a thin, crisp-bottomed crust that still has chew, low-moisture mozzarella, and a sweet-tangy tomato sauce that doesn't drown the dough. The pepperoni cups and curls as it bakes, pooling grease in little orange circles—it's the move if you're getting just one slice. Whole pies run around $20-30, but most people come for slices at $5-7 each, reheated to order so the cheese bubbles and the edges crisp up again. It's counter-service all the way, cash and card both work.",
+        "body": "This is New York-style pizza done right: wide, foldable slices with a thin, crisp-bottomed crust that still has chew, low-moisture mozzarella, and a sweet-tangy tomato sauce that doesn't drown the dough. The pepperoni cups and curls as it bakes, pooling grease in little orange circles\u2014it's the move if you're getting just one slice. Whole pies run around $20-30, but most people come for slices at $5-7 each, reheated to order so the cheese bubbles and the edges crisp up again. It's counter-service all the way, cash and card both work.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Late night when you need something immediate and satisfying, or a quick weekday lunch when you want pizza that doesn't require sitting through service. Skip prime Friday and Saturday evenings unless you enjoy long lineups—this place earned its reputation at the original location, and the crowds followed.",
+        "body": "Late night when you need something immediate and satisfying, or a quick weekday lunch when you want pizza that doesn't require sitting through service. Skip prime Friday and Saturday evenings unless you enjoy long lineups\u2014this place earned its reputation at the original location, and the crowds followed.",
         "id": "block-go-when-2"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

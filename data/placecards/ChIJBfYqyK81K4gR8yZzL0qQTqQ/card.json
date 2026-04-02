@@ -8,13 +8,13 @@
     "address": "The Well / King West",
     "type": "cafe",
     "hours": [
-      "Monday: 7:30 AM – 5:00 PM",
-      "Tuesday: 7:30 AM – 5:00 PM",
-      "Wednesday: 7:30 AM – 5:00 PM",
-      "Thursday: 7:30 AM – 5:00 PM",
-      "Friday: 7:30 AM – 5:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 6:00 PM"
+      "Monday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 7:30\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.2,
     "review_count": 433,
@@ -31,13 +31,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the lobby of The Well's office tower on King West, where De Mello's flagship pulls 700 customers a day through a sleek, minimalist setup. The counter is compact, the seating sparse—maybe a handful of tables if you're lucky—but the tiger logo on every cup and the Melbourne-meets-Seoul aesthetic make it feel more intentional than cramped. It's designed for speed and style in equal measure, all clean lines and good light filtering through the glass-walled lobby.",
+        "body": "You're in the lobby of The Well's office tower on King West, where De Mello's flagship pulls 700 customers a day through a sleek, minimalist setup. The counter is compact, the seating sparse\u2014maybe a handful of tables if you're lucky\u2014but the tiger logo on every cup and the Melbourne-meets-Seoul aesthetic make it feel more intentional than cramped. It's designed for speed and style in equal measure, all clean lines and good light filtering through the glass-walled lobby.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The coffee is the point here—precise, smooth espresso that earned them a Sprudge feature and the kind of Americano that tastes balanced, not burnt. The almond croissant is the pastry to get: proper lamination that shatters when you bite through the exterior, soft and almond-sweet but not cloying inside. Prices feel fair for the quality—an Americano and a croissant won't wreck your wallet. This is Korean-Australian cafe culture filtered through Toronto, focused and unshowy.",
+        "body": "The coffee is the point here\u2014precise, smooth espresso that earned them a Sprudge feature and the kind of Americano that tastes balanced, not burnt. The almond croissant is the pastry to get: proper lamination that shatters when you bite through the exterior, soft and almond-sweet but not cloying inside. Prices feel fair for the quality\u2014an Americano and a croissant won't wreck your wallet. This is Korean-Australian cafe culture filtered through Toronto, focused and unshowy.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Loved my visit to De Mello Coffee. The coffee was excellent, smooth and flavorful, and the almond croissant was a standout: crispy and flaky on the outside, soft inside, and not overly sweet. The prices feel very reasonable for the quality you get. Highly recommended.\"\n\n⭐⭐⭐⭐⭐ \"⸻\n\nI really enjoyed my Americano here — smooth, rich, and perfectly balanced. I’m a sucker for great design, and the tiger on the cup totally won me over (tigers are my favorite!).\n\nThe café is conveniently located in the lobby of the office tower at The Well, making it an easy stop for your morning coffee or mid-day caffeine fix. Seating is limited, but I was lucky enough to grab a table and enjoy my drink in peace.\n\nA stylish little coffee spot with great energy and attention to detail — definitely worth checking out if you’re in the area!\"\n\n⭐⭐⭐⭐ \"Got the matcha latte and it was pretty good. I wish it was mixed a bit more since there were a few clumps. Staff was friendly and efficient. Love the interior design, the place was clean and there were a few tables inside as well.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Loved my visit to De Mello Coffee. The coffee was excellent, smooth and flavorful, and the almond croissant was a standout: crispy and flaky on the outside, soft inside, and not overly sweet. The prices feel very reasonable for the quality you get. Highly recommended.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"\u2e3b\n\nI really enjoyed my Americano here \u2014 smooth, rich, and perfectly balanced. I\u2019m a sucker for great design, and the tiger on the cup totally won me over (tigers are my favorite!).\n\nThe caf\u00e9 is conveniently located in the lobby of the office tower at The Well, making it an easy stop for your morning coffee or mid-day caffeine fix. Seating is limited, but I was lucky enough to grab a table and enjoy my drink in peace.\n\nA stylish little coffee spot with great energy and attention to detail \u2014 definitely worth checking out if you\u2019re in the area!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Got the matcha latte and it was pretty good. I wish it was mixed a bit more since there were a few clumps. Staff was friendly and efficient. Love the interior design, the place was clean and there were a few tables inside as well.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

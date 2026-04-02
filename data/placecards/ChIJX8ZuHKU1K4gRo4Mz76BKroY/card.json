@@ -4,7 +4,7 @@
   "source": "ready-queue-build",
   "identity": {
     "place_id": "ChIJX8ZuHKU1K4gRo4Mz76BKroY",
-    "name": "À Toi",
+    "name": "\u00c0 Toi",
     "city": "Toronto",
     "address": "214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada",
     "type": "bar",
@@ -15,60 +15,60 @@
     "location": "214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 2:00 AM",
-      "Friday: 5:00 PM – 2:00 AM",
-      "Saturday: 5:00 PM – 2:00 AM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 5:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "review_count": 1320
   },
   "narrative": {
-    "summary": "You're descending below King Street West into a basement that feels more Paris wine bar than Financial District—low ceilings, dim lighting, the kind of intimate scale where you hear neighboring tables pop champagne corks. This is a champagne-and-oyster operation executed exactly as it should be: oysters arrive cold and clean, no fussy mignonette, meant to be knocked back between sips from a serious sparkling list. The staff don't just seat you—they perform the space's story with the theatricality of people who actually care.",
+    "summary": "You're descending below King Street West into a basement that feels more Paris wine bar than Financial District\u2014low ceilings, dim lighting, the kind of intimate scale where you hear neighboring tables pop champagne corks. This is a champagne-and-oyster operation executed exactly as it should be: oysters arrive cold and clean, no fussy mignonette, meant to be knocked back between sips from a serious sparkling list. The staff don't just seat you\u2014they perform the space's story with the theatricality of people who actually care.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You descend below King Street West into a basement that feels more Paris wine bar than Financial District. Low ceilings, dim lighting, and the kind of intimate scale where you hear neighboring tables pop champagne corks. The staff don't just seat you—they perform the space's story with the theatricality of people who actually care.",
+        "body": "You descend below King Street West into a basement that feels more Paris wine bar than Financial District. Low ceilings, dim lighting, and the kind of intimate scale where you hear neighboring tables pop champagne corks. The staff don't just seat you\u2014they perform the space's story with the theatricality of people who actually care.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a champagne-and-oyster operation, executed exactly as it should be. The oysters arrive cold and clean, no fussy mignonette getting in the way, meant to be knocked back between sips from a serious sparkling list. Expect to spend accordingly—you're paying for pristine bivalves and bottles that go well beyond entry-level bubbles.",
+        "body": "This is a champagne-and-oyster operation, executed exactly as it should be. The oysters arrive cold and clean, no fussy mignonette getting in the way, meant to be knocked back between sips from a serious sparkling list. Expect to spend accordingly\u2014you're paying for pristine bivalves and bottles that go well beyond entry-level bubbles.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
-        "title": "À Toi",
-        "body": "📍 À Toi\n214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada"
+        "title": "A\u0300 Toi",
+        "body": "\ud83d\udccd \u00c0 Toi\n214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nTruly hidden cocktail bar in Toronto - described as 'hidden right in front of your eyes', craft cocktails"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nTruly hidden cocktail bar in Toronto - described as 'hidden right in front of your eyes', craft cocktails"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://www.sipshucksip.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: https://www.sipshucksip.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.5 (1318 reviews)\nPrice level: n/a\nPhone: (416) 408-4044\nWebsite: https://www.sipshucksip.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.5 (1318 reviews)\nPrice level: n/a\nPhone: (416) 408-4044\nWebsite: https://www.sipshucksip.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada\n\n• walking: 2 hours 35 mins • 11.2 km\n• transit: 1 hour 1 min • 14.3 km\n• driving: 24 mins • 16.8 km (traffic: 19 mins)\n• bicycling: 41 mins • 11.6 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (24 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 214 King St W Basement Level 1, Toronto, ON M5H 3S6, Canada\n\n\u2022 walking: 2 hours 35 mins \u2022 11.2 km\n\u2022 transit: 1 hour 1 min \u2022 14.3 km\n\u2022 driving: 24 mins \u2022 16.8 km (traffic: 19 mins)\n\u2022 bicycling: 41 mins \u2022 11.6 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (24 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The service was genuinely warm and attentive from start to finish — you feel welcomed the moment you walk in.\n\nThe champagne selection is outstanding. Whether you’re celebrating or just treating yourself, there’s an impressive range to choose from, and the staff are happy to guide you to the perfect bottle.\n\nAnd the oysters? Absolutely fantastic — fresh, beautifully presented, and full of flavour. Pairing them with a great glass of champagne makes for the perfect experience.\"\n\n⭐⭐⭐⭐⭐ \"Really cool concept, the woman that led us into the bar was very expressive in her story telling. Once we were inside, there was a magician going around to different tables which was a unique experience. Great layout to the bar, and was perfect for our larger group as they had different sections depending on group size. Cocktails and food were good. Definitely recommend.\"\n\n⭐⭐⭐⭐ \"Great set up for a speakeasy, and the decor was top-notch. Staff were friendly and knowledgeable. Higher priced cocktails, but it seems to be expected based on the venue. Cocktail execution is 3 out of 5\nIt's a lot of shaking for show, but still a good bar solid cocktails. This place with a few tweaks can be awesome.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The service was genuinely warm and attentive from start to finish \u2014 you feel welcomed the moment you walk in.\n\nThe champagne selection is outstanding. Whether you\u2019re celebrating or just treating yourself, there\u2019s an impressive range to choose from, and the staff are happy to guide you to the perfect bottle.\n\nAnd the oysters? Absolutely fantastic \u2014 fresh, beautifully presented, and full of flavour. Pairing them with a great glass of champagne makes for the perfect experience.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Really cool concept, the woman that led us into the bar was very expressive in her story telling. Once we were inside, there was a magician going around to different tables which was a unique experience. Great layout to the bar, and was perfect for our larger group as they had different sections depending on group size. Cocktails and food were good. Definitely recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great set up for a speakeasy, and the decor was top-notch. Staff were friendly and knowledgeable. Higher priced cocktails, but it seems to be expected based on the venue. Cocktail execution is 3 out of 5\nIt's a lot of shaking for show, but still a good bar solid cocktails. This place with a few tweaks can be awesome.\""
       }
     ]
   },
@@ -124,5 +124,6 @@
         "distanceText": "14.3 km"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

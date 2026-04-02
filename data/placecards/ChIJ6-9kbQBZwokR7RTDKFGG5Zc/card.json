@@ -19,5 +19,6 @@
   "narrative": {
     "summary": "You're on Graham Avenue at the Williamsburg/Bushwick border, in a warm neighborhood bar that feels like the local. Unpretentious, buzzy, the kind of place where you become a regular after two visits. Part of the same strip as other Williamsburg anchors\u2014this is your new go-to.",
     "blocks": []
-  }
+  },
+  "type": "bar"
 }

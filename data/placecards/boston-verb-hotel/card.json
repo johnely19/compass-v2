@@ -22,7 +22,7 @@
       {
         "type": "prose",
         "title": "The Place",
-        "body": "The Verb is Boston's love letter to rock and roll — a converted 1959 motor lodge decked in vintage concert posters, guitars on the walls, and record bins to flip through at the front desk. The heated outdoor pool is a genuine surprise for New England, and the rooftop views of Fenway make this feel like staying inside the city's soul rather than near it.",
+        "body": "The Verb is Boston's love letter to rock and roll \u2014 a converted 1959 motor lodge decked in vintage concert posters, guitars on the walls, and record bins to flip through at the front desk. The heated outdoor pool is a genuine surprise for New England, and the rooftop views of Fenway make this feel like staying inside the city's soul rather than near it.",
         "id": "block-the-place-0"
       },
       {
@@ -42,7 +42,13 @@
   "_hotel": {
     "priceRange": "$$-$$$",
     "vibe": "boutique, music-themed, fun",
-    "highlights": ["heated outdoor pool", "rock memorabilia", "Fenway proximity", "great hotel bar"],
+    "highlights": [
+      "heated outdoor pool",
+      "rock memorabilia",
+      "Fenway proximity",
+      "great hotel bar"
+    ],
     "bestFor": "People who want character and energy over polish"
-  }
+  },
+  "type": "accommodation"
 }

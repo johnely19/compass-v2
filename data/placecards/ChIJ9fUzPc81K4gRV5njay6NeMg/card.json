@@ -8,13 +8,13 @@
     "address": "Yonge & Dundas (31 Elm St, 2nd floor)",
     "type": "bar",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 9:00 AM – 10:00 PM",
-      "Thursday: 9:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 43,
@@ -24,32 +24,33 @@
     "text": "Discovered via insauga.com"
   },
   "narrative": {
-    "summary": "Heritage Vietnamese with serious technique — sá sùng (sea worm) in the pho broth, fish sauce glazed wings, head chef Chau Du. Second-floor hidden spot. Already open, 4.8★ (26 reviews).",
+    "summary": "Heritage Vietnamese with serious technique \u2014 s\u00e1 s\u00f9ng (sea worm) in the pho broth, fish sauce glazed wings, head chef Chau Du. Second-floor hidden spot. Already open, 4.8\u2605 (26 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're a block from the Yonge-Dundas chaos, but up on the second floor of 31 Elm, it's a different city. The room feels like someone's well-edited apartment — warm wood tables, soft overhead lighting that doesn't wash you out, maybe twenty seats total. It's the kind of hidden spot where you feel like you've discovered something, not because they're trying to be exclusive, but because most people just walk past the entrance.",
+        "body": "You're a block from the Yonge-Dundas chaos, but up on the second floor of 31 Elm, it's a different city. The room feels like someone's well-edited apartment \u2014 warm wood tables, soft overhead lighting that doesn't wash you out, maybe twenty seats total. It's the kind of hidden spot where you feel like you've discovered something, not because they're trying to be exclusive, but because most people just walk past the entrance.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Chef Chau Du is cooking heritage Vietnamese with the kind of technique that shows up in details: sá sùng (sea worm) fortifying the pho broth, fish sauce lacquered onto chicken wings until they're sticky-glossy, Hanoi spring rolls that shatter when you bite into them. The bun bo hue gets its richness from a broth that tastes like it's been building flavor for hours, balanced spice and funk without leaning too hard on either. The egg coffee — with its thick, sweet egg cream floating over dark coffee — is the move if you want something that feels both nostalgic and revelatory.",
+        "body": "Chef Chau Du is cooking heritage Vietnamese with the kind of technique that shows up in details: s\u00e1 s\u00f9ng (sea worm) fortifying the pho broth, fish sauce lacquered onto chicken wings until they're sticky-glossy, Hanoi spring rolls that shatter when you bite into them. The bun bo hue gets its richness from a broth that tastes like it's been building flavor for hours, balanced spice and funk without leaning too hard on either. The egg coffee \u2014 with its thick, sweet egg cream floating over dark coffee \u2014 is the move if you want something that feels both nostalgic and revelatory.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your second or third date spot, when you're past impressing each other and want to actually eat well. Or solo when you need to remember why you care about food — sit wherever they put you, order the spring rolls and the coffee, and reset.",
+        "body": "This is your second or third date spot, when you're past impressing each other and want to actually eat well. Or solo when you need to remember why you care about food \u2014 sit wherever they put you, order the spring rolls and the coffee, and reset.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Really enjoyed my meal here! I ordered the canh ga chien mam, bun bo hue, and the Hanoi spring rolls. The spring rolls were definitely the highlight which are super flavorful and perfectly crispy. The chicken wings had a great fish sauce glaze, and the bun bo hue broth was rich with balanced spices.\n\nFor drinks, I tried the egg coffee and tra dao cam sa which both were delicious, especially the egg coffee the egg cream was rich which highlight the coffee. Would definitely come back!\"\n\n⭐⭐⭐⭐⭐ \"Incredible! The food was amazing.\n\nThe server was very insightful, cheerful. The diverse range of drinks looked all so interesting, and the one we had were delicious. I had the salted foam coffee,  which was a pleasant surprise. We took a bánh mì for appetizer, it was sooo taste. The signature bowl of pho was comforting and delicious. Desserts looked great but we were full, maybe a next time!\n\nWill definitely be back! Thank you again:)\"\n\n⭐⭐⭐⭐⭐ \"The restaurant looked like it came straight out of asia. Beautiful portraits on the wall and lights made out of fine bamboo trees. I felt like a rich person when i walked in, not understanding how i even got the permission to sit there. The menu is way better. We get pictures besides every meals which makes it so easier to make a quick decision. Beautiful and delicious drinks and full plates for an incredible price.\n\nMe and my friend, for an entrée and plates of diner only paid 53$ for the two of us while we expected at least more than 90$. The service was amazing, everything was amazing but the service, i felt like a vip. We got explained every meals and how to eat them. Beautiful representations of everything with care i could listen to all day long.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Really enjoyed my meal here! I ordered the canh ga chien mam, bun bo hue, and the Hanoi spring rolls. The spring rolls were definitely the highlight which are super flavorful and perfectly crispy. The chicken wings had a great fish sauce glaze, and the bun bo hue broth was rich with balanced spices.\n\nFor drinks, I tried the egg coffee and tra dao cam sa which both were delicious, especially the egg coffee the egg cream was rich which highlight the coffee. Would definitely come back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Incredible! The food was amazing.\n\nThe server was very insightful, cheerful. The diverse range of drinks looked all so interesting, and the one we had were delicious. I had the salted foam coffee,  which was a pleasant surprise. We took a b\u00e1nh m\u00ec for appetizer, it was sooo taste. The signature bowl of pho was comforting and delicious. Desserts looked great but we were full, maybe a next time!\n\nWill definitely be back! Thank you again:)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The restaurant looked like it came straight out of asia. Beautiful portraits on the wall and lights made out of fine bamboo trees. I felt like a rich person when i walked in, not understanding how i even got the permission to sit there. The menu is way better. We get pictures besides every meals which makes it so easier to make a quick decision. Beautiful and delicious drinks and full plates for an incredible price.\n\nMe and my friend, for an entr\u00e9e and plates of diner only paid 53$ for the two of us while we expected at least more than 90$. The service was amazing, everything was amazing but the service, i felt like a vip. We got explained every meals and how to eat them. Beautiful representations of everything with care i could listen to all day long.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

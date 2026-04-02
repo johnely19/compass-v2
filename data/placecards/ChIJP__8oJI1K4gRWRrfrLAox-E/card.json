@@ -6,7 +6,7 @@
     "name": "Next Stop Japan Marketplace",
     "city": "Toronto",
     "address": "Queen West (938 Queen St W — Welcome Market)",
-    "type": "grocery",
+    "type": "shop",
     "rating": 4.4,
     "review_count": 33,
     "website": "https://thewelcomemarket.ca/"
@@ -42,5 +42,6 @@
         "body": "⭐⭐⭐⭐⭐ \"One of the best local pop-up markets in Queen West (and Toronto). So much that even Toronto Life has mentioned them recently! They add so much vibrancy to the neighbourhood and their selection for local small businesses (handmade, vintage, and curated) is always so on point.\n\nI have bought some amazing pieces here for my home and wardrobe. I HIGHLY RECOMMEND that anyone local or tourists visiting Toronto also check out The Welcome Market. ❤️❤️❤️\"\n\n⭐⭐⭐⭐ \"Very cute market with adorable products!\n\nMy constructive feedback would be a more diverse array of vendors for more items in other categories beyond candles / jewelry.\"\n\n⭐⭐⭐⭐⭐ \"This place is absolutely a must visit in Toronto! The local artists are all fantastic and you will spend money on something. It’s amazing. Whenever friends or family visit me in Toronto I bring them here!\""
       }
     ]
-  }
+  },
+  "type": "shop"
 }

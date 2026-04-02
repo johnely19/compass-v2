@@ -2,7 +2,8 @@
   "place_id": "ChIJjxRPB6b_0YURzYYN1B99aHI",
   "identity": {
     "name": "Bot\u00e1nico",
-    "tagline": "Garden-feel indoor-outdoor restaurant in Condesa"
+    "tagline": "Garden-feel indoor-outdoor restaurant in Condesa",
+    "type": "restaurant"
   },
   "location": {
     "city": "Mexico City",
@@ -65,5 +66,6 @@
       "path": "/data/placecards/ChIJjxRPB6b_0YURzYYN1B99aHI/images/map.png",
       "caption": "Map view"
     }
-  ]
+  ],
+  "type": "restaurant"
 }

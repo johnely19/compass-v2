@@ -13,32 +13,33 @@
     "url": "https://www.blogto.com/bakery/one-pound-toronto/"
   },
   "narrative": {
-    "summary": "Korean-style cake café with cloud-like confections; 4.8 rating with early fans. Quiet gem on Dundas W for soft pastry lovers.",
+    "summary": "Korean-style cake caf\u00e9 with cloud-like confections; 4.8 rating with early fans. Quiet gem on Dundas W for soft pastry lovers.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find this Korean-style cake café on a quiet stretch of Dundas West, just west of Trinity Bellwoods. Inside, it's all clean lines and pale wood—minimalist tables spaced generously enough that you could actually open a laptop, soft instrumental music threading through the room. The aesthetic leans fully into that Seoul café vibe: white walls, simple chairs, nothing competing with the cakes under glass at the counter.",
+        "body": "You'll find this Korean-style cake caf\u00e9 on a quiet stretch of Dundas West, just west of Trinity Bellwoods. Inside, it's all clean lines and pale wood\u2014minimalist tables spaced generously enough that you could actually open a laptop, soft instrumental music threading through the room. The aesthetic leans fully into that Seoul caf\u00e9 vibe: white walls, simple chairs, nothing competing with the cakes under glass at the counter.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a place built around cloud-like Korean pastries—the kind that look almost too delicate to cut into. The Matcha Brownie Basque Cheesecake shows up in nearly every review, dense and creamy with that signature burnt top, while the Earl Grey cake and seasonal strawberry offerings rotate through the case. Pair any slice with their Strawberry Matcha Latte, which comes out creamy and not-too-sweet. Expect to spend around $8-12 for cake, a few dollars more for drinks.",
+        "body": "This is a place built around cloud-like Korean pastries\u2014the kind that look almost too delicate to cut into. The Matcha Brownie Basque Cheesecake shows up in nearly every review, dense and creamy with that signature burnt top, while the Earl Grey cake and seasonal strawberry offerings rotate through the case. Pair any slice with their Strawberry Matcha Latte, which comes out creamy and not-too-sweet. Expect to spend around $8-12 for cake, a few dollars more for drinks.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Best on a weekday afternoon when you need a quiet corner to work through something, or when you want to linger over tea and cake without rushing. Skip weekend afternoons unless you're prepared to wait—word's gotten out fast.",
+        "body": "Best on a weekday afternoon when you need a quiet corner to work through something, or when you want to linger over tea and cake without rushing. Skip weekend afternoons unless you're prepared to wait\u2014word's gotten out fast.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The Strawberry Matcha Latte was creamy and perfectly sweet, and the Matcha Brownie Basque Cheesecake exceeded my expectations! Must try duo 🍵🍰\n\nThe cafe is simple and cute with soft music playing in the background. There’s also spacious seating, perfect to work/study from.\n\nAlso the owners and staff are incredibly sweet! They added extra seating to accommodate us as the cafe was super busy, and we were very appreciative ❤️ Excited to come back and try other drinks and desserts!\"\n\n⭐⭐⭐⭐ \"Follow @__homekong__ for more ✨\n\nThis is a new café that just opened recently ~\nI love the interior — it really gives you that Korea vibe. Aesthetic, minimalist, and super cozy (but yes… it gets very busy on weekends 😂).\n\nI tried their Earl Grey cake and Matcha Brownie cake.\nBetween the two, I definitely prefer the Matcha Brownie — it has a rich matcha flavour and the dark brownie base balances the sweetness perfectly 🍵🤎\n\nThe Earl Grey cake is good too, but the texture is a bit too moist for my personal taste. The Earl Grey flavour is strong though, so if you love Earl Grey, you’ll probably enjoy it more than I did!\n\nSave this spot for your next cozy café day 🤍\"\n\n⭐⭐⭐⭐⭐ \"There was an unfortunate mix up on dates for our cake order yesterday. The team was beyond kind and sweet in resolving this. They were able to provide us with a christmas cake super last minute which also tasted amazing as usual. We’ve loved their cakes even back when they were operating out of a different location and teaching various cake classes. I can’t recommend and thank them enough for all the kindness. We can’t wait to order more in the future.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The Strawberry Matcha Latte was creamy and perfectly sweet, and the Matcha Brownie Basque Cheesecake exceeded my expectations! Must try duo \ud83c\udf75\ud83c\udf70\n\nThe cafe is simple and cute with soft music playing in the background. There\u2019s also spacious seating, perfect to work/study from.\n\nAlso the owners and staff are incredibly sweet! They added extra seating to accommodate us as the cafe was super busy, and we were very appreciative \u2764\ufe0f Excited to come back and try other drinks and desserts!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Follow @__homekong__ for more \u2728\n\nThis is a new caf\u00e9 that just opened recently ~\nI love the interior \u2014 it really gives you that Korea vibe. Aesthetic, minimalist, and super cozy (but yes\u2026 it gets very busy on weekends \ud83d\ude02).\n\nI tried their Earl Grey cake and Matcha Brownie cake.\nBetween the two, I definitely prefer the Matcha Brownie \u2014 it has a rich matcha flavour and the dark brownie base balances the sweetness perfectly \ud83c\udf75\ud83e\udd0e\n\nThe Earl Grey cake is good too, but the texture is a bit too moist for my personal taste. The Earl Grey flavour is strong though, so if you love Earl Grey, you\u2019ll probably enjoy it more than I did!\n\nSave this spot for your next cozy caf\u00e9 day \ud83e\udd0d\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"There was an unfortunate mix up on dates for our cake order yesterday. The team was beyond kind and sweet in resolving this. They were able to provide us with a christmas cake super last minute which also tasted amazing as usual. We\u2019ve loved their cakes even back when they were operating out of a different location and teaching various cake classes. I can\u2019t recommend and thank them enough for all the kindness. We can\u2019t wait to order more in the future.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

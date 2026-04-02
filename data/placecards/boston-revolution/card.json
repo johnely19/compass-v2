@@ -17,12 +17,12 @@
     "discoveredAt": "2026-03-28T00:00:00.000Z"
   },
   "narrative": {
-    "summary": "Hip, affordable boutique in the South End — Boston's best neighbourhood for dining and nightlife. A converted YWCA with bold design, bunk rooms and private rooms available, great value without sacrificing style.",
+    "summary": "Hip, affordable boutique in the South End \u2014 Boston's best neighbourhood for dining and nightlife. A converted YWCA with bold design, bunk rooms and private rooms available, great value without sacrificing style.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Place",
-        "body": "The Revolution is a converted YWCA from 1884 — big bones, high ceilings, and bold graphic design that wears its history loudly. It's the most affordable on this list, and the location is arguably the best for John's brief: the South End is Boston's dining and bar district, with Tremont Street lined with restaurants, and the SoWa arts market a short walk away.",
+        "body": "The Revolution is a converted YWCA from 1884 \u2014 big bones, high ceilings, and bold graphic design that wears its history loudly. It's the most affordable on this list, and the location is arguably the best for John's brief: the South End is Boston's dining and bar district, with Tremont Street lined with restaurants, and the SoWa arts market a short walk away.",
         "id": "block-the-place-0"
       },
       {
@@ -42,7 +42,12 @@
   "_hotel": {
     "priceRange": "$$",
     "vibe": "hip, affordable, design-forward, great neighbourhood",
-    "highlights": ["South End location", "best value on the list", "lively dining neighbourhood"],
+    "highlights": [
+      "South End location",
+      "best value on the list",
+      "lively dining neighbourhood"
+    ],
     "bestFor": "Budget-conscious without sacrificing vibe"
-  }
+  },
+  "type": "accommodation"
 }

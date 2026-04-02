@@ -12,63 +12,63 @@
     "website": "https://lavenueonparliament.ca/",
     "location": "583 Parliament St, Toronto, ON M4X 1P9, Canada",
     "hours": [
-      "Monday: 5:00 – 10:00 PM",
-      "Tuesday: 5:00 – 10:00 PM",
-      "Wednesday: 5:00 – 10:00 PM",
-      "Thursday: 5:00 – 10:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 10:00 AM – 3:00 PM, 5:00 – 11:00 PM",
-      "Sunday: 10:00 AM – 10:00 PM"
+      "Monday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20093:00\u202fPM, 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 250
   },
   "narrative": {
-    "summary": "You're on Parliament just south of Wellesley, stepping into a French bistro with dark wood and good lighting that makes morning feel optimistic—tables close enough that you'll overhear your neighbor's weekend plans. The brunch runs classic: Lyon eggs Benedict with sweet brioche and thick-cut ham, though the hollandaise can be timid. Skip the orange juice—it tastes like it came from a carton despite the 'fresh-squeezed' claim.",
+    "summary": "You're on Parliament just south of Wellesley, stepping into a French bistro with dark wood and good lighting that makes morning feel optimistic\u2014tables close enough that you'll overhear your neighbor's weekend plans. The brunch runs classic: Lyon eggs Benedict with sweet brioche and thick-cut ham, though the hollandaise can be timid. Skip the orange juice\u2014it tastes like it came from a carton despite the 'fresh-squeezed' claim.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Parliament just south of Wellesley, where the Victorian rowhouses still have their original storefronts. Inside, the decor leans French bistro—expect dark wood, good lighting that makes morning feel optimistic, and tables close enough that you'll overhear your neighbor's weekend plans. The room has that polished neighborhood spot energy where regulars read the paper alone and groups linger over second coffees.",
+        "body": "You're on Parliament just south of Wellesley, where the Victorian rowhouses still have their original storefronts. Inside, the decor leans French bistro\u2014expect dark wood, good lighting that makes morning feel optimistic, and tables close enough that you'll overhear your neighbor's weekend plans. The room has that polished neighborhood spot energy where regulars read the paper alone and groups linger over second coffees.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The brunch menu runs classic French-leaning: eggs Benedict variations with properly poached eggs, though the hollandaise can be timid. Their Lyon version comes with sweet brioche and thick-cut ham that doesn't hold back on portion size. Expect to spend around $18-22 for mains, and skip the orange juice—it tastes like it came from a carton despite the 'fresh-squeezed' claim.",
+        "body": "The brunch menu runs classic French-leaning: eggs Benedict variations with properly poached eggs, though the hollandaise can be timid. Their Lyon version comes with sweet brioche and thick-cut ham that doesn't hold back on portion size. Expect to spend around $18-22 for mains, and skip the orange juice\u2014it tastes like it came from a carton despite the 'fresh-squeezed' claim.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "L'avenue On Parliament",
-        "body": "📍 L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada"
+        "body": "\ud83d\udccd L'Avenue on Parliament\n583 Parliament St, Toronto, ON M4X 1P9, Canada"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (249 reviews)\nPhone: (647) 368-8008\nWebsite: https://lavenueonparliament.ca/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (249 reviews)\nPhone: (647) 368-8008\nWebsite: https://lavenueonparliament.ca/"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 583 Parliament St, Toronto, ON M4X 1P9, Canada\n\n• walking: 50 mins • 3.7 km\n• transit: 26 mins • 4.2 km\n• driving: 11 mins • 4.5 km (traffic: 8 mins)\n• bicycling: 12 mins • 3.8 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (11 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 583 Parliament St, Toronto, ON M4X 1P9, Canada\n\n\u2022 walking: 50 mins \u2022 3.7 km\n\u2022 transit: 26 mins \u2022 4.2 km\n\u2022 driving: 11 mins \u2022 4.5 km (traffic: 8 mins)\n\u2022 bicycling: 12 mins \u2022 3.8 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (11 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"I came here for brunch today ordered got the Lyon eggs Benedict. The fruit was fresh and the food overall was delicious. I liked the sweetness of the bread that they had the poached eggs on and they gave a hearty portion of the ham on top. The hollandaise was a bit of a lighter, weaker flavor but I still enjoyed it. Their freshly squeezed orange juice tasted like it was storebought though, save your money. Service overall was great and I loved the decor in the restaurant.\"\n\n⭐⭐⭐⭐ \"Lovely dinner at l'Avenue last night. Had the crab cakes, which were nicely presented but a bit too dense, not crispy, and pricey for the quality. Escargot needed a bit more garlic in our view as did the Caesar salad which was creamy but needed a bit more of a kick.\nThe star of the show was their homemade lobster spaghetti which came with a full lobster tail and was made with a lobster bisque sauce...very yummy.\nService was excellent and very attentive!\nWe look forward to brunch there in a few weeks.\"\n\n⭐⭐⭐⭐⭐ \"Our first dinner there was indulgent and worth it. Food is prepared exquisitely. The ambiance is sophisticated but cozy. Had 4 courses for a birthday celebration including fresh oysters, French onion soup, bone in rib eye for 2 (enough for 3 and took the rest home), with dessert soufflé for 2 (was divine; not too sweet and light) in addition to 2 cocktails and a bottle of red wine (medium prices available). Service was attentive, and polite with attention to detail. Was $436 for 2 of us including everything but could pare it down if not wanting to spend as much. Would definitely return and look forward to brunch on their nice patio in the warmer weather.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"I came here for brunch today ordered got the Lyon eggs Benedict. The fruit was fresh and the food overall was delicious. I liked the sweetness of the bread that they had the poached eggs on and they gave a hearty portion of the ham on top. The hollandaise was a bit of a lighter, weaker flavor but I still enjoyed it. Their freshly squeezed orange juice tasted like it was storebought though, save your money. Service overall was great and I loved the decor in the restaurant.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Lovely dinner at l'Avenue last night. Had the crab cakes, which were nicely presented but a bit too dense, not crispy, and pricey for the quality. Escargot needed a bit more garlic in our view as did the Caesar salad which was creamy but needed a bit more of a kick.\nThe star of the show was their homemade lobster spaghetti which came with a full lobster tail and was made with a lobster bisque sauce...very yummy.\nService was excellent and very attentive!\nWe look forward to brunch there in a few weeks.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Our first dinner there was indulgent and worth it. Food is prepared exquisitely. The ambiance is sophisticated but cozy. Had 4 courses for a birthday celebration including fresh oysters, French onion soup, bone in rib eye for 2 (enough for 3 and took the rest home), with dessert souffl\u00e9 for 2 (was divine; not too sweet and light) in addition to 2 cocktails and a bottle of red wine (medium prices available). Service was attentive, and polite with attention to detail. Was $436 for 2 of us including everything but could pare it down if not wanting to spend as much. Would definitely return and look forward to brunch on their nice patio in the warmer weather.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "STEAKS & GRILLED\n⭐ 32oz USDA Bone In Rib Steak For Two — $115\n⭐ Grilled Australian Lamb Chops — $69\n   1lb\n\nDESSERTS\n⭐ Orange Grand Marnier Soufflé for two — $19.95\n   Please allow 25 minutes for preparation\n• Gâteau au Fromage Classique — $14.95\n• Flourless Chocolate Cake — $14.95\n   with a cherry crème anglais\n• Coconut Crème Pie — $16.95\n   with white chocolate shavings\n• Crème Brûlée — $12.95",
+        "body": "STEAKS & GRILLED\n\u2b50 32oz USDA Bone In Rib Steak For Two \u2014 $115\n\u2b50 Grilled Australian Lamb Chops \u2014 $69\n   1lb\n\nDESSERTS\n\u2b50 Orange Grand Marnier Souffl\u00e9 for two \u2014 $19.95\n   Please allow 25 minutes for preparation\n\u2022 G\u00e2teau au Fromage Classique \u2014 $14.95\n\u2022 Flourless Chocolate Cake \u2014 $14.95\n   with a cherry cr\u00e8me anglais\n\u2022 Coconut Cr\u00e8me Pie \u2014 $16.95\n   with white chocolate shavings\n\u2022 Cr\u00e8me Br\u00fbl\u00e9e \u2014 $12.95",
         "sections": [
           {
             "name": "STEAKS & GRILLED",
@@ -91,13 +91,13 @@
             "name": "DESSERTS",
             "items": [
               {
-                "name": "Orange Grand Marnier Soufflé for two",
+                "name": "Orange Grand Marnier Souffl\u00e9 for two",
                 "price": "$19.95",
                 "description": "Please allow 25 minutes for preparation",
                 "highlight": true
               },
               {
-                "name": "Gâteau au Fromage Classique",
+                "name": "G\u00e2teau au Fromage Classique",
                 "price": "$14.95",
                 "description": "",
                 "highlight": false
@@ -105,17 +105,17 @@
               {
                 "name": "Flourless Chocolate Cake",
                 "price": "$14.95",
-                "description": "with a cherry crème anglais",
+                "description": "with a cherry cr\u00e8me anglais",
                 "highlight": false
               },
               {
-                "name": "Coconut Crème Pie",
+                "name": "Coconut Cr\u00e8me Pie",
                 "price": "$16.95",
                 "description": "with white chocolate shavings",
                 "highlight": false
               },
               {
-                "name": "Crème Brûlée",
+                "name": "Cr\u00e8me Br\u00fbl\u00e9e",
                 "price": "$12.95",
                 "description": "",
                 "highlight": false
@@ -178,5 +178,6 @@
         "distanceText": "4.2 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }
