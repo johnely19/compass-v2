@@ -36,6 +36,7 @@ async function callOpenClaw(
         'Content-Type': 'application/json',
         Authorization: `Bearer ${gatewayToken}`,
         'x-openclaw-agent-id': 'concierge',
+        'x-openclaw-scopes': 'operator.read,operator.write',
         'x-openclaw-session-key': `compass:user:${userId}`,
       },
       body: JSON.stringify({
