@@ -11,10 +11,10 @@
       "Monday: Closed",
       "Tuesday: Closed",
       "Wednesday: Closed",
-      "Thursday: 7:00 PM – 1:00 AM",
-      "Friday: 7:00 PM – 2:00 AM",
-      "Saturday: 7:00 PM – 2:00 AM",
-      "Sunday: 7:00 PM – 12:00 AM"
+      "Thursday: 7:00\u202fPM\u2009\u2013\u20091:00\u202fAM",
+      "Friday: 7:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 7:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 7:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 4.2,
     "review_count": 758,
@@ -31,13 +31,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You walk past a pink bodega facade on Dundas West, push through the door, and drop into a tiki-adjacent fever dream. Red lighting, DJ booth humming in the corner, bartenders working fast behind a packed bar while groups huddle around low tables. After dark, the whole room tilts into club mode—louder, sweatier, more sour drop shots than you'd expect from a place with mahjong tiles on the wall.",
+        "body": "You walk past a pink bodega facade on Dundas West, push through the door, and drop into a tiki-adjacent fever dream. Red lighting, DJ booth humming in the corner, bartenders working fast behind a packed bar while groups huddle around low tables. After dark, the whole room tilts into club mode\u2014louder, sweatier, more sour drop shots than you'd expect from a place with mahjong tiles on the wall.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu shifts depending when you show up—daytime is one thing, club hours another. Late night, you're looking at curly fries, salads sized for one, shareable plates that make sense with a coconut mojito in your hand. Chef Phil runs a tight kitchen that can pivot from a Valentine's prix fixe (eight dishes, everything reportedly worth eating) to drunk food that actually tastes good. It's playful without being precious, priced to keep you drinking.",
+        "body": "The menu shifts depending when you show up\u2014daytime is one thing, club hours another. Late night, you're looking at curly fries, salads sized for one, shareable plates that make sense with a coconut mojito in your hand. Chef Phil runs a tight kitchen that can pivot from a Valentine's prix fixe (eight dishes, everything reportedly worth eating) to drunk food that actually tastes good. It's playful without being precious, priced to keep you drinking.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"what a fun and lively speakeasy themed bar!\nthey have a well curated food and drink menu. i came during the “club” hours so the menu is different than during the day. i got the curly fries & salad. both were great as a snake. meant for one person. i also got the coconut mojito and sour drop shots. prices were reasonable. the DJ that plays here was amazing & got the vibe of the crowd. the atmosphere was great & so were the bartenders! i’d definitely come again!\"\n\n⭐⭐⭐⭐⭐ \"Wow. First timers for Valentine’s Day.  What can I say besides 10/10.  We did the V day pre fixe which allowed us to try and share about 8 dishes.  Everything was just so tasty.  I wouldn’t change a thing.  Already planing a trip back. Great friendly service from all and it was a pleasure to meet the chef Phil. Highly  recommend!\"\n\n⭐⭐⭐⭐⭐ \"A warm and welcoming atmosphere; chill & lush music vibes tonight.\n\nGreat team Lee! Huge shout out to the bartender who stepped up to tend to an unexpected party of 30+ people while he was off attending a birthday celebration.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"what a fun and lively speakeasy themed bar!\nthey have a well curated food and drink menu. i came during the \u201cclub\u201d hours so the menu is different than during the day. i got the curly fries & salad. both were great as a snake. meant for one person. i also got the coconut mojito and sour drop shots. prices were reasonable. the DJ that plays here was amazing & got the vibe of the crowd. the atmosphere was great & so were the bartenders! i\u2019d definitely come again!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wow. First timers for Valentine\u2019s Day.  What can I say besides 10/10.  We did the V day pre fixe which allowed us to try and share about 8 dishes.  Everything was just so tasty.  I wouldn\u2019t change a thing.  Already planing a trip back. Great friendly service from all and it was a pleasure to meet the chef Phil. Highly  recommend!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"A warm and welcoming atmosphere; chill & lush music vibes tonight.\n\nGreat team Lee! Huge shout out to the bartender who stepped up to tend to an unexpected party of 30+ people while he was off attending a birthday celebration.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

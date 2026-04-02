@@ -6,7 +6,7 @@
     "name": "Montauk Sofa",
     "city": "Toronto",
     "address": "King East Design District",
-    "type": "grocery",
+    "type": "shop",
     "hours": [
       "Monday: Closed",
       "Tuesday: 11:00 AM – 5:00 PM",
@@ -27,5 +27,6 @@
   "narrative": {
     "summary": "New showroom in design corridor, Canadian-made sofas with clean Scandinavian-inspired lines",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

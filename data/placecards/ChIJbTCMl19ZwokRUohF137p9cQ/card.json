@@ -11,7 +11,8 @@
     "price_level": 2,
     "location": "295 Grand St, Brooklyn, NY 11211, USA",
     "lat": 40.7131054,
-    "lng": -73.9572975
+    "lng": -73.9572975,
+    "type": "bar"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nGrand St in Williamsburg \u2014 James Murphy's wine bar that became one of the world's most respected restaurants.\n\nMichelin-starred. North America's 50 Best. Natural wine list that rewrites the rules. Chef Nick Curtola's seasonal cooking is precise and effortlessly unfussy.",
@@ -46,5 +47,6 @@
   "discovery": {
     "text": "Featured in Eater NY \u2014 'Best Wine List in NYC'",
     "url": "https://ny.eater.com/maps/best-wine-bars-nyc"
-  }
+  },
+  "type": "bar"
 }

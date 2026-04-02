@@ -12,18 +12,18 @@
     "text": "Discovered via goplaces:details"
   },
   "narrative": {
-    "summary": "Operating since 1978—esoteric, spiritual, philosophy, counterculture. 4.8 rating, 634 reviews. Late hours (til 9pm daily) make it great for evening browsing.",
+    "summary": "Operating since 1978\u2014esoteric, spiritual, philosophy, counterculture. 4.8 rating, 634 reviews. Late hours (til 9pm daily) make it great for evening browsing.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Bloor West in the Annex, where the storefronts still feel lived-in rather than curated. Inside, floor-to-ceiling shelves crowd the narrow aisles with decades of accumulated esoterica—Jung next to Tarot decks, philosophy bleeding into occult, all presided over by Churchill, an orange cat who treats the stacks like his personal kingdom. Patrick, who's run this place since 1978, knows exactly where everything is and will talk you through Gnosticism or Tolkien with equal enthusiasm.",
+        "body": "You're on Bloor West in the Annex, where the storefronts still feel lived-in rather than curated. Inside, floor-to-ceiling shelves crowd the narrow aisles with decades of accumulated esoterica\u2014Jung next to Tarot decks, philosophy bleeding into occult, all presided over by Churchill, an orange cat who treats the stacks like his personal kingdom. Patrick, who's run this place since 1978, knows exactly where everything is and will talk you through Gnosticism or Tolkien with equal enthusiasm.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Books",
-        "body": "This isn't a bookstore trying to be a lifestyle brand—it's the real thing, stocked deep in metaphysics, counterculture, spirituality, and philosophy that's impossible to find anywhere else in the city. You'll turn up pristine copies of things you've been hunting for years (one customer finally found their Silmarillion here after searching across the GTA), plus shelves of hermetic texts, Buddhist philosophy, and whatever Patrick's deemed worth carrying. Open until 9pm every night, which means you can actually browse after work instead of racing against a 6pm close.",
+        "body": "This isn't a bookstore trying to be a lifestyle brand\u2014it's the real thing, stocked deep in metaphysics, counterculture, spirituality, and philosophy that's impossible to find anywhere else in the city. You'll turn up pristine copies of things you've been hunting for years (one customer finally found their Silmarillion here after searching across the GTA), plus shelves of hermetic texts, Buddhist philosophy, and whatever Patrick's deemed worth carrying. Open until 9pm every night, which means you can actually browse after work instead of racing against a 6pm close.",
         "id": "block-the-books-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I’ve wanted to thrift the Silmarillion for so long and I’ve looked everywhere, even outside the GTA, and they were the only one that had it! The lady at the counter was also nice to point me exactly where it was. Pristine condition. They have a lot of books here worth checking out\"\n\n⭐⭐⭐⭐⭐ \"I chanced upon this store accidentally while walking along Bloor. I went in to take a look and was quite surprised to find all of my favourite books metaphysical and spiritual books. Patrick, the owner of the store is warm, friendly, and has a ton of knowledge about a variety of topics. He's a great conversationalist and is fanscinating to listen to. He's quite helpful and easygoing. There's a friendly orange cat in the store by the name, Churchill, which is a big plus!\n\nI usually go there when it's slow and I take my time in the store. If you like books and enjoy having a warm, relational experience (as opposed to a transactional one), you will enjoy this store.\"\n\n⭐⭐⭐⭐⭐ \"One of the best used book stores in Toronto!\nThis is one of my favourite spots in general to visit mainly because of the atmosphere. Feels so welcoming!\n\nI’ve found so many great books here as well. From philosophy to religion to poetry. They have a huge selection for all types of genres. The owner is so sweet and friendly as well! Oh and I cannot forget the special Churchill who you must visit once you’re here! The most beautiful orange cat.\n\nI’ve brought so many people here and they’ve loved it here. Definitely visit if you’re in the area!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I\u2019ve wanted to thrift the Silmarillion for so long and I\u2019ve looked everywhere, even outside the GTA, and they were the only one that had it! The lady at the counter was also nice to point me exactly where it was. Pristine condition. They have a lot of books here worth checking out\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I chanced upon this store accidentally while walking along Bloor. I went in to take a look and was quite surprised to find all of my favourite books metaphysical and spiritual books. Patrick, the owner of the store is warm, friendly, and has a ton of knowledge about a variety of topics. He's a great conversationalist and is fanscinating to listen to. He's quite helpful and easygoing. There's a friendly orange cat in the store by the name, Churchill, which is a big plus!\n\nI usually go there when it's slow and I take my time in the store. If you like books and enjoy having a warm, relational experience (as opposed to a transactional one), you will enjoy this store.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"One of the best used book stores in Toronto!\nThis is one of my favourite spots in general to visit mainly because of the atmosphere. Feels so welcoming!\n\nI\u2019ve found so many great books here as well. From philosophy to religion to poetry. They have a huge selection for all types of genres. The owner is so sweet and friendly as well! Oh and I cannot forget the special Churchill who you must visit once you\u2019re here! The most beautiful orange cat.\n\nI\u2019ve brought so many people here and they\u2019ve loved it here. Definitely visit if you\u2019re in the area!\""
       }
     ]
-  }
+  },
+  "type": "shop"
 }

@@ -15,66 +15,66 @@
     "location": "1133 Yonge St, Toronto, ON M4T 2Y7, Canada",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 5:00 – 10:00 PM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200910:00\u202fPM",
       "Sunday: Closed"
     ],
     "review_count": 198
   },
   "narrative": {
-    "summary": "You're on Yonge Street north of Summerhill, stepping into a converted storefront with dark walls, brass fixtures, and moody lighting that makes everyone look like they're celebrating something. This is Justin Friedlich's first solo venture since Buca—modern cooking with bold, layered flavors that wants you to notice the work behind it. Order the Troublemaker cocktail, expect to spend $60-80 per person, and don't mention birthdays if you want your dessert inscription to stay private.",
+    "summary": "You're on Yonge Street north of Summerhill, stepping into a converted storefront with dark walls, brass fixtures, and moody lighting that makes everyone look like they're celebrating something. This is Justin Friedlich's first solo venture since Buca\u2014modern cooking with bold, layered flavors that wants you to notice the work behind it. Order the Troublemaker cocktail, expect to spend $60-80 per person, and don't mention birthdays if you want your dessert inscription to stay private.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a busy stretch of Yonge Street north of Summerhill, where the restaurant sits in a converted storefront with tall windows that let you watch the sidewalk traffic. Inside, the design leans theatrical—dark walls, brass fixtures, and moody lighting that makes everyone look like they're celebrating something. Tables are close enough to feel the energy but far enough that your birthday inscription on the dessert plate stays private.",
+        "body": "You're on a busy stretch of Yonge Street north of Summerhill, where the restaurant sits in a converted storefront with tall windows that let you watch the sidewalk traffic. Inside, the design leans theatrical\u2014dark walls, brass fixtures, and moody lighting that makes everyone look like they're celebrating something. Tables are close enough to feel the energy but far enough that your birthday inscription on the dessert plate stays private.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu runs modern with bold, layered flavours that don't apologize for themselves—the kind of cooking that wants you to notice the work behind it. Order the Troublemaker cocktail (they're serious about their bar program) and settle in for dishes that balance richness with enough acidity to keep you going. Expect to spend $60-80 per person before drinks, more if you're marking an occasion.",
+        "body": "The menu runs modern with bold, layered flavours that don't apologize for themselves\u2014the kind of cooking that wants you to notice the work behind it. Order the Troublemaker cocktail (they're serious about their bar program) and settle in for dishes that balance richness with enough acidity to keep you going. Expect to spend $60-80 per person before drinks, more if you're marking an occasion.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Shay",
-        "body": "📍 Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada"
+        "body": "\ud83d\udccd Shay\n1133 Yonge St, Toronto, ON M4T 2Y7, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nFirst solo venture from Justin Friedlich (former Buca Yorkville chef) - Italian-inspired wine bar named after his daughter. Most anticipated 2026 opening"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nFirst solo venture from Justin Friedlich (former Buca Yorkville chef) - Italian-inspired wine bar named after his daughter. Most anticipated 2026 opening"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://sash.ca/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://sash.ca/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (199 reviews)\nPrice level: n/a\nPhone: (416) 921-7274\nWebsite: http://sash.ca/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (199 reviews)\nPrice level: n/a\nPhone: (416) 921-7274\nWebsite: http://sash.ca/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1133 Yonge St, Toronto, ON M4T 2Y7, Canada\n\n• walking: 10 mins • 0.8 km\n• transit: 7 mins • 0.9 km\n• driving: 3 mins • 0.8 km (traffic: 2 mins)\n• bicycling: 2 mins • 0.8 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (10 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1133 Yonge St, Toronto, ON M4T 2Y7, Canada\n\n\u2022 walking: 10 mins \u2022 0.8 km\n\u2022 transit: 7 mins \u2022 0.9 km\n\u2022 driving: 3 mins \u2022 0.8 km (traffic: 2 mins)\n\u2022 bicycling: 2 mins \u2022 0.8 km\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (10 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Enjoyed and absolutely wonderful evening at this restaurant to celebrate my wife’s birthday. The service was great.  We were greeted by a friendly staff member and taken to our table right away.  The atmosphere was great and decor was fantastic.  Our meals were very flavourful and you definitely have to try the Troublemaker cocktail.  I enjoy it so much that I had to have a second.\n\nWhen booking the restaurant online I mentioned that it was my wife’s birthday. I did not mention it when I got to the restaurant and they did not forget.  Our dessert had a little inscription wishing her a happy birthday.\n\nOverall our evening was fantastic and we also got a chance to chat with Sash.  He was very humble and easy to approach.\n\nWill definitely be visiting this restaurant on our next special event.\"\n\n⭐⭐⭐⭐⭐ \"Incredible night at Sash. The service was flawless — warm, attentive, and truly elevated the entire experience. We made a special request for Alaskan king crab, and the kitchen absolutely delivered. It was spectacular — sweet, fresh, and perfectly prepared.Best Alaskan Crab ever !!!\n\nEvery dish was beautifully plated and full of flavour, and the atmosphere is vibrant yet elegant. Everyone needs to try this place. One of the best dining experiences in Toronto . A MUST !!!\"\n\n⭐⭐⭐⭐⭐ \"Chef Sash delivers a beautiful experience with his unique flavors and beautiful presentation.\n\nI had the tuna starter which was prepared with care and elegance.\n\nThe steak was juicy and cooked to perfection.\n\nService was spot on delivering a calm and comforting experience.\n\nPerfect for special occasions and everything in between.\n\nIf you want to experience first class dining this is the place.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Enjoyed and absolutely wonderful evening at this restaurant to celebrate my wife\u2019s birthday. The service was great.  We were greeted by a friendly staff member and taken to our table right away.  The atmosphere was great and decor was fantastic.  Our meals were very flavourful and you definitely have to try the Troublemaker cocktail.  I enjoy it so much that I had to have a second.\n\nWhen booking the restaurant online I mentioned that it was my wife\u2019s birthday. I did not mention it when I got to the restaurant and they did not forget.  Our dessert had a little inscription wishing her a happy birthday.\n\nOverall our evening was fantastic and we also got a chance to chat with Sash.  He was very humble and easy to approach.\n\nWill definitely be visiting this restaurant on our next special event.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Incredible night at Sash. The service was flawless \u2014 warm, attentive, and truly elevated the entire experience. We made a special request for Alaskan king crab, and the kitchen absolutely delivered. It was spectacular \u2014 sweet, fresh, and perfectly prepared.Best Alaskan Crab ever !!!\n\nEvery dish was beautifully plated and full of flavour, and the atmosphere is vibrant yet elegant. Everyone needs to try this place. One of the best dining experiences in Toronto . A MUST !!!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Chef Sash delivers a beautiful experience with his unique flavors and beautiful presentation.\n\nI had the tuna starter which was prepared with care and elegance.\n\nThe steak was juicy and cooked to perfection.\n\nService was spot on delivering a calm and comforting experience.\n\nPerfect for special occasions and everything in between.\n\nIf you want to experience first class dining this is the place.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "APPETIZERS\n• Cauliflower Mushroom Puree\n   Burgundy truffles\n• Sash Salad\n   Black plums + tomatoes + cucumbers + mizuna + jalapeño + soy vinaigrette\n⭐ Blue Fin Tuna Tataki\n   Cucumber relish + citrus zest + horseradish + wasabi mayo + soy + coriander\n• Prime Steak Tartare\n   Watercress + cornichons + mustard + toasted baguette\n\nMAINS\n• Sash Smash Burger + Frites\n   Chuck + brisket + cheddar + truffle aioli\n• Chicken Schnitzel Latke\n   Creamy Caesar salad + parmesan dill ranch\n⭐ Pan Seared East Coast Halibut\n   Stew Marzano tomatoes + fingerling potatoes + roasted scallions + lemon butter\n• Spaghettini + Fall Squash\n   Squash + organic carrots + valentine radishes + pecorino\n• Chicken Supreme — $15\n   Wild mushroom + crispy potatoes + truffle jus\n⭐ Day Boat Scallops + Parmesan Risotto — $20\n   Sugar snap peas + cucumber relish + lemon butter + waterborne greens\n• Dover Sole — $30\n   Meunière sauce + orange + parsley",
+        "body": "APPETIZERS\n\u2022 Cauliflower Mushroom Puree\n   Burgundy truffles\n\u2022 Sash Salad\n   Black plums + tomatoes + cucumbers + mizuna + jalape\u00f1o + soy vinaigrette\n\u2b50 Blue Fin Tuna Tataki\n   Cucumber relish + citrus zest + horseradish + wasabi mayo + soy + coriander\n\u2022 Prime Steak Tartare\n   Watercress + cornichons + mustard + toasted baguette\n\nMAINS\n\u2022 Sash Smash Burger + Frites\n   Chuck + brisket + cheddar + truffle aioli\n\u2022 Chicken Schnitzel Latke\n   Creamy Caesar salad + parmesan dill ranch\n\u2b50 Pan Seared East Coast Halibut\n   Stew Marzano tomatoes + fingerling potatoes + roasted scallions + lemon butter\n\u2022 Spaghettini + Fall Squash\n   Squash + organic carrots + valentine radishes + pecorino\n\u2022 Chicken Supreme \u2014 $15\n   Wild mushroom + crispy potatoes + truffle jus\n\u2b50 Day Boat Scallops + Parmesan Risotto \u2014 $20\n   Sugar snap peas + cucumber relish + lemon butter + waterborne greens\n\u2022 Dover Sole \u2014 $30\n   Meuni\u00e8re sauce + orange + parsley",
         "sections": [
           {
             "name": "APPETIZERS",
@@ -88,7 +88,7 @@
               {
                 "name": "Sash Salad",
                 "price": "",
-                "description": "Black plums + tomatoes + cucumbers + mizuna + jalapeño + soy vinaigrette",
+                "description": "Black plums + tomatoes + cucumbers + mizuna + jalape\u00f1o + soy vinaigrette",
                 "highlight": false
               },
               {
@@ -147,7 +147,7 @@
               {
                 "name": "Dover Sole",
                 "price": "$30",
-                "description": "Meunière sauce + orange + parsley",
+                "description": "Meuni\u00e8re sauce + orange + parsley",
                 "highlight": false
               }
             ]
@@ -208,5 +208,6 @@
         "distanceText": "0.9 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

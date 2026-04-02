@@ -8,13 +8,13 @@
     "address": "Baldwin Village / Downtown",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:30 AM – 2:00 AM",
-      "Tuesday: 11:30 AM – 2:00 AM",
-      "Wednesday: 11:30 AM – 2:00 AM",
-      "Thursday: 11:30 AM – 2:00 AM",
-      "Friday: 11:30 AM – 2:00 AM",
-      "Saturday: 11:30 AM – 2:00 AM",
-      "Sunday: 11:30 AM – 2:00 AM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20092:00\u202fAM"
     ],
     "rating": 4.6,
     "review_count": 851,
@@ -26,32 +26,33 @@
     "url": "https://www.yuugiizakaya.com/"
   },
   "narrative": {
-    "summary": "Contemporary izakaya on Baldwin with 4.6 stars, 847 reviews—feels like Tokyo transplant. Open 7 days, late-night hours. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "Contemporary izakaya on Baldwin with 4.6 stars, 847 reviews\u2014feels like Tokyo transplant. Open 7 days, late-night hours. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Baldwin, that narrow stretch between Spadina and University where restaurants spill onto the sidewalk half the year. Inside, it's compact—maybe a dozen tables max—with wood slat details and warm lighting that could be lifted from a Shibuya side street. The bar seats are your best bet if you're rolling in without a reservation, tight enough that you'll overhear your neighbor's order and probably want to copy it.",
+        "body": "You're on Baldwin, that narrow stretch between Spadina and University where restaurants spill onto the sidewalk half the year. Inside, it's compact\u2014maybe a dozen tables max\u2014with wood slat details and warm lighting that could be lifted from a Shibuya side street. The bar seats are your best bet if you're rolling in without a reservation, tight enough that you'll overhear your neighbor's order and probably want to copy it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is izakaya cooking done right: fried things with good sauces, rice dishes that anchor a meal of small plates, and pressed sushi that's become their calling card. The karaage comes with an onsen egg sauce that's rich enough to make you slow down, and the wagyu fried rice arrives in portions that could feed two if you weren't already committed to ordering half the menu. The age pan ice cream—fried milk bread with ice cream—is the kind of mashup dessert that sounds gimmicky until it's in front of you. Expect to spend around $50-70 per person with drinks.",
+        "body": "This is izakaya cooking done right: fried things with good sauces, rice dishes that anchor a meal of small plates, and pressed sushi that's become their calling card. The karaage comes with an onsen egg sauce that's rich enough to make you slow down, and the wagyu fried rice arrives in portions that could feed two if you weren't already committed to ordering half the menu. The age pan ice cream\u2014fried milk bread with ice cream\u2014is the kind of mashup dessert that sounds gimmicky until it's in front of you. Expect to spend around $50-70 per person with drinks.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You want the late-night energy without the commute to the suburbs, or you're mapping a Baldwin crawl and need a Tokyo-leaning anchor. Get there early on weekends unless you're prepared to wait—this isn't the kind of small space where hovering feels comfortable.",
+        "body": "You want the late-night energy without the commute to the suburbs, or you're mapping a Baldwin crawl and need a Tokyo-leaning anchor. Get there early on weekends unless you're prepared to wait\u2014this isn't the kind of small space where hovering feels comfortable.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Great spot for small plates and drinks!\n\nLove the vibes here. It really does remind me of Japanese izakaya. Their pressed sushi is a signature! Dont skip on the karaage cuz the sauce with a onsen egg is bomb!\n\nIt can get busy and its a small place. So go early!\"\n\n⭐⭐⭐⭐⭐ \"Finally tried Yuugi Izakaya and really enjoyed it.\nThe fried dishes were excellent, the wagyu fried rice was generous, and the age pan ice cream was a standout. Great service and a fun spot for comfort food — would come back.\"\n\n⭐⭐⭐⭐⭐ \"Went here on a weekend evening and even though it was busy, the service was amazing. There was a tall Korean server who was incredibly friendly! She greeted us with a smile right when we walked in. We ordered the karaage and she explained what's in the sauce and how to eat it really well. We also had the omurice and it was one of the best Japanese dish I had in Toronto!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great spot for small plates and drinks!\n\nLove the vibes here. It really does remind me of Japanese izakaya. Their pressed sushi is a signature! Dont skip on the karaage cuz the sauce with a onsen egg is bomb!\n\nIt can get busy and its a small place. So go early!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Finally tried Yuugi Izakaya and really enjoyed it.\nThe fried dishes were excellent, the wagyu fried rice was generous, and the age pan ice cream was a standout. Great service and a fun spot for comfort food \u2014 would come back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went here on a weekend evening and even though it was busy, the service was amazing. There was a tall Korean server who was incredibly friendly! She greeted us with a smile right when we walked in. We ordered the karaage and she explained what's in the sauce and how to eat it really well. We also had the omurice and it was one of the best Japanese dish I had in Toronto!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

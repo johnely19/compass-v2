@@ -28,7 +28,7 @@
       {
         "type": "prose",
         "title": "Location",
-        "body": "Right on State Street, minutes from the harbour ferry to Charlestown or the Harbor Islands. Quincy Market, Faneuil Hall, and the North End are all a short walk. This is maximum Boston waterfront — good for harbour cruises, lobster rolls, and the Freedom Trail.",
+        "body": "Right on State Street, minutes from the harbour ferry to Charlestown or the Harbor Islands. Quincy Market, Faneuil Hall, and the North End are all a short walk. This is maximum Boston waterfront \u2014 good for harbour cruises, lobster rolls, and the Freedom Trail.",
         "id": "block-location-1"
       },
       {
@@ -42,7 +42,13 @@
   "_hotel": {
     "priceRange": "$$-$$$",
     "vibe": "historic warehouse, waterfront, intimate",
-    "highlights": ["harbour views", "converted granite warehouse", "North End + Faneuil Hall walkable", "ferry access"],
+    "highlights": [
+      "harbour views",
+      "converted granite warehouse",
+      "North End + Faneuil Hall walkable",
+      "ferry access"
+    ],
     "bestFor": "Water lovers, harbour atmosphere, historic character"
-  }
+  },
+  "type": "accommodation"
 }

@@ -10,15 +10,16 @@
     "phone": "604-898-2002",
     "website": "https://watershedgrill.com",
     "price_level": 2,
-    "location": "57896 Squamish Valley Road"
+    "location": "57896 Squamish Valley Road",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSquamish Valley — where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view — it's why the restaurant exists.",
+    "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSquamish Valley \u2014 where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view \u2014 it's why the restaurant exists.",
     "blocks": [
       {
         "id": "block-1",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSquamish Valley — where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view — it's why the restaurant exists."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSquamish Valley \u2014 where the Cheakamus River bends\n\nYou're sitting on a weathered deck, glacial-green water flowing past, snowcapped peaks rising into clouds. This isn't a restaurant view \u2014 it's why the restaurant exists."
       },
       {
         "id": "block-2",
@@ -28,32 +29,32 @@
       {
         "id": "block-3",
         "title": "Space",
-        "body": "𝗧𝗛𝗘 𝗦𝗣𝗔𝗖𝗘\n\nFloor-to-ceiling windows. Every table has the view. Friends crowd around platters of everything — burgers, wings, eggs benny, Caesars. This is what a road trip lunch looks like when you find the right place."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde6\ud835\udde3\ud835\uddd4\ud835\uddd6\ud835\uddd8\n\nFloor-to-ceiling windows. Every table has the view. Friends crowd around platters of everything \u2014 burgers, wings, eggs benny, Caesars. This is what a road trip lunch looks like when you find the right place."
       },
       {
         "id": "block-4",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\n🍹 The classics:\n• Caesar — $9 (spiced rim, pickled bean) ⭐\n• Coronarita — $14 (Corona inverted in margarita)\n• OK Springs 1516 Lager — $6.25/16oz\n\nThis is a \"beer with a view\" kind of place. Order your drink, take it out to the deck, watch eagles circle over the river."
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\n\ud83c\udf79 The classics:\n\u2022 Caesar \u2014 $9 (spiced rim, pickled bean) \u2b50\n\u2022 Coronarita \u2014 $14 (Corona inverted in margarita)\n\u2022 OK Springs 1516 Lager \u2014 $6.25/16oz\n\nThis is a \"beer with a view\" kind of place. Order your drink, take it out to the deck, watch eagles circle over the river."
       },
       {
         "id": "block-5",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗙𝗢𝗢𝗗"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd9\ud835\udde2\ud835\udde2\ud835\uddd7"
       },
       {
         "id": "block-6",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n𝗕𝗥𝗘𝗔𝗞𝗙𝗔𝗦𝗧 $14-22\n• Classic Benny — $18\n• Watershed Benny (smoked salmon) — $22 ⭐\n• Breakfast Skillet — $18\n• Chorizo Scramble — $19\n\n𝗕𝗨𝗥𝗚𝗘𝗥𝗦 $19-24\n• Watershed Burger — $21 (bacon, cheese, onion ring tower) ⭐\n• Bison Burger — $24\n• Mushroom Swiss — $21\n• Pulled Pork Burger — $19\n\n𝗣𝗨𝗕 𝗙𝗔𝗥𝗘 $10-26\n• Fish & Chips — $21 (local catch, beer batter) ⭐\n• Wings (1lb) — $17\n• Nashville Hot Chicken Sando — $23\n• Poutine — $14\n\n𝗗𝗜𝗡𝗡𝗘𝗥 $22-32\n• Roast Beef Dinner — $25 (Yorkshire pud, gravy)\n• Salmon — $28\n• Steak Sandwich — $26\n• Ribs (full rack) — $32 ⭐\n\nNote: Menu rotates seasonally. Brunch served daily until 3pm."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n\ud835\uddd5\ud835\udde5\ud835\uddd8\ud835\uddd4\ud835\uddde\ud835\uddd9\ud835\uddd4\ud835\udde6\ud835\udde7 $14-22\n\u2022 Classic Benny \u2014 $18\n\u2022 Watershed Benny (smoked salmon) \u2014 $22 \u2b50\n\u2022 Breakfast Skillet \u2014 $18\n\u2022 Chorizo Scramble \u2014 $19\n\n\ud835\uddd5\ud835\udde8\ud835\udde5\ud835\uddda\ud835\uddd8\ud835\udde5\ud835\udde6 $19-24\n\u2022 Watershed Burger \u2014 $21 (bacon, cheese, onion ring tower) \u2b50\n\u2022 Bison Burger \u2014 $24\n\u2022 Mushroom Swiss \u2014 $21\n\u2022 Pulled Pork Burger \u2014 $19\n\n\ud835\udde3\ud835\udde8\ud835\uddd5 \ud835\uddd9\ud835\uddd4\ud835\udde5\ud835\uddd8 $10-26\n\u2022 Fish & Chips \u2014 $21 (local catch, beer batter) \u2b50\n\u2022 Wings (1lb) \u2014 $17\n\u2022 Nashville Hot Chicken Sando \u2014 $23\n\u2022 Poutine \u2014 $14\n\n\ud835\uddd7\ud835\udddc\ud835\udde1\ud835\udde1\ud835\uddd8\ud835\udde5 $22-32\n\u2022 Roast Beef Dinner \u2014 $25 (Yorkshire pud, gravy)\n\u2022 Salmon \u2014 $28\n\u2022 Steak Sandwich \u2014 $26\n\u2022 Ribs (full rack) \u2014 $32 \u2b50\n\nNote: Menu rotates seasonally. Brunch served daily until 3pm."
       },
       {
         "id": "block-7",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$\n\nLunch for 2: $50-70 (with drinks)\nDinner for 2: $80-110 (with drinks)\n\nReservations: Walk-in only — no reservations\nNote: Cash only (ATM on site)\n\n📞 604-898-2002\n🌐 watershedgrill.com\n📸 @watershedgrill\n\n𝗛𝗢𝗨𝗥𝗦\nDaily: 9am – 9pm (kitchen closes 8:30pm)\nClosed Tuesdays (winter)\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• Weekday lunch (11am-2pm) — quietest, best deck seats\n• Late afternoon (3-5pm) — golden light on mountains\n• Summer weekends — arrive before 11am or expect a wait\n• Eagle watching season (Nov-Feb) — hundreds gather on the river"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$\n\nLunch for 2: $50-70 (with drinks)\nDinner for 2: $80-110 (with drinks)\n\nReservations: Walk-in only \u2014 no reservations\nNote: Cash only (ATM on site)\n\n\ud83d\udcde 604-898-2002\n\ud83c\udf10 watershedgrill.com\n\ud83d\udcf8 @watershedgrill\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nDaily: 9am \u2013 9pm (kitchen closes 8:30pm)\nClosed Tuesdays (winter)\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 Weekday lunch (11am-2pm) \u2014 quietest, best deck seats\n\u2022 Late afternoon (3-5pm) \u2014 golden light on mountains\n\u2022 Summer weekends \u2014 arrive before 11am or expect a wait\n\u2022 Eagle watching season (Nov-Feb) \u2014 hundreds gather on the river"
       },
       {
         "id": "block-8",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 57896 Squamish Valley Road\n\n• walking: 41 days 1 hour • 4,377 km\n• transit: unavailable\n• driving: unavailable\n• bicycling: unavailable\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (41 days 1 hour)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 57896 Squamish Valley Road\n\n\u2022 walking: 41 days 1 hour \u2022 4,377 km\n\u2022 transit: unavailable\n\u2022 driving: unavailable\n\u2022 bicycling: unavailable\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (41 days 1 hour)"
       }
     ]
   },
@@ -97,5 +98,6 @@
         "googleStatus": "MAX_ROUTE_LENGTH_EXCEEDED"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

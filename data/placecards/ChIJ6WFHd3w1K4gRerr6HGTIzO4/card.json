@@ -8,12 +8,12 @@
     "address": "Wales Ave / Queen West",
     "type": "cafe",
     "hours": [
-      "Monday: 8:00 AM – 4:00 PM",
-      "Tuesday: 8:00 AM – 4:00 PM",
-      "Wednesday: 8:00 AM – 4:00 PM",
-      "Thursday: 8:00 AM – 4:00 PM",
-      "Friday: 8:00 AM – 4:00 PM",
-      "Saturday: 8:00 AM – 4:00 PM",
+      "Monday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Tuesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Wednesday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Thursday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Friday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Saturday: 8:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.5,
@@ -30,13 +30,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Queen West strip where Wales cuts through, in a high-ceilinged room stripped down to concrete floors, white walls, and the kind of industrial minimalism that lets you focus on what's in your cup. The roaster sits visible near the back—a hulking piece of equipment that fills the space with the smell of beans going dark and oily. A few blonde wood tables, steel chairs, enough natural light to read by.",
+        "body": "You're on the Queen West strip where Wales cuts through, in a high-ceilinged room stripped down to concrete floors, white walls, and the kind of industrial minimalism that lets you focus on what's in your cup. The roaster sits visible near the back\u2014a hulking piece of equipment that fills the space with the smell of beans going dark and oily. A few blonde wood tables, steel chairs, enough natural light to read by.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "They roast their own beans here, and the coffee nerds have already caught on—expect espresso pulled with the kind of precision that makes you actually taste the fruit notes they're talking about. The toasted banana bread is dense and slick with oil, studded with melting chocolate and aggressively salted on top, the kind of texture that's more compact and sticky than cakey. The SEC breakfast sandwich arrives steaming, cross-sectioned to show off sausage, egg, and cheese in nostalgic, salty layers that feel like someone's idealised childhood breakfast. Everything's under $15.",
+        "body": "They roast their own beans here, and the coffee nerds have already caught on\u2014expect espresso pulled with the kind of precision that makes you actually taste the fruit notes they're talking about. The toasted banana bread is dense and slick with oil, studded with melting chocolate and aggressively salted on top, the kind of texture that's more compact and sticky than cakey. The SEC breakfast sandwich arrives steaming, cross-sectioned to show off sausage, egg, and cheese in nostalgic, salty layers that feel like someone's idealised childhood breakfast. Everything's under $15.",
         "id": "block-the-food-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"i loveddddd the toasted banana bread , especially warmed up & with a nice cup of steamed milk. it had a nice natural sweetness from the banana (not overly so or artificial tasting) and bits of melting milky chocolate, but it was the sharp saltiness from the sea salt sprinkled all over, permeating and piercing every bite that really set it apart. the banana bread was also moist, quite oily, and hefty — i really loved the texture, and how it wasn’t crumbly and cakey like other banana breads, but more like congealed???\n\nthe SEC was also a really yummy breakfast sandwich (large and filling too). it was steaming when you revealed the STUNNING cross section, fresh, and comforting on a cold day. it was full of the classic, nostalgic savoury sausage flavour, along with the saltiness of the melted kraft cheese, and i LOVEDDD how the sweet and slightly tangy ketchup mingled and paired with the egg flavour. the bread had a slightly toasted crispy bottom, but was thick so could be slightly too bready/dry in some parts. i don’t even like ketchup, but it was delicious in this sandwich.\n\ni had the banana chocolate chip cookie RIGHT out of the oven, so it was kind of falling apart (hadn’t cooled yet), but i’d say the taste was very similar to the banana bread, but in cookie form. again, the sweetness of the banana was infused with saltiness, but there was also a subtle brown sugar flavour in the cookie too. the cookie itself had crunchy, crispy edges, and a chewy center.\"\n\n⭐⭐⭐⭐⭐ \"Braved a winter storm to make our way here and it was worth the trek. Tucked away in a residential area. The coffee was delicious and the egg and mortadella breakfast sandwhich lived up to the hype. We also tried the 50/Fifty (half chicken salad, half egg salad) and fell in love. Grateful for the bad weather so we could enjoy a slow morning in such a warm, friendly spot.\"\n\n⭐⭐⭐⭐⭐ \"Simply the BEST breakfast sandwhich in Toronto - Kevin, Nick & Grace simply know cafe culture at its finest. The best flat white we had all week & the SECw/M was built to perfection. We came on the first day of our trip, came back on the last day of our trip, cause nothing beat it! ENJOY 🤤\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"i loveddddd the toasted banana bread , especially warmed up & with a nice cup of steamed milk. it had a nice natural sweetness from the banana (not overly so or artificial tasting) and bits of melting milky chocolate, but it was the sharp saltiness from the sea salt sprinkled all over, permeating and piercing every bite that really set it apart. the banana bread was also moist, quite oily, and hefty \u2014 i really loved the texture, and how it wasn\u2019t crumbly and cakey like other banana breads, but more like congealed???\n\nthe SEC was also a really yummy breakfast sandwich (large and filling too). it was steaming when you revealed the STUNNING cross section, fresh, and comforting on a cold day. it was full of the classic, nostalgic savoury sausage flavour, along with the saltiness of the melted kraft cheese, and i LOVEDDD how the sweet and slightly tangy ketchup mingled and paired with the egg flavour. the bread had a slightly toasted crispy bottom, but was thick so could be slightly too bready/dry in some parts. i don\u2019t even like ketchup, but it was delicious in this sandwich.\n\ni had the banana chocolate chip cookie RIGHT out of the oven, so it was kind of falling apart (hadn\u2019t cooled yet), but i\u2019d say the taste was very similar to the banana bread, but in cookie form. again, the sweetness of the banana was infused with saltiness, but there was also a subtle brown sugar flavour in the cookie too. the cookie itself had crunchy, crispy edges, and a chewy center.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Braved a winter storm to make our way here and it was worth the trek. Tucked away in a residential area. The coffee was delicious and the egg and mortadella breakfast sandwhich lived up to the hype. We also tried the 50/Fifty (half chicken salad, half egg salad) and fell in love. Grateful for the bad weather so we could enjoy a slow morning in such a warm, friendly spot.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Simply the BEST breakfast sandwhich in Toronto - Kevin, Nick & Grace simply know cafe culture at its finest. The best flat white we had all week & the SECw/M was built to perfection. We came on the first day of our trip, came back on the last day of our trip, cause nothing beat it! ENJOY \ud83e\udd24\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

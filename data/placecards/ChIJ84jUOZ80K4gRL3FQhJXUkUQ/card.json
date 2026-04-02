@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Ever-changing curated gallery - world-renowned artists, trendsetting displays",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

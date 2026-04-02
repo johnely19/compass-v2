@@ -11,7 +11,8 @@
     "price_level": 3,
     "location": "1071 5th Ave, New York, NY 10128, USA",
     "lat": 40.7831815,
-    "lng": -73.9588052
+    "lng": -73.9588052,
+    "type": "museum"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n5th Ave at 89th St \u2014 Frank Lloyd Wright's spiral, filled to the brim with Carol Bove's steel.\n\nA 25-year retrospective of one of America's most esteemed sculptors, filling the entire six-story rotunda. Opened March 5, 2026.",
@@ -36,5 +37,6 @@
   "discovery": {
     "text": "Discovered by Disco via neighbourhood research",
     "url": "https://www.guggenheim.org/"
-  }
+  },
+  "type": "museum"
 }

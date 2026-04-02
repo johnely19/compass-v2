@@ -9,12 +9,12 @@
     "type": "shop",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 11:00 AM – 6:00 PM",
-      "Wednesday: 11:00 AM – 6:00 PM",
-      "Thursday: 11:00 AM – 6:00 PM",
-      "Friday: 11:00 AM – 6:00 PM",
-      "Saturday: 11:00 AM – 6:00 PM",
-      "Sunday: 12:00 – 5:00 PM"
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 238,
@@ -26,7 +26,8 @@
     "text": "Discovered via goplaces:details"
   },
   "narrative": {
-    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6★, 238 reviews. Same building as Swipe—pair them.",
+    "summary": "Urbanist gift shop: TTC-inspired merch, city maps, architecture books. 4.6\u2605, 238 reviews. Same building as Swipe\u2014pair them.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

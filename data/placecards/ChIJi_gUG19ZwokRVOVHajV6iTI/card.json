@@ -15,32 +15,32 @@
     "location": "370 Metropolitan Ave, Brooklyn, NY 11211, USA"
   },
   "narrative": {
-    "summary": "📍 City Reliquary Museum\n370 Metropolitan Ave, Brooklyn, NY 11211, USA",
+    "summary": "\ud83d\udccd City Reliquary Museum\n370 Metropolitan Ave, Brooklyn, NY 11211, USA",
     "blocks": [
       {
         "id": "block-1",
         "title": "City Reliquary Museum",
-        "body": "📍 City Reliquary Museum\n370 Metropolitan Ave, Brooklyn, NY 11211, USA"
+        "body": "\ud83d\udccd City Reliquary Museum\n370 Metropolitan Ave, Brooklyn, NY 11211, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLocal's favorite Williamsburg museum - community-based museum featuring rotating exhibits of NYC artifacts, local art, and quirky collections"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nLocal's favorite Williamsburg museum - community-based museum featuring rotating exhibits of NYC artifacts, local art, and quirky collections"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://cityreliquary.org/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: https://cityreliquary.org/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.3 (183 reviews)\nPrice level: n/a\nPhone: (718) 782-4842\nWebsite: https://cityreliquary.org/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.3 (183 reviews)\nPrice level: n/a\nPhone: (718) 782-4842\nWebsite: https://cityreliquary.org/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 370 Metropolitan Ave, Brooklyn, NY 11211, USA\n\n• walking: 59 mins • 2.7 mi\n• transit: 31 mins • 3.6 mi\n• driving: 16 mins • 3.0 mi (traffic: 19 mins)\n• bicycling: 19 mins • 3.0 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (16 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 370 Metropolitan Ave, Brooklyn, NY 11211, USA\n\n\u2022 walking: 59 mins \u2022 2.7 mi\n\u2022 transit: 31 mins \u2022 3.6 mi\n\u2022 driving: 16 mins \u2022 3.0 mi (traffic: 19 mins)\n\u2022 bicycling: 19 mins \u2022 3.0 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (16 mins)"
       }
     ]
   },
@@ -96,5 +96,6 @@
         "distanceText": "3.6 mi"
       }
     ]
-  }
+  },
+  "type": "museum"
 }

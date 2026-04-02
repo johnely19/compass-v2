@@ -21,13 +21,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're deep in the Junction Triangle on Wade Ave, inside what looks more like a private tasting room than a café. Eight seats face a clean counter where two baristas work through your reservation like sommeliers—scales, timers, precise pours. The whole thing feels like a gallery dedicated to coffee: minimal, focused, nowhere to hide sloppy technique.",
+        "body": "You're deep in the Junction Triangle on Wade Ave, inside what looks more like a private tasting room than a caf\u00e9. Eight seats face a clean counter where two baristas work through your reservation like sommeliers\u2014scales, timers, precise pours. The whole thing feels like a gallery dedicated to coffee: minimal, focused, nowhere to hide sloppy technique.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is coffee as a tasting menu. You're booking flights that walk you through rare single-origins—including a $68 Panama Gesha that tastes like bergamot and jasmine if the barista gets the water temp right. They do. Each cup comes with tasting notes, context on the farm, why this bean costs what a decent bottle of wine costs. It's not casual coffee; it's the kind of thing where you actually taste the difference and understand why people get obsessed.",
+        "body": "This is coffee as a tasting menu. You're booking flights that walk you through rare single-origins\u2014including a $68 Panama Gesha that tastes like bergamot and jasmine if the barista gets the water temp right. They do. Each cup comes with tasting notes, context on the farm, why this bean costs what a decent bottle of wine costs. It's not casual coffee; it's the kind of thing where you actually taste the difference and understand why people get obsessed.",
         "id": "block-the-food-1"
       },
       {
@@ -40,8 +40,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Actually good customer service. They really do read your reviews and take your feedback into consideration which seems pretty rare these days.\"\n\n⭐⭐⭐⭐⭐ \"Had an afternoon reservation for the coffee tasting at The Roasters Pack Lab and had an amazing experience. The baristas are very talented and knowledgeable, and helpful in understanding the differences between the flight options available. This was a very unique and fun experience that I would highly recommend trying.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Actually good customer service. They really do read your reviews and take your feedback into consideration which seems pretty rare these days.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had an afternoon reservation for the coffee tasting at The Roasters Pack Lab and had an amazing experience. The baristas are very talented and knowledgeable, and helpful in understanding the differences between the flight options available. This was a very unique and fun experience that I would highly recommend trying.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

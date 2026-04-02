@@ -7,30 +7,31 @@
     "name": "Mattachioni",
     "city": "Toronto",
     "address": "1617 Dupont St, Toronto, ON M6P 3S8, Canada",
-    "location": "1617 Dupont St, Toronto, ON M6P 3S8, Canada"
+    "location": "1617 Dupont St, Toronto, ON M6P 3S8, Canada",
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "📍 Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada",
+    "summary": "\ud83d\udccd Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "Mattachioni",
-        "body": "📍 Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada"
+        "body": "\ud83d\udccd Mattachioni\n1617 Dupont St, Toronto, ON M6P 3S8, Canada"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (951 reviews)"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (951 reviews)"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1617 Dupont St, Toronto, ON M6P 3S8, Canada\n\n• walking: 1 hour 29 mins • 6.4 km\n• transit: 45 mins • 8.4 km\n• driving: 20 mins • 6.6 km (traffic: 13 mins)\n• bicycling: 26 mins • 7.0 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (20 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1617 Dupont St, Toronto, ON M6P 3S8, Canada\n\n\u2022 walking: 1 hour 29 mins \u2022 6.4 km\n\u2022 transit: 45 mins \u2022 8.4 km\n\u2022 driving: 20 mins \u2022 6.6 km (traffic: 13 mins)\n\u2022 bicycling: 26 mins \u2022 7.0 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (20 mins)"
       }
     ]
   },
@@ -86,5 +87,6 @@
         "distanceText": "8.4 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

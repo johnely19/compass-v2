@@ -8,13 +8,13 @@
     "address": "Dundas West / Trinity Bellwoods",
     "type": "grocery",
     "hours": [
-      "Monday: 10:00 AM – 7:00 PM",
-      "Tuesday: 10:00 AM – 7:00 PM",
-      "Wednesday: 10:00 AM – 7:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 7:00 PM",
-      "Sunday: 10:00 AM – 6:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 275,
@@ -25,7 +25,8 @@
     "text": "Discovered via unboxedmarket.com"
   },
   "narrative": {
-    "summary": "Toronto's first zero-waste grocery. Bulk bins, refill stations, butcher counter, cheese counter, in-store café. Concept-driven retail that actually works. 4.6★ (275 reviews).",
+    "summary": "Toronto's first zero-waste grocery. Bulk bins, refill stations, butcher counter, cheese counter, in-store caf\u00e9. Concept-driven retail that actually works. 4.6\u2605 (275 reviews).",
     "blocks": []
-  }
+  },
+  "type": "grocery"
 }

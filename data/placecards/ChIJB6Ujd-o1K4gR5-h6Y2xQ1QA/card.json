@@ -8,13 +8,13 @@
     "address": "Dupont / Annex",
     "type": "bar",
     "hours": [
-      "Monday: 12:00 – 8:00 PM",
-      "Tuesday: 12:00 – 8:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 8:00 PM"
+      "Monday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20098:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 79,
@@ -25,32 +25,33 @@
     "text": "Discovered via naturallywine.substack.com"
   },
   "narrative": {
-    "summary": "Bottle shop by day, natural wine bar by night. Focus on sustainable, estate-grown, low-intervention wines. 643 Dupont — walkable from Yonge & St Clair. 4.7★ (78 reviews).",
+    "summary": "Bottle shop by day, natural wine bar by night. Focus on sustainable, estate-grown, low-intervention wines. 643 Dupont \u2014 walkable from Yonge & St Clair. 4.7\u2605 (78 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet stretch of Dupont in the Annex, a ten-minute walk west from Yonge & St Clair. The front room feels like a neighbourhood bottle shop—racks of natural wine along the walls, a few small tables—but keep going to the back room where it gets quieter, dimmer, more like someone's living room that happens to serve wine. By night the whole place shifts: bottles come off shelves, glasses go on tables, and it's all low lights and good music.",
+        "body": "You're on a quiet stretch of Dupont in the Annex, a ten-minute walk west from Yonge & St Clair. The front room feels like a neighbourhood bottle shop\u2014racks of natural wine along the walls, a few small tables\u2014but keep going to the back room where it gets quieter, dimmer, more like someone's living room that happens to serve wine. By night the whole place shifts: bottles come off shelves, glasses go on tables, and it's all low lights and good music.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a wine bar first, so the food is small plates built to make sense with low-intervention bottles—nothing complicated, just good product treated right. The Castelvetrano olives show up in reviews for a reason: they come in an actually generous portion, not the Toronto standard of six sad ones for twelve dollars. Expect a tight, changing menu of tapas-style dishes that follow the seasons—ask whoever's working what just came in. It's snack-and-share pricing, a few plates between two will run you $30-40 before wine.",
+        "body": "This is a wine bar first, so the food is small plates built to make sense with low-intervention bottles\u2014nothing complicated, just good product treated right. The Castelvetrano olives show up in reviews for a reason: they come in an actually generous portion, not the Toronto standard of six sad ones for twelve dollars. Expect a tight, changing menu of tapas-style dishes that follow the seasons\u2014ask whoever's working what just came in. It's snack-and-share pricing, a few plates between two will run you $30-40 before wine.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Friday night when you want natural wine and a playlist that doesn't make you feel old, or a weeknight when the back room stays quiet and you can actually talk. Also good solo at a small table with a book and a negroni—the staff checks in without hovering.",
+        "body": "Friday night when you want natural wine and a playlist that doesn't make you feel old, or a weeknight when the back room stays quiet and you can actually talk. Also good solo at a small table with a book and a negroni\u2014the staff checks in without hovering.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Great selection of interesting wine, attentive and knowledgeable service at that right pitch of checking in but not hovering. Small plates are super tasty. Honestly shocked at the volume of fantastic olives, Toronto has broken me, I only expect to get 6 olives for $10, there were like 25 castelvetranos in there. Super cute vibes, the back room felt like a secret (quiet on Easter long weekend). Highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Barnabas and the team were friendly and knowledgeable. Great atmosphere, wine, and music on a Friday night. The negroni is a must try if you go! The best we’ve ever had. Period.\"\n\n⭐⭐⭐⭐⭐ \"Don't miss this little gem. Superior food in Tapas style. Menu changes frequently for seasonal freshness. Get the chef to recommend.  Paired with great wines.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great selection of interesting wine, attentive and knowledgeable service at that right pitch of checking in but not hovering. Small plates are super tasty. Honestly shocked at the volume of fantastic olives, Toronto has broken me, I only expect to get 6 olives for $10, there were like 25 castelvetranos in there. Super cute vibes, the back room felt like a secret (quiet on Easter long weekend). Highly recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Barnabas and the team were friendly and knowledgeable. Great atmosphere, wine, and music on a Friday night. The negroni is a must try if you go! The best we\u2019ve ever had. Period.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Don't miss this little gem. Superior food in Tapas style. Menu changes frequently for seasonal freshness. Get the chef to recommend.  Paired with great wines.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

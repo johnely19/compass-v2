@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Toronto's first makgeolli brewery + Korean BBQ snack bar. From the Gonzo Izakaya / Kensei Bar team (Hansang & Juwon Lee). Head brewer Dohyon Kim tested 200+ batches over 5 years. Jang-centric Korean BBQ bites designed for pairing. Opening spring 2026.",
     "blocks": []
-  }
+  },
+  "type": "bar"
 }

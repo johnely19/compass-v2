@@ -17,6 +17,8 @@
       "food",
       "point_of_interest",
       "establishment"
-    ]
-  }
+    ],
+    "type": "hotel"
+  },
+  "type": "hotel"
 }

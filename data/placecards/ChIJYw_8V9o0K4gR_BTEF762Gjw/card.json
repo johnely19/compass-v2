@@ -3,17 +3,17 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJYw_8V9o0K4gR_BTEF762Gjw",
-    "name": "Tangled Art + Disability — Naal-Naal exhibition",
+    "name": "Tangled Art + Disability \u2014 Naal-Naal exhibition",
     "city": "Toronto",
     "address": "Fashion District (401 Richmond St W)",
     "type": "museum",
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 12:00 – 5:00 PM",
-      "Thursday: 12:00 – 5:00 PM",
-      "Friday: 12:00 – 5:00 PM",
-      "Saturday: 12:00 – 5:00 PM",
+      "Wednesday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20095:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.9,
@@ -25,32 +25,33 @@
     "text": "Discovered via streetsoftoronto.com"
   },
   "narrative": {
-    "summary": "New solo exhibition 'Naal-Naal' running March 6–May 1. Free admission. Gallery at 401 Richmond — Toronto's creative nerve centre. 4.9★ (23 reviews).",
+    "summary": "New solo exhibition 'Naal-Naal' running March 6\u2013May 1. Free admission. Gallery at 401 Richmond \u2014 Toronto's creative nerve centre. 4.9\u2605 (23 reviews).",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the Fashion District at 401 Richmond, a converted Victorian-era warehouse that's become Toronto's creative hub. You'll navigate hallways lined with artist studios and small galleries before finding Tangled Arts—a gallery designed for touch as much as sight, with braille labels, tactile works, and lighting that accommodates low vision. The Naal-Naal exhibition runs through May 1, and admission is free.",
+        "body": "You're in the Fashion District at 401 Richmond, a converted Victorian-era warehouse that's become Toronto's creative hub. You'll navigate hallways lined with artist studios and small galleries before finding Tangled Arts\u2014a gallery designed for touch as much as sight, with braille labels, tactile works, and lighting that accommodates low vision. The Naal-Naal exhibition runs through May 1, and admission is free.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's an art gallery centering disability culture and access. There's a cafe downstairs in the 401 Richmond building where you can grab coffee or a bite before or after you visit, but you're here for the exhibition. Naal-Naal is a solo show exploring artistic expression through an accessibility lens, the kind of work that asks you to interact differently with art itself.",
+        "body": "This isn't a restaurant\u2014it's an art gallery centering disability culture and access. There's a cafe downstairs in the 401 Richmond building where you can grab coffee or a bite before or after you visit, but you're here for the exhibition. Naal-Naal is a solo show exploring artistic expression through an accessibility lens, the kind of work that asks you to interact differently with art itself.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Go on a weekday afternoon when you have time to linger and engage with work that demands more than a quick walk-through. The building has wheelchair access, though navigation between floors and studios takes some figuring out—worth it for the gift shops and the sheer density of creative practice under one roof.",
+        "body": "Go on a weekday afternoon when you have time to linger and engage with work that demands more than a quick walk-through. The building has wheelchair access, though navigation between floors and studios takes some figuring out\u2014worth it for the gift shops and the sheer density of creative practice under one roof.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"The zine exhibit was impressive and thought-provoking. The cafe downstairs was also relaxing and the service was great. It was a little tricky navigating the building however I loved the gifts shops and the historic and artistic look of the building.\"\n\n⭐⭐⭐⭐⭐ \"This is a fantastic gallery that really pushes the stereotypes of the art experience -- tactile interactions, braille labels, and more. Highly recommend.\"\n\n⭐⭐⭐⭐⭐ \"Wheelchair accessible building.  Many studios, venues and offices in this building. Many wonderful art exhibits.  Artistic expression with accessibility and disability themes.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"The zine exhibit was impressive and thought-provoking. The cafe downstairs was also relaxing and the service was great. It was a little tricky navigating the building however I loved the gifts shops and the historic and artistic look of the building.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is a fantastic gallery that really pushes the stereotypes of the art experience -- tactile interactions, braille labels, and more. Highly recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wheelchair accessible building.  Many studios, venues and offices in this building. Many wonderful art exhibits.  Artistic expression with accessibility and disability themes.\""
       }
     ]
-  }
+  },
+  "type": "museum"
 }

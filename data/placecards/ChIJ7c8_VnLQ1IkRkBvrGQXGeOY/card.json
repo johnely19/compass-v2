@@ -8,13 +8,13 @@
     "address": "Scarborough (Cedar Ridge Park)",
     "type": "restaurant",
     "hours": [
-      "Monday: 9:00 AM – 9:00 PM",
-      "Tuesday: 9:00 AM – 9:00 PM",
-      "Wednesday: 9:00 AM – 9:00 PM",
-      "Thursday: 9:00 AM – 9:00 PM",
-      "Friday: 9:00 AM – 4:00 PM",
-      "Saturday: 9:00 AM – 4:00 PM",
-      "Sunday: 9:00 AM – 4:00 PM"
+      "Monday: 9:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 186,
@@ -26,32 +26,33 @@
     "url": "https://streetsoftoronto.com/toronto-culture/5-art-exhibitions-we-cant-wait-to-see-in-toronto/"
   },
   "narrative": {
-    "summary": "Free ‘Porcelain Narratives’ (Feb 28–Mar 23, 2026) — porcelain installations (cobalt/gold lustre) on memory/transformation.",
+    "summary": "Free \u2018Porcelain Narratives\u2019 (Feb 28\u2013Mar 23, 2026) \u2014 porcelain installations (cobalt/gold lustre) on memory/transformation.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "Tucked into Cedar Ridge Park in Scarborough, this city-run arts centre sits in a low-slung building surrounded by green space and parking lot. Inside, you'll find creaky wood floors, gallery walls that rotate monthly, and a separate clay studio where pottery wheels line the benches. The rooms run warm—windows don't always open far enough—but light pours in across whatever installation is up.",
+        "body": "Tucked into Cedar Ridge Park in Scarborough, this city-run arts centre sits in a low-slung building surrounded by green space and parking lot. Inside, you'll find creaky wood floors, gallery walls that rotate monthly, and a separate clay studio where pottery wheels line the benches. The rooms run warm\u2014windows don't always open far enough\u2014but light pours in across whatever installation is up.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Work",
-        "body": "This isn't a restaurant—it's a working creative centre offering drop-in pottery, sculpture workshops, and rotating exhibitions you can see for free. Through late March 2026, 'Porcelain Narratives' fills the gallery: translucent porcelain installations traced with cobalt blue and gold lustre, exploring memory and transformation in clay. The real draw is the programming—adult and kids' classes run year-round through Parks & Rec, taught by working artists who've kept regulars coming back for over a decade.",
+        "body": "This isn't a restaurant\u2014it's a working creative centre offering drop-in pottery, sculpture workshops, and rotating exhibitions you can see for free. Through late March 2026, 'Porcelain Narratives' fills the gallery: translucent porcelain installations traced with cobalt blue and gold lustre, exploring memory and transformation in clay. The real draw is the programming\u2014adult and kids' classes run year-round through Parks & Rec, taught by working artists who've kept regulars coming back for over a decade.",
         "id": "block-the-work-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Stop by on a weekend afternoon to catch the current exhibition, or book yourself into an evening pottery class when you need your hands in clay and your head out of your phone. It's also surprisingly good for small private events—70 people max, creaky floors and all.",
+        "body": "Stop by on a weekend afternoon to catch the current exhibition, or book yourself into an evening pottery class when you need your hands in clay and your head out of your phone. It's also surprisingly good for small private events\u201470 people max, creaky floors and all.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"A hub for creativity - a fun happy place.  A variety of art classes and workshops including pottery and sculpture .  They have a seperate studio for clay classes and workshops.\nThey have adult and children programs .\nI have been going there on and off  for over 15 years.  Check them out  the admin staff  are great and helpful.  Definitely great value for money.\nRuns as part of  City of Toronto Parks and Rec programming.\"\n\n⭐⭐⭐⭐⭐ \"Great place to host a small, intimate event. Hosted an event here for about 70 people and it was the perfect size. Feels a little but stuffy (hot), small, and floors are creaky at places, but it's a beautiful, intimate location with lots of green space outside and plenty of parking space! A bit hard to get to without car.\"\n\n⭐⭐⭐⭐⭐ \"Cedar Ridge Creative Centre is nestled within beautiful gardens enjoyed by the public and available for weddings and special events. Quiet and serene area and a place where you can enroll in art classes. I sometimes see that they will have an art show there also. Parking on site and the area is clean and maintained well.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"A hub for creativity - a fun happy place.  A variety of art classes and workshops including pottery and sculpture .  They have a seperate studio for clay classes and workshops.\nThey have adult and children programs .\nI have been going there on and off  for over 15 years.  Check them out  the admin staff  are great and helpful.  Definitely great value for money.\nRuns as part of  City of Toronto Parks and Rec programming.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great place to host a small, intimate event. Hosted an event here for about 70 people and it was the perfect size. Feels a little but stuffy (hot), small, and floors are creaky at places, but it's a beautiful, intimate location with lots of green space outside and plenty of parking space! A bit hard to get to without car.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Cedar Ridge Creative Centre is nestled within beautiful gardens enjoyed by the public and available for weddings and special events. Quiet and serene area and a place where you can enroll in art classes. I sometimes see that they will have an art show there also. Parking on site and the area is clean and maintained well.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

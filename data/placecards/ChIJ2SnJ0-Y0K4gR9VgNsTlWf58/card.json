@@ -6,7 +6,7 @@
     "name": "Neurotica Records",
     "city": "Toronto",
     "address": "Little Italy (College/Manning)",
-    "type": "grocery",
+    "type": "shop",
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
@@ -28,5 +28,6 @@
   "narrative": {
     "summary": "Hidden gem with basement entrance on Manning Ave—exactly the kind of place you'd miss if no one told you.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

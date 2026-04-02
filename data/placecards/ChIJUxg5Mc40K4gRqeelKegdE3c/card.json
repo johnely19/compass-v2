@@ -12,7 +12,8 @@
     "text": "Discovered via therex.ca"
   },
   "narrative": {
-    "summary": "Toronto's longest-running jazz club. 60+ shows/month. Anchoring the city's jazz scene since forever. 4.4★ (3,851 reviews). Daily programming.",
+    "summary": "Toronto's longest-running jazz club. 60+ shows/month. Anchoring the city's jazz scene since forever. 4.4\u2605 (3,851 reviews). Daily programming.",
     "blocks": []
-  }
+  },
+  "type": "bar"
 }

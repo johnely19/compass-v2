@@ -13,7 +13,8 @@
     "url": "https://cagvancouver.org/"
   },
   "narrative": {
-    "summary": "Free admission. Artist-driven contemporary art space on Nelson Street. Smaller, more experimental than VAG. Worth 30-60 min during downtown exploring. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Free admission. Artist-driven contemporary art space on Nelson Street. Smaller, more experimental than VAG. Worth 30-60 min during downtown exploring. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

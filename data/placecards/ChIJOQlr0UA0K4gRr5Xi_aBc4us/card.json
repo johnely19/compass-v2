@@ -11,9 +11,9 @@
       "Monday: Closed",
       "Tuesday: Closed",
       "Wednesday: Closed",
-      "Thursday: 12:00 – 5:00 PM",
-      "Friday: 12:00 – 5:00 PM",
-      "Saturday: 12:00 – 5:00 PM",
+      "Thursday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20095:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.7,
@@ -25,26 +25,27 @@
     "url": "http://www.franzkaka.com/"
   },
   "narrative": {
-    "summary": "Small, sharp contemporary space—great for a tight, focused gallery stop.",
+    "summary": "Small, sharp contemporary space\u2014great for a tight, focused gallery stop.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're just south of the Junction, where Dupont meets Symington in a quiet stretch that still feels more industrial than residential. Inside, the room is tight and clean—white walls, minimal furniture, maybe a dozen seats total. It's the kind of pared-down space that lets you focus on what's in front of you, gallery-style, without distraction.",
+        "body": "You're just south of the Junction, where Dupont meets Symington in a quiet stretch that still feels more industrial than residential. Inside, the room is tight and clean\u2014white walls, minimal furniture, maybe a dozen seats total. It's the kind of pared-down space that lets you focus on what's in front of you, gallery-style, without distraction.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu moves through contemporary small plates with precision—think house-made pasta, carefully sourced vegetables, and whatever's driving the kitchen that week. Execution is sharp and intentional, the kind of cooking that doesn't announce itself but lands cleanly on the plate. Portions are sized for sharing or stringing together a few courses, with prices that reflect the care without going full tasting-menu territory. It's focused, seasonal work without the theatre.",
+        "body": "The menu moves through contemporary small plates with precision\u2014think house-made pasta, carefully sourced vegetables, and whatever's driving the kitchen that week. Execution is sharp and intentional, the kind of cooking that doesn't announce itself but lands cleanly on the plate. Portions are sized for sharing or stringing together a few courses, with prices that reflect the care without going full tasting-menu territory. It's focused, seasonal work without the theatre.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is for when you want a serious meal but not a production—an early weeknight dinner where you can actually hear each other, or a solo seat when you're chasing good cooking in a room that doesn't demand anything from you.",
+        "body": "This is for when you want a serious meal but not a production\u2014an early weeknight dinner where you can actually hear each other, or a solo seat when you're chasing good cooking in a room that doesn't demand anything from you.",
         "id": "block-go-when-2"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

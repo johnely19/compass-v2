@@ -11,13 +11,13 @@
     "phone": "(416) 519-6794",
     "website": "https://konjikiramen.com/",
     "hours": [
-      "Monday: 11:30 AM – 9:30 PM",
-      "Tuesday: 11:30 AM – 9:30 PM",
-      "Wednesday: 11:30 AM – 9:30 PM",
-      "Thursday: 11:30 AM – 9:30 PM",
-      "Friday: 11:30 AM – 10:30 PM",
-      "Saturday: 11:30 AM – 10:30 PM",
-      "Sunday: 11:30 AM – 10:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:30\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "price_level": 2,
     "rating": 4.4,
@@ -33,7 +33,7 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Elm Street in the downtown core, steps from Yonge-Dundas Square's chaos but worlds away once you step inside. The room is compact and functional—a counter where you can watch steam rise from pots, a handful of tables where regulars lean in close over their bowls. It's bright, efficient, the kind of place where the focus is squarely on what's in front of you, not the décor.",
+        "body": "You're on Elm Street in the downtown core, steps from Yonge-Dundas Square's chaos but worlds away once you step inside. The room is compact and functional\u2014a counter where you can watch steam rise from pots, a handful of tables where regulars lean in close over their bowls. It's bright, efficient, the kind of place where the focus is squarely on what's in front of you, not the d\u00e9cor.",
         "id": "block-the-space-0"
       },
       {
@@ -45,20 +45,20 @@
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your midweek solo dinner at the counter, or a quick post-work meal when you want something warming and satisfying without ceremony. Skip it on a rushed lunch—you want time to finish the broth.",
+        "body": "This is your midweek solo dinner at the counter, or a quick post-work meal when you want something warming and satisfying without ceremony. Skip it on a rushed lunch\u2014you want time to finish the broth.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Very tasty ramen and appetisers. We ordered original shoyu & Spicy. The spicy ramen is not very spicy but very flavourful with burnt garlic chilly oil. The broth is creamy and tasty. Noodles are thin hand made!\nWe also orders mini chashu and Deep Fried King Mushrooms both were delicious.\nService is excellent and staff is friendly.\nThey have vegetarian options available. They have option to substitute the Pork chashu with Chicken but the broth is pork or seafood based. We ordered regular size and it’s perfect for a meal. You can also order super size if you want.\"\n\n⭐⭐⭐⭐⭐ \"Got a chance to try this ramen place. Friendly staff, and the food was really good. I had a bowl of Smokey Black Tonkotsu Ramen and a side of truffle gyoza. The gyoza’s didn’t come in time so they didn’t charge me for them! I appreciated that!  I will be back for sure!\"\n\n⭐⭐⭐⭐⭐ \"This place is definitely worth a visit for ramen lovers. I had the wagyu ramen and it was absolutely delicious. The flavors were so rich and satisfying. The service was also quite good, adding to the overall pleasant experience. I would highly recommend trying this dish. Of all the places I've visited for Ramen, this ranks the best as far as tastes goes.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very tasty ramen and appetisers. We ordered original shoyu & Spicy. The spicy ramen is not very spicy but very flavourful with burnt garlic chilly oil. The broth is creamy and tasty. Noodles are thin hand made!\nWe also orders mini chashu and Deep Fried King Mushrooms both were delicious.\nService is excellent and staff is friendly.\nThey have vegetarian options available. They have option to substitute the Pork chashu with Chicken but the broth is pork or seafood based. We ordered regular size and it\u2019s perfect for a meal. You can also order super size if you want.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Got a chance to try this ramen place. Friendly staff, and the food was really good. I had a bowl of Smokey Black Tonkotsu Ramen and a side of truffle gyoza. The gyoza\u2019s didn\u2019t come in time so they didn\u2019t charge me for them! I appreciated that!  I will be back for sure!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This place is definitely worth a visit for ramen lovers. I had the wagyu ramen and it was absolutely delicious. The flavors were so rich and satisfying. The service was also quite good, adding to the overall pleasant experience. I would highly recommend trying this dish. Of all the places I've visited for Ramen, this ranks the best as far as tastes goes.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "FROZEN RAMEN KITS\n• Ramen Kit A — $30.00\n   3 ramen noodles and 3 soups with Tonkotsu varieties and choice of frozen toppings\n• Ramen Kit B — $30.00\n   3 ramen noodles and 3 soups featuring Spicy Miso and Tonkotsu varieties\n⭐ Premium Kit — $36.00\n   3 ramen noodles and 3 soups with Clam and Wagyu & Angus Beef varieties\n\nRAMEN\n⭐ Premium Wagyu Ramen — $38.00\n   Limited quantity\n• Signature Clam Intense Shoyu Ramen — $18.50\n⭐ Lobster Ramen — $34.00\n   Limited Quantity\n• Spicy Miso Ramen — $18.00\n   Choose from Mild, Medium, Hot, Madness Spicy\n• Original Shoyu Tonkotsu Ramen — $17.50\n• Smokey Black Tonkotsu Ramen — $18.00\n• Avocado Vegetarian Ramen — $18.50\n\nAPPETIZERS\n• Braised Pork Belly — $10.40\n   House braised pork belly appetizer plate with soft boiled egg\n• Takoyaki — $9.40\n   Traditional 6pc Japanese fried octopus balls\n• Chicken Karaage — $8.40\n   5pc marinated deep fried chicken with spicy mustard sauce\n• Lobster Gyoza — $10.30\n• Gyoza — $7.40\n   6pcs\n• Edamame — $5.20\n   Steam boiled salted edamame. Vegetarian\n\nDONBURI\n• Katsudon — $18.50\n   Pork cutlet with Japanese egg sauce and steamed rice\n• Mini Beef Gyu-Don — $18.00\n• Oyako Don — $16.50\n   Chicken & egg with soy sauce and rice\n• Mini Pork Belly Don — $11.50\n   Rice topped with braised pork belly, pickled ginger and scallions\n• Mini Chashu Don — $10.00\n   Rice topped with sous-vide pork chashu, pickled takana, and green scallions",
+        "body": "FROZEN RAMEN KITS\n\u2022 Ramen Kit A \u2014 $30.00\n   3 ramen noodles and 3 soups with Tonkotsu varieties and choice of frozen toppings\n\u2022 Ramen Kit B \u2014 $30.00\n   3 ramen noodles and 3 soups featuring Spicy Miso and Tonkotsu varieties\n\u2b50 Premium Kit \u2014 $36.00\n   3 ramen noodles and 3 soups with Clam and Wagyu & Angus Beef varieties\n\nRAMEN\n\u2b50 Premium Wagyu Ramen \u2014 $38.00\n   Limited quantity\n\u2022 Signature Clam Intense Shoyu Ramen \u2014 $18.50\n\u2b50 Lobster Ramen \u2014 $34.00\n   Limited Quantity\n\u2022 Spicy Miso Ramen \u2014 $18.00\n   Choose from Mild, Medium, Hot, Madness Spicy\n\u2022 Original Shoyu Tonkotsu Ramen \u2014 $17.50\n\u2022 Smokey Black Tonkotsu Ramen \u2014 $18.00\n\u2022 Avocado Vegetarian Ramen \u2014 $18.50\n\nAPPETIZERS\n\u2022 Braised Pork Belly \u2014 $10.40\n   House braised pork belly appetizer plate with soft boiled egg\n\u2022 Takoyaki \u2014 $9.40\n   Traditional 6pc Japanese fried octopus balls\n\u2022 Chicken Karaage \u2014 $8.40\n   5pc marinated deep fried chicken with spicy mustard sauce\n\u2022 Lobster Gyoza \u2014 $10.30\n\u2022 Gyoza \u2014 $7.40\n   6pcs\n\u2022 Edamame \u2014 $5.20\n   Steam boiled salted edamame. Vegetarian\n\nDONBURI\n\u2022 Katsudon \u2014 $18.50\n   Pork cutlet with Japanese egg sauce and steamed rice\n\u2022 Mini Beef Gyu-Don \u2014 $18.00\n\u2022 Oyako Don \u2014 $16.50\n   Chicken & egg with soy sauce and rice\n\u2022 Mini Pork Belly Don \u2014 $11.50\n   Rice topped with braised pork belly, pickled ginger and scallions\n\u2022 Mini Chashu Don \u2014 $10.00\n   Rice topped with sous-vide pork chashu, pickled takana, and green scallions",
         "sections": [
           {
             "name": "FROZEN RAMEN KITS",
@@ -192,5 +192,6 @@
   "discovery": {
     "text": "Tokyo-style ramen research",
     "url": "https://konjikiramen.com/"
-  }
+  },
+  "type": "restaurant"
 }

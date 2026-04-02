@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJe3RA5fE1K4gRQvD6x-3d1ho",
-    "name": "Petite Bouchée Patisserie",
+    "name": "Petite Bouch\u00e9e Patisserie",
     "city": "Toronto",
     "address": "Junction / Sousa Mendes",
     "type": "cafe"
@@ -12,18 +12,18 @@
     "text": "Discovered via Yelp"
   },
   "narrative": {
-    "summary": "Exceptional 4.9★ rating; French pastry; off-the-beaten-path location adds discovery appeal.",
+    "summary": "Exceptional 4.9\u2605 rating; French pastry; off-the-beaten-path location adds discovery appeal.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find this tiny French pâtisserie tucked into the Junction near Sousa Mendes, the kind of spot you stumble onto and feel like you've discovered something. Inside, it's just a display case and the owner greeting you like you've made her day—no seating, no fuss, just pastries lined up under glass and that immediate warmth of a place run by someone who actually cares. Everything about it says neighbourhood gem that somehow flew under the radar.",
+        "body": "You'll find this tiny French p\u00e2tisserie tucked into the Junction near Sousa Mendes, the kind of spot you stumble onto and feel like you've discovered something. Inside, it's just a display case and the owner greeting you like you've made her day\u2014no seating, no fuss, just pastries lined up under glass and that immediate warmth of a place run by someone who actually cares. Everything about it says neighbourhood gem that somehow flew under the radar.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is proper French pastry work—the kind where technique shows up in texture, not just looks. The chocolate cake has a cult following (reserve ahead or you'll miss it), but regulars know the chocolate cupcake might be the real move: dense crumb, grown-up sweetness, frosting that doesn't quit halfway through. The display rotates with whatever the owner's baking that day, and if it's there, it's worth trying. Pastries run a few dollars each; a whole cake will set you back maybe $30-40.",
+        "body": "This is proper French pastry work\u2014the kind where technique shows up in texture, not just looks. The chocolate cake has a cult following (reserve ahead or you'll miss it), but regulars know the chocolate cupcake might be the real move: dense crumb, grown-up sweetness, frosting that doesn't quit halfway through. The display rotates with whatever the owner's baking that day, and if it's there, it's worth trying. Pastries run a few dollars each; a whole cake will set you back maybe $30-40.",
         "id": "block-the-food-1"
       },
       {
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Came in for a slice of their famous chocolate cake and somehow walked out with the best cupcake of my life instead 🤤\n\nThe chocolate cupcake was unreal!! perfectly moist, rich without being too heavy, and topped with the dreamiest frosting. One bite in and I knew I made the right decision. I’m genuinely still thinking about it.\n\nOn top of that, the owner is so sweet and welcoming. You can feel the love and care the moment you walk in. Everything in the display looked incredible. Safe to say I’ll be back and next time I might just grab a whole chocolate cake for myself and fully indulge. 10/10 recommend 🩷✨\"\n\n⭐⭐⭐⭐⭐ \"If you’re a chocolate lover, you absolutely don’t want to miss the chocolate cake. Just make sure to reserve it in advance because it’s in very high demand—and for good reason. It’s made by one person only, Nancy, who is truly the sweetest.\n\nThe coffee was great, and the butter tart and almond croissant were also incredibly delicious. Thank you, Nancy, for your kindness, your cheerful personality, and for making the best chocolate cake ever! XD\"\n\n⭐⭐⭐⭐⭐ \"The people of the internet aren’t lying - this place has the BEST chocolate cake in Toronto. We came from Buffalo, NY for a bday weekend and were excited to try it after tons of reddit research. A plate wasn’t needed, so good we dug right in. Nancy was the sweetest and we will definitely be back during our next visit! ❤️\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Came in for a slice of their famous chocolate cake and somehow walked out with the best cupcake of my life instead \ud83e\udd24\n\nThe chocolate cupcake was unreal!! perfectly moist, rich without being too heavy, and topped with the dreamiest frosting. One bite in and I knew I made the right decision. I\u2019m genuinely still thinking about it.\n\nOn top of that, the owner is so sweet and welcoming. You can feel the love and care the moment you walk in. Everything in the display looked incredible. Safe to say I\u2019ll be back and next time I might just grab a whole chocolate cake for myself and fully indulge. 10/10 recommend \ud83e\ude77\u2728\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"If you\u2019re a chocolate lover, you absolutely don\u2019t want to miss the chocolate cake. Just make sure to reserve it in advance because it\u2019s in very high demand\u2014and for good reason. It\u2019s made by one person only, Nancy, who is truly the sweetest.\n\nThe coffee was great, and the butter tart and almond croissant were also incredibly delicious. Thank you, Nancy, for your kindness, your cheerful personality, and for making the best chocolate cake ever! XD\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The people of the internet aren\u2019t lying - this place has the BEST chocolate cake in Toronto. We came from Buffalo, NY for a bday weekend and were excited to try it after tons of reddit research. A plate wasn\u2019t needed, so good we dug right in. Nancy was the sweetest and we will definitely be back during our next visit! \u2764\ufe0f\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

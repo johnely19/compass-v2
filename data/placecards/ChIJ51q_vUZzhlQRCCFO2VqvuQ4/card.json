@@ -10,11 +10,11 @@
     "hours": [
       "Monday: Closed",
       "Tuesday: Closed",
-      "Wednesday: 5:00 – 7:30 PM, 8:00 – 10:30 PM",
-      "Thursday: 5:00 – 7:30 PM, 8:00 – 10:30 PM",
-      "Friday: 5:00 – 7:30 PM, 8:00 – 10:30 PM",
-      "Saturday: 12:00 – 2:00 PM, 5:00 – 7:30 PM, 8:00 – 10:30 PM",
-      "Sunday: 8:00 AM – 10:30 PM"
+      "Wednesday: 5:00\u2009\u2013\u20097:30\u202fPM, 8:00\u2009\u2013\u200910:30\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u20097:30\u202fPM, 8:00\u2009\u2013\u200910:30\u202fPM",
+      "Friday: 5:00\u2009\u2013\u20097:30\u202fPM, 8:00\u2009\u2013\u200910:30\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u20097:30\u202fPM, 8:00\u2009\u2013\u200910:30\u202fPM",
+      "Sunday: 8:00\u202fAM\u2009\u2013\u200910:30\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 279,
@@ -26,32 +26,33 @@
     "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/all-the-stars-from-the-michelin-guide-vancouver-2025"
   },
   "narrative": {
-    "summary": "Michelin 1-star. Extraordinary omakase from chef Takeshi Okeya. 4.8 rating on Google. Yaletown location. If Masayoshi is booked, this is the alternative — equally world-class. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Michelin 1-star. Extraordinary omakase from chef Takeshi Okeya. 4.8 rating on Google. Yaletown location. If Masayoshi is booked, this is the alternative \u2014 equally world-class. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Yaletown, that glass-and-concrete stretch where former warehouses meet waterfront condos. Inside, it's an eight-seat hinoki counter facing chef Takeshi Okeya and his team—no tables, no distractions, just blonde wood and close proximity to hands shaping rice. The room is quiet enough to hear the sear of toro, the slice of a yanagiba through fish.",
+        "body": "You're in Yaletown, that glass-and-concrete stretch where former warehouses meet waterfront condos. Inside, it's an eight-seat hinoki counter facing chef Takeshi Okeya and his team\u2014no tables, no distractions, just blonde wood and close proximity to hands shaping rice. The room is quiet enough to hear the sear of toro, the slice of a yanagiba through fish.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Edomae omakase in the traditional sense—aged fish, warm rice seasoned with red vinegar, each piece shaped by hand and passed directly to you. Okeya works seasonally: bluefin tuna from different cuts, Japanese sea bream, spot prawn when they're running. The fifteen or so courses move through sashimi, nigiri, and maybe a grilled dish or hand roll to finish. Expect to spend around $200-250 per person for dinner, less at lunch.",
+        "body": "This is Edomae omakase in the traditional sense\u2014aged fish, warm rice seasoned with red vinegar, each piece shaped by hand and passed directly to you. Okeya works seasonally: bluefin tuna from different cuts, Japanese sea bream, spot prawn when they're running. The fifteen or so courses move through sashimi, nigiri, and maybe a grilled dish or hand roll to finish. Expect to spend around $200-250 per person for dinner, less at lunch.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Book this when Masayoshi is full or when you want a meal that demands your full attention—no background noise, no splitting focus. It's a Tuesday-night reset or the kind of dinner where you're marking something worth remembering.",
+        "body": "Book this when Masayoshi is full or when you want a meal that demands your full attention\u2014no background noise, no splitting focus. It's a Tuesday-night reset or the kind of dinner where you're marking something worth remembering.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Every grain of rice, every slice of fish contains the weight of their dedication and respect to the food and culture.\n\nIt was an edible performance!\n\nWe tried their lunch menu first and It was such a wonderful experience.\n\nWe will definitely return for the dinner course!\n\nMichelin well deserved!\"\n\n⭐⭐⭐⭐⭐ \"Very memorable experience, food and service. Great thing to note is that the service staff noticed I was left handed near the start of the courses and set the utensils accordingly to my dominant hand. And my sake and my partners hot tea never sat empty for very long. Very attentive and knowledgeable service staff.\nThe selection of seafood was fresh with varying textures and flavours. Hot and cold vegetable and beef dishes were also quite decent. All kitchen staff coordinated their timing very well during and in between courses and showcased good technical skill throughout the omakase experience. Will definitely recommend.\"\n\n⭐⭐⭐⭐⭐ \"This was an absolutely unforgettable omakase dinner theater experience! From the moment you arrive, you’re transported into a world where culinary mastery and performance seamlessly collide. Each course is a work of art—impeccably sourced, flawlessly prepared, and presented with intention and grace. The chefs don’t just cook; they tell a story, engaging every sense with precision, passion, and quiet confidence. The pacing, the artistry, the flavors—everything feels perfectly choreographed. This is not just a meal, it’s an immersive experience that sets a new standard for what omakase can be. Truly exceptional and worth every moment.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Every grain of rice, every slice of fish contains the weight of their dedication and respect to the food and culture.\n\nIt was an edible performance!\n\nWe tried their lunch menu first and It was such a wonderful experience.\n\nWe will definitely return for the dinner course!\n\nMichelin well deserved!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Very memorable experience, food and service. Great thing to note is that the service staff noticed I was left handed near the start of the courses and set the utensils accordingly to my dominant hand. And my sake and my partners hot tea never sat empty for very long. Very attentive and knowledgeable service staff.\nThe selection of seafood was fresh with varying textures and flavours. Hot and cold vegetable and beef dishes were also quite decent. All kitchen staff coordinated their timing very well during and in between courses and showcased good technical skill throughout the omakase experience. Will definitely recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This was an absolutely unforgettable omakase dinner theater experience! From the moment you arrive, you\u2019re transported into a world where culinary mastery and performance seamlessly collide. Each course is a work of art\u2014impeccably sourced, flawlessly prepared, and presented with intention and grace. The chefs don\u2019t just cook; they tell a story, engaging every sense with precision, passion, and quiet confidence. The pacing, the artistry, the flavors\u2014everything feels perfectly choreographed. This is not just a meal, it\u2019s an immersive experience that sets a new standard for what omakase can be. Truly exceptional and worth every moment.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

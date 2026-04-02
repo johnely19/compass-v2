@@ -8,13 +8,13 @@
     "address": "Annex / Bathurst",
     "type": "restaurant",
     "hours": [
-      "Monday: 9:00 AM – 5:00 PM",
-      "Tuesday: 9:00 AM – 5:00 PM",
-      "Wednesday: 9:00 AM – 5:00 PM",
-      "Thursday: 9:00 AM – 5:00 PM",
-      "Friday: 9:00 AM – 5:00 PM",
-      "Saturday: 9:00 AM – 5:00 PM",
-      "Sunday: 9:00 AM – 5:00 PM"
+      "Monday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 164,
@@ -25,32 +25,33 @@
     "text": "Discovered via todocanada.ca"
   },
   "narrative": {
-    "summary": "Toronto premiere of Sam Holcroft's 'A Mirror'—award-winning British playwright; ARC production; intimate venue. Runs Mar 11–28.",
+    "summary": "Toronto premiere of Sam Holcroft's 'A Mirror'\u2014award-winning British playwright; ARC production; intimate venue. Runs Mar 11\u201328.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Bathurst in the Annex, climbing the steps into what used to be a church—those triangular wood-beamed ceilings give it away immediately. The bones are old but kept meticulously clean, sound bouncing off the peaked ceiling in a way that makes even quiet moments feel amplified. It's intimate by design, the kind of venue where you're aware of everyone else in the room but not crowded by them.",
+        "body": "You're on Bathurst in the Annex, climbing the steps into what used to be a church\u2014those triangular wood-beamed ceilings give it away immediately. The bones are old but kept meticulously clean, sound bouncing off the peaked ceiling in a way that makes even quiet moments feel amplified. It's intimate by design, the kind of venue where you're aware of everyone else in the room but not crowded by them.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—918 Bathurst is a performance and event space, currently staging Sam Holcroft's 'A Mirror' through ARC Theatre from March 11 to 28. You're here for award-winning British playwriting in a room that holds maybe a few dozen people, close enough to see every shift in the actors' faces. There's no dinner service, but the Annex has you covered before or after curtain.",
+        "body": "This isn't a restaurant\u2014918 Bathurst is a performance and event space, currently staging Sam Holcroft's 'A Mirror' through ARC Theatre from March 11 to 28. You're here for award-winning British playwriting in a room that holds maybe a few dozen people, close enough to see every shift in the actors' faces. There's no dinner service, but the Annex has you covered before or after curtain.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You want stripped-down theatre where the writing does the work, not spectacle. Book a mid-run performance when you need something sharper than streaming—live bodies, live voices, that church ceiling holding every word.",
+        "body": "You want stripped-down theatre where the writing does the work, not spectacle. Book a mid-run performance when you need something sharper than streaming\u2014live bodies, live voices, that church ceiling holding every word.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"This is really a 4.5 or of 5 but again, no half star option.\n\nAttended a 3 day festival here and had a chance to really take in three space and all it offered.\n\nI'll start with the pristine nature this venue is kept in on all levels, including the bathrooms, even though this is an older event space.\n\nJohnathan and Joe (venue staff) were friendly, knowledgable, attentive, efficient and accommodating in their dealings.\n\nThe space itself is pretty unique as it used to be a church and the ceilings are the old school, wood triangle so sounds travels well. It can be a drawback if there's music with heavy bass but they do a good job of monitoring that closely.\n\nThe half star deduction is based on the fact that accessibility is painfully missing. There are quite a few steps patrons have to climb, both inside and outside, in order to enter the Great Hall.\n\nIf air circulation was totally within their control, that would be another point raised as the Great Hall can get a little hot with larger numbers but when that is addressed through air conditioning, the foyer is now frigid.\n\nOnce those issues are addressed this would get 5 stars.\"\n\n⭐⭐⭐⭐⭐ \"Beautiful space where my sister hosted her wedding. The wood interior and natural sunlight illuminates the space, making it a warm, bright environment. I believe this place was a Zen Buddhist temple in a previous life and that calming atmosphere persists today.\"\n\n⭐⭐⭐⭐⭐ \"Absolutely incredible venue for concerts! The acoustics are amazing and they had the good folding seats. We were there to see The Holy Gasp with an orchestra and choir.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"This is really a 4.5 or of 5 but again, no half star option.\n\nAttended a 3 day festival here and had a chance to really take in three space and all it offered.\n\nI'll start with the pristine nature this venue is kept in on all levels, including the bathrooms, even though this is an older event space.\n\nJohnathan and Joe (venue staff) were friendly, knowledgable, attentive, efficient and accommodating in their dealings.\n\nThe space itself is pretty unique as it used to be a church and the ceilings are the old school, wood triangle so sounds travels well. It can be a drawback if there's music with heavy bass but they do a good job of monitoring that closely.\n\nThe half star deduction is based on the fact that accessibility is painfully missing. There are quite a few steps patrons have to climb, both inside and outside, in order to enter the Great Hall.\n\nIf air circulation was totally within their control, that would be another point raised as the Great Hall can get a little hot with larger numbers but when that is addressed through air conditioning, the foyer is now frigid.\n\nOnce those issues are addressed this would get 5 stars.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Beautiful space where my sister hosted her wedding. The wood interior and natural sunlight illuminates the space, making it a warm, bright environment. I believe this place was a Zen Buddhist temple in a previous life and that calming atmosphere persists today.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Absolutely incredible venue for concerts! The acoustics are amazing and they had the good folding seats. We were there to see The Holy Gasp with an orchestra and choir.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

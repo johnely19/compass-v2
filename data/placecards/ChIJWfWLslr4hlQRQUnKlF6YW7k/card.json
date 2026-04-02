@@ -8,13 +8,13 @@
     "address": "Squamish",
     "type": "bar",
     "hours": [
-      "Monday: 12:00 – 9:00 PM",
-      "Tuesday: 12:00 – 9:00 PM",
-      "Wednesday: 12:00 – 9:00 PM",
-      "Thursday: 12:00 – 9:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 9:00 PM"
+      "Monday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u20099:00\u202fPM"
     ],
     "rating": 4.3,
     "review_count": 396,
@@ -31,26 +31,26 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in industrial Squamish, where the tasting room runs warm even when there's still cold hanging in the air outside. Inside, it's all wood beams and brewery tanks visible through windows, with a layout that funnels you toward the bar where staff actually know what they're pouring. Out back, there's a patio strung with fire pits—the kind of setup where you can nurse a cold beer in the cold without your fingers going numb.",
+        "body": "You're in industrial Squamish, where the tasting room runs warm even when there's still cold hanging in the air outside. Inside, it's all wood beams and brewery tanks visible through windows, with a layout that funnels you toward the bar where staff actually know what they're pouring. Out back, there's a patio strung with fire pits\u2014the kind of setup where you can nurse a cold beer in the cold without your fingers going numb.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "A-Frame keeps it simple: they brew, Flipside Burgers handles the food from their truck parked outside. The partnership works—think smashed patties and proper buns that soak up the Nitro Stout or whatever small-batch pour you're drinking. They've also got non-alcoholic options behind the bar, which means this isn't just a beer purist's clubhouse.",
+        "body": "A-Frame keeps it simple: they brew, Flipside Burgers handles the food from their truck parked outside. The partnership works\u2014think smashed patties and proper buns that soak up the Nitro Stout or whatever small-batch pour you're drinking. They've also got non-alcoholic options behind the bar, which means this isn't just a beer purist's clubhouse.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You're doing a Squamish brewery crawl with Seb and need a second stop after Backcountry, or your dad's former coworker is the brewmaster and you've got a week to kill in town. Best on a day when rain's coming but hasn't hit yet—grab a fire pit table and settle in.",
+        "body": "You're doing a Squamish brewery crawl with Seb and need a second stop after Backcountry, or your dad's former coworker is the brewmaster and you've got a week to kill in town. Best on a day when rain's coming but hasn't hit yet\u2014grab a fire pit table and settle in.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Told my folks I was working in Squamish for the week and my old man suggested I go here because his former Dead Frog Brewery coworker works here as a brewmaster now.\n\nPlace was nice and toasty which was nice considering there’s still a nip in the air. Staff were friendly and were knowledgeable about their products. A-Frame Brewing Co. also offers non-alcoholic drinks which I think is a great addition because it means kids and sober people can enjoy the business as well.\nA-Frame Brewing Co. boasts a pretty patio with fire pits as well which meant I could enjoy my cold beer outside on a cold day, especially since it’s supposed to rain the rest of the week.\n\nThey’re also partnered with the food truck, Flipside Burgers, which was also really tasty and paired perfectly with the Nitro Stout beer I had.\n\nIn fact, I enjoyed the beer so much I bought this 650mL 10.2% Alcohol bottle of Imperial Stout to bring back to my hotel. I think the wax is unneeded and, without a discernible pull tab, makes popping open and enjoying it a bit of a chore, especially since it’s a bottle cap and thus you can’t just corkscrew through the top of the wax anyways. Still really tasty though. The cocoa really comes through.\n\nOf course it’s quite pricy but every place is nowadays so it is what it is. Will definitely go back if I ever come back to Squamish on a nice day.\"\n\n⭐⭐⭐⭐⭐ \"Nice place. The beers are overrated. I think the people go there for the burgers from Flipside, they look so delicious\"\n\n⭐⭐⭐⭐ \"Pretty looking brewery beside the taco food truck. I like the aesthetic inside and they have a nice wooden patio for sitting and enjoying. It’s a nice place to relax and have some beers especially if you’re close to the sandman hotel. There are other amenities and the area so you can always find your way here if you’re just going on a walk.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Told my folks I was working in Squamish for the week and my old man suggested I go here because his former Dead Frog Brewery coworker works here as a brewmaster now.\n\nPlace was nice and toasty which was nice considering there\u2019s still a nip in the air. Staff were friendly and were knowledgeable about their products. A-Frame Brewing Co. also offers non-alcoholic drinks which I think is a great addition because it means kids and sober people can enjoy the business as well.\nA-Frame Brewing Co. boasts a pretty patio with fire pits as well which meant I could enjoy my cold beer outside on a cold day, especially since it\u2019s supposed to rain the rest of the week.\n\nThey\u2019re also partnered with the food truck, Flipside Burgers, which was also really tasty and paired perfectly with the Nitro Stout beer I had.\n\nIn fact, I enjoyed the beer so much I bought this 650mL 10.2% Alcohol bottle of Imperial Stout to bring back to my hotel. I think the wax is unneeded and, without a discernible pull tab, makes popping open and enjoying it a bit of a chore, especially since it\u2019s a bottle cap and thus you can\u2019t just corkscrew through the top of the wax anyways. Still really tasty though. The cocoa really comes through.\n\nOf course it\u2019s quite pricy but every place is nowadays so it is what it is. Will definitely go back if I ever come back to Squamish on a nice day.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Nice place. The beers are overrated. I think the people go there for the burgers from Flipside, they look so delicious\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Pretty looking brewery beside the taco food truck. I like the aesthetic inside and they have a nice wooden patio for sitting and enjoying. It\u2019s a nice place to relax and have some beers especially if you\u2019re close to the sandman hotel. There are other amenities and the area so you can always find your way here if you\u2019re just going on a walk.\""
       }
     ]
   },
@@ -69,5 +69,6 @@
       "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
       "caption": "Source image"
     }
-  ]
+  ],
+  "type": "bar"
 }

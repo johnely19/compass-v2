@@ -8,13 +8,13 @@
     "address": "Roncesvalles",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 7:00 PM",
-      "Tuesday: 10:00 AM – 7:00 PM",
-      "Wednesday: 10:00 AM – 7:00 PM",
-      "Thursday: 10:00 AM – 7:00 PM",
-      "Friday: 10:00 AM – 7:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
-      "Sunday: 10:00 AM – 6:00 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 410,
@@ -25,7 +25,8 @@
     "text": "Discovered via anotherstory.ca"
   },
   "narrative": {
-    "summary": "Progressive, inclusive curation—feminist/queer/social justice lit. Highest-rated (4.9★) in city.",
+    "summary": "Progressive, inclusive curation\u2014feminist/queer/social justice lit. Highest-rated (4.9\u2605) in city.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

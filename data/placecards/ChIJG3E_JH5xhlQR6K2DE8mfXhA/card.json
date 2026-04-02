@@ -9,11 +9,12 @@
     "type": "hotel"
   },
   "discovery": {
-    "text": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 — lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
+    "text": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 \u2014 lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
     "url": "https://www.booking.com/hotel/ca/m-vancouver-british-columbia.html"
   },
   "narrative": {
-    "summary": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 — lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
+    "summary": "Heritage 1908 building with a modern boutique renovation. Home to Uva Wine & Cocktail Bar and Cibo Trattoria (both excellent). Great Granville Street location near theatres. Rooms are compact but stylish. Budget-friendly at ~$140-180 CAD. Rating 3.8/5 \u2014 lower rating reflects smaller rooms, but the restaurant/bar scene is top-tier. The 'stay for the scene' pick.",
     "blocks": []
-  }
+  },
+  "type": "hotel"
 }

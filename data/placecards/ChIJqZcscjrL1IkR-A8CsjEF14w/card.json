@@ -8,13 +8,13 @@
     "address": "King East Design District (239 King St E)",
     "type": "shop",
     "hours": [
-      "Monday: 10:00 AM – 6:00 PM",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 10:00 AM – 6:00 PM",
-      "Friday: 10:00 AM – 6:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
-      "Sunday: 11:00 AM – 2:30 PM"
+      "Monday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20092:30\u202fPM"
     ],
     "rating": 3.8,
     "review_count": 125,
@@ -25,7 +25,8 @@
     "text": "Discovered via delakeltd.com"
   },
   "narrative": {
-    "summary": "Three-floor family-owned bookstore. Architecture monographs, rare books, prints on the third floor. Deep collection of interior design, architectural history. Open 7 days. Old-school curation in the design district. 3.8★ (124 reviews).",
+    "summary": "Three-floor family-owned bookstore. Architecture monographs, rare books, prints on the third floor. Deep collection of interior design, architectural history. Open 7 days. Old-school curation in the design district. 3.8\u2605 (124 reviews).",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

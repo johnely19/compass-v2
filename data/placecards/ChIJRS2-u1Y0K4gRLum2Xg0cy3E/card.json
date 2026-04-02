@@ -11,7 +11,7 @@
       "Monday: Closed",
       "Tuesday: Closed",
       "Wednesday: Closed",
-      "Thursday: 6:00 PM – 12:00 AM",
+      "Thursday: 6:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
       "Friday: Closed",
       "Saturday: Closed",
       "Sunday: Closed"
@@ -26,7 +26,7 @@
     "text": "Discovered via starwinelist.com"
   },
   "narrative": {
-    "summary": "You're on a residential stretch of Dundas West where wine bars outnumber banks—bottles line the walls floor to ceiling, plants hang in the windows, and the wooden tables have that lived-in feeling that makes you want to settle in for a second bottle. The menu changes with whatever's good: kampachi crudo with nori jam, roasted squash that tastes like the season, always cheese and charcuterie if you're keeping it simple. It's only open Thursday nights—show up when you want good wine without the ceremony.",
+    "summary": "You're on a residential stretch of Dundas West where wine bars outnumber banks\u2014bottles line the walls floor to ceiling, plants hang in the windows, and the wooden tables have that lived-in feeling that makes you want to settle in for a second bottle. The menu changes with whatever's good: kampachi crudo with nori jam, roasted squash that tastes like the season, always cheese and charcuterie if you're keeping it simple. It's only open Thursday nights\u2014show up when you want good wine without the ceremony.",
     "blocks": [
       {
         "type": "prose",
@@ -37,21 +37,22 @@
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu changes with whatever's good, but it's built around the kind of food that makes sense with natural wine—kampachi crudo with nori jam, roasted squash that tastes like the season, market fish that shifts weekly. There's always cheese and charcuterie if you're keeping it simple, but the kitchen surprises with how much flavor they coax from a short, focused menu. Expect to spend around $15-20 for smaller plates, more for the fish.",
+        "body": "The menu changes with whatever's good, but it's built around the kind of food that makes sense with natural wine\u2014kampachi crudo with nori jam, roasted squash that tastes like the season, market fish that shifts weekly. There's always cheese and charcuterie if you're keeping it simple, but the kitchen surprises with how much flavor they coax from a short, focused menu. Expect to spend around $15-20 for smaller plates, more for the fish.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your neighborhood anchor when you want good wine without the ceremony—a weeknight with a friend when you're both too tired to cook but want something better than takeout. Come solo on a Tuesday and post up with a book if you need to remember what it feels like to unwind.",
+        "body": "This is your neighborhood anchor when you want good wine without the ceremony\u2014a weeknight with a friend when you're both too tired to cook but want something better than takeout. Come solo on a Tuesday and post up with a book if you need to remember what it feels like to unwind.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Great wine bar located on Dundas W Toronto. The ambience was amazing and the wine selection was comprehensive. However, the biggest surprise for me was the food. It surpassed my expectations.\n\nWe ordered Pedro Ximenez wine - which we rarely see in most wine bars. The wine itself was interesting but the sherry notes were too prominent for my liking.\n\nThe food was excellent. We picked the kampachi crudo (my fave), squash, gnocchi (least fave) and the market fish. The nori jam on the kampachi was the highlight for me. Additionally, it was great to see the menu is seasonal.\n\nAll in all, it was a lovely experience and I’d recommend it!\"\n\n⭐⭐⭐⭐⭐ \"Such a great, cozy environment surrounded by wine and plants! Staff is super lovely and friendly. Great variety of wine and interesting dishes to choose from. I went for the hen of the woods mushroom dish, rarely see it being on menu and it was tasty! Definitely recommend and will be back.\"\n\n⭐⭐⭐⭐⭐ \"What a wonderful place. Great wine selection lovely  service. The focaccia bread is made with love. Have everything on the menu at least once. It's very delightful. Oh the salmon ceviche crudo melange... Order it twice!!🤘\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Great wine bar located on Dundas W Toronto. The ambience was amazing and the wine selection was comprehensive. However, the biggest surprise for me was the food. It surpassed my expectations.\n\nWe ordered Pedro Ximenez wine - which we rarely see in most wine bars. The wine itself was interesting but the sherry notes were too prominent for my liking.\n\nThe food was excellent. We picked the kampachi crudo (my fave), squash, gnocchi (least fave) and the market fish. The nori jam on the kampachi was the highlight for me. Additionally, it was great to see the menu is seasonal.\n\nAll in all, it was a lovely experience and I\u2019d recommend it!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a great, cozy environment surrounded by wine and plants! Staff is super lovely and friendly. Great variety of wine and interesting dishes to choose from. I went for the hen of the woods mushroom dish, rarely see it being on menu and it was tasty! Definitely recommend and will be back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"What a wonderful place. Great wine selection lovely  service. The focaccia bread is made with love. Have everything on the menu at least once. It's very delightful. Oh the salmon ceviche crudo melange... Order it twice!!\ud83e\udd18\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

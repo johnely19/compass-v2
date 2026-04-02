@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "Long-running program gallery; 4.6 rating; shows established Canadian artists",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

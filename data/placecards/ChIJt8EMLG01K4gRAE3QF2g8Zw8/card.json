@@ -12,7 +12,7 @@
     "text": "Discovered via reddit.com/r/naturalwine"
   },
   "narrative": {
-    "summary": "You're on College Street in Little Italy, walking into a room that shifts from dinner service to dance floor as the night unfolds—low-slung pendant lights over closely-set tables, and that sound system pulling in artists who come for the music as much as the wine. The menu leans into small plates—tuna tartare with roasted nori, duck confit tender enough to pull apart with a fork—that won't weigh you down before dancing. Saturday nights are the move, but come early enough to actually eat.",
+    "summary": "You're on College Street in Little Italy, walking into a room that shifts from dinner service to dance floor as the night unfolds\u2014low-slung pendant lights over closely-set tables, and that sound system pulling in artists who come for the music as much as the wine. The menu leans into small plates\u2014tuna tartare with roasted nori, duck confit tender enough to pull apart with a fork\u2014that won't weigh you down before dancing. Saturday nights are the move, but come early enough to actually eat.",
     "blocks": [
       {
         "type": "prose",
@@ -36,8 +36,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Beautiful spot for dinner. The atmosphere is beautiful and cozy. The food is incredible and light with sharing plates that fit a wide variety of tastes. Highly recommend asking what their specials for the night are. The tuna tartare was a standout! This is an incredible spot for a date night. Definitely recommend.\"\n\n⭐⭐⭐⭐⭐ \"The duck confit was so tender and filling & was my first time trying a calamari with a sweeter sauce - highly recommended. The tuna tartar came with seaweed salad and roasted nori - super delish pairing. The beef tartar was solid too.\"\n\n⭐⭐⭐⭐⭐ \"An absolute masterclass in atmosphere and vibes. I go here on a regular basis for the music and late night dancing. The sound system is incredible, and they spin vinyl. A lot of artists frequent here.\n\nAs if this already wasn’t enough, they have a delicious lunch/dinner menu cooked by some magical hands.\nThe pave fries are insane\nStaff is super friendly and honestly a well rounded and really cool place to be\n\nOne of my favourite spots in the city, hands down\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Beautiful spot for dinner. The atmosphere is beautiful and cozy. The food is incredible and light with sharing plates that fit a wide variety of tastes. Highly recommend asking what their specials for the night are. The tuna tartare was a standout! This is an incredible spot for a date night. Definitely recommend.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The duck confit was so tender and filling & was my first time trying a calamari with a sweeter sauce - highly recommended. The tuna tartar came with seaweed salad and roasted nori - super delish pairing. The beef tartar was solid too.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"An absolute masterclass in atmosphere and vibes. I go here on a regular basis for the music and late night dancing. The sound system is incredible, and they spin vinyl. A lot of artists frequent here.\n\nAs if this already wasn\u2019t enough, they have a delicious lunch/dinner menu cooked by some magical hands.\nThe pave fries are insane\nStaff is super friendly and honestly a well rounded and really cool place to be\n\nOne of my favourite spots in the city, hands down\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

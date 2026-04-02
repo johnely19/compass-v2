@@ -9,11 +9,11 @@
     "type": "hotel"
   },
   "discovery": {
-    "text": "Vancouver heritage icon — ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
+    "text": "Vancouver heritage icon \u2014 ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
     "url": "https://www.ca.kayak.com/Vancouver-Hotels-Sylvia-Hotel.70791.ksp"
   },
   "narrative": {
-    "summary": "Vancouver heritage icon — ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
+    "summary": "Vancouver heritage icon \u2014 ivy-covered 1912 building steps from English Bay Beach. Old-school charm with a legendary bar/lounge. Not 'boutique' in the trendy sense, but absolutely dripping with character. Great value at ~$113-160 CAD/night. On-site restaurant and lounge. Walk to Stanley Park in 5 min. Rating 4.3/5 (2,251 reviews). The budget-friendly character pick.",
     "blocks": []
   },
   "manifest": {
@@ -31,5 +31,6 @@
       "path": "https://sylviahotel.com/wp-content/uploads/slider_2-1.jpeg",
       "caption": "Source image"
     }
-  ]
+  ],
+  "type": "hotel"
 }

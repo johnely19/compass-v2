@@ -42,5 +42,6 @@
   "discovery": {
     "text": "Michelin Guide NYC \u2014 omakase counter",
     "url": "https://guide.michelin.com/us/en/new-york-state/new-york/restaurant/ichimura"
-  }
+  },
+  "type": "park"
 }

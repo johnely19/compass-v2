@@ -15,67 +15,67 @@
     "user_rating_count": 656,
     "location": "1279 Bloor St W, Toronto, ON M6H 1N7, Canada",
     "hours": [
-      "Monday: 5:00 – 11:00 PM",
-      "Tuesday: 5:00 – 11:00 PM",
-      "Wednesday: 5:00 – 11:00 PM",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 5:00 – 11:00 PM",
-      "Sunday: 3:30 – 9:30 PM"
+      "Monday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 3:30\u2009\u2013\u20099:30\u202fPM"
     ],
     "review_count": 668
   },
   "narrative": {
-    "summary": "You're on Bloor West in Little Portugal, pulling up a stool at the bar where you're close enough to watch dough get stretched and pizza peels slide in and out of the oven—the setup is deliberately intimate, you're practically part of the cooking. The pizza has real blistered crust that makes you remember crust matters, and the tiramisu apparently stops conversations mid-sentence. Cash or debit only, which tells you everything about the priorities here.",
+    "summary": "You're on Bloor West in Little Portugal, pulling up a stool at the bar where you're close enough to watch dough get stretched and pizza peels slide in and out of the oven\u2014the setup is deliberately intimate, you're practically part of the cooking. The pizza has real blistered crust that makes you remember crust matters, and the tiramisu apparently stops conversations mid-sentence. Cash or debit only, which tells you everything about the priorities here.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Bloor West in the heart of Little Portugal, pushing open the door to a compact room where bar seating faces directly into the kitchen. Pull up a stool and you're close enough to watch dough get stretched, pizza peels slide in and out of the oven, and chefs who'll talk you through what they're making. The setup is deliberately intimate—you're not observing the cooking, you're practically part of it.",
+        "body": "You're on Bloor West in the heart of Little Portugal, pushing open the door to a compact room where bar seating faces directly into the kitchen. Pull up a stool and you're close enough to watch dough get stretched, pizza peels slide in and out of the oven, and chefs who'll talk you through what they're making. The setup is deliberately intimate\u2014you're not observing the cooking, you're practically part of it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The pizza here is the kind that makes you remember crust matters—blistered, chewy, with real structure. You'll want the tiramisu, which apparently stops conversations mid-sentence, and whatever pie Max recommends that day (the pesto keeps coming up). Cash or debit only, which tells you everything about the priorities here.",
+        "body": "The pizza here is the kind that makes you remember crust matters\u2014blistered, chewy, with real structure. You'll want the tiramisu, which apparently stops conversations mid-sentence, and whatever pie Max recommends that day (the pesto keeps coming up). Cash or debit only, which tells you everything about the priorities here.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Bar Sugo",
-        "body": "📍 Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada"
+        "body": "\ud83d\udccd Bar Sugo\n1279 Bloor St W, Toronto, ON M6H 1N7, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLocal favorite for pizza - Reddit-recommended, not touristy"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nLocal favorite for pizza - Reddit-recommended, not touristy"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://bar.sugotoronto.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: https://bar.sugotoronto.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.8 (656 reviews)\nPrice level: $$\nPhone: (416) 792-1279\nWebsite: https://bar.sugotoronto.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.8 (656 reviews)\nPrice level: $$\nPhone: (416) 792-1279\nWebsite: https://bar.sugotoronto.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1279 Bloor St W, Toronto, ON M6H 1N7, Canada\n\n• walking: 1 hour 29 mins • 6.5 km\n• transit: 44 mins • 7.3 km\n• driving: 21 mins • 6.9 km (traffic: 14 mins)\n• bicycling: 23 mins • 6.8 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (21 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1279 Bloor St W, Toronto, ON M6H 1N7, Canada\n\n\u2022 walking: 1 hour 29 mins \u2022 6.5 km\n\u2022 transit: 44 mins \u2022 7.3 km\n\u2022 driving: 21 mins \u2022 6.9 km (traffic: 14 mins)\n\u2022 bicycling: 23 mins \u2022 6.8 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (21 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Came here on a Sunday afternoon with my teenage grandson. We both LOVED the atmosphere of this place!\nWe sat at the bar and watched the chefs at work. The team was very friendly and offered great recommendations while they cooked!\nPizza was very quick and the tiramisu was to die for! Like really!\n5-stars all around. Make sure you visit next time you are in the area and up for some amazing pizza!\nNote that they only take cash or debit cards. No credit cards.\"\n\n⭐⭐⭐⭐⭐ \"Wow! I love myself a perfect pizza, Max was there to assist us in selecting the perfect pizza. We also ordered the pesto pasta and a special spicy parm. It all was so good almost wanted to chew on my fingers after from the flavours. We had also ordered the calamari which came with Deep fried peppers that made the flavours all come together. Excellent food compliments to the chef! The environment was warm and cozy although it was ice cold outside there were no drafts or chilly air very comfortable! We will be back very soon to enjoy more!\"\n\n⭐⭐⭐⭐⭐ \"My fiancé and I had been wanting to go to Sugo/Bar Sugo forever and I’m so glad we finally did!\n\nWe were on a waitlist for Sugo and figured we’d call Bar Sugo and ask about a walk-in and they said to come right away so that was amazing. I wanted to try the pizza anyways so was glad to get the chance.\n\nThe servers here are all so friendly it’s actually crazy. Made us feel super welcome and cozy. I don’t know if it was just because it was New Years Eve but everyone seems to love their jobs which is always a good thing.\n\nThe food was as amazing as the service. The best Cesar Salad I’ve ever had! The dressing tastes like something momma would make, with a mound of cheese on top.\n\nEasily Top 3 pizzas I’ve ever had too. Every bite was full with high quality toppings and amazing flavour! Really cheesy! The garlic dip is incredible as well.\n\nMy fiancé loved her Spaghetti Bolognese and the couple bites I had were super clean and flavourful.\n\nCocktails were tasty and made with care, always nice when our favs are on the menu.\n\nDEFINITELY coming back here many more times!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Came here on a Sunday afternoon with my teenage grandson. We both LOVED the atmosphere of this place!\nWe sat at the bar and watched the chefs at work. The team was very friendly and offered great recommendations while they cooked!\nPizza was very quick and the tiramisu was to die for! Like really!\n5-stars all around. Make sure you visit next time you are in the area and up for some amazing pizza!\nNote that they only take cash or debit cards. No credit cards.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Wow! I love myself a perfect pizza, Max was there to assist us in selecting the perfect pizza. We also ordered the pesto pasta and a special spicy parm. It all was so good almost wanted to chew on my fingers after from the flavours. We had also ordered the calamari which came with Deep fried peppers that made the flavours all come together. Excellent food compliments to the chef! The environment was warm and cozy although it was ice cold outside there were no drafts or chilly air very comfortable! We will be back very soon to enjoy more!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"My fianc\u00e9 and I had been wanting to go to Sugo/Bar Sugo forever and I\u2019m so glad we finally did!\n\nWe were on a waitlist for Sugo and figured we\u2019d call Bar Sugo and ask about a walk-in and they said to come right away so that was amazing. I wanted to try the pizza anyways so was glad to get the chance.\n\nThe servers here are all so friendly it\u2019s actually crazy. Made us feel super welcome and cozy. I don\u2019t know if it was just because it was New Years Eve but everyone seems to love their jobs which is always a good thing.\n\nThe food was as amazing as the service. The best Cesar Salad I\u2019ve ever had! The dressing tastes like something momma would make, with a mound of cheese on top.\n\nEasily Top 3 pizzas I\u2019ve ever had too. Every bite was full with high quality toppings and amazing flavour! Really cheesy! The garlic dip is incredible as well.\n\nMy fianc\u00e9 loved her Spaghetti Bolognese and the couple bites I had were super clean and flavourful.\n\nCocktails were tasty and made with care, always nice when our favs are on the menu.\n\nDEFINITELY coming back here many more times!\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "FAMILY STYLE SHARING MENU\n⭐ Group Reservations\n   Available for groups of 5 or more\n\nCLASSIC ITALIAN AMERICAN\n⭐ Wood-Fired Pizza\n   Traditional Italian style",
+        "body": "FAMILY STYLE SHARING MENU\n\u2b50 Group Reservations\n   Available for groups of 5 or more\n\nCLASSIC ITALIAN AMERICAN\n\u2b50 Wood-Fired Pizza\n   Traditional Italian style",
         "sections": [
           {
             "name": "FAMILY STYLE SHARING MENU",
@@ -155,5 +155,6 @@
         "distanceText": "7.3 km"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

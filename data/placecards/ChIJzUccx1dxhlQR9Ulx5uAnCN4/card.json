@@ -13,32 +13,33 @@
     "url": "https://www.reddit.com/r/NiceVancouver/comments/1i5eqg1/7_restaurants_unique_to_vancouver_would/"
   },
   "narrative": {
-    "summary": "Classic French bistro beloved by locals. Reddit's 'real gem' pick for French in Vancouver. Wine bar + bistro + cocktails. 4.6 rating. Exactly John's French bistro pattern — intimate, unfussy, wine-forward. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Classic French bistro beloved by locals. Reddit's 'real gem' pick for French in Vancouver. Wine bar + bistro + cocktails. 4.6 rating. Exactly John's French bistro pattern \u2014 intimate, unfussy, wine-forward. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in East Van, where the neighborhood bistro still means something. Inside, it's intimate without being cramped—a proper wine bar setup with bottles lining the walls, tables close enough that you feel the hum of conversation, warm lighting that makes everything look a little better at 8pm. The room feels lived-in, the kind of place where regulars claim their corner and servers know what you drank last week.",
+        "body": "You're in East Van, where the neighborhood bistro still means something. Inside, it's intimate without being cramped\u2014a proper wine bar setup with bottles lining the walls, tables close enough that you feel the hum of conversation, warm lighting that makes everything look a little better at 8pm. The room feels lived-in, the kind of place where regulars claim their corner and servers know what you drank last week.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Classic French technique without the theatre: escargot done properly, steak frites with a pile of shoestring potatoes, fish like cabillaud cooked just to the edge of doneness. The menu doesn't chase trends—it's the bistro canon executed by someone who knows how to handle seafood and isn't afraid of butter. Mains run the reasonable side of French dining, the kind of pricing that makes you wonder why you'd go anywhere trying harder for less.",
+        "body": "Classic French technique without the theatre: escargot done properly, steak frites with a pile of shoestring potatoes, fish like cabillaud cooked just to the edge of doneness. The menu doesn't chase trends\u2014it's the bistro canon executed by someone who knows how to handle seafood and isn't afraid of butter. Mains run the reasonable side of French dining, the kind of pricing that makes you wonder why you'd go anywhere trying harder for less.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your Tuesday or Wednesday night place when you want wine-forward cooking and a room that lets you actually talk. Skip it if you're looking for a scene—come if you want to eat well without performing about it.",
+        "body": "This is your Tuesday or Wednesday night place when you want wine-forward cooking and a room that lets you actually talk. Skip it if you're looking for a scene\u2014come if you want to eat well without performing about it.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Les Faux Bourgeois is a fabulous French restaurant with a reasonable price tag.\nWe came here for dinner and were impressed with the food and service.\nWe ordered the escargot, the steak frites, the cabillaud (a dish with several kinds of seafood) and a crème brûlée for dessert. Everything was delicious…special kudos to the chef for cooking the fish perfectly. Our waiter was pleasant and attentive.\nCan’t wait to come back again.\"\n\n⭐⭐⭐⭐⭐ \"Les Faux Bourgeois feels like a classic neighborhood French bistro done properly. The atmosphere is warm and intimate, with a cozy charm that makes it ideal for a relaxed dinner where you can actually enjoy conversation without feeling rushed.\n\nThe food is rich, comforting, and confidently traditional. Dishes are well executed, portions are satisfying, and flavors feel deep and familiar in the best way. Nothing feels overly modernized or fussy. It’s clear the focus is on classic technique and consistency rather than trends. Service is friendly and attentive, adding to the overall welcoming feel.\"\n\n⭐⭐⭐⭐ \"A great spot for a special dinner or date night. The steak frites were the star of dinner. Perfectly cooked steak that almost melts in your mouth, paired with crispy, well-seasoned fries and an excellent sauce. The squid appetizer was alright, and the dessert slice was a bit thin but was tart and refreshing. Excellent service and a tasteful atmosphere.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Les Faux Bourgeois is a fabulous French restaurant with a reasonable price tag.\nWe came here for dinner and were impressed with the food and service.\nWe ordered the escargot, the steak frites, the cabillaud (a dish with several kinds of seafood) and a cr\u00e8me br\u00fbl\u00e9e for dessert. Everything was delicious\u2026special kudos to the chef for cooking the fish perfectly. Our waiter was pleasant and attentive.\nCan\u2019t wait to come back again.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Les Faux Bourgeois feels like a classic neighborhood French bistro done properly. The atmosphere is warm and intimate, with a cozy charm that makes it ideal for a relaxed dinner where you can actually enjoy conversation without feeling rushed.\n\nThe food is rich, comforting, and confidently traditional. Dishes are well executed, portions are satisfying, and flavors feel deep and familiar in the best way. Nothing feels overly modernized or fussy. It\u2019s clear the focus is on classic technique and consistency rather than trends. Service is friendly and attentive, adding to the overall welcoming feel.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"A great spot for a special dinner or date night. The steak frites were the star of dinner. Perfectly cooked steak that almost melts in your mouth, paired with crispy, well-seasoned fries and an excellent sauce. The squid appetizer was alright, and the dessert slice was a bit thin but was tart and refreshing. Excellent service and a tasteful atmosphere.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

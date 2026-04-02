@@ -6,7 +6,7 @@
     "name": "Stackt Market",
     "city": "Toronto",
     "address": "Bathurst/Front (28 Bathurst St)",
-    "type": "grocery",
+    "type": "experience",
     "hours": [
       "Monday: Closed",
       "Tuesday: 9:00 AM – 11:00 PM",
@@ -26,5 +26,6 @@
   "narrative": {
     "summary": "Shipping container market — architecture-as-concept. Indie shops, galleries, food vendors in repurposed containers. The structure IS the design statement. 4.2★ (958 reviews).",
     "blocks": []
-  }
+  },
+  "type": "experience"
 }

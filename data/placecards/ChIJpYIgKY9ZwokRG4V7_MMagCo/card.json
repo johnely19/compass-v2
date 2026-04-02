@@ -16,56 +16,56 @@
     "location": "79 Crosby St, New York, NY 10012, USA"
   },
   "narrative": {
-    "summary": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA",
+    "summary": "\ud83d\udccd The Crosby Bar\n79 Crosby St, New York, NY 10012, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the cobblestone stretch of Soho where the boutiques thin out. Inside the Crosby hotel, the bar pulls you past the lobby with its velvet banquettes and those whimsical dog portraits on the walls—greyhounds and terriers rendered like aristocratic ancestors. The light stays dim even at lunch, the kind of place where rosé at 3pm makes perfect sense.",
+        "body": "You're in the cobblestone stretch of Soho where the boutiques thin out. Inside the Crosby hotel, the bar pulls you past the lobby with its velvet banquettes and those whimsical dog portraits on the walls\u2014greyhounds and terriers rendered like aristocratic ancestors. The light stays dim even at lunch, the kind of place where ros\u00e9 at 3pm makes perfect sense.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen riffs on French brasserie standards with enough tweaks to keep you interested—their French onion soup comes spiked with tarragon instead of the usual thyme-heavy approach. Truffle fries arrive properly crisp, and afternoon tea runs the full tiered service without rushing you out the door. Expect $20-30 for appetizers, more if you commit to the full tea spread.",
+        "body": "The kitchen riffs on French brasserie standards with enough tweaks to keep you interested\u2014their French onion soup comes spiked with tarragon instead of the usual thyme-heavy approach. Truffle fries arrive properly crisp, and afternoon tea runs the full tiered service without rushing you out the door. Expect $20-30 for appetizers, more if you commit to the full tea spread.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "The Crosby Bar",
-        "body": "📍 The Crosby Bar\n79 Crosby St, New York, NY 10012, USA"
+        "body": "\ud83d\udccd The Crosby Bar\n79 Crosby St, New York, NY 10012, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nMUST-TRY per John's preferences - relaxed brasserie at Firmdale hotel, great for brunch or cocktails"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nMUST-TRY per John's preferences - relaxed brasserie at Firmdale hotel, great for brunch or cocktails"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (346 reviews)\nPrice level: $$$\nPhone: (646) 929-6307\nWebsite: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.4 (346 reviews)\nPrice level: $$$\nPhone: (646) 929-6307\nWebsite: https://www.firmdalehotels.com/hotels/crosby-street-hotel/restaurant-bar\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 79 Crosby St, New York, NY 10012, USA\n\n• walking: 1 min • 33 ft\n• transit: 1 min • 33 ft\n• driving: 1 min • 33 ft (traffic: 1 min)\n• bicycling: 1 min • 33 ft\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (1 min)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 79 Crosby St, New York, NY 10012, USA\n\n\u2022 walking: 1 min \u2022 33 ft\n\u2022 transit: 1 min \u2022 33 ft\n\u2022 driving: 1 min \u2022 33 ft (traffic: 1 min)\n\u2022 bicycling: 1 min \u2022 33 ft\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (1 min)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Too hotel with a chic and charming bar and dining area. Sat at the bar and had a dedicated server who was on the move to serve his guests. Enjoyed truffle fries, Rose and a non-traditional French onion soup.  It had a hint of tarragon and was delicious. Loved the design with dogs motif through the hotel lobby.\"\n\n⭐⭐⭐⭐⭐ \"I love tea time. I try to search this out whenever I travel. The Crosby did not disappoint. Stunning decor, friendly and attentive wait staff, Central location. Also, they did not rush us out! I did a few afternoon teas during this trip to New York and this was the best experience.\"\n\n⭐⭐⭐⭐⭐ \"Make reservations because it gets very busy. Came here for tea party service and loved it. The sandwiches and desserts were delicious. I had mint tea while my friends had the hot chocolate. Which they both said was thick hot coco. Will come again\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Too hotel with a chic and charming bar and dining area. Sat at the bar and had a dedicated server who was on the move to serve his guests. Enjoyed truffle fries, Rose and a non-traditional French onion soup.  It had a hint of tarragon and was delicious. Loved the design with dogs motif through the hotel lobby.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I love tea time. I try to search this out whenever I travel. The Crosby did not disappoint. Stunning decor, friendly and attentive wait staff, Central location. Also, they did not rush us out! I did a few afternoon teas during this trip to New York and this was the best experience.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Make reservations because it gets very busy. Came here for tea party service and loved it. The sandwiches and desserts were delicious. I had mint tea while my friends had the hot chocolate. Which they both said was thick hot coco. Will come again\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "BREAKFAST\n• Continental Breakfast — $28\n   Your choice of items from the buffet\n• Continental Breakfast with Entrée — $47\n   Buffet items supplemented with an entrée\n⭐ English Breakfast — $34\n   Free range eggs any style, sautéed mushrooms, roasted tomatoes, Cumberland sausage and bacon\n• Vegetarian Breakfast — $30\n   Free range eggs any style, sautéed mushrooms, kale, roasted tomatoes, spinach, zucchini\n\nBEVERAGES\n• Matcha Almond Latte — $12\n• Turmeric Almond Latte — $12\n\nJUICES & SHOTS\n• Detox — $15\n   Kale, spinach, celery, apple\n• Energize — $15\n   Beet, apple, carrot, lemon\n⭐ Immunity — $8\n   Ginger, lemon, cayenne pepper shot",
+        "body": "BREAKFAST\n\u2022 Continental Breakfast \u2014 $28\n   Your choice of items from the buffet\n\u2022 Continental Breakfast with Entr\u00e9e \u2014 $47\n   Buffet items supplemented with an entr\u00e9e\n\u2b50 English Breakfast \u2014 $34\n   Free range eggs any style, saut\u00e9ed mushrooms, roasted tomatoes, Cumberland sausage and bacon\n\u2022 Vegetarian Breakfast \u2014 $30\n   Free range eggs any style, saut\u00e9ed mushrooms, kale, roasted tomatoes, spinach, zucchini\n\nBEVERAGES\n\u2022 Matcha Almond Latte \u2014 $12\n\u2022 Turmeric Almond Latte \u2014 $12\n\nJUICES & SHOTS\n\u2022 Detox \u2014 $15\n   Kale, spinach, celery, apple\n\u2022 Energize \u2014 $15\n   Beet, apple, carrot, lemon\n\u2b50 Immunity \u2014 $8\n   Ginger, lemon, cayenne pepper shot",
         "sections": [
           {
             "name": "BREAKFAST",
@@ -77,21 +77,21 @@
                 "highlight": false
               },
               {
-                "name": "Continental Breakfast with Entrée",
+                "name": "Continental Breakfast with Entr\u00e9e",
                 "price": "$47",
-                "description": "Buffet items supplemented with an entrée",
+                "description": "Buffet items supplemented with an entr\u00e9e",
                 "highlight": false
               },
               {
                 "name": "English Breakfast",
                 "price": "$34",
-                "description": "Free range eggs any style, sautéed mushrooms, roasted tomatoes, Cumberland sausage and bacon",
+                "description": "Free range eggs any style, saut\u00e9ed mushrooms, roasted tomatoes, Cumberland sausage and bacon",
                 "highlight": true
               },
               {
                 "name": "Vegetarian Breakfast",
                 "price": "$30",
-                "description": "Free range eggs any style, sautéed mushrooms, kale, roasted tomatoes, spinach, zucchini",
+                "description": "Free range eggs any style, saut\u00e9ed mushrooms, kale, roasted tomatoes, spinach, zucchini",
                 "highlight": false
               }
             ]
@@ -192,5 +192,6 @@
         "distanceText": "33 ft"
       }
     ]
-  }
+  },
+  "type": "bar"
 }

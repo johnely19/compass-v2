@@ -6,7 +6,7 @@
     "name": "Elte",
     "city": "Toronto",
     "address": "Caledonia / Ronald Ave",
-    "type": "grocery",
+    "type": "shop",
     "hours": [
       "Monday: 9:30 AM – 5:30 PM",
       "Tuesday: 9:30 AM – 5:30 PM",
@@ -28,5 +28,6 @@
   "narrative": {
     "summary": "Toronto design institution—massive showroom with curated European + contemporary lines.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

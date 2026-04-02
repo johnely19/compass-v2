@@ -8,13 +8,13 @@
     "address": "North York (Japanese Canadian Cultural Centre)",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 – 11:00 PM",
+      "Monday: 5:00\u2009\u2013\u200911:00\u202fPM",
       "Tuesday: Closed",
       "Wednesday: Closed",
-      "Thursday: 5:00 – 11:00 PM",
-      "Friday: 5:00 – 11:00 PM",
-      "Saturday: 5:00 – 11:00 PM",
-      "Sunday: 5:00 – 11:00 PM"
+      "Thursday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 5:00\u2009\u2013\u200911:00\u202fPM",
+      "Sunday: 5:00\u2009\u2013\u200911:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 247,
@@ -27,31 +27,31 @@
     "url": "https://www.kaiseki.ca/"
   },
   "narrative": {
-    "summary": "4.9 stars, 247 reviews, $$$$—serious kaiseki in an unlikely North York location. Reservations-only, Mon/Thu-Sun evenings. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
+    "summary": "4.9 stars, 247 reviews, $$$$\u2014serious kaiseki in an unlikely North York location. Reservations-only, Mon/Thu-Sun evenings. Worth a focused stop when John is mapping the next design-conscious neighborhood run.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're driving past the North York suburban sprawl to the Japanese Canadian Cultural Centre, where Hashimoto operates behind a door that feels like a portal shift. Inside, you get your own private tatami room—actual shoji screens, low tables, waitresses in traditional kimono who kneel to explain each course. The light is soft, the pace is ceremonial, and you're somehow in Kyoto while strip malls hum outside.",
+        "body": "You're driving past the North York suburban sprawl to the Japanese Canadian Cultural Centre, where Hashimoto operates behind a door that feels like a portal shift. Inside, you get your own private tatami room\u2014actual shoji screens, low tables, waitresses in traditional kimono who kneel to explain each course. The light is soft, the pace is ceremonial, and you're somehow in Kyoto while strip malls hum outside.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is proper kaiseki—seven to nine courses that follow the seasonal calendar with the kind of precision that makes each dish feel like a small, edible thesis. Expect pristine sashimi cuts, delicate chawanmushi with matsutake if you're lucky, and presentations that involve a lot of ceramic thought and the occasional gold leaf. At $150-200 per person, you're paying for technique and theater in equal measure.",
+        "body": "This is proper kaiseki\u2014seven to nine courses that follow the seasonal calendar with the kind of precision that makes each dish feel like a small, edible thesis. Expect pristine sashimi cuts, delicate chawanmushi with matsutake if you're lucky, and presentations that involve a lot of ceramic thought and the occasional gold leaf. At $150-200 per person, you're paying for technique and theater in equal measure.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"very solid dishes, fresh seasonal ingredients and prepared with care and lot of fancy presentation. i think nothing stood out particularly but it was just a good meal. the room was private and service was really nice. sparkling hojicha was an amazing drink!\"\n\n⭐⭐⭐⭐⭐ \"The restaurant provided private rooms for each group.  The waitresses wear traditional kimono and warmly greeted us by the door and guided us to our room. Then the the seven course meal was served with a detailed explanation of the ingredients used and uniqueness of each dish.  The peace was slow that enabled us to thoroughly savor the dishes.  We also got to meet the chef and had a delightful conversation about the food and his inspiration. We had a wonderful night.\"\n\n⭐⭐⭐⭐⭐ \"We celebrated my husband’s birthday at Kaiseki Yu-zen Hashimoto, and every course felt like a work of art. This autumn dish especially left us speechless — a breathtaking presentation of seasonal flavors that looked too beautiful to eat. Each bite captured the essence of fall in Japan.\n\nThe evening was made even more special by the warm and graceful service from Kei-san and Mao-san, who made us feel truly cared for. An unforgettable dining experience — elegant, heartfelt, and deeply memorable. 🍁🍶🎂\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"very solid dishes, fresh seasonal ingredients and prepared with care and lot of fancy presentation. i think nothing stood out particularly but it was just a good meal. the room was private and service was really nice. sparkling hojicha was an amazing drink!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"The restaurant provided private rooms for each group.  The waitresses wear traditional kimono and warmly greeted us by the door and guided us to our room. Then the the seven course meal was served with a detailed explanation of the ingredients used and uniqueness of each dish.  The peace was slow that enabled us to thoroughly savor the dishes.  We also got to meet the chef and had a delightful conversation about the food and his inspiration. We had a wonderful night.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We celebrated my husband\u2019s birthday at Kaiseki Yu-zen Hashimoto, and every course felt like a work of art. This autumn dish especially left us speechless \u2014 a breathtaking presentation of seasonal flavors that looked too beautiful to eat. Each bite captured the essence of fall in Japan.\n\nThe evening was made even more special by the warm and graceful service from Kei-san and Mao-san, who made us feel truly cared for. An unforgettable dining experience \u2014 elegant, heartfelt, and deeply memorable. \ud83c\udf41\ud83c\udf76\ud83c\udf82\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "KAISEKI OMAKASE\n⭐ Kaiseki Yu-zen Hashimoto — $350\n   An authentic kaiseki experience featuring a multi-course tasting menu",
+        "body": "KAISEKI OMAKASE\n\u2b50 Kaiseki Yu-zen Hashimoto \u2014 $350\n   An authentic kaiseki experience featuring a multi-course tasting menu",
         "sections": [
           {
             "name": "KAISEKI OMAKASE",
@@ -67,5 +67,6 @@
         ]
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

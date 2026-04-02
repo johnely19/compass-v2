@@ -15,61 +15,61 @@
     "user_rating_count": 485,
     "location": "TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada",
     "hours": [
-      "Monday: 7:00 AM – 9:00 PM",
-      "Tuesday: 7:00 AM – 9:00 PM",
-      "Wednesday: 7:00 AM – 9:00 PM",
-      "Thursday: 7:00 AM – 9:00 PM",
-      "Friday: 7:00 AM – 9:00 PM",
+      "Monday: 7:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 7:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 7:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 7:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 7:00\u202fAM\u2009\u2013\u20099:00\u202fPM",
       "Saturday: Closed",
       "Sunday: Closed"
     ],
     "review_count": 488
   },
   "narrative": {
-    "summary": "You're taking the express elevator up 36 floors from the TD South Tower, stepping out to floor-to-ceiling windows that frame the entire Toronto skyline—at night the city lights reflect off your wine glass before you even taste what's in it. The kitchen leans into refined Canadian ingredients: seared scallops with brown butter, duck breast, the kind of polish that comes with a $50-80 dinner price point. The food can be mixed—some plates shine, others need salt—so trust the short rib.",
+    "summary": "You're taking the express elevator up 36 floors from the TD South Tower, stepping out to floor-to-ceiling windows that frame the entire Toronto skyline\u2014at night the city lights reflect off your wine glass before you even taste what's in it. The kitchen leans into refined Canadian ingredients: seared scallops with brown butter, duck breast, the kind of polish that comes with a $50-80 dinner price point. The food can be mixed\u2014some plates shine, others need salt\u2014so trust the short rib.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You take the express elevator up 36 floors from the Financial District's TD South Tower, stepping out to floor-to-ceiling windows that frame the entire Toronto skyline. The dining room feels suspended—glass on three sides, tables spaced wide enough that the view becomes part of your table setting. At night, the city lights reflect off your wine glass before you even taste what's in it.",
+        "body": "You take the express elevator up 36 floors from the Financial District's TD South Tower, stepping out to floor-to-ceiling windows that frame the entire Toronto skyline. The dining room feels suspended\u2014glass on three sides, tables spaced wide enough that the view becomes part of your table setting. At night, the city lights reflect off your wine glass before you even taste what's in it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen leans into refined Canadian ingredients with the kind of precision you'd expect at this altitude—both literal and figurative. You're looking at dishes that might include seared scallops with brown butter or duck breast with seasonal accompaniments, executed with the polish that comes with a $50-80 per person dinner price point. The wine list matches the view: deep, expensive, worth it if you're celebrating.",
+        "body": "The kitchen leans into refined Canadian ingredients with the kind of precision you'd expect at this altitude\u2014both literal and figurative. You're looking at dishes that might include seared scallops with brown butter or duck breast with seasonal accompaniments, executed with the polish that comes with a $50-80 per person dinner price point. The wine list matches the view: deep, expensive, worth it if you're celebrating.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Stratus",
-        "body": "📍 Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"
+        "body": "\ud83d\udccd Stratus\nTD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSky-high dining and lounge experience in Toronto's Financial District, perched on the 36th floor with city views."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSky-high dining and lounge experience in Toronto's Financial District, perched on the 36th floor with city views."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nContemporary fine-dining and cocktail lounge experience.\nMenu link: http://www.stratusrestaurant.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nContemporary fine-dining and cocktail lounge experience.\nMenu link: http://www.stratusrestaurant.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (485 reviews)\nPrice level: $$$\nPhone: (416) 865-1924\nWebsite: http://www.stratusrestaurant.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.4 (485 reviews)\nPrice level: $$$\nPhone: (416) 865-1924\nWebsite: http://www.stratusrestaurant.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada\n\n• walking: 1 hour 7 mins • 5.0 km\n• transit: 21 mins • 5.5 km\n• driving: 22 mins • 5.9 km (traffic: 16 mins)\n• bicycling: 19 mins • 5.2 km\n\nBest modality: TRANSIT ⭐\nWhy: Transit is close to driving time (21 mins vs 22 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: TD South Tower, 79 Wellington St W tower 36th floor, Toronto, ON M5K 1J5, Canada\n\n\u2022 walking: 1 hour 7 mins \u2022 5.0 km\n\u2022 transit: 21 mins \u2022 5.5 km\n\u2022 driving: 22 mins \u2022 5.9 km (traffic: 16 mins)\n\u2022 bicycling: 19 mins \u2022 5.2 km\n\nBest modality: TRANSIT \u2b50\nWhy: Transit is close to driving time (21 mins vs 22 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Arrived late for a birthday Jan 28th reso before seeing a play. The host was gracious about seating us. Our server was amazing - can't remember his name but he was from out East. So friendly and lovely. Food was good and the best birthday treat was they dropped off 2 glasses of prosecco and a card signed by the staff. We felt so well treated and welcomed by all the staff. The view is amazing. You should all go.\"\n\n⭐⭐⭐⭐⭐ \"Stratus is truly a standout high-end restaurant in Toronto. The service here is unlike any other; the staff go above and beyond, and the level of customer care is worth every penny. The experience and the incredible skyscraper views alone are enough to make me want to return.\n\nAs for the food, my experience was mixed. I ordered the albacore tuna bowl, and unfortunately the tuna didn’t feel very fresh and didn’t sit well with me afterward. However, my friend had the short rib and said it was amazing, so it may have just been an off plate for me that day.\n\nEven so, I would absolutely go back for the exceptional service and to try something different. It is rare to find a place where the servers make you feel so welcome, and Stratus definitely did not miss in that regard. The atmosphere and views make it a memorable spot worth revisiting.\"\n\n⭐⭐⭐⭐ \"Came here for a group event and want to first point out the atmosphere, view, and services were exceptional. Beautiful city view especially during the sunset and evening. The food, however, was a bit more on the mediocre side. The salad and salmon lacked the flavors I was expecting. The braised short rib, though, was really good. At the start, it was a bit on the bland side, but with a little bit of salt the flavor were significantly elevated. The texture was amazing that it simply melts in your mouth. It was definitely the highlight dish of the evening. The crème brûlée was rather sour, but quickly acquired to be rather tasty. We had an open bar which was great, but the alcohol felt diluted. Overall, great experience and still a wonderful restaurant.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Arrived late for a birthday Jan 28th reso before seeing a play. The host was gracious about seating us. Our server was amazing - can't remember his name but he was from out East. So friendly and lovely. Food was good and the best birthday treat was they dropped off 2 glasses of prosecco and a card signed by the staff. We felt so well treated and welcomed by all the staff. The view is amazing. You should all go.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Stratus is truly a standout high-end restaurant in Toronto. The service here is unlike any other; the staff go above and beyond, and the level of customer care is worth every penny. The experience and the incredible skyscraper views alone are enough to make me want to return.\n\nAs for the food, my experience was mixed. I ordered the albacore tuna bowl, and unfortunately the tuna didn\u2019t feel very fresh and didn\u2019t sit well with me afterward. However, my friend had the short rib and said it was amazing, so it may have just been an off plate for me that day.\n\nEven so, I would absolutely go back for the exceptional service and to try something different. It is rare to find a place where the servers make you feel so welcome, and Stratus definitely did not miss in that regard. The atmosphere and views make it a memorable spot worth revisiting.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Came here for a group event and want to first point out the atmosphere, view, and services were exceptional. Beautiful city view especially during the sunset and evening. The food, however, was a bit more on the mediocre side. The salad and salmon lacked the flavors I was expecting. The braised short rib, though, was really good. At the start, it was a bit on the bland side, but with a little bit of salt the flavor were significantly elevated. The texture was amazing that it simply melts in your mouth. It was definitely the highlight dish of the evening. The cr\u00e8me br\u00fbl\u00e9e was rather sour, but quickly acquired to be rather tasty. We had an open bar which was great, but the alcohol felt diluted. Overall, great experience and still a wonderful restaurant.\""
       },
       {
         "id": "block-menu",
@@ -157,5 +157,6 @@
         "distanceText": "5.5 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

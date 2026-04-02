@@ -14,13 +14,13 @@
     "phone": "(604) 567-5888",
     "website": "https://sahaeatery.ca/",
     "hours": [
-      "Monday: 11:30 AM – 8:00 PM",
-      "Tuesday: 11:30 AM – 8:00 PM",
-      "Wednesday: 11:30 AM – 8:00 PM",
-      "Thursday: 11:30 AM – 8:00 PM",
-      "Friday: 11:30 AM – 9:00 PM",
-      "Saturday: 11:30 AM – 9:00 PM",
-      "Sunday: 11:30 AM – 8:00 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20098:00\u202fPM"
     ],
     "price_level": 2,
     "rating": 4.5,
@@ -35,13 +35,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You'll find Saha on 2nd Avenue in downtown Squamish, the kind of casual counter-service spot where you order at the front and grab a seat wherever you like. The setup is straightforward—bright overhead lighting, simple tables, and an open kitchen where you can watch the kebabs come together. It's a post-hike, pre-climbing-session kind of place that draws locals who know exactly what they're ordering.",
+        "body": "You'll find Saha on 2nd Avenue in downtown Squamish, the kind of casual counter-service spot where you order at the front and grab a seat wherever you like. The setup is straightforward\u2014bright overhead lighting, simple tables, and an open kitchen where you can watch the kebabs come together. It's a post-hike, pre-climbing-session kind of place that draws locals who know exactly what they're ordering.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Middle Eastern comfort food with crispy-edged falafel, char-grilled kebabs, and lamb sausages that taste like they've been properly seasoned and actually seared. The falafel plates come with tahini and hummus on the side—the kind of textures that make you alternate bites, crunchy exterior against smooth, nutty sauce. Servers will steer you toward the kebabs with hot sauce if you ask, and they're usually right. Plates run around $15-20, wraps less.",
+        "body": "This is Middle Eastern comfort food with crispy-edged falafel, char-grilled kebabs, and lamb sausages that taste like they've been properly seasoned and actually seared. The falafel plates come with tahini and hummus on the side\u2014the kind of textures that make you alternate bites, crunchy exterior against smooth, nutty sauce. Servers will steer you toward the kebabs with hot sauce if you ask, and they're usually right. Plates run around $15-20, wraps less.",
         "id": "block-the-food-1"
       },
       {
@@ -54,13 +54,13 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The server was very friendly and the food was out pretty quickly! I asked the server when I ordered if she thought i should have the wrap or kebab. She suggested the kebab and the hot sauce. I quite enjoyed the different flavor profiles and would definitely go back to try different dishes!\"\n\n⭐⭐⭐⭐ \"We went there on a day where there was strong wind hitting Squamish causing power outage. However, the restaurant was kind enough to let us order and dine-in. We ordered the falafel plate with one lamb sausage add-on. It was a phenomenal plate! The falafel was crispy on the outside, soft and warm on the inside - full of texture🧆lamb sausage was hitting just right! We had the tahini sauce on the side. It perfectly complemented the dish. Hummus was great too! Definite recommend to come if you’re in Squamish.\"\n\n⭐⭐⭐⭐ \"Very good Lebanese inspired food located off the main street in Squamish.  They have a pretty decent selection of dishes for both vegans and non-vegans, and with share plates or \"all-in-one\" plates.\n\nWe chose to order separate bowls (although they are presented on a plate). Beef Kefta, chicken kabob, and veggie. The hummus was super creamy and flavourful and the salad was nice and fresh. The pita bread isn't the home made kind but was nice for dipping in the hummus. Deep fried cauliflower had good deep flavour - it wasn't crispy as there wasn't any coating on it before frying. The chicken kabob was juicy and tender. The beef kefta was cooked in a non-traditional form, like hambuger patties rather than the sausage shape around a grill stick. The beef was pretty good and was juicy as well.\n\nIt's a small place, probably only seats about 20 people inside, and there is normally only one server so expect to wait a bit, although it's not too long.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The server was very friendly and the food was out pretty quickly! I asked the server when I ordered if she thought i should have the wrap or kebab. She suggested the kebab and the hot sauce. I quite enjoyed the different flavor profiles and would definitely go back to try different dishes!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"We went there on a day where there was strong wind hitting Squamish causing power outage. However, the restaurant was kind enough to let us order and dine-in. We ordered the falafel plate with one lamb sausage add-on. It was a phenomenal plate! The falafel was crispy on the outside, soft and warm on the inside - full of texture\ud83e\uddc6lamb sausage was hitting just right! We had the tahini sauce on the side. It perfectly complemented the dish. Hummus was great too! Definite recommend to come if you\u2019re in Squamish.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Very good Lebanese inspired food located off the main street in Squamish.  They have a pretty decent selection of dishes for both vegans and non-vegans, and with share plates or \"all-in-one\" plates.\n\nWe chose to order separate bowls (although they are presented on a plate). Beef Kefta, chicken kabob, and veggie. The hummus was super creamy and flavourful and the salad was nice and fresh. The pita bread isn't the home made kind but was nice for dipping in the hummus. Deep fried cauliflower had good deep flavour - it wasn't crispy as there wasn't any coating on it before frying. The chicken kabob was juicy and tender. The beef kefta was cooked in a non-traditional form, like hambuger patties rather than the sausage shape around a grill stick. The beef was pretty good and was juicy as well.\n\nIt's a small place, probably only seats about 20 people inside, and there is normally only one server so expect to wait a bit, although it's not too long.\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "SPECIALITY TEA SELECTION\n⭐ Saha Mint — $5.50\n   China gunpowder green tea and fresh german peppermint, organic\n• Canadian Breakfast — $5.50\n   Traditional black tea breakfast blend, organic\n• Earl Grey Select — $5.50\n   Smooth black teas bathed in cold-pressed bergamot oil, organic\n• Bourbon Vanilla Rooibos — $5.50\n   Vanilla bean with whiskey/bourbon profile, organic, caffeine free\n• Blood Orange Rooibos — $5.50\n   Fresh squeezed blood oranges and honey notes, organic, caffeine free\n• Sweet Sanctum — $5.50\n   Holy basil & turmeric root with liquorice root and mango notes, caffeine free\n\nCOFFEE\n• French Press Full Pot — $14\n   32oz, great for sharing\n• French Press Half Pot — $8\n   16oz\n\nSODAS & TONICS\n• Speed King Craft Cola — $4\n• Cap't Electro's Intergalactic Root Beer — $4\n• Dare Devil Orange Cream — $4\n• Spark Mouth Ginger Ale — $4\n• Artisanal Dry Tonic — $4\n• Cucumber Mint Tonic — $4\n\nKOMBUCHA & BEVERAGES\n⭐ Whistler Elixir Kombucha Blueberry Ginger — $6\n   355ml\n• Whistler Elixir Kombucha Passionfruit Berry — $6\n   355ml\n• Whistler Elixir Kombucha Herbal Ginger — $6\n   355ml\n• Whistler Elixir Kombucha Strawberry Basil — $6\n   355ml\n• Fresh Juice — $3-$4.50\n   Orange, Mango or Cranberry, Small or Large\n⭐ San Pellegrino — $4-$8\n   330ml or 750ml",
+        "body": "SPECIALITY TEA SELECTION\n\u2b50 Saha Mint \u2014 $5.50\n   China gunpowder green tea and fresh german peppermint, organic\n\u2022 Canadian Breakfast \u2014 $5.50\n   Traditional black tea breakfast blend, organic\n\u2022 Earl Grey Select \u2014 $5.50\n   Smooth black teas bathed in cold-pressed bergamot oil, organic\n\u2022 Bourbon Vanilla Rooibos \u2014 $5.50\n   Vanilla bean with whiskey/bourbon profile, organic, caffeine free\n\u2022 Blood Orange Rooibos \u2014 $5.50\n   Fresh squeezed blood oranges and honey notes, organic, caffeine free\n\u2022 Sweet Sanctum \u2014 $5.50\n   Holy basil & turmeric root with liquorice root and mango notes, caffeine free\n\nCOFFEE\n\u2022 French Press Full Pot \u2014 $14\n   32oz, great for sharing\n\u2022 French Press Half Pot \u2014 $8\n   16oz\n\nSODAS & TONICS\n\u2022 Speed King Craft Cola \u2014 $4\n\u2022 Cap't Electro's Intergalactic Root Beer \u2014 $4\n\u2022 Dare Devil Orange Cream \u2014 $4\n\u2022 Spark Mouth Ginger Ale \u2014 $4\n\u2022 Artisanal Dry Tonic \u2014 $4\n\u2022 Cucumber Mint Tonic \u2014 $4\n\nKOMBUCHA & BEVERAGES\n\u2b50 Whistler Elixir Kombucha Blueberry Ginger \u2014 $6\n   355ml\n\u2022 Whistler Elixir Kombucha Passionfruit Berry \u2014 $6\n   355ml\n\u2022 Whistler Elixir Kombucha Herbal Ginger \u2014 $6\n   355ml\n\u2022 Whistler Elixir Kombucha Strawberry Basil \u2014 $6\n   355ml\n\u2022 Fresh Juice \u2014 $3-$4.50\n   Orange, Mango or Cranberry, Small or Large\n\u2b50 San Pellegrino \u2014 $4-$8\n   330ml or 750ml",
         "sections": [
           {
             "name": "SPECIALITY TEA SELECTION",
@@ -203,5 +203,6 @@
   "discovery": {
     "text": "Discovered by Disco research agent",
     "url": "https://sahaeatery.ca/"
-  }
+  },
+  "type": "restaurant"
 }

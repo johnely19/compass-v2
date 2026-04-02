@@ -8,13 +8,13 @@
     "address": "Dundas West / Little Portugal",
     "type": "bar",
     "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 12:00 AM",
-      "Friday: 5:00 PM – 12:00 AM",
-      "Saturday: 2:00 PM – 12:00 AM",
-      "Sunday: 2:00 PM – 12:00 AM"
+      "Monday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Saturday: 2:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Sunday: 2:00\u202fPM\u2009\u2013\u200912:00\u202fAM"
     ],
     "rating": 5,
     "review_count": 21,
@@ -24,18 +24,18 @@
     "text": "Discovered via blogto Feb 2026"
   },
   "narrative": {
-    "summary": "BRAND NEW (Feb 2026)—replaced beloved spot, already earning fans. 5.0 rating with only 20 reviews = early-adopter energy.",
+    "summary": "BRAND NEW (Feb 2026)\u2014replaced beloved spot, already earning fans. 5.0 rating with only 20 reviews = early-adopter energy.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're at Brock and Dundas in Little Portugal, stepping into the corner spot that just reopened this February. Inside, it's dimmed-down and lived-in already—a proper neighbourhood bar with enough room to breathe but not so much you feel exposed. The music sits at the right volume, and the layout invites you to settle in for more than one drink.",
+        "body": "You're at Brock and Dundas in Little Portugal, stepping into the corner spot that just reopened this February. Inside, it's dimmed-down and lived-in already\u2014a proper neighbourhood bar with enough room to breathe but not so much you feel exposed. The music sits at the right volume, and the layout invites you to settle in for more than one drink.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a bar first, which means you're here for the drinks—craft cocktails that lean seasonal (warm spiced numbers for winter) and a curated lineup of canned beers that goes deeper than the usual lineup. The bartenders know what they're pouring and aren't precious about it. It's the kind of place where the menu changes with the mood, not the algorithm.",
+        "body": "This is a bar first, which means you're here for the drinks\u2014craft cocktails that lean seasonal (warm spiced numbers for winter) and a curated lineup of canned beers that goes deeper than the usual lineup. The bartenders know what they're pouring and aren't precious about it. It's the kind of place where the menu changes with the mood, not the algorithm.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This is the bar I've been looking for.  Strong canned beer selections, great bartenders and mixed drinks.\n\nReally good cozy vibes and good music. I'm thrilled that this corner of Brock and Dundas is coming back!\"\n\n⭐⭐⭐⭐⭐ \"Such a nice space for a drink. Not too loud. Great staff. Warm cocktails for the winter months. What else do you need?!\"\n\n⭐⭐⭐⭐⭐ \"My wife and I spent a cozy evening here watching the snow fall and making new friends. Wonderful hosts and staff, great drinks and the kind of atmosphere you never forget. Can’t wait for my next visit.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This is the bar I've been looking for.  Strong canned beer selections, great bartenders and mixed drinks.\n\nReally good cozy vibes and good music. I'm thrilled that this corner of Brock and Dundas is coming back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Such a nice space for a drink. Not too loud. Great staff. Warm cocktails for the winter months. What else do you need?!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"My wife and I spent a cozy evening here watching the snow fall and making new friends. Wonderful hosts and staff, great drinks and the kind of atmosphere you never forget. Can\u2019t wait for my next visit.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

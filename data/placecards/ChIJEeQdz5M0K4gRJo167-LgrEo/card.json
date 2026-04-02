@@ -15,23 +15,23 @@
     "user_rating_count": 749,
     "location": "520 Bloor St W, Toronto, ON M5S 1Y3, Canada",
     "hours": [
-      "Monday: 11:30 AM – 9:00 PM",
-      "Tuesday: 11:30 AM – 9:00 PM",
-      "Wednesday: 11:30 AM – 9:00 PM",
-      "Thursday: 11:30 AM – 9:00 PM",
-      "Friday: 11:30 AM – 10:00 PM",
-      "Saturday: 11:30 AM – 10:00 PM",
-      "Sunday: 11:30 AM – 8:30 PM"
+      "Monday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Tuesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Wednesday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Thursday: 11:30\u202fAM\u2009\u2013\u20099:00\u202fPM",
+      "Friday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:30\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:30\u202fAM\u2009\u2013\u20098:30\u202fPM"
     ],
     "review_count": 751
   },
   "narrative": {
-    "summary": "You're on the Annex stretch of Bloor West in a counter-style setup that runs fast—order, pay, wait maybe ten minutes while they fry your katsu to order. They're panko-frying pork cutlets stuffed with cheese, then drowning them in Japanese curry or house tonkatsu sauce that cuts through all that molten richness. The cash-and-carry combo runs around $10, includes miso soup, and everything comes out hot from the fryer, not sitting under a heat lamp.",
+    "summary": "You're on the Annex stretch of Bloor West in a counter-style setup that runs fast\u2014order, pay, wait maybe ten minutes while they fry your katsu to order. They're panko-frying pork cutlets stuffed with cheese, then drowning them in Japanese curry or house tonkatsu sauce that cuts through all that molten richness. The cash-and-carry combo runs around $10, includes miso soup, and everything comes out hot from the fryer, not sitting under a heat lamp.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the Annex stretch of Bloor West, where student budget meets quick-service efficiency. The counter-style setup runs fast—order, pay, wait maybe ten minutes while they fry your katsu to order. Steam from the miso soup fogs up the small space on cold nights.",
+        "body": "You're on the Annex stretch of Bloor West, where student budget meets quick-service efficiency. The counter-style setup runs fast\u2014order, pay, wait maybe ten minutes while they fry your katsu to order. Steam from the miso soup fogs up the small space on cold nights.",
         "id": "block-the-space-0"
       },
       {
@@ -43,39 +43,39 @@
       {
         "id": "block-1",
         "title": "Toast On Bloor",
-        "body": "📍 Toast on Bloor\n520 Bloor St W, Toronto, ON M5S 1Y3, Canada"
+        "body": "\ud83d\udccd Toast on Bloor\n520 Bloor St W, Toronto, ON M5S 1Y3, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nLocal-fave breakfast spot - reviewer says 'AMAZING breakfast' and their french toast is exceptional"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nLocal-fave breakfast spot - reviewer says 'AMAZING breakfast' and their french toast is exceptional"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://www.mrtonkatsu.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://www.mrtonkatsu.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.3 (749 reviews)\nPrice level: $$\nPhone: (416) 537-9000\nWebsite: http://www.mrtonkatsu.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.3 (749 reviews)\nPrice level: $$\nPhone: (416) 537-9000\nWebsite: http://www.mrtonkatsu.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 520 Bloor St W, Toronto, ON M5S 1Y3, Canada\n\n• walking: 53 mins • 3.9 km\n• transit: 22 mins • 4.4 km\n• driving: 13 mins • 4.2 km (traffic: 9 mins)\n• bicycling: 13 mins • 4.2 km\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (13 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 520 Bloor St W, Toronto, ON M5S 1Y3, Canada\n\n\u2022 walking: 53 mins \u2022 3.9 km\n\u2022 transit: 22 mins \u2022 4.4 km\n\u2022 driving: 13 mins \u2022 4.2 km (traffic: 9 mins)\n\u2022 bicycling: 13 mins \u2022 4.2 km\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (13 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I got the cash and carry (total was only $10!) to try the place out. The service was fast. The katsu was freshly made, and inside even had cheese! The taste is great, the sauce balances out the richness from the cheese. It also came with a miso soup.\"\n\n⭐⭐⭐⭐ \"I really enjoyed my curry tonkatsu, the pork with cheese in the curry is delicious. And the I loved the miso soup perfect for the cold weather. I wish there were more flavor options.\"\n\n⭐⭐⭐⭐⭐ \"Unpretentious and Utterly Satisfying!\n\nOn a chilly Toronto night, stumbling upon Mr. Tonkatsu was a stroke of luck! This unpretentious spot delivers truly solid bites with zero fuss. As a big fan of Japanese-style curry, I opted for their chicken option, and it absolutely hit the spot. The complexity of the ingredients shone through, yet the presentation remained wonderfully simple – a solid 10 in my book!\n\nI also had a taste of their soba noodles, and wow! They were incredibly rich and flavourful, leaving me already planning a return trip just to try a full order.\n\nThe little touches really elevated the experience. The sweet pickles were an unexpected and delightful treat alongside the curry, and the cabbage with vinegar provided a perfect refreshing balance.\n\nThe staff were remarkably attentive, and the food arrived in what felt like mere seconds! This makes Mr. Tonkatsu an excellent choice for a quick and delicious meal. Can't recommend it enough – especially those tempting soba noodles❣️\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I got the cash and carry (total was only $10!) to try the place out. The service was fast. The katsu was freshly made, and inside even had cheese! The taste is great, the sauce balances out the richness from the cheese. It also came with a miso soup.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"I really enjoyed my curry tonkatsu, the pork with cheese in the curry is delicious. And the I loved the miso soup perfect for the cold weather. I wish there were more flavor options.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Unpretentious and Utterly Satisfying!\n\nOn a chilly Toronto night, stumbling upon Mr. Tonkatsu was a stroke of luck! This unpretentious spot delivers truly solid bites with zero fuss. As a big fan of Japanese-style curry, I opted for their chicken option, and it absolutely hit the spot. The complexity of the ingredients shone through, yet the presentation remained wonderfully simple \u2013 a solid 10 in my book!\n\nI also had a taste of their soba noodles, and wow! They were incredibly rich and flavourful, leaving me already planning a return trip just to try a full order.\n\nThe little touches really elevated the experience. The sweet pickles were an unexpected and delightful treat alongside the curry, and the cabbage with vinegar provided a perfect refreshing balance.\n\nThe staff were remarkably attentive, and the food arrived in what felt like mere seconds! This makes Mr. Tonkatsu an excellent choice for a quick and delicious meal. Can't recommend it enough \u2013 especially those tempting soba noodles\u2763\ufe0f\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "FRIED CHICKEN\n⭐ Crisp Chicken Thigh\n   Korean Style Deep Fried Chicken\n• Karaage Wings\n   Japanese Style Deep Fried Chicken\n• Original Karaage\n   Japanese karaage chicken or spicy crispy chicken in original style\n• Sauced Style Wings\n   Crispy chicken wings or boneless thigh mixed with sweet or spicy sauce\n\nKATSU\n⭐ Original Tonkatsu Set\n   Katsu with homemade fresh panko, served with shredded cabbage, miso soup, steamed rice and homemade tonkatsu sauce\n• Tonkatsu with Soba\n   Tonkatsu set served with soba\n\nDONBURI\n⭐ Katsudon\n   Pork loin katsu, kombu infused soy sauce reduction and poached egg\n• Ebi Don\n   Shrimp, soy sauce reduction and poached egg\n• Karaage Don\n   Boneless chicken thigh, wasabi mayo and soy sauce reduction",
+        "body": "FRIED CHICKEN\n\u2b50 Crisp Chicken Thigh\n   Korean Style Deep Fried Chicken\n\u2022 Karaage Wings\n   Japanese Style Deep Fried Chicken\n\u2022 Original Karaage\n   Japanese karaage chicken or spicy crispy chicken in original style\n\u2022 Sauced Style Wings\n   Crispy chicken wings or boneless thigh mixed with sweet or spicy sauce\n\nKATSU\n\u2b50 Original Tonkatsu Set\n   Katsu with homemade fresh panko, served with shredded cabbage, miso soup, steamed rice and homemade tonkatsu sauce\n\u2022 Tonkatsu with Soba\n   Tonkatsu set served with soba\n\nDONBURI\n\u2b50 Katsudon\n   Pork loin katsu, kombu infused soy sauce reduction and poached egg\n\u2022 Ebi Don\n   Shrimp, soy sauce reduction and poached egg\n\u2022 Karaage Don\n   Boneless chicken thigh, wasabi mayo and soy sauce reduction",
         "sections": [
           {
             "name": "FRIED CHICKEN",
@@ -193,5 +193,6 @@
         "distanceText": "4.4 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

@@ -8,13 +8,13 @@
     "address": "Commercial Way",
     "type": "bar",
     "hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 1379,
@@ -31,27 +31,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Commercial Way, Squamish's industrial strip where climbing gear shops bleed into breweries. Inside, it's all high ceilings, concrete floors, and long communal tables packed with locals in fleece vests—the kind of place where you can hear the fermentation tanks humming behind the bar. The beer list covers an entire wall, and the energy is more Saturday afternoon tailgate than quiet craft pour-over.",
+        "body": "You're on Commercial Way, Squamish's industrial strip where climbing gear shops bleed into breweries. Inside, it's all high ceilings, concrete floors, and long communal tables packed with locals in fleece vests\u2014the kind of place where you can hear the fermentation tanks humming behind the bar. The beer list covers an entire wall, and the energy is more Saturday afternoon tailgate than quiet craft pour-over.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The pizza here is the kind that makes dedicated pizzerias nervous—blistered crusts, quality toppings, the sort of execution that shouldn't be coming out of a brewery kitchen. You'll also find Korean-inflected wings in three rotating flavors, a gochujang chicken burger that regulars order on repeat, and a beet and apple salad that somehow holds its own against the fried stuff. It's gastropub food taken seriously, with most mains landing in the mid-teens.",
+        "body": "The pizza here is the kind that makes dedicated pizzerias nervous\u2014blistered crusts, quality toppings, the sort of execution that shouldn't be coming out of a brewery kitchen. You'll also find Korean-inflected wings in three rotating flavors, a gochujang chicken burger that regulars order on repeat, and a beet and apple salad that somehow holds its own against the fried stuff. It's gastropub food taken seriously, with most mains landing in the mid-teens.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your post-climb, post-ride, post-whatever victory lap—when you want a table full of pizzas, a flight of beers with names that make you laugh, and zero pretension. Come with a group and order too much.",
+        "body": "This is your post-climb, post-ride, post-whatever victory lap\u2014when you want a table full of pizzas, a flight of beers with names that make you laugh, and zero pretension. Come with a group and order too much.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The wings are amazing. We tried all three flavors! All great! And such a variety of beers! And the best names for these beers! Haha. I also had the beet and apple salad which was very refreshing and the fries were perfect and of course you can’t not try the kochjang chicken burger!! Yummy!\"\n\n⭐⭐⭐⭐⭐ \"This place is an absolute embarrassment to dedicated pizza places. How does a brewery go out and make some of the best pizza I’ve had around Vancouver? I have no idea. You need to go here. Get the pizzas. Just get all of them. They’re so good. I don’t drink beer, so I just come for the pizzas, and I’ve been multiple time. They’re really good.\"\n\n⭐⭐⭐⭐ \"Great variety of palettes and portions that seem well-rounded. Only sat down for beverages for the first visit, but overall a great first impression of service and atmosphere. I am primarily a zero proof seeker and got to try A Beer for Ants and the Dentville Ginger Beer. Both complimented each other well and I had to get a second round of the Ginger beer. Well worth the 1h drive away to also pick up limited edition cans. Thanks Backcountry Brewing team for the warm welcome. Looking forward to returning to try the kitchen offerings.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The wings are amazing. We tried all three flavors! All great! And such a variety of beers! And the best names for these beers! Haha. I also had the beet and apple salad which was very refreshing and the fries were perfect and of course you can\u2019t not try the kochjang chicken burger!! Yummy!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"This place is an absolute embarrassment to dedicated pizza places. How does a brewery go out and make some of the best pizza I\u2019ve had around Vancouver? I have no idea. You need to go here. Get the pizzas. Just get all of them. They\u2019re so good. I don\u2019t drink beer, so I just come for the pizzas, and I\u2019ve been multiple time. They\u2019re really good.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Great variety of palettes and portions that seem well-rounded. Only sat down for beverages for the first visit, but overall a great first impression of service and atmosphere. I am primarily a zero proof seeker and got to try A Beer for Ants and the Dentville Ginger Beer. Both complimented each other well and I had to get a second round of the Ginger beer. Well worth the 1h drive away to also pick up limited edition cans. Thanks Backcountry Brewing team for the warm welcome. Looking forward to returning to try the kitchen offerings.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

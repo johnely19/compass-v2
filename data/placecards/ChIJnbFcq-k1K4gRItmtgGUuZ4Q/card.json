@@ -12,32 +12,33 @@
     "text": "Discovered via Sprudge 2025"
   },
   "narrative": {
-    "summary": "You're at the corner of Junction and Bloor West, in a stripped-down roastery with bleacher seating that looks down onto the coffee bar like you're watching theatre. This is one of Toronto's elite light roast specialists—the kind of place pulling competition-level shots and rotating through single origins you won't find at the café down the street. The baristas will walk you through pour-over options with actual enthusiasm, executing each brew with the precision of someone who cares whether you taste the stone fruit or the bergamot.",
+    "summary": "You're at the corner of Junction and Bloor West, in a stripped-down roastery with bleacher seating that looks down onto the coffee bar like you're watching theatre. This is one of Toronto's elite light roast specialists\u2014the kind of place pulling competition-level shots and rotating through single origins you won't find at the caf\u00e9 down the street. The baristas will walk you through pour-over options with actual enthusiasm, executing each brew with the precision of someone who cares whether you taste the stone fruit or the bergamot.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're at the corner of Junction and Bloor West, in a stripped-down roastery with bleacher seating that looks down onto the coffee bar like you're watching theatre. Most of the room is tall bar stools and a few booths, plus shelves stocked with beans and brewing gear for sale. The vibe skews serious about coffee but loose about everything else—people settle in to talk for hours.",
+        "body": "You're at the corner of Junction and Bloor West, in a stripped-down roastery with bleacher seating that looks down onto the coffee bar like you're watching theatre. Most of the room is tall bar stools and a few booths, plus shelves stocked with beans and brewing gear for sale. The vibe skews serious about coffee but loose about everything else\u2014people settle in to talk for hours.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is one of Toronto's elite light roast specialists, the kind of place pulling competition-level shots and rotating through single origins you won't find at the café down the street. The baristas will walk you through pour-over options with actual enthusiasm, executing each brew with the precision of someone who cares whether you taste the stone fruit or the bergamot. Expect to pay café prices, but the pour-overs are surprisingly affordable for this calibre.",
+        "body": "This is one of Toronto's elite light roast specialists, the kind of place pulling competition-level shots and rotating through single origins you won't find at the caf\u00e9 down the street. The baristas will walk you through pour-over options with actual enthusiasm, executing each brew with the precision of someone who cares whether you taste the stone fruit or the bergamot. Expect to pay caf\u00e9 prices, but the pour-overs are surprisingly affordable for this calibre.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "You want to actually taste what elite coffee can do, not just grab fuel on your way somewhere else. Or when you need a place to sit at the bar and work through something—alone or with a friend who also likes to talk through things slowly.",
+        "body": "You want to actually taste what elite coffee can do, not just grab fuel on your way somewhere else. Or when you need a place to sit at the bar and work through something\u2014alone or with a friend who also likes to talk through things slowly.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Their rotating and extensive coffee selection makes me want to come back again! Affordable pourover that is executed with skill and passion.\n\nFriendly staff, chill vibe to sit and chat. Mostly tall bar seating, few seated booths, and interesting bleacher setup overseeing the coffee bar. Roasted beans and coffee brewing gear available to purchase.\n\nFree street parking but for some reason, the entire street was already full at 10am on a Friday.\n\nI really enjoyed the experience and hoping to try more of the coffees there next time.\"\n\n⭐⭐⭐⭐⭐ \"Alex kindly shared his knowledge on the process type.   The Barista lady I interacted with found the exact coffee beans I was looking for and I really enjoyed her service and her kindness she shared with me today :) Thank you SubTextTeam for this blissful moment of Cortado ☕️ and this new Coffee Beans, Toby! Well done 💯\"\n\n⭐⭐⭐⭐⭐ \"We bussed out of our way for this one since we had a good recomendation for it.  You can tell they focus just on good beens and good coffee which is a huge plus in my book.  I think they said they didnt do syrups or fermented (but I may be remembering that wrong).  We ended up getting just a coldbrew which was great with the heat.  They have a variety of good seating, some of which is kind of unusual and bleacher-like but works.  The staff is pretty friendly and knowlegable as well.  It may be a bit out of the way but I think its worth it.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Their rotating and extensive coffee selection makes me want to come back again! Affordable pourover that is executed with skill and passion.\n\nFriendly staff, chill vibe to sit and chat. Mostly tall bar seating, few seated booths, and interesting bleacher setup overseeing the coffee bar. Roasted beans and coffee brewing gear available to purchase.\n\nFree street parking but for some reason, the entire street was already full at 10am on a Friday.\n\nI really enjoyed the experience and hoping to try more of the coffees there next time.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Alex kindly shared his knowledge on the process type.   The Barista lady I interacted with found the exact coffee beans I was looking for and I really enjoyed her service and her kindness she shared with me today :) Thank you SubTextTeam for this blissful moment of Cortado \u2615\ufe0f and this new Coffee Beans, Toby! Well done \ud83d\udcaf\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We bussed out of our way for this one since we had a good recomendation for it.  You can tell they focus just on good beens and good coffee which is a huge plus in my book.  I think they said they didnt do syrups or fermented (but I may be remembering that wrong).  We ended up getting just a coldbrew which was great with the heat.  They have a variety of good seating, some of which is kind of unusual and bleacher-like but works.  The staff is pretty friendly and knowlegable as well.  It may be a bit out of the way but I think its worth it.\""
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

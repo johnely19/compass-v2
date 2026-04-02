@@ -9,12 +9,12 @@
     "type": "cafe",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 10:00 AM – 6:00 PM",
-      "Wednesday: 10:00 AM – 6:00 PM",
-      "Thursday: 9:00 AM – 6:00 PM",
-      "Friday: 9:00 AM – 6:00 PM",
-      "Saturday: 9:00 AM – 6:00 PM",
-      "Sunday: 9:00 AM – 4:00 PM"
+      "Tuesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20094:00\u202fPM"
     ],
     "rating": 5,
     "review_count": 78,
@@ -31,32 +31,32 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Gerrard East in Cabbagetown, walking into what used to be a pop-up and now feels like someone's well-lit living room with a pastry case. It's small—maybe a handful of tables—with that quiet, almost library-like atmosphere where you notice the hiss of the espresso machine and the sound of your own fork on the plate. The kind of place where the person working behind the counter gives you real recommendations because they actually mean it.",
+        "body": "You're on Gerrard East in Cabbagetown, walking into what used to be a pop-up and now feels like someone's well-lit living room with a pastry case. It's small\u2014maybe a handful of tables\u2014with that quiet, almost library-like atmosphere where you notice the hiss of the espresso machine and the sound of your own fork on the plate. The kind of place where the person working behind the counter gives you real recommendations because they actually mean it.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The backbone here is seasonal cookies that rotate based on what's good, but the real draw is the mousse cakes—chocolate, tiramisu, blood orange with white chocolate, mango when they have it. Everything runs on the restrained side of sweet, built to sit next to strong coffee rather than fight it. Selection is intentionally tight, a few pastries and cakes each day rather than a sprawling case, with most items in the $6-9 range.",
+        "body": "The backbone here is seasonal cookies that rotate based on what's good, but the real draw is the mousse cakes\u2014chocolate, tiramisu, blood orange with white chocolate, mango when they have it. Everything runs on the restrained side of sweet, built to sit next to strong coffee rather than fight it. Selection is intentionally tight, a few pastries and cakes each day rather than a sprawling case, with most items in the $6-9 range.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is your snowy Saturday afternoon stop or the place you duck into solo with a book when you need somewhere quiet in the neighbourhood. Skip it if you want options—come when you trust someone else to pick for you.",
+        "body": "This is your snowy Saturday afternoon stop or the place you duck into solo with a book when you need somewhere quiet in the neighbourhood. Skip it if you want options\u2014come when you trust someone else to pick for you.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I visited Bluet Bakery on a beautiful snowy day. The atmosphere of the cafe is quiet and intimate. The staff working was so friendly, giving her recommendations for food and drink (the options looked so good I couldn’t choose!)\n\nI ended up getting the chocolate mousse and the tiramisu with a chai latte and a flat white. The coffee was strong and delicious! The food a perfect level of sweet, complimenting the coffee well.\n\nMy new favourite in the neighborhood!\"\n\n⭐⭐⭐⭐ \"Bluet Bakery caught my attention for the mango mousse cake, but unfortunately it wasn’t available when I visited. I tried the blood orange filling with white chocolate mousse instead, which was quite good and well balanced. That said, the selection of food options was limited, so there wasn’t much variety to try.\"\n\n⭐⭐⭐⭐⭐ \"Had the raspberry cake and it was great! Genuinely way better than the viral ones in the US and LA.\n\nAlso had the honey cake and it was deliciously light with a pleasant sweetness and tang!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I visited Bluet Bakery on a beautiful snowy day. The atmosphere of the cafe is quiet and intimate. The staff working was so friendly, giving her recommendations for food and drink (the options looked so good I couldn\u2019t choose!)\n\nI ended up getting the chocolate mousse and the tiramisu with a chai latte and a flat white. The coffee was strong and delicious! The food a perfect level of sweet, complimenting the coffee well.\n\nMy new favourite in the neighborhood!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Bluet Bakery caught my attention for the mango mousse cake, but unfortunately it wasn\u2019t available when I visited. I tried the blood orange filling with white chocolate mousse instead, which was quite good and well balanced. That said, the selection of food options was limited, so there wasn\u2019t much variety to try.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had the raspberry cake and it was great! Genuinely way better than the viral ones in the US and LA.\n\nAlso had the honey cake and it was deliciously light with a pleasant sweetness and tang!\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "CHUNKY COOKIES\n• Ube Banana Pudding — $5.85\n• Almond Croissant — $5.85\n• Lemon Blueberry — $5.85\n⭐ Pistachio Cream Rose — $5.85\n• Cookies & Cream — $5.85\n• Dubai Chocolate — $5.85\n• Brown Butter Chocolate Chunk Cookie — $3.50\n\nWINTER MOUSSE DESSERTS\n• Vanilla Strawberry Heart — $8.50\n• Orange — $9\n⭐ Coffee Bean — $10\n• Raspberry — $10\n• Mango — $10\n• Horse (Cherry Chocolate) — $10.50\n• Dark Chocolate Raspberry Heart — $9\n\nCLASSIC DESSERTS\n• Tiramisu — $7\n• Carrot Cake Box — $8\n• Banana Pudding — $6\n• Honey Cake — $8\n⭐ Salted Caramel Cheesecake — $9\n• Macarons — $3.80\n• Assorted Cake Slices — $8\n\nBAKED GOODS\n• Quiche Mozzarella & Spinach — $7\n• Quiche Mozzarella & Goat Cheese — $7\n• Cinnamon Buns — $5.50",
+        "body": "CHUNKY COOKIES\n\u2022 Ube Banana Pudding \u2014 $5.85\n\u2022 Almond Croissant \u2014 $5.85\n\u2022 Lemon Blueberry \u2014 $5.85\n\u2b50 Pistachio Cream Rose \u2014 $5.85\n\u2022 Cookies & Cream \u2014 $5.85\n\u2022 Dubai Chocolate \u2014 $5.85\n\u2022 Brown Butter Chocolate Chunk Cookie \u2014 $3.50\n\nWINTER MOUSSE DESSERTS\n\u2022 Vanilla Strawberry Heart \u2014 $8.50\n\u2022 Orange \u2014 $9\n\u2b50 Coffee Bean \u2014 $10\n\u2022 Raspberry \u2014 $10\n\u2022 Mango \u2014 $10\n\u2022 Horse (Cherry Chocolate) \u2014 $10.50\n\u2022 Dark Chocolate Raspberry Heart \u2014 $9\n\nCLASSIC DESSERTS\n\u2022 Tiramisu \u2014 $7\n\u2022 Carrot Cake Box \u2014 $8\n\u2022 Banana Pudding \u2014 $6\n\u2022 Honey Cake \u2014 $8\n\u2b50 Salted Caramel Cheesecake \u2014 $9\n\u2022 Macarons \u2014 $3.80\n\u2022 Assorted Cake Slices \u2014 $8\n\nBAKED GOODS\n\u2022 Quiche Mozzarella & Spinach \u2014 $7\n\u2022 Quiche Mozzarella & Goat Cheese \u2014 $7\n\u2022 Cinnamon Buns \u2014 $5.50",
         "sections": [
           {
             "name": "CHUNKY COOKIES",
@@ -225,5 +225,6 @@
         ]
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

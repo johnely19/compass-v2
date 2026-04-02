@@ -9,12 +9,12 @@
     "type": "restaurant",
     "hours": [
       "Monday: Closed",
-      "Tuesday: 9:00 AM – 3:00 PM",
-      "Wednesday: 9:00 AM – 3:00 PM",
-      "Thursday: 9:00 AM – 3:00 PM",
-      "Friday: 9:00 AM – 3:00 PM",
-      "Saturday: 9:00 AM – 3:00 PM",
-      "Sunday: 9:00 AM – 3:00 PM"
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20093:00\u202fPM"
     ],
     "rating": 4.9,
     "review_count": 69,
@@ -24,18 +24,18 @@
     "text": "blogto.com"
   },
   "narrative": {
-    "summary": "Brand-new breakfast sandwich shop, open 2 weeks, already has evangelical fanbase and lines. Middle Eastern-inflected sandwiches, just steps from Bathurst station. 4.8★ (60 reviews). Tue-Sun 9am-3pm. Worth a deliberate stop for John’s design/architecture/art/food radar.",
+    "summary": "Brand-new breakfast sandwich shop, open 2 weeks, already has evangelical fanbase and lines. Middle Eastern-inflected sandwiches, just steps from Bathurst station. 4.8\u2605 (60 reviews). Tue-Sun 9am-3pm. Worth a deliberate stop for John\u2019s design/architecture/art/food radar.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're steps from Bathurst station, mid-Annex, in a small takeout counter that's only been open two weeks but already draws morning lines. The owner works behind a tight galley setup where you can watch him press dough and crack eggs — this is counter service, a few stools maybe, the kind of place where the architecture is the ritual of assembly. It's spare and functional, all attention on the flatbread baking in real time.",
+        "body": "You're steps from Bathurst station, mid-Annex, in a small takeout counter that's only been open two weeks but already draws morning lines. The owner works behind a tight galley setup where you can watch him press dough and crack eggs \u2014 this is counter service, a few stools maybe, the kind of place where the architecture is the ritual of assembly. It's spare and functional, all attention on the flatbread baking in real time.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Palestinian breakfast sandwiches built on flatbread that gets baked fresh for every order — you're not eating yesterday's pita. The za'atar & egg and foole & egg are the early hits, Middle Eastern pantry staples layered warm and runny like a flatbread pizza that folds. There are solid veggie and vegan options, which is rare for breakfast sandwiches that actually satisfy, and everything hovers around $8-12. The menu is tight, the flavour is not.",
+        "body": "Palestinian breakfast sandwiches built on flatbread that gets baked fresh for every order \u2014 you're not eating yesterday's pita. The za'atar & egg and foole & egg are the early hits, Middle Eastern pantry staples layered warm and runny like a flatbread pizza that folds. There are solid veggie and vegan options, which is rare for breakfast sandwiches that actually satisfy, and everything hovers around $8-12. The menu is tight, the flavour is not.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Delicious new breakfast spot we stumbled into this morning. Our group got the za’atar & egg, foole & egg, and the egg & cheese and they were all a 10/10. Super flavourful and hearty. The owner is extremely sweet and personable. Will definitely be back!\"\n\n⭐⭐⭐⭐⭐ \"My new favourite sandwich shop! Love the veggie/vegan friendly options (so rare to find a good veggie breakfast!! And at such a great price??) The owner is so sweet and kind, and clearly has put a lot of love into the space and the food he makes. PLUS THE BREAD IS BAKED FRESH EVERY SANDWICH.  Can’t wait to go back!\"\n\n⭐⭐⭐⭐⭐ \"Takeout shop across from Bathurst subway station that sells Palestinian inspired breakfast sandwiches. The sandwiches are assembled like a flatbread pizza with the bread baked fresh at the time of ordering (takes about 2 mins) and then folded over into a sandwich. The smell of freshly baked bread fills the air, wrapping itself around you like a mother’s warm embrace.\n\nI got the egg and cheese sandwich, which had arugula and some sort of green sauce on it. The flavours were fresh and bright and delicious. I finished the sandwich feeling full, but not bloated or ashamed.\n\nGuy who runs the place was friendly and seemed to take a lot of pride in his shop, which was clean and nicely decorated. Makann is the kind of independent shop Toronto needs more of, and which feels good supporting.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Delicious new breakfast spot we stumbled into this morning. Our group got the za\u2019atar & egg, foole & egg, and the egg & cheese and they were all a 10/10. Super flavourful and hearty. The owner is extremely sweet and personable. Will definitely be back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"My new favourite sandwich shop! Love the veggie/vegan friendly options (so rare to find a good veggie breakfast!! And at such a great price??) The owner is so sweet and kind, and clearly has put a lot of love into the space and the food he makes. PLUS THE BREAD IS BAKED FRESH EVERY SANDWICH.  Can\u2019t wait to go back!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Takeout shop across from Bathurst subway station that sells Palestinian inspired breakfast sandwiches. The sandwiches are assembled like a flatbread pizza with the bread baked fresh at the time of ordering (takes about 2 mins) and then folded over into a sandwich. The smell of freshly baked bread fills the air, wrapping itself around you like a mother\u2019s warm embrace.\n\nI got the egg and cheese sandwich, which had arugula and some sort of green sauce on it. The flavours were fresh and bright and delicious. I finished the sandwich feeling full, but not bloated or ashamed.\n\nGuy who runs the place was friendly and seemed to take a lot of pride in his shop, which was clean and nicely decorated. Makann is the kind of independent shop Toronto needs more of, and which feels good supporting.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

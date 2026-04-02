@@ -3,7 +3,7 @@
   "source": "disco-sync",
   "identity": {
     "place_id": "ChIJPTR3fUg0K4gRGH1cEOzq6TM",
-    "name": "MOCA — Jeff Wall: Photographs 1984–2023",
+    "name": "MOCA \u2014 Jeff Wall: Photographs 1984\u20132023",
     "city": "Toronto",
     "address": "Junction Triangle (158 Sterling Rd)",
     "type": "gallery"
@@ -12,7 +12,8 @@
     "text": "Discovered via moca.ca"
   },
   "narrative": {
-    "summary": "Canada's most important living photographer. First major Canadian show in 25+ years. All 3 floors. CLOSES MARCH 22 — 5 days left. 3.9★ (1477 reviews).",
+    "summary": "Canada's most important living photographer. First major Canadian show in 25+ years. All 3 floors. CLOSES MARCH 22 \u2014 5 days left. 3.9\u2605 (1477 reviews).",
     "blocks": []
-  }
+  },
+  "type": "gallery"
 }

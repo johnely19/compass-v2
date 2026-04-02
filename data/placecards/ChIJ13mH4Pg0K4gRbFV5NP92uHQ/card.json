@@ -8,12 +8,12 @@
     "address": "Queen West / Lakeview Ave",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:00 PM – 12:00 AM",
-      "Tuesday: 5:00 PM – 12:00 AM",
-      "Wednesday: 5:00 PM – 12:00 AM",
-      "Thursday: 5:00 PM – 12:00 AM",
-      "Friday: 6:00 PM – 2:00 AM",
-      "Saturday: 6:00 PM – 2:00 AM",
+      "Monday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Tuesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Wednesday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Thursday: 5:00\u202fPM\u2009\u2013\u200912:00\u202fAM",
+      "Friday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
+      "Saturday: 6:00\u202fPM\u2009\u2013\u20092:00\u202fAM",
       "Sunday: Closed"
     ],
     "rating": 4.7,
@@ -30,13 +30,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on the western stretch of Queen, where the storefronts thin out past Roncesvalles. Inside, it's dimly lit with dark wood tables and a compact bar—tight quarters that lean into the late-night izakaya vibe rather than fight it. The energy skews louder as the night goes on, soundtracked by whatever's playing through the speakers and the clatter from the open kitchen.",
+        "body": "You're on the western stretch of Queen, where the storefronts thin out past Roncesvalles. Inside, it's dimly lit with dark wood tables and a compact bar\u2014tight quarters that lean into the late-night izakaya vibe rather than fight it. The energy skews louder as the night goes on, soundtracked by whatever's playing through the speakers and the clatter from the open kitchen.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen's helmed by ex-Momofuku cooks who know how to build flavour without overthinking it. You're here for small plates that come out fast and hit hard—the moto bun stuffed with Japanese curry is a sleeper favourite, rich and sloppy in the best way—plus late-night ramen when you need something restorative around midnight. Portions vary wildly, so you can graze on three plates or commit to five and leave overfed. Expect to spend around $15-25 per dish, with drinks from the Seoul Shakers crew backing it all up.",
+        "body": "The kitchen's helmed by ex-Momofuku cooks who know how to build flavour without overthinking it. You're here for small plates that come out fast and hit hard\u2014the moto bun stuffed with Japanese curry is a sleeper favourite, rich and sloppy in the best way\u2014plus late-night ramen when you need something restorative around midnight. Portions vary wildly, so you can graze on three plates or commit to five and leave overfed. Expect to spend around $15-25 per dish, with drinks from the Seoul Shakers crew backing it all up.",
         "id": "block-the-food-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"Had an amazing experience here. It felt like a mini tasting experience. We shared 5 plates between the two of us and it was a lot of food and it all tasted great. Creativity was popping in the dishes and the presentation. Very cool vibes and atmosphere too. Good drinks selection. Prices are ok for what you get. You can go high or low portions vary but you will be satisfied regardless I think.\"\n\n⭐⭐⭐⭐⭐ \"what an impressive place and honestly not surprising given it’s the same owners as seoul shakers and shakers club. drinks were amazing. food was incredible. i especially loved the moto bun - it’s basically japanese curry in a bun, super filling and flavourful. the only thing i wasn’t a fan of was the eggplant but everything else was really good. i’ll definitely be going back!\n\ni would recommend getting there before they open because there will definitely be a wait. the inside is small and cozy which means seating is limited\"\n\n⭐⭐⭐⭐⭐ \"Went here last night with my partner and was insanely impressed. The atmosphere was cozy and intimate. The staff were extremely kind and helpful, and the food was sooo delicious. We ordered oysters, the tofu, steak, the moto bun, and the miso ice cream at the end which i highly recommend. All were a decent portion for the price and were extremely tasteful in both presentation and flavour:) 10/10\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"Had an amazing experience here. It felt like a mini tasting experience. We shared 5 plates between the two of us and it was a lot of food and it all tasted great. Creativity was popping in the dishes and the presentation. Very cool vibes and atmosphere too. Good drinks selection. Prices are ok for what you get. You can go high or low portions vary but you will be satisfied regardless I think.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"what an impressive place and honestly not surprising given it\u2019s the same owners as seoul shakers and shakers club. drinks were amazing. food was incredible. i especially loved the moto bun - it\u2019s basically japanese curry in a bun, super filling and flavourful. the only thing i wasn\u2019t a fan of was the eggplant but everything else was really good. i\u2019ll definitely be going back!\n\ni would recommend getting there before they open because there will definitely be a wait. the inside is small and cozy which means seating is limited\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Went here last night with my partner and was insanely impressed. The atmosphere was cozy and intimate. The staff were extremely kind and helpful, and the food was sooo delicious. We ordered oysters, the tofu, steak, the moto bun, and the miso ice cream at the end which i highly recommend. All were a decent portion for the price and were extremely tasteful in both presentation and flavour:) 10/10\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

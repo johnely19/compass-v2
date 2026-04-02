@@ -2,7 +2,8 @@
   "place_id": "ChIJc_5HvUX_0YURuNKrxLPQKEU",
   "identity": {
     "name": "Lardo",
-    "tagline": "All-day Mediterranean caf\u00e9 in Condesa"
+    "tagline": "All-day Mediterranean caf\u00e9 in Condesa",
+    "type": "restaurant"
   },
   "location": {
     "city": "Mexico City",
@@ -67,5 +68,6 @@
       "path": "/data/placecards/ChIJc_5HvUX_0YURuNKrxLPQKEU/images/map.png",
       "caption": "Map view"
     }
-  ]
+  ],
+  "type": "restaurant"
 }

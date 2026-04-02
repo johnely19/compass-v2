@@ -8,11 +8,11 @@
     "address": "Annex/Bedford",
     "type": "bar",
     "hours": [
-      "Monday: 9:00 AM – 5:00 PM",
-      "Tuesday: 9:00 AM – 5:00 PM",
-      "Wednesday: 9:00 AM – 5:00 PM",
-      "Thursday: 9:00 AM – 5:00 PM",
-      "Friday: 9:00 AM – 5:00 PM",
+      "Monday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
       "Saturday: Closed",
       "Sunday: Closed"
     ],
@@ -25,32 +25,33 @@
     "text": "Discovered via designerswalk.com"
   },
   "narrative": {
-    "summary": "You're in the Annex between Dupont and Davenport, wandering through a sprawling five-building complex of fabric showrooms—Kravet's velvets, Lee Jofa's wallpapers—until you hit Le Paradis, the French café hidden inside with bistro chairs and chandeliers you can actually order. The traditional French menu runs made in-house: pâté de campagne, duck confit, steak frites with proper shallot butter, and prices that are shockingly low (most mains under $25). This is weekday lunch when you want to feel like an adult with taste but don't want to spend $60—the designers clear out by 5:30.",
+    "summary": "You're in the Annex between Dupont and Davenport, wandering through a sprawling five-building complex of fabric showrooms\u2014Kravet's velvets, Lee Jofa's wallpapers\u2014until you hit Le Paradis, the French caf\u00e9 hidden inside with bistro chairs and chandeliers you can actually order. The traditional French menu runs made in-house: p\u00e2t\u00e9 de campagne, duck confit, steak frites with proper shallot butter, and prices that are shockingly low (most mains under $25). This is weekday lunch when you want to feel like an adult with taste but don't want to spend $60\u2014the designers clear out by 5:30.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "Tucked in the Annex between Dupont and Davenport, you'll find this sprawling five-building complex of fabric showrooms and design studios—Kravet's velvets, Lee Jofa's wallpapers, Primavera's textiles spread across 20+ trade rooms. Wander through bolts of linen and leather samples until you hit Le Paradis, the French café hidden inside, where bistro chairs and white tablecloths sit surrounded by chandeliers you can actually order. It feels like eating lunch inside a very elegant hardware store for people who upholster sofas.",
+        "body": "Tucked in the Annex between Dupont and Davenport, you'll find this sprawling five-building complex of fabric showrooms and design studios\u2014Kravet's velvets, Lee Jofa's wallpapers, Primavera's textiles spread across 20+ trade rooms. Wander through bolts of linen and leather samples until you hit Le Paradis, the French caf\u00e9 hidden inside, where bistro chairs and white tablecloths sit surrounded by chandeliers you can actually order. It feels like eating lunch inside a very elegant hardware store for people who upholster sofas.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "Le Paradis runs a tight traditional French menu—think pâté de campagne, duck confit, steak frites with proper shallot butter. Everything's made in-house, from the terrines to the pastry, and the prices sit shockingly low for what you're getting (most mains under $25). It's the kind of cooking that doesn't announce itself, just shows up correct: a proper beurre blanc, a tart crust that shatters, a cassoulet that tastes like someone's grand-mère is back there. You're eating surrounded by interior designers on deadline, which means the food needs to be fast, reliable, and good enough that they keep coming back.",
+        "body": "Le Paradis runs a tight traditional French menu\u2014think p\u00e2t\u00e9 de campagne, duck confit, steak frites with proper shallot butter. Everything's made in-house, from the terrines to the pastry, and the prices sit shockingly low for what you're getting (most mains under $25). It's the kind of cooking that doesn't announce itself, just shows up correct: a proper beurre blanc, a tart crust that shatters, a cassoulet that tastes like someone's grand-m\u00e8re is back there. You're eating surrounded by interior designers on deadline, which means the food needs to be fast, reliable, and good enough that they keep coming back.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Weekday lunch when you need to feel like an adult with taste but don't want to spend $60 on it. Also good for a quiet early dinner before you've got tickets to something—the designers clear out by 5:30.",
+        "body": "Weekday lunch when you need to feel like an adult with taste but don't want to spend $60 on it. Also good for a quiet early dinner before you've got tickets to something\u2014the designers clear out by 5:30.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"The best part about designers walk is Le Paradis. Great traditional French food, all made in house, with the best prices in the city.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"The best part about designers walk is Le Paradis. Great traditional French food, all made in house, with the best prices in the city.\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }

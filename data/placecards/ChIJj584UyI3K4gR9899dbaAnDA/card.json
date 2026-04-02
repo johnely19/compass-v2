@@ -13,18 +13,18 @@
     "url": "https://jazzintoronto.ca/"
   },
   "narrative": {
-    "summary": "Bar/restaurant that frequently hosts jazz/sets; good “music + dinner” anchor west end.",
+    "summary": "Bar/restaurant that frequently hosts jazz/sets; good \u201cmusic + dinner\u201d anchor west end.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in the Junction, where Dundas West still feels like a neighbourhood rather than a scene. Inside, the room doubles as a proper listening venue—there's a stage setup that anchors the space, tables arranged so you can actually watch a set without craning your neck, and lighting that shifts from dinner service to performance mode without feeling gimmicky.",
+        "body": "You're in the Junction, where Dundas West still feels like a neighbourhood rather than a scene. Inside, the room doubles as a proper listening venue\u2014there's a stage setup that anchors the space, tables arranged so you can actually watch a set without craning your neck, and lighting that shifts from dinner service to performance mode without feeling gimmicky.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The kitchen here runs as a support act to the main event, but that doesn't mean it's an afterthought. You're getting shareable plates and mains built for groups who want to eat well without missing the music—think Mediterranean-leaning dishes that don't require a knife and your full attention. The owners, Evrim and Bilge, clearly know how to feed a room, whether it's a regular dinner service or a private event with custom menus and your high school logo at the door.",
+        "body": "The kitchen here runs as a support act to the main event, but that doesn't mean it's an afterthought. You're getting shareable plates and mains built for groups who want to eat well without missing the music\u2014think Mediterranean-leaning dishes that don't require a knife and your full attention. The owners, Evrim and Bilge, clearly know how to feed a room, whether it's a regular dinner service or a private event with custom menus and your high school logo at the door.",
         "id": "block-the-food-1"
       },
       {
@@ -37,8 +37,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I had been to NeuLokal on various occasions before, but I can’t forget my experience last Sunday. While looking for a venue for our high school alumni gathering, I contacted Evrim and Bilge. They prepared a special menu for us, organized the tables and the ambiance, and even went far beyond making us feel at home with thoughtful touches like placing our school’s logo at the entrance and adding beautiful flowers to the tables. I am truly grateful to them.\nThanks to their efforts, the alumni event I organized was a great success, and all 30 attendees left with a smile on their faces. From now on, we already know where we’ll be meeting next. Thank you very much for everything!\"\n\n⭐⭐⭐⭐⭐ \"I celebrated my birthday here and couldn’t have asked for a better experience. The atmosphere was warm and inviting, with amazing Turkish food and live, soft jazzy music by the “Love Pocket Duo.” Every dish was fresh and delicious—the babaganoush was honestly the best I’ve ever had!\"\n\n⭐⭐⭐⭐⭐ \"We went to watch Faith Amour and her band perform. I would love to see other local artists performing there! The entire night was delightful! The food is delicious!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I had been to NeuLokal on various occasions before, but I can\u2019t forget my experience last Sunday. While looking for a venue for our high school alumni gathering, I contacted Evrim and Bilge. They prepared a special menu for us, organized the tables and the ambiance, and even went far beyond making us feel at home with thoughtful touches like placing our school\u2019s logo at the entrance and adding beautiful flowers to the tables. I am truly grateful to them.\nThanks to their efforts, the alumni event I organized was a great success, and all 30 attendees left with a smile on their faces. From now on, we already know where we\u2019ll be meeting next. Thank you very much for everything!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I celebrated my birthday here and couldn\u2019t have asked for a better experience. The atmosphere was warm and inviting, with amazing Turkish food and live, soft jazzy music by the \u201cLove Pocket Duo.\u201d Every dish was fresh and delicious\u2014the babaganoush was honestly the best I\u2019ve ever had!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"We went to watch Faith Amour and her band perform. I would love to see other local artists performing there! The entire night was delightful! The food is delicious!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

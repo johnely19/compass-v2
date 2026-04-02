@@ -15,27 +15,27 @@
     "location": "300 Kent Ave, Brooklyn, NY 11249, USA"
   },
   "narrative": {
-    "summary": "📍 Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA",
+    "summary": "\ud83d\udccd Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA",
     "blocks": [
       {
         "id": "block-1",
         "title": "Domino Square",
-        "body": "📍 Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA"
+        "body": "\ud83d\udccd Domino Square\n300 Kent Ave, Brooklyn, NY 11249, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nNew Williamsburg waterfront gathering plaza with regular programming; strong locals-and-visitors overlap without feeling like a checklist stop."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nNew Williamsburg waterfront gathering plaza with regular programming; strong locals-and-visitors overlap without feeling like a checklist stop."
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (42 reviews)\nPrice level: n/a\nPhone: (718) 989-1003\nWebsite: https://www.therefineryatdomino.com/?utm_source=google&utm_medium=gbp&utm_campaign=listing\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (42 reviews)\nPrice level: n/a\nPhone: (718) 989-1003\nWebsite: https://www.therefineryatdomino.com/?utm_source=google&utm_medium=gbp&utm_campaign=listing\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 300 Kent Ave, Brooklyn, NY 11249, USA\n\n• walking: 55 mins • 2.5 mi\n• transit: 40 mins • 4.0 mi\n• driving: 16 mins • 3.2 mi (traffic: 17 mins)\n• bicycling: 18 mins • 3.1 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (16 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 300 Kent Ave, Brooklyn, NY 11249, USA\n\n\u2022 walking: 55 mins \u2022 2.5 mi\n\u2022 transit: 40 mins \u2022 4.0 mi\n\u2022 driving: 16 mins \u2022 3.2 mi (traffic: 17 mins)\n\u2022 bicycling: 18 mins \u2022 3.1 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (16 mins)"
       }
     ]
   },
@@ -91,5 +91,6 @@
         "distanceText": "4.0 mi"
       }
     ]
-  }
+  },
+  "type": "park"
 }

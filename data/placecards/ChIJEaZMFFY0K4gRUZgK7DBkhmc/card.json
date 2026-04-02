@@ -8,12 +8,12 @@
     "address": "Dundas West / Little Portugal",
     "type": "restaurant",
     "hours": [
-      "Monday: 5:30 – 11:00 PM",
-      "Tuesday: 5:30 – 11:00 PM",
-      "Wednesday: 5:30 – 11:00 PM",
-      "Thursday: 5:30 – 11:00 PM",
-      "Friday: 5:30 – 11:00 PM",
-      "Saturday: 5:30 – 11:00 PM",
+      "Monday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Tuesday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Wednesday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Thursday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Friday: 5:30\u2009\u2013\u200911:00\u202fPM",
+      "Saturday: 5:30\u2009\u2013\u200911:00\u202fPM",
       "Sunday: Closed"
     ],
     "rating": 4.5,
@@ -31,13 +31,13 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're in Little Portugal, west along Dundas past the vintage shops and Portuguese cafés. Inside, it's a compact room with warm wood surfaces and low lighting—the kind of minimal Japanese aesthetic that feels deliberate but not sterile. A small bar anchors one side, a handful of tables fill the rest.",
+        "body": "You're in Little Portugal, west along Dundas past the vintage shops and Portuguese caf\u00e9s. Inside, it's a compact room with warm wood surfaces and low lighting\u2014the kind of minimal Japanese aesthetic that feels deliberate but not sterile. A small bar anchors one side, a handful of tables fill the rest.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The menu skews izakaya-style—small plates meant for sharing, though the portions lean genuinely small. Tokyo toast arrives as thick-cut deep-fried bread topped with taro ice cream and crunchy toasted soba, a textural hit that justifies its cult following. The karaage ribs come tender and well-seasoned, while rotating specials like deep-fried octopus can be hit-or-miss. Shochu highballs pack serious punch, and cocktails like the Kuchibeni (vodka, calpico, strawberry) show more finesse than the food sometimes does.",
+        "body": "The menu skews izakaya-style\u2014small plates meant for sharing, though the portions lean genuinely small. Tokyo toast arrives as thick-cut deep-fried bread topped with taro ice cream and crunchy toasted soba, a textural hit that justifies its cult following. The karaage ribs come tender and well-seasoned, while rotating specials like deep-fried octopus can be hit-or-miss. Shochu highballs pack serious punch, and cocktails like the Kuchibeni (vodka, calpico, strawberry) show more finesse than the food sometimes does.",
         "id": "block-the-food-1"
       },
       {
@@ -50,8 +50,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Cool vibes & drinks with  SMALL plates.\n\nLove the Tokyo toast ($10) deep fried thick toast with two scoops of taro ice cream and some crunchy toasted soba (feels like corn flakes).\n\nTried a few other small plates and I mean they’re SMALL small. Karachi ribs was tender and flavourful. Can’t remember the rest because they were quite forgettable honestly.\nUnfortunately the rotational feature, a deep fried octopus, was kinda soggy and there wasn’t much flavour. The powder on the side also added absolutely nothing to the dish.\n\nDrinks are quite good, I’d recommend the Kuchibeni ($17) with vodka, calico, and strawberry.\nThe Shochu Highballs were quite strong, the oolong one tastes like watery tea spiked with hard alcohol.\n\nI think for 3 people, 3 drinks each, and 3 small dishes, total was about $250. Staff were friendly and attentive! Love the old school artsy Japanese hole in the wall wooden decor aesthetic. Fun place for  drinks and to soak up the vibes, and maybe be a bit more selective on the dishes.\"\n\n⭐⭐⭐⭐⭐ \"Food 5/5\nService 4/5\nVibe 5/5\n\nAnother hidden Japanese style reso GEM in Toronto DT.\n\nI have really high hopes as it was a MISSION to get a reservation, and they did not disappoint. 👏🏻👏🏻👏🏻\n\nMy personal fav was the toast dessert, liver paste with garlic toast and corns tempura. I feel a lot of dishes are a mix of Japanese and chinese culture (but not 100% sure), but everyone was a seller! Love, yum and want more b\n\nOverall 5/5! definitely coming back and trying out more dishes! #eatwithclaw\"\n\n⭐⭐⭐⭐ \"Tapas style Japanese. The corn tempura, beef ribs, pork, sashimi, curry are all winners. Very strong dishes all around with small sharing portions. Exceptional atmosphere really took me back to a cozy Osaka establishment, full of 90s Japanese vinyl and trinkets. Recommended.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Cool vibes & drinks with  SMALL plates.\n\nLove the Tokyo toast ($10) deep fried thick toast with two scoops of taro ice cream and some crunchy toasted soba (feels like corn flakes).\n\nTried a few other small plates and I mean they\u2019re SMALL small. Karachi ribs was tender and flavourful. Can\u2019t remember the rest because they were quite forgettable honestly.\nUnfortunately the rotational feature, a deep fried octopus, was kinda soggy and there wasn\u2019t much flavour. The powder on the side also added absolutely nothing to the dish.\n\nDrinks are quite good, I\u2019d recommend the Kuchibeni ($17) with vodka, calico, and strawberry.\nThe Shochu Highballs were quite strong, the oolong one tastes like watery tea spiked with hard alcohol.\n\nI think for 3 people, 3 drinks each, and 3 small dishes, total was about $250. Staff were friendly and attentive! Love the old school artsy Japanese hole in the wall wooden decor aesthetic. Fun place for  drinks and to soak up the vibes, and maybe be a bit more selective on the dishes.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Food 5/5\nService 4/5\nVibe 5/5\n\nAnother hidden Japanese style reso GEM in Toronto DT.\n\nI have really high hopes as it was a MISSION to get a reservation, and they did not disappoint. \ud83d\udc4f\ud83c\udffb\ud83d\udc4f\ud83c\udffb\ud83d\udc4f\ud83c\udffb\n\nMy personal fav was the toast dessert, liver paste with garlic toast and corns tempura. I feel a lot of dishes are a mix of Japanese and chinese culture (but not 100% sure), but everyone was a seller! Love, yum and want more b\n\nOverall 5/5! definitely coming back and trying out more dishes! #eatwithclaw\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Tapas style Japanese. The corn tempura, beef ribs, pork, sashimi, curry are all winners. Very strong dishes all around with small sharing portions. Exceptional atmosphere really took me back to a cozy Osaka establishment, full of 90s Japanese vinyl and trinkets. Recommended.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

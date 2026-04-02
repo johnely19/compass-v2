@@ -8,13 +8,13 @@
     "address": "254 S 2nd St, Brooklyn, NY 11211",
     "type": "restaurant",
     "hours": [
-      "Monday: 12:00 – 10:00 PM",
-      "Tuesday: 12:00 – 10:00 PM",
-      "Wednesday: 12:00 – 10:00 PM",
-      "Thursday: 12:00 – 10:00 PM",
-      "Friday: 12:00 – 10:00 PM",
-      "Saturday: 12:00 – 10:00 PM",
-      "Sunday: 12:00 – 10:00 PM"
+      "Monday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 12:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 12:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.7,
     "review_count": 5495,
@@ -23,35 +23,36 @@
     "website": "http://www.lindustriebk.com/"
   },
   "discovery": {
-    "text": "Legendary Williamsburg pizza. 4.7★, 5,482 reviews."
+    "text": "Legendary Williamsburg pizza. 4.7\u2605, 5,482 reviews."
   },
   "narrative": {
-    "summary": "You're on a residential stretch of South 2nd Street in Williamsburg where the line snakes out the door most nights, everyone watching slices emerge from the pizza window with blistered crusts and puddles of oil catching the light. The pizza is thin-crust New York-style but with a more delicate hand—sturdy enough to fold but never crunchy, with that ideal chew in the middle. The pesto slice is what people line up for, but don't sleep on the olive oil cake for after.",
+    "summary": "You're on a residential stretch of South 2nd Street in Williamsburg where the line snakes out the door most nights, everyone watching slices emerge from the pizza window with blistered crusts and puddles of oil catching the light. The pizza is thin-crust New York-style but with a more delicate hand\u2014sturdy enough to fold but never crunchy, with that ideal chew in the middle. The pesto slice is what people line up for, but don't sleep on the olive oil cake for after.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a residential stretch of South 2nd Street, where the Williamsburg crowds thin out just enough. Inside, it's a narrow shotgun layout with a few tables along one wall and a counter where you order—nothing precious about it, just white subway tile, overhead pendant lights, and the constant smell of dough hitting a hot oven. The line snakes out the door most nights, everyone watching slices emerge from the pizza window with blistered crusts and puddles of oil catching the light.",
+        "body": "You're on a residential stretch of South 2nd Street, where the Williamsburg crowds thin out just enough. Inside, it's a narrow shotgun layout with a few tables along one wall and a counter where you order\u2014nothing precious about it, just white subway tile, overhead pendant lights, and the constant smell of dough hitting a hot oven. The line snakes out the door most nights, everyone watching slices emerge from the pizza window with blistered crusts and puddles of oil catching the light.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The pizza here is thin-crust, New York-style but with a more delicate hand—sturdy enough to fold but never crunchy, with that ideal chew in the middle. The pesto slice is what people line up for: bright green basil sauce under bubbling mozzarella, finished with ricotta dollops and fresh basil. But the fig and bacon and pesto mushroom hold their own, and if you've got room, the olive oil cake is dense, citrusy, and exactly what you want after all that cheese. Slices run around $5-7.",
+        "body": "The pizza here is thin-crust, New York-style but with a more delicate hand\u2014sturdy enough to fold but never crunchy, with that ideal chew in the middle. The pesto slice is what people line up for: bright green basil sauce under bubbling mozzarella, finished with ricotta dollops and fresh basil. But the fig and bacon and pesto mushroom hold their own, and if you've got room, the olive oil cake is dense, citrusy, and exactly what you want after all that cheese. Slices run around $5-7.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Get there right before they open if you're visiting on a weekend, or come on a weeknight when you want something fast and satisfying without the wait. This is the kind of place that works solo or with a group—order a few slices, stand at the counter, and get out.",
+        "body": "Get there right before they open if you're visiting on a weekend, or come on a weeknight when you want something fast and satisfying without the wait. This is the kind of place that works solo or with a group\u2014order a few slices, stand at the counter, and get out.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"A New York staple that everyone needs to try at least once when visiting. Get in line before opening because this place gets busy fast.\n\nTheir pizza is classic, cooked to perfection with fresh ingredients. The pesto slice is a standout. Bright green sauce layered over bubbling mozzarella, finished with fresh basil and creamy dollops of ricotta. The crust is thin but sturdy, with that perfect balance of crisp bottom and chewy interior.\n\nDefinitely want to come back try more\"\n\n⭐⭐⭐⭐⭐ \"Delicious pizza! I’m very happy we got to try. Super thin crust, but not crunchy, which I love. The toppings were delicious as well. Def recommend the fig and bacon, pepperoni, pesto mushroom and the pesto sausage. Get the olive oil cake as well, it was the perfect dessert.\"\n\n⭐⭐⭐⭐⭐ \"Finally!!!!!\n\nI am usually not the biggest fan of American pizza - it is too greasy, too thick, has a little too much going on but wow this was a perfect slice.\n\na burrata pizza is a must. I got also New Yorker and omg it was so so good. The price are higher but so worth it. And they have beer which is a plus.\n\nPizza with a side of Perroni - incredible!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"A New York staple that everyone needs to try at least once when visiting. Get in line before opening because this place gets busy fast.\n\nTheir pizza is classic, cooked to perfection with fresh ingredients. The pesto slice is a standout. Bright green sauce layered over bubbling mozzarella, finished with fresh basil and creamy dollops of ricotta. The crust is thin but sturdy, with that perfect balance of crisp bottom and chewy interior.\n\nDefinitely want to come back try more\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Delicious pizza! I\u2019m very happy we got to try. Super thin crust, but not crunchy, which I love. The toppings were delicious as well. Def recommend the fig and bacon, pepperoni, pesto mushroom and the pesto sausage. Get the olive oil cake as well, it was the perfect dessert.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Finally!!!!!\n\nI am usually not the biggest fan of American pizza - it is too greasy, too thick, has a little too much going on but wow this was a perfect slice.\n\na burrata pizza is a must. I got also New Yorker and omg it was so so good. The price are higher but so worth it. And they have beer which is a plus.\n\nPizza with a side of Perroni - incredible!\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

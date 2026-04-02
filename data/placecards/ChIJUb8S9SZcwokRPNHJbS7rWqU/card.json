@@ -15,67 +15,67 @@
     "user_rating_count": 743,
     "location": "9-05 Seneca Ave, Ridgewood, NY 11385, USA",
     "hours": [
-      "Monday: 6:00 AM – 4:00 PM",
-      "Tuesday: 6:00 AM – 4:00 PM",
-      "Wednesday: 6:00 AM – 7:00 PM",
-      "Thursday: 6:00 AM – 7:00 PM",
-      "Friday: 6:00 AM – 7:00 PM",
-      "Saturday: 7:00 AM – 7:00 PM",
-      "Sunday: 7:00 AM – 5:00 PM"
+      "Monday: 6:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Tuesday: 6:00\u202fAM\u2009\u2013\u20094:00\u202fPM",
+      "Wednesday: 6:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Thursday: 6:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 6:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Saturday: 7:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Sunday: 7:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "review_count": 749
   },
   "narrative": {
-    "summary": "📍 Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA",
+    "summary": "\ud83d\udccd Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on a quiet Ridgewood corner where Seneca Ave still feels like old Queens—brick buildings, tree cover, locals who've been coming here for decades. Inside, the bakery spreads out wider than you'd expect from the street, all open floor and glass cases running the length of the room. It's warm without trying to be, the kind of place where you can actually breathe while deciding between twelve different pastries.",
+        "body": "You're on a quiet Ridgewood corner where Seneca Ave still feels like old Queens\u2014brick buildings, tree cover, locals who've been coming here for decades. Inside, the bakery spreads out wider than you'd expect from the street, all open floor and glass cases running the length of the room. It's warm without trying to be, the kind of place where you can actually breathe while deciding between twelve different pastries.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "The pastry case reads like a greatest hits of European baking—Linzer tarts with their latticed tops, cannoli shells filled to order, chocolate raspberry rum bread pudding that goes home in a container because you're not sharing. You're looking at old-school technique and fair prices, the kind where $4 still gets you something worth the trip. Ask if anything's 'decent' and prepare for the full Brooklyn treatment from whoever's behind the counter that day.",
+        "body": "The pastry case reads like a greatest hits of European baking\u2014Linzer tarts with their latticed tops, cannoli shells filled to order, chocolate raspberry rum bread pudding that goes home in a container because you're not sharing. You're looking at old-school technique and fair prices, the kind where $4 still gets you something worth the trip. Ask if anything's 'decent' and prepare for the full Brooklyn treatment from whoever's behind the counter that day.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
         "title": "Rudy's",
-        "body": "📍 Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA"
+        "body": "\ud83d\udccd Rudy's\n9-05 Seneca Ave, Ridgewood, NY 11385, USA"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\n100-year-old Italian-American institution - famous for black forest cake, essential Ridgewood destination"
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\n100-year-old Italian-American institution - famous for black forest cake, essential Ridgewood destination"
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nMenu/Offer link: http://www.rudysbakeryandcafe.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nMenu/Offer link: http://www.rudysbakeryandcafe.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.6 (743 reviews)\nPrice level: $$\nPhone: (718) 821-5890\nWebsite: http://www.rudysbakeryandcafe.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.6 (743 reviews)\nPrice level: $$\nPhone: (718) 821-5890\nWebsite: http://www.rudysbakeryandcafe.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 9-05 Seneca Ave, Ridgewood, NY 11385, USA\n\n• walking: 2 hours 6 mins • 5.5 mi\n• transit: 47 mins • 6.8 mi\n• driving: 33 mins • 8.5 mi (traffic: 31 mins)\n• bicycling: 40 mins • 6.2 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (33 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 9-05 Seneca Ave, Ridgewood, NY 11385, USA\n\n\u2022 walking: 2 hours 6 mins \u2022 5.5 mi\n\u2022 transit: 47 mins \u2022 6.8 mi\n\u2022 driving: 33 mins \u2022 8.5 mi (traffic: 31 mins)\n\u2022 bicycling: 40 mins \u2022 6.2 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (33 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"This bakery has been around for a long time and I can see why.  It is a big space but it feels warm and inviting.  They have a big selection of Pastries to choose from.  The service is good and so are the prices.  I took home the Chocolate Raspberry Rum Bread Pudding and Linzer Tarts and they were delicious 😋.  Lovely Bakery.  If I come to this neighborhood again, I would definitely stop by for more goodies\"\n\n⭐⭐⭐⭐⭐ \"Stopped in today and asked the woman behind the counter if the cannolis were “decent.” She hits me with the most Brooklyn stare imaginable and goes:\n“Decent?! I’ve been in business 91 years. You think people would still be coming here if my cannolis were decent? These are the best cannolis you’ve ever had — you’ll be coming back for these cannolis.”\n\nThen she tells me she doesn’t put chocolate chips on them — and still walks to the back to grab the chocolate chips just for me. Top tier hospitality.\n\nCannoli itself? Perfect shell, perfect filling, zero gimmicks.\n\nShe was absolutely right, truly the best cannolis I’ve had to date. If you are in the area do not pass this up.\"\n\n⭐⭐⭐⭐⭐ \"On first glance, I already fell in love with this pastry shop. It’s a DREAM. I tried their mini chocolate raspberry cake & guava puff pastry and let me tell you they’re a 10/10. It tastes very classic and nostalgic. Will def be back\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"This bakery has been around for a long time and I can see why.  It is a big space but it feels warm and inviting.  They have a big selection of Pastries to choose from.  The service is good and so are the prices.  I took home the Chocolate Raspberry Rum Bread Pudding and Linzer Tarts and they were delicious \ud83d\ude0b.  Lovely Bakery.  If I come to this neighborhood again, I would definitely stop by for more goodies\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Stopped in today and asked the woman behind the counter if the cannolis were \u201cdecent.\u201d She hits me with the most Brooklyn stare imaginable and goes:\n\u201cDecent?! I\u2019ve been in business 91 years. You think people would still be coming here if my cannolis were decent? These are the best cannolis you\u2019ve ever had \u2014 you\u2019ll be coming back for these cannolis.\u201d\n\nThen she tells me she doesn\u2019t put chocolate chips on them \u2014 and still walks to the back to grab the chocolate chips just for me. Top tier hospitality.\n\nCannoli itself? Perfect shell, perfect filling, zero gimmicks.\n\nShe was absolutely right, truly the best cannolis I\u2019ve had to date. If you are in the area do not pass this up.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"On first glance, I already fell in love with this pastry shop. It\u2019s a DREAM. I tried their mini chocolate raspberry cake & guava puff pastry and let me tell you they\u2019re a 10/10. It tastes very classic and nostalgic. Will def be back\""
       },
       {
         "id": "block-menu",
         "type": "menu",
         "title": "The Menu",
-        "body": "BAKERY\n⭐ Croissants\n   Freshly baked French-style pastries\n• Sourdough Bread\n   Artisanal daily baked loaves\n⭐ Cinnamon Rolls\n   Warm and gooey breakfast favorite\n• Bagels\n   Assorted flavors\n• Muffins\n   Selection of fresh daily flavors\n\nCAFÉ\n• Espresso\n   Rich and bold\n⭐ Cappuccino\n   Creamy and smooth\n• Latte\n   Warm and comforting\n• Coffee\n   Freshly brewed daily\n• Tea\n   Selection of loose leaf varieties",
+        "body": "BAKERY\n\u2b50 Croissants\n   Freshly baked French-style pastries\n\u2022 Sourdough Bread\n   Artisanal daily baked loaves\n\u2b50 Cinnamon Rolls\n   Warm and gooey breakfast favorite\n\u2022 Bagels\n   Assorted flavors\n\u2022 Muffins\n   Selection of fresh daily flavors\n\nCAF\u00c9\n\u2022 Espresso\n   Rich and bold\n\u2b50 Cappuccino\n   Creamy and smooth\n\u2022 Latte\n   Warm and comforting\n\u2022 Coffee\n   Freshly brewed daily\n\u2022 Tea\n   Selection of loose leaf varieties",
         "sections": [
           {
             "name": "BAKERY",
@@ -113,7 +113,7 @@
             ]
           },
           {
-            "name": "CAFÉ",
+            "name": "CAF\u00c9",
             "items": [
               {
                 "name": "Espresso",
@@ -203,5 +203,6 @@
         "distanceText": "6.8 mi"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

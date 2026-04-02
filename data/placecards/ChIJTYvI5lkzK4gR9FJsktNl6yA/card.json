@@ -8,40 +8,41 @@
     "address": "",
     "phone": "(437) 538-4518",
     "website": "https://seahorserestaurant.ca",
-    "price_level": 4
+    "price_level": 4,
+    "type": "restaurant"
   },
   "narrative": {
-    "summary": "📍 Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n———————————————",
+    "summary": "\ud83d\udccd Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014",
     "blocks": [
       {
         "id": "block-1",
         "title": "Seahorse, Summerhill, Toronto",
-        "body": "📍 Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n———————————————"
+        "body": "\ud83d\udccd Seahorse, Summerhill, Toronto\n1226 Yonge St, Toronto, ON M4T 1W3\n\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014\u2014"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nSummerhill — Yonge Street just north of Summerhill station\n\nModern French brasserie in a 130-year-old room. Exposed brick, warm wood, tawny leather banquettes, original floors. The focal point is the L-shaped oyster bar lined with chrome-and-cerulean stools."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nSummerhill \u2014 Yonge Street just north of Summerhill station\n\nModern French brasserie in a 130-year-old room. Exposed brick, warm wood, tawny leather banquettes, original floors. The focal point is the L-shaped oyster bar lined with chrome-and-cerulean stools."
       },
       {
         "id": "block-3",
         "title": "Drinks",
-        "body": "𝗗𝗥𝗜𝗡𝗞𝗦\n\nFreshly squeezed citrus, thoughtful cocktails. Richard Renaud (co-owner) often behind the bar shaking drinks with a juicer he brought from home.\n\n🍸 **Signature cocktails:**\n• Olive Oil Sour — $19. Light, fruity, buttery. Amaretto, Amaro, olive oil, egg white foam.\n• Salted Peanut Espresso Martini — $21. Salty, nutty, bitter espresso. Inspired by Nashville peanut butter whiskey.\n\nOne-liner: \"Part tropical cocktail, part cozy campfire concoction.\""
+        "body": "\ud835\uddd7\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddde\ud835\udde6\n\nFreshly squeezed citrus, thoughtful cocktails. Richard Renaud (co-owner) often behind the bar shaking drinks with a juicer he brought from home.\n\n\ud83c\udf78 **Signature cocktails:**\n\u2022 Olive Oil Sour \u2014 $19. Light, fruity, buttery. Amaretto, Amaro, olive oil, egg white foam.\n\u2022 Salted Peanut Espresso Martini \u2014 $21. Salty, nutty, bitter espresso. Inspired by Nashville peanut butter whiskey.\n\nOne-liner: \"Part tropical cocktail, part cozy campfire concoction.\""
       },
       {
         "id": "block-4",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨\n\n**RAW BAR**\n• Small Ice Box — $48 ⭐\n  Oysters, mussel escabeche, wild Argentinian shrimp, dry-aged kampachi crudo\n• Large Ice Box — $68\n  Larger portions of everything above\n\n**APPETIZERS**\n• Tuna Tartare — $25 ⭐\n  Canadian bluefin tuna, white soy, fermented plum vinegar, crème fraîche, finger lime\n• Scallop Aguachile — $33\n  Hokkaido scallops, yuzu, Calabrian chili oil\n• Seahorse Salad — $19\n  Frilly lolla rossa lettuce, puffed grains, pickled chanterelles, buttermilk dressing\n\n**MAINS**\n• The Fish — $29 ⭐\n  Smoky Atlantic mackerel, grilled kale, salsa verde\n• East Coast Scallops — $31\n  Pan-seared, golden-brown crust, béarnaise\n• Octopus — $69\n  With silky seafood sauce (like lobster bisque)\n\n**DESSERT**\n• Pear Cake — $16\n  Warm, cloud-like crumb, caramel sauce, subtle pear\n• Soft-Serve Ice Cream — $10\n  Olive oil drizzle, Maldon salt, pistachios\n\n**Note:** Portions are shareable. Menu is concise, designed for tasting."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8\n\n**RAW BAR**\n\u2022 Small Ice Box \u2014 $48 \u2b50\n  Oysters, mussel escabeche, wild Argentinian shrimp, dry-aged kampachi crudo\n\u2022 Large Ice Box \u2014 $68\n  Larger portions of everything above\n\n**APPETIZERS**\n\u2022 Tuna Tartare \u2014 $25 \u2b50\n  Canadian bluefin tuna, white soy, fermented plum vinegar, cr\u00e8me fra\u00eeche, finger lime\n\u2022 Scallop Aguachile \u2014 $33\n  Hokkaido scallops, yuzu, Calabrian chili oil\n\u2022 Seahorse Salad \u2014 $19\n  Frilly lolla rossa lettuce, puffed grains, pickled chanterelles, buttermilk dressing\n\n**MAINS**\n\u2022 The Fish \u2014 $29 \u2b50\n  Smoky Atlantic mackerel, grilled kale, salsa verde\n\u2022 East Coast Scallops \u2014 $31\n  Pan-seared, golden-brown crust, b\u00e9arnaise\n\u2022 Octopus \u2014 $69\n  With silky seafood sauce (like lobster bisque)\n\n**DESSERT**\n\u2022 Pear Cake \u2014 $16\n  Warm, cloud-like crumb, caramel sauce, subtle pear\n\u2022 Soft-Serve Ice Cream \u2014 $10\n  Olive oil drizzle, Maldon salt, pistachios\n\n**Note:** Portions are shareable. Menu is concise, designed for tasting."
       },
       {
         "id": "block-5",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\n💰 $$$$ (High-end seafood)\n\n**Dinner for 2:** $150-250 (with drinks, sharing plates)\n\n**Reservations:** OpenTable\n**Walk-ins:** Limited — 38 seats, intimate space\n\n📞 (437) 538-4518\n🌐 seahorserestaurant.ca\n\n𝗛𝗢𝗨𝗥𝗦\nMonday: Closed\nTuesday–Thursday: 4–10pm\nFriday–Saturday: 4–11pm  \nSunday: Closed\n\n𝗕𝗘𝗦𝗧 𝗧𝗜𝗠𝗘𝗦\n• **Weekday evenings (Tue–Thu)** — Quieter, easier to get a table\n• **Avoid weekends** — Small space fills quickly\n• **Oyster happy hour?** Not currently, but check for seasonal promotions\n• **Seasonal note:** Summerhill neighborhood is walkable in warmer months — perfect for pre-dinner stroll\n\n**The team:** Co-owners Simon Bower (Lucien, Mercer Street Grill) + Richard Renaud (Piano Piano), Executive Chef Federico Garcia (ex-George, Quetzal sous chef), Eamon Clark (11-time national oyster-shucking champion)."
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\n\ud83d\udcb0 $$$$ (High-end seafood)\n\n**Dinner for 2:** $150-250 (with drinks, sharing plates)\n\n**Reservations:** OpenTable\n**Walk-ins:** Limited \u2014 38 seats, intimate space\n\n\ud83d\udcde (437) 538-4518\n\ud83c\udf10 seahorserestaurant.ca\n\n\ud835\udddb\ud835\udde2\ud835\udde8\ud835\udde5\ud835\udde6\nMonday: Closed\nTuesday\u2013Thursday: 4\u201310pm\nFriday\u2013Saturday: 4\u201311pm  \nSunday: Closed\n\n\ud835\uddd5\ud835\uddd8\ud835\udde6\ud835\udde7 \ud835\udde7\ud835\udddc\ud835\udde0\ud835\uddd8\ud835\udde6\n\u2022 **Weekday evenings (Tue\u2013Thu)** \u2014 Quieter, easier to get a table\n\u2022 **Avoid weekends** \u2014 Small space fills quickly\n\u2022 **Oyster happy hour?** Not currently, but check for seasonal promotions\n\u2022 **Seasonal note:** Summerhill neighborhood is walkable in warmer months \u2014 perfect for pre-dinner stroll\n\n**The team:** Co-owners Simon Bower (Lucien, Mercer Street Grill) + Richard Renaud (Piano Piano), Executive Chef Federico Garcia (ex-George, Quetzal sous chef), Eamon Clark (11-time national oyster-shucking champion)."
       },
       {
         "id": "block-6",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1226 Yonge St, Toronto, ON M4T 1W3\n\n• walking: 8 mins • 0.7 km\n• transit: 8 mins • 0.7 km\n• driving: 2 mins • 0.7 km (traffic: 2 mins)\n• bicycling: 1 min • 0.7 km\n\nBest modality: WALKING ⭐\nWhy: Walk is convenient (8 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 1226 Yonge St, Toronto, ON M4T 1W3\n\n\u2022 walking: 8 mins \u2022 0.7 km\n\u2022 transit: 8 mins \u2022 0.7 km\n\u2022 driving: 2 mins \u2022 0.7 km (traffic: 2 mins)\n\u2022 bicycling: 1 min \u2022 0.7 km\n\nBest modality: WALKING \u2b50\nWhy: Walk is convenient (8 mins)"
       }
     ]
   },
@@ -97,5 +98,6 @@
         "distanceText": "0.7 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

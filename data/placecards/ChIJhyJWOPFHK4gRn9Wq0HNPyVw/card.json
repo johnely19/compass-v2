@@ -7,30 +7,31 @@
     "name": "Blooming Batter",
     "city": "NYC",
     "address": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
-    "location": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada"
+    "location": "5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
+    "type": "cafe"
   },
   "narrative": {
-    "summary": "📍 Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
+    "summary": "\ud83d\udccd Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada",
     "blocks": [
       {
         "id": "block-1",
         "title": "Check",
-        "body": "🖼️ No images available yet. We checked available sources and could not fetch usable photos at build time."
+        "body": "\ud83d\uddbc\ufe0f No images available yet. We checked available sources and could not fetch usable photos at build time."
       },
       {
         "id": "block-2",
         "title": "Blooming Batter",
-        "body": "📍 Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada"
+        "body": "\ud83d\udccd Blooming Batter\n5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada"
       },
       {
         "id": "block-3",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.7 (271 reviews)"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.7 (271 reviews)"
       },
       {
         "id": "block-4",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada\n\n• walking: 6 days 22 hours • 448 mi\n• transit: 12 hours 42 mins • 500 mi\n• driving: 7 hours 39 mins • 463 mi (traffic: 7 hours 42 mins)\n• bicycling: 2 days 4 hours • 612 mi\n\nBest modality: DRIVING ⭐\nWhy: Fastest available option (7 hours 39 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: The Crosby Street Hotel, 79 Crosby St, New York, NY 10012, USA\nTo: 5415 Dundas St W unit 5, Etobicoke, ON M9B 1B5, Canada\n\n\u2022 walking: 6 days 22 hours \u2022 448 mi\n\u2022 transit: 12 hours 42 mins \u2022 500 mi\n\u2022 driving: 7 hours 39 mins \u2022 463 mi (traffic: 7 hours 42 mins)\n\u2022 bicycling: 2 days 4 hours \u2022 612 mi\n\nBest modality: DRIVING \u2b50\nWhy: Fastest available option (7 hours 39 mins)"
       }
     ]
   },
@@ -86,5 +87,6 @@
         "distanceText": "500 mi"
       }
     ]
-  }
+  },
+  "type": "cafe"
 }

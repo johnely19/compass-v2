@@ -6,7 +6,7 @@
     "name": "Muddy George",
     "city": "Toronto",
     "address": "Bloor West Village / Bloordale",
-    "type": "grocery",
+    "type": "shop",
     "hours": [
       "Monday: Closed",
       "Tuesday: 12:00 – 5:00 PM",
@@ -27,5 +27,6 @@
   "narrative": {
     "summary": "Curated menswear boutique with signature olive interior. Owner Altaf Baksh known for transforming wardrobes — 4.9 rating.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

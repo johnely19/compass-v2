@@ -4,7 +4,7 @@
   "source": "task-le-select",
   "identity": {
     "place_id": "ChIJx8LPLtk0K4gRVkpHcrMIYKE",
-    "name": "Le Sélect Bistro",
+    "name": "Le S\u00e9lect Bistro",
     "city": "Toronto",
     "address": "432 Wellington St W, Toronto, ON M5V 1E3, Canada",
     "type": "restaurant",
@@ -16,50 +16,50 @@
     "location": "432 Wellington St W, Toronto, ON M5V 1E3, Canada"
   },
   "narrative": {
-    "summary": "You're on Wellington West where the King West energy loosens up, stepping into a bistro that leans into Parisian tropes—zinc bar, bentwood chairs, that particular amber light that makes everyone look like they're having a better time than they are. This is textbook French bistro cooking: steak frites with the right crisp-edged sear, duck confit that pulls apart under your fork. Skip the French onion soup—it's oddly muted for $18—and definitely skip the experimental desserts.",
+    "summary": "You're on Wellington West where the King West energy loosens up, stepping into a bistro that leans into Parisian tropes\u2014zinc bar, bentwood chairs, that particular amber light that makes everyone look like they're having a better time than they are. This is textbook French bistro cooking: steak frites with the right crisp-edged sear, duck confit that pulls apart under your fork. Skip the French onion soup\u2014it's oddly muted for $18\u2014and definitely skip the experimental desserts.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Wellington West, where the King West energy loosens up a bit. Inside, the bistro leans into Parisian tropes—zinc bar, bentwood chairs, that particular amber light that makes everyone look like they're having a better time than they are. The room hums with the clatter of silverware on white plates and conversations that bounce off tile and mirror.",
+        "body": "You're on Wellington West, where the King West energy loosens up a bit. Inside, the bistro leans into Parisian tropes\u2014zinc bar, bentwood chairs, that particular amber light that makes everyone look like they're having a better time than they are. The room hums with the clatter of silverware on white plates and conversations that bounce off tile and mirror.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is textbook French bistro cooking—steak frites with the right crisp-edged sear, duck confit that pulls apart under your fork. The French onion soup splits opinions: some find it flawless, others find it oddly muted for the $14-18 appetizer price point. Come for the main plates, not the experimental desserts.",
+        "body": "This is textbook French bistro cooking\u2014steak frites with the right crisp-edged sear, duck confit that pulls apart under your fork. The French onion soup splits opinions: some find it flawless, others find it oddly muted for the $14-18 appetizer price point. Come for the main plates, not the experimental desserts.",
         "id": "block-the-food-1"
       },
       {
         "id": "block-1",
-        "title": "Le Sélect Bistro",
-        "body": "📍 Le Sélect Bistro\n432 Wellington St W, Toronto, ON M5V 1E3, Canada"
+        "title": "Le Se\u0301lect Bistro",
+        "body": "\ud83d\udccd Le S\u00e9lect Bistro\n432 Wellington St W, Toronto, ON M5V 1E3, Canada"
       },
       {
         "id": "block-2",
         "title": "Arrival",
-        "body": "𝗔𝗥𝗥𝗜𝗩𝗔𝗟\n\nClassic French brasserie atmosphere in the downtown core."
+        "body": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nClassic French brasserie atmosphere in the downtown core."
       },
       {
         "id": "block-3",
         "title": "Food",
-        "body": "𝗧𝗛𝗘 𝗠𝗘𝗡𝗨 / 𝗢𝗙𝗙𝗘𝗥𝗜𝗡𝗚\n\nFrench brasserie staples and cocktails.\nMenu link: http://www.leselectbistro.com/"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\udde0\ud835\uddd8\ud835\udde1\ud835\udde8 / \ud835\udde2\ud835\uddd9\ud835\uddd9\ud835\uddd8\ud835\udde5\ud835\udddc\ud835\udde1\ud835\uddda\n\nFrench brasserie staples and cocktails.\nMenu link: http://www.leselectbistro.com/"
       },
       {
         "id": "block-4",
         "title": "Check",
-        "body": "𝗧𝗛𝗘 𝗖𝗛𝗘𝗖𝗞\n\nRating: 4.4 (3134 reviews)\nPrice level: $$$\nPhone: (416) 626-6262\nWebsite: http://www.leselectbistro.com/\n\nHours:\nHours unavailable"
+        "body": "\ud835\udde7\ud835\udddb\ud835\uddd8 \ud835\uddd6\ud835\udddb\ud835\uddd8\ud835\uddd6\ud835\uddde\n\nRating: 4.4 (3134 reviews)\nPrice level: $$$\nPhone: (416) 626-6262\nWebsite: http://www.leselectbistro.com/\n\nHours:\nHours unavailable"
       },
       {
         "id": "block-5",
         "title": "Travel Intel",
-        "body": "𝗧𝗥𝗔𝗩𝗘𝗟 𝗜𝗡𝗧𝗘𝗟\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 432 Wellington St W, Toronto, ON M5V 1E3, Canada\n\n• walking: 1 hour 25 mins • 6.2 km\n• transit: 35 mins • 6.7 km\n• driving: 23 mins • 6.4 km (traffic: 17 mins)\n• bicycling: 22 mins • 6.6 km\n\nBest modality: BICYCLING ⭐\nWhy: Fastest available option (22 mins)"
+        "body": "\ud835\udde7\ud835\udde5\ud835\uddd4\ud835\udde9\ud835\uddd8\ud835\udddf \ud835\udddc\ud835\udde1\ud835\udde7\ud835\uddd8\ud835\udddf\n\nFrom: Yonge St & St Clair Ave W, Toronto, ON M4T 1Y7, Canada\nTo: 432 Wellington St W, Toronto, ON M5V 1E3, Canada\n\n\u2022 walking: 1 hour 25 mins \u2022 6.2 km\n\u2022 transit: 35 mins \u2022 6.7 km\n\u2022 driving: 23 mins \u2022 6.4 km (traffic: 17 mins)\n\u2022 bicycling: 22 mins \u2022 6.6 km\n\nBest modality: BICYCLING \u2b50\nWhy: Fastest available option (22 mins)"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"Definitely felt like I was in Paris again. The steak frites were perfect, duck confit juicy and full of flavour. Excellent service. The only thing was, I was very disappointed in the French onion soup. It was bland and flavourless, for the price I expected it to at least be good. The pear tart was also a very strange combination of flavours, maybe too sweet for me? Looking past the 2 appetizers, I had a great meal.\"\n\n⭐⭐⭐⭐ \"Cute place. Reminds me of pastis of NYC although it will never be Pastis. menu is similar to Pastis.  Food was good, we got french onion soup 5/5, escargot 3.5/5, bibb salad 4/5, mussels 5/5/.\n\nService was 2.5/5. Servers were abrupt and not very friendly. They kept coming back every minute asking if were ready to order. Never really gave us time.\n\nAtmosphere is very cute. Music isnt too loud and it isnt too busy.\n\nI would recommend this place on the days that you just want to have a quiet place to dine in.\"\n\n⭐⭐⭐⭐⭐ \"I enjoyed a fabulous dinner at Le Select Bistro the other night to celebrate a friend's birthday. We were seated in the back of the restaurant in a booth that was cozy and intimate.  Our server, Brent, was excellent. He was very knowledgeable, friendly and attentive and made our dinning experience a pleasure.  All the food was exceptional and spot on. They had their own versions of french classic dishes but didn't disappoint!  The atmosphere was great.\nOverall experience was stellar and will be dinning there again.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"Definitely felt like I was in Paris again. The steak frites were perfect, duck confit juicy and full of flavour. Excellent service. The only thing was, I was very disappointed in the French onion soup. It was bland and flavourless, for the price I expected it to at least be good. The pear tart was also a very strange combination of flavours, maybe too sweet for me? Looking past the 2 appetizers, I had a great meal.\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Cute place. Reminds me of pastis of NYC although it will never be Pastis. menu is similar to Pastis.  Food was good, we got french onion soup 5/5, escargot 3.5/5, bibb salad 4/5, mussels 5/5/.\n\nService was 2.5/5. Servers were abrupt and not very friendly. They kept coming back every minute asking if were ready to order. Never really gave us time.\n\nAtmosphere is very cute. Music isnt too loud and it isnt too busy.\n\nI would recommend this place on the days that you just want to have a quiet place to dine in.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"I enjoyed a fabulous dinner at Le Select Bistro the other night to celebrate a friend's birthday. We were seated in the back of the restaurant in a booth that was cozy and intimate.  Our server, Brent, was excellent. He was very knowledgeable, friendly and attentive and made our dinning experience a pleasure.  All the food was exceptional and spot on. They had their own versions of french classic dishes but didn't disappoint!  The atmosphere was great.\nOverall experience was stellar and will be dinning there again.\""
       }
     ]
   },
@@ -115,5 +115,6 @@
         "distanceText": "6.7 km"
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

@@ -8,13 +8,13 @@
     "address": "Little Italy / College St",
     "type": "shop",
     "hours": [
-      "Monday: 11:00 AM – 6:00 PM",
-      "Tuesday: 11:00 AM – 6:00 PM",
-      "Wednesday: 11:00 AM – 6:00 PM",
-      "Thursday: 11:00 AM – 7:00 PM",
-      "Friday: 11:00 AM – 6:00 PM",
-      "Saturday: 10:00 AM – 6:00 PM",
-      "Sunday: 11:00 AM – 5:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20097:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Saturday: 10:00\u202fAM\u2009\u2013\u20096:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.8,
     "review_count": 71,
@@ -27,5 +27,6 @@
   "narrative": {
     "summary": "New independent bookstore (opened recently) with its own imprint + regular author events. Thriving literary hub in a decade when bookshops are rare.",
     "blocks": []
-  }
+  },
+  "type": "shop"
 }

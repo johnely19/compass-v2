@@ -16,12 +16,12 @@
     "url": "http://www.soundsgoodtoronto.com/"
   },
   "narrative": {
-    "summary": "Vinyl-forward bar/cafe/restaurant hybrid—good for a low-key, music-led night.",
+    "summary": "Vinyl-forward bar/cafe/restaurant hybrid\u2014good for a low-key, music-led night.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Dundas West in Little Portugal, walking into what feels like someone's extremely well-curated living room if that someone had a serious record collection and a liquor license. Vinyl lines the walls, the sound system is the kind audiophiles actually respect, and there's a patio out front where you can drink Rooms coffee in the afternoon sun. By night, the lights drop low and the whole place shifts—same space, completely different energy.",
+        "body": "You're on Dundas West in Little Portugal, walking into what feels like someone's extremely well-curated living room if that someone had a serious record collection and a liquor license. Vinyl lines the walls, the sound system is the kind audiophiles actually respect, and there's a patio out front where you can drink Rooms coffee in the afternoon sun. By night, the lights drop low and the whole place shifts\u2014same space, completely different energy.",
         "id": "block-the-space-0"
       },
       {
@@ -40,8 +40,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐ \"I went to check out Rooms coffee at Sounds Good. The space has a great vibe and I can see how it be a fun spot in the evening.\nI ordered a cortado which was great and enjoyed drinking on their lovely patio. It’s a great spot to soak up some vitamin D.\nI want to return in the evening to check out their food/drink offerings!\"\n\n⭐⭐⭐⭐ \"Love the space, atmosphere and music! Will always go here to enjoy vinyl and their sound system is elite. We enjoyed the zucchini flowers and the bartender made us a boulevardier which was delish but most cocktails are on draft.\"\n\n⭐⭐⭐⭐⭐ \"Excellent music choices, excellent sound system, excellent food and excellent service. Easily one of my favorite recent new spots. Honestly, I loved every dish, but some favorites were definitely the beef cheek and the oysters. Staff is very attentive and friendly. Overall, a very strong recommend for anyone who is looking for good food and good music.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50 \"I went to check out Rooms coffee at Sounds Good. The space has a great vibe and I can see how it be a fun spot in the evening.\nI ordered a cortado which was great and enjoyed drinking on their lovely patio. It\u2019s a great spot to soak up some vitamin D.\nI want to return in the evening to check out their food/drink offerings!\"\n\n\u2b50\u2b50\u2b50\u2b50 \"Love the space, atmosphere and music! Will always go here to enjoy vinyl and their sound system is elite. We enjoyed the zucchini flowers and the bartender made us a boulevardier which was delish but most cocktails are on draft.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Excellent music choices, excellent sound system, excellent food and excellent service. Easily one of my favorite recent new spots. Honestly, I loved every dish, but some favorites were definitely the beef cheek and the oysters. Staff is very attentive and friendly. Overall, a very strong recommend for anyone who is looking for good food and good music.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

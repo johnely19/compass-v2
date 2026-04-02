@@ -14,5 +14,6 @@
   "narrative": {
     "summary": "March jazz series: Lou Pomanti Quartet (soul-jazz, March 13 done), Alex Bird (March 20), Club Django Toronto (gypsy jazz, March 27). Historic venue. Intimate setting.",
     "blocks": []
-  }
+  },
+  "type": "music-venue"
 }

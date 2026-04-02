@@ -8,13 +8,13 @@
     "address": "Don Valley (Bayview)",
     "type": "restaurant",
     "hours": [
-      "Monday: 9:00 AM – 5:00 PM",
-      "Tuesday: 9:00 AM – 5:00 PM",
-      "Wednesday: 9:00 AM – 5:00 PM",
-      "Thursday: 9:00 AM – 5:00 PM",
-      "Friday: 9:00 AM – 5:00 PM",
-      "Saturday: 9:00 AM – 5:00 PM",
-      "Sunday: 9:00 AM – 5:00 PM"
+      "Monday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Tuesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Wednesday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Thursday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Friday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20095:00\u202fPM"
     ],
     "rating": 4.6,
     "review_count": 9788,
@@ -25,18 +25,18 @@
     "text": "Discovered via frommers.com"
   },
   "narrative": {
-    "summary": "Diamond Schmitt adaptive reuse of heritage industrial kilns—sustainability showcase. Saturday farmers market, ravine trails, great photography spot.",
+    "summary": "Diamond Schmitt adaptive reuse of heritage industrial kilns\u2014sustainability showcase. Saturday farmers market, ravine trails, great photography spot.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're deep in the Don Valley ravine, where Diamond Schmitt turned century-old brick kilns into arched cathedral spaces with steel beams overhead and polished concrete underfoot. The heritage industrial bones—massive arched doorways, original kiln structures, exposed brick walls—frame floor-to-ceiling windows that look straight into the forest. It feels less like a renovated building and more like architecture that grew around the ruins.",
+        "body": "You're deep in the Don Valley ravine, where Diamond Schmitt turned century-old brick kilns into arched cathedral spaces with steel beams overhead and polished concrete underfoot. The heritage industrial bones\u2014massive arched doorways, original kiln structures, exposed brick walls\u2014frame floor-to-ceiling windows that look straight into the forest. It feels less like a renovated building and more like architecture that grew around the ruins.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This isn't a restaurant—it's a working sustainability hub with a café and Saturday farmers market where you're buying direct from Ontario growers. The café serves the kind of counter-service fare you'd expect at a community space: soups, sandwiches, pastries that lean local and seasonal without making a fuss about it. The real food moment is Saturday mornings from spring through fall, when vendors set up with just-picked vegetables, heritage apples, sourdough still warm, honey in jars with handwritten labels.",
+        "body": "This isn't a restaurant\u2014it's a working sustainability hub with a caf\u00e9 and Saturday farmers market where you're buying direct from Ontario growers. The caf\u00e9 serves the kind of counter-service fare you'd expect at a community space: soups, sandwiches, pastries that lean local and seasonal without making a fuss about it. The real food moment is Saturday mornings from spring through fall, when vendors set up with just-picked vegetables, heritage apples, sourdough still warm, honey in jars with handwritten labels.",
         "id": "block-the-food-1"
       },
       {
@@ -49,8 +49,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"If there's one place you'll never tire of visiting, it's definitely Evergreen. Whether it's spring, summer, fall, or winter, the park brings a unique feeling to each season, allowing for a different experience with each visit.\n\nIn the fall, you can buy pumpkins to decorate your home, in the summer, participate in the Saturday markets (which begin in spring), in the winter, participate in the festivals, in November, participate in the Day of the Dead, and many others.\n\nThe socializing, market, and gardening space is enormous, but the green area is even larger.\n\nFor those arriving by public transportation, bus number 14 drops you off right inside, and for those arriving by car, Evergreen has paid parking with plenty of spaces available.\n\nFor visitors with disabilities or limited mobility, the park has designated parking, adapted restrooms with automatic opening and closing doors and grab bars, and trained staff to support visitors with hearing and visual impairments.\n\nFor those traveling with children, the restrooms have changing tables. And to check out the park's activities, check the park's social media, as the schedule is constantly changing.\n\nIn addition to the frequent markets, the park also has a restaurant and a café.\n\nIt's definitely worth checking out.\"\n\n⭐⭐⭐⭐⭐ \"Great little ice rink to enjoy in the winters. Free helmet rentals and skates available to rent for a fee. Always a magical experience!\"\n\n⭐⭐⭐⭐⭐ \"Enjoyed my visit. Plenty of walking trails\nTook a detour off the main trails. There were some challenging climbs and descents.  Was supposed to do the free Nature tour but the tour guide did not show up. Did the historical tour instead which was nice. The volunteer tour guide was quite knowledgeable. Would visit again. Take note that parking is $10. Easier to download the app and pay there.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"If there's one place you'll never tire of visiting, it's definitely Evergreen. Whether it's spring, summer, fall, or winter, the park brings a unique feeling to each season, allowing for a different experience with each visit.\n\nIn the fall, you can buy pumpkins to decorate your home, in the summer, participate in the Saturday markets (which begin in spring), in the winter, participate in the festivals, in November, participate in the Day of the Dead, and many others.\n\nThe socializing, market, and gardening space is enormous, but the green area is even larger.\n\nFor those arriving by public transportation, bus number 14 drops you off right inside, and for those arriving by car, Evergreen has paid parking with plenty of spaces available.\n\nFor visitors with disabilities or limited mobility, the park has designated parking, adapted restrooms with automatic opening and closing doors and grab bars, and trained staff to support visitors with hearing and visual impairments.\n\nFor those traveling with children, the restrooms have changing tables. And to check out the park's activities, check the park's social media, as the schedule is constantly changing.\n\nIn addition to the frequent markets, the park also has a restaurant and a caf\u00e9.\n\nIt's definitely worth checking out.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Great little ice rink to enjoy in the winters. Free helmet rentals and skates available to rent for a fee. Always a magical experience!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Enjoyed my visit. Plenty of walking trails\nTook a detour off the main trails. There were some challenging climbs and descents.  Was supposed to do the free Nature tour but the tour guide did not show up. Did the historical tour instead which was nice. The volunteer tour guide was quite knowledgeable. Would visit again. Take note that parking is $10. Easier to download the app and pay there.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

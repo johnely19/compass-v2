@@ -11,7 +11,8 @@
     "price_level": 2,
     "location": "367 Bedford Ave, Brooklyn, NY 11211, USA",
     "lat": 40.7112945,
-    "lng": -73.9630773
+    "lng": -73.9630773,
+    "type": "music-venue"
   },
   "narrative": {
     "summary": "\ud835\uddd4\ud835\udde5\ud835\udde5\ud835\udddc\ud835\udde9\ud835\uddd4\ud835\udddf\n\nBedford Ave in Williamsburg \u2014 a Friday/Saturday night jazz and live music venue.\n\nIntimate live music space on Williamsburg's main drag. Jazz, soul, and more in a lounge setting. Weekends only.",
@@ -41,5 +42,6 @@
   "discovery": {
     "text": "Discovered by Disco via neighbourhood research",
     "url": "https://wmcjazz.com/"
-  }
+  },
+  "type": "music-venue"
 }

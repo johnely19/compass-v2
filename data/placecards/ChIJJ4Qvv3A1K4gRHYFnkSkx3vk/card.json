@@ -8,13 +8,13 @@
     "address": "Yonge & Wellesley",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 10:00 PM",
-      "Tuesday: 11:00 AM – 10:00 PM",
-      "Wednesday: 11:00 AM – 10:00 PM",
-      "Thursday: 11:00 AM – 10:00 PM",
-      "Friday: 11:00 AM – 10:00 PM",
-      "Saturday: 11:00 AM – 10:00 PM",
-      "Sunday: 11:00 AM – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 11:00\u202fAM\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.5,
     "review_count": 52,
@@ -24,18 +24,18 @@
     "text": "Discovered via tastetoronto.substack.com"
   },
   "narrative": {
-    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0★.",
+    "summary": "Japan's 1,000+ location udon chain quietly opened on Yonge corridor. Fresh Sanuki-style noodles daily, $7-$14. First Toronto location. 5.0\u2605.",
     "blocks": [
       {
         "type": "prose",
         "title": "The Space",
-        "body": "On the Yonge corridor just north of Wellesley, you walk into a fast-casual setup that mirrors the chain's Japanese locations—open kitchen up front where you watch cooks cut thick Sanuki-style noodles and drop them into boiling water, a cafeteria-style line where you build your bowl, then tables that fill fast with students and office workers. The lighting is bright, the counter surfaces are stainless steel, and there's no pretense about what this is: efficient, visible noodle-making designed to get you fed.",
+        "body": "On the Yonge corridor just north of Wellesley, you walk into a fast-casual setup that mirrors the chain's Japanese locations\u2014open kitchen up front where you watch cooks cut thick Sanuki-style noodles and drop them into boiling water, a cafeteria-style line where you build your bowl, then tables that fill fast with students and office workers. The lighting is bright, the counter surfaces are stainless steel, and there's no pretense about what this is: efficient, visible noodle-making designed to get you fed.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is Sanuki udon—thick, chewy wheat noodles made fresh every day, the style that built Marugame into a thousand-location empire across Japan. You choose your base (cold or hot broth, or just the noodles), then add toppings: tempura, soft-poached eggs, beef, or the chicken katsu curry that shows up in nearly every review. Bowls run $7 to $14, which explains the lines. It's assembly-line in format but the noodles have that springy, toothsome bite that only comes from daily prep.",
+        "body": "This is Sanuki udon\u2014thick, chewy wheat noodles made fresh every day, the style that built Marugame into a thousand-location empire across Japan. You choose your base (cold or hot broth, or just the noodles), then add toppings: tempura, soft-poached eggs, beef, or the chicken katsu curry that shows up in nearly every review. Bowls run $7 to $14, which explains the lines. It's assembly-line in format but the noodles have that springy, toothsome bite that only comes from daily prep.",
         "id": "block-the-food-1"
       },
       {
@@ -48,8 +48,9 @@
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"I visited for the soft opening near the end of the night, and it was quite an event. When we walked in, we were told they were almost out of udon, but we luckily snagged one of the very last portions in line.\n\nI ordered the Chicken Katsu Curry Udon. Since there was no Katsu ready, the staff held my noodles aside while I paid so they could bring the full bowl out once the chicken was ready. Unfortunately, there was some confusion, and they accidentally gave my reserved noodles to someone else. By the time the mistake was realized, they were completely sold out.\n\nWhile I was sad to miss out on the udon I’d been looking forward to, I find that the staff handled the situation well. To compensate for the mix-up, they refunded my original udon, gave me a Katsu Curry Rice for free, and let me have as much tempura as I wanted.\n\nSome extra feedback, the tempura station labels of food were really mixed up and some did not properly represent what was behind the sign so it got confusing what I was looking at. Again, I’m sure this will be improved as tike comes.\n\nMy girlfriend enjoyed her udon, and the curry rice was great. The tempura was decent, too. I think the food it’s solid and fair for its price.\n\nIt’s clear they’re still finding their rhythm during the soft opening, but I can definitely see the passion and willingness to get things right for the customers. I’ll definitely be back to finally try the udon!\"\n\n⭐⭐⭐⭐⭐ \"Overall best Japanese Udon I’ve had in Downtown Toronto!\n\nEverything was freshly made, food tasted really good and was well seasoned. Staff seemed very well coordinated despite the long line from dinner/opening rush. I’ve had better udon in Markham but in DT i would say this is the best.\n\nI was surprised by how good the tempura is, Chikawa and Croquette were very good. Price is good, making this budget friendly but doesn’t loose quality or taste. Will return!\"\n\n⭐⭐⭐⭐⭐ \"very excited to try this restaurant. The food we had overall was good but nothing outstanding, can't argue since the price point is great and service was super quick and friendly despite the long line. The lineup inside is a but confusing though as they take up space and people just try to reserve seats even though they're so far along in the line.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"I visited for the soft opening near the end of the night, and it was quite an event. When we walked in, we were told they were almost out of udon, but we luckily snagged one of the very last portions in line.\n\nI ordered the Chicken Katsu Curry Udon. Since there was no Katsu ready, the staff held my noodles aside while I paid so they could bring the full bowl out once the chicken was ready. Unfortunately, there was some confusion, and they accidentally gave my reserved noodles to someone else. By the time the mistake was realized, they were completely sold out.\n\nWhile I was sad to miss out on the udon I\u2019d been looking forward to, I find that the staff handled the situation well. To compensate for the mix-up, they refunded my original udon, gave me a Katsu Curry Rice for free, and let me have as much tempura as I wanted.\n\nSome extra feedback, the tempura station labels of food were really mixed up and some did not properly represent what was behind the sign so it got confusing what I was looking at. Again, I\u2019m sure this will be improved as tike comes.\n\nMy girlfriend enjoyed her udon, and the curry rice was great. The tempura was decent, too. I think the food it\u2019s solid and fair for its price.\n\nIt\u2019s clear they\u2019re still finding their rhythm during the soft opening, but I can definitely see the passion and willingness to get things right for the customers. I\u2019ll definitely be back to finally try the udon!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Overall best Japanese Udon I\u2019ve had in Downtown Toronto!\n\nEverything was freshly made, food tasted really good and was well seasoned. Staff seemed very well coordinated despite the long line from dinner/opening rush. I\u2019ve had better udon in Markham but in DT i would say this is the best.\n\nI was surprised by how good the tempura is, Chikawa and Croquette were very good. Price is good, making this budget friendly but doesn\u2019t loose quality or taste. Will return!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"very excited to try this restaurant. The food we had overall was good but nothing outstanding, can't argue since the price point is great and service was super quick and friendly despite the long line. The lineup inside is a but confusing though as they take up space and people just try to reserve seats even though they're so far along in the line.\""
       }
     ]
-  }
+  },
+  "type": "restaurant"
 }

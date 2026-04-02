@@ -8,13 +8,13 @@
     "address": "Kitsilano",
     "type": "restaurant",
     "hours": [
-      "Monday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Tuesday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Wednesday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Thursday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Friday: 11:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Saturday: 9:00 AM – 2:00 PM, 5:00 – 10:00 PM",
-      "Sunday: 9:00 AM – 2:00 PM, 5:00 – 10:00 PM"
+      "Monday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Tuesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Wednesday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Thursday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Friday: 11:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Saturday: 9:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM",
+      "Sunday: 9:00\u202fAM\u2009\u2013\u20092:00\u202fPM, 5:00\u2009\u2013\u200910:00\u202fPM"
     ],
     "rating": 4.4,
     "review_count": 1481,
@@ -32,26 +32,26 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on West 4th in Kitsilano, right next door to Maenam, in a narrow storefront that feels more farmhouse than Vancouver dining room. Inside, reclaimed wood tables sit close together under Edison bulbs, with an open kitchen at the back where you can watch cooks plate everything that comes out. It's the kind of room where you hear other tables' conversations but don't mind—everyone's leaning in over their plates anyway.",
+        "body": "You're on West 4th in Kitsilano, right next door to Maenam, in a narrow storefront that feels more farmhouse than Vancouver dining room. Inside, reclaimed wood tables sit close together under Edison bulbs, with an open kitchen at the back where you can watch cooks plate everything that comes out. It's the kind of room where you hear other tables' conversations but don't mind\u2014everyone's leaning in over their plates anyway.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is BC farm-to-table cooking that changes with what's actually in season—think kale salad that regulars come back for specifically, chickpea fritters, house-made pastas, and mains like duck breast that arrive simple and centered on the plate. The tasting menu pulls together the kitchen's best ideas if you want the full range, though some dishes lean minimal where you might want more going on. Expect to spend around $18-32 for mains, with brunch on weekends running lighter and cheaper.",
+        "body": "This is BC farm-to-table cooking that changes with what's actually in season\u2014think kale salad that regulars come back for specifically, chickpea fritters, house-made pastas, and mains like duck breast that arrive simple and centered on the plate. The tasting menu pulls together the kitchen's best ideas if you want the full range, though some dishes lean minimal where you might want more going on. Expect to spend around $18-32 for mains, with brunch on weekends running lighter and cheaper.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "Saturday morning brunch when you want something more thoughtful than eggs benedict but still relaxed enough to linger over coffee. Also solid for a weeknight dinner that feels special without the formality—the kind of place where a birthday celebration doesn't require a speech.",
+        "body": "Saturday morning brunch when you want something more thoughtful than eggs benedict but still relaxed enough to linger over coffee. Also solid for a weeknight dinner that feels special without the formality\u2014the kind of place where a birthday celebration doesn't require a speech.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"We tried the December Tasting Menu, the Duck breast, and the wine.\n\nThe tasting menu is so great and we enjoyed it. The duck breast is also great however we feel it’s a bit plain, there’s no garnish or complementary dishes around it. Our server had kindly warned us about this tho which we appreciate but still.\n\nThe dessert and appetizer are amazing. We bought a glass of pinot noir and it tastes great too. Great ambience, and great service overall!\"\n\n⭐⭐⭐⭐⭐ \"Came here to celebrate my friend’s birthday 🎂 Absolutely love the farm to table concept and overall really had a wonderful dining experience.\n\nWe ordered the kale salad to start an I must say that was my favorite dish of the night!!! I would come back just for that kale salad too 🥬 We also ordered the chickpea fritters, a pasta and mussels. All the dishes were really tasty but my favorite is the night was hands down the kale salad 🙌🏻\n\nService and ambiance were excellent and would consider dining here again :)\"\n\n⭐⭐⭐⭐⭐ \"boyfie and i got a last minute reservation here in december\n\nextremely happy there is no dresscode cos we looked like bums for date night lmfao\n\nwine recommendation was great, staff were super pleasant and lovely to talk too, had great recommendations as well for other local businesses.\nfood was fabulous, definitely more sharey but hey, food is meant to be shared anyways.\ni take horrible photos but the food was really good and u just need to trust me.\n\nalso get the cheese platter. dont be a skimp. just get it. finish off slowly. enjoy the ambiance. i think it was my favourite part of the meal, simply because it was the perfect ending to a wonderful night & bottle of wine.\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"We tried the December Tasting Menu, the Duck breast, and the wine.\n\nThe tasting menu is so great and we enjoyed it. The duck breast is also great however we feel it\u2019s a bit plain, there\u2019s no garnish or complementary dishes around it. Our server had kindly warned us about this tho which we appreciate but still.\n\nThe dessert and appetizer are amazing. We bought a glass of pinot noir and it tastes great too. Great ambience, and great service overall!\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Came here to celebrate my friend\u2019s birthday \ud83c\udf82 Absolutely love the farm to table concept and overall really had a wonderful dining experience.\n\nWe ordered the kale salad to start an I must say that was my favorite dish of the night!!! I would come back just for that kale salad too \ud83e\udd6c We also ordered the chickpea fritters, a pasta and mussels. All the dishes were really tasty but my favorite is the night was hands down the kale salad \ud83d\ude4c\ud83c\udffb\n\nService and ambiance were excellent and would consider dining here again :)\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"boyfie and i got a last minute reservation here in december\n\nextremely happy there is no dresscode cos we looked like bums for date night lmfao\n\nwine recommendation was great, staff were super pleasant and lovely to talk too, had great recommendations as well for other local businesses.\nfood was fabulous, definitely more sharey but hey, food is meant to be shared anyways.\ni take horrible photos but the food was really good and u just need to trust me.\n\nalso get the cheese platter. dont be a skimp. just get it. finish off slowly. enjoy the ambiance. i think it was my favourite part of the meal, simply because it was the perfect ending to a wonderful night & bottle of wine.\""
       }
     ]
   },
@@ -70,5 +70,6 @@
       "path": "https://maps.google.com/maps/api/staticmap?center=43.68842985%2C-79.3903104&zoom=15&size=900x900&language=en&sensor=false&key=AIzaSyBoYjeRtfVI0Jd8Q_9mnflo9i4sOYpShB0&signature=hnzyp8BKsS2vux5PKs48GHspvT8",
       "caption": "Source image"
     }
-  ]
+  ],
+  "type": "restaurant"
 }

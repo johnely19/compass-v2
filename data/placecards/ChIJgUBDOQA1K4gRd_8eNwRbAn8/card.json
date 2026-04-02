@@ -17,27 +17,28 @@
       {
         "type": "prose",
         "title": "The Space",
-        "body": "You're on Dundas West, descending into a sprawling basement that manages to feel like a '70s rec room designed by someone with excellent taste. The lighting is low and intentional, jazz plays at a volume that lets you actually talk, and there are massive booths upholstered in something plush enough for groups of six or more. It's vast without feeling empty—more luxe laboratory than dungeon, though the subterranean thing does add a certain remove-from-the-world appeal.",
+        "body": "You're on Dundas West, descending into a sprawling basement that manages to feel like a '70s rec room designed by someone with excellent taste. The lighting is low and intentional, jazz plays at a volume that lets you actually talk, and there are massive booths upholstered in something plush enough for groups of six or more. It's vast without feeling empty\u2014more luxe laboratory than dungeon, though the subterranean thing does add a certain remove-from-the-world appeal.",
         "id": "block-the-space-0"
       },
       {
         "type": "prose",
         "title": "The Food",
-        "body": "This is a cocktail bar, not a kitchen, and the menu is built around creative riffs on classics. You'll find things like the Uh Negroni ($23), which skews fruitier than the original, whiskey highballs, and a rotating list of off-menu specials that the bartenders will walk you through. The danger here is how easy these drinks go down—you won't taste the alcohol until you stand up. Expect cocktails in the low-to-mid twenties.",
+        "body": "This is a cocktail bar, not a kitchen, and the menu is built around creative riffs on classics. You'll find things like the Uh Negroni ($23), which skews fruitier than the original, whiskey highballs, and a rotating list of off-menu specials that the bartenders will walk you through. The danger here is how easy these drinks go down\u2014you won't taste the alcohol until you stand up. Expect cocktails in the low-to-mid twenties.",
         "id": "block-the-food-1"
       },
       {
         "type": "prose",
         "title": "Go When",
-        "body": "This is date night territory, especially if you arrive early—think 8:15 on a Saturday before the rush—and want somewhere moody without being sceney. Solo drinkers will also feel at home posted up with a highball and the jazz.",
+        "body": "This is date night territory, especially if you arrive early\u2014think 8:15 on a Saturday before the rush\u2014and want somewhere moody without being sceney. Solo drinkers will also feel at home posted up with a highball and the jazz.",
         "id": "block-go-when-2"
       },
       {
         "id": "block-vibe",
         "type": "vibe",
         "title": "The Vibe",
-        "body": "⭐⭐⭐⭐⭐ \"10/10 vibes and drinks are delicious.\n\nThankfully we came early at 8:15 PM and beat the rush on a Saturday night. I really liked the vibes and it made for the perfect date spot. We got to try the whiskey highball, vodka soda and 3 other off menu items. Super dangerous how tasty the drinks are and that you don't taste the alcohol.\n\nHighly recommend and would come back.\"\n\n⭐⭐⭐⭐⭐ \"Imagine a Rooms location but make it a cocktail laboratory. In a vast basement but not a dungeon. Or, maybe a very luxe, cool dungeon, the lighting is superb. Jazz playing at the right volume. So much seating, good for solos or even groups of 6+ with their massive booths, like something out of the '70s era.\nThe cocktail menu is all creative spins on classic cocktails. I had the Uh Negroni ($23), which was fruitier than the bitterness of a regular Negroni. I saw someone order the espresso Martini which had no foam and was a translucent brown 🤯\n\nLooking forward to visiting again. ✌️Josh + Alex for the hospitality\"\n\n⭐⭐⭐⭐⭐ \"i will be shocked if this is not the next it bar in toronto. the aesthetic and vibe of this place is unreal and all of the drinks are incredible. we went even though they haven’t officially opened but this is my fav bar right now, excited for the official open!\""
+        "body": "\u2b50\u2b50\u2b50\u2b50\u2b50 \"10/10 vibes and drinks are delicious.\n\nThankfully we came early at 8:15 PM and beat the rush on a Saturday night. I really liked the vibes and it made for the perfect date spot. We got to try the whiskey highball, vodka soda and 3 other off menu items. Super dangerous how tasty the drinks are and that you don't taste the alcohol.\n\nHighly recommend and would come back.\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"Imagine a Rooms location but make it a cocktail laboratory. In a vast basement but not a dungeon. Or, maybe a very luxe, cool dungeon, the lighting is superb. Jazz playing at the right volume. So much seating, good for solos or even groups of 6+ with their massive booths, like something out of the '70s era.\nThe cocktail menu is all creative spins on classic cocktails. I had the Uh Negroni ($23), which was fruitier than the bitterness of a regular Negroni. I saw someone order the espresso Martini which had no foam and was a translucent brown \ud83e\udd2f\n\nLooking forward to visiting again. \u270c\ufe0fJosh + Alex for the hospitality\"\n\n\u2b50\u2b50\u2b50\u2b50\u2b50 \"i will be shocked if this is not the next it bar in toronto. the aesthetic and vibe of this place is unreal and all of the drinks are incredible. we went even though they haven\u2019t officially opened but this is my fav bar right now, excited for the official open!\""
       }
     ]
-  }
+  },
+  "type": "bar"
 }
