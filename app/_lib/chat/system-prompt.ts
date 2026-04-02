@@ -28,6 +28,7 @@ CRITICAL WORKFLOW — for recommendations:
 1. When a user asks about places, SEARCH THE WEB first for current info
 2. For each specific place you want to recommend, call lookup_place to verify it exists and is operational
 3. After verifying a place is good, call add_to_compass to save it to the user's Compass app
+   IMPORTANT: Set the "city" field to the place's ACTUAL city from the lookup_place address — NOT from the active trip/outing context. A Toronto restaurant is always city="Toronto", even when the active context is a Haliburton trip.
 4. In your response, include LINKS for each place:
    - Compass link: [Place Name](https://compass-ai-agent.vercel.app/placecards/PLACE_ID) — use the place_id from lookup_place
    - Google Maps link: [📍 Map](https://www.google.com/maps/place/?q=place_id:PLACE_ID)

@@ -5,6 +5,7 @@
 
 import { setUserData, getUserData } from '../../user-data';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
+import { resolveCity } from './resolve-city';
 
 export interface AddToCompassInput {
   name: string;
@@ -32,12 +33,15 @@ export async function addToCompass(
     // Generate unique ID for the discovery
     const discoveryId = `disco_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
+    // Derive city from actual place data, not from LLM context (fixes #187)
+    const resolvedCity = await resolveCity(input.place_id, input.address, input.city);
+
     const discovery: Discovery = {
       id: discoveryId,
       place_id: input.place_id,
       name: input.name,
       address: input.address,
-      city: input.city,
+      city: resolvedCity,
       type: input.category,
       rating: input.rating,
       contextKey: input.contextKey || '',
@@ -65,7 +69,7 @@ export async function addToCompass(
       updatedAt: new Date().toISOString(),
     });
 
-    console.log(`[add_to_compass] ✅ Added "${input.name}" (${input.city}) for user ${userId}`);
+    console.log(`[add_to_compass] ✅ Added "${input.name}" (${resolvedCity}) for user ${userId}`);
 
     // Build response URLs
     const compassUrl = input.place_id
@@ -74,7 +78,7 @@ export async function addToCompass(
     const mapsUrl = input.place_id
       ? `https://www.google.com/maps/place/?q=place_id:${input.place_id}`
       : (input.address
-        ? `https://www.google.com/maps/search/${encodeURIComponent(input.name + ' ' + input.city)}`
+        ? `https://www.google.com/maps/search/${encodeURIComponent(input.name + ' ' + resolvedCity)}`
         : null);
 
     return `✅ Added "${input.name}" to Compass! Links: compass=${compassUrl || 'pending'} maps=${mapsUrl || 'pending'}`;
