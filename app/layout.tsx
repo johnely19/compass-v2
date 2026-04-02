@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getCurrentUser } from "./_lib/user";
 import Nav from "./_components/Nav";
 import ChatWidget from "./_components/ChatWidget";
+import TriageHydrator from "./_components/TriageHydrator";
 import "./globals.css";
 
 import type { Viewport } from "next";
@@ -32,6 +33,7 @@ export default async function RootLayout({
           userName={user?.name}
           isOwner={user?.isOwner}
         />
+        {user && <TriageHydrator userId={user.id} />}
         {children}
         {user && <ChatWidget />}
       </body>
