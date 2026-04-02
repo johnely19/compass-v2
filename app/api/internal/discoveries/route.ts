@@ -7,7 +7,7 @@
  * Body: { userId: string, discoveries: Discovery[] }
  */
 import { NextRequest, NextResponse } from 'next/server';
-import { list, put, del } from '@vercel/blob';
+import { mergeAndWriteDiscoveries } from '../../../_lib/discovery-write';
 
 export const dynamic = 'force-dynamic';
 
@@ -50,42 +50,19 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: 'discoveries array required' }, { status: 400 });
   }
 
-  // Load existing discoveries
-  const { blobs } = await list({ prefix: `users/${userId}/discoveries` });
-  let existing: unknown[] = [];
-  if (blobs.length > 0 && blobs[0]) {
-    try {
-      const res = await fetch(blobs[0].url);
-      const data = await res.json();
-      existing = Array.isArray(data) ? data : (data.discoveries ?? []);
-    } catch {
-      existing = [];
-    }
+  // Merge-only write — never overwrites existing discoveries (#204)
+  let result;
+  try {
+    result = await mergeAndWriteDiscoveries(userId, incoming as unknown[]);
+  } catch (e) {
+    return NextResponse.json({ error: String(e) }, { status: 409 });
   }
 
-  // Deduplicate by id or name+contextKey
-  const existingIds = new Set(
-    (existing as Array<{ id?: string; name?: string; contextKey?: string }>)
-      .map(d => d.id || `${d.name ?? ''}|${d.contextKey ?? ''}`)
-  );
-
-  const newItems = (incoming as Array<{ id?: string; name?: string; contextKey?: string }>)
-    .filter(d => !existingIds.has(d.id || `${d.name ?? ''}|${d.contextKey ?? ''}`));
-
-  if (newItems.length === 0) {
-    return NextResponse.json({ added: 0, total: existing.length, message: 'All duplicates' });
+  if (result.added === 0 && result.upgraded === 0) {
+    return NextResponse.json({ added: 0, total: result.merged.length, message: 'All duplicates' });
   }
 
-  const merged = [...existing, ...newItems];
-
-  // Write back
-  for (const b of blobs) await del(b.url);
-  await put(`users/${userId}/discoveries.json`, JSON.stringify(merged), {
-    access: 'public',
-    addRandomSuffix: false,
-  });
-
-  console.log(`[internal/discoveries] Added ${newItems.length} discoveries for ${userId}`);
+  console.log(`[internal/discoveries] Added ${result.added} discoveries for ${userId}`);
 
   // Fire-and-forget: trigger post-push validation to backfill stubs/cities
   // Uses the internal validate endpoint (non-blocking)
@@ -97,5 +74,5 @@ export async function POST(request: NextRequest) {
     headers: { Authorization: `Bearer ${process.env.BRIEFING_INGEST_TOKEN || ''}` },
   }).catch(() => {}); // fire-and-forget — never block the response
 
-  return NextResponse.json({ added: newItems.length, total: merged.length });
+  return NextResponse.json({ added: result.added, upgraded: result.upgraded, total: result.merged.length });
 }

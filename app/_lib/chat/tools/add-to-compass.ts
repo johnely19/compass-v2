@@ -1,10 +1,12 @@
 /**
  * Add to Compass tool implementation.
  * Saves recommended places to the user's Compass app.
+ *
+ * Issue #204: Uses merge-only writes — discoveries are never lost.
  */
 
-import { setUserData, getUserData } from '../../user-data';
-import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
+import { mergeAndWriteDiscoveries } from '../../discovery-write';
+import type { Discovery, DiscoveryType } from '../../types';
 
 export interface AddToCompassInput {
   name: string;
@@ -46,26 +48,10 @@ export async function addToCompass(
       placeIdStatus: input.place_id ? 'verified' : 'missing',
     };
 
-    // Get existing discoveries
-    let existingData: UserDiscoveries | null = null;
-    try {
-      existingData = await getUserData<'discoveries'>(userId, 'discoveries');
-    } catch {
-      // No existing data
-    }
+    // Merge-only write (never overwrites existing discoveries)
+    const result = await mergeAndWriteDiscoveries(userId, [discovery]);
 
-    const discoveries = existingData?.discoveries || [];
-
-    // Add new discovery
-    discoveries.unshift(discovery);
-
-    // Save back to blob
-    await setUserData(userId, 'discoveries', {
-      discoveries,
-      updatedAt: new Date().toISOString(),
-    });
-
-    console.log(`[add_to_compass] ✅ Added "${input.name}" (${input.city}) for user ${userId}`);
+    console.log(`[add_to_compass] ✅ Added "${input.name}" (${input.city}) for user ${userId} (${result.added} new, ${result.duplicates} dupes)`);
 
     // Build response URLs
     const compassUrl = input.place_id

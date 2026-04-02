@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { cookies } from 'next/headers';
 import { put, list, del } from '@vercel/blob';
 import { COOKIE_NAME, getUserById } from '../../../_lib/user';
+import { getSavedDiscoveryIds } from '../../../_lib/discovery-write';
 import type { Discovery, DiscoveryType, PlaceIdStatus } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -335,6 +336,29 @@ export async function POST(request: NextRequest) {
   // Merge by place_id: keep entry with more data
   // ═══════════════════════════════════════════════════════
   const merged = mergeByPlaceId([...existingRaw, ...newItems]);
+
+  // ═══════════════════════════════════════════════════════
+  // SAFETY #204: Saved items are IMMUTABLE — never removed
+  // ═══════════════════════════════════════════════════════
+  const savedIds = await getSavedDiscoveryIds(targetUserId);
+  const mergedIds = new Set(merged.map(d => (d as Record<string, unknown>).id as string));
+  const missingSaved: string[] = [];
+  for (const savedId of savedIds) {
+    if (!mergedIds.has(savedId)) {
+      missingSaved.push(savedId);
+    }
+  }
+  if (missingSaved.length > 0) {
+    // Re-add any saved items that would be lost
+    for (const d of existingRaw) {
+      const rec = d as Record<string, unknown>;
+      if (missingSaved.includes(rec.id as string) && !mergedIds.has(rec.id as string)) {
+        merged.push(d);
+        mergedIds.add(rec.id as string);
+      }
+    }
+    console.warn(`[discoveries] Protected ${missingSaved.length} saved items from removal for ${targetUserId}`);
+  }
 
   // Allow shrink only if it's due to mergeByPlaceId (not data loss)
   // Original existing count + new items - duplicates should never be less than merged

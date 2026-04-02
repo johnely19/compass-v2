@@ -205,6 +205,17 @@ export function setTriageState(
   // Async fire-and-forget sync to Blob
   syncToServer(userId).catch(() => {/* silently ignore */});
 
+  // When saving, also mark the discovery with savedAt timestamp (#204)
+  // This is fire-and-forget to not block the UI
+  if (state === 'saved') {
+    fetch('/api/user/discoveries/mark-saved', {
+      method: 'POST',
+      credentials: 'include',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ discoveryId: placeId }),
+    }).catch(() => {/* silently ignore — triage state is already persisted */});
+  }
+
   // Notify any listeners that triage changed (e.g. Hot page filters)
   if (typeof window !== 'undefined') {
     window.dispatchEvent(new CustomEvent('triage-updated', { detail: { placeId, state } }));
