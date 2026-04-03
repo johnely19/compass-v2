@@ -4,7 +4,8 @@ import { getCurrentUser } from './_lib/user';
 import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery, UserManifest } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
-import { resolveImageUrl, getManifestHeroImage } from './_lib/image-url';
+import { resolveImageUrl } from './_lib/image-url';
+import { getManifestHeroImage } from './_lib/image-url.server';
 import { isTypeCompatible } from './_lib/context-compat';
 import HomeClient from './_components/HomeClient';
 
