@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import type { ChatMessage } from '../_lib/types';
+import styles from './ChatWidget.module.css';
 
 /**
  * Lightweight markdown→HTML for chat messages.
@@ -40,8 +41,33 @@ const TOOL_LABELS: Record<string, string> = {
   'create-context': '📋 Creating context…',
 };
 
+/** Format timestamp for display */
+function formatTime(isoString: string): string {
+  const date = new Date(isoString);
+  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+}
+
+/** Get last message preview text */
+function getLastMessagePreview(messages: ChatMessage[]): string | null {
+  if (messages.length === 0) return null;
+  const lastMsg = messages[messages.length - 1];
+  if (!lastMsg) return null;
+  const preview = lastMsg.content.substring(0, 50);
+  return preview + (lastMsg.content.length > 50 ? '...' : '');
+}
+
+/** Check if there was recent activity (within 5 minutes) */
+function hasRecentActivity(messages: ChatMessage[]): boolean {
+  if (messages.length === 0) return false;
+  const lastMsg = messages[messages.length - 1];
+  if (!lastMsg) return false;
+  const lastMsgTime = new Date(lastMsg.timestamp).getTime();
+  const now = Date.now();
+  return now - lastMsgTime < 5 * 60 * 1000;
+}
+
 export default function ChatWidget() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -49,28 +75,125 @@ export default function ChatWidget() {
   const [streamContent, setStreamContent] = useState('');
   const [toolStatus, setToolStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const messagesEndRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const abortRef = useRef<AbortController | null>(null);
+  const [justExpanded, setJustExpanded] = useState(false);
+  const [autoExpanded, setAutoExpanded] = useState(false);
 
-  // Load chat history on first open
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const collapsedInputRef = useRef<HTMLInputElement>(null);
+  const expandedInputRef = useRef<HTMLTextAreaElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
+  const dragStartY = useRef<number>(0);
+  const isDragging = useRef<boolean>(false);
+
+  // Load persisted state from localStorage on mount
   useEffect(() => {
-    if (isOpen && messages.length === 0) {
+    try {
+      const saved = localStorage.getItem('chat-widget-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        if (parsed.isExpanded) {
+          setIsExpanded(true);
+          setJustExpanded(true);
+          setTimeout(() => setJustExpanded(false), 400);
+        }
+      }
+    } catch (e) {
+      // Ignore localStorage errors
+    }
+  }, []);
+
+  // Load chat history on first expand
+  useEffect(() => {
+    if (isExpanded && messages.length === 0) {
       loadChatHistory();
     }
-  }, [isOpen]);
+  }, [isExpanded]);
+
+  // Check for auto-expand on new messages
+  useEffect(() => {
+    if (messages.length > 0 && !isExpanded) {
+      const lastMsg = messages[messages.length - 1];
+      if (lastMsg && lastMsg.role === 'assistant') {
+        // Auto-expand on new incoming message
+        handleExpand(true);
+        setAutoExpanded(true);
+        setTimeout(() => setAutoExpanded(false), 600);
+      }
+    }
+  }, [messages]);
+
+  // Check for recent activity to auto-expand on mount
+  useEffect(() => {
+    if (messages.length > 0 && hasRecentActivity(messages) && !isExpanded) {
+      handleExpand(true);
+      setAutoExpanded(true);
+      setTimeout(() => setAutoExpanded(false), 600);
+    }
+  }, []);
 
   // Auto-scroll to bottom on new messages or stream updates
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  }, [messages, streamContent, toolStatus]);
+  }, [messages, streamContent, toolStatus, isExpanded]);
 
-  // Focus input when opening
+  // Focus input when expanding
   useEffect(() => {
-    if (isOpen) {
-      inputRef.current?.focus();
+    if (isExpanded) {
+      setTimeout(() => expandedInputRef.current?.focus(), 100);
     }
-  }, [isOpen]);
+  }, [isExpanded]);
+
+  // Save state to localStorage when it changes
+  useEffect(() => {
+    try {
+      localStorage.setItem('chat-widget-state', JSON.stringify({ isExpanded }));
+    } catch (e) {
+      // Ignore localStorage errors
+    }
+  }, [isExpanded]);
+
+  function handleExpand(expanded: boolean) {
+    setIsExpanded(expanded);
+    if (expanded) {
+      setJustExpanded(true);
+      setTimeout(() => setJustExpanded(false), 400);
+    }
+  }
+
+  function handleToggle() {
+    handleExpand(!isExpanded);
+  }
+
+  function handleDragStart(e: React.MouseEvent | React.TouchEvent) {
+    isDragging.current = true;
+    if ('touches' in e && e.touches && e.touches[0]) {
+      dragStartY.current = e.touches[0].clientY;
+    } else if ('clientY' in e) {
+      dragStartY.current = e.clientY;
+    }
+  }
+
+  function handleDragMove(e: React.MouseEvent | React.TouchEvent) {
+    if (!isDragging.current) return;
+    let currentY: number;
+    if ('touches' in e && e.touches && e.touches[0]) {
+      currentY = e.touches[0].clientY;
+    } else if ('clientY' in e) {
+      currentY = e.clientY;
+    } else {
+      return;
+    }
+    const diff = currentY - dragStartY.current;
+    if (diff > 50) {
+      // Dragged down enough to collapse
+      handleExpand(false);
+      isDragging.current = false;
+    }
+  }
+
+  function handleDragEnd() {
+    isDragging.current = false;
+  }
 
   async function loadChatHistory() {
     try {
@@ -148,6 +271,11 @@ export default function ChatWidget() {
     setStreamContent('');
     setToolStatus(null);
 
+    // Expand if collapsed when sending
+    if (!isExpanded) {
+      handleExpand(true);
+    }
+
     // Add user message immediately
     const userMessage: ChatMessage = {
       role: 'user',
@@ -224,111 +352,195 @@ export default function ChatWidget() {
     }
   }
 
-  return (
-    <>
-      <button
-        className="chat-fab"
-        onClick={() => setIsOpen(!isOpen)}
-        aria-label={isOpen ? 'Close chat' : 'Open chat'}
-      >
-        {isOpen ? '✕' : '💬'}
-      </button>
+  const lastPreview = getLastMessagePreview(messages);
 
-      {isOpen && (
-        <div className="chat-panel">
-          <div className="chat-panel-header">
-            <h3>Concierge</h3>
-            <button
-              className="btn-icon btn-ghost"
-              onClick={() => setIsOpen(false)}
-              aria-label="Close chat"
-            >
-              ✕
-            </button>
+  // Render collapsed state
+  if (!isExpanded) {
+    return (
+      <div className={styles.chatRoot}>
+        <div className={styles.chatCollapsed} onClick={handleToggle}>
+          {/* Preview section */}
+          <div className={styles.chatPreview}>
+            <span className={styles.chatPreviewIcon}>💬</span>
+            {lastPreview ? (
+              <span className={styles.chatPreviewText}>{lastPreview}</span>
+            ) : (
+              <span className={styles.chatPreviewPlaceholder}>Ask me anything...</span>
+            )}
           </div>
 
-          <div className="chat-messages">
-            {messages.length === 0 && !loading && !streaming && (
-              <div className="chat-empty">
-                <p>Hey! I&apos;m your Compass Concierge.</p>
-                <p>Ask me about restaurants, places to visit, or help planning your next trip.</p>
-              </div>
-            )}
-
-            {messages.map((msg, i) => (
-              <div
-                key={i}
-                className={`chat-message chat-message-${msg.role}`}
-              >
-                {msg.role === 'assistant' ? (
-                  <div
-                    className="chat-message-content"
-                    dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.content) }}
-                  />
-                ) : (
-                  <div className="chat-message-content">{msg.content}</div>
-                )}
-              </div>
-            ))}
-
-            {/* Streaming response in progress */}
-            {streaming && streamContent && (
-              <div className="chat-message chat-message-assistant">
-                <div
-                  className="chat-message-content"
-                  dangerouslySetInnerHTML={{ __html: renderMarkdown(streamContent) }}
-                />
-                <span className="chat-stream-cursor" />
-              </div>
-            )}
-
-            {/* Tool-use indicator */}
-            {toolStatus && (
-              <div className="chat-message chat-message-assistant">
-                <div className="chat-message-content chat-tool-status">
-                  {toolStatus}
-                </div>
-              </div>
-            )}
-
-            {/* Initial loading dots (before first token) */}
-            {loading && (
-              <div className="chat-message chat-message-assistant">
-                <div className="chat-message-content chat-loading">
-                  <span className="chat-typing-dot">.</span>
-                  <span className="chat-typing-dot">.</span>
-                  <span className="chat-typing-dot">.</span>
-                </div>
-              </div>
-            )}
-
-            {error && (
-              <div className="chat-error">{error}</div>
-            )}
-
-            <div ref={messagesEndRef} />
-          </div>
-
-          <form className="chat-input-form" onSubmit={handleSend}>
+          {/* Input section - handles its own clicks */}
+          <div
+            className={styles.chatCollapsedInput}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleExpand(true);
+            }}
+          >
             <input
-              ref={inputRef}
+              ref={collapsedInputRef}
               type="text"
-              className="chat-input"
-              placeholder="Ask me anything..."
+              className={styles.chatCollapsedField}
+              placeholder="Type a message..."
               value={input}
               onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSend(e as unknown as React.FormEvent);
+                }
+              }}
               disabled={loading || streaming}
             />
             <button
-              type="submit"
-              className="chat-send"
+              type="button"
+              className={styles.chatCollapsedSend}
               disabled={loading || streaming || !input.trim()}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleSend(e as unknown as React.FormEvent);
+              }}
             >
               ➤
             </button>
-          </form>
+          </div>
         </div>
-      )}
-    </>
+      </div>
+    );
+  }
+
+  // Render expanded state
+  return (
+    <div
+      className={`${styles.chatRoot} ${autoExpanded ? styles.chatAutoExpand : ''}`}
+      onMouseMove={handleDragMove}
+      onMouseUp={handleDragEnd}
+      onMouseLeave={handleDragEnd}
+      onTouchMove={handleDragMove}
+      onTouchEnd={handleDragEnd}
+    >
+      <div
+        className={`${styles.chatExpanded} ${justExpanded || autoExpanded ? styles.chatAutoExpand : ''}`}
+      >
+        {/* Drag handle */}
+        <div
+          className={styles.chatDragHandle}
+          onMouseDown={handleDragStart}
+          onTouchStart={handleDragStart}
+        >
+          <div className={styles.chatDragHandleBar} />
+        </div>
+
+        {/* Header */}
+        <div className={styles.chatHeader}>
+          <div className={styles.chatHeaderTitle}>
+            <span className={styles.chatHeaderIcon}>💬</span>
+            <span className={styles.chatHeaderText}>Concierge</span>
+          </div>
+          <button
+            className={styles.chatHeaderClose}
+            onClick={() => handleExpand(false)}
+            aria-label="Collapse chat"
+          >
+            ✕
+          </button>
+        </div>
+
+        {/* Messages */}
+        <div className={styles.chatMessages}>
+          {messages.length === 0 && !loading && !streaming && (
+            <div className={styles.chatEmpty}>
+              <div className={styles.chatEmptyIcon}>🧭</div>
+              <div className={styles.chatEmptyTitle}>Hey! I&apos;m your Compass Concierge.</div>
+              <div className={styles.chatEmptyText}>
+                Ask me about restaurants, places to visit, or help planning your next trip.
+              </div>
+            </div>
+          )}
+
+          {messages.map((msg, i) => (
+            <div
+              key={i}
+              className={`${styles.chatMessage} ${
+                msg.role === 'user' ? styles.chatMessageUser : styles.chatMessageAssistant
+              }`}
+            >
+              <div
+                className={`${styles.chatBubble} ${
+                  msg.role === 'user' ? styles.chatBubbleUser : styles.chatBubbleAssistant
+                }`}
+              >
+                {msg.role === 'assistant' ? (
+                  <div
+                    className={styles.chatMarkdown}
+                    dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.content) }}
+                  />
+                ) : (
+                  <div className={styles.chatMarkdown}>{msg.content}</div>
+                )}
+              </div>
+              <span className={styles.chatTimestamp}>{formatTime(msg.timestamp)}</span>
+            </div>
+          ))}
+
+          {/* Streaming response in progress */}
+          {streaming && streamContent && (
+            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+              <div className={`${styles.chatBubble} ${styles.chatBubbleAssistant}`}>
+                <div
+                  className={styles.chatMarkdown}
+                  dangerouslySetInnerHTML={{ __html: renderMarkdown(streamContent) }}
+                />
+                <span className={styles.chatStreamCursor} />
+              </div>
+            </div>
+          )}
+
+          {/* Tool-use indicator */}
+          {toolStatus && (
+            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+              <div className={styles.chatToolStatus}>{toolStatus}</div>
+            </div>
+          )}
+
+          {/* Initial loading dots (before first token) */}
+          {loading && (
+            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+              <div className={styles.chatTyping}>
+                <span className={styles.chatTypingDot} />
+                <span className={styles.chatTypingDot} />
+                <span className={styles.chatTypingDot} />
+              </div>
+            </div>
+          )}
+
+          {error && (
+            <div className={styles.chatError}>{error}</div>
+          )}
+
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Input area */}
+        <form className={styles.chatInputArea} onSubmit={handleSend}>
+          <textarea
+            ref={expandedInputRef}
+            className={styles.chatInput}
+            placeholder="Ask me anything..."
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            disabled={loading || streaming}
+            rows={1}
+          />
+          <button
+            type="submit"
+            className={styles.chatSendBtn}
+            disabled={loading || streaming || !input.trim()}
+          >
+            ➤
+          </button>
+        </form>
+      </div>
+    </div>
   );
 }
