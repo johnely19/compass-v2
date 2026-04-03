@@ -1,0 +1,18 @@
+#!/bin/bash
+# Post-merge hook: clear cache and restart dev server
+# so the running server always matches the latest code.
+
+PROJECT_DIR="$(git rev-parse --show-toplevel)"
+LABEL="com.openclaw.compass-v2-dev"
+
+echo "🔄 Post-merge: clearing .next cache..."
+rm -rf "$PROJECT_DIR/.next"
+
+echo "🔄 Restarting dev server..."
+launchctl stop "$LABEL" 2>/dev/null || true
+sleep 1
+lsof -t -i :3002 2>/dev/null | xargs kill -9 2>/dev/null || true
+sleep 1
+launchctl start "$LABEL" 2>/dev/null || true
+
+echo "✅ Post-merge hook complete"
