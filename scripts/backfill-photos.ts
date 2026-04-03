@@ -189,7 +189,8 @@ async function backfill() {
   const usersFile = readFileSync(join(process.cwd(), 'data/users.json'), 'utf-8');
   const usersData: Users = JSON.parse(usersFile);
 
-  const users = Object.values(usersData.users).filter(u => u.active !== false);
+  // Backfill ALL users regardless of active status — they may have existing data
+  const users = Object.values(usersData.users);
 
   let totalUpdated = 0;
   const usersProcessed: string[] = [];
@@ -203,21 +204,21 @@ async function backfill() {
     console.log(`User ${user.id}: processing...`);
 
     // Fetch user's discoveries from Blob
-    const discoveriesUrl = `users/${user.id}/discoveries.json`;
+    const blobPrefix = `users/${user.id}/discoveries.json`;
 
     let discoveries: Discovery[] = [];
 
     try {
-      const response = await fetch(discoveriesUrl, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-
+      const { blobs } = await list({ prefix: blobPrefix, limit: 1, token });
+      const blob = blobs[0];
+      if (!blob) {
+        console.log(`  User ${user.id}: no discoveries found`);
+        continue;
+      }
+      const response = await fetch(blob.url);
       if (response.ok) {
         const data = (await response.json()) as Discoveries;
         discoveries = data.discoveries || [];
-      } else if (response.status === 404) {
-        console.log(`  User ${user.id}: no discoveries found`);
-        continue;
       } else {
         console.error(`  Error fetching discoveries: ${response.status}`);
         continue;
@@ -316,10 +317,16 @@ async function backfill() {
     if (userUpdated > 0 && !dryRun) {
       const discoveriesPayload: Discoveries = { discoveries };
 
+      // Delete existing blob first, then write new one
+      try {
+        const { blobs } = await list({ prefix: `users/${user.id}/discoveries.json`, limit: 1, token });
+        if (blobs[0]) await del(blobs[0].url, { token });
+      } catch { /* ignore */ }
       await put(`users/${user.id}/discoveries.json`, JSON.stringify(discoveriesPayload, null, 2), {
         token,
         contentType: 'application/json',
         access: 'public',
+        addRandomSuffix: false,
       });
     }
 
