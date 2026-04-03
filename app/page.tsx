@@ -7,6 +7,7 @@ import { isContextActive } from './_lib/context-lifecycle';
 import { resolveImageUrl } from './_lib/image-url';
 import { getManifestHeroImage } from './_lib/image-url.server';
 import { isTypeCompatible } from './_lib/context-compat';
+import { scoreDiscovery } from './_lib/discovery-score';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -166,7 +167,12 @@ export default async function HomePage() {
       globalSeenPlaceIds.add(d.place_id);
       return true;
     });
-    byContext.set(ctxKey, globalDeduped);
+
+    // Score and sort — best places first
+    const scored = globalDeduped
+      .map(d => ({ ...d, _score: scoreDiscovery(d).total }))
+      .sort((a, b) => (b._score || 0) - (a._score || 0));
+    byContext.set(ctxKey, scored);
   }
 
   // Build contextMeta — structured trip data for widgets
