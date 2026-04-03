@@ -48,3 +48,7 @@ qa/last-report.json
 
 # staging dev server logs
 logs/*.log
+
+# test artifacts
+test-results/
+playwright-report/
