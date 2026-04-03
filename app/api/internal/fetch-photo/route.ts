@@ -8,19 +8,11 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { put, head } from '@vercel/blob';
+import { classifyPhotos } from '../../../_lib/image-classifier';
+import type { DiscoveryType, PlaceImage } from '../../../_lib/types';
 
 const PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 const BLOB_BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
-
-export type ImageRole =
-  | 'hero' | 'exterior' | 'interior' | 'food' | 'drink'
-  | 'water' | 'surroundings' | 'aerial' | 'detail' | 'general';
-
-interface PlaceImage {
-  url: string;
-  role: ImageRole;
-  source: string;
-}
 
 async function delay(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
@@ -34,17 +26,20 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { placeId?: string; count?: number };
+  let body: { placeId?: string; count?: number; placeType?: DiscoveryType };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
-  const { placeId, count } = body;
+  const { placeId, count, placeType } = body;
   if (!placeId) {
     return NextResponse.json({ error: 'placeId is required' }, { status: 400 });
   }
+
+  // Default place type if not provided
+  const type: DiscoveryType = placeType || 'restaurant';
 
   const photoCount = Math.min(count || 6, 10);
 
@@ -62,7 +57,7 @@ export async function POST(req: NextRequest) {
           if (photo) {
             cachedPhotos.push({
               url: photo.url,
-              role: i === 1 ? 'hero' : 'general',
+              role: 'general', // Will be classified below
               source: 'google-places',
             });
           } else {
@@ -70,6 +65,19 @@ export async function POST(req: NextRequest) {
           }
         } catch {
           break;
+        }
+      }
+
+      // Classify cached photos based on place type
+      if (cachedPhotos.length > 0) {
+        const rawPhotos = cachedPhotos.map(p => ({ url: p.url, source: p.source }));
+        const classified = classifyPhotos(rawPhotos, type);
+
+        for (let i = 0; i < cachedPhotos.length; i++) {
+          const classifiedPhoto = classified[i];
+          if (classifiedPhoto) {
+            cachedPhotos[i]!.role = classifiedPhoto.role;
+          }
         }
       }
 
@@ -122,9 +130,10 @@ export async function POST(req: NextRequest) {
                 contentType: 'image/jpeg',
               });
 
+              // Collect all photos for classification
               photos.push({
                 url: uploaded.url,
-                role: i === 0 ? 'hero' : 'general',
+                role: 'general', // Will be classified after loop
                 source: 'google-places',
               });
             } catch (e) {
@@ -135,6 +144,20 @@ export async function POST(req: NextRequest) {
           // Add 100ms delay between photo fetches
           if (i < numToFetch - 1) {
             await delay(100);
+          }
+        }
+
+        // Classify photos based on place type
+        if (photos.length > 0) {
+          const rawPhotos = photos.map(p => ({ url: p.url, source: p.source }));
+          const classified = classifyPhotos(rawPhotos, type);
+
+          // Update roles with classified values
+          for (let i = 0; i < photos.length; i++) {
+            const classifiedPhoto = classified[i];
+            if (classifiedPhoto) {
+              photos[i]!.role = classifiedPhoto.role;
+            }
           }
         }
       }
@@ -156,6 +179,19 @@ export async function POST(req: NextRequest) {
     const fallbackPhoto = await fetchFallbackImage(location, placeId);
     if (fallbackPhoto) {
       photos.push(fallbackPhoto);
+    }
+  }
+
+  // Classify any remaining photos
+  if (photos.length > 0) {
+    const rawPhotos = photos.map(p => ({ url: p.url, source: p.source }));
+    const classified = classifyPhotos(rawPhotos, type);
+
+    for (let i = 0; i < photos.length; i++) {
+      const classifiedPhoto = classified[i];
+      if (classifiedPhoto) {
+        photos[i]!.role = classifiedPhoto.role;
+      }
     }
   }
 
