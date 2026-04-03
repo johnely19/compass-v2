@@ -483,8 +483,9 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
   );
 }
 
-/* ---- Score Breakdown Section ---- */
+/* ---- Score Breakdown Section (collapsible) ---- */
 function ScoreBreakdownSection({ discovery }: { discovery: Partial<Discovery> }) {
+  const [expanded, setExpanded] = useState(false);
   const score = scoreDiscovery(discovery as Discovery);
   const dimensions: Array<{ label: string; key: keyof ScoreBreakdown; icon: string; max: number }> = [
     { label: 'Rating', key: 'rating', icon: '⭐', max: 20 },
@@ -495,33 +496,43 @@ function ScoreBreakdownSection({ discovery }: { discovery: Partial<Discovery> })
   ];
 
   return (
-    <div className="score-breakdown-section">
-      <h3 className="score-breakdown-title">Discovery Score</h3>
-      <div className="score-breakdown-total">
-        <span className="score-breakdown-total-value">{score.total}</span>
-        <span className="score-breakdown-total-max">/ 100</span>
+    <div
+      className={`score-breakdown-section ${expanded ? 'score-breakdown-expanded' : ''}`}
+      onClick={() => setExpanded(!expanded)}
+      role="button"
+      tabIndex={0}
+      onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') setExpanded(!expanded); }}
+    >
+      <div className="score-breakdown-header">
+        <span className="score-breakdown-title">Discovery Score</span>
+        <span className="score-breakdown-summary">{score.total} out of 100</span>
+        <span className={`score-breakdown-chevron ${expanded ? 'score-breakdown-chevron-open' : ''}`}>›</span>
       </div>
-      <div className="score-breakdown-bars">
-        {dimensions.map(dim => {
-          const value = score[dim.key];
-          const pct = Math.round((value / dim.max) * 100);
-          return (
-            <div key={dim.key} className="score-breakdown-row">
-              <span className="score-breakdown-label">
-                <span className="score-breakdown-icon">{dim.icon}</span>
-                {dim.label}
-              </span>
-              <div className="score-breakdown-bar-track">
-                <div
-                  className="score-breakdown-bar-fill"
-                  style={{ width: `${pct}%` }}
-                />
-              </div>
-              <span className="score-breakdown-value">{value}/{dim.max}</span>
-            </div>
-          );
-        })}
-      </div>
+      {expanded && (
+        <div className="score-breakdown-detail">
+          <div className="score-breakdown-bars">
+            {dimensions.map(dim => {
+              const value = score[dim.key];
+              const pct = Math.round((value / dim.max) * 100);
+              return (
+                <div key={dim.key} className="score-breakdown-row">
+                  <span className="score-breakdown-label">
+                    <span className="score-breakdown-icon">{dim.icon}</span>
+                    {dim.label}
+                  </span>
+                  <div className="score-breakdown-bar-track">
+                    <div
+                      className="score-breakdown-bar-fill"
+                      style={{ width: `${pct}%` }}
+                    />
+                  </div>
+                  <span className="score-breakdown-value">{value}/{dim.max}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </div>
   );
 }

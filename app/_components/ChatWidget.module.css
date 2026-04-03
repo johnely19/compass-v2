@@ -154,9 +154,9 @@
   max-height: 600px;
   display: flex;
   flex-direction: column;
-  background: rgba(235, 231, 224, 0.88);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(240, 237, 232, 0.35);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.08), 0 -1px 8px rgba(0, 0, 0, 0.04);
