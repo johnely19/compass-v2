@@ -138,7 +138,7 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }
-      : gradient;
+      : { background: gradient };
 
     return (
       <div key={card.placeId} className="hot-place-card" style={{ position: 'relative' }}>
