@@ -513,6 +513,13 @@
   resize: none;
   min-height: 44px;
   max-height: 120px;
+  overflow-y: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.chatInput::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 .chatInput::placeholder {

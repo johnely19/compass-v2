@@ -519,6 +519,12 @@ export default function ChatWidget() {
             placeholder="Ask me anything..."
             value={input}
             onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSend(e as unknown as React.FormEvent);
+              }
+            }}
             disabled={loading || streaming}
             rows={1}
           />
