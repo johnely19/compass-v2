@@ -438,10 +438,6 @@ export default function ChatWidget() {
 
         {/* Header */}
         <div className={styles.chatHeader}>
-          <div className={styles.chatHeaderTitle}>
-            <span className={styles.chatHeaderIcon}>💬</span>
-            <span className={styles.chatHeaderText}>Concierge</span>
-          </div>
           <button
             className={styles.chatHeaderClose}
             onClick={() => handleExpand(false)}
