@@ -1881,6 +1881,12 @@ a:hover {
   color: inherit;
 }
 
+.place-card-image {
+  width: 100%;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  display: block;
+}
+
 .place-browse-name {
   font-size: 0.95rem;
   margin-bottom: var(--space-xs);

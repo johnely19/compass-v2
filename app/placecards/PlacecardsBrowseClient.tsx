@@ -1,11 +1,53 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES, getTypeMeta } from '../_lib/discovery-types';
 import TypeBadge from '../_components/TypeBadge';
 import TriageButtons from '../_components/TriageButtons';
+
+function PlaceCardImage({ src }: { src: string | null }) {
+  const [imgError, setImgError] = useState(false);
+  const [imgLoaded, setImgLoaded] = useState(false);
+
+  useEffect(() => {
+    setImgError(false);
+    setImgLoaded(false);
+  }, [src]);
+
+  if (!src) return null;
+
+  return (
+    <div
+      className="place-card-image"
+      style={{
+        aspectRatio: '3/2',
+        background: imgLoaded
+          ? 'transparent'
+          : 'linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%)',
+        overflow: 'hidden',
+      }}
+    >
+      {!imgError && (
+        <img
+          src={src}
+          alt=""
+          loading="lazy"
+          onLoad={() => setImgLoaded(true)}
+          onError={() => setImgError(true)}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: imgLoaded ? 1 : 0,
+            transition: 'opacity 0.2s ease',
+          }}
+        />
+      )}
+    </div>
+  );
+}
 
 export interface PlaceCardData {
   placeId: string;
@@ -13,6 +55,7 @@ export interface PlaceCardData {
   type: DiscoveryType;
   city: string;
   rating: number | null;
+  heroImage: string | null;
 }
 
 export interface PlacecardsBrowseClientProps {
@@ -178,6 +221,7 @@ export default function PlacecardsBrowseClient({
         {filteredCards.map((card) => (
           <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
             <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
+              <PlaceCardImage src={card.heroImage} />
               <div className="card-body">
                 <h3 className="place-browse-name">{card.name}</h3>
                 <TypeBadge type={card.type} />
