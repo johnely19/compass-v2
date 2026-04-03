@@ -273,6 +273,9 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
   return (
     <div className={`place-detail-v2 ${isDark ? 'place-detail-dark' : ''}`}>
 
+      {/* ── Discovery Score (above hero) ── */}
+      {discovery && <ScoreBreakdownSection discovery={discovery} />}
+
       {/* ── Hero ── */}
       <div
         className="place-detail-v2-hero"
@@ -474,9 +477,6 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         <div className="place-detail-map-compact">
           <MapWidget placeId={card.place_id} name={card.name} height={200} />
         </div>
-
-        {/* Discovery Score Breakdown */}
-        {discovery && <ScoreBreakdownSection discovery={discovery} />}
 
       </div>
     </div>
