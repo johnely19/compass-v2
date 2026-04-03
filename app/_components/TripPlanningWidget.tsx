@@ -102,7 +102,10 @@ export default function TripPlanningWidget({
   userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0, purpose, people,
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
+  const [mounted, setMounted] = useState(false);
   const [travelExpanded, setTravelExpanded] = useState(false);
+
+  useEffect(() => { setMounted(true); }, []);
   const [accomInputOpen, setAccomInputOpen] = useState(false);
   const [accomText, setAccomText] = useState('');
   const [accomParsing, setAccomParsing] = useState(false);
@@ -220,10 +223,10 @@ export default function TripPlanningWidget({
         {planning.travel.status === 'booked' && travelShort && !travelExpanded && (
           <span className="tpw-summary" onClick={() => setTravelExpanded(true)}>{travelShort}</span>
         )}
-        {savedCount > 0 && (
-          <Link href={`${reviewUrl}?tab=saved`} className="tpw-saved">
+        {mounted && savedCount > 0 && (
+          <a href={`${reviewUrl}?tab=saved`} className="tpw-saved">
             {savedCount} saved
-          </Link>
+          </a>
         )}
       </div>
 

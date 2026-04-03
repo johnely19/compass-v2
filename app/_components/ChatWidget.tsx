@@ -358,18 +358,8 @@ export default function ChatWidget() {
   if (!isExpanded) {
     return (
       <div className={styles.chatRoot}>
-        <div className={styles.chatCollapsed} onClick={handleToggle}>
-          {/* Preview section */}
-          <div className={styles.chatPreview}>
-            <span className={styles.chatPreviewIcon}>💬</span>
-            {lastPreview ? (
-              <span className={styles.chatPreviewText}>{lastPreview}</span>
-            ) : (
-              <span className={styles.chatPreviewPlaceholder}>Ask me anything...</span>
-            )}
-          </div>
-
-          {/* Input section - handles its own clicks */}
+        <div className={styles.chatCollapsed}>
+          {/* Input section */}
           <div
             className={styles.chatCollapsedInput}
             onClick={(e) => {

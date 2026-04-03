@@ -1,0 +1,112 @@
+
+🤖 Compass QA Agent — 2026-04-02T07:23:10.085Z
+   Mode: nightly | Fix: auto | Target: https://compass-v2-lake.vercel.app
+
+Step 1/5 — Taking screenshots...
+  📸 Launching Chromium (390×844 — iPhone viewport)...
+  ✅ home-full
+  ✅ placecard-restaurant-cookshop
+  ✅ placecard-bar-balera
+  ✅ placecard-restaurant-portici
+  ✅ placecard-cafe-etape22
+  ✅ placecard-cottage-muskoka
+  ✅ review-nyc
+  ✅ review-toronto
+  ❌ browse-places: page.goto: net::ERR_TIMED_OUT at https://compass-v2-lake.vercel.app/placecards
+Call log:
+  - navigating to "https://compass-v2-lake.vercel.app/placecards", waiting until "networkidle"
+
+  ✅ hot-page
+  → 9/10 captured
+
+Step 2/5 — Scoring with Claude Vision (claude-opus-4-6)...
+  🔍 Scoring home-full...
+  ⚠️ home-full: 6.8/10 — The home feed shows real photos and good info density for most trips, but suffers from widespread right-side truncation of venue names and links, missing price levels and hours, and inconsistent type badges across venue cards.
+  🔍 Scoring placecard-restaurant-cookshop...
+  🔴 placecard-restaurant-cookshop: 5.2/10 — Cookshop place card lacks a real hero image (shows gradient placeholder), is missing a rating/review score, neighbourhood label, and hours — key decision-making info that reduces the card's usefulness.
+  🔍 Scoring placecard-bar-balera...
+  ⚠️ placecard-bar-balera: 7.6/10 — Strong placecard with a high-quality hero photo, correct name/rating/price/neighborhood info, but missing hours, phone, embedded map, and has a truncated photo caption.
+  🔍 Scoring placecard-restaurant-portici...
+  ✅ placecard-restaurant-portici: 8/10 — Portici's placecard is well-populated with a real hero photo, rating, price, hours, and address, but has minor issues with the type badge contrast, potentially stale hours data showing 'Closed today' despite listed Thursday hours, and a truncated photo label.
+  🔍 Scoring placecard-cafe-etape22...
+  ⚠️ placecard-cafe-etape22: 6.6/10 — Hero image is a genuine, atmospheric photo of the venue, and layout is clean, but the card is missing rating, price level, hours, and an embedded map, and the type badge incorrectly labels this café as a restaurant.
+  🔍 Scoring placecard-cottage-muskoka...
+  🔴 placecard-cottage-muskoka: 5.4/10 — Cottage placecard is missing critical decision-making information (rating, price, proper name, type badge, amenities) and the hero image shows a parking lot rather than the actual property, significantly undermining listing quality.
+  🔍 Scoring review-nyc...
+  🔴 review-nyc: 5/10 — The trip review page lacks venue photos, ratings, price levels, and neighbourhood labels on place cards, and has duplicate entries and 40 ungeocoded places — the map is well-zoomed to NYC but the info density is too low for effective decision-making.
+  🔍 Scoring review-toronto...
+  🔴 review-toronto: 5.2/10 — The Toronto review queue has reasonable layout and neighbourhood grouping, but is missing critical decision-making data (ratings, price levels, hours) on every card, and one card lacks a thumbnail photo entirely.
+  🔍 Scoring hot-page...
+  ⚠️ hot-page: 6.2/10 — The hot page has good real photography and clean layout, but place cards lack critical decision-making data (ratings, price level, hours, neighbourhood) and one place type badge may be incorrectly categorized.
+  → 9/10 scored
+
+  Average score: 6.22/10
+
+Step 3/5 — Running auto-fixes (9 pages with fixable issues)...
+  🔧 Auto-fixing [home-full]: Multiple venues missing price level indicators across all tr
+  🔧 Auto-fixing [home-full]: Hours of operation not visible on any venue card
+  🔧 Auto-fixing [home-full]: No neighbourhood/area labels shown for most venues — only Go
+  🔧 Auto-fixing [home-full]: Date Night with Huzur and Grey Gardens sections lack type ba
+  🔧 Auto-fixing [home-full]: 'View in Goo' text is truncated on multiple cards instead of
+  🔧 Auto-fixing [placecard-restaurant-cookshop]: Hero image shows a blurred/gradient placeholder instead of a
+  🔧 Auto-fixing [placecard-restaurant-cookshop]: No hours of operation displayed above the fold or in visible
+  🔧 Auto-fixing [placecard-restaurant-cookshop]: Neighbourhood label missing — only shows 'NYC' but not the s
+  🔧 Auto-fixing [placecard-restaurant-cookshop]: Food photo captions are truncated — second photo label shows
+  🔧 Auto-fixing [placecard-bar-balera]: Photo captions are truncated — second photo label shows 'fc'
+  🔧 Auto-fixing [placecard-bar-balera]: Phone number and website link are not displayed
+  🔧 Auto-fixing [placecard-restaurant-portici]: Restaurant type badge text 'Restaurant' is partially obscure
+  🔧 Auto-fixing [placecard-restaurant-portici]: Food photo labels are truncated — second photo category show
+  🔧 Auto-fixing [placecard-cafe-etape22]: No price level indicator displayed
+  🔧 Auto-fixing [placecard-cafe-etape22]: No hours of operation visible anywhere on the card
+  🔧 Auto-fixing [placecard-cottage-muskoka]: No rating displayed anywhere on the placecard
+  🔧 Auto-fixing [placecard-cottage-muskoka]: No price level or nightly rate information shown
+  🔧 Auto-fixing [placecard-cottage-muskoka]: No type badge visible (e.g. 'Cottage' or 'Accommodation' bad
+  🔧 Auto-fixing [placecard-cottage-muskoka]: No neighbourhood or region label shown above the fold (Musko
+  🔧 Auto-fixing [placecard-cottage-muskoka]: No hours, check-in/check-out times, or amenities visible
+  🔧 Auto-fixing [review-nyc]: No hero image for the trip — the page header area has no pho
+  🔧 Auto-fixing [review-nyc]: Place cards (e.g. Maison Premiere) show no food/venue photo 
+  🔧 Auto-fixing [review-nyc]: Neighbourhood label missing from place cards — only 'New Yor
+  🔧 Auto-fixing [review-nyc]: Duplicate entry: 'Maison Premiere' appears twice — once stan
+  🔧 Auto-fixing [review-toronto]: Blue Horse Eatery card has no thumbnail photo, only text and
+  🔧 Auto-fixing [review-toronto]: No ratings displayed for any of the listed experiences
+  🔧 Auto-fixing [review-toronto]: No price level indicator shown on any card
+  🔧 Auto-fixing [review-toronto]: No hours of operation visible for any listing
+  🔧 Auto-fixing [review-toronto]: Bar Eugenie and Neon Tiger show thumbnail photos but Blue Ho
+  🔧 Auto-fixing [review-toronto]: The Arch Café/Bar address shows only '293 Augusta Ave' with 
+  🔧 Auto-fixing [review-toronto]: 'View in Google Maps' link present on some cards but not on 
+  🔧 Auto-fixing [hot-page]: CHÉRIE card missing neighbourhood label — only shows 'Toront
+  🔧 Auto-fixing [hot-page]: Hours of operation not visible on any card in the feed
+  → Fixed: 0 | Failed: 33
+
+Step 5/5 — Updating baselines for high-scoring pages...
+  → Updated 0 baselines
+
+
+════════════════════════════════════════════════════════════
+  QA Report — 2026-04-02
+────────────────────────────────────────────────────────────
+  Pages: 9/10 scored
+  Average: 6.22/10
+  ✅ 2 green  ⚠️  7 yellow  🔴 0 red
+  Trend: 03-30: 5.54 → 03-31: 5.73 → 04-01: 6.02 → 04-02: 6.22
+
+  ⬆️  Escalations (needs human):
+     [home-full] Several place cards are truncated on the right side (e.g., 'The Livin', 'Bar Rava', 'Megumi Mazesob', 'Light Cal', 'Yonge & Residenc', 'Passeig d Gràcia') cutting off venue names and ratings
+     [home-full] Ontario Cottage trip shows 'Unbooked' status badges for both Travel and Accommodation — no booking links or CTAs provided
+     [home-full] Great Streets and Developments sections show no venue photos — only placeholder-style content
+     [placecard-restaurant-cookshop] No rating or review score visible on the place card
+     [placecard-bar-balera] Hours of operation are not visible anywhere on the page
+     [placecard-restaurant-portici] Status shows 'Closed today' on Thursday with hours 12:00–9:00 PM, which may be confusing or indicate stale/incorrect hours data
+     [placecard-cafe-etape22] No rating or review score visible on the placecard
+     [placecard-cafe-etape22] Type badge says 'Restaurant' but this is described as a cycling-themed café/espresso bar, not a restaurant
+     [placecard-cottage-muskoka] Hero image shows a parking lot with cars rather than the cottage or waterfront property itself
+     [placecard-cottage-muskoka] Title uses raw address format 'Cottage in 14 King William St...' instead of a proper property name
+     [review-nyc] No rating, price level, or hours visible on place cards — only name, type badge, and city
+     [review-nyc] Map banner says '40 without location' — significant number of places cannot be mapped
+     [hot-page] No rating or price level shown on place cards in the hot/trending feed
+     [hot-page] Place type badge on CHÉRIE card shows 'Gallery' but card appears to be a retail/clothing shop based on photo content
+════════════════════════════════════════════════════════════
+
+  📨 Sending Telegram notification...
+QA run complete in 4037s. Exit: 0
+
