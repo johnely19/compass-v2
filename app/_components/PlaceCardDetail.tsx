@@ -11,6 +11,8 @@ import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
 import TravelIntelWidget from './widgets/TravelIntelWidget';
+import { scoreDiscovery } from '../_lib/discovery-score';
+import type { ScoreBreakdown } from '../_lib/discovery-score';
 
 /* ---- Share button ---- */
 function ShareButton({ name }: { name: string }) {
@@ -473,6 +475,52 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
           <MapWidget placeId={card.place_id} name={card.name} height={200} />
         </div>
 
+        {/* Discovery Score Breakdown */}
+        {discovery && <ScoreBreakdownSection discovery={discovery} />}
+
+      </div>
+    </div>
+  );
+}
+
+/* ---- Score Breakdown Section ---- */
+function ScoreBreakdownSection({ discovery }: { discovery: Partial<Discovery> }) {
+  const score = scoreDiscovery(discovery as Discovery);
+  const dimensions: Array<{ label: string; key: keyof ScoreBreakdown; icon: string; max: number }> = [
+    { label: 'Rating', key: 'rating', icon: '⭐', max: 20 },
+    { label: 'Photo Quality', key: 'photoQuality', icon: '📸', max: 20 },
+    { label: 'Freshness', key: 'freshness', icon: '🕐', max: 20 },
+    { label: 'Editorial', key: 'editorial', icon: '📰', max: 20 },
+    { label: 'Now Signal', key: 'nowSignal', icon: '⚡', max: 20 },
+  ];
+
+  return (
+    <div className="score-breakdown-section">
+      <h3 className="score-breakdown-title">Discovery Score</h3>
+      <div className="score-breakdown-total">
+        <span className="score-breakdown-total-value">{score.total}</span>
+        <span className="score-breakdown-total-max">/ 100</span>
+      </div>
+      <div className="score-breakdown-bars">
+        {dimensions.map(dim => {
+          const value = score[dim.key];
+          const pct = Math.round((value / dim.max) * 100);
+          return (
+            <div key={dim.key} className="score-breakdown-row">
+              <span className="score-breakdown-label">
+                <span className="score-breakdown-icon">{dim.icon}</span>
+                {dim.label}
+              </span>
+              <div className="score-breakdown-bar-track">
+                <div
+                  className="score-breakdown-bar-fill"
+                  style={{ width: `${pct}%` }}
+                />
+              </div>
+              <span className="score-breakdown-value">{value}/{dim.max}</span>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

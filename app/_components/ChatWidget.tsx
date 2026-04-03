@@ -9,7 +9,7 @@ import styles from './ChatWidget.module.css';
  * Handles: links, bold, italic, inline code, line breaks.
  */
 function renderMarkdown(text: string): string {
-  let html = text
+  const html = text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
@@ -97,7 +97,7 @@ export default function ChatWidget() {
           setTimeout(() => setJustExpanded(false), 400);
         }
       }
-    } catch (e) {
+    } catch {
       // Ignore localStorage errors
     }
   }, []);
@@ -162,7 +162,7 @@ export default function ChatWidget() {
   useEffect(() => {
     try {
       localStorage.setItem('chat-widget-state', JSON.stringify({ isExpanded }));
-    } catch (e) {
+    } catch {
       // Ignore localStorage errors
     }
   }, [isExpanded]);
@@ -436,15 +436,6 @@ export default function ChatWidget() {
           <div className={styles.chatDragHandleBar} />
         </div>
 
-        {/* Close button — floats above scroll area */}
-        <button
-          className={styles.chatHeaderClose}
-          onClick={() => handleExpand(false)}
-          aria-label="Collapse chat"
-        >
-          ✕
-        </button>
-
         {/* Messages */}
         <div className={styles.chatMessages}>
           {messages.length === 0 && !loading && !streaming && (
@@ -543,6 +534,14 @@ export default function ChatWidget() {
             disabled={loading || streaming || !input.trim()}
           >
             ➤
+          </button>
+          <button
+            type="button"
+            className={styles.chatCollapseBtn}
+            onClick={() => handleExpand(false)}
+            aria-label="Collapse chat"
+          >
+            ✕
           </button>
         </form>
       </div>

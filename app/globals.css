@@ -6003,5 +6003,91 @@ body {
   color: var(--text-muted);
 }
 
+/* ---- Discovery Score Breakdown ---- */
+.score-breakdown-section {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--surface-secondary, #faf8f5);
+  border-radius: 16px;
+  border: 1px solid var(--border, rgba(0,0,0,0.06));
+}
+
+.score-breakdown-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted, #8a857c);
+  margin: 0 0 12px 0;
+}
+
+.score-breakdown-total {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.score-breakdown-total-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary, #2d2a26);
+  line-height: 1;
+}
+
+.score-breakdown-total-max {
+  font-size: 0.9rem;
+  color: var(--text-muted, #8a857c);
+}
+
+.score-breakdown-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.score-breakdown-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.score-breakdown-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+  font-size: 0.82rem;
+  color: var(--text-secondary, #6f6a62);
+}
+
+.score-breakdown-icon {
+  font-size: 0.9rem;
+}
+
+.score-breakdown-bar-track {
+  flex: 1;
+  height: 6px;
+  background: var(--border, rgba(0,0,0,0.06));
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.score-breakdown-bar-fill {
+  height: 100%;
+  background: var(--accent, #c4704b);
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.score-breakdown-value {
+  min-width: 40px;
+  text-align: right;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted, #8a857c);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Hide Next.js dev error overlay indicator */
 nextjs-portal { display: none !important; }
