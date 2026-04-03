@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
 import TypeBadge from './TypeBadge';
@@ -22,13 +23,41 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   const rawImage = discovery.heroImage;
   const imageUrl = resolveImageUrlClient(rawImage);
 
+  // Fix #211: onError recovery - if image fails to load, trigger fetch from API
+  const [fetchedImageUrl, setFetchedImageUrl] = useState<string | null>(null);
+  const [hasTriedFetch, setHasTriedFetch] = useState(false);
+
+  // Final URL: prioritize fetched image (from onError recovery), then original
+  const finalImageUrl = fetchedImageUrl || imageUrl;
+
+  const handleImageError = async () => {
+    if (!place_id || hasTriedFetch) return;
+    setHasTriedFetch(true);
+
+    try {
+      const res = await fetch('/api/internal/fetch-photo', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ placeId: place_id }),
+      });
+      if (res.ok) {
+        const data = await res.json();
+        if (data.photoUrl) {
+          setFetchedImageUrl(data.photoUrl);
+        }
+      }
+    } catch (e) {
+      console.error('[PlaceCard] Failed to fetch photo:', e);
+    }
+  };
+
   // Generate fallback gradient based on type
   // NOTE: Use separate properties instead of `background` shorthand.
   // The shorthand `url(...) center/cover` is parsed differently by
   // server (Node CSS) vs browser, causing hydration mismatches.
-  const gradientStyle = imageUrl
+  const gradientStyle = finalImageUrl
     ? {
-        backgroundImage: `url(${imageUrl})`,
+        backgroundImage: `url(${finalImageUrl})`,
         backgroundPosition: 'center',
         backgroundSize: 'cover',
       }
@@ -46,7 +75,16 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     <div style={{ position: 'relative' }}>
       <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
-          {!imageUrl && <span className="place-card-image-fallback" />}
+          {!finalImageUrl && <span className="place-card-image-fallback" />}
+          {/* Hidden img for onError detection - triggers on load failure */}
+          {place_id && imageUrl && (
+            <img
+              src={imageUrl}
+              alt=""
+              style={{ display: 'none' }}
+              onError={handleImageError}
+            />
+          )}
         </div>
         <div className="place-card-body">
           <div className="place-card-header">

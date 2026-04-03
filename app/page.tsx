@@ -151,10 +151,10 @@ export default async function HomePage() {
       return true;
     });
 
-    // Fix #107: sort cards with real photos first so the carousel looks complete
+    // Fix #211: only show discoveries that have a photo
+    // Filter out any discovery where heroImage is falsy (no user-uploaded image AND no manifest fallback)
     const withPhoto = deduped.filter(d => d.heroImage);
-    const withoutPhoto = deduped.filter(d => !d.heroImage);
-    byContext.set(ctx.key, [...withPhoto, ...withoutPhoto]);
+    byContext.set(ctx.key, withPhoto);
   }
 
   // Fix #108 (global): deduplicate place_ids across ALL context carousels
