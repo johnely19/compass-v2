@@ -1,7 +1,7 @@
 {
   "ChIJ--DeozpcwokRG3VRE30PURk": {
     "name": "Nowadays",
-    "type": "restaurant"
+    "type": "club-bar"
   },
   "ChIJ-WFB5NI0K4gRIdqgdanG0P8": {
     "name": "Toronto Dominion Centre",
@@ -116,7 +116,7 @@
     "type": "shop"
   },
   "ChIJ3_Ehc5tZwokRRjbJ4YcwWxQ": {
-    "name": "Dessa's Art Show \u2014 Cooper Union",
+    "name": "Dessa's Art Show — Cooper Union",
     "type": "restaurant"
   },
   "ChIJ3drP1K3L1IkRs9dv-sRYGRw": {
@@ -144,7 +144,7 @@
     "type": "gallery"
   },
   "ChIJ4cHb3800K4gRZRf9IDJF62o": {
-    "name": "National Ballet of Canada \u2014 Pinocchio",
+    "name": "National Ballet of Canada — Pinocchio",
     "type": "theatre"
   },
   "ChIJ51q_vUZzhlQRCCFO2VqvuQ4": {
@@ -156,7 +156,7 @@
     "type": "live-music"
   },
   "ChIJ5W_gCbI1K4gRT6jPTp7Jtl4": {
-    "name": "A Kind of Order (Union Station \u00d7 BAND Gallery)",
+    "name": "A Kind of Order (Union Station × BAND Gallery)",
     "type": "gallery"
   },
   "ChIJ5cQDcUZbwokRodOytx_WYI0": {
@@ -303,8 +303,8 @@
     "name": "Makann",
     "type": "restaurant"
   },
-  "ChIJAloRestaurantToronto2026": {
-    "name": "Alo Restaurant",
+  "ChIJryijc9s0K4gRG9aU7SDTXdA": {
+    "name": "Alo (post-renovation reopen)",
     "type": "restaurant"
   },
   "ChIJAzCPOo40K4gRTBn7FQkuBuc": {
@@ -320,20 +320,20 @@
     "type": "bar"
   },
   "ChIJBZ9N_N00K4gRi3DPaXCj8zQ": {
-    "name": "Gardiner Museum \u2014 Thursday Late (Pay What You Can)",
+    "name": "Gardiner Museum — Thursday Late (Pay What You Can)",
     "type": "museum"
   },
   "ChIJBaDLG0w1K4gR1H7x6wL4Rmk": {
     "name": "No Vacancy",
     "type": "restaurant"
   },
-  "ChIJBarGotoLES2026": {
+  "ChIJYYa4bIRZwokRfF05m4Pogfw": {
     "name": "Bar Goto",
     "type": "cocktail-bar"
   },
-  "ChIJBarRavalToronto2026": {
+  "ChIJwSfKme40K4gRxoeQD9wP7OQ": {
     "name": "Bar Raval",
-    "type": "bar"
+    "type": "wine-bar"
   },
   "ChIJBfYqyK81K4gR8yZzL0qQTqQ": {
     "name": "De Mello Coffee (The Well)",
@@ -371,8 +371,8 @@
     "name": "MIKA",
     "type": "restaurant"
   },
-  "ChIJCumbraesToronto2026": {
-    "name": "Cumbrae's \u2014 The Reference Butcher",
+  "ChIJTfXcPdLM1IkRM3OqmypiCeo": {
+    "name": "Cumbrae's — The Reference Butcher",
     "type": "specialty-food"
   },
   "ChIJCxjDu8c1K4gR33Dh5X2QMlc": {
@@ -444,12 +444,12 @@
     "type": "restaurant"
   },
   "ChIJFcFGUoc1K4gR5WkQHhRFrr0": {
-    "name": "MOCA Toronto \u2014 Free First Friday",
+    "name": "MOCA Toronto — Free First Friday",
     "type": "museum"
   },
-  "ChIJFourHorsemenWburg2026": {
-    "name": "Four Horsemen",
-    "type": "wine-bar-restaurant"
+  "ChIJbTCMl19ZwokRUohF137p9cQ": {
+    "name": "The Four Horsemen",
+    "type": "restaurant"
   },
   "ChIJFwS17nTL1IkRFeRjonlMdZ4": {
     "name": "Vatican Gift Shop",
@@ -500,7 +500,7 @@
     "type": "restaurant"
   },
   "ChIJHRcAaABbwokRcdnFupcwIus": {
-    "name": "Dilj\u0101n Bakery",
+    "name": "Diljān Bakery",
     "type": "cafe"
   },
   "ChIJHT2qdw9xhlQRgfZgfKBAeq0": {
@@ -512,7 +512,7 @@
     "type": "restaurant"
   },
   "ChIJHVPOOHpxhlQR1VtKtMWaqx0": {
-    "name": "Skwach\u00e0ys Lodge",
+    "name": "Skwachàys Lodge",
     "type": "hotel"
   },
   "ChIJHfvtRp1ZwokREpFE8Z1BEKs": {
@@ -520,7 +520,7 @@
     "type": "bar"
   },
   "ChIJHzSUBkfL1IkRvCyinXTL3co": {
-    "name": "Citadel + Compagnie \u2014 Kudelka/Lemieux Mix (Ontario Tour)",
+    "name": "Citadel + Compagnie — Kudelka/Lemieux Mix (Ontario Tour)",
     "type": "theatre"
   },
   "ChIJI07DGgA1K4gRkSIMiNjWUW8": {
@@ -568,7 +568,7 @@
     "type": "restaurant"
   },
   "ChIJJ0h9ZUfN1IkREAATV3FAmQQ": {
-    "name": "here | there \u2014 the art of nolevelon (Howard Rideout)",
+    "name": "here | there — the art of nolevelon (Howard Rideout)",
     "type": "gallery"
   },
   "ChIJJ4Qvv3A1K4gRHYFnkSkx3vk": {
@@ -595,8 +595,8 @@
     "name": "Bar Isabel",
     "type": "restaurant"
   },
-  "ChIJJacobsSteakhouseToronto2026": {
-    "name": "Jacob's Steakhouse + Linny's \u2014 World-Class Toronto",
+  "ChIJLxiFpd40K4gRG4xsHBrQhFk": {
+    "name": "Jacob's Steakhouse + Linny's — World-Class Toronto",
     "type": "restaurant"
   },
   "ChIJJbpj2dI0K4gR_s9qdbry0e8": {
@@ -619,12 +619,12 @@
     "name": "Huron Shores Cottages",
     "type": "accommodation"
   },
-  "ChIJKelangRestoran Greenpoint2026": {
+  "ChIJMUyduZ1ZwokRpMWn-miqZy8": {
     "name": "Kelang Restoran",
     "type": "restaurant"
   },
   "ChIJKxDbe_lYwokRVf__s8CPn-o": {
-    "name": "MoMA \u2014 Marcel Duchamp Retrospective",
+    "name": "MoMA — Marcel Duchamp Retrospective",
     "type": "restaurant"
   },
   "ChIJL0CMPZY0K4gRxMbYYS74cbw": {
@@ -635,7 +635,7 @@
     "name": "Ethica Coffee Roasters",
     "type": "cafe"
   },
-  "ChIJL4Baratin2okRTorontoCA": {
+  "ChIJ--SFklE0K4gRwPHFpNPlMHw": {
     "name": "Le Baratin",
     "type": "restaurant"
   },
@@ -647,19 +647,19 @@
     "name": "RentHuron",
     "type": "accommodation"
   },
-  "ChIJLeCrocodileBK2026": {
-    "name": "Le Crocodile \u2014 Michelin Newcomer, Williamsburg",
+  "ChIJ4faAXmBZwokRebmpx9kQxx4": {
+    "name": "Le Crocodile — Michelin Newcomer, Williamsburg",
     "type": "restaurant"
   },
   "ChIJLegihIg1K4gRZH5QtJ_f2vc": {
     "name": "Machida Shoten",
     "type": "restaurant"
   },
-  "ChIJLiliaWilliamsburg2026": {
+  "ChIJJXCD6ltZwokRJ_cwjKQH63c": {
     "name": "Lilia",
     "type": "restaurant"
   },
-  "ChIJLucaliCarrollGardens2026": {
+  "ChIJ395CMVlawokRt2oLH_8zmvI": {
     "name": "Lucali",
     "type": "restaurant"
   },
@@ -700,7 +700,7 @@
     "type": "restaurant"
   },
   "ChIJN5tKCWY1K4gRAZmNko2c0s8": {
-    "name": "CH\u00c9RIE",
+    "name": "CHÉRIE",
     "type": "gallery"
   },
   "ChIJN8T23es0K4gRZXVo0Gb3Fag": {
@@ -712,10 +712,10 @@
     "type": "gallery"
   },
   "ChIJNVuaEwA1K4gRgda7Mfki9DU": {
-    "name": "Understory Caf\u00e9",
+    "name": "Understory Café",
     "type": "cafe"
   },
-  "ChIJNWOguchiLICMuseum2026": {
+  "ChIJUZ0c7MpYwokRh8SiMzCXL98": {
     "name": "The Noguchi Museum",
     "type": "museum"
   },
@@ -759,12 +759,12 @@
     "name": "Guilt & Co",
     "type": "theatre"
   },
-  "ChIJOpsPizzaWineBushwick2026": {
+  "ChIJEXTJbgBZwokRIwAXUA0bhB4": {
     "name": "Ops Pizza & Wine",
     "type": "restaurant"
   },
   "ChIJOwg_06lPK4gRINkzrj8Yqbc": {
-    "name": "Toronto Biennial 2026 \u2014 Dawoud Bey at AGO",
+    "name": "Toronto Biennial 2026 — Dawoud Bey at AGO",
     "type": "event"
   },
   "ChIJP8xM4HrL1IkRDLQtboVwRHQ": {
@@ -772,7 +772,7 @@
     "type": "restaurant"
   },
   "ChIJPTR3fUg0K4gRGH1cEOzq6TM": {
-    "name": "MOCA \u2014 Jeff Wall: Photographs 1984\u20132023",
+    "name": "MOCA — Jeff Wall: Photographs 1984–2023",
     "type": "gallery"
   },
   "ChIJP_4FULnL1IkR_6waRIwSVrY": {
@@ -783,15 +783,15 @@
     "name": "Next Stop Japan Marketplace",
     "type": "restaurant"
   },
-  "ChIJPaulieGeesGreenpoint2026": {
-    "name": "Paulie Gee's + See No Evil + L'Industrie \u2014 Greenpoint Spring Expansion",
+  "ChIJtcllhxpZwokR6f8Ue42WHNk": {
+    "name": "Paulie Gee's + See No Evil + L'Industrie — Greenpoint Spring Expansion",
     "type": "restaurant-cluster"
   },
   "ChIJPbRWNL41K4gRLX9TDHsu3aQ": {
     "name": "Lonely Diner",
     "type": "bar"
   },
-  "ChIJPearlOysterBarWV2026": {
+  "ChIJ0xnLhrsvK4gRJ0exjAcjOQI": {
     "name": "Pearl Oyster Bar",
     "type": "restaurant"
   },
@@ -839,7 +839,7 @@
     "name": "Bar Eugenie",
     "type": "restaurant"
   },
-  "ChIJRobertasBushwick2026": {
+  "ChIJzSOyOg1dwokRfQ-5htUfsRY": {
     "name": "Roberta's",
     "type": "restaurant"
   },
@@ -859,23 +859,23 @@
     "name": "Studio1484",
     "type": "gallery"
   },
-  "ChIJSansoteiYongeEglinton2026": {
-    "name": "Sansotei Ramen \u2014 Yonge & Eglinton",
+  "ChIJga5cnSAzK4gRmHLkrQaISN8": {
+    "name": "Sansotei Ramen — Yonge & Eglinton",
     "type": "restaurant"
   },
-  "ChIJSmalllsJazzClub10th2014": {
+  "ChIJu55raJRZwokReRL9b1tLmQo": {
     "name": "Smalls Jazz Club + Mezzrow",
     "type": "jazz-club"
   },
-  "ChIJSmorgasburgWburg2026": {
-    "name": "Smorgasburg Williamsburg \u2014 Season Opens",
+  "ChIJ9-C4sWdZwokRjDucHJ5DepI": {
+    "name": "Smorgasburg Williamsburg — Season Opens",
     "type": "food-market"
   },
-  "ChIJSunnysBarRedHook2026": {
+  "ChIJlcb1So9awokRGb-r3HkH0wg": {
     "name": "Sunny's Bar",
     "type": "bar"
   },
-  "ChIJSuperiorityBurgerEV2026": {
+  "ChIJ26fKep1ZwokRrPzNIqBj4xU": {
     "name": "Superiority Burger",
     "type": "restaurant"
   },
@@ -903,13 +903,9 @@
     "name": "The Ismaili Centre, Toronto",
     "type": "gallery"
   },
-  "ChIJTheRexToronto2026": {
-    "name": "The Rex \u2014 This Weekend (Mar 28-29)",
-    "type": "live-music"
-  },
-  "ChIJTheRexTorontoJazz2026": {
-    "name": "The Rex Hotel Jazz & Blues Bar",
-    "type": "live-music"
+  "ChIJUxg5Mc40K4gRqeelKegdE3c": {
+    "name": "The Rex Hotel Jazz and Blues Bar",
+    "type": "music-venue"
   },
   "ChIJTxFin6U1K4gRJAFAY_wZvAc": {
     "name": "Suite 115",
@@ -947,10 +943,6 @@
     "name": "Fangio Trattoria",
     "type": "restaurant"
   },
-  "ChIJU_PzWVNbwokRdhm11e7XEBw": {
-    "name": "Nowadays",
-    "type": "club-bar"
-  },
   "ChIJU_e-ag5YhlQRVnYsDNKhfA0": {
     "name": "Shannon Falls Provincial Park",
     "type": "park"
@@ -966,10 +958,6 @@
   "ChIJUfCoMwBZwokRgaqNMkVgfs4": {
     "name": "Border Town",
     "type": "restaurant"
-  },
-  "ChIJUxg5Mc40K4gRqeelKegdE3c": {
-    "name": "The Rex Hotel Jazz and Blues Bar",
-    "type": "music-venue"
   },
   "ChIJV2Ns6yTL1IkRrEL6xyDLyEk": {
     "name": "L'Avenue on Parliament",
@@ -1007,7 +995,7 @@
     "name": "A-FRAME Brewing Co",
     "type": "bar"
   },
-  "ChIJWildairLES2026": {
+  "ChIJfZsx0ClawokRCNMYMdZ_smg": {
     "name": "Wildair",
     "type": "wine-bar-restaurant"
   },
@@ -1020,7 +1008,7 @@
     "type": "restaurant"
   },
   "ChIJX18iSiA0K4gRpylkVZEoBP4": {
-    "name": "Mj\u00f6lk",
+    "name": "Mjölk",
     "type": "gallery"
   },
   "ChIJX7hLk0FZwokRFhRcjtylakg": {
@@ -1028,7 +1016,7 @@
     "type": "park"
   },
   "ChIJX8ZuHKU1K4gRo4Mz76BKroY": {
-    "name": "\u00c0 Toi",
+    "name": "À Toi",
     "type": "bar"
   },
   "ChIJXSuiypE0K4gRrrpz-eLUTio": {
@@ -1036,7 +1024,7 @@
     "type": "restaurant"
   },
   "ChIJX_O5HQA1K4gRNYqajXFSji4": {
-    "name": "Bellis Caf\u00e9 & Bar",
+    "name": "Bellis Café & Bar",
     "type": "cafe"
   },
   "ChIJY1MdtBxcwokRB2pYGRyDdWs": {
@@ -1076,7 +1064,7 @@
     "type": "restaurant"
   },
   "ChIJYw_8V9o0K4gR_BTEF762Gjw": {
-    "name": "Tangled Art + Disability \u2014 Naal-Naal exhibition",
+    "name": "Tangled Art + Disability — Naal-Naal exhibition",
     "type": "restaurant"
   },
   "ChIJYzr1oP40K4gRzCwxCfKDUME": {
@@ -1176,7 +1164,7 @@
     "type": "restaurant"
   },
   "ChIJayDthGM1K4gRnW2l0cGfZkg": {
-    "name": "Craft Ontario Gallery \u2014 Akash Inbakumar exhibition",
+    "name": "Craft Ontario Gallery — Akash Inbakumar exhibition",
     "type": "gallery"
   },
   "ChIJb-hxWOIzK4gRNeQIy-SV29c": {
@@ -1185,10 +1173,6 @@
   },
   "ChIJb5wbROVdwokRrAMyKMac278": {
     "name": "Arrigo's of Fresh Pond Rd",
-    "type": "restaurant"
-  },
-  "ChIJbTCMl19ZwokRUohF137p9cQ": {
-    "name": "The Four Horsemen",
     "type": "restaurant"
   },
   "ChIJbfn6dAA1K4gRL8pvycTYVck": {
@@ -1212,7 +1196,7 @@
     "type": "restaurant"
   },
   "ChIJcTqTNNM0K4gRZR46MK6g2GM": {
-    "name": "A Kind of Order \u2014 Union Station x BAND Gallery",
+    "name": "A Kind of Order — Union Station x BAND Gallery",
     "type": "gallery"
   },
   "ChIJcW2TP101K4gRi_8K797gb2M": {
@@ -1260,7 +1244,7 @@
     "type": "restaurant"
   },
   "ChIJe3RA5fE1K4gRQvD6x-3d1ho": {
-    "name": "Petite Bouch\u00e9e Patisserie",
+    "name": "Petite Bouchée Patisserie",
     "type": "cafe"
   },
   "ChIJe9TvMMI0K4gRm2iMmQ6_h2M": {
@@ -1308,7 +1292,7 @@
     "type": "restaurant"
   },
   "ChIJfxtKnXk1K4gRHBaiJd38y-s": {
-    "name": "The Arch Caf\u00e9/Bar",
+    "name": "The Arch Café/Bar",
     "type": "cafe"
   },
   "ChIJgUBDOQA1K4gRd_8eNwRbAn8": {
@@ -1372,7 +1356,7 @@
     "type": "restaurant"
   },
   "ChIJiQiJDZTN1IkRTgoWXTMVn1Q": {
-    "name": "\u00c9TAPE 22",
+    "name": "ÉTAPE 22",
     "type": "restaurant"
   },
   "ChIJiXkenl01K4gRQw_xtvGkt8A": {
@@ -1392,7 +1376,7 @@
     "type": "museum"
   },
   "ChIJixSwFzY1K4gRMML4AXHghkc": {
-    "name": "B\u00e0 N\u1ed9i",
+    "name": "Bà Nội",
     "type": "restaurant"
   },
   "ChIJj0eyRQBbwokREawjObSL_bw": {
@@ -1416,7 +1400,7 @@
     "type": "cafe"
   },
   "ChIJjxRPB6b_0YURzYYN1B99aHI": {
-    "name": "Bot\u00e1nico",
+    "name": "Botánico",
     "type": "restaurant"
   },
   "ChIJjzr6ipnTKk0R0ckCnujX1Y0": {
@@ -1440,7 +1424,7 @@
     "type": "hotel"
   },
   "ChIJkb04S0NZwokRFuvniJMmhpQ": {
-    "name": "Maison Premiere \u2014 Williamsburg Cocktail Institution",
+    "name": "Maison Premiere — Williamsburg Cocktail Institution",
     "type": "bar"
   },
   "ChIJkxUKZvTN1IkRBSWcKr1ie3w": {
@@ -1484,7 +1468,7 @@
     "type": "grocery"
   },
   "ChIJmZ5emqJYwokRuDz79o0coAQ": {
-    "name": "Guggenheim \u2014 Carol Bove",
+    "name": "Guggenheim — Carol Bove",
     "type": "restaurant"
   },
   "ChIJmaAlkJU1K4gR-JIwKF1038U": {
@@ -1508,7 +1492,7 @@
     "type": "theatre"
   },
   "ChIJmzuSgFE2K4gRMh5HN0-xPgM": {
-    "name": "High Park Cherry Blossoms 2026 \u2014 Peak Bloom Window Overlaps Your NYC Trip Return",
+    "name": "High Park Cherry Blossoms 2026 — Peak Bloom Window Overlaps Your NYC Trip Return",
     "type": "experience"
   },
   "ChIJn-6mDyI1K4gRoQIAsJ6Rh3Y": {
@@ -1544,7 +1528,7 @@
     "type": "accommodation"
   },
   "ChIJo06Ogd00K4gRMIB6EbKBHNw": {
-    "name": "Theatre Passe Muraille \u2014 White Girls in Moccasins",
+    "name": "Theatre Passe Muraille — White Girls in Moccasins",
     "type": "theatre"
   },
   "ChIJo3H5vqZxhlQRrnnUvzvE7p8": {
@@ -1584,7 +1568,7 @@
     "type": "restaurant"
   },
   "ChIJp4JiUCNbwokRiUHvfh51mwE": {
-    "name": "Four Horsemen \u2014 Walk-In Window: 5:30pm Williamsburg",
+    "name": "Four Horsemen — Walk-In Window: 5:30pm Williamsburg",
     "type": "bar"
   },
   "ChIJp4RKjpE0K4gRu1eqUaifEAc": {
@@ -1636,7 +1620,7 @@
     "type": "restaurant"
   },
   "ChIJq8LbKf40K4gRDKj3qI3LgkE": {
-    "name": "Preservation \u2014 Palestinian Artists at The Theatre Centre",
+    "name": "Preservation — Palestinian Artists at The Theatre Centre",
     "type": "theatre"
   },
   "ChIJqVlUDwA1K4gR9SSpCKfksXA": {
@@ -1672,7 +1656,7 @@
     "type": "gallery"
   },
   "ChIJrRvXsV5ZwokR7i2e2kXNOkU": {
-    "name": "Wildair \u2014 Natural Wine & Creative Small Plates, LES",
+    "name": "Wildair — Natural Wine & Creative Small Plates, LES",
     "type": "bar"
   },
   "ChIJrY4E26DN1IkRzBaz81H3EVw": {
@@ -1684,11 +1668,7 @@
     "type": "museum"
   },
   "ChIJrwXyy4k1K4gRIm6Cx5vSe8c": {
-    "name": "Pho Le \u9326\u9e97 (Baldwin)",
-    "type": "restaurant"
-  },
-  "ChIJryijc9s0K4gRG9aU7SDTXdA": {
-    "name": "Alo (post-renovation reopen)",
+    "name": "Pho Le 錦麗 (Baldwin)",
     "type": "restaurant"
   },
   "ChIJs09aUcI0K4gR6phtG366G4g": {
@@ -1712,11 +1692,11 @@
     "type": "shop"
   },
   "ChIJsWiClCo1K4gRclG33Mzc3qM": {
-    "name": "The Power Plant \u2014 Jeneen Frei Njootli: The skies closed themselves when we averted our gaze",
+    "name": "The Power Plant — Jeneen Frei Njootli: The skies closed themselves when we averted our gaze",
     "type": "gallery"
   },
   "ChIJsaFjsC3L1IkRou1YH7q_r0A": {
-    "name": "Ballets Jazz Montr\u00e9al: Dance Me (Leonard Cohen)",
+    "name": "Ballets Jazz Montréal: Dance Me (Leonard Cohen)",
     "type": "theatre"
   },
   "ChIJswMDQW5bwokRFFPWez625wY": {
@@ -1740,7 +1720,7 @@
     "type": "restaurant"
   },
   "ChIJt6hPDwA1K4gR2jSv6w63Amk": {
-    "name": "Brasserie C\u00f4te",
+    "name": "Brasserie Côte",
     "type": "restaurant"
   },
   "ChIJt6xW1_E0K4gRy1QoqXwJhHE": {
@@ -1792,7 +1772,7 @@
     "type": "shop"
   },
   "ChIJv1iSxz3L1IkRWKjK5Dt19Us": {
-    "name": "Soulpepper \u2014 Detroit: Music of the Motor City",
+    "name": "Soulpepper — Detroit: Music of the Motor City",
     "type": "restaurant"
   },
   "ChIJv4wxbJ5dwokR_StiDfSvWQc": {
@@ -1804,7 +1784,7 @@
     "type": "bar"
   },
   "ChIJvRlT7cU0K4gRr0bg7VV3J9o": {
-    "name": "AGO \u2014 Moments in Modernism",
+    "name": "AGO — Moments in Modernism",
     "type": "gallery"
   },
   "ChIJvWoHrNs0K4gRGIQyt6021sY": {
@@ -1835,10 +1815,6 @@
     "name": "Music Hall of Williamsburg",
     "type": "music-venue"
   },
-  "ChIJwSfKme40K4gRxoeQD9wP7OQ": {
-    "name": "Bar Raval",
-    "type": "wine-bar"
-  },
   "ChIJwUcmtIJZwokREiWU5DTPSLA": {
     "name": "DROM",
     "type": "live_music_venue"
@@ -1856,7 +1832,7 @@
     "type": "gallery"
   },
   "ChIJwbrNaCI3K4gRN1Ml4FNr7P4": {
-    "name": "Donna Child Fine Art \u2014 Magdalena Morey exhibition",
+    "name": "Donna Child Fine Art — Magdalena Morey exhibition",
     "type": "restaurant"
   },
   "ChIJwd1aPIBxhlQRX8pxjPkAb5s": {
@@ -1876,7 +1852,7 @@
     "type": "bookstore"
   },
   "ChIJx8LPLtk0K4gRVkpHcrMIYKE": {
-    "name": "Le S\u00e9lect Bistro",
+    "name": "Le Sélect Bistro",
     "type": "restaurant"
   },
   "ChIJx_W1dwA1K4gRLo2Q2WSny70": {
@@ -1927,27 +1903,19 @@
     "name": "Les Faux Bourgeois",
     "type": "restaurant"
   },
-  "DEV_1233_YONGE": {
+  "ChIJ5R58BlozK4gReKAflXkmOuI": {
     "name": "1233 Yonge Street",
     "type": "development"
   },
-  "DEV_135_ST_CLAIR": {
+  "ChIJa7Nppl0zK4gRisbAUuxQJYg": {
     "name": "135 St Clair Ave W",
     "type": "development"
   },
-  "DEV_YONGE_BIRCH": {
+  "ChIJ9cDX0yIzK4gRoSHuTQXkltk": {
     "name": "Yonge & Birch Residences",
     "type": "development"
   },
-  "MASSEY_HALL": {
-    "name": "Herbie Hancock at Massey Hall",
-    "type": "theatre"
-  },
-  "NOT_YET_ON_GMAPS": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "PENDING_NOT_YET_ON_GOOGLE": {
+  "ChIJW8KUymDL1IkRrloiYiaX5dU": {
     "name": "Pasta Privato",
     "type": "restaurant"
   },
@@ -1955,36 +1923,12 @@
     "name": "Riley's Fish & Steak (pre-opening)",
     "type": "theatre"
   },
-  "PENDING_OPENS_MAR27": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "PENDING_SPRING_2026": {
+  "ChIJpV2W7Cs1K4gRQjpjXjTUJzo": {
     "name": "Gyopo Brewery",
     "type": "bar"
   },
   "WOODBINE_BEACH_PUBLIC_ART": {
     "name": "Winter Stations 2026: Mirage",
-    "type": "restaurant"
-  },
-  "not_yet_on_google": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "not_yet_on_google_maps": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "pending-not-yet-on-maps": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "via-Notte:ChIJ3drP1K3L1IkRs9dv-sRYGRw": {
-    "name": "Pasta Privato",
-    "type": "restaurant"
-  },
-  "via_notte_ChIJ3drP1K3L1IkRs9dv-sRYGRw": {
-    "name": "Pasta Privato",
     "type": "restaurant"
   }
 }

@@ -53,51 +53,61 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // 3. Get photo reference from Google Places
+  // 3. Fetch photo with full fallback chain: Places → Street View → Static Map
   let photoBuffer: ArrayBuffer | null = null;
 
   try {
     const detailsRes = await fetch(
-      `https://places.googleapis.com/v1/places/${placeId}?fields=photos&key=${PLACES_API_KEY}`,
+      `https://places.googleapis.com/v1/places/${placeId}?fields=photos,location`,
       {
         headers: { 'X-Goog-Api-Key': PLACES_API_KEY, 'Content-Type': 'application/json' },
       }
     );
 
-    if (!detailsRes.ok) {
-      return new NextResponse(TRANSPARENT_PIXEL, {
-        status: 404,
-        headers: { 'Content-Type': 'image/gif', 'Cache-Control': CACHE_CONTROL },
-      });
+    if (detailsRes.ok) {
+      const details = await detailsRes.json();
+      const photos = details.photos;
+      const location = details.location;
+
+      // Try 1: Google Places photos
+      if (photos?.length > 0) {
+        const photoName = photos[0].name;
+        const photoRes = await fetch(
+          `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=400&key=${PLACES_API_KEY}`
+        );
+        if (photoRes.ok) {
+          photoBuffer = await photoRes.arrayBuffer();
+        }
+      }
+
+      // Try 2: Street View (if we have location)
+      if (!photoBuffer && location) {
+        const { latitude: lat, longitude: lng } = location;
+        const svRes = await fetch(
+          `https://maps.googleapis.com/maps/api/streetview?size=800x600&location=${lat},${lng}&key=${PLACES_API_KEY}`
+        );
+        if (svRes.ok && svRes.headers.get('content-type')?.includes('image')) {
+          photoBuffer = await svRes.arrayBuffer();
+        }
+      }
+
+      // Try 3: Static Map (if we have location)
+      if (!photoBuffer && location) {
+        const { latitude: lat, longitude: lng } = location;
+        const mapRes = await fetch(
+          `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=16&size=800x600&maptype=roadmap&markers=color:red|${lat},${lng}&key=${PLACES_API_KEY}`
+        );
+        if (mapRes.ok && mapRes.headers.get('content-type')?.includes('image')) {
+          photoBuffer = await mapRes.arrayBuffer();
+        }
+      }
     }
-
-    const details = await detailsRes.json();
-    const photos = details.photos;
-
-    if (!photos || !Array.isArray(photos) || photos.length === 0) {
-      return new NextResponse(TRANSPARENT_PIXEL, {
-        status: 404,
-        headers: { 'Content-Type': 'image/gif', 'Cache-Control': CACHE_CONTROL },
-      });
-    }
-
-    const photoName = photos[0].name;
-
-    // 4. Fetch the photo at 400px width
-    const photoRes = await fetch(
-      `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=400&key=${PLACES_API_KEY}`
-    );
-
-    if (!photoRes.ok) {
-      return new NextResponse(TRANSPARENT_PIXEL, {
-        status: 404,
-        headers: { 'Content-Type': 'image/gif', 'Cache-Control': CACHE_CONTROL },
-      });
-    }
-
-    photoBuffer = await photoRes.arrayBuffer();
   } catch (e) {
-    console.error('[place-photo] Google Places API error:', e);
+    console.error('[place-photo] API error:', e);
+  }
+
+  // If no photo found after all fallbacks, return transparent pixel
+  if (!photoBuffer) {
     return new NextResponse(TRANSPARENT_PIXEL, {
       status: 404,
       headers: { 'Content-Type': 'image/gif', 'Cache-Control': CACHE_CONTROL },
