@@ -436,16 +436,14 @@ export default function ChatWidget() {
           <div className={styles.chatDragHandleBar} />
         </div>
 
-        {/* Header */}
-        <div className={styles.chatHeader}>
-          <button
-            className={styles.chatHeaderClose}
-            onClick={() => handleExpand(false)}
-            aria-label="Collapse chat"
-          >
-            ✕
-          </button>
-        </div>
+        {/* Close button — floats above scroll area */}
+        <button
+          className={styles.chatHeaderClose}
+          onClick={() => handleExpand(false)}
+          aria-label="Collapse chat"
+        >
+          ✕
+        </button>
 
         {/* Messages */}
         <div className={styles.chatMessages}>
