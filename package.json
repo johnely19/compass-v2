@@ -8,12 +8,14 @@
     "start": "next start",
     "lint": "eslint",
     "test": "npx playwright test",
-    "test:headed": "npx playwright test --headed"
+    "test:headed": "npx playwright test --headed",
+    "backfill-photos": "npx tsx scripts/backfill-photos.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.80.0",
     "@twemoji/api": "^17.0.2",
     "@vercel/blob": "^2.3.1",
+    "dotenv": "^16.4.0",
     "jose": "^6.2.2",
     "next": "16.2.1",
     "react": "19.2.4",
@@ -27,6 +29,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
+    "tsx": "^4.19.0",
     "typescript": "^5",
     "wait-on": "^9.0.4"
   }

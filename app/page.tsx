@@ -151,9 +151,8 @@ export default async function HomePage() {
       return true;
     });
 
-    // Fix #211: only show discoveries that have a photo
-    // Filter out any discovery where heroImage is falsy (no user-uploaded image AND no manifest fallback)
-    const withPhoto = deduped.filter(d => d.heroImage);
+    // Show all places — photos are guaranteed by ingest pipeline (Fix #234)
+    const withPhoto = deduped;
     byContext.set(ctx.key, withPhoto);
   }
 
