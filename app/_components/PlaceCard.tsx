@@ -23,13 +23,20 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   const imageUrl = resolveImageUrlClient(rawImage);
 
   // Generate fallback gradient based on type
-  const gradientStyle = {
-    background: imageUrl
-      ? `url(${imageUrl}) center/cover`
-      : `linear-gradient(135deg,
+  // NOTE: Use separate properties instead of `background` shorthand.
+  // The shorthand `url(...) center/cover` is parsed differently by
+  // server (Node CSS) vs browser, causing hydration mismatches.
+  const gradientStyle = imageUrl
+    ? {
+        backgroundImage: `url(${imageUrl})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+      }
+    : {
+        background: `linear-gradient(135deg,
           color-mix(in srgb, var(--accent) 30%, var(--bg-secondary)),
           color-mix(in srgb, var(--accent) 10%, var(--bg-primary)))`,
-  };
+      };
 
   const mapsUrl = place_id
     ? `https://www.google.com/maps/place/?q=place_id:${place_id}`

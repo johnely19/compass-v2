@@ -35,12 +35,11 @@ export default function PlaceGrid({
   const [canScrollRight, setCanScrollRight] = useState(false);
 
   // Visible discoveries — filtered by triage state
-  // Use state (not memo) so we can update it independently of React's render cycle
-  const [visibleDiscoveries, setVisibleDiscoveries] = useState<Discovery[]>(() =>
-    filterVisible(discoveries, userId, contextKey)
-  );
+  // Start with ALL discoveries (matches server render) to avoid hydration mismatch.
+  // Filter client-side after mount since getTriageState reads localStorage.
+  const [visibleDiscoveries, setVisibleDiscoveries] = useState<Discovery[]>(discoveries);
 
-  // Re-filter when discoveries or userId/contextKey changes
+  // Filter after mount + when discoveries/context changes
   useEffect(() => {
     setVisibleDiscoveries(filterVisible(discoveries, userId, contextKey));
   }, [discoveries, userId, contextKey]);
