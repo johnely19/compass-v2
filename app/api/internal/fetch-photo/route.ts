@@ -1,16 +1,30 @@
 /**
  * POST /api/internal/fetch-photo
- * Fetches a photo for a place using Google Places API with fallback chain.
- * Uploads the result to Vercel Blob at place-photos/{placeId}/1.jpg
+ * Fetches multiple photos for a place using Google Places API with fallback chain.
+ * Uploads results to Vercel Blob at place-photos/{placeId}/{n}.jpg (1-indexed)
  *
- * Body: { placeId: string }
- * Returns: { ok: true, photoUrl: blobUrl }
+ * Body: { placeId: string, count?: number } (count defaults to 6, max 10)
+ * Returns: { ok: true, photoUrl: string, photos: PlaceImage[] }
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { put, head } from '@vercel/blob';
 
 const PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
 const BLOB_BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
+
+export type ImageRole =
+  | 'hero' | 'exterior' | 'interior' | 'food' | 'drink'
+  | 'water' | 'surroundings' | 'aerial' | 'detail' | 'general';
+
+interface PlaceImage {
+  url: string;
+  role: ImageRole;
+  source: string;
+}
+
+async function delay(ms: number): Promise<void> {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 export async function POST(req: NextRequest) {
   if (!PLACES_API_KEY) {
@@ -20,27 +34,49 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  let body: { placeId?: string };
+  let body: { placeId?: string; count?: number };
   try {
     body = await req.json();
   } catch {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
-  const { placeId } = body;
+  const { placeId, count } = body;
   if (!placeId) {
     return NextResponse.json({ error: 'placeId is required' }, { status: 400 });
   }
 
-  const blobPath = `place-photos/${placeId}/1.jpg`;
+  const photoCount = Math.min(count || 6, 10);
 
-  // Check if already exists
+  // Check if we already have photos cached - check first photo path
+  const firstBlobPath = `place-photos/${placeId}/1.jpg`;
   try {
-    const existing = await head(blobPath);
+    const existing = await head(firstBlobPath);
     if (existing) {
+      // Load all cached photos
+      const cachedPhotos: PlaceImage[] = [];
+      for (let i = 1; i <= photoCount; i++) {
+        const blobPath = `place-photos/${placeId}/${i}.jpg`;
+        try {
+          const photo = await head(blobPath);
+          if (photo) {
+            cachedPhotos.push({
+              url: photo.url,
+              role: i === 1 ? 'hero' : 'general',
+              source: 'google-places',
+            });
+          } else {
+            break;
+          }
+        } catch {
+          break;
+        }
+      }
+
       return NextResponse.json({
         ok: true,
-        photoUrl: existing.url,
+        photoUrl: cachedPhotos[0]?.url || '',
+        photos: cachedPhotos,
         cached: true,
       });
     }
@@ -48,7 +84,9 @@ export async function POST(req: NextRequest) {
     // Doesn't exist, need to fetch
   }
 
-  let photoBuffer: ArrayBuffer | null = null;
+  // Fetch photos from Google Places
+  let photos: PlaceImage[] = [];
+  let location: { latitude: number; longitude: number } | null = null;
 
   // ---- Try 1: Google Places Photo API (v1) ----
   try {
@@ -61,47 +99,51 @@ export async function POST(req: NextRequest) {
 
     if (detailsRes.ok) {
       const details = await detailsRes.json();
-      const photos = details.photos;
-      const location = details.location;
+      const placePhotos = details.photos;
+      location = details.location;
 
-      if (photos && Array.isArray(photos) && photos.length > 0 && location) {
-        const photoName = photos[0].name;
-        const photoRes = await fetch(
-          `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${PLACES_API_KEY}`
-        );
+      if (placePhotos && Array.isArray(placePhotos) && placePhotos.length > 0) {
+        const numToFetch = Math.min(photoCount, placePhotos.length);
 
-        if (photoRes.ok) {
-          photoBuffer = await photoRes.arrayBuffer();
+        for (let i = 0; i < numToFetch; i++) {
+          const photoName = placePhotos[i].name;
+          const photoRes = await fetch(
+            `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${PLACES_API_KEY}`
+          );
+
+          if (photoRes.ok) {
+            const photoBuffer = await photoRes.arrayBuffer();
+            const blobPath = `place-photos/${placeId}/${i + 1}.jpg`;
+
+            try {
+              const uploaded = await put(blobPath, new Blob([photoBuffer], { type: 'image/jpeg' }), {
+                access: 'public',
+                addRandomSuffix: false,
+                contentType: 'image/jpeg',
+              });
+
+              photos.push({
+                url: uploaded.url,
+                role: i === 0 ? 'hero' : 'general',
+                source: 'google-places',
+              });
+            } catch (e) {
+              console.error('[fetch-photo] Blob upload error:', e);
+            }
+          }
+
+          // Add 100ms delay between photo fetches
+          if (i < numToFetch - 1) {
+            await delay(100);
+          }
         }
       }
 
-      // If Places photos failed but we have location, try Street View
-      if (!photoBuffer && location) {
-        const lat = location.latitude;
-        const lng = location.longitude;
-
-        // ---- Try 2: Google Street View ----
-        const streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=800x600&location=${lat},${lng}&key=${PLACES_API_KEY}`;
-        const streetViewRes = await fetch(streetViewUrl);
-
-        if (streetViewRes.ok) {
-          const contentType = streetViewRes.headers.get('content-type') || '';
-          if (contentType.includes('image')) {
-            photoBuffer = await streetViewRes.arrayBuffer();
-          }
-        }
-
-        // ---- Try 3: Google Static Map ----
-        if (!photoBuffer) {
-          const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=16&size=800x600&maptype=roadmap&markers=color:red|${lat},${lng}&key=${PLACES_API_KEY}`;
-          const staticMapRes = await fetch(staticMapUrl);
-
-          if (staticMapRes.ok) {
-            const contentType = staticMapRes.headers.get('content-type') || '';
-            if (contentType.includes('image')) {
-              photoBuffer = await staticMapRes.arrayBuffer();
-            }
-          }
+      // If no Google Places photos but we have location, try fallback
+      if (photos.length === 0 && location) {
+        const fallbackPhoto = await fetchFallbackImage(location, placeId);
+        if (fallbackPhoto) {
+          photos.push(fallbackPhoto);
         }
       }
     }
@@ -109,25 +151,96 @@ export async function POST(req: NextRequest) {
     console.error('[fetch-photo] Places API error:', e);
   }
 
-  // If no photo found, return 404
-  if (!photoBuffer) {
+  // If still no photos, try fallback (e.g., if location was retrieved but photos failed)
+  if (photos.length === 0 && location) {
+    const fallbackPhoto = await fetchFallbackImage(location, placeId);
+    if (fallbackPhoto) {
+      photos.push(fallbackPhoto);
+    }
+  }
+
+  // If no photo found at all, return 404
+  if (photos.length === 0) {
     return NextResponse.json({ error: 'No photo found for this place' }, { status: 404 });
   }
 
-  // Upload to Vercel Blob
-  try {
-    const uploaded = await put(blobPath, new Blob([photoBuffer], { type: 'image/jpeg' }), {
-      access: 'public',
-      addRandomSuffix: false,
-      contentType: 'image/jpeg',
-    });
-
-    return NextResponse.json({
-      ok: true,
-      photoUrl: uploaded.url,
-    });
-  } catch (e) {
-    console.error('[fetch-photo] Blob upload error:', e);
-    return NextResponse.json({ error: 'Failed to upload photo' }, { status: 500 });
+  const firstPhoto = photos[0];
+  if (!firstPhoto) {
+    return NextResponse.json({ error: 'No photo found for this place' }, { status: 404 });
   }
+
+  return NextResponse.json({
+    ok: true,
+    photoUrl: firstPhoto.url,
+    photos,
+  });
+}
+
+async function fetchFallbackImage(
+  location: { latitude: number; longitude: number },
+  placeId: string
+): Promise<PlaceImage | null> {
+  const PLACES_API_KEY = process.env.GOOGLE_PLACES_API_KEY;
+  if (!PLACES_API_KEY) return null;
+
+  const lat = location.latitude;
+  const lng = location.longitude;
+
+  // ---- Try 2: Google Street View ----
+  const streetViewUrl = `https://maps.googleapis.com/maps/api/streetview?size=800x600&location=${lat},${lng}&key=${PLACES_API_KEY}`;
+  const streetViewRes = await fetch(streetViewUrl);
+
+  if (streetViewRes.ok) {
+    const contentType = streetViewRes.headers.get('content-type') || '';
+    if (contentType.includes('image')) {
+      const photoBuffer = await streetViewRes.arrayBuffer();
+      const blobPath = `place-photos/${placeId}/1.jpg`;
+
+      try {
+        const uploaded = await put(blobPath, new Blob([photoBuffer], { type: 'image/jpeg' }), {
+          access: 'public',
+          addRandomSuffix: false,
+          contentType: 'image/jpeg',
+        });
+
+        return {
+          url: uploaded.url,
+          role: 'hero',
+          source: 'street-view',
+        };
+      } catch (e) {
+        console.error('[fetch-photo] Street View blob upload error:', e);
+      }
+    }
+  }
+
+  // ---- Try 3: Google Static Map ----
+  const staticMapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${lat},${lng}&zoom=16&size=800x600&maptype=roadmap&markers=color:red|${lat},${lng}&key=${PLACES_API_KEY}`;
+  const staticMapRes = await fetch(staticMapUrl);
+
+  if (staticMapRes.ok) {
+    const contentType = staticMapRes.headers.get('content-type') || '';
+    if (contentType.includes('image')) {
+      const photoBuffer = await staticMapRes.arrayBuffer();
+      const blobPath = `place-photos/${placeId}/1.jpg`;
+
+      try {
+        const uploaded = await put(blobPath, new Blob([photoBuffer], { type: 'image/jpeg' }), {
+          access: 'public',
+          addRandomSuffix: false,
+          contentType: 'image/jpeg',
+        });
+
+        return {
+          url: uploaded.url,
+          role: 'hero',
+          source: 'static-map',
+        };
+      } catch (e) {
+        console.error('[fetch-photo] Static Map blob upload error:', e);
+      }
+    }
+  }
+
+  return null;
 }

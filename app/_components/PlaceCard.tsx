@@ -19,8 +19,8 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
   const safeRating = rating != null && !isNaN(rating) ? rating : null;
 
-  // Resolve image URL — server already enriches, but handle edge cases
-  const rawImage = discovery.heroImage;
+  // Resolve image URL — prioritize new images array, then legacy heroImage
+  const rawImage = discovery.images?.[0]?.url || discovery.heroImage;
   const imageUrl = resolveImageUrlClient(rawImage);
 
   // Fix #211: onError recovery - if image fails to load, trigger fetch from API
