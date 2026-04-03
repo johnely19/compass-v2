@@ -5940,3 +5940,6 @@ body {
   padding-left: 0;
   color: var(--text-muted);
 }
+
+/* Hide Next.js dev error overlay indicator */
+nextjs-portal { display: none !important; }
