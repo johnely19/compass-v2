@@ -1,13 +1,15 @@
 /* ============================================================
-   Compass v2 — Unified Image URL Resolution
+   Compass v2 — Client-safe Image URL Resolution
    SINGLE source of truth for ALL image paths.
+   
+   This file is safe to import from 'use client' components.
+   For server-only helpers (getHeroImage, getManifestHeroImage),
+   import from './image-url.server' instead.
    
    Handles:
    - Blob URLs (https://...blob.vercel-storage.com/...)
    - Relative place-photos (/place-photos/ChIJ.../photos/1.jpg)
    - Relative cottage images (/cottages/the-lookout/photo_1.jpg)
-   - Manifest.json fallback (data/placecards/{id}/manifest.json)
-   - Cottage data heroImage field
    ============================================================ */
 
 const BLOB_BASE = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
@@ -27,75 +29,6 @@ export function resolveImageUrl(path: string | undefined | null): string | null 
   if (path.startsWith('/') && BLOB_BASE) return `${BLOB_BASE}${path}`;
   if (BLOB_BASE && !path.startsWith('.')) return `${BLOB_BASE}/${path}`;
   return path;
-}
-
-/**
- * Get hero image URL for a place card, trying multiple sources.
- * Server-side only (uses fs).
- * 
- * Priority:
- * 1. Provided heroImage (already resolved)
- * 2. Manifest.json first image
- * 3. null (caller should show placeholder)
- */
-export function getHeroImage(
-  placeId: string | undefined | null,
-  heroImage?: string | null,
-): string | null {
-  // 1. Use provided heroImage if available
-  const resolved = resolveImageUrl(heroImage);
-  if (resolved) return resolved;
-
-  // 2. Try manifest
-  if (placeId) return getManifestHeroImage(placeId);
-
-  return null;
-}
-
-// Pre-built image index — populated at build time from manifest.json files
-// Avoids dynamic fs reads which may fail on Vercel serverless
-let _imageIndex: Record<string, string> | null = null;
-
-function loadImageIndex(): Record<string, string> {
-  if (_imageIndex) return _imageIndex;
-  try {
-    const fs = require('fs');
-    const pathMod = require('path');
-    const indexPath = pathMod.join(process.cwd(), 'data', 'image-index.json');
-    if (fs.existsSync(indexPath)) {
-      _imageIndex = JSON.parse(fs.readFileSync(indexPath, 'utf8'));
-      return _imageIndex!;
-    }
-  } catch { /* ignore */ }
-  return {};
-}
-
-/**
- * Get the first image URL from a place card manifest.
- * Uses pre-built index (data/image-index.json) for reliability on Vercel.
- * Falls back to direct manifest read.
- */
-export function getManifestHeroImage(placeId: string): string | null {
-  if (typeof window !== 'undefined') return null;
-
-  // Try pre-built index first (fast, reliable on Vercel)
-  const index = loadImageIndex();
-  if (index[placeId]) return resolveImageUrl(index[placeId]);
-
-  // Fallback: direct manifest read
-  try {
-    const fs = require('fs');
-    const pathMod = require('path');
-    const manifestPath = pathMod.join(process.cwd(), 'data', 'placecards', placeId, 'manifest.json');
-    if (!fs.existsSync(manifestPath)) return null;
-    const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
-    const images = manifest?.images;
-    if (!Array.isArray(images) || images.length === 0) return null;
-    const hero = images.find((i: { category?: string }) => i.category !== 'map') || images[0];
-    return resolveImageUrl(hero?.path) || null;
-  } catch {
-    return null;
-  }
 }
 
 /**
