@@ -37,6 +37,7 @@ interface PlaceCardData {
   type: DiscoveryType;
   city: string;
   rating: number | null;
+  heroImage: string | null;
 }
 
 export default async function PlacecardsPage() {
@@ -68,6 +69,7 @@ export default async function PlacecardsPage() {
         type: entry.type,
         city,
         rating,
+        heroImage: `/api/internal/place-photo?placeId=${placeId}`,
       };
     })
   );
