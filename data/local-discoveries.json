@@ -3448,7 +3448,7 @@
     },
     {
       "id": "dev_1233-yonge-street",
-      "place_id": "DEV_1233_YONGE",
+      "place_id": "ChIJFduw8FkzK4gRGmm2LX3nvZk",
       "name": "1233 Yonge Street",
       "address": "1233 Yonge St & 9 Woodlawn Ave E, Toronto, ON (SE corner Yonge & Woodlawn)",
       "city": "Toronto",
@@ -3464,11 +3464,19 @@
         "height": "49-53 storeys (163.5m)",
         "units": "724-764 units (studios, 1BR, 2BR, 3BR)",
         "neighbourhood": "Summerhill"
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJFduw8FkzK4gRGmm2LX3nvZk/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJFduw8FkzK4gRGmm2LX3nvZk/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "dev_yonge-birch-residences",
-      "place_id": "DEV_YONGE_BIRCH",
+      "place_id": "ChIJ9cDX0yIzK4gRoSHuTQXkltk",
       "name": "Yonge & Birch Residences",
       "address": "1196-1210 Yonge St & 2-8 Birch Ave, Toronto, ON (NW corner Yonge & Birch)",
       "city": "Toronto",
@@ -3484,11 +3492,19 @@
         "height": "32 storeys (133.7m)",
         "units": "64 suites + office space",
         "neighbourhood": "Summerhill / Rosedale"
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ9cDX0yIzK4gRoSHuTQXkltk/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ9cDX0yIzK4gRoSHuTQXkltk/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "dev_135-st-clair-ave-w",
-      "place_id": "DEV_135_ST_CLAIR",
+      "place_id": "ChIJqZjI1VozK4gR-JYxHzxUBFg",
       "name": "135 St Clair Ave W",
       "address": "135 St Clair Ave W, Toronto, ON (SE corner St Clair & Avenue Rd)",
       "city": "Toronto",
@@ -3504,11 +3520,19 @@
         "height": "49 storeys",
         "units": "631 purpose-built rental units",
         "neighbourhood": "Deer Park / Avenue & St Clair"
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJqZjI1VozK4gR-JYxHzxUBFg/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJqZjI1VozK4gR-JYxHzxUBFg/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "dev_1220-yonge-street",
-      "place_id": "1220-yonge-street",
+      "place_id": "ChIJz0lU3lkzK4gRll0EYdZJhIA",
       "name": "1220 Yonge Street",
       "address": "1220 Yonge St, Toronto, ON (SW corner Yonge & Alcorn)",
       "city": "Toronto",
@@ -3524,7 +3548,15 @@
         "height": "35 storeys",
         "units": "273 suites",
         "neighbourhood": "Summerhill"
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJz0lU3lkzK4gRll0EYdZJhIA/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJz0lU3lkzK4gRll0EYdZJhIA/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "dev_one-roxborough-west",
@@ -3655,7 +3687,5 @@
       "placeIdStatus": "verified",
       "notes": "4.9\u2605/73 reviews. Korean hot pot, 70 Ossington. Tiny and exceptional \u2014 the sleeper pick on the strip."
     }
-  ],
-  "updatedAt": "2026-03-30T18:13:55.409Z",
-  "note": "Auto-generated from data/cottages/ and data/developments/"
+  ]
 }
