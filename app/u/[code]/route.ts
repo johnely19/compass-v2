@@ -4,11 +4,13 @@ import { NextRequest } from 'next/server';
 import { getUserByCode, COOKIE_NAME } from '../../_lib/user';
 
 export async function GET(
-  _request: NextRequest,
+  request: NextRequest,
   { params }: { params: Promise<{ code: string }> },
 ) {
   const { code } = await params;
   const user = getUserByCode(code);
+  const searchParams = request.nextUrl.searchParams;
+  const reset = searchParams.get('reset') === 'true';
 
   if (!user) {
     return new Response('Invalid invite code', { status: 404 });
@@ -23,7 +25,9 @@ export async function GET(
     maxAge: 60 * 60 * 24 * 365,
   });
 
-  if (user.isOwner) {
+  if (reset) {
+    redirect(`/reset-local?redirect=/onboarding`);
+  } else if (user.isOwner) {
     redirect('/');
   } else {
     redirect('/onboarding');

@@ -189,6 +189,7 @@ export default function AdminClient() {
   const [loading, setLoading] = useState(true);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
   const [activeTab, setActiveTab] = useState<AdminTab>('overview');
+  const [resettingUser, setResettingUser] = useState<string | null>(null);
 
   const load = useCallback(async () => {
     try {
@@ -213,6 +214,30 @@ export default function AdminClient() {
       // silent
     } finally {
       setLoading(false);
+    }
+  }, []);
+
+  const resetUser = useCallback(async (userId: string, userName: string) => {
+    const confirmed = window.confirm(`Reset all data for ${userName}? This cannot be undone.`);
+    if (!confirmed) return;
+
+    setResettingUser(userId);
+    try {
+      const res = await fetch('/api/admin/reset-user', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId }),
+      });
+      if (res.ok) {
+        alert(`Reset complete: user data cleared`);
+      } else {
+        const err = await res.json();
+        alert(`Reset failed: ${err.error}`);
+      }
+    } catch (e) {
+      alert(`Reset failed: ${e}`);
+    } finally {
+      setResettingUser(null);
     }
   }, []);
 
@@ -629,6 +654,19 @@ export default function AdminClient() {
                   <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
                     <span className="badge badge-accent">{user.city}</span>
                     {user.isOwner && <span className="badge badge-success">Owner</span>}
+                    {!user.isOwner && (
+                      <button
+                        className="btn btn-sm"
+                        style={{ padding: '4px 8px', fontSize: '0.75rem' }}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          resetUser(user.id, user.name);
+                        }}
+                        disabled={resettingUser === user.id}
+                      >
+                        {resettingUser === user.id ? 'Resetting...' : 'Reset'}
+                      </button>
+                    )}
                     <span style={{ color: 'var(--text-muted)' }}>{expanded ? '▼' : '▶'}</span>
                   </div>
                 </div>
