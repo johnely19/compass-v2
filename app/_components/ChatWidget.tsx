@@ -132,9 +132,24 @@ export default function ChatWidget() {
   }, []);
 
   // Auto-scroll to bottom on new messages or stream updates
+  // Use 'instant' when expanding to avoid scrolling through old messages
+  const justExpandedRef = useRef(false);
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    if (isExpanded && !justExpandedRef.current) {
+      justExpandedRef.current = true;
+      // Jump to bottom instantly when first expanding
+      setTimeout(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: 'instant' });
+      }, 50);
+    } else {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    }
   }, [messages, streamContent, toolStatus, isExpanded]);
+
+  // Reset justExpanded when collapsing
+  useEffect(() => {
+    if (!isExpanded) justExpandedRef.current = false;
+  }, [isExpanded]);
 
   // Focus input when expanding
   useEffect(() => {

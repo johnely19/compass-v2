@@ -247,8 +247,10 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  scroll-behavior: smooth;
+  gap: 4px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .chatMessages::-webkit-scrollbar {
@@ -497,6 +499,9 @@
   padding-bottom: calc(8px + env(safe-area-inset-bottom, 8px));
   background: #f5f0e8;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .chatInput {
