@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('chat widget has correct light background', async ({ page }) => {
-  // Authenticate first by visiting /u/john
-  await page.goto('/u/john', { waitUntil: 'networkidle' });
+  // Authenticate first by visiting /u/john2824
+  await page.goto('/u/john2824', { waitUntil: 'networkidle' });
 
   // Navigate to home page
   await page.goto('/', { waitUntil: 'networkidle' });

@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Visual regression tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Auth by visiting /u/john
-    await page.goto('/u/john', { waitUntil: 'networkidle' });
+    // Auth by visiting /u/john2824
+    await page.goto('/u/john2824', { waitUntil: 'networkidle' });
   });
 
   test('homepage visual', async ({ page }) => {

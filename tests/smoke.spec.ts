@@ -4,8 +4,8 @@ const PAGES = ['/', '/placecards', '/hot', '/review', '/admin'];
 
 test.describe('Page load and console error tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Authenticate first by visiting /u/john
-    await page.goto('/u/john', { waitUntil: 'networkidle' });
+    // Authenticate first by visiting /u/john2824
+    await page.goto('/u/john2824', { waitUntil: 'networkidle' });
   });
 
   for (const path of PAGES) {

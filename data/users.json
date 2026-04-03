@@ -3,7 +3,7 @@
     "john": {
       "id": "john",
       "name": "John",
-      "code": "john",
+      "code": "john2824",
       "city": "Toronto",
       "isOwner": true,
       "createdAt": "2026-02-10T00:00:00.000Z"
@@ -11,7 +11,7 @@
     "billy": {
       "id": "billy",
       "name": "Billy",
-      "code": "billy",
+      "code": "billy1409",
       "city": "Toronto",
       "isOwner": false,
       "createdAt": "2026-03-15T00:00:00.000Z"
@@ -19,7 +19,7 @@
     "qa-test-user": {
       "id": "qa-test-user",
       "name": "QA Test User",
-      "code": "qa-test-user",
+      "code": "qa-test-user5506",
       "city": "Toronto",
       "isOwner": false,
       "createdAt": "2026-03-18T21:38:46.381Z"
@@ -27,7 +27,7 @@
     "brennan": {
       "id": "brennan",
       "name": "Brennan",
-      "code": "brennan",
+      "code": "brennan5012",
       "city": "Toronto",
       "isOwner": false,
       "active": false,
@@ -36,7 +36,7 @@
     "darren": {
       "id": "darren",
       "name": "Darren",
-      "code": "darren",
+      "code": "darren4657",
       "city": "Toronto",
       "isOwner": false,
       "active": false,
@@ -45,7 +45,7 @@
     "jay": {
       "id": "jay",
       "name": "Jay",
-      "code": "jay",
+      "code": "jay3286",
       "city": "Toronto",
       "isOwner": false,
       "active": false,
@@ -54,7 +54,7 @@
     "seb": {
       "id": "seb",
       "name": "Seb",
-      "code": "seb",
+      "code": "seb2679",
       "city": "Toronto",
       "isOwner": false,
       "active": false,
@@ -63,7 +63,7 @@
     "jackson": {
       "id": "jackson",
       "name": "Jackson",
-      "code": "jackson",
+      "code": "jackson9935",
       "city": "Toronto",
       "isOwner": false,
       "active": true,
