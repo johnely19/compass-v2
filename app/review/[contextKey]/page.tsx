@@ -2,7 +2,7 @@ import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import { getCurrentUser } from '../../_lib/user';
 import { getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
-import ReviewContextClient from '../../_components/ReviewContextClient';
+import ReviewContextClient, { TravelData, AccommodationData, PeopleData } from '../../_components/ReviewContextClient';
 
 function loadSharedManifest() {
   try {
@@ -59,11 +59,23 @@ export default async function ReviewContextPage({ params }: Props) {
     );
   }
 
+  // Check if this is a trip context - pass through trip-related props
+  const isTripContext = contextKey.startsWith('trip:');
+  const tripProps = isTripContext ? {
+    travel: context.travel as TravelData | undefined,
+    accommodation: context.accommodation as AccommodationData | undefined,
+    bookingStatus: context.bookingStatus as string | undefined,
+    purpose: context.purpose as string | undefined,
+    people: context.people as PeopleData[] | undefined,
+  } : undefined;
+
   return (
     <ReviewContextClient
       userId={user.id}
+      contextKey={contextKey}
       context={context}
       discoveries={discoveries}
+      {...tripProps}
     />
   );
 }

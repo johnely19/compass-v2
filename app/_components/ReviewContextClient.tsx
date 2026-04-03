@@ -9,13 +9,63 @@ import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import ReviewMarkersMap from './ReviewMarkersMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
+import TripPlanningWidget from './TripPlanningWidget';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
+export interface TravelData {
+  outbound?: {
+    date: string;
+    flight: string;
+    operator?: string;
+    aircraft?: string;
+    from: string;
+    to: string;
+    terminal?: string;
+    departs: string;
+    arrives: string;
+    cabin?: string;
+    duration?: string;
+  };
+  return?: {
+    date: string;
+    flight: string;
+    operator?: string;
+    aircraft?: string;
+    from: string;
+    to: string;
+    terminal?: string;
+    departs: string;
+    arrives: string;
+    cabin?: string;
+    duration?: string;
+  };
+}
+
+export interface AccommodationData {
+  name: string;
+  address?: string;
+  status?: string;
+}
+
+export interface PeopleData {
+  name: string;
+  relation?: string;
+  base?: string;
+  note?: string;
+}
+
 interface ReviewContextClientProps {
   userId: string;
+  contextKey: string;
   context: Context;
   discoveries: Discovery[];
+  // Trip-related props (passed when contextKey starts with 'trip:')
+  travel?: TravelData;
+  accommodation?: AccommodationData;
+  bookingStatus?: string;
+  purpose?: string;
+  people?: PeopleData[];
 }
 
 // Cache for place card coordinates (loaded lazily)
@@ -55,8 +105,14 @@ function timeAgo(dateStr: string | undefined | null): string | null {
 
 export default function ReviewContextClient({
   userId,
+  contextKey,
   context,
   discoveries,
+  travel,
+  accommodation,
+  bookingStatus,
+  purpose,
+  people,
 }: ReviewContextClientProps) {
   const [tab, setTab] = useState<Tab>('unreviewed');
   // triageKey changes when triage state changes — forces memo/state recompute
@@ -189,6 +245,22 @@ export default function ReviewContextClient({
           </p>
         )}
       </div>
+
+      {/* Trip Planning Widget — only show for trip contexts */}
+      {contextKey.startsWith('trip:') && (
+        <div style={{ marginBottom: '16px' }}>
+          <TripPlanningWidget
+            userId={userId}
+            contextKey={contextKey}
+            travel={travel}
+            accommodation={accommodation}
+            bookingStatus={bookingStatus}
+            savedCount={counts.saved}
+            purpose={purpose}
+            people={people}
+          />
+        </div>
+      )}
 
       {/* Markers map — show all unreviewed places as pins, no route */}
       {!useAccommodationLayout && filtered.length > 0 && tab === 'unreviewed' && (
