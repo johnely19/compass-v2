@@ -116,6 +116,11 @@ export default function HomeClient({
   discoveryMap,
   contextMeta = {},
 }: HomeClientProps) {
+  // Mounted state to avoid hydration mismatch from localStorage reads
+  const [mounted, setMounted] = useState(false);
+  // Store context counts - initialize with zeros to match server render
+  const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
+
   // Re-render when triage state changes (for saved count badges)
   // Must be BEFORE any conditional returns (Rules of Hooks)
   const [, setTriageVersion] = useState(0);
@@ -124,6 +129,17 @@ export default function HomeClient({
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
+
+  // Initialize from localStorage after mount
+  useEffect(() => {
+    setMounted(true);
+    // Load all context counts
+    const counts: Record<string, { saved: number; dismissed: number; resurfaced: number }> = {};
+    for (const ctx of contexts) {
+      counts[ctx.key] = getContextCounts(userId, ctx.key);
+    }
+    setContextCounts(counts);
+  }, [userId, contexts]);
 
   // Triage hydration now handled by <TriageHydrator> in root layout
 
@@ -149,7 +165,8 @@ export default function HomeClient({
 
       {contexts.map(ctx => {
         const discoveries = discoveryMap[ctx.key] ?? [];
-        const counts = getContextCounts(userId, ctx.key);
+        // Use stored counts after mount, or zeros before mount (matches server)
+        const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
         const naturalDate = formatDateNatural(ctx.dates);
         const description = buildDescription(ctx);
 

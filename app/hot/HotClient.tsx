@@ -133,13 +133,17 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
   function renderCard(card: HotPlaceCard) {
     const gradient = TYPE_GRADIENTS[card.type] || 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
     const bgStyle = card.heroImage
-      ? `linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.65) 100%), url(${card.heroImage}) center/cover`
+      ? {
+          backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.65) 100%), url(${card.heroImage})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+        }
       : gradient;
 
     return (
       <div key={card.placeId} className="hot-place-card" style={{ position: 'relative' }}>
         <Link href={`/placecards/${card.placeId}`} className="hot-place-card-link">
-          <div className="hot-place-card-image" style={{ background: bgStyle }}>
+          <div className="hot-place-card-image" style={bgStyle as React.CSSProperties}>
             <div className="hot-place-card-overlay">
               <TypeBadge type={card.type} size="sm" />
               <h3 className="hot-place-card-name">{card.name}</h3>
