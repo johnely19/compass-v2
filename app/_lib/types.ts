@@ -108,6 +108,7 @@ export interface Discovery {
   match?: number;        // 1-5 relevance score
   placeIdStatus: PlaceIdStatus;
   heroImage?: string;
+  images?: PlaceImage[];
   lat?: number;         // latitude for proximity sorting
   lng?: number;         // longitude for proximity sorting
   // Provenance fields
@@ -150,6 +151,16 @@ export interface ContextTriage {
 export type TriageStore = Record<string, ContextTriage>;
 
 // ---- Place Cards ----
+
+export type ImageRole =
+  | 'hero' | 'exterior' | 'interior' | 'food' | 'drink'
+  | 'water' | 'surroundings' | 'aerial' | 'detail' | 'general';
+
+export interface PlaceImage {
+  url: string;
+  role: ImageRole;
+  source: string;  // 'google-places' | 'street-view' | 'static-map'
+}
 
 export interface PlaceCardImage {
   path: string;
