@@ -1747,7 +1747,8 @@
           "lat": 43.565,
           "lng": -81.7
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJM7PxQBjPKIgRcH8skH0e9f0/1.jpg"
     },
     {
       "id": "cottage_blue-haven-lakehouse",
@@ -2798,7 +2799,8 @@
           "privateShoreline": null,
           "deepWater": null
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ_VJpKFWy1UwRtBgRvh2b5hs/1.jpg"
     },
     {
       "id": "cottage_romantic-couples-getaway-sauna-hot-tub-private-bea",
@@ -3047,7 +3049,8 @@
           "lat": 45.35,
           "lng": -80.45
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ0TtSj5S6K00R-jPLyISQNqw/1.jpg"
     },
     {
       "id": "cottage_pointe-au-baril-cottage",
@@ -3103,7 +3106,8 @@
           "lat": 45.62,
           "lng": -80.72
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJI1QB-BLxK00RRMpuMbs4YgA/1.jpg"
     },
     {
       "id": "cottage_killarney-wilderness-cottage",
@@ -3161,7 +3165,8 @@
           "lat": 45.98,
           "lng": -81.52
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ4Tp56VpsLk0RDhAHnT1UD6s/1.jpg"
     },
     {
       "id": "cottage_haliburton-lake-cottage",
@@ -3218,7 +3223,8 @@
           "lat": 45.05,
           "lng": -78.52
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ_VJpKFWy1UwRtBgRvh2b5hs/1.jpg"
     },
     {
       "id": "cottage_haliburton-redstone-cottage",
@@ -3276,7 +3282,8 @@
           "lat": 45.18,
           "lng": -78.68
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJOW1gjgqw1UwRUEUY7zrfYUw/1.jpg"
     },
     {
       "id": "cottage_manitoulin-island-cottage",
@@ -3331,7 +3338,8 @@
           "lat": 45.72,
           "lng": -82.25
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJg0WWcIL_MU0RjO4jxDaBwOM/1.jpg"
     },
     {
       "id": "cottage_sharbot-lake-cottage",
@@ -3388,7 +3396,8 @@
           "lat": 44.78,
           "lng": -76.72
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ_VJpKFWy1UwRtBgRvh2b5hs/1.jpg"
     },
     {
       "id": "cottage_land-o-lakes-cottage",
@@ -3444,7 +3453,8 @@
           "lat": 44.95,
           "lng": -77.15
         }
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ_VJpKFWy1UwRtBgRvh2b5hs/1.jpg"
     },
     {
       "id": "dev_1233-yonge-street",
@@ -3560,7 +3570,7 @@
     },
     {
       "id": "dev_one-roxborough-west",
-      "place_id": "one-roxborough-west",
+      "place_id": "ChIJybDEISI1K4gR576mT1z9JEk",
       "name": "One Roxborough West",
       "address": "1086 Yonge St, Toronto, ON (Yonge & Roxborough)",
       "city": "Toronto",
@@ -3576,7 +3586,8 @@
         "height": "12 storeys",
         "units": "27 units (includes full-floor residences)",
         "neighbourhood": "Rosedale / Summerhill"
-      }
+      },
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJybDEISI1K4gR576mT1z9JEk/1.jpg"
     },
     {
       "id": "jackson_central-restaurants",
@@ -3591,7 +3602,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.8\u2605/871 reviews. Right on Ossington, steps from Golden Turtle. Top rated on the strip."
+      "notes": "4.8\u2605/871 reviews. Right on Ossington, steps from Golden Turtle. Top rated on the strip.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJQSxaStI1K4gRNlIjJdc10-M/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJQSxaStI1K4gRNlIjJdc10-M/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_la-cubana",
@@ -3607,7 +3626,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.4\u2605/1828 reviews. Cuban, 92 Ossington \u2014 essentially next door to Lunch Lady. Fun, affordable, different."
+      "notes": "4.4\u2605/1828 reviews. Cuban, 92 Ossington \u2014 essentially next door to Lunch Lady. Fun, affordable, different.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ4Ydenf40K4gRsKawapt69oo/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJ4Ydenf40K4gRsKawapt69oo/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_fat-choi",
@@ -3622,7 +3649,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.6\u2605/172 reviews. Vegan/vegetarian, 94 Ossington. Small but well-rated."
+      "notes": "4.6\u2605/172 reviews. Vegan/vegetarian, 94 Ossington. Small but well-rated.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJASCo-jM1K4gRot-ElT8gbnM/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJASCo-jM1K4gRot-ElT8gbnM/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_papi-chulos",
@@ -3638,7 +3673,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.3\u2605/1658 reviews. Mexican/tacos, 121 Ossington \u2014 across from Golden Turtle. Casual, fun."
+      "notes": "4.3\u2605/1658 reviews. Mexican/tacos, 121 Ossington \u2014 across from Golden Turtle. Casual, fun.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJZVNGdgQ1K4gRO2g8IbkjLp8/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJZVNGdgQ1K4gRO2g8IbkjLp8/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_bobbie-sues",
@@ -3653,7 +3696,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.5\u2605/1594 reviews. Mac & cheese specialist, 162 Ossington. Cheap, fun, Jackson-friendly."
+      "notes": "4.5\u2605/1594 reviews. Mac & cheese specialist, 162 Ossington. Cheap, fun, Jackson-friendly.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHeKdsv40K4gRrsuvHopcdko/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJHeKdsv40K4gRrsuvHopcdko/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_cote-de-boeuf",
@@ -3669,7 +3720,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.4\u2605/947 reviews. French butcher/wine bar, 130 Ossington. Steaks and charcuterie, more of a dinner pick."
+      "notes": "4.4\u2605/947 reviews. French butcher/wine bar, 130 Ossington. Steaks and charcuterie, more of a dinner pick.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJWaKhqP40K4gR-IAHS0mGZvk/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJWaKhqP40K4gR-IAHS0mGZvk/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     },
     {
       "id": "jackson_nabe-hana",
@@ -3685,7 +3744,15 @@
       "source": "goplaces-verified",
       "discoveredAt": "2026-03-30T00:00:00.000Z",
       "placeIdStatus": "verified",
-      "notes": "4.9\u2605/73 reviews. Korean hot pot, 70 Ossington. Tiny and exceptional \u2014 the sleeper pick on the strip."
+      "notes": "4.9\u2605/73 reviews. Korean hot pot, 70 Ossington. Tiny and exceptional \u2014 the sleeper pick on the strip.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJkU_5nKQ1K4gRDY7elCp1I4c/1.jpg",
+      "images": [
+        {
+          "url": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJkU_5nKQ1K4gRDY7elCp1I4c/1.jpg",
+          "role": "hero",
+          "source": "google-places"
+        }
+      ]
     }
   ]
 }
