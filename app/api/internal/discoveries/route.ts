@@ -8,6 +8,8 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { list, put, del } from '@vercel/blob';
+import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
+import type { Discovery } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
 
@@ -101,6 +103,17 @@ export async function POST(request: NextRequest) {
     access: 'public',
     addRandomSuffix: false,
   });
+
+  try {
+    await recordDiscoveryHistoryEvent({
+      userId,
+      source: 'api/internal/discoveries',
+      previous: existing as Discovery[],
+      next: merged as Discovery[],
+    });
+  } catch {
+    // best-effort history only
+  }
 
   console.log(`[internal/discoveries] Added ${newItems.length} discoveries for ${userId}`);
 

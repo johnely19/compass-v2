@@ -8,6 +8,8 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { list } from '@vercel/blob';
+import type { Discovery } from '../../../_lib/types';
+import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
 
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
@@ -25,6 +27,7 @@ export async function GET(req: NextRequest) {
   const res = await fetch(blobUrl);
   const raw = await res.json();
   const discoveries: Record<string, unknown>[] = Array.isArray(raw) ? raw : raw.discoveries || [];
+  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as Discovery[];
 
   // Find candidates missing heroImage but have place_id
   const candidates = discoveries.filter(d => d.place_id && !d.heroImage);
@@ -87,6 +90,17 @@ export async function GET(req: NextRequest) {
       access: 'public',
       addRandomSuffix: false,
     });
+
+    try {
+      await recordDiscoveryHistoryEvent({
+        userId,
+        source: 'api/internal/retry-missing-photos',
+        previous: previousDiscoveries,
+        next: discoveries as Discovery[],
+      });
+    } catch {
+      // best-effort history only
+    }
   }
 
   return NextResponse.json({

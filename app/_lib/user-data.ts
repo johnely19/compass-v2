@@ -6,7 +6,8 @@
 import { put, list, del } from '@vercel/blob';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
-import type { UserDocType, UserDocMap, UserProfile, UserPreferences, UserManifest, UserDiscoveries, UserChat } from './types';
+import type { Discovery, UserDocType, UserDocMap, UserProfile, UserPreferences, UserManifest, UserDiscoveries, UserChat } from './types';
+import { recordDiscoveryHistoryEvent } from './discovery-history';
 
 // Place card index cache (server-side only)
 let _placeCardIndex: Record<string, { name: string; type: string }> | null = null;
@@ -60,6 +61,7 @@ export async function setUserData<T extends UserDocType>(
   data: UserDocMap[T],
 ): Promise<void> {
   const blobPath = `${BLOB_PREFIX}/${userId}/${docType}.json`;
+  let previousDiscoveries: UserDiscoveries | null = null;
 
   // Snapshot current document before overwrite for recovery/audit.
   try {
@@ -69,6 +71,16 @@ export async function setUserData<T extends UserDocType>(
       const res = await fetch(existing.url);
       if (res.ok) {
         const existingText = await res.text();
+        if (docType === 'discoveries') {
+          try {
+            const parsed = JSON.parse(existingText) as UserDiscoveries | Discovery[];
+            previousDiscoveries = Array.isArray(parsed)
+              ? { discoveries: parsed, updatedAt: new Date().toISOString() }
+              : parsed;
+          } catch {
+            previousDiscoveries = null;
+          }
+        }
         const snapshotPath = `${BLOB_PREFIX}/${userId}/history/${docType}-${Date.now()}.json`;
         await put(snapshotPath, existingText, {
           access: 'public',
@@ -87,6 +99,20 @@ export async function setUserData<T extends UserDocType>(
     contentType: 'application/json',
     addRandomSuffix: false,
   });
+
+  if (docType === 'discoveries') {
+    try {
+      const nextDiscoveries = (data as UserDiscoveries).discoveries ?? [];
+      await recordDiscoveryHistoryEvent({
+        userId,
+        source: 'user-data:set',
+        previous: previousDiscoveries?.discoveries ?? [],
+        next: nextDiscoveries,
+      });
+    } catch {
+      // best-effort history only
+    }
+  }
 }
 
 // ---- Convenience methods ----
