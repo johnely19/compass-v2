@@ -61,15 +61,25 @@ export async function setUserData<T extends UserDocType>(
 ): Promise<void> {
   const blobPath = `${BLOB_PREFIX}/${userId}/${docType}.json`;
 
-  // Delete existing blob at this path (if any)
+  // Snapshot current document before overwrite for recovery/audit.
   try {
     const { blobs } = await list({ prefix: blobPath, limit: 1 });
     const existing = blobs[0];
     if (existing) {
+      const res = await fetch(existing.url);
+      if (res.ok) {
+        const existingText = await res.text();
+        const snapshotPath = `${BLOB_PREFIX}/${userId}/history/${docType}-${Date.now()}.json`;
+        await put(snapshotPath, existingText, {
+          access: 'public',
+          contentType: 'application/json',
+          addRandomSuffix: false,
+        });
+      }
       await del(existing.url);
     }
   } catch {
-    // Ignore delete errors
+    // Ignore snapshot/delete errors
   }
 
   await put(blobPath, JSON.stringify(data, null, 2), {

@@ -78,6 +78,23 @@ export async function POST(request: NextRequest) {
 
   const merged = [...existing, ...newItems];
 
+  // Snapshot current discoveries before overwrite for recovery/audit
+  for (const b of blobs) {
+    try {
+      const prevRes = await fetch(b.url);
+      if (prevRes.ok) {
+        const prevText = await prevRes.text();
+        await put(`users/${userId}/history/discoveries-${Date.now()}.json`, prevText, {
+          access: 'public',
+          addRandomSuffix: false,
+          contentType: 'application/json',
+        });
+      }
+    } catch {
+      // best-effort snapshot only
+    }
+  }
+
   // Write back
   for (const b of blobs) await del(b.url);
   await put(`users/${userId}/discoveries.json`, JSON.stringify(merged), {
