@@ -3,6 +3,7 @@ import path from 'path';
 import { getCurrentUser } from '../../_lib/user';
 import { getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
 import ReviewContextClient from '../../_components/ReviewContextClient';
+import TripPlanningWidget from '../../_components/TripPlanningWidget';
 
 function loadSharedManifest() {
   try {
@@ -40,6 +41,10 @@ export default async function ReviewContextPage({ params }: Props) {
   const sharedManifest = user?.isOwner ? loadSharedManifest() : null;
   const context = manifest?.contexts.find(c => c.key === contextKey)
     ?? sharedManifest?.contexts?.find((c: { key: string }) => c.key === contextKey);
+
+  const raw = context as unknown as Record<string, unknown>;
+  const isTrip = context?.type === 'trip';
+
   const discoveries = (discoveriesData?.discoveries ?? []).filter(d => {
     if (d.contextKey !== contextKey) return false;
     // Only show fully-built discoveries (must have name + address or description or rating)
@@ -51,6 +56,14 @@ export default async function ReviewContextPage({ params }: Props) {
     return hasAddress || hasDescription || hasRating;
   });
 
+  const savedCount = discoveries.filter(d => d.state === 'saved').length;
+
+  const contextMeta = isTrip ? {
+    travel: raw.travel,
+    accommodation: raw.accommodation,
+    bookingStatus: raw.bookingStatus as string | undefined,
+  } : undefined;
+
   if (!context) {
     return (
       <main className="page">
@@ -60,10 +73,24 @@ export default async function ReviewContextPage({ params }: Props) {
   }
 
   return (
-    <ReviewContextClient
-      userId={user.id}
-      context={context}
-      discoveries={discoveries}
-    />
+    <>
+      {isTrip && (
+        <TripPlanningWidget
+          userId={user.id}
+          contextKey={contextKey}
+          travel={contextMeta?.travel as never}
+          accommodation={contextMeta?.accommodation as never}
+          bookingStatus={contextMeta?.bookingStatus}
+          savedCount={savedCount}
+          purpose={raw.purpose as string | undefined}
+          people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+        />
+      )}
+      <ReviewContextClient
+        userId={user.id}
+        context={context}
+        discoveries={discoveries}
+      />
+    </>
   );
 }
