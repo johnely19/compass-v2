@@ -283,6 +283,246 @@
         "year": 1993,
         "publisher": "MIT Press"
       }
+    },
+    {
+      "key": "section:great-streets:las-ramblas",
+      "label": "Great Streets \u2014 Las Ramblas",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Barcelona",
+      "country": "Spain",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Las Ramblas. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:passeig-de-gracia",
+      "label": "Great Streets \u2014 Passeig de Gr\u00e0cia",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Barcelona",
+      "country": "Spain",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Passeig de Gr\u00e0cia. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:commonwealth-ave",
+      "label": "Great Streets \u2014 Commonwealth Avenue",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Boston",
+      "country": "USA",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Commonwealth Avenue. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:cours-mirabeau",
+      "label": "Great Streets \u2014 Cours Mirabeau",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Aix-en-Provence",
+      "country": "France",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Cours Mirabeau. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:unter-den-linden",
+      "label": "Great Streets \u2014 Unter den Linden",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Berlin",
+      "country": "Germany",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Unter den Linden. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:champs-elysees",
+      "label": "Great Streets \u2014 Champs-\u00c9lys\u00e9es",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Paris",
+      "country": "France",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Champs-\u00c9lys\u00e9es. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:stroget",
+      "label": "Great Streets \u2014 Str\u00f8get",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Copenhagen",
+      "country": "Denmark",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Str\u00f8get. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:istiklal-caddesi",
+      "label": "Great Streets \u2014 \u0130stiklal Caddesi",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Istanbul",
+      "country": "Turkey",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off \u0130stiklal Caddesi. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:via-veneto",
+      "label": "Great Streets \u2014 Via Veneto",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Rome",
+      "country": "Italy",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Via Veneto. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:michigan-ave",
+      "label": "Great Streets \u2014 Michigan Avenue",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Chicago",
+      "country": "USA",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Michigan Avenue. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:bloor-street-west",
+      "label": "Great Streets \u2014 Bloor Street West",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Toronto",
+      "country": "Canada",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Bloor Street West. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
+    },
+    {
+      "key": "section:great-streets:gran-via",
+      "label": "Great Streets \u2014 Gran V\u00eda",
+      "emoji": "\ud83d\udeb6",
+      "type": "section",
+      "city": "Madrid",
+      "country": "Spain",
+      "focus": [
+        "street life",
+        "architecture",
+        "cafes",
+        "bookstores",
+        "bars",
+        "galleries",
+        "design shops"
+      ],
+      "active": true,
+      "parentContext": "wishlist:great-streets",
+      "notes": "Separate discovery feed for places directly on or immediately off Gran V\u00eda. Keep this distinct from generic city recommendations. Prioritize places that help understand the street: caf\u00e9s, bars, bookstores, galleries, institutions, landmark shops, and street-level experiences."
     }
   ]
 }
