@@ -6524,6 +6524,11 @@ body {
   line-height: 1.45;
 }
 
+.monitoring-note-trigger {
+  display: inline;
+  color: var(--text-primary, #2b2723);
+}
+
 /* Monitor check-in button */
 .monitoring-checkin-btn {
   margin-top: 12px;

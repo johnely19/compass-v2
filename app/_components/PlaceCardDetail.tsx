@@ -502,6 +502,9 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
                 {discovery.monitorDimensions.slice(0, 4).map((dimension) => (
                   <li key={dimension.key}>
                     <strong>{dimension.label}:</strong> {dimension.description}
+                    {dimension.trigger && (
+                      <span className="monitoring-note-trigger"> Trigger: {dimension.trigger}</span>
+                    )}
                   </li>
                 ))}
               </ul>
