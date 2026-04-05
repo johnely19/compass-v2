@@ -93,6 +93,14 @@ export type DiscoveryType =
 // ---- Discoveries ----
 
 export type PlaceIdStatus = 'verified' | 'missing' | 'changed' | 'pending';
+export type MonitorStatus = 'none' | 'candidate' | 'active' | 'priority';
+export type MonitorReason = 'saved' | 'contentious' | 'repeated-signal' | 'live-trip' | 'volatile' | 'shortlist';
+
+export interface MonitorDimension {
+  key: string;
+  label: string;
+  description: string;
+}
 
 export interface Discovery {
   id: string;
@@ -130,6 +138,21 @@ export interface Discovery {
     total: number;
     reasons: string[];
   };
+  monitorStatus?: MonitorStatus;
+  monitorReasons?: MonitorReason[];
+  monitorType?: 'hospitality' | 'stay' | 'development' | 'culture' | 'general';
+  monitorDimensions?: MonitorDimension[];
+  monitorSignals?: {
+    savedCount: number;
+    dismissedCount: number;
+    resurfacedCount: number;
+    observationCount: number;
+    recentObservationCount: number;
+    distinctSourceCount: number;
+    activeTripRelevant: boolean;
+    monitorScore: number;
+  };
+  monitorExplanation?: string;
 }
 
 export interface UserDiscoveries {

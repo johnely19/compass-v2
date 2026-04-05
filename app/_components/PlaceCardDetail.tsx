@@ -1,18 +1,18 @@
 'use client';
 
 import { useState } from 'react';
-import type { PlaceCard, DiscoveryType, Discovery } from '../_lib/types';
+import type { PlaceCard, Discovery } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
 import TriageWidget from './TriageWidget';
 import ProvenanceSection from './ProvenanceSection';
-import RatingWidget from './widgets/RatingWidget';
 import HoursWidget from './widgets/HoursWidget';
 import MapWidget from './widgets/MapWidget';
 import PhotoGallery from './widgets/PhotoGallery';
 import TravelIntelWidget from './widgets/TravelIntelWidget';
 import { scoreDiscovery } from '../_lib/discovery-score';
 import type { ScoreBreakdown } from '../_lib/discovery-score';
+import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
 
 /* ---- Share button ---- */
 function ShareButton({ name }: { name: string }) {
@@ -258,6 +258,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
   const googleMapsUrl = card.place_id
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
     : null;
+  const monitoringExplanation = discovery ? getMonitoringExplanation(discovery) : null;
 
   // Google Earth 3D link — useful for spatial context on outdoor/area types
   const EARTH_TYPES = new Set(['accommodation', 'neighbourhood', 'park', 'architecture', 'experience', 'development']);
@@ -406,6 +407,27 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         {narrativeBlocks.filter(b => /vibe|review/i.test(normalizeBlockTitle(b.title))).map((block, i) => (
           <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
         ))}
+
+        {discovery?.monitorStatus && discovery.monitorStatus !== 'none' && monitoringExplanation && (
+          <section className="monitoring-note">
+            <div className="monitoring-note-header">
+              <span className="monitoring-note-kicker">Monitoring</span>
+              <span className={`monitoring-note-status monitoring-note-status-${discovery.monitorStatus}`}>
+                {getMonitorStatusLabel(discovery.monitorStatus)}
+              </span>
+            </div>
+            <p className="monitoring-note-body">{monitoringExplanation}</p>
+            {discovery.monitorDimensions && discovery.monitorDimensions.length > 0 && (
+              <ul className="monitoring-note-list">
+                {discovery.monitorDimensions.slice(0, 4).map((dimension) => (
+                  <li key={dimension.key}>
+                    <strong>{dimension.label}:</strong> {dimension.description}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </section>
+        )}
 
         {/* Provenance section — why this place was recommended */}
         {discovery && discovery.source && (

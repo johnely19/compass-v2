@@ -6,6 +6,7 @@ import type { Discovery } from '../_lib/types';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import { resolveImageUrlClient } from '../_lib/image-url';
+import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
 
 interface PlaceCardProps {
   discovery: Discovery;
@@ -70,6 +71,7 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
   const mapsUrl = place_id
     ? `https://www.google.com/maps/place/?q=place_id:${place_id}`
     : null;
+  const monitorExplanation = getMonitoringExplanation(discovery);
 
   return (
     <div style={{ position: 'relative' }}>
@@ -107,6 +109,11 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
           </div>
           {discovery.rankingExplanation && (
             <div className="place-card-explanation">Why now: {discovery.rankingExplanation}</div>
+          )}
+          {discovery.monitorStatus && discovery.monitorStatus !== 'none' && monitorExplanation && (
+            <div className="place-card-monitoring">
+              Monitoring: {getMonitorStatusLabel(discovery.monitorStatus)} · {monitorExplanation}
+            </div>
           )}
         </div>
       </Link>
