@@ -51,6 +51,13 @@ export function getDiscoveryHistoryKey(discovery: Partial<Discovery>): string {
   return `name:${normalizeName(discovery.name)}:${discovery.contextKey || ''}`;
 }
 
+export function getDiscoveryInventoryKey(discovery: Partial<Discovery>): string {
+  if (discovery.place_id && discovery.contextKey) return `place:${discovery.place_id}:${discovery.contextKey}`;
+  if (discovery.name && discovery.contextKey) return `name:${normalizeName(discovery.name)}:${discovery.contextKey}`;
+  if (discovery.id) return `id:${discovery.id}`;
+  return getDiscoveryHistoryKey(discovery);
+}
+
 function toRemovedItem(discovery: Discovery): DiscoveryHistoryRemovedItem {
   return {
     key: getDiscoveryHistoryKey(discovery),
@@ -187,17 +194,58 @@ export async function getRecentDiscoveryObservations(
   return observations;
 }
 
-export async function deriveDiscoveryQueueFromHistory(userId: string, historyLimit = 50): Promise<Discovery[]> {
-  const events = await listRecentDiscoveryHistory(userId, historyLimit);
+function discoveryRecency(discovery: Partial<Discovery>, fallbackTimestamp?: string): number {
+  const timestamp = discovery.discoveredAt || fallbackTimestamp;
+  const time = timestamp ? new Date(timestamp).getTime() : 0;
+  return Number.isFinite(time) ? time : 0;
+}
+
+function mergeLatestDiscovery(
+  latestByKey: Map<string, Discovery>,
+  discovery: Discovery,
+  options: { preserveExisting?: boolean } = {},
+): void {
+  const key = getDiscoveryInventoryKey(discovery);
+  const existing = latestByKey.get(key);
+
+  if (!existing) {
+    latestByKey.set(key, discovery);
+    return;
+  }
+
+  if (options.preserveExisting) {
+    return;
+  }
+
+  if (discoveryRecency(discovery) >= discoveryRecency(existing)) {
+    latestByKey.set(key, discovery);
+  }
+}
+
+export async function deriveDiscoveryInventory(params: {
+  userId: string;
+  currentDiscoveries?: Discovery[];
+  historyLimit?: number;
+}): Promise<Discovery[]> {
+  const { userId, currentDiscoveries = [], historyLimit = 50 } = params;
   const latestByKey = new Map<string, Discovery>();
 
-  for (const event of [...events].reverse()) {
-    for (const discovery of [...event.added, ...event.updated]) {
-      latestByKey.set(getDiscoveryHistoryKey(discovery), discovery);
+  for (const discovery of currentDiscoveries) {
+    mergeLatestDiscovery(latestByKey, discovery);
+  }
+
+  const events = await listRecentDiscoveryHistory(userId, historyLimit);
+  for (const event of events) {
+    for (const discovery of [...event.updated, ...event.added]) {
+      mergeLatestDiscovery(latestByKey, discovery, { preserveExisting: true });
     }
   }
 
   return Array.from(latestByKey.values()).sort((a, b) =>
-    new Date(b.discoveredAt).getTime() - new Date(a.discoveredAt).getTime(),
+    discoveryRecency(b) - discoveryRecency(a),
   );
+}
+
+export async function deriveDiscoveryQueueFromHistory(userId: string, historyLimit = 50): Promise<Discovery[]> {
+  return deriveDiscoveryInventory({ userId, historyLimit });
 }
