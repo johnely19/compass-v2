@@ -39,32 +39,122 @@ const MONITOR_REASON_LABELS: Record<MonitorReason, string> = {
 
 const TYPE_DIMENSIONS: Record<MonitorType, MonitorDimension[]> = {
   hospitality: [
-    { key: 'reservations', label: 'Reservations', description: 'Watch bookability, release windows, and sell-out pressure.' },
-    { key: 'hours', label: 'Hours', description: 'Track service days, seasonal closures, and late changes.' },
-    { key: 'menu', label: 'Menu / drinks', description: 'Notice chef, menu, or bar-program shifts that change the reason to go.' },
-    { key: 'buzz', label: 'Buzz', description: 'Monitor awards, critical heat, and repeat mention momentum.' },
+    {
+      key: 'reservations',
+      label: 'Reservations',
+      description: 'Watch bookability, release windows, and sell-out pressure.',
+      trigger: 'Meaningful when tables open up, prime slots vanish, or the release rhythm changes.',
+    },
+    {
+      key: 'hours',
+      label: 'Hours',
+      description: 'Track service days, seasonal closures, and late changes.',
+      trigger: 'Meaningful when service days shift, a closure appears, or the opening pattern changes.',
+    },
+    {
+      key: 'menu',
+      label: 'Menu / drinks',
+      description: 'Notice chef, menu, or bar-program shifts that change the reason to go.',
+      trigger: 'Meaningful when the core draw changes: chef move, tasting format, signature dishes, or wine program.',
+    },
+    {
+      key: 'buzz',
+      label: 'Buzz',
+      description: 'Monitor awards, critical heat, and repeat mention momentum.',
+      trigger: 'Meaningful when a credible new source, award, or sustained mention streak changes the urgency.',
+    },
   ],
   stay: [
-    { key: 'availability', label: 'Availability', description: 'Track open nights, sold-out weekends, and release timing.' },
-    { key: 'pricing', label: 'Pricing', description: 'Watch rate drift, packages, and shoulder-season opportunities.' },
-    { key: 'policies', label: 'Policies', description: 'Notice cancellation, minimum-stay, and pet/guest rule changes.' },
-    { key: 'condition', label: 'Condition', description: 'Track renovation, amenity, and seasonal suitability updates.' },
+    {
+      key: 'availability',
+      label: 'Availability',
+      description: 'Track open nights, sold-out weekends, and release timing.',
+      trigger: 'Meaningful when target dates open, inventory tightens, or cancellation inventory appears.',
+    },
+    {
+      key: 'pricing',
+      label: 'Pricing',
+      description: 'Watch rate drift, packages, and shoulder-season opportunities.',
+      trigger: 'Meaningful when total trip cost changes materially through rate moves, fees, or bundled offers.',
+    },
+    {
+      key: 'policies',
+      label: 'Policies',
+      description: 'Notice cancellation, minimum-stay, and pet/guest rule changes.',
+      trigger: 'Meaningful when a booking becomes newly feasible or newly annoying because rules changed.',
+    },
+    {
+      key: 'condition',
+      label: 'Condition',
+      description: 'Track renovation, amenity, and seasonal suitability updates.',
+      trigger: 'Meaningful when amenity, shoreline, pool, or renovation updates change the fit for the trip.',
+    },
   ],
   development: [
-    { key: 'timeline', label: 'Timeline', description: 'Watch approvals, launch timing, occupancy, and completion slips.' },
-    { key: 'pricing', label: 'Pricing / sales', description: 'Track price sheets, incentives, and absorption signals.' },
-    { key: 'design', label: 'Design / amenities', description: 'Notice material, amenity, or architect-story changes.' },
-    { key: 'construction', label: 'Construction', description: 'Monitor visible progress and major permitting milestones.' },
+    {
+      key: 'timeline',
+      label: 'Timeline',
+      description: 'Watch approvals, launch timing, occupancy, and completion slips.',
+      trigger: 'Meaningful when opening, occupancy, or completion timing moves enough to affect when it becomes visitable.',
+    },
+    {
+      key: 'pricing',
+      label: 'Pricing / sales',
+      description: 'Track price sheets, incentives, and absorption signals.',
+      trigger: 'Meaningful when pricing posture changes through incentives, cuts, or unexpected sell-through.',
+    },
+    {
+      key: 'design',
+      label: 'Design / amenities',
+      description: 'Notice material, amenity, or architect-story changes.',
+      trigger: 'Meaningful when the design story or amenity package gets stronger, weaker, or more distinctive.',
+    },
+    {
+      key: 'construction',
+      label: 'Construction',
+      description: 'Monitor visible progress and major permitting milestones.',
+      trigger: 'Meaningful when a permit lands, a site visibly advances, or construction stalls.',
+    },
   ],
   culture: [
-    { key: 'program', label: 'Program', description: 'Track exhibitions, lineups, residencies, and event calendars.' },
-    { key: 'tickets', label: 'Tickets', description: 'Watch release dates, timed-entry pressure, and sellouts.' },
-    { key: 'hours', label: 'Hours', description: 'Notice closure days, special openings, and seasonal schedule changes.' },
-    { key: 'news', label: 'News', description: 'Watch curator, artist, and venue announcements that change relevance.' },
+    {
+      key: 'program',
+      label: 'Program',
+      description: 'Track exhibitions, lineups, residencies, and event calendars.',
+      trigger: 'Meaningful when a new lineup, exhibition, or residency makes the place newly worth timing around.',
+    },
+    {
+      key: 'tickets',
+      label: 'Tickets',
+      description: 'Watch release dates, timed-entry pressure, and sellouts.',
+      trigger: 'Meaningful when tickets go live, dates sell through, or extra performances are added.',
+    },
+    {
+      key: 'hours',
+      label: 'Hours',
+      description: 'Notice closure days, special openings, and seasonal schedule changes.',
+      trigger: 'Meaningful when the calendar adds or removes access on the days the trip can actually use.',
+    },
+    {
+      key: 'news',
+      label: 'News',
+      description: 'Watch curator, artist, and venue announcements that change relevance.',
+      trigger: 'Meaningful when an artist, curator, collaboration, or press moment changes the cultural weight.',
+    },
   ],
   general: [
-    { key: 'status', label: 'Status', description: 'Monitor whether the place is becoming more actionable or more uncertain.' },
-    { key: 'signal', label: 'Signal strength', description: 'Watch whether it keeps resurfacing from independent inputs.' },
+    {
+      key: 'status',
+      label: 'Status',
+      description: 'Monitor whether the place is becoming more actionable or more uncertain.',
+      trigger: 'Meaningful when it becomes clearly more bookable, more open, more active, or more questionable.',
+    },
+    {
+      key: 'signal',
+      label: 'Signal strength',
+      description: 'Watch whether it keeps resurfacing from independent inputs.',
+      trigger: 'Meaningful when a second source or repeated resurfacing upgrades confidence.',
+    },
   ],
 };
 
@@ -114,6 +204,13 @@ function getMonitorType(discovery: Discovery): MonitorType {
 
 function getMonitorDimensions(discovery: Discovery): MonitorDimension[] {
   return TYPE_DIMENSIONS[getMonitorType(discovery)] ?? TYPE_DIMENSIONS.general;
+}
+
+function getMonitoringCadence(status: MonitorStatus, activeTripRelevant: boolean): string {
+  if (status === 'priority') return activeTripRelevant ? 'Check twice weekly while the trip is live.' : 'Check weekly until the signal cools.';
+  if (status === 'active') return activeTripRelevant ? 'Check weekly while the trip is live.' : 'Check every 2–3 weeks.';
+  if (status === 'candidate') return 'Check when a fresh source or availability update appears.';
+  return 'No active monitoring needed.';
 }
 
 function summarizeObservations(discoveries: Discovery[], historyEvents: Awaited<ReturnType<typeof listRecentDiscoveryHistory>>) {
@@ -325,7 +422,9 @@ export async function annotateDiscoveriesForMonitoring(params: {
         activeTripRelevant,
         monitorScore,
       },
-      monitorExplanation: monitorStatus === 'none' ? undefined : explanationParts.slice(0, 3).join(' · '),
+      monitorExplanation: monitorStatus === 'none'
+        ? undefined
+        : `${explanationParts.slice(0, 3).join(' · ')}${explanationParts.length > 0 ? ' · ' : ''}${getMonitoringCadence(monitorStatus, activeTripRelevant)}`,
     };
   });
 }

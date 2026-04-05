@@ -100,6 +100,7 @@ export interface MonitorDimension {
   key: string;
   label: string;
   description: string;
+  trigger?: string;
 }
 
 export interface Discovery {
