@@ -105,6 +105,9 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
               <span className="rating-placeholder">&nbsp;</span>
             )}
           </div>
+          {discovery.rankingExplanation && (
+            <div className="place-card-explanation">Why now: {discovery.rankingExplanation}</div>
+          )}
         </div>
       </Link>
       {mapsUrl && (

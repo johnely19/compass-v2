@@ -118,6 +118,18 @@ export interface Discovery {
   verified?: boolean;    // verified via Google Places
   ratingCount?: number; // review count from Google Places
   description?: string; // Disco description
+  rankingScore?: number;
+  rankingBaseScore?: number;
+  rankingExplanation?: string;
+  preferenceSignals?: {
+    samePlaceSignal: number;
+    typeAffinity: number;
+    contextAffinity: number;
+    repeatObservation: number;
+    emergingPreference: number;
+    total: number;
+    reasons: string[];
+  };
 }
 
 export interface UserDiscoveries {

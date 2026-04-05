@@ -8,6 +8,7 @@ import { resolveImageUrl } from './_lib/image-url';
 import { getManifestHeroImage } from './_lib/image-url.server';
 import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
+import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -167,12 +168,28 @@ export default async function HomePage() {
       globalSeenPlaceIds.add(d.place_id);
       return true;
     });
+    byContext.set(ctxKey, globalDeduped);
+  }
 
-    // Score and sort — best places first
-    const scored = globalDeduped
-      .map(d => ({ ...d, _score: scoreDiscovery(d).total }))
-      .sort((a, b) => (b._score || 0) - (a._score || 0));
-    byContext.set(ctxKey, scored);
+  const rankedDiscoveries = await rankDiscoveriesForHomepage({
+    userId: user.id,
+    discoveries: Array.from(byContext.values()).flat(),
+    contexts,
+    baseScore: (discovery) => scoreDiscovery(discovery).total,
+  });
+
+  const rankedByKey = new Map(
+    rankedDiscoveries.map((discovery) => [
+      discovery.place_id ? `${discovery.contextKey}::${discovery.place_id}` : `${discovery.contextKey}::${discovery.id}`,
+      discovery,
+    ]),
+  );
+
+  for (const [ctxKey, items] of byContext) {
+    const ranked = items
+      .map((discovery) => rankedByKey.get(discovery.place_id ? `${ctxKey}::${discovery.place_id}` : `${ctxKey}::${discovery.id}`) ?? discovery)
+      .sort((a, b) => (b.rankingScore ?? scoreDiscovery(b).total) - (a.rankingScore ?? scoreDiscovery(a).total));
+    byContext.set(ctxKey, ranked);
   }
 
   // Build contextMeta — structured trip data for widgets
