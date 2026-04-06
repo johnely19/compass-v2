@@ -417,11 +417,25 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
               </span>
             </div>
             <p className="monitoring-note-body">{monitoringExplanation}</p>
+            {discovery.monitorCadence && (
+              <p className="monitoring-note-body">
+                <strong>Cadence:</strong> {discovery.monitorCadence}
+              </p>
+            )}
             {discovery.monitorDimensions && discovery.monitorDimensions.length > 0 && (
               <ul className="monitoring-note-list">
                 {discovery.monitorDimensions.slice(0, 4).map((dimension) => (
                   <li key={dimension.key}>
                     <strong>{dimension.label}:</strong> {dimension.description}
+                  </li>
+                ))}
+              </ul>
+            )}
+            {discovery.monitorSources && discovery.monitorSources.length > 0 && (
+              <ul className="monitoring-note-list">
+                {discovery.monitorSources.slice(0, 3).map((source) => (
+                  <li key={source.key}>
+                    <strong>{source.label}:</strong> {source.rationale}
                   </li>
                 ))}
               </ul>

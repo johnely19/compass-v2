@@ -102,6 +102,12 @@ export interface MonitorDimension {
   description: string;
 }
 
+export interface MonitorSourceHint {
+  key: string;
+  label: string;
+  rationale: string;
+}
+
 export interface Discovery {
   id: string;
   place_id?: string;
@@ -153,6 +159,8 @@ export interface Discovery {
     monitorScore: number;
   };
   monitorExplanation?: string;
+  monitorCadence?: string;
+  monitorSources?: MonitorSourceHint[];
 }
 
 export interface UserDiscoveries {

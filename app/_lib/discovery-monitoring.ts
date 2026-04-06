@@ -5,6 +5,7 @@ import type {
   Discovery,
   MonitorDimension,
   MonitorReason,
+  MonitorSourceHint,
   MonitorStatus,
   TriageStore,
 } from './types';
@@ -65,6 +66,33 @@ const TYPE_DIMENSIONS: Record<MonitorType, MonitorDimension[]> = {
   general: [
     { key: 'status', label: 'Status', description: 'Monitor whether the place is becoming more actionable or more uncertain.' },
     { key: 'signal', label: 'Signal strength', description: 'Watch whether it keeps resurfacing from independent inputs.' },
+  ],
+};
+
+const TYPE_SOURCE_HINTS: Record<MonitorType, MonitorSourceHint[]> = {
+  hospitality: [
+    { key: 'official', label: 'Official site / booking page', rationale: 'Best source for menu shifts, release windows, and service-hour changes.' },
+    { key: 'maps', label: 'Google Maps profile', rationale: 'Good for live hours, temporary closures, and review velocity.' },
+    { key: 'social', label: 'Instagram / newsletter', rationale: 'Often where chef changes, pop-ups, and seasonal drops appear first.' },
+  ],
+  stay: [
+    { key: 'official', label: 'Official stay listing', rationale: 'Primary source for availability, rates, policies, and packages.' },
+    { key: 'marketplace', label: 'Booking / rental marketplace', rationale: 'Useful for sold-out weekends, price drift, and minimum-stay changes.' },
+    { key: 'reviews', label: 'Recent guest reviews', rationale: 'Fastest signal for condition changes, amenity issues, or standout improvements.' },
+  ],
+  development: [
+    { key: 'developer', label: 'Developer / project site', rationale: 'Best source for launch timing, price sheets, and amenity revisions.' },
+    { key: 'planning', label: 'Planning / permit filings', rationale: 'Shows approvals, delays, and scope changes before marketing catches up.' },
+    { key: 'site', label: 'Construction updates', rationale: 'Visible progress is often the clearest signal of real momentum.' },
+  ],
+  culture: [
+    { key: 'program', label: 'Program / calendar page', rationale: 'Best source for exhibitions, lineups, and schedule changes.' },
+    { key: 'ticketing', label: 'Ticketing flow', rationale: 'Good for release timing, timed-entry pressure, and sellouts.' },
+    { key: 'press', label: 'Press / newsletter / social', rationale: 'Captures curator, artist, and venue announcements that change relevance.' },
+  ],
+  general: [
+    { key: 'official', label: 'Official source', rationale: 'Best source to confirm whether the place is materially changing.' },
+    { key: 'maps', label: 'Google Maps profile', rationale: 'Useful for status, hours, and fresh public signal.' },
   ],
 };
 
@@ -248,6 +276,32 @@ export function getMonitoringExplanation(discovery: Partial<Discovery>): string 
   return summarizeReasons(discovery.monitorReasons);
 }
 
+function getMonitorCadence(args: {
+  status: MonitorStatus;
+  volatile: boolean;
+  activeTripRelevant: boolean;
+  repeatedSignalStrong: boolean;
+}): string | undefined {
+  const { status, volatile, activeTripRelevant, repeatedSignalStrong } = args;
+  if (status === 'none') return undefined;
+  if (status === 'priority') {
+    if (activeTripRelevant || volatile) return 'Daily during planning window';
+    return 'Weekly';
+  }
+  if (status === 'active') {
+    if (activeTripRelevant || volatile) return 'Twice weekly';
+    if (repeatedSignalStrong) return 'Weekly';
+    return 'Every 2 weeks';
+  }
+  return repeatedSignalStrong ? 'Every 2 weeks' : 'Monthly';
+}
+
+function getMonitorSources(discovery: Discovery, status: MonitorStatus): MonitorSourceHint[] | undefined {
+  if (status === 'none') return undefined;
+  const monitorType = getMonitorType(discovery);
+  return TYPE_SOURCE_HINTS[monitorType] ?? TYPE_SOURCE_HINTS.general;
+}
+
 export async function annotateDiscoveriesForMonitoring(params: {
   userId: string;
   discoveries: Discovery[];
@@ -298,6 +352,13 @@ export async function annotateDiscoveriesForMonitoring(params: {
     const monitorStatus = toMonitorStatus(monitorScore);
     const monitorType = getMonitorType(discovery);
     const monitorDimensions = monitorStatus === 'none' ? undefined : getMonitorDimensions(discovery);
+    const monitorCadence = getMonitorCadence({
+      status: monitorStatus,
+      volatile,
+      activeTripRelevant,
+      repeatedSignalStrong,
+    });
+    const monitorSources = getMonitorSources(discovery, monitorStatus);
 
     const explanationParts: string[] = [];
     if (triage.savedCount > 0) explanationParts.push(triage.savedCount > 1 ? 'saved in multiple reviews' : 'saved already');
@@ -326,6 +387,8 @@ export async function annotateDiscoveriesForMonitoring(params: {
         monitorScore,
       },
       monitorExplanation: monitorStatus === 'none' ? undefined : explanationParts.slice(0, 3).join(' · '),
+      monitorCadence,
+      monitorSources,
     };
   });
 }
