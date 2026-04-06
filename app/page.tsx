@@ -11,6 +11,7 @@ import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
 import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
 import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
+import { getHomepageContextVisibility } from './_lib/homepage-contexts';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -200,9 +201,14 @@ export default async function HomePage() {
     byContext.set(ctxKey, ranked);
   }
 
+  const { visibleContexts, hiddenEmptyContextCount } = getHomepageContextVisibility({
+    contexts,
+    discoveryBuckets: byContext,
+  });
+
   // Build contextMeta — structured trip data for widgets
   const contextMeta = Object.fromEntries(
-    contexts
+    visibleContexts
       .filter(c => c.type === 'trip')
       .map(c => {
         const raw = c as unknown as Record<string, unknown>;
@@ -217,9 +223,10 @@ export default async function HomePage() {
   return (
     <HomeClient
       userId={user.id}
-      contexts={contexts}
+      contexts={visibleContexts}
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
+      hasHiddenEmptyContexts={hiddenEmptyContextCount > 0}
     />
   );
 }

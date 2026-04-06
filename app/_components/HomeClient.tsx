@@ -14,6 +14,7 @@ interface HomeClientProps {
   contexts: Context[];
   discoveryMap: Record<string, Discovery[]>;
   contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
+  hasHiddenEmptyContexts?: boolean;
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -115,6 +116,7 @@ export default function HomeClient({
   contexts,
   discoveryMap,
   contextMeta = {},
+  hasHiddenEmptyContexts = false,
 }: HomeClientProps) {
   // Mounted state to avoid hydration mismatch from localStorage reads
   const [mounted, setMounted] = useState(false);
@@ -148,7 +150,11 @@ export default function HomeClient({
       <main className="page">
         <div className="page-header">
           <h1>🧭 Compass</h1>
-          <p>No active contexts yet. Chat with the concierge to set up your first trip, outing, or radar.</p>
+          <p>
+            {hasHiddenEmptyContexts
+              ? 'No discovery-ready contexts yet. Active contexts stay hidden until Compass has places to show.'
+              : 'No active contexts yet. Chat with the concierge to set up your first trip, outing, or radar.'}
+          </p>
         </div>
       </main>
     );
