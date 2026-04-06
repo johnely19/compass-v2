@@ -10,6 +10,7 @@ import type {
   TriageStore,
 } from './types';
 import { getDiscoveryHistoryKey, listRecentDiscoveryHistory } from './discovery-history';
+import { loadCheckinStore, getLatestCheckinAt } from './monitor-checkins';
 
 const BLOB_PREFIX = 'users';
 const MONITOR_HISTORY_LIMIT = 60;
@@ -410,9 +411,10 @@ export async function annotateDiscoveriesForMonitoring(params: {
   contexts: Context[];
 }): Promise<Discovery[]> {
   const { userId, discoveries, contexts } = params;
-  const [triageStore, historyEvents] = await Promise.all([
+  const [triageStore, historyEvents, checkinStore] = await Promise.all([
     loadServerTriageStore(userId),
     listRecentDiscoveryHistory(userId, MONITOR_HISTORY_LIMIT),
+    loadCheckinStore(userId),
   ]);
 
   const observations = summarizeObservations(discoveries, historyEvents);
@@ -462,7 +464,9 @@ export async function annotateDiscoveriesForMonitoring(params: {
       repeatedSignalStrong,
     });
     const monitorSources = getMonitorSources(discovery, monitorStatus);
-    const monitorLastObservedAt = observation.lastObservedAt ?? discovery.discoveredAt;
+    const checkinAt = getLatestCheckinAt(checkinStore, getDiscoveryHistoryKey(discovery));
+    // Checkin timestamp wins over discovery history (most recent manual review resets the clock)
+    const monitorLastObservedAt = latestIso(checkinAt, observation.lastObservedAt) ?? discovery.discoveredAt;
     const monitorNextCheckAt = monitorStatus === 'none' ? undefined : getNextCheckAt(monitorLastObservedAt, monitorCadence);
     const monitorDueNow = Boolean(monitorNextCheckAt && new Date(monitorNextCheckAt).getTime() <= Date.now());
 

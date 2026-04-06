@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import type { PlaceCard, Discovery } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
 import { resolveImageUrlClient } from '../_lib/image-url';
@@ -273,7 +273,33 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
     : null;
   const monitoringExplanation = discovery ? getMonitoringExplanation(discovery) : null;
-  const monitoringTiming = formatMonitoringTiming(discovery?.monitorNextCheckAt, discovery?.monitorDueNow);
+  const [checkinState, setCheckinState] = useState<'idle' | 'loading' | 'done'>('idle');
+  const [localDueNow, setLocalDueNow] = useState(discovery?.monitorDueNow);
+  const handleCheckin = useCallback(async () => {
+    if (!discovery || checkinState === 'loading') return;
+    setCheckinState('loading');
+    try {
+      const discoveryKey = discovery.id
+        ? `id:${discovery.id}`
+        : discovery.place_id && discovery.contextKey
+          ? `place:${discovery.place_id}:${discovery.contextKey}`
+          : `name:${(discovery.name ?? '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim()}:${discovery.contextKey ?? ''}`;
+      const res = await fetch('/api/user/monitor-checkin', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ discoveryKey }),
+      });
+      if (res.ok) {
+        setCheckinState('done');
+        setLocalDueNow(false);
+      } else {
+        setCheckinState('idle');
+      }
+    } catch {
+      setCheckinState('idle');
+    }
+  }, [discovery, checkinState]);
+  const monitoringTiming = formatMonitoringTiming(discovery?.monitorNextCheckAt, localDueNow);
 
   // Google Earth 3D link — useful for spatial context on outdoor/area types
   const EARTH_TYPES = new Set(['accommodation', 'neighbourhood', 'park', 'architecture', 'experience', 'development']);
@@ -441,6 +467,18 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
               <p className="monitoring-note-body">
                 <strong>Next check:</strong> {monitoringTiming}
               </p>
+            )}
+            {checkinState === 'done' ? (
+              <p className="monitoring-checkin-done">✓ Marked as checked</p>
+            ) : (
+              <button
+                className="monitoring-checkin-btn"
+                onClick={handleCheckin}
+                disabled={checkinState === 'loading'}
+                aria-label="Mark this place as checked"
+              >
+                {checkinState === 'loading' ? 'Saving…' : localDueNow ? '✓ Mark as checked' : 'Mark as checked'}
+              </button>
             )}
             {discovery.monitorDimensions && discovery.monitorDimensions.length > 0 && (
               <ul className="monitoring-note-list">

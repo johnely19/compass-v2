@@ -6349,5 +6349,36 @@ body {
   line-height: 1.45;
 }
 
+/* Monitor check-in button */
+.monitoring-checkin-btn {
+  margin-top: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border: 1.5px solid var(--border-subtle, #e0dbd4);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-primary, #1a1714);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+.monitoring-checkin-btn:hover:not(:disabled) {
+  background: var(--bg-muted, #f4f0eb);
+  border-color: var(--border-strong, #b5aea4);
+}
+.monitoring-checkin-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.monitoring-checkin-done {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #4a8c6f;
+  font-weight: 500;
+}
+
 /* Hide Next.js dev error overlay indicator */
 nextjs-portal { display: none !important; }
