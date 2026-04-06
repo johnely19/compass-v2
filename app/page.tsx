@@ -169,9 +169,15 @@ export default async function HomePage() {
     byContext.set(ctxKey, globalDeduped);
   }
 
+  // Fix #251: filter out active contexts with no discoveries to avoid showing empty sections
+  const contextsWithDiscoveries = contexts.filter(ctx => {
+    const discoveries = byContext.get(ctx.key);
+    return discoveries && discoveries.length > 0;
+  });
+
   // Build contextMeta — structured trip data for widgets
   const contextMeta = Object.fromEntries(
-    contexts
+    contextsWithDiscoveries
       .filter(c => c.type === 'trip')
       .map(c => {
         const raw = c as unknown as Record<string, unknown>;
@@ -186,7 +192,7 @@ export default async function HomePage() {
   return (
     <HomeClient
       userId={user.id}
-      contexts={contexts}
+      contexts={contextsWithDiscoveries}
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
     />
