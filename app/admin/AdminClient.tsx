@@ -53,6 +53,27 @@ interface DiscoActivityData {
   changesDetectedToday: number;
   errorsToday: number;
   errorDetails: string[];
+  monitoring: {
+    total: number;
+    dueNow: number;
+    byStatus: {
+      candidate: number;
+      active: number;
+      priority: number;
+    };
+    byType: Record<string, number>;
+    nextUp: Array<{
+      id: string;
+      name: string;
+      contextKey: string;
+      status: string;
+      type: string;
+      dueNow: boolean;
+      nextCheckAt?: string;
+      lastObservedAt?: string;
+      explanation?: string;
+    }>;
+  };
   jobs: Array<{
     id: string;
     name: string;
@@ -133,6 +154,19 @@ function formatRelativeTime(ts: string | number | null): string {
   const hrs = Math.floor(mins / 60);
   if (hrs < 24) return `${hrs}h ago`;
   return `${Math.floor(hrs / 24)}d ago`;
+}
+
+function formatMonitorDue(ts?: string): string {
+  if (!ts) return 'unscheduled';
+  const diffMs = new Date(ts).getTime() - Date.now();
+  if (!Number.isFinite(diffMs)) return 'unscheduled';
+  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+  if (diffDays <= 0) return 'due now';
+  if (diffDays === 1) return 'due in 1 day';
+  if (diffDays < 14) return `due in ${diffDays} days`;
+  const diffWeeks = Math.round(diffDays / 7);
+  if (diffWeeks <= 1) return 'due in 1 week';
+  return `due in ${diffWeeks} weeks`;
 }
 
 function formatTokens(n: number): string {
@@ -497,6 +531,31 @@ export default function AdminClient() {
               </div>
             </div>
 
+            <div className="health-stats" style={{ marginBottom: 'var(--space-md)' }}>
+              <div className="health-stat-card">
+                <strong>{discoActivity.monitoring.total}</strong>
+                <span>Monitored Places</span>
+              </div>
+              <div className="health-stat-card">
+                <strong style={{ color: discoActivity.monitoring.dueNow > 0 ? '#f59e0b' : 'var(--text-primary)' }}>
+                  {discoActivity.monitoring.dueNow}
+                </strong>
+                <span>Due Now</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.monitoring.byStatus.priority}</strong>
+                <span>Priority Monitor</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.monitoring.byStatus.active}</strong>
+                <span>Active Monitor</span>
+              </div>
+              <div className="health-stat-card">
+                <strong>{discoActivity.monitoring.byStatus.candidate}</strong>
+                <span>Candidate Monitor</span>
+              </div>
+            </div>
+
             {/* Last run detail */}
             {discoActivity.lastJobName && (
               <div style={{ fontSize: '0.8rem', color: 'var(--text-muted)', marginBottom: discoActivity.errorDetails.length > 0 ? 'var(--space-sm)' : 0 }}>
@@ -525,6 +584,42 @@ export default function AdminClient() {
                 color: '#f44336',
               }}>
                 {discoActivity.errorDetails.map((e, i) => <div key={i}>{e}</div>)}
+              </div>
+            )}
+
+            {discoActivity.monitoring.nextUp.length > 0 && (
+              <div style={{ marginTop: 'var(--space-md)' }}>
+                <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 8 }}>
+                  Monitoring queue
+                </div>
+                <div style={{ display: 'grid', gap: 8 }}>
+                  {discoActivity.monitoring.nextUp.map((item) => (
+                    <div
+                      key={`${item.contextKey}-${item.id}`}
+                      style={{
+                        padding: '10px 12px',
+                        border: '1px solid var(--border-subtle)',
+                        borderRadius: 8,
+                        background: 'var(--surface-secondary)',
+                      }}
+                    >
+                      <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'baseline' }}>
+                        <strong style={{ color: 'var(--text-primary)' }}>{item.name}</strong>
+                        <span style={{ fontSize: '0.78rem', color: item.dueNow ? '#f59e0b' : 'var(--text-muted)' }}>
+                          {item.dueNow ? 'Due now' : formatMonitorDue(item.nextCheckAt)}
+                        </span>
+                      </div>
+                      <div style={{ fontSize: '0.76rem', color: 'var(--text-muted)', marginTop: 4 }}>
+                        {item.status} · {item.type} · {item.contextKey}
+                      </div>
+                      {item.explanation && (
+                        <div style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', marginTop: 6 }}>
+                          {item.explanation}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 

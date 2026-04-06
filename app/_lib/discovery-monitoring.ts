@@ -21,6 +21,27 @@ interface ObservationSummary {
   count: number;
   recentCount: number;
   distinctSources: number;
+  lastObservedAt?: string;
+}
+
+export interface MonitoringDigestItem {
+  id: string;
+  name: string;
+  contextKey: string;
+  status: MonitorStatus;
+  type: MonitorType;
+  dueNow: boolean;
+  nextCheckAt?: string;
+  lastObservedAt?: string;
+  explanation?: string;
+}
+
+export interface MonitoringDigest {
+  total: number;
+  dueNow: number;
+  byStatus: Record<Exclude<MonitorStatus, 'none'>, number>;
+  byType: Partial<Record<MonitorType, number>>;
+  nextUp: MonitoringDigestItem[];
 }
 
 interface TriageSummary {
@@ -124,6 +145,12 @@ function daysAgo(iso: string | undefined): number {
   return (Date.now() - time) / (1000 * 60 * 60 * 24);
 }
 
+function latestIso(a: string | undefined, b: string | undefined): string | undefined {
+  if (!a) return b;
+  if (!b) return a;
+  return new Date(a).getTime() >= new Date(b).getTime() ? a : b;
+}
+
 function placeLookupKeys(discovery: Discovery): string[] {
   const keys = new Set<string>();
   if (discovery.place_id) keys.add(`place:${discovery.place_id}`);
@@ -169,6 +196,7 @@ function summarizeObservations(discoveries: Discovery[], historyEvents: Awaited<
       const item = ensure(key);
       item.count += 1;
       if (isRecent) item.recentCount += 1;
+      item.lastObservedAt = latestIso(item.lastObservedAt, event.recordedAt);
       const sources = seenSources.get(key) ?? new Set<string>();
       sources.add(event.source);
       seenSources.set(key, sources);
@@ -302,6 +330,80 @@ function getMonitorSources(discovery: Discovery, status: MonitorStatus): Monitor
   return TYPE_SOURCE_HINTS[monitorType] ?? TYPE_SOURCE_HINTS.general;
 }
 
+function cadenceIntervalMs(cadence: string | undefined): number | undefined {
+  switch (cadence) {
+    case 'Daily during planning window':
+      return 24 * 60 * 60 * 1000;
+    case 'Twice weekly':
+      return 3 * 24 * 60 * 60 * 1000;
+    case 'Weekly':
+      return 7 * 24 * 60 * 60 * 1000;
+    case 'Every 2 weeks':
+      return 14 * 24 * 60 * 60 * 1000;
+    case 'Monthly':
+      return 30 * 24 * 60 * 60 * 1000;
+    default:
+      return undefined;
+  }
+}
+
+function getNextCheckAt(lastObservedAt: string | undefined, cadence: string | undefined): string | undefined {
+  const intervalMs = cadenceIntervalMs(cadence);
+  if (!lastObservedAt || !intervalMs) return undefined;
+  const baseMs = new Date(lastObservedAt).getTime();
+  if (!Number.isFinite(baseMs)) return undefined;
+  return new Date(baseMs + intervalMs).toISOString();
+}
+
+export function buildMonitoringDigest(discoveries: Discovery[], limit = 5): MonitoringDigest {
+  const relevant = discoveries.filter((discovery) => discovery.monitorStatus && discovery.monitorStatus !== 'none');
+  const byStatus: MonitoringDigest['byStatus'] = {
+    candidate: 0,
+    active: 0,
+    priority: 0,
+  };
+  const byType: MonitoringDigest['byType'] = {};
+
+  for (const discovery of relevant) {
+    const status = discovery.monitorStatus as Exclude<MonitorStatus, 'none'>;
+    byStatus[status] += 1;
+    const type = (discovery.monitorType ?? 'general') as MonitorType;
+    byType[type] = (byType[type] ?? 0) + 1;
+  }
+
+  const nextUp = relevant
+    .map((discovery) => ({
+      id: discovery.place_id || discovery.id,
+      name: discovery.name,
+      contextKey: discovery.contextKey,
+      status: discovery.monitorStatus as Exclude<MonitorStatus, 'none'>,
+      type: (discovery.monitorType ?? 'general') as MonitorType,
+      dueNow: Boolean(discovery.monitorDueNow),
+      nextCheckAt: discovery.monitorNextCheckAt,
+      lastObservedAt: discovery.monitorLastObservedAt,
+      explanation: discovery.monitorExplanation,
+    }))
+    .sort((a, b) => {
+      if (a.dueNow !== b.dueNow) return a.dueNow ? -1 : 1;
+      if (a.status !== b.status) {
+        const rank = { priority: 0, active: 1, candidate: 2 } as const;
+        return rank[a.status] - rank[b.status];
+      }
+      const aNext = a.nextCheckAt ? new Date(a.nextCheckAt).getTime() : Number.POSITIVE_INFINITY;
+      const bNext = b.nextCheckAt ? new Date(b.nextCheckAt).getTime() : Number.POSITIVE_INFINITY;
+      return aNext - bNext;
+    })
+    .slice(0, limit);
+
+  return {
+    total: relevant.length,
+    dueNow: relevant.filter((discovery) => discovery.monitorDueNow).length,
+    byStatus,
+    byType,
+    nextUp,
+  };
+}
+
 export async function annotateDiscoveriesForMonitoring(params: {
   userId: string;
   discoveries: Discovery[];
@@ -326,6 +428,7 @@ export async function annotateDiscoveriesForMonitoring(params: {
       count: 0,
       recentCount: 0,
       distinctSources: 0,
+      lastObservedAt: undefined,
     };
 
     const activeTripRelevant = activeTripContextKeys.has(discovery.contextKey);
@@ -359,6 +462,9 @@ export async function annotateDiscoveriesForMonitoring(params: {
       repeatedSignalStrong,
     });
     const monitorSources = getMonitorSources(discovery, monitorStatus);
+    const monitorLastObservedAt = observation.lastObservedAt ?? discovery.discoveredAt;
+    const monitorNextCheckAt = monitorStatus === 'none' ? undefined : getNextCheckAt(monitorLastObservedAt, monitorCadence);
+    const monitorDueNow = Boolean(monitorNextCheckAt && new Date(monitorNextCheckAt).getTime() <= Date.now());
 
     const explanationParts: string[] = [];
     if (triage.savedCount > 0) explanationParts.push(triage.savedCount > 1 ? 'saved in multiple reviews' : 'saved already');
@@ -389,6 +495,9 @@ export async function annotateDiscoveriesForMonitoring(params: {
       monitorExplanation: monitorStatus === 'none' ? undefined : explanationParts.slice(0, 3).join(' · '),
       monitorCadence,
       monitorSources,
+      monitorLastObservedAt: monitorStatus === 'none' ? undefined : monitorLastObservedAt,
+      monitorNextCheckAt,
+      monitorDueNow: monitorStatus === 'none' ? undefined : monitorDueNow,
     };
   });
 }

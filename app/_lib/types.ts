@@ -161,6 +161,9 @@ export interface Discovery {
   monitorExplanation?: string;
   monitorCadence?: string;
   monitorSources?: MonitorSourceHint[];
+  monitorLastObservedAt?: string;
+  monitorNextCheckAt?: string;
+  monitorDueNow?: boolean;
 }
 
 export interface UserDiscoveries {

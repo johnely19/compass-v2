@@ -6,7 +6,8 @@
 
 import { NextResponse } from 'next/server';
 import { getCurrentUser, getAllUsers } from '../../../_lib/user';
-import { getUserDiscoveries } from '../../../_lib/user-data';
+import { getUserDiscoveries, getUserManifest } from '../../../_lib/user-data';
+import { annotateDiscoveriesForMonitoring, buildMonitoringDigest } from '../../../_lib/discovery-monitoring';
 import { existsSync, readFileSync } from 'fs';
 import path from 'path';
 
@@ -39,6 +40,28 @@ interface RunEntry {
   summary?: string;
   runAtMs?: number;
   durationMs?: number;
+}
+
+interface MonitoringDigestResponse {
+  total: number;
+  dueNow: number;
+  byStatus: {
+    candidate: number;
+    active: number;
+    priority: number;
+  };
+  byType: Record<string, number>;
+  nextUp: Array<{
+    id: string;
+    name: string;
+    contextKey: string;
+    status: string;
+    type: string;
+    dueNow: boolean;
+    nextCheckAt?: string;
+    lastObservedAt?: string;
+    explanation?: string;
+  }>;
 }
 
 /** Disco-related job name patterns */
@@ -177,17 +200,55 @@ export async function GET() {
 
   // --- Count discoveries pushed today (from user Blob) ---
   let discoveriesToday = 0;
+  const monitoring: MonitoringDigestResponse = {
+    total: 0,
+    dueNow: 0,
+    byStatus: { candidate: 0, active: 0, priority: 0 },
+    byType: {},
+    nextUp: [],
+  };
   try {
     const users = getAllUsers();
-    const allDiscoveries = await Promise.all(users.map(u => getUserDiscoveries(u.id)));
-    for (const ud of allDiscoveries) {
+    const allUserData = await Promise.all(users.map(async (u) => ({
+      userId: u.id,
+      discoveries: await getUserDiscoveries(u.id),
+      manifest: await getUserManifest(u.id),
+    })));
+    for (const ud of allUserData) {
       if (!ud?.discoveries) continue;
-      for (const d of ud.discoveries) {
+      for (const d of ud.discoveries.discoveries) {
         if (d.discoveredAt && isTodayET(new Date(d.discoveredAt).getTime())) {
           discoveriesToday++;
         }
       }
+
+      const annotated = await annotateDiscoveriesForMonitoring({
+        userId: ud.userId,
+        discoveries: ud.discoveries.discoveries,
+        contexts: ud.manifest?.contexts || [],
+      });
+      const digest = buildMonitoringDigest(annotated, 6);
+      monitoring.total += digest.total;
+      monitoring.dueNow += digest.dueNow;
+      monitoring.byStatus.candidate += digest.byStatus.candidate;
+      monitoring.byStatus.active += digest.byStatus.active;
+      monitoring.byStatus.priority += digest.byStatus.priority;
+      for (const [type, count] of Object.entries(digest.byType)) {
+        monitoring.byType[type] = (monitoring.byType[type] || 0) + count;
+      }
+      monitoring.nextUp.push(...digest.nextUp);
     }
+
+    monitoring.nextUp = monitoring.nextUp
+      .sort((a, b) => {
+        if (a.dueNow !== b.dueNow) return a.dueNow ? -1 : 1;
+        const statusRank: Record<string, number> = { priority: 0, active: 1, candidate: 2 };
+        if (a.status !== b.status) return (statusRank[a.status] ?? 9) - (statusRank[b.status] ?? 9);
+        const aNext = a.nextCheckAt ? new Date(a.nextCheckAt).getTime() : Number.POSITIVE_INFINITY;
+        const bNext = b.nextCheckAt ? new Date(b.nextCheckAt).getTime() : Number.POSITIVE_INFINITY;
+        return aNext - bNext;
+      })
+      .slice(0, 6);
   } catch { /* Blob unavailable in dev */ }
 
   // --- Build job summary for UI ---
@@ -211,6 +272,7 @@ export async function GET() {
     changesDetectedToday,
     errorsToday,
     errorDetails,
+    monitoring,
     jobs: jobSummary,
   });
 }

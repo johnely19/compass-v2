@@ -43,6 +43,20 @@ function ShareButton({ name }: { name: string }) {
   );
 }
 
+function formatMonitoringTiming(nextCheckAt?: string, dueNow?: boolean): string | null {
+  if (dueNow) return 'Due now';
+  if (!nextCheckAt) return null;
+  const diffMs = new Date(nextCheckAt).getTime() - Date.now();
+  if (!Number.isFinite(diffMs)) return null;
+  const diffDays = Math.round(diffMs / (1000 * 60 * 60 * 24));
+  if (diffDays <= 0) return 'Due now';
+  if (diffDays === 1) return 'Due in 1 day';
+  if (diffDays < 14) return `Due in ${diffDays} days`;
+  const diffWeeks = Math.round(diffDays / 7);
+  if (diffWeeks <= 1) return 'Due in 1 week';
+  return `Due in ${diffWeeks} weeks`;
+}
+
 /* ---- Type-specific hero gradients ---- */
 const TYPE_GRADIENTS: Record<string, string> = {
   restaurant:    'linear-gradient(135deg, #f59e0b 0%, #e11d48 100%)',
@@ -259,6 +273,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
     ? `https://www.google.com/maps/place/?q=place_id:${card.place_id}`
     : null;
   const monitoringExplanation = discovery ? getMonitoringExplanation(discovery) : null;
+  const monitoringTiming = formatMonitoringTiming(discovery?.monitorNextCheckAt, discovery?.monitorDueNow);
 
   // Google Earth 3D link — useful for spatial context on outdoor/area types
   const EARTH_TYPES = new Set(['accommodation', 'neighbourhood', 'park', 'architecture', 'experience', 'development']);
@@ -420,6 +435,11 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
             {discovery.monitorCadence && (
               <p className="monitoring-note-body">
                 <strong>Cadence:</strong> {discovery.monitorCadence}
+              </p>
+            )}
+            {monitoringTiming && (
+              <p className="monitoring-note-body">
+                <strong>Next check:</strong> {monitoringTiming}
               </p>
             )}
             {discovery.monitorDimensions && discovery.monitorDimensions.length > 0 && (
