@@ -156,8 +156,10 @@ async function run() {
     const urls = [...new Set((detailHtml.match(blobUrlRe) || []).filter(u => u.match(/\.(jpg|jpeg|png|webp)/i)).slice(0, 3))];
     if (urls.length === 0) return; // no images to check on this card — pass
     for (const url of urls) {
-      const res = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
-      assert(res.ok, `Image returned ${res.status}: ${url.slice(-40)}`);
+      // Clean up trailing ) or \ from inline styles (e.g., "url(...)" or "url(\)")
+      const cleanUrl = url.replace(/[)\\s]+$/, '');
+      const res = await fetch(cleanUrl, { method: 'HEAD', signal: AbortSignal.timeout(5000) });
+      assert(res.ok, `Image returned ${res.status}: ${cleanUrl.slice(-40)}`);
     }
   });
 
