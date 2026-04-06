@@ -214,12 +214,48 @@ export default async function HomePage() {
       })
   );
 
+  // Build monitoring queue: due-now places + priority monitored places (up to 8)
+  const monitoringQueue: Array<{
+    id: string;
+    name: string;
+    city: string;
+    type: string;
+    contextKey: string;
+    monitorStatus: string;
+    monitorType: string;
+    monitorCadence?: string;
+    monitorExplanation?: string;
+    dueNow: boolean;
+    placeId?: string;
+  }> = monitoredDiscoveries
+    .filter(d => d.monitorStatus && d.monitorStatus !== 'none' && (d.monitorDueNow || d.monitorStatus === 'priority'))
+    .sort((a, b) => {
+      if (a.monitorDueNow !== b.monitorDueNow) return a.monitorDueNow ? -1 : 1;
+      const rank: Record<string, number> = { priority: 0, active: 1, candidate: 2 };
+      return (rank[a.monitorStatus ?? 'candidate'] ?? 9) - (rank[b.monitorStatus ?? 'candidate'] ?? 9);
+    })
+    .slice(0, 8)
+    .map(d => ({
+      id: d.id,
+      name: d.name,
+      city: d.city,
+      type: d.type,
+      contextKey: d.contextKey,
+      monitorStatus: d.monitorStatus ?? 'candidate',
+      monitorType: d.monitorType ?? 'general',
+      monitorCadence: d.monitorCadence,
+      monitorExplanation: d.monitorExplanation,
+      dueNow: Boolean(d.monitorDueNow),
+      placeId: d.place_id,
+    }));
+
   return (
     <HomeClient
       userId={user.id}
       contexts={contexts}
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
+      monitoringQueue={monitoringQueue}
     />
   );
 }

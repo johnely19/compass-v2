@@ -9,11 +9,26 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 
+interface MonitoringQueueItem {
+  id: string;
+  name: string;
+  city: string;
+  type: string;
+  contextKey: string;
+  monitorStatus: string;
+  monitorType: string;
+  monitorCadence?: string;
+  monitorExplanation?: string;
+  dueNow: boolean;
+  placeId?: string;
+}
+
 interface HomeClientProps {
   userId: string;
   contexts: Context[];
   discoveryMap: Record<string, Discovery[]>;
   contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
+  monitoringQueue?: MonitoringQueueItem[];
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -110,11 +125,73 @@ function buildDescription(ctx: Context): string | null {
   return null;
 }
 
+const STATUS_LABEL: Record<string, string> = {
+  candidate: 'Candidate',
+  active: 'Active',
+  priority: 'Priority',
+};
+
+const TYPE_MONITOR_ICON: Record<string, string> = {
+  hospitality: '🍽',
+  stay: '🏨',
+  development: '🏗',
+  culture: '🎭',
+  general: '📍',
+};
+
+function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
+  const [expanded, setExpanded] = useState(false);
+  if (items.length === 0) return null;
+
+  const dueItems = items.filter(i => i.dueNow);
+  const otherItems = items.filter(i => !i.dueNow);
+  const shown = expanded ? items : items.slice(0, 3);
+  const hasDue = dueItems.length > 0;
+
+  return (
+    <div className={`monitoring-tray${hasDue ? ' monitoring-tray-has-due' : ''}`}>
+      <div className="monitoring-tray-header">
+        <span className="monitoring-tray-kicker">
+          {hasDue ? '🔴' : '🟡'} Monitoring Queue
+        </span>
+        <span className="monitoring-tray-counts">
+          {hasDue && <span className="monitoring-tray-due-badge">{dueItems.length} due</span>}
+          {otherItems.length > 0 && <span className="monitoring-tray-other-count">{otherItems.length} watching</span>}
+        </span>
+      </div>
+      <ul className="monitoring-tray-list">
+        {shown.map(item => {
+          const href = `/placecards/${item.placeId || item.id}?context=${encodeURIComponent(item.contextKey)}`;
+          return (
+            <li key={`${item.contextKey}:${item.id}`} className={`monitoring-tray-item${item.dueNow ? ' monitoring-tray-item-due' : ''}`}>
+              <span className="monitoring-tray-icon">{TYPE_MONITOR_ICON[item.monitorType] ?? '📍'}</span>
+              <span className="monitoring-tray-item-body">
+                <Link href={href} className="monitoring-tray-name">{item.name}</Link>
+                <span className="monitoring-tray-meta">{item.city}</span>
+                {item.monitorExplanation && <span className="monitoring-tray-reason">{item.monitorExplanation}</span>}
+              </span>
+              <span className={`monitoring-tray-status monitoring-tray-status-${item.monitorStatus}`}>
+                {item.dueNow ? 'Due now' : STATUS_LABEL[item.monitorStatus] ?? item.monitorStatus}
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      {items.length > 3 && (
+        <button className="monitoring-tray-toggle" onClick={() => setExpanded(e => !e)}>
+          {expanded ? 'Show less' : `Show ${items.length - 3} more`}
+        </button>
+      )}
+    </div>
+  );
+}
+
 export default function HomeClient({
   userId,
   contexts,
   discoveryMap,
   contextMeta = {},
+  monitoringQueue = [],
 }: HomeClientProps) {
   // Mounted state to avoid hydration mismatch from localStorage reads
   const [mounted, setMounted] = useState(false);
@@ -162,6 +239,8 @@ export default function HomeClient({
       </div>
 
       <BriefingBanner userId={userId} />
+
+      <MonitoringQueueTray items={monitoringQueue} />
 
       {contexts.map(ctx => {
         const discoveries = discoveryMap[ctx.key] ?? [];
