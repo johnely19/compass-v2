@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
+import Link from 'next/link';
 import { getCurrentUser } from './_lib/user';
 import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery, UserManifest } from './_lib/types';
@@ -8,6 +9,9 @@ import { resolveImageUrl } from './_lib/image-url';
 import { getManifestHeroImage } from './_lib/image-url.server';
 import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
+import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
+import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
+import { getHomepageContextVisibility } from './_lib/homepage-contexts';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -52,7 +56,7 @@ export default async function HomePage() {
       <main className="page">
         <div className="page-header">
           <h1>🧭 Compass</h1>
-          <p>Personal travel intelligence. <a href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</a> to get started.</p>
+          <p>Personal travel intelligence. <Link href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</Link> to get started.</p>
         </div>
       </main>
     );
@@ -167,17 +171,44 @@ export default async function HomePage() {
       globalSeenPlaceIds.add(d.place_id);
       return true;
     });
-
-    // Score and sort — best places first
-    const scored = globalDeduped
-      .map(d => ({ ...d, _score: scoreDiscovery(d).total }))
-      .sort((a, b) => (b._score || 0) - (a._score || 0));
-    byContext.set(ctxKey, scored);
+    byContext.set(ctxKey, globalDeduped);
   }
+
+  const rankedDiscoveries = await rankDiscoveriesForHomepage({
+    userId: user.id,
+    discoveries: Array.from(byContext.values()).flat(),
+    contexts,
+    baseScore: (discovery) => scoreDiscovery(discovery).total,
+  });
+
+  const monitoredDiscoveries = await annotateDiscoveriesForMonitoring({
+    userId: user.id,
+    discoveries: rankedDiscoveries,
+    contexts,
+  });
+
+  const rankedByKey = new Map(
+    monitoredDiscoveries.map((discovery) => [
+      discovery.place_id ? `${discovery.contextKey}::${discovery.place_id}` : `${discovery.contextKey}::${discovery.id}`,
+      discovery,
+    ]),
+  );
+
+  for (const [ctxKey, items] of byContext) {
+    const ranked = items
+      .map((discovery) => rankedByKey.get(discovery.place_id ? `${ctxKey}::${discovery.place_id}` : `${ctxKey}::${discovery.id}`) ?? discovery)
+      .sort((a, b) => (b.rankingScore ?? scoreDiscovery(b).total) - (a.rankingScore ?? scoreDiscovery(a).total));
+    byContext.set(ctxKey, ranked);
+  }
+
+  const { visibleContexts, hiddenEmptyContextCount } = getHomepageContextVisibility({
+    contexts,
+    discoveryBuckets: byContext,
+  });
 
   // Build contextMeta — structured trip data for widgets
   const contextMeta = Object.fromEntries(
-    contexts
+    visibleContexts
       .filter(c => c.type === 'trip')
       .map(c => {
         const raw = c as unknown as Record<string, unknown>;
@@ -192,9 +223,10 @@ export default async function HomePage() {
   return (
     <HomeClient
       userId={user.id}
-      contexts={contexts}
+      contexts={visibleContexts}
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
+      hasHiddenEmptyContexts={hiddenEmptyContextCount > 0}
     />
   );
 }

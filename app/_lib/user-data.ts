@@ -6,7 +6,8 @@
 import { put, list, del } from '@vercel/blob';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
-import type { UserDocType, UserDocMap, UserProfile, UserPreferences, UserManifest, UserDiscoveries, UserChat } from './types';
+import type { Discovery, UserDocType, UserDocMap, UserProfile, UserPreferences, UserManifest, UserDiscoveries, UserChat } from './types';
+import { deriveDiscoveryInventory, recordDiscoveryHistoryEvent } from './discovery-history';
 
 // Place card index cache (server-side only)
 let _placeCardIndex: Record<string, { name: string; type: string }> | null = null;
@@ -60,6 +61,7 @@ export async function setUserData<T extends UserDocType>(
   data: UserDocMap[T],
 ): Promise<void> {
   const blobPath = `${BLOB_PREFIX}/${userId}/${docType}.json`;
+  let previousDiscoveries: UserDiscoveries | null = null;
 
   // Snapshot current document before overwrite for recovery/audit.
   try {
@@ -69,6 +71,16 @@ export async function setUserData<T extends UserDocType>(
       const res = await fetch(existing.url);
       if (res.ok) {
         const existingText = await res.text();
+        if (docType === 'discoveries') {
+          try {
+            const parsed = JSON.parse(existingText) as UserDiscoveries | Discovery[];
+            previousDiscoveries = Array.isArray(parsed)
+              ? { discoveries: parsed, updatedAt: new Date().toISOString() }
+              : parsed;
+          } catch {
+            previousDiscoveries = null;
+          }
+        }
         const snapshotPath = `${BLOB_PREFIX}/${userId}/history/${docType}-${Date.now()}.json`;
         await put(snapshotPath, existingText, {
           access: 'public',
@@ -87,6 +99,20 @@ export async function setUserData<T extends UserDocType>(
     contentType: 'application/json',
     addRandomSuffix: false,
   });
+
+  if (docType === 'discoveries') {
+    try {
+      const nextDiscoveries = (data as UserDiscoveries).discoveries ?? [];
+      await recordDiscoveryHistoryEvent({
+        userId,
+        source: 'user-data:set',
+        previous: previousDiscoveries?.discoveries ?? [],
+        next: nextDiscoveries,
+      });
+    } catch {
+      // best-effort history only
+    }
+  }
 }
 
 // ---- Convenience methods ----
@@ -211,10 +237,7 @@ function normalizeContextKey(key: string | undefined | null): string {
   return k;
 }
 
-export async function getUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
-  const raw = await getUserData(userId, 'discoveries');
-  if (!raw) return null;
-
+function normalizeDiscoveries(raw: UserDiscoveries | Discovery[]): UserDiscoveries {
   // V1→V2 compatibility: V1 stores as raw array, V2 expects { discoveries: [...] }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const rawAny = raw as any;
@@ -246,7 +269,34 @@ export async function getUserDiscoveries(userId: string): Promise<UserDiscoverie
     source: (d.source as string) || 'v1:migrated',
   }));
 
-  return { discoveries: normalized, updatedAt: new Date().toISOString() } as unknown as UserDiscoveries;
+  return {
+    discoveries: normalized,
+    updatedAt: !Array.isArray(rawAny) && typeof rawAny?.updatedAt === 'string'
+      ? rawAny.updatedAt
+      : new Date().toISOString(),
+  } as UserDiscoveries;
+}
+
+export async function getUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
+  const raw = await getUserData(userId, 'discoveries');
+  if (!raw) return null;
+  return normalizeDiscoveries(raw as UserDiscoveries | Discovery[]);
+}
+
+export async function getDerivedUserDiscoveries(userId: string, historyLimit = 50): Promise<UserDiscoveries | null> {
+  const current = await getUserDiscoveries(userId);
+  const discoveries = await deriveDiscoveryInventory({
+    userId,
+    currentDiscoveries: current?.discoveries ?? [],
+    historyLimit,
+  });
+
+  if (!current && discoveries.length === 0) return null;
+
+  return {
+    discoveries,
+    updatedAt: current?.updatedAt ?? new Date().toISOString(),
+  };
 }
 
 export async function getUserChat(userId: string): Promise<UserChat | null> {

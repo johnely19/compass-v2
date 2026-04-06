@@ -1,7 +1,7 @@
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import { getCurrentUser } from '../../_lib/user';
-import { getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
+import { getUserManifest, getDerivedUserDiscoveries } from '../../_lib/user-data';
 import ReviewContextClient from '../../_components/ReviewContextClient';
 
 function loadSharedManifest() {
@@ -33,7 +33,7 @@ export default async function ReviewContextPage({ params }: Props) {
 
   const [manifest, discoveriesData] = await Promise.all([
     getUserManifest(user.id),
-    getUserDiscoveries(user.id),
+    getDerivedUserDiscoveries(user.id),
   ]);
 
   // Fall back to shared compass-manifest.json ONLY for the owner user

@@ -3,6 +3,7 @@ import { cookies } from 'next/headers';
 import { put, list, del } from '@vercel/blob';
 import { COOKIE_NAME, getUserById } from '../../../_lib/user';
 import type { Discovery, DiscoveryType, PlaceIdStatus } from '../../../_lib/types';
+import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
 
 export const dynamic = 'force-dynamic';
 
@@ -157,7 +158,7 @@ async function readRawDiscoveries(userId: string): Promise<unknown[]> {
 /**
  * Write discoveries to Blob. Includes safety checks.
  */
-async function writeDiscoveries(userId: string, discoveries: unknown[]): Promise<void> {
+async function writeDiscoveries(userId: string, previous: Discovery[], discoveries: Discovery[]): Promise<void> {
   const blobPath = `${BLOB_PREFIX}/${userId}/discoveries.json`;
   // Delete existing
   try {
@@ -172,6 +173,17 @@ async function writeDiscoveries(userId: string, discoveries: unknown[]): Promise
     contentType: 'application/json',
     addRandomSuffix: false,
   });
+
+  try {
+    await recordDiscoveryHistoryEvent({
+      userId,
+      source: 'api/user/discoveries',
+      previous,
+      next: discoveries,
+    });
+  } catch {
+    // best-effort history only
+  }
 }
 
 // GET: retrieve user discoveries
@@ -349,7 +361,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (newItems.length > 0 || upgraded > 0) {
-    await writeDiscoveries(targetUserId, merged);
+    await writeDiscoveries(targetUserId, existingRaw as Discovery[], merged as Discovery[]);
     console.log(`[discoveries] ${newItems.length} added, ${upgraded} upgraded for ${targetUserId}. ${existingCount} → ${merged.length}`);
   }
 

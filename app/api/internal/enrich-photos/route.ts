@@ -6,6 +6,8 @@
  */
 import { NextRequest, NextResponse } from 'next/server';
 import { list, put } from '@vercel/blob';
+import type { Discovery } from '../../../_lib/types';
+import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
 
 const PLACES_SERVER_KEY = process.env.GOOGLE_PLACES_SERVER_KEY;
 const BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
@@ -32,6 +34,7 @@ export async function POST(req: NextRequest) {
   const res = await fetch(blobUrl);
   const raw = await res.json();
   const discoveries: Record<string, unknown>[] = Array.isArray(raw) ? raw : raw.discoveries || [];
+  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as Discovery[];
 
   // Find candidates
   const candidates = discoveries.filter(d => {
@@ -94,6 +97,17 @@ export async function POST(req: NextRequest) {
     access: 'public',
     addRandomSuffix: false,
   });
+
+  try {
+    await recordDiscoveryHistoryEvent({
+      userId,
+      source: 'api/internal/enrich-photos',
+      previous: previousDiscoveries,
+      next: discoveries as Discovery[],
+    });
+  } catch {
+    // best-effort history only
+  }
 
   return NextResponse.json({
     ...results,

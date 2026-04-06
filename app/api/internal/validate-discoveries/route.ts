@@ -12,6 +12,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { list, put, del } from '@vercel/blob';
 import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
 import path from 'path';
+import type { Discovery } from '../../../_lib/types';
+import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30; // 30s limit — fast validation only
@@ -154,6 +156,18 @@ export async function POST(request: NextRequest) {
         contentType: 'application/json',
         addRandomSuffix: false,
       });
+
+      try {
+        const previousDiscoveries = (Array.isArray(raw) ? raw : raw.discoveries || []) as Discovery[];
+        await recordDiscoveryHistoryEvent({
+          userId,
+          source: 'api/internal/validate-discoveries',
+          previous: previousDiscoveries,
+          next: discoveries as Discovery[],
+        });
+      } catch {
+        // best-effort history only
+      }
     }
 
     console.log(`[validate-discoveries] ${userId}: cityFixed=${cityFixed} stubCreated=${stubCreated}`);
