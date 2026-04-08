@@ -103,6 +103,8 @@ export default async function HomePage() {
   // A discovery must have at minimum: a name AND (address OR description OR rating)
   const fullyBuilt = discoveries.filter(d => {
     if (!d.name || d.name === 'Unknown Place') return false;
+    // Chat-sourced discoveries may not have address/rating yet — always show them
+    if (d.source?.startsWith('chat:')) return true;
     const rec = d as unknown as Record<string, unknown>;
     const hasAddress = !!(rec.address as string);
     const hasDescription = !!(rec.description || rec.summary);
