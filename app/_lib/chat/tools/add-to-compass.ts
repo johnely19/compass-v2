@@ -1,10 +1,15 @@
 /**
  * Add to Compass tool implementation.
  * Saves recommended places to the user's Compass app.
+ *
+ * Photo fetching is intentionally SKIPPED here — the nightly enrich-photos
+ * cron handles that. Doing synchronous photo fetches during chat would add
+ * 8s per place, causing timeouts when the AI adds multiple discoveries in
+ * a single turn. Places without photos are filtered from display until enriched.
  */
 
 import { setUserData, getUserData } from '../../user-data';
-import type { Discovery, DiscoveryType, PlaceImage, UserDiscoveries } from '../../types';
+import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
 export interface AddToCompassInput {
@@ -20,40 +25,8 @@ export interface AddToCompassInput {
 }
 
 /**
- * Fetch multiple photos for a place using the internal API.
- * Returns the photos array if successful, null otherwise.
- * Uses an 8 second timeout.
- */
-async function fetchPhotosForPlace(placeId: string): Promise<PlaceImage[] | null> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : 'http://localhost:3000';
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 8000);
-
-    const res = await fetch(`${baseUrl}/api/internal/fetch-photo`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ placeId, count: 6 }),
-      signal: controller.signal,
-    });
-
-    clearTimeout(timeoutId);
-
-    if (res.ok) {
-      const data = await res.json();
-      return data.photos || null;
-    }
-    return null;
-  } catch (e) {
-    console.error('[add_to_compass] Failed to fetch photos:', e);
-    return null;
-  }
-}
-
-/**
  * Add a recommended place to the user's Compass.
+ * Photos are not fetched synchronously — they're enriched by the nightly cron.
  * @param userId - User identifier
  * @param input - Place details
  * @returns Confirmation message with links
@@ -69,28 +42,6 @@ export async function addToCompass(
     // Derive city from actual place data, not from LLM context (fixes #187)
     const resolvedCity = await resolveCity(input.place_id, input.address, input.city);
 
-    let heroImage: string | undefined = undefined;
-    let images: PlaceImage[] | undefined = undefined;
-
-    // Fix #211: If the discovery has a place_id, fetch photos SYNCHRONOUSLY
-    // with an 8 second timeout. If fetch fails, save without images.
-    if (input.place_id) {
-      try {
-        const photoPromise = fetchPhotosForPlace(input.place_id);
-        const timeoutPromise = new Promise<PlaceImage[] | null>((_, reject) =>
-          setTimeout(() => reject(new Error('Timeout')), 8000)
-        );
-        const photos = await Promise.race([photoPromise, timeoutPromise]);
-        if (photos && photos.length > 0 && photos[0]) {
-          heroImage = photos[0].url;
-          images = photos;
-        }
-      } catch (e) {
-        console.warn('[add_to_compass] Failed to fetch photos:', e);
-        // Save without images - it will be filtered from display until photos are available
-      }
-    }
-
     const discovery: Discovery = {
       id: discoveryId,
       place_id: input.place_id,
@@ -99,25 +50,36 @@ export async function addToCompass(
       city: resolvedCity,
       type: input.category,
       rating: input.rating,
-      heroImage,
-      images,
+      heroImage: undefined,
+      images: undefined,
       contextKey: input.contextKey || '',
       source: 'chat:recommendation',
       discoveredAt: new Date().toISOString(),
       placeIdStatus: input.place_id ? 'verified' : 'missing',
     };
 
-    // Get existing discoveries
+    // Get existing discoveries and append — read-modify-write
+    // Note: concurrent tool calls in the same turn may cause last-write-wins
+    // on the Blob. This is acceptable for the chat flow (order not critical).
     let existingData: UserDiscoveries | null = null;
     try {
       existingData = await getUserData<'discoveries'>(userId, 'discoveries');
     } catch {
-      // No existing data
+      // No existing data — start fresh
     }
 
     const discoveries = existingData?.discoveries || [];
 
-    // Add new discovery
+    // Dedup by name+city to prevent double-adds if the LLM retries
+    const isDuplicate = discoveries.some(
+      d => d.name === input.name && d.city === resolvedCity
+    );
+    if (isDuplicate) {
+      console.log(`[add_to_compass] Skipping duplicate: "${input.name}" (${resolvedCity})`);
+      return `"${input.name}" is already in your Compass.`;
+    }
+
+    // Add new discovery at front
     discoveries.unshift(discovery);
 
     // Save back to blob
@@ -129,18 +91,15 @@ export async function addToCompass(
     console.log(`[add_to_compass] ✅ Added "${input.name}" (${resolvedCity}) for user ${userId}`);
 
     // Build response URLs
-    const compassUrl = input.place_id
-      ? `https://compass-ai-agent.vercel.app/placecards/${input.place_id}`
-      : null;
     const mapsUrl = input.place_id
       ? `https://www.google.com/maps/place/?q=place_id:${input.place_id}`
       : (input.address
         ? `https://www.google.com/maps/search/${encodeURIComponent(input.name + ' ' + resolvedCity)}`
         : null);
 
-    return `✅ Added "${input.name}" to Compass! Links: compass=${compassUrl || 'pending'} maps=${mapsUrl || 'pending'}`;
+    return `✅ Added "${input.name}" to Compass!${mapsUrl ? ` [Map](${mapsUrl})` : ''} Photos will load shortly.`;
   } catch (e) {
     console.error('[add_to_compass] Failed:', e);
-    return `Failed to add to Compass: ${e}`;
+    return `Failed to add "${input.name}" to Compass: ${e}`;
   }
 }
