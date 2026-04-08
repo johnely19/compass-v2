@@ -6,32 +6,23 @@ import styles from './ChatWidget.module.css';
 
 /**
  * Lightweight markdown→HTML for chat messages.
- * Handles: links, bold, italic, inline code, line breaks.
  */
 function renderMarkdown(text: string): string {
   const html = text
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
-    // Links: [text](url)
     .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
-    // Bare URLs
     .replace(/(^|[\s(])(https?:\/\/[^\s)<]+)/g, '$1<a href="$2" target="_blank" rel="noopener noreferrer">$2</a>')
-    // Bold
     .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
     .replace(/__([^_]+)__/g, '<strong>$1</strong>')
-    // Italic
     .replace(/\*([^*]+)\*/g, '<em>$1</em>')
     .replace(/_([^_]+)_/g, '<em>$1</em>')
-    // Inline code
     .replace(/`([^`]+)`/g, '<code>$1</code>')
-    // Line breaks
     .replace(/\n/g, '<br/>');
-
   return html;
 }
 
-/** Friendly labels for tool calls */
 const TOOL_LABELS: Record<string, string> = {
   'web-search': '🔍 Searching the web…',
   'lookup-place': '📍 Looking up a place…',
@@ -41,33 +32,12 @@ const TOOL_LABELS: Record<string, string> = {
   'create-context': '📋 Creating context…',
 };
 
-/** Format timestamp for display */
 function formatTime(isoString: string): string {
   const date = new Date(isoString);
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
-/** Get last message preview text */
-function getLastMessagePreview(messages: ChatMessage[]): string | null {
-  if (messages.length === 0) return null;
-  const lastMsg = messages[messages.length - 1];
-  if (!lastMsg) return null;
-  const preview = lastMsg.content.substring(0, 50);
-  return preview + (lastMsg.content.length > 50 ? '...' : '');
-}
-
-/** Check if there was recent activity (within 5 minutes) */
-function hasRecentActivity(messages: ChatMessage[]): boolean {
-  if (messages.length === 0) return false;
-  const lastMsg = messages[messages.length - 1];
-  if (!lastMsg) return false;
-  const lastMsgTime = new Date(lastMsg.timestamp).getTime();
-  const now = Date.now();
-  return now - lastMsgTime < 5 * 60 * 1000;
-}
-
 export default function ChatWidget() {
-  const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -75,165 +45,42 @@ export default function ChatWidget() {
   const [streamContent, setStreamContent] = useState('');
   const [toolStatus, setToolStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [justExpanded, setJustExpanded] = useState(false);
-  const [autoExpanded, setAutoExpanded] = useState(false);
+  const [chatExpanded, setChatExpanded] = useState(false);
 
-  // Track tool calls used in this chat turn
+  // Active context key — synced from homepage
+  const activeContextKeyRef = useRef<string | null>(null);
+
   const createContextUsed = useRef(false);
-  const updateTripUsed = useRef<string | null>(null); // stores contextKey if update_trip was used
-  // Snapshot of context state before the chat turn
+  const updateTripUsed = useRef<string | null>(null);
   const preContextKeys = useRef<Set<string>>(new Set());
   const preContextSnapshots = useRef<Record<string, { dates?: string; city?: string; focus?: string[] }>>({});
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const collapsedInputRef = useRef<HTMLInputElement>(null);
-  const expandedInputRef = useRef<HTMLTextAreaElement>(null);
+  const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
-  const dragStartY = useRef<number>(0);
-  const isDragging = useRef<boolean>(false);
 
-  // Load persisted state from localStorage on mount
+  // Listen for context switches from homepage
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('chat-widget-state');
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (parsed.isExpanded) {
-          setIsExpanded(true);
-          setJustExpanded(true);
-          setTimeout(() => setJustExpanded(false), 400);
-        }
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ key: string }>).detail;
+      if (detail?.key) {
+        activeContextKeyRef.current = detail.key;
       }
-    } catch {
-      // Ignore localStorage errors
-    }
+    };
+    window.addEventListener('compass-context-switched', handler);
+    return () => window.removeEventListener('compass-context-switched', handler);
   }, []);
 
-  // History is intentionally NOT loaded on mount — start with a clean slate.
-  // Only the current session's messages accumulate in state.
-  // To restore history loading, uncomment:
-  // useEffect(() => {
-  //   if (isExpanded && messages.length === 0) loadChatHistory();
-  // }, [isExpanded]);
-
-  // Check for auto-expand on new messages
+  // Auto-scroll to bottom
   useEffect(() => {
-    if (messages.length > 0 && !isExpanded) {
-      const lastMsg = messages[messages.length - 1];
-      if (lastMsg && lastMsg.role === 'assistant') {
-        // Auto-expand on new incoming message
-        handleExpand(true);
-        setAutoExpanded(true);
-        setTimeout(() => setAutoExpanded(false), 600);
-      }
-    }
-  }, [messages]);
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, streamContent, toolStatus]);
 
-  // Check for recent activity to auto-expand on mount
+  // Focus input on mount
   useEffect(() => {
-    if (messages.length > 0 && hasRecentActivity(messages) && !isExpanded) {
-      handleExpand(true);
-      setAutoExpanded(true);
-      setTimeout(() => setAutoExpanded(false), 600);
-    }
+    inputRef.current?.focus();
   }, []);
 
-  // Auto-scroll to bottom on new messages or stream updates
-  // Use 'instant' when expanding to avoid scrolling through old messages
-  const justExpandedRef = useRef(false);
-  useEffect(() => {
-    if (isExpanded && !justExpandedRef.current) {
-      justExpandedRef.current = true;
-      // Jump to bottom instantly when first expanding
-      setTimeout(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'instant' });
-      }, 50);
-    } else {
-      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [messages, streamContent, toolStatus, isExpanded]);
-
-  // Reset justExpanded when collapsing
-  useEffect(() => {
-    if (!isExpanded) justExpandedRef.current = false;
-  }, [isExpanded]);
-
-  // Focus input when expanding
-  useEffect(() => {
-    if (isExpanded) {
-      setTimeout(() => expandedInputRef.current?.focus(), 100);
-    }
-  }, [isExpanded]);
-
-  // Save state to localStorage when it changes
-  useEffect(() => {
-    try {
-      localStorage.setItem('chat-widget-state', JSON.stringify({ isExpanded }));
-    } catch {
-      // Ignore localStorage errors
-    }
-  }, [isExpanded]);
-
-  function handleExpand(expanded: boolean) {
-    setIsExpanded(expanded);
-    if (expanded) {
-      setJustExpanded(true);
-      setTimeout(() => setJustExpanded(false), 400);
-    }
-  }
-
-  function handleToggle() {
-    handleExpand(!isExpanded);
-  }
-
-  function handleDragStart(e: React.MouseEvent | React.TouchEvent) {
-    isDragging.current = true;
-    if ('touches' in e && e.touches && e.touches[0]) {
-      dragStartY.current = e.touches[0].clientY;
-    } else if ('clientY' in e) {
-      dragStartY.current = e.clientY;
-    }
-  }
-
-  function handleDragMove(e: React.MouseEvent | React.TouchEvent) {
-    if (!isDragging.current) return;
-    let currentY: number;
-    if ('touches' in e && e.touches && e.touches[0]) {
-      currentY = e.touches[0].clientY;
-    } else if ('clientY' in e) {
-      currentY = e.clientY;
-    } else {
-      return;
-    }
-    const diff = currentY - dragStartY.current;
-    if (diff > 50) {
-      // Dragged down enough to collapse
-      handleExpand(false);
-      isDragging.current = false;
-    }
-  }
-
-  function handleDragEnd() {
-    isDragging.current = false;
-  }
-
-  async function loadChatHistory() {
-    try {
-      const res = await fetch('/api/chat/history');
-      if (res.ok) {
-        const data = await res.json();
-        if (data.messages) {
-          setMessages(data.messages);
-        }
-      }
-    } catch (e) {
-      console.error('[chat] Failed to load history:', e);
-    }
-  }
-
-  /**
-   * Process an SSE stream from the chat API.
-   */
   const processStream = useCallback(async (response: Response) => {
     const reader = response.body?.getReader();
     if (!reader) throw new Error('No response body');
@@ -248,10 +95,8 @@ export default function ChatWidget() {
         if (done) break;
 
         buffer += decoder.decode(value, { stream: true });
-
-        // Process complete SSE lines
         const lines = buffer.split('\n');
-        buffer = lines.pop() || ''; // keep incomplete line in buffer
+        buffer = lines.pop() || '';
 
         for (const line of lines) {
           if (!line.startsWith('data: ')) continue;
@@ -264,24 +109,20 @@ export default function ChatWidget() {
             if (parsed.content) {
               accumulated += parsed.content;
               setStreamContent(accumulated);
-              setToolStatus(null); // clear tool status when content starts flowing
+              setToolStatus(null);
             }
 
             if (parsed.tool) {
               const label = TOOL_LABELS[parsed.tool] || `⚙️ Using ${parsed.tool}…`;
               setToolStatus(label);
-              // Track context creation so we can emit an emergence event after stream
               if (parsed.tool === 'create-context') {
                 createContextUsed.current = true;
               }
               if (parsed.tool === 'update-trip') {
-                // We'll resolve the key after the stream via context diff
                 updateTripUsed.current = '__any__';
               }
             }
 
-            // When a tool completes (add-to-compass, save-discovery), refresh the page
-            // so new discoveries appear immediately
             if (parsed.toolResult && typeof window !== 'undefined') {
               if (['add-to-compass', 'save-discovery'].includes(parsed.toolResult)) {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
@@ -311,7 +152,10 @@ export default function ChatWidget() {
     createContextUsed.current = false;
     updateTripUsed.current = null;
 
-    // Snapshot current context state before we send so we can diff after
+    // Expand chat area on send
+    if (!chatExpanded) setChatExpanded(true);
+
+    // Snapshot contexts
     fetch('/api/contexts')
       .then(r => r.ok ? r.json() : null)
       .then(data => {
@@ -327,12 +171,6 @@ export default function ChatWidget() {
       })
       .catch(() => {});
 
-    // Expand if collapsed when sending
-    if (!isExpanded) {
-      handleExpand(true);
-    }
-
-    // Add user message immediately
     const userMessage: ChatMessage = {
       role: 'user',
       content: trimmed,
@@ -341,7 +179,6 @@ export default function ChatWidget() {
     setMessages((prev) => [...prev, userMessage]);
     setInput('');
 
-    // Create abort controller for this request
     abortRef.current = new AbortController();
 
     try {
@@ -351,6 +188,7 @@ export default function ChatWidget() {
         body: JSON.stringify({
           message: trimmed,
           history: messages,
+          contextKey: activeContextKeyRef.current,
         }),
         signal: abortRef.current.signal,
       });
@@ -362,13 +200,11 @@ export default function ChatWidget() {
       const contentType = res.headers.get('content-type') || '';
 
       if (contentType.includes('text/event-stream')) {
-        // Streaming response
         setLoading(false);
         setStreaming(true);
 
         const fullReply = await processStream(res);
 
-        // Add completed message to history
         if (fullReply) {
           const assistantMessage: ChatMessage = {
             role: 'assistant',
@@ -378,16 +214,12 @@ export default function ChatWidget() {
           setMessages((prev) => [...prev, assistantMessage]);
         }
 
-        // Notify visible pages that Compass data may have changed.
-        // If emergence events are pending, delay the refresh so the animation plays first.
         const hasEmergenceEvents = createContextUsed.current || updateTripUsed.current;
         if (typeof window !== 'undefined' && !hasEmergenceEvents) {
           window.dispatchEvent(new CustomEvent('compass-data-changed'));
         }
 
-        // If create-context or update-trip was used, diff contexts and emit emergence events
         if (hasEmergenceEvents && typeof window !== 'undefined') {
-          // Small delay to let Blob writes settle
           setTimeout(async () => {
             try {
               const res = await fetch('/api/contexts');
@@ -395,15 +227,17 @@ export default function ChatWidget() {
                 const data = await res.json();
                 const allCtxs = data.contexts as Array<{ key: string; label: string; type: string; emoji: string; dates?: string; city?: string; focus?: string[] }>;
 
-                // New contexts → emergence animation
                 const newCtxs = allCtxs.filter(c => !preContextKeys.current.has(c.key));
                 for (const ctx of newCtxs) {
                   window.dispatchEvent(new CustomEvent('compass-trip-created', {
                     detail: { key: ctx.key, label: ctx.label, type: ctx.type, emoji: ctx.emoji },
                   }));
+                  // Signal the homepage to switch to the new context
+                  window.dispatchEvent(new CustomEvent('compass-chat-context-switch', {
+                    detail: { key: ctx.key },
+                  }));
                 }
 
-                // Updated contexts → attribute attachment events
                 if (updateTripUsed.current) {
                   for (const ctx of allCtxs) {
                     const prev = preContextSnapshots.current[ctx.key];
@@ -430,7 +264,6 @@ export default function ChatWidget() {
             } catch {
               // non-critical
             }
-            // Now safe to refresh — animation has been triggered
             window.dispatchEvent(new CustomEvent('compass-data-changed'));
           }, 800);
         }
@@ -439,7 +272,6 @@ export default function ChatWidget() {
         setStreaming(false);
         setToolStatus(null);
       } else {
-        // Non-streaming JSON response (fallback)
         const data = await res.json();
         const assistantMessage: ChatMessage = {
           role: 'assistant',
@@ -455,7 +287,7 @@ export default function ChatWidget() {
 
     } catch (e) {
       if (e instanceof Error && e.name === 'AbortError') {
-        // User cancelled — no error
+        // User cancelled
       } else {
         console.error('[chat] Send failed:', e);
         setError('Failed to send. Try again?');
@@ -469,156 +301,101 @@ export default function ChatWidget() {
     }
   }
 
-  const lastPreview = getLastMessagePreview(messages);
-
-  // Render collapsed state
-  if (!isExpanded) {
-    return (
-      <div className={styles.chatRoot}>
-        <div className={styles.chatCollapsed}>
-          {/* Input section */}
-          <div
-            className={styles.chatCollapsedInput}
-            onClick={(e) => {
-              e.stopPropagation();
-              handleExpand(true);
-            }}
-          >
-            <input
-              ref={collapsedInputRef}
-              type="text"
-              className={styles.chatCollapsedField}
-              placeholder="Type a message..."
-              value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
-                  e.preventDefault();
-                  handleSend(e as unknown as React.FormEvent);
-                }
-              }}
-              disabled={loading || streaming}
-            />
-            <button
-              type="button"
-              className={styles.chatCollapsedSend}
-              disabled={loading || streaming || !input.trim()}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleSend(e as unknown as React.FormEvent);
-              }}
-            >
-              ➤
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Render expanded state
   return (
-    <div
-      className={`${styles.chatRoot} ${autoExpanded ? styles.chatAutoExpand : ''}`}
-      onMouseMove={handleDragMove}
-      onMouseUp={handleDragEnd}
-      onMouseLeave={handleDragEnd}
-      onTouchMove={handleDragMove}
-      onTouchEnd={handleDragEnd}
-    >
-      <div
-        className={`${styles.chatExpanded} ${justExpanded || autoExpanded ? styles.chatAutoExpand : ''}`}
-      >
-        {/* Drag handle */}
-        <div
-          className={styles.chatDragHandle}
-          onMouseDown={handleDragStart}
-          onTouchStart={handleDragStart}
-        >
-          <div className={styles.chatDragHandleBar} />
-        </div>
-
-        {/* Messages */}
-        <div className={styles.chatMessages}>
-          {messages.length === 0 && !loading && !streaming && (
-            <div className={styles.chatEmpty}>
-              <div className={styles.chatEmptyIcon}>🧭</div>
-              <div className={styles.chatEmptyTitle}>Hey! I&apos;m your Compass Concierge.</div>
-              <div className={styles.chatEmptyText}>
-                Ask me about restaurants, places to visit, or help planning your next trip.
+    <div className={`${styles.chatPinned} ${chatExpanded ? styles.chatPinnedExpanded : ''}`}>
+      {/* Messages area — only visible when expanded */}
+      {chatExpanded && (
+        <div className={styles.chatMessagesArea}>
+          <div className={styles.chatMessages}>
+            {messages.length === 0 && !loading && !streaming && (
+              <div className={styles.chatEmpty}>
+                <div className={styles.chatEmptyIcon}>🧭</div>
+                <div className={styles.chatEmptyTitle}>Hey! I&apos;m your Compass Concierge.</div>
+                <div className={styles.chatEmptyText}>
+                  Ask me about restaurants, places to visit, or help planning your next trip.
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {messages.map((msg, i) => (
-            <div
-              key={i}
-              className={`${styles.chatMessage} ${
-                msg.role === 'user' ? styles.chatMessageUser : styles.chatMessageAssistant
-              }`}
-            >
+            {messages.map((msg, i) => (
               <div
-                className={`${styles.chatBubble} ${
-                  msg.role === 'user' ? styles.chatBubbleUser : styles.chatBubbleAssistant
+                key={i}
+                className={`${styles.chatMessage} ${
+                  msg.role === 'user' ? styles.chatMessageUser : styles.chatMessageAssistant
                 }`}
               >
-                {msg.role === 'assistant' ? (
+                <div
+                  className={`${styles.chatBubble} ${
+                    msg.role === 'user' ? styles.chatBubbleUser : styles.chatBubbleAssistant
+                  }`}
+                >
+                  {msg.role === 'assistant' ? (
+                    <div
+                      className={styles.chatMarkdown}
+                      dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.content) }}
+                    />
+                  ) : (
+                    <div className={styles.chatMarkdown}>{msg.content}</div>
+                  )}
+                </div>
+                <span className={styles.chatTimestamp}>{formatTime(msg.timestamp)}</span>
+              </div>
+            ))}
+
+            {streaming && streamContent && (
+              <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+                <div className={`${styles.chatBubble} ${styles.chatBubbleAssistant}`}>
                   <div
                     className={styles.chatMarkdown}
-                    dangerouslySetInnerHTML={{ __html: renderMarkdown(msg.content) }}
+                    dangerouslySetInnerHTML={{ __html: renderMarkdown(streamContent) }}
                   />
-                ) : (
-                  <div className={styles.chatMarkdown}>{msg.content}</div>
-                )}
+                  <span className={styles.chatStreamCursor} />
+                </div>
               </div>
-              <span className={styles.chatTimestamp}>{formatTime(msg.timestamp)}</span>
-            </div>
-          ))}
+            )}
 
-          {/* Streaming response in progress */}
-          {streaming && streamContent && (
-            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
-              <div className={`${styles.chatBubble} ${styles.chatBubbleAssistant}`}>
-                <div
-                  className={styles.chatMarkdown}
-                  dangerouslySetInnerHTML={{ __html: renderMarkdown(streamContent) }}
-                />
-                <span className={styles.chatStreamCursor} />
+            {toolStatus && (
+              <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+                <div className={styles.chatToolStatus}>{toolStatus}</div>
               </div>
-            </div>
-          )}
+            )}
 
-          {/* Tool-use indicator */}
-          {toolStatus && (
-            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
-              <div className={styles.chatToolStatus}>{toolStatus}</div>
-            </div>
-          )}
-
-          {/* Initial loading dots (before first token) */}
-          {loading && (
-            <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
-              <div className={styles.chatTyping}>
-                <span className={styles.chatTypingDot} />
-                <span className={styles.chatTypingDot} />
-                <span className={styles.chatTypingDot} />
+            {loading && (
+              <div className={`${styles.chatMessage} ${styles.chatMessageAssistant}`}>
+                <div className={styles.chatTyping}>
+                  <span className={styles.chatTypingDot} />
+                  <span className={styles.chatTypingDot} />
+                  <span className={styles.chatTypingDot} />
+                </div>
               </div>
-            </div>
-          )}
+            )}
 
-          {error && (
-            <div className={styles.chatError}>{error}</div>
-          )}
+            {error && (
+              <div className={styles.chatError}>{error}</div>
+            )}
 
-          <div ref={messagesEndRef} />
+            <div ref={messagesEndRef} />
+          </div>
         </div>
+      )}
 
-        {/* Input area */}
-        <form className={styles.chatInputArea} onSubmit={handleSend}>
+      {/* Input area — always visible, pinned to bottom */}
+      <div className={styles.chatInputBar}>
+        {chatExpanded && (
+          <button
+            type="button"
+            className={styles.chatMinimizeBtn}
+            onClick={() => setChatExpanded(false)}
+            aria-label="Minimize chat"
+          >
+            ▾
+          </button>
+        )}
+        <form className={styles.chatInputForm} onSubmit={handleSend}>
           <textarea
-            ref={expandedInputRef}
-            className={styles.chatInput}
-            placeholder="Ask me anything..."
+            ref={inputRef}
+            className={styles.chatInputField}
+            placeholder="Ask me anything…"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
@@ -627,23 +404,18 @@ export default function ChatWidget() {
                 handleSend(e as unknown as React.FormEvent);
               }
             }}
+            onFocus={() => {
+              if (messages.length > 0 && !chatExpanded) setChatExpanded(true);
+            }}
             disabled={loading || streaming}
             rows={1}
           />
           <button
             type="submit"
-            className={styles.chatSendBtn}
+            className={styles.chatSendButton}
             disabled={loading || streaming || !input.trim()}
           >
             ➤
-          </button>
-          <button
-            type="button"
-            className={styles.chatCollapseBtn}
-            onClick={() => handleExpand(false)}
-            aria-label="Collapse chat"
-          >
-            ✕
           </button>
         </form>
       </div>
