@@ -544,6 +544,9 @@ export default function HomeClient({
           <PlaceGrid
             discoveries={discoveries}
             contextKey={ctx.key}
+            contextLabel={ctx.label}
+            contextEmoji={ctx.emoji}
+            contextType={ctx.type}
             userId={userId}
             layout="carousel"
           />

@@ -64,6 +64,72 @@
   border-radius: 3px;
 }
 
+/* ---- Chat Target Bar ---- */
+.chatTargetBar {
+  display: flex;
+  justify-content: center;
+  padding: 4px 16px;
+  background: rgba(245, 240, 232, 0.95);
+  pointer-events: auto;
+}
+
+.chatTargetPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  background: #ede8e0;
+  border: 1px solid rgba(196, 112, 75, 0.25);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #4a4640;
+  animation: target-appear 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes target-appear {
+  from { opacity: 0; transform: scale(0.9) translateY(4px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.chatTargetEmoji {
+  font-size: 0.9rem;
+}
+
+.chatTargetLabel {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 240px;
+}
+
+.chatTargetLabel strong {
+  color: #c4704b;
+  font-weight: 600;
+}
+
+.chatTargetClear {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.08);
+  color: #6f6a62;
+  font-size: 0.65rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+  line-height: 1;
+  padding: 0;
+}
+
+.chatTargetClear:hover {
+  background: rgba(0, 0, 0, 0.15);
+  color: #2d2a26;
+}
+
 /* ---- Input Bar (always visible) ---- */
 .chatInputBar {
   display: flex;

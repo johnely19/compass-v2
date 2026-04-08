@@ -1190,6 +1190,52 @@ a:hover {
   gap: 4px;
 }
 
+.place-card-chat-btn {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(245, 240, 232, 0.9);
+  backdrop-filter: blur(8px);
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Show on card hover (desktop) */
+*:hover > .place-card-chat-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Always show on touch (mobile) */
+@media (hover: none) {
+  .place-card-chat-btn {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+}
+
+.place-card-chat-btn:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.1);
+}
+
+.place-card-chat-btn:active {
+  transform: scale(0.95);
+}
+
 
 /* ---- 20. Place Grid ---- */
 

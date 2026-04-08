@@ -202,7 +202,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { message, history: clientHistory, contextKey: activeContextKey } = await request.json();
+    const { message, history: clientHistory, contextKey: activeContextKey, chatTarget } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json({ error: 'message is required' }, { status: 400 });
@@ -247,6 +247,12 @@ export async function POST(request: NextRequest) {
       manifest,
       recentDiscoveries,
       activeContextKey: typeof activeContextKey === 'string' ? activeContextKey : undefined,
+      chatTarget: chatTarget && typeof chatTarget === 'object' ? {
+        cardId: typeof chatTarget.cardId === 'string' ? chatTarget.cardId : undefined,
+        cardName: typeof chatTarget.cardName === 'string' ? chatTarget.cardName : undefined,
+        cardType: typeof chatTarget.cardType === 'string' ? chatTarget.cardType : undefined,
+        cardPlaceId: typeof chatTarget.cardPlaceId === 'string' ? chatTarget.cardPlaceId : undefined,
+      } : undefined,
     };
 
     const systemPrompt = buildSystemPrompt(chatContext);
