@@ -17,6 +17,131 @@ interface OpenClawMessage {
   content: string;
 }
 
+/** OpenAI function-calling tools for the Concierge agent */
+const CONCIERGE_TOOLS = [
+  {
+    type: 'function' as const,
+    function: {
+      name: 'create-context',
+      description: 'Create a new trip, outing, or radar context in the user\'s Compass.',
+      parameters: {
+        type: 'object',
+        properties: {
+          type: {
+            type: 'string',
+            enum: ['trip', 'outing', 'radar'],
+            description: 'The type of context to create',
+          },
+          label: {
+            type: 'string',
+            description: 'Human-readable label for the context (e.g., "NYC Solo Trip")',
+          },
+          city: {
+            type: 'string',
+            description: 'City name (optional)',
+          },
+          dates: {
+            type: 'string',
+            description: 'Date range (optional, e.g., "Jun 15-22")',
+          },
+          focus: {
+            type: 'array',
+            items: { type: 'string' },
+            description: 'Focus areas (optional, e.g., ["food", "jazz"])',
+          },
+          emoji: {
+            type: 'string',
+            description: 'Emoji icon (optional, defaults by type)',
+          },
+        },
+        required: ['type', 'label'],
+      },
+    },
+  },
+  {
+    type: 'function' as const,
+    function: {
+      name: 'update-trip',
+      description: 'Update an existing trip, outing, or radar context in the user\'s Compass.',
+      parameters: {
+        type: 'object',
+        properties: {
+          contextKey: {
+            type: 'string',
+            description: 'The key of the context to update (e.g., "trip:nyc-solo")',
+          },
+          dates: {
+            type: 'string',
+            description: 'Updated date range (optional)',
+          },
+          city: {
+            type: 'string',
+            description: 'Updated city (optional)',
+          },
+          focus: {
+            type: 'array',
+            items: { type: 'string' },
+            description: 'Updated focus areas (optional)',
+          },
+        },
+        required: ['contextKey'],
+      },
+    },
+  },
+];
+
+/** Execute a tool call locally by calling the appropriate API endpoint */
+async function executeToolCall(
+  toolName: string,
+  args: Record<string, unknown>,
+  userId: string,
+): Promise<unknown> {
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
+  const cookieValue = `compass-user=${userId}`; // Simplified — real impl would need proper auth
+
+  let endpoint = '';
+  let method = 'POST';
+  let body: Record<string, unknown> = {};
+
+  if (toolName === 'create-context') {
+    endpoint = `${baseUrl}/api/compass/create-context`;
+    body = {
+      type: args.type,
+      label: args.label,
+      city: args.city,
+      dates: args.dates,
+      focus: args.focus,
+      emoji: args.emoji,
+    };
+  } else if (toolName === 'update-trip') {
+    endpoint = `${baseUrl}/api/compass/update-trip`;
+    body = {
+      contextKey: args.contextKey,
+      dates: args.dates,
+      city: args.city,
+      focus: args.focus,
+    };
+  } else {
+    throw new Error(`Unknown tool: ${toolName}`);
+  }
+
+  const res = await fetch(endpoint, {
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+      Cookie: cookieValue,
+    },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    const error = await res.json().catch(() => ({ error: 'Unknown error' }));
+    throw new Error(error.error || `Tool call failed: ${res.status}`);
+  }
+
+  return res.json();
+}
+
 /**
  * Stream chat completions from the OpenClaw Gateway via SSE.
  * Returns a ReadableStream or null if gateway is unavailable.
@@ -47,6 +172,7 @@ async function streamOpenClaw(
         model: 'openclaw/concierge',
         messages,
         stream: true,
+        tools: CONCIERGE_TOOLS,
       }),
       signal: controller.signal,
     });
@@ -98,6 +224,7 @@ async function callOpenClawSync(
       body: JSON.stringify({
         model: 'openclaw/concierge',
         messages,
+        tools: CONCIERGE_TOOLS,
       }),
       signal: controller.signal,
     });

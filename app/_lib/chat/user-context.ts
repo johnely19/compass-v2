@@ -74,5 +74,16 @@ export function buildUserContext(
     parts.push(`## Recent Discoveries\n${discLines.join('\n')}`);
   }
 
+  // Tool usage instructions for the Concierge
+  parts.push(`## Available Tools
+
+When the user wants to plan or create a trip, outing, or radar, use the "create-context" tool.
+
+When the user mentions dates, city, focus areas, or accommodation for an existing trip, use the "update-trip" tool.
+
+When you find or recommend places (restaurants, bars, cafes, etc.), use the "add-discovery" tool to save them to the user's radar or trip.
+
+Always confirm with the user before creating or updating contexts, and let them know when you've saved discoveries.`);
+
   return parts.join('\n\n');
 }
