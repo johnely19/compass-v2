@@ -8,7 +8,7 @@
  * a single turn. Places without photos are filtered from display until enriched.
  */
 
-import { setUserData, getUserData } from '../../user-data';
+import { setUserData, getUserData, getUserManifest } from '../../user-data';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
@@ -88,6 +88,34 @@ export async function addToCompass(
     // Derive city from actual place data, not from LLM context (fixes #187)
     const resolvedCity = await resolveCity(input.place_id, input.address, input.city);
 
+    // Resolve contextKey against the user's manifest to prevent LLM key mismatches
+    // e.g. LLM may hallucinate "trip:tokyo-november-2024" when the real key is "trip:tokyo-november-2027"
+    let resolvedContextKey = input.contextKey || '';
+    if (resolvedContextKey) {
+      try {
+        const manifest = await getUserManifest(userId);
+        if (manifest?.contexts?.length) {
+          const exact = manifest.contexts.find(c => c.key === resolvedContextKey);
+          if (!exact) {
+            // Fuzzy match: compare slug portions (strip year variants)
+            const inputSlug = resolvedContextKey.split(':').slice(1).join(':');
+            const inputBase = inputSlug.replace(/-\d{4}$/, '');
+            const match = manifest.contexts.find(c => {
+              const cSlug = c.key.split(':').slice(1).join(':');
+              const cBase = cSlug.replace(/-\d{4}$/, '');
+              return cBase === inputBase || cSlug.includes(inputBase) || inputBase.includes(cBase);
+            });
+            if (match) {
+              console.log(`[add_to_compass] Fixed contextKey: "${resolvedContextKey}" → "${match.key}"`);
+              resolvedContextKey = match.key;
+            }
+          }
+        }
+      } catch {
+        // Fall through with original key
+      }
+    }
+
     const discovery: Discovery = {
       id: discoveryId,
       place_id: input.place_id,
@@ -98,7 +126,7 @@ export async function addToCompass(
       rating: input.rating,
       heroImage: undefined,
       images: undefined,
-      contextKey: input.contextKey || '',
+      contextKey: resolvedContextKey,
       source: 'chat:recommendation',
       discoveredAt: new Date().toISOString(),
       placeIdStatus: input.place_id ? 'verified' : 'missing',
