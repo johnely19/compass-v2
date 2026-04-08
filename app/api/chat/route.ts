@@ -165,8 +165,10 @@ async function executeToolLoop(
             userId,
           );
           // Emit toolResult event so frontend can refresh
+          // Include contextKey so frontend can auto-switch homepage
+          const toolContextKey = (toolBlock.input as Record<string, unknown>)?.contextKey as string | undefined;
           controller.enqueue(encoder.encode(
-            `data: ${JSON.stringify({ toolResult: frontendToolName, messageId })}\n\n`
+            `data: ${JSON.stringify({ toolResult: frontendToolName, messageId, ...(toolContextKey ? { contextKey: toolContextKey } : {}) })}\n\n`
           ));
           toolResults.push({
             type: 'tool_result',
