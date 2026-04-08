@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
@@ -249,8 +249,10 @@ export default function HomeClient({
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
+  const initializedRef = useRef(false);
 
-  // Initialize active key from localStorage or first context
+  // Initialize active key from localStorage on first mount;
+  // on subsequent context refreshes, keep current key if still valid.
   useEffect(() => {
     setMounted(true);
     // Load all context counts
@@ -260,17 +262,26 @@ export default function HomeClient({
     }
     setContextCounts(counts);
 
-    // Restore active key — respect localStorage even if context isn't in server data yet
-    // (newly created contexts may not appear in the first refresh)
-    try {
-      const stored = localStorage.getItem('compass-active-context');
-      if (stored) {
-        setActiveKey(stored);
-      } else if (contexts.length > 0) {
-        setActiveKey(contexts[0]!.key);
+    if (!initializedRef.current) {
+      // First mount: restore from localStorage
+      initializedRef.current = true;
+      try {
+        const stored = localStorage.getItem('compass-active-context');
+        if (stored && contexts.some(c => c.key === stored)) {
+          setActiveKey(stored);
+        } else if (contexts.length > 0) {
+          setActiveKey(contexts[0]!.key);
+        }
+      } catch {
+        if (contexts.length > 0) setActiveKey(contexts[0]!.key);
       }
-    } catch {
-      if (contexts.length > 0) setActiveKey(contexts[0]!.key);
+    } else {
+      // Subsequent context refreshes (e.g. after router.refresh()):
+      // keep the current activeKey if it's still valid, otherwise fall back
+      setActiveKey(prev => {
+        if (prev && contexts.some(c => c.key === prev)) return prev;
+        return contexts.length > 0 ? contexts[0]!.key : null;
+      });
     }
   }, [userId, contexts]);
 
@@ -328,9 +339,10 @@ export default function HomeClient({
       });
       // Switch to the newly created context
       setActiveKey(detail.key);
-      // Save to localStorage immediately so it survives the refresh re-init
+      broadcastActiveContext(detail.key);
+      // Save to localStorage before refresh so init effect doesn't override
       try { localStorage.setItem('compass-active-context', detail.key); } catch {}
-      // Delay refresh slightly to let Blob write propagate
+      // Delay refresh slightly to let Blob write propagate before server re-render
       setTimeout(() => router.refresh(), 1500);
       // Remove the emerging flag after the animation completes (700ms animation + buffer)
       const timer = setTimeout(() => {
@@ -347,7 +359,7 @@ export default function HomeClient({
       window.removeEventListener('compass-trip-created', handler);
       timers.forEach(clearTimeout);
     };
-  }, [router]);
+  }, [router, broadcastActiveContext]);
 
   // Listen for trip attribute attachments from chat
   useEffect(() => {
