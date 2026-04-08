@@ -124,6 +124,7 @@ export async function addToCompass(
       city: resolvedCity,
       type: normalizeType(input.category),
       rating: input.rating,
+      description: input.why, // 'why' is the concierge's reason — store as description for card display
       heroImage: undefined,
       images: undefined,
       contextKey: resolvedContextKey,

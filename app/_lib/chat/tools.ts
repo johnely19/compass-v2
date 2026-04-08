@@ -40,7 +40,7 @@ export const TOOLS: ToolDefinition[] = [
   },
   {
     name: 'add_to_compass',
-    description: 'Add a recommended place to the user\'s Compass app for review. Call this for EACH specific place you recommend after verifying it with lookup_place. The place will appear in the user\'s Compass immediately.',
+    description: 'Add a recommended place to the user\'s Compass app. ALWAYS include address, rating, and why — these are required for the place card to display properly. Include any data you found from web_search or lookup_place.',
     input_schema: {
       type: 'object' as const,
       properties: {

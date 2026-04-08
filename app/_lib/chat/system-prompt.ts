@@ -28,6 +28,7 @@ CRITICAL WORKFLOW — for recommendations:
 1. Search the web for current info about the places.
 2. In your VERY NEXT response, call add_to_compass for ALL recommended places AT ONCE — include ALL tool calls in that single response. Do NOT use lookup_place first. Do NOT add one place per round.
    - Set "city" to the place's ACTUAL city, not the trip context city.
+   - ALWAYS include address, rating, and why when calling add_to_compass — these make the place card useful.
    - You MUST call multiple add_to_compass tools in the SAME response. Never spread them across rounds.
 3. After all tools execute, write your final recommendation summary.
 4. Say: "Added to your Compass! ✨"
