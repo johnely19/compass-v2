@@ -279,6 +279,14 @@ export default function ChatWidget() {
                 updateTripUsed.current = '__any__';
               }
             }
+
+            // When a tool completes (add-to-compass, save-discovery), refresh the page
+            // so new discoveries appear immediately
+            if (parsed.toolResult && typeof window !== 'undefined') {
+              if (['add-to-compass', 'save-discovery'].includes(parsed.toolResult)) {
+                window.dispatchEvent(new CustomEvent('compass-data-changed'));
+              }
+            }
           } catch {
             // skip non-JSON lines
           }
