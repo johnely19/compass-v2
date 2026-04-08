@@ -250,6 +250,13 @@ export default function ChatWidget() {
               if (['add-to-compass', 'save-discovery', 'edit-discovery', 'remove-discovery'].includes(parsed.toolResult)) {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
               }
+              // Auto-switch homepage when tool targets a different context
+              if (parsed.contextKey && parsed.contextKey !== activeContextKeyRef.current) {
+                activeContextKeyRef.current = parsed.contextKey;
+                window.dispatchEvent(new CustomEvent('compass-chat-context-switch', {
+                  detail: { key: parsed.contextKey },
+                }));
+              }
             }
           } catch {
             // skip non-JSON lines
