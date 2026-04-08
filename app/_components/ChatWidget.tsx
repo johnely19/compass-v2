@@ -109,12 +109,12 @@ export default function ChatWidget() {
     }
   }, []);
 
-  // Load chat history on first expand
-  useEffect(() => {
-    if (isExpanded && messages.length === 0) {
-      loadChatHistory();
-    }
-  }, [isExpanded]);
+  // History is intentionally NOT loaded on mount — start with a clean slate.
+  // Only the current session's messages accumulate in state.
+  // To restore history loading, uncomment:
+  // useEffect(() => {
+  //   if (isExpanded && messages.length === 0) loadChatHistory();
+  // }, [isExpanded]);
 
   // Check for auto-expand on new messages
   useEffect(() => {
