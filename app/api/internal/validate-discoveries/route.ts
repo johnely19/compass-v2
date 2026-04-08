@@ -12,7 +12,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { list, put, del } from '@vercel/blob';
 import { existsSync, writeFileSync, mkdirSync, readFileSync } from 'fs';
 import path from 'path';
-import type { Discovery } from '../../../_lib/types';
+import type { Discovery as FullDiscovery } from '../../../_lib/types';
 import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
 
 export const dynamic = 'force-dynamic';
@@ -158,12 +158,12 @@ export async function POST(request: NextRequest) {
       });
 
       try {
-        const previousDiscoveries = (Array.isArray(raw) ? raw : raw.discoveries || []) as Discovery[];
+        const previousDiscoveries = (Array.isArray(raw) ? raw : raw.discoveries || []) as unknown as FullDiscovery[];
         await recordDiscoveryHistoryEvent({
           userId,
           source: 'api/internal/validate-discoveries',
           previous: previousDiscoveries,
-          next: discoveries as Discovery[],
+          next: discoveries as unknown as FullDiscovery[],
         });
       } catch {
         // best-effort history only

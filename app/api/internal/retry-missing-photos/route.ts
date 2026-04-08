@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
   const res = await fetch(blobUrl);
   const raw = await res.json();
   const discoveries: Record<string, unknown>[] = Array.isArray(raw) ? raw : raw.discoveries || [];
-  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as Discovery[];
+  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as unknown as Discovery[];
 
   // Find candidates missing heroImage but have place_id
   const candidates = discoveries.filter(d => d.place_id && !d.heroImage);
@@ -96,7 +96,7 @@ export async function GET(req: NextRequest) {
         userId,
         source: 'api/internal/retry-missing-photos',
         previous: previousDiscoveries,
-        next: discoveries as Discovery[],
+        next: discoveries as unknown as Discovery[],
       });
     } catch {
       // best-effort history only

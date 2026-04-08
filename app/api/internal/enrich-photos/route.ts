@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
   const res = await fetch(blobUrl);
   const raw = await res.json();
   const discoveries: Record<string, unknown>[] = Array.isArray(raw) ? raw : raw.discoveries || [];
-  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as Discovery[];
+  const previousDiscoveries = discoveries.map((d) => ({ ...d })) as unknown as Discovery[];
 
   // Find candidates
   const candidates = discoveries.filter(d => {
@@ -103,7 +103,7 @@ export async function POST(req: NextRequest) {
       userId,
       source: 'api/internal/enrich-photos',
       previous: previousDiscoveries,
-      next: discoveries as Discovery[],
+      next: discoveries as unknown as Discovery[],
     });
   } catch {
     // best-effort history only
