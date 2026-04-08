@@ -78,6 +78,13 @@ export default function ChatWidget() {
   const [justExpanded, setJustExpanded] = useState(false);
   const [autoExpanded, setAutoExpanded] = useState(false);
 
+  // Track tool calls used in this chat turn
+  const createContextUsed = useRef(false);
+  const updateTripUsed = useRef<string | null>(null); // stores contextKey if update_trip was used
+  // Snapshot of context state before the chat turn
+  const preContextKeys = useRef<Set<string>>(new Set());
+  const preContextSnapshots = useRef<Record<string, { dates?: string; city?: string; focus?: string[] }>>({});
+
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const collapsedInputRef = useRef<HTMLInputElement>(null);
   const expandedInputRef = useRef<HTMLTextAreaElement>(null);
@@ -263,6 +270,14 @@ export default function ChatWidget() {
             if (parsed.tool) {
               const label = TOOL_LABELS[parsed.tool] || `⚙️ Using ${parsed.tool}…`;
               setToolStatus(label);
+              // Track context creation so we can emit an emergence event after stream
+              if (parsed.tool === 'create-context') {
+                createContextUsed.current = true;
+              }
+              if (parsed.tool === 'update-trip') {
+                // We'll resolve the key after the stream via context diff
+                updateTripUsed.current = '__any__';
+              }
             }
           } catch {
             // skip non-JSON lines
@@ -285,6 +300,24 @@ export default function ChatWidget() {
     setLoading(true);
     setStreamContent('');
     setToolStatus(null);
+    createContextUsed.current = false;
+    updateTripUsed.current = null;
+
+    // Snapshot current context state before we send so we can diff after
+    fetch('/api/contexts')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (data?.contexts) {
+          const ctxs = data.contexts as Array<{ key: string; dates?: string; city?: string; focus?: string[] }>;
+          preContextKeys.current = new Set(ctxs.map(c => c.key));
+          const snapshots: Record<string, { dates?: string; city?: string; focus?: string[] }> = {};
+          for (const c of ctxs) {
+            snapshots[c.key] = { dates: c.dates, city: c.city, focus: c.focus };
+          }
+          preContextSnapshots.current = snapshots;
+        }
+      })
+      .catch(() => {});
 
     // Expand if collapsed when sending
     if (!isExpanded) {
@@ -342,6 +375,54 @@ export default function ChatWidget() {
           window.dispatchEvent(new CustomEvent('compass-data-changed'));
         }
 
+        // If create-context or update-trip was used, diff contexts and emit emergence events
+        if ((createContextUsed.current || updateTripUsed.current) && typeof window !== 'undefined') {
+          // Small delay to let Blob writes settle
+          setTimeout(async () => {
+            try {
+              const res = await fetch('/api/contexts');
+              if (res.ok) {
+                const data = await res.json();
+                const allCtxs = data.contexts as Array<{ key: string; label: string; type: string; emoji: string; dates?: string; city?: string; focus?: string[] }>;
+
+                // New contexts → emergence animation
+                const newCtxs = allCtxs.filter(c => !preContextKeys.current.has(c.key));
+                for (const ctx of newCtxs) {
+                  window.dispatchEvent(new CustomEvent('compass-trip-created', {
+                    detail: { key: ctx.key, label: ctx.label, type: ctx.type, emoji: ctx.emoji },
+                  }));
+                }
+
+                // Updated contexts → attribute attachment events
+                if (updateTripUsed.current) {
+                  for (const ctx of allCtxs) {
+                    const prev = preContextSnapshots.current[ctx.key];
+                    if (!prev) continue;
+                    const changedAttrs: Array<{ field: string; value: string }> = [];
+                    if (ctx.dates && ctx.dates !== prev.dates) {
+                      changedAttrs.push({ field: 'dates', value: ctx.dates });
+                    }
+                    if (ctx.city && ctx.city !== prev.city) {
+                      changedAttrs.push({ field: 'city', value: ctx.city });
+                    }
+                    const newFocus = (ctx.focus ?? []).filter(f => !(prev.focus ?? []).includes(f));
+                    if (newFocus.length > 0) {
+                      changedAttrs.push({ field: 'focus', value: newFocus.join(', ') });
+                    }
+                    if (changedAttrs.length > 0) {
+                      window.dispatchEvent(new CustomEvent('compass-trip-attributes', {
+                        detail: { key: ctx.key, attributes: changedAttrs },
+                      }));
+                    }
+                  }
+                }
+              }
+            } catch {
+              // non-critical
+            }
+          }, 800);
+        }
+
         setStreamContent('');
         setStreaming(false);
         setToolStatus(null);
@@ -359,6 +440,7 @@ export default function ChatWidget() {
         }
         setLoading(false);
       }
+
     } catch (e) {
       if (e instanceof Error && e.name === 'AbortError') {
         // User cancelled — no error

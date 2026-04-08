@@ -40,9 +40,9 @@ const TYPE_EMOJI: Record<string, string> = {
 
 /**
  * Format dates naturally.
- * "April 27-30, 2026" → "April 27 – 30"
+ * "April 27-30, 2026" → "April 27 - 30"
  * "July 2026 (3+ weeks)" → "This July · 3+ weeks"
- * "April 27-30, 2026" (if current year) → "April 27 – 30"
+ * "April 27-30, 2026" (if current year) → "April 27 - 30"
  */
 function formatDateNatural(dates: string | undefined): string | null {
   if (!dates) return null;
@@ -69,13 +69,13 @@ function formatDateNatural(dates: string | undefined): string | null {
     const yr = parseInt(endYr ?? '0');
     const yearSuffix = yr !== currentYear ? `, ${endYr}` : '';
     if (sMonth === eMonth) {
-      return `${sMonth} ${parseInt(startDay ?? '0')} – ${parseInt(endDay ?? '0')}${yearSuffix}`;
+      return `${sMonth} ${parseInt(startDay ?? '0')} - ${parseInt(endDay ?? '0')}${yearSuffix}`;
     }
-    return `${sMonth} ${parseInt(startDay ?? '0')} – ${eMonth} ${parseInt(endDay ?? '0')}${yearSuffix}`;
+    return `${sMonth} ${parseInt(startDay ?? '0')} - ${eMonth} ${parseInt(endDay ?? '0')}${yearSuffix}`;
   }
 
   // "April 27-30, 2026"
-  const rangeInMonth = cleaned.match(/^(\w+)\s+(\d+)\s*[-–]\s*(\d+),?\s+(\d{4})$/);
+  const rangeInMonth = cleaned.match(/^(\w+)\s+(\d+)\s*[--]\s*(\d+),?\s+(\d{4})$/);
   if (rangeInMonth) {
     const [, month, startDay, endDay, year] = rangeInMonth;
     const yr = parseInt(year ?? '0');
@@ -84,16 +84,16 @@ function formatDateNatural(dates: string | undefined): string | null {
     if (yr === currentYear && monthIdx === currentMonth) prefix = 'This month · ';
     else if (yr === currentYear && monthIdx === currentMonth + 1) prefix = 'Next month · ';
     const yearSuffix = yr !== currentYear ? `, ${year}` : '';
-    return `${prefix}${month} ${startDay} – ${endDay}${yearSuffix}`;
+    return `${prefix}${month} ${startDay} - ${endDay}${yearSuffix}`;
   }
 
   // "April 27 - May 2, 2026"
-  const rangeAcross = cleaned.match(/^(\w+)\s+(\d+)\s*[-–]\s*(\w+)\s+(\d+),?\s+(\d{4})$/);
+  const rangeAcross = cleaned.match(/^(\w+)\s+(\d+)\s*[--]\s*(\w+)\s+(\d+),?\s+(\d{4})$/);
   if (rangeAcross) {
     const [, m1, d1, m2, d2, year] = rangeAcross;
     const yr = parseInt(year ?? '0');
     const yearSuffix = yr !== currentYear ? `, ${year}` : '';
-    return `${m1} ${d1} – ${m2} ${d2}${yearSuffix}`;
+    return `${m1} ${d1} - ${m2} ${d2}${yearSuffix}`;
   }
 
   // "July 2026"
@@ -198,7 +198,11 @@ export default function HomeClient({
   // Mounted state to avoid hydration mismatch from localStorage reads
   const [mounted, setMounted] = useState(false);
   // Store context counts - initialize with zeros to match server render
-  const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
+  const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({}); 
+  // Keys that are currently "emerging" (just created from chat) — gets entrance animation
+  const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
+  // Map of context key → recently-attached attribute pills
+  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
 
   // Re-render when triage state changes (for saved count badges)
   // Must be BEFORE any conditional returns (Rules of Hooks)
@@ -207,6 +211,51 @@ export default function HomeClient({
     const handler = () => setTriageVersion((v) => v + 1);
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
+  }, []);
+
+  // Listen for new trip creation from chat and mark the key as emerging
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ key: string }>).detail;
+      if (!detail?.key) return;
+      setEmergingKeys(prev => {
+        const next = new Set(prev);
+        next.add(detail.key);
+        return next;
+      });
+      // Remove the emerging flag after the animation completes (600ms animation + buffer)
+      setTimeout(() => {
+        setEmergingKeys(prev => {
+          const next = new Set(prev);
+          next.delete(detail.key);
+          return next;
+        });
+      }, 1200);
+    };
+    window.addEventListener('compass-trip-created', handler);
+    return () => window.removeEventListener('compass-trip-created', handler);
+  }, []);
+
+  // Listen for trip attribute attachments from chat
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ key: string; attributes: Array<{ field: string; value: string }> }>).detail;
+      if (!detail?.key || !detail.attributes?.length) return;
+      setAttachingAttrs(prev => ({
+        ...prev,
+        [detail.key]: detail.attributes,
+      }));
+      // Clear attribute pills after animation
+      setTimeout(() => {
+        setAttachingAttrs(prev => {
+          const next = { ...prev };
+          delete next[detail.key];
+          return next;
+        });
+      }, 2500);
+    };
+    window.addEventListener('compass-trip-attributes', handler);
+    return () => window.removeEventListener('compass-trip-attributes', handler);
   }, []);
 
   // Refresh homepage immediately when chat or other client actions mutate Compass data.
@@ -267,8 +316,10 @@ export default function HomeClient({
         const naturalDate = formatDateNatural(ctx.dates);
         const description = buildDescription(ctx);
 
+        const isEmerging = emergingKeys.has(ctx.key);
+        const landingAttrs = attachingAttrs[ctx.key] ?? [];
         return (
-          <section key={ctx.key} className="section">
+          <section key={ctx.key} className={`section${isEmerging ? ' section-emerging' : ''}`}>
             <div className={`section-header${ctx.type === 'trip' ? ' section-header-trip' : ''}`}>
               <div className="section-header-left">
                 <div className={`section-title-row${ctx.type === 'trip' ? ' section-title-row-trip' : ''}`}>
@@ -292,6 +343,16 @@ export default function HomeClient({
                     {/* For trips: description on its own third line */}
                     {description && ctx.type === 'trip' && (
                       <div className="section-desc-trip">{description}</div>
+                    )}
+                    {/* Attribute pills — appear when chat attaches new trip attributes */}
+                    {landingAttrs.length > 0 && (
+                      <div className="section-attr-pills">
+                        {landingAttrs.map(attr => (
+                          <span key={attr.field} className="section-attr-pill">
+                            {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
+                          </span>
+                        ))}
+                      </div>
                     )}
                   </div>
                 </div>
@@ -363,7 +424,7 @@ export default function HomeClient({
             ) : (
               <div className="empty-state">
                 <p className="text-muted text-sm">
-                  No discoveries yet — the radar is scanning.
+                  No discoveries yet - the radar is scanning.
                 </p>
               </div>
             )}
