@@ -202,7 +202,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { message, history: clientHistory } = await request.json();
+    const { message, history: clientHistory, contextKey: activeContextKey } = await request.json();
 
     if (!message || typeof message !== 'string') {
       return NextResponse.json({ error: 'message is required' }, { status: 400 });
@@ -246,6 +246,7 @@ export async function POST(request: NextRequest) {
       preferences,
       manifest,
       recentDiscoveries,
+      activeContextKey: typeof activeContextKey === 'string' ? activeContextKey : undefined,
     };
 
     const systemPrompt = buildSystemPrompt(chatContext);

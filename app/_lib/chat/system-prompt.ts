@@ -84,6 +84,8 @@ export interface ChatContext {
   preferences: UserPreferences | null;
   manifest: UserManifest | null;
   recentDiscoveries: Array<{ name: string; type: string; city: string }>;
+  /** The explicitly focused context key (for contextual chat targeting) */
+  activeContextKey?: string;
 }
 
 /**
@@ -147,6 +149,14 @@ Be curious and warm. Get to know them naturally.`;
     prompt += `\n\n## RECENT DISCOVERIES\n`;
     for (const d of context.recentDiscoveries) {
       prompt += `- ${d.name} (${d.type}) — ${d.city}\n`;
+    }
+  }
+
+  // If a specific context is explicitly targeted (contextual chat), highlight it
+  if (context.activeContextKey) {
+    const targeted = context.manifest?.contexts?.find((c: Context) => c.key === context.activeContextKey);
+    if (targeted) {
+      prompt += `\n\n## ACTIVE CHAT TARGET\nThe user is currently focused on: **${targeted.emoji || '\ud83d\udccd'} ${targeted.label}** (key: \`${targeted.key}\`)${targeted.city ? ` in ${targeted.city}` : ''}${targeted.dates ? ` — ${targeted.dates}` : ''}.\n\nWhen the user talks about places, adding things, or updating details — apply them to THIS context. Use contextKey: \`${targeted.key}\` in all add_to_compass and update_trip calls unless they explicitly mention a different trip.`;
     }
   }
 
