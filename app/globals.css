@@ -6900,7 +6900,7 @@ nextjs-portal { display: none !important; }
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  flex-grow: 1;
+  flex-grow: 0; /* don't stretch to fill viewport — avoid empty space gap */
 }
 
 /* ---- Focused Hero (context header) ---- */
@@ -7019,6 +7019,12 @@ nextjs-portal { display: none !important; }
 
 .focused-empty-prompt:hover {
   background: var(--surface-hover, rgba(0,0,0,0.04));
+}
+
+/* Compact empty state — no excessive min-height when no discoveries */
+.focused-empty-discoveries-compact {
+  padding: var(--space-md) var(--space-md);
+  margin-top: auto; /* push toward chat bar */
 }
 
 /* ---- Context Switcher ---- */
@@ -7163,6 +7169,29 @@ nextjs-portal { display: none !important; }
   color: var(--accent);
   font-weight: 700;
   flex-shrink: 0;
+}
+
+/* New Trip button in context switcher dropdown */
+.ctx-switcher-new-trip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  border: none;
+  border-top: 1px solid var(--card-border);
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: background var(--transition-fast);
+  min-height: 44px;
+}
+
+.ctx-switcher-new-trip:hover {
+  background: rgba(59, 130, 246, 0.06);
 }
 
 /* ---- Mobile adjustments ---- */

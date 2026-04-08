@@ -7,7 +7,7 @@ test('chat widget has correct light background', async ({ page }) => {
   // Navigate to home page
   await page.goto('/', { waitUntil: 'networkidle' });
 
-  // Look for the chat input using a resilient placeholder locator
+  // Look for the chat textarea using a resilient placeholder locator
   const chatInput = page.getByPlaceholder(/anything/i);
 
   // Assert it exists and is visible

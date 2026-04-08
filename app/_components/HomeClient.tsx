@@ -340,8 +340,10 @@ export default function HomeClient({
       // Switch to the newly created context
       setActiveKey(detail.key);
       broadcastActiveContext(detail.key);
-      // Refresh server data to load the new context
-      router.refresh();
+      // Save to localStorage before refresh so init effect doesn't override
+      try { localStorage.setItem('compass-active-context', detail.key); } catch {}
+      // Delay refresh slightly to let Blob write propagate before server re-render
+      setTimeout(() => router.refresh(), 1500);
       // Remove the emerging flag after the animation completes (700ms animation + buffer)
       const timer = setTimeout(() => {
         setEmergingKeys(prev => {
@@ -566,21 +568,33 @@ export default function HomeClient({
             layout="carousel"
           />
         ) : (
-          <div className="focused-empty-discoveries">
+          <div className="focused-empty-discoveries focused-empty-discoveries-compact">
             <p className="focused-empty-title">No discoveries yet</p>
             <p className="focused-empty-hint">Try asking:</p>
             <div className="focused-empty-prompts">
               {ctx.city ? (
                 <>
-                  <span className="focused-empty-prompt">📍 Find great restaurants in {ctx.city}</span>
-                  <span className="focused-empty-prompt">🎨 What are the must-see galleries in {ctx.city}?</span>
-                  <span className="focused-empty-prompt">🎵 Best jazz bars in {ctx.city}</span>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: `Find great restaurants in ${ctx.city}` } }));
+                  }}>📍 Find great restaurants in {ctx.city}</button>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: `What are the must-see galleries in ${ctx.city}?` } }));
+                  }}>🎨 What are the must-see galleries in {ctx.city}?</button>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: `Best jazz bars in ${ctx.city}` } }));
+                  }}>🎵 Best jazz bars in {ctx.city}</button>
                 </>
               ) : (
                 <>
-                  <span className="focused-empty-prompt">📍 Find restaurants for my trip</span>
-                  <span className="focused-empty-prompt">🎨 What are the must-see spots?</span>
-                  <span className="focused-empty-prompt">🎵 Best live music venues?</span>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: 'Find restaurants for my trip' } }));
+                  }}>📍 Find restaurants for my trip</button>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: 'What are the must-see spots?' } }));
+                  }}>🎨 What are the must-see spots?</button>
+                  <button type="button" className="focused-empty-prompt" onClick={() => {
+                    window.dispatchEvent(new CustomEvent('compass-prefill-chat', { detail: { text: 'Best live music venues?' } }));
+                  }}>🎵 Best live music venues?</button>
                 </>
               )}
             </div>
