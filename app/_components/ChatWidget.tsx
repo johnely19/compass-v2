@@ -371,12 +371,14 @@ export default function ChatWidget() {
         }
 
         // Notify visible pages that Compass data may have changed.
-        if (typeof window !== 'undefined') {
+        // If emergence events are pending, delay the refresh so the animation plays first.
+        const hasEmergenceEvents = createContextUsed.current || updateTripUsed.current;
+        if (typeof window !== 'undefined' && !hasEmergenceEvents) {
           window.dispatchEvent(new CustomEvent('compass-data-changed'));
         }
 
         // If create-context or update-trip was used, diff contexts and emit emergence events
-        if ((createContextUsed.current || updateTripUsed.current) && typeof window !== 'undefined') {
+        if (hasEmergenceEvents && typeof window !== 'undefined') {
           // Small delay to let Blob writes settle
           setTimeout(async () => {
             try {
@@ -420,6 +422,8 @@ export default function ChatWidget() {
             } catch {
               // non-critical
             }
+            // Now safe to refresh — animation has been triggered
+            window.dispatchEvent(new CustomEvent('compass-data-changed'));
           }, 800);
         }
 
