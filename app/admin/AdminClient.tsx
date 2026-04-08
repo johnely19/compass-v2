@@ -589,8 +589,13 @@ export default function AdminClient() {
 
             {discoActivity.monitoring.nextUp.length > 0 && (
               <div style={{ marginTop: 'var(--space-md)' }}>
-                <div style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)', marginBottom: 8 }}>
-                  Monitoring queue
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: 8 }}>
+                  <span style={{ fontSize: '0.82rem', fontWeight: 600, color: 'var(--text-secondary)' }}>
+                    Monitoring queue
+                  </span>
+                  <a href="/admin/monitoring" style={{ fontSize: '0.75rem', color: 'var(--color-link, #2563eb)', textDecoration: 'none' }}>
+                    Full inventory →
+                  </a>
                 </div>
                 <div style={{ display: 'grid', gap: 8 }}>
                   {discoActivity.monitoring.nextUp.map((item) => (
