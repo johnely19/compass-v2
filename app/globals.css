@@ -422,6 +422,19 @@ a:hover {
   border-radius: 12px;
   position: relative;
   z-index: 1;
+  will-change: transform, opacity, box-shadow;
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .section-emerging {
+    animation: none;
+    opacity: 1;
+  }
+  .section-attr-pill {
+    animation: none;
+    opacity: 1;
+  }
 }
 
 /* Attribute pills — animate in when chat attaches trip details */
