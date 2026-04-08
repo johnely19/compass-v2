@@ -13,8 +13,16 @@ const MAX_MESSAGE_LENGTH = 4000;
 const OPENCLAW_TIMEOUT_MS = 90_000; // longer timeout for streaming — tool calls can take time
 
 interface OpenClawMessage {
-  role: 'system' | 'user' | 'assistant';
+  role: 'system' | 'user' | 'assistant' | 'tool';
   content: string;
+  tool_calls?: ToolCallMessage[];
+  tool_call_id?: string;
+}
+
+interface ToolCallMessage {
+  id: string;
+  type: 'function';
+  function: { name: string; arguments: string };
 }
 
 /** OpenAI function-calling tools for the Concierge agent */
@@ -82,6 +90,10 @@ const CONCIERGE_TOOLS = [
             type: 'array',
             items: { type: 'string' },
             description: 'Updated focus areas (optional)',
+          },
+          accommodation: {
+            type: 'string',
+            description: 'Accommodation details (optional, e.g., "Airbnb in Alfama")',
           },
         },
         required: ['contextKey'],
@@ -168,6 +180,7 @@ async function executeToolCall(
       dates: args.dates,
       city: args.city,
       focus: args.focus,
+      accommodation: args.accommodation,
     };
   } else if (toolName === 'add-discovery') {
     endpoint = `${baseUrl}/api/compass/add-discovery`;
@@ -294,6 +307,107 @@ async function callOpenClawSync(
   }
 }
 
+/** Parsed tool call from the stream */
+interface ParsedToolCall {
+  id: string;
+  name: string;
+  arguments: string;
+}
+
+/**
+ * Consume an SSE stream from the OpenClaw Gateway.
+ * Forwards content deltas and tool-name events to the browser controller.
+ * Accumulates tool_calls arguments across chunked deltas.
+ * Returns the full content, any tool calls, and the finish_reason.
+ */
+async function consumeStream(
+  body: ReadableStream<Uint8Array>,
+  controller: ReadableStreamDefaultController,
+  encoder: TextEncoder,
+  messageId: string,
+  onContent: (text: string) => void,
+): Promise<{ content: string; toolCalls: ParsedToolCall[]; finishReason: string | null }> {
+  const decoder = new TextDecoder();
+  const reader = body.getReader();
+  let content = '';
+  let finishReason: string | null = null;
+
+  // Accumulate tool calls by index (they arrive in chunks)
+  const toolCallMap = new Map<number, { id: string; name: string; args: string }>();
+
+  try {
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        const data = line.slice(6).trim();
+        if (data === '[DONE]') continue;
+
+        try {
+          const parsed = JSON.parse(data);
+          const choice = parsed?.choices?.[0];
+          const delta = choice?.delta;
+
+          if (choice?.finish_reason) {
+            finishReason = choice.finish_reason;
+          }
+
+          if (delta?.content) {
+            content += delta.content;
+            onContent(delta.content);
+            controller.enqueue(
+              encoder.encode(`data: ${JSON.stringify({ content: delta.content, messageId })}\n\n`),
+            );
+          }
+
+          // Accumulate tool call chunks
+          if (delta?.tool_calls) {
+            for (const tc of delta.tool_calls) {
+              const idx = tc.index ?? 0;
+              const existing = toolCallMap.get(idx);
+              if (!existing) {
+                toolCallMap.set(idx, {
+                  id: tc.id || '',
+                  name: tc.function?.name || '',
+                  args: tc.function?.arguments || '',
+                });
+                // Emit tool event to frontend on first chunk (has the name)
+                if (tc.function?.name) {
+                  controller.enqueue(
+                    encoder.encode(`data: ${JSON.stringify({ tool: tc.function.name, messageId })}\n\n`),
+                  );
+                }
+              } else {
+                if (tc.id) existing.id = tc.id;
+                if (tc.function?.name) existing.name = tc.function.name;
+                if (tc.function?.arguments) existing.args += tc.function.arguments;
+              }
+            }
+          }
+        } catch {
+          // Not valid JSON — skip
+        }
+      }
+    }
+  } catch (err) {
+    console.error('[chat/consumeStream] Read error:', err);
+  }
+
+  const toolCalls: ParsedToolCall[] = [];
+  for (const [, tc] of toolCallMap) {
+    if (tc.name) {
+      toolCalls.push({ id: tc.id, name: tc.name, arguments: tc.args });
+    }
+  }
+
+  return { content, toolCalls, finishReason };
+}
+
 export async function POST(request: NextRequest) {
   try {
     const user = await getCurrentUser();
@@ -366,60 +480,72 @@ export async function POST(request: NextRequest) {
     const streamRes = await streamOpenClaw(openclawMessages, user.id);
 
     if (streamRes?.body) {
-      // Proxy SSE stream to the browser, collecting full text for persistence
       const encoder = new TextEncoder();
-      const decoder = new TextDecoder();
-      let fullReply = '';
       const messageId = `${Date.now()}-concierge`;
+      let fullReply = '';
+
+      // Messages accumulator for tool-call loops (starts with our initial messages)
+      const loopMessages = [...openclawMessages];
 
       const readable = new ReadableStream({
         async start(controller) {
-          const reader = streamRes.body!.getReader();
+          const MAX_TOOL_ROUNDS = 5;
+          let currentStream: Response | null = streamRes;
 
           try {
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
+            for (let round = 0; round <= MAX_TOOL_ROUNDS; round++) {
+              if (!currentStream?.body) break;
 
-              const chunk = decoder.decode(value, { stream: true });
+              const { content, toolCalls, finishReason } = await consumeStream(
+                currentStream.body,
+                controller,
+                encoder,
+                messageId,
+                (text) => { fullReply += text; },
+              );
 
-              // Parse SSE lines to extract content deltas
-              const lines = chunk.split('\n');
-              for (const line of lines) {
-                if (line.startsWith('data: ')) {
-                  const data = line.slice(6).trim();
-                  if (data === '[DONE]') {
-                    // Send our own [DONE] marker
-                    controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
-                    continue;
-                  }
+              // If the model finished with tool_calls, execute them and loop
+              if (finishReason === 'tool_calls' && toolCalls.length > 0 && round < MAX_TOOL_ROUNDS) {
+                // Append the assistant's tool-call message
+                loopMessages.push({
+                  role: 'assistant',
+                  content: content || '',
+                  tool_calls: toolCalls.map(tc => ({
+                    id: tc.id,
+                    type: 'function' as const,
+                    function: { name: tc.name, arguments: tc.arguments },
+                  })),
+                });
 
+                // Execute each tool call and append results
+                for (const tc of toolCalls) {
+                  let result: unknown;
                   try {
-                    const parsed = JSON.parse(data);
-                    const delta = parsed?.choices?.[0]?.delta;
-                    if (delta?.content) {
-                      fullReply += delta.content;
-                      // Forward the SSE event to the browser
-                      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: delta.content, messageId })}\n\n`));
-                    }
-                    // Surface tool-use status so UI can show "searching..." etc.
-                    if (delta?.tool_calls) {
-                      const toolName = delta.tool_calls[0]?.function?.name;
-                      if (toolName) {
-                        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ tool: toolName, messageId })}\n\n`));
-                      }
-                    }
-                  } catch {
-                    // Not valid JSON — skip
+                    const args = JSON.parse(tc.arguments);
+                    result = await executeToolCall(tc.name, args, user.id);
+                  } catch (err) {
+                    result = { error: err instanceof Error ? err.message : 'Tool execution failed' };
                   }
+
+                  loopMessages.push({
+                    role: 'tool',
+                    content: JSON.stringify(result),
+                    tool_call_id: tc.id,
+                  });
                 }
+
+                // Make a new streaming request with tool results
+                currentStream = await streamOpenClaw(loopMessages, user.id);
+              } else {
+                // No more tool calls — done
+                break;
               }
             }
           } catch (err) {
-            console.error('[chat/stream] Stream read error:', err);
+            console.error('[chat/stream] Stream error:', err);
           } finally {
+            controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
             controller.close();
-            // Persist completed chat
             if (fullReply) {
               persistChatData(user.id, message, fullReply, messageId, history).catch(() => {});
             }

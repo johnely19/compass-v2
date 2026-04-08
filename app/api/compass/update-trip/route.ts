@@ -7,6 +7,7 @@ interface UpdateFields {
   dates?: string;
   city?: string;
   focus?: string[];
+  accommodation?: string;
 }
 
 interface Change {
@@ -22,7 +23,7 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { contextKey, dates, city, focus } = body;
+    const { contextKey, dates, city, focus, accommodation } = body;
 
     if (!contextKey || typeof contextKey !== 'string') {
       return NextResponse.json({ error: 'contextKey is required' }, { status: 400 });
@@ -33,11 +34,12 @@ export async function POST(request: NextRequest) {
     if (dates !== undefined) updates.dates = dates;
     if (city !== undefined) updates.city = city;
     if (focus !== undefined) updates.focus = focus;
+    if (accommodation !== undefined) updates.accommodation = accommodation;
 
     // No updates provided
     if (Object.keys(updates).length === 0) {
       return NextResponse.json(
-        { error: 'At least one of dates, city, or focus is required' },
+        { error: 'At least one of dates, city, focus, or accommodation is required' },
         { status: 400 },
       );
     }
@@ -83,6 +85,10 @@ export async function POST(request: NextRequest) {
         changes.push({ field: 'focus', value: focus });
         context.focus = focus;
       }
+    }
+    if (accommodation !== undefined && context.accommodation !== accommodation) {
+      changes.push({ field: 'accommodation', value: accommodation });
+      context.accommodation = accommodation;
     }
 
     // Save updated manifest

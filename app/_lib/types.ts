@@ -60,6 +60,7 @@ export interface Context {
   dates?: string;
   parentTrip?: string;  // for outings nested in a trip
   focus: string[];      // "food", "jazz", "architecture"
+  accommodation?: string; // "Airbnb in Alfama", "Hotel Negresco"
   active: boolean;
   status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
   anchor?: ContextAnchor;  // geographic anchor for proximity sorting
