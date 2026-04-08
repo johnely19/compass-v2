@@ -63,7 +63,8 @@ async function streamAnthropicWithTools(
 
     if (!res.ok) {
       const err = await res.text().catch(() => 'Unknown error');
-      console.error('[chat/anthropic-stream] API error:', res.status, err);
+      console.error(`[chat/anthropic-stream] API error (round ${round}):`, res.status, err);
+      console.error('[chat/anthropic-stream] Messages count:', messages.length, 'Last role:', messages[messages.length - 1]?.role);
       const fallbackMsg = "Having a moment — try again? 🙏";
       controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: fallbackMsg, messageId })}\n\n`));
       fullReply += fallbackMsg;
@@ -77,6 +78,7 @@ async function streamAnthropicWithTools(
     let stopReason = '';
     const contentBlocks: any[] = [];
     let currentToolUse: { id: string; name: string; inputJson: string } | null = null;
+    let currentTextBlockIdx = -1; // index into contentBlocks for the active text block
 
     try {
       while (true) {
@@ -99,19 +101,26 @@ async function streamAnthropicWithTools(
               const block = event.content_block;
               if (block.type === 'tool_use') {
                 currentToolUse = { id: block.id, name: block.name, inputJson: '' };
+                currentTextBlockIdx = -1;
                 // Emit tool event to frontend — map tool names for ChatWidget detection
                 const frontendToolName = mapToolName(block.name);
                 controller.enqueue(encoder.encode(
                   `data: ${JSON.stringify({ tool: frontendToolName, messageId })}\n\n`
                 ));
+              } else if (block.type === 'text') {
+                currentTextBlockIdx = contentBlocks.length;
               }
-              contentBlocks.push(block);
+              contentBlocks.push({ ...block, text: block.text || '' });
             }
 
             if (event.type === 'content_block_delta') {
               const delta = event.delta;
               if (delta.type === 'text_delta' && delta.text) {
                 fullReply += delta.text;
+                // Accumulate text into the content block for tool-loop continuations
+                if (currentTextBlockIdx >= 0 && contentBlocks[currentTextBlockIdx]) {
+                  contentBlocks[currentTextBlockIdx].text = (contentBlocks[currentTextBlockIdx].text || '') + delta.text;
+                }
                 controller.enqueue(encoder.encode(
                   `data: ${JSON.stringify({ content: delta.text, messageId })}\n\n`
                 ));
