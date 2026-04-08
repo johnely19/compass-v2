@@ -21,6 +21,7 @@ import type {
   MonitorEntry,
   ObservedState,
 } from '../../../_lib/monitor-inventory';
+import { runWebEnrichment } from '../../../_lib/web-search-enrichment';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -195,6 +196,7 @@ interface RunResult {
   significanceScore?: number;
   significanceSummary?: string;
   nextCheckAt?: string;
+  webChanges?: string[];
 }
 
 export async function POST(request: NextRequest) {
@@ -283,7 +285,7 @@ export async function POST(request: NextRequest) {
     });
 
     const latestObs = updated?.observations?.[0];
-    results.push({
+    const result: RunResult = {
       entryId: entry.id,
       name: entry.name,
       status: 'observed',
@@ -292,11 +294,42 @@ export async function POST(request: NextRequest) {
       significanceScore: latestObs?.significanceScore,
       significanceSummary: latestObs?.significanceSummary,
       nextCheckAt: updated?.nextCheckAt,
+    };
+
+    // Web enrichment: run type-specific search for signals Places API can't detect
+    // (awards, buzz, closures in press, construction milestones, program changes)
+    const webEnrichment = await runWebEnrichment({
+      name: entry.name,
+      city: entry.city,
+      monitorType: entry.monitorType,
     });
+    if (webEnrichment && webEnrichment.changes.length > 0) {
+      const webObsAt = new Date().toISOString();
+      await recordObservation({
+        userId,
+        entryId: entry.id,
+        observation: {
+          observedAt: webObsAt,
+          source: 'web-search',
+          changes: webEnrichment.changes,
+          changeSummary: `Web signals: ${webEnrichment.changes.join(', ')}`,
+          state: {
+            observedAt: webObsAt,
+            source: 'web-search',
+            notes: webEnrichment.notes,
+          },
+        },
+        // Don't override nextCheckAt — the Places observation already set it
+      });
+      result.webChanges = webEnrichment.changes.map(String);
+    }
+
+    results.push(result);
   }
 
   const observed = results.filter(r => r.status === 'observed');
   const withChanges = observed.filter(r => r.changes && r.changes.length > 0);
+  const withWebSignals = observed.filter(r => r.webChanges && r.webChanges.length > 0);
 
   return NextResponse.json({
     message: `Observed ${observed.length}/${batch.length} entries${dryRun ? ' (dry run)' : ''}`,
@@ -308,6 +341,7 @@ export async function POST(request: NextRequest) {
       observed: observed.length,
       skipped: results.length - observed.length,
       withChanges: withChanges.length,
+      withWebSignals: withWebSignals.length,
     },
   });
 }
