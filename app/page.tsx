@@ -200,9 +200,17 @@ export default async function HomePage() {
     byContext.set(ctxKey, ranked);
   }
 
+  // Hide contexts with no discoveries in their final ranked bucket (homepage only).
+  // Contexts remain accessible in /review and other pages — this suppression is
+  // limited to homepage rendering so the page never shows empty carousels.
+  // Trip contexts are always shown (they carry planning widgets even without discoveries).
+  const visibleContexts = contexts.filter(c =>
+    c.type === 'trip' || (byContext.get(c.key)?.length ?? 0) > 0
+  );
+
   // Build contextMeta — structured trip data for widgets
   const contextMeta = Object.fromEntries(
-    contexts
+    visibleContexts
       .filter(c => c.type === 'trip')
       .map(c => {
         const raw = c as unknown as Record<string, unknown>;
@@ -252,7 +260,7 @@ export default async function HomePage() {
   return (
     <HomeClient
       userId={user.id}
-      contexts={contexts}
+      contexts={visibleContexts}
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
       monitoringQueue={monitoringQueue}
