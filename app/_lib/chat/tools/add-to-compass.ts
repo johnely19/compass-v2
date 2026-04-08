@@ -9,7 +9,7 @@
  */
 
 import { setUserData, getUserData, getUserManifest } from '../../user-data';
-import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
+import type { Discovery, DiscoveryType, PlaceImage, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
 const VALID_TYPES = new Set<DiscoveryType>([
@@ -77,6 +77,53 @@ export interface AddToCompassInput {
  * @param input - Place details
  * @returns Confirmation message with links
  */
+/**
+ * Fire-and-forget photo enrichment. Fetches a hero image from Google Places
+ * and patches the discovery in Blob. Runs after the discovery is saved so the
+ * chat response isn't blocked.
+ */
+async function enrichPhotosAsync(userId: string, discoveryId: string, placeId: string): Promise<void> {
+  const apiKey = process.env.GOOGLE_PLACES_API_KEY;
+  if (!apiKey) return;
+
+  try {
+    // Fetch photo reference from Places API
+    const url = `https://places.googleapis.com/v1/places/${placeId}`;
+    const res = await fetch(url, {
+      headers: {
+        'X-Goog-Api-Key': apiKey,
+        'X-Goog-FieldMask': 'photos',
+      },
+    });
+    if (!res.ok) return;
+    const data = await res.json();
+    const photos = data.photos as Array<{ name: string }> | undefined;
+    if (!photos?.length) return;
+
+    // Get first photo as hero image
+    const photoName = photos[0]!.name;
+    const photoRes = await fetch(
+      `https://places.googleapis.com/v1/${photoName}/media?maxWidthPx=800&key=${apiKey}`
+    );
+    if (!photoRes.ok) return;
+    const photoUrl = photoRes.url; // Google redirects to the actual image URL
+
+    // Update the discovery in Blob with the hero image
+    const discData = await getUserData<'discoveries'>(userId, 'discoveries');
+    if (!discData?.discoveries) return;
+    const disc = discData.discoveries.find(d => d.id === discoveryId);
+    if (!disc) return;
+    disc.heroImage = photoUrl;
+    await setUserData(userId, 'discoveries', {
+      ...discData,
+      updatedAt: new Date().toISOString(),
+    });
+    console.log(`[add_to_compass/photos] ✅ Enriched "${disc.name}" with hero image`);
+  } catch (err) {
+    console.warn(`[add_to_compass/photos] Failed for ${placeId}:`, err);
+  }
+}
+
 export async function addToCompass(
   userId: string,
   input: AddToCompassInput,
@@ -164,6 +211,13 @@ export async function addToCompass(
     });
 
     console.log(`[add_to_compass] ✅ Added "${input.name}" (${resolvedCity}) for user ${userId}`);
+
+    // Fire-and-forget photo enrichment — doesn't block the chat response
+    if (input.place_id) {
+      enrichPhotosAsync(userId, discoveryId, input.place_id).catch(err =>
+        console.warn(`[add_to_compass] Photo enrichment failed (non-blocking): ${err}`)
+      );
+    }
 
     // Build response URLs
     const mapsUrl = input.place_id
