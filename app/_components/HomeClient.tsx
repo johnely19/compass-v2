@@ -208,7 +208,7 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
               <span className="monitoring-tray-item-body">
                 <Link href={href} className="monitoring-tray-name">{item.name}</Link>
                 <span className="monitoring-tray-meta">{item.city}</span>
-                {item.monitorExplanation && <span className="monitoring-tray-reason">{item.monitorExplanation}</span>}
+                {/* explanation hidden in tray — shown in full /watching page */}
               </span>
               <span className={`monitoring-tray-status monitoring-tray-status-${item.monitorStatus}`}>
                 {item.dueNow ? 'Due now' : STATUS_LABEL[item.monitorStatus] ?? item.monitorStatus}
@@ -549,9 +549,23 @@ export default function HomeClient({
           />
         ) : (
           <div className="focused-empty-discoveries">
-            <p className="text-muted text-sm">
-              No discoveries yet — chat below to start exploring.
-            </p>
+            <p className="focused-empty-title">No discoveries yet</p>
+            <p className="focused-empty-hint">Try asking:</p>
+            <div className="focused-empty-prompts">
+              {ctx.city ? (
+                <>
+                  <span className="focused-empty-prompt">📍 Find great restaurants in {ctx.city}</span>
+                  <span className="focused-empty-prompt">🎨 What are the must-see galleries in {ctx.city}?</span>
+                  <span className="focused-empty-prompt">🎵 Best jazz bars in {ctx.city}</span>
+                </>
+              ) : (
+                <>
+                  <span className="focused-empty-prompt">📍 Find restaurants for my trip</span>
+                  <span className="focused-empty-prompt">🎨 What are the must-see spots?</span>
+                  <span className="focused-empty-prompt">🎵 Best live music venues?</span>
+                </>
+              )}
+            </div>
           </div>
         )}
       </div>

@@ -7,8 +7,8 @@ test('chat widget has correct light background', async ({ page }) => {
   // Navigate to home page
   await page.goto('/', { waitUntil: 'networkidle' });
 
-  // Look for the chat input (input with placeholder containing 'message' or 'anything')
-  const chatInput = page.locator('input[placeholder*="message"], input[placeholder*="Message"], input[placeholder*="anything"], input[placeholder*="Anything"]');
+  // Look for the chat input using a resilient placeholder locator
+  const chatInput = page.getByPlaceholder(/anything/i);
 
   // Assert it exists and is visible
   await expect(chatInput).toBeVisible();
