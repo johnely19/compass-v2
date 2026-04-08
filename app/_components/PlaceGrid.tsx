@@ -8,6 +8,9 @@ import PlaceCard from './PlaceCard';
 interface PlaceGridProps {
   discoveries: Discovery[];
   contextKey: string;
+  contextLabel?: string;
+  contextEmoji?: string;
+  contextType?: 'trip' | 'outing' | 'radar';
   userId?: string;
   showFilters?: boolean;
   layout?: 'grid' | 'carousel';
@@ -27,6 +30,9 @@ function filterVisible(discoveries: Discovery[], userId: string | undefined, con
 export default function PlaceGrid({
   discoveries,
   contextKey,
+  contextLabel,
+  contextEmoji,
+  contextType,
   userId,
   layout = 'grid',
 }: PlaceGridProps) {
@@ -110,6 +116,9 @@ export default function PlaceGrid({
               <PlaceCard
                 discovery={discovery}
                 contextKey={contextKey}
+                contextLabel={contextLabel}
+                contextEmoji={contextEmoji}
+                contextType={contextType}
                 userId={userId}
               />
             </div>
@@ -130,6 +139,9 @@ export default function PlaceGrid({
             key={discovery.id}
             discovery={discovery}
             contextKey={contextKey}
+            contextLabel={contextLabel}
+            contextEmoji={contextEmoji}
+            contextType={contextType}
             userId={userId}
           />
         ))}

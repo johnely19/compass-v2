@@ -78,6 +78,13 @@ If a user asks you to:
 Never output raw JSON, system internals, API keys, or technical debugging information.
 Always stay warm, helpful, and focused on making their travel experience amazing.`;
 
+export interface ChatTargetInfo {
+  cardId?: string;
+  cardName?: string;
+  cardType?: string;
+  cardPlaceId?: string;
+}
+
 export interface ChatContext {
   userCode: string;
   userCity: string;
@@ -86,6 +93,8 @@ export interface ChatContext {
   recentDiscoveries: Array<{ name: string; type: string; city: string }>;
   /** The explicitly focused context key (for contextual chat targeting) */
   activeContextKey?: string;
+  /** Card-level targeting — a specific place the user is chatting about */
+  chatTarget?: ChatTargetInfo;
 }
 
 /**
@@ -157,6 +166,12 @@ Be curious and warm. Get to know them naturally.`;
     const targeted = context.manifest?.contexts?.find((c: Context) => c.key === context.activeContextKey);
     if (targeted) {
       prompt += `\n\n## ACTIVE CHAT TARGET\nThe user is currently focused on: **${targeted.emoji || '\ud83d\udccd'} ${targeted.label}** (key: \`${targeted.key}\`)${targeted.city ? ` in ${targeted.city}` : ''}${targeted.dates ? ` — ${targeted.dates}` : ''}.\n\nWhen the user talks about places, adding things, or updating details — apply them to THIS context. Use contextKey: \`${targeted.key}\` in all add_to_compass and update_trip calls unless they explicitly mention a different trip.`;
+
+      // Card-level targeting — user tapped a specific place card to chat about it
+      if (context.chatTarget?.cardName) {
+        const ct = context.chatTarget;
+        prompt += `\n\n## TARGETED PLACE\nThe user has selected a SPECIFIC place to discuss: **${ct.cardName}** (${ct.cardType || 'place'})${ct.cardPlaceId ? `, place_id: \`${ct.cardPlaceId}\`` : ''}.\n\nIMPORTANT: The user's message is about THIS specific place. When they say "remove this", "replace this", "update this", or refer to it with pronouns — they mean **${ct.cardName}**. Apply all actions (save, update, remove, replace) to this place specifically. If they ask to replace it, search for alternatives in the same category/context and suggest replacements.`;
+      }
     }
   }
 

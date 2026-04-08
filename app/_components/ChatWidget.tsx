@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import type { ChatMessage } from '../_lib/types';
+import type { ChatTarget } from '../_lib/chat-target';
+import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
 import styles from './ChatWidget.module.css';
 
 /**
@@ -50,6 +52,10 @@ export default function ChatWidget() {
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
 
+  // Chat target — card/section-level targeting
+  const [chatTarget, setChatTarget] = useState<ChatTarget | null>(null);
+  const chatTargetRef = useRef<ChatTarget | null>(null);
+
   const createContextUsed = useRef(false);
   const updateTripUsed = useRef<string | null>(null);
   const preContextKeys = useRef<Set<string>>(new Set());
@@ -69,6 +75,32 @@ export default function ChatWidget() {
     };
     window.addEventListener('compass-context-switched', handler);
     return () => window.removeEventListener('compass-context-switched', handler);
+  }, []);
+
+  // Listen for chat target events (card-level targeting)
+  useEffect(() => {
+    const handleTarget = (e: Event) => {
+      const target = (e as CustomEvent<ChatTarget>).detail;
+      if (target) {
+        setChatTarget(target);
+        chatTargetRef.current = target;
+        // Also set the context key
+        activeContextKeyRef.current = target.contextKey;
+        // Expand chat and focus input
+        setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+      }
+    };
+    const handleClear = () => {
+      setChatTarget(null);
+      chatTargetRef.current = null;
+    };
+    window.addEventListener(CHAT_TARGET_EVENT, handleTarget);
+    window.addEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    return () => {
+      window.removeEventListener(CHAT_TARGET_EVENT, handleTarget);
+      window.removeEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    };
   }, []);
 
   // Auto-scroll to bottom
@@ -140,6 +172,11 @@ export default function ChatWidget() {
     return accumulated;
   }, []);
 
+  function clearChatTarget() {
+    setChatTarget(null);
+    chatTargetRef.current = null;
+  }
+
   async function handleSend(e: React.FormEvent) {
     e.preventDefault();
     const trimmed = input.trim();
@@ -181,15 +218,29 @@ export default function ChatWidget() {
 
     abortRef.current = new AbortController();
 
+    // Build request body with chat target context
+    const currentTarget = chatTargetRef.current;
+    const requestBody: Record<string, unknown> = {
+      message: trimmed,
+      history: messages,
+      contextKey: activeContextKeyRef.current,
+    };
+
+    // Add card-level targeting if active
+    if (currentTarget?.card) {
+      requestBody.chatTarget = {
+        cardId: currentTarget.card.id,
+        cardName: currentTarget.card.name,
+        cardType: currentTarget.card.type,
+        cardPlaceId: currentTarget.card.placeId,
+      };
+    }
+
     try {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: trimmed,
-          history: messages,
-          contextKey: activeContextKeyRef.current,
-        }),
+        body: JSON.stringify(requestBody),
         signal: abortRef.current.signal,
       });
 
@@ -301,6 +352,9 @@ export default function ChatWidget() {
     }
   }
 
+  // Compute target pill display
+  const targetPill = chatTarget ? chatTargetPill(chatTarget) : null;
+
   return (
     <div className={`${styles.chatPinned} ${chatExpanded ? styles.chatPinnedExpanded : ''}`}>
       {/* Messages area — only visible when expanded */}
@@ -312,7 +366,7 @@ export default function ChatWidget() {
                 <div className={styles.chatEmptyIcon}>🧭</div>
                 <div className={styles.chatEmptyTitle}>Hey! I&apos;m your Compass Concierge.</div>
                 <div className={styles.chatEmptyText}>
-                  Ask me about restaurants, places to visit, or help planning your next trip.
+                  Ask me anything about restaurants, places to visit, or help planning your next trip.
                 </div>
               </div>
             )}
@@ -379,6 +433,24 @@ export default function ChatWidget() {
         </div>
       )}
 
+      {/* Target pill — shows what chat is scoped to */}
+      {targetPill && (
+        <div className={styles.chatTargetBar}>
+          <div className={styles.chatTargetPill}>
+            <span className={styles.chatTargetEmoji}>{targetPill.emoji}</span>
+            <span className={styles.chatTargetLabel}>Chatting about <strong>{targetPill.label}</strong></span>
+            <button
+              type="button"
+              className={styles.chatTargetClear}
+              onClick={clearChatTarget}
+              aria-label="Clear chat target"
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Input area — always visible, pinned to bottom */}
       <div className={styles.chatInputBar}>
         {chatExpanded && (
@@ -395,7 +467,7 @@ export default function ChatWidget() {
           <textarea
             ref={inputRef}
             className={styles.chatInputField}
-            placeholder="Ask me anything…"
+            placeholder={chatTarget?.card ? `Ask about ${chatTarget.card.name}…` : 'Ask me anything…'}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {

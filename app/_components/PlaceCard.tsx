@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
+import { dispatchChatTarget } from '../_lib/chat-target';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import { resolveImageUrlClient } from '../_lib/image-url';
@@ -11,10 +12,13 @@ import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discove
 interface PlaceCardProps {
   discovery: Discovery;
   contextKey: string;
+  contextLabel?: string;
+  contextEmoji?: string;
+  contextType?: 'trip' | 'outing' | 'radar';
   userId?: string;
 }
 
-export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardProps) {
+export default function PlaceCard({ discovery, contextKey, contextLabel, contextEmoji, contextType, userId }: PlaceCardProps) {
   const { id, place_id, name, type } = discovery;
   // Ensure rating is a number (V1 data may have strings like "4.5")
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
@@ -73,6 +77,23 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     : null;
   const monitorExplanation = getMonitoringExplanation(discovery);
 
+  const handleChatInto = useCallback((e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    dispatchChatTarget({
+      contextKey,
+      contextLabel: contextLabel || contextKey,
+      contextEmoji,
+      contextType,
+      card: {
+        id: id,
+        name,
+        type,
+        placeId: place_id,
+      },
+    });
+  }, [contextKey, contextLabel, contextEmoji, contextType, id, name, type, place_id]);
+
   return (
     <div style={{ position: 'relative' }}>
       <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
@@ -128,6 +149,14 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
         </div>
       )}
+      <button
+        className="place-card-chat-btn"
+        onClick={handleChatInto}
+        aria-label={`Chat about ${name}`}
+        title={`Chat about ${name}`}
+      >
+        💬
+      </button>
     </div>
   );
 }
