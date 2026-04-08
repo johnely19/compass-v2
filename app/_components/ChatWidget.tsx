@@ -79,6 +79,31 @@ export default function ChatWidget() {
     return () => window.removeEventListener('compass-context-switched', handler);
   }, []);
 
+  // Listen for 'new trip' from context switcher — prefill chat with trip prompt
+  useEffect(() => {
+    const handler = () => {
+      setInput('Plan a new trip to ');
+      setChatExpanded(true);
+      setTimeout(() => inputRef.current?.focus(), 100);
+    };
+    window.addEventListener('compass-new-trip', handler);
+    return () => window.removeEventListener('compass-new-trip', handler);
+  }, []);
+
+  // Listen for prefill-chat events from empty state prompts
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ text: string }>).detail;
+      if (detail?.text) {
+        setInput(detail.text);
+        setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+      }
+    };
+    window.addEventListener('compass-prefill-chat', handler);
+    return () => window.removeEventListener('compass-prefill-chat', handler);
+  }, []);
+
   // Listen for chat target events (card-level targeting)
   useEffect(() => {
     const handleTarget = (e: Event) => {
