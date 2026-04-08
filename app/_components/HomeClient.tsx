@@ -260,10 +260,11 @@ export default function HomeClient({
     }
     setContextCounts(counts);
 
-    // Restore active key
+    // Restore active key — respect localStorage even if context isn't in server data yet
+    // (newly created contexts may not appear in the first refresh)
     try {
       const stored = localStorage.getItem('compass-active-context');
-      if (stored && contexts.some(c => c.key === stored)) {
+      if (stored) {
         setActiveKey(stored);
       } else if (contexts.length > 0) {
         setActiveKey(contexts[0]!.key);
@@ -333,6 +334,10 @@ export default function HomeClient({
       });
       // Switch to the newly created context
       setActiveKey(detail.key);
+      // Save to localStorage immediately so it survives the refresh re-init
+      try { localStorage.setItem('compass-active-context', detail.key); } catch {}
+      // Delay refresh slightly to let Blob write propagate
+      setTimeout(() => router.refresh(), 1500);
       // Remove the emerging flag after the animation completes (700ms animation + buffer)
       const timer = setTimeout(() => {
         setEmergingKeys(prev => {
@@ -348,7 +353,7 @@ export default function HomeClient({
       window.removeEventListener('compass-trip-created', handler);
       timers.forEach(clearTimeout);
     };
-  }, []);
+  }, [router]);
 
   // Listen for trip attribute attachments from chat
   useEffect(() => {
@@ -550,6 +555,9 @@ export default function HomeClient({
           <PlaceGrid
             discoveries={discoveries}
             contextKey={ctx.key}
+            contextLabel={ctx.label}
+            contextEmoji={ctx.emoji}
+            contextType={ctx.type}
             userId={userId}
             layout="carousel"
           />

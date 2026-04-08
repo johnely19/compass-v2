@@ -107,6 +107,47 @@ export const TOOLS: ToolDefinition[] = [
     },
   },
   {
+    name: 'edit_discovery',
+    description: 'Edit/update fields on an existing discovery in the user\'s Compass. Use when the user wants to correct a place\'s name, change its type, update the address, adjust the rating, move it to a different context, or add a description. E.g. "Change that to a bar" or "Actually the address is 123 Main St".',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        name: { type: 'string' as const, description: 'Name of the discovery to edit (fuzzy-matched)' },
+        contextKey: { type: 'string' as const, description: 'Context key to search within, e.g. trip:boston-august-2026' },
+        updates: {
+          type: 'object' as const,
+          description: 'Fields to update on the discovery',
+          properties: {
+            name: { type: 'string' as const, description: 'New name for the place' },
+            city: { type: 'string' as const, description: 'Corrected city' },
+            type: {
+              type: 'string' as const,
+              enum: ['restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum', 'theatre', 'music-venue', 'hotel', 'experience', 'shop', 'park', 'architecture', 'development', 'accommodation', 'neighbourhood'] as DiscoveryType[],
+              description: 'Corrected place type',
+            },
+            address: { type: 'string' as const, description: 'Corrected address' },
+            rating: { type: 'number' as const, description: 'Updated rating' },
+            contextKey: { type: 'string' as const, description: 'Move to a different context key' },
+            description: { type: 'string' as const, description: 'Updated description' },
+          },
+        },
+      },
+      required: ['name', 'contextKey', 'updates'],
+    },
+  },
+  {
+    name: 'remove_discovery',
+    description: 'Remove a discovery from the user\'s Compass. Use when the user wants to drop, remove, or dismiss a specific place. E.g. "Remove that museum" or "Drop the hotel".',
+    input_schema: {
+      type: 'object' as const,
+      properties: {
+        name: { type: 'string' as const, description: 'Name of the discovery to remove (fuzzy-matched)' },
+        contextKey: { type: 'string' as const, description: 'Context key to search within, e.g. trip:boston-august-2026' },
+      },
+      required: ['name', 'contextKey'],
+    },
+  },
+  {
     name: 'create_context',
     description: 'Create a new trip, outing, or radar context in the user\'s manifest. Use when the user says they\'re planning a new trip, want a new outing, or want to track a new city/radar. E.g. "I\'m planning a trip to Boston in August" or "set up a Boston trip for me".',
     input_schema: {

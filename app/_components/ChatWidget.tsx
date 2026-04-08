@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect, useCallback } from 'react';
 import type { ChatMessage } from '../_lib/types';
+import type { ChatTarget } from '../_lib/chat-target';
+import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
 import styles from './ChatWidget.module.css';
 
 /**
@@ -30,19 +32,13 @@ const TOOL_LABELS: Record<string, string> = {
   'add-to-compass': '🧭 Adding to your Compass…',
   'update-trip': '✈️ Updating trip…',
   'create-context': '📋 Creating context…',
+  'edit-discovery': '✏️ Editing discovery…',
+  'remove-discovery': '🗑️ Removing discovery…',
 };
 
 function formatTime(isoString: string): string {
   const date = new Date(isoString);
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-}
-
-interface ScopedTarget {
-  key: string;
-  label: string;
-  emoji: string;
-  type: string;        // 'trip' | 'outing' | 'radar' | 'place'
-  placeId?: string;    // for place-level scoping
 }
 
 export default function ChatWidget() {
@@ -55,11 +51,17 @@ export default function ChatWidget() {
   const [error, setError] = useState<string | null>(null);
   const [chatExpanded, setChatExpanded] = useState(false);
 
-  // Scoped chat target — context or place the user is "talking into"
-  const [scopedTarget, setScopedTarget] = useState<ScopedTarget | null>(null);
-
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
+
+  // Chat target — card/section-level targeting (uses ChatTarget infrastructure)
+  const [chatTarget, setChatTarget] = useState<ChatTarget | null>(null);
+  const chatTargetRef = useRef<ChatTarget | null>(null);
+
+  // Scoped display info (for the scope chip) — derived from chatTarget or context switch
+  const [scopedLabel, setScopedLabel] = useState<string | null>(null);
+  const [scopedEmoji, setScopedEmoji] = useState<string>('📌');
+  const [isPlaceScoped, setIsPlaceScoped] = useState(false);
 
   const createContextUsed = useRef(false);
   const updateTripUsed = useRef<string | null>(null);
@@ -76,48 +78,60 @@ export default function ChatWidget() {
       const detail = (e as CustomEvent<{ key: string; label?: string; emoji?: string; type?: string }>).detail;
       if (detail?.key) {
         activeContextKeyRef.current = detail.key;
-        // Update scoped target when context switches (only if not place-scoped)
-        if (!scopedTarget || scopedTarget.type !== 'place') {
+        // Update scoped display when context switches (only if not card-level scoped)
+        if (!chatTargetRef.current?.card) {
           if (detail.label) {
-            setScopedTarget({
-              key: detail.key,
-              label: detail.label,
-              emoji: detail.emoji || '📌',
-              type: detail.type || 'radar',
-            });
+            setScopedLabel(detail.label);
+            setScopedEmoji(detail.emoji || '📌');
+            setIsPlaceScoped(false);
           }
         }
       }
     };
     window.addEventListener('compass-context-switched', handler);
     return () => window.removeEventListener('compass-context-switched', handler);
-  }, [scopedTarget]);
+  }, []); // No deps — uses ref to check card-level scope
 
-  // Listen for place-level scoping ("chat about this place")
+  // Listen for chat target events (card-level targeting from PlaceCard)
   useEffect(() => {
-    const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ placeId: string; name: string; contextKey: string }>).detail;
-      if (detail?.placeId) {
-        setScopedTarget({
-          key: detail.contextKey,
-          label: detail.name,
-          emoji: '📍',
-          type: 'place',
-          placeId: detail.placeId,
-        });
-        activeContextKeyRef.current = detail.contextKey;
-        // Focus input and expand
-        if (!chatExpanded) setChatExpanded(true);
+    const handleTarget = (e: Event) => {
+      const target = (e as CustomEvent<ChatTarget>).detail;
+      if (target) {
+        setChatTarget(target);
+        chatTargetRef.current = target;
+        // Also set the context key
+        activeContextKeyRef.current = target.contextKey;
+        // Update scoped display
+        if (target.card) {
+          setScopedLabel(target.card.name);
+          setScopedEmoji('📍');
+          setIsPlaceScoped(true);
+        } else {
+          setScopedLabel(target.contextLabel);
+          setScopedEmoji(target.contextEmoji || '📌');
+          setIsPlaceScoped(false);
+        }
+        // Expand chat and focus input
+        setChatExpanded(true);
         setTimeout(() => inputRef.current?.focus(), 100);
-        // Broadcast that a place is now the chat target (for halo effect)
-        window.dispatchEvent(new CustomEvent('compass-chat-target', {
-          detail: { placeId: detail.placeId },
-        }));
       }
     };
-    window.addEventListener('compass-scope-place', handler);
-    return () => window.removeEventListener('compass-scope-place', handler);
-  }, [chatExpanded]);
+    const handleClear = () => {
+      setChatTarget(null);
+      chatTargetRef.current = null;
+      setIsPlaceScoped(false);
+      // Clear place halo
+      window.dispatchEvent(new CustomEvent('compass-place-halo', {
+        detail: { placeId: null },
+      }));
+    };
+    window.addEventListener(CHAT_TARGET_EVENT, handleTarget);
+    window.addEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    return () => {
+      window.removeEventListener(CHAT_TARGET_EVENT, handleTarget);
+      window.removeEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    };
+  }, []);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -128,6 +142,16 @@ export default function ChatWidget() {
   useEffect(() => {
     inputRef.current?.focus();
   }, []);
+
+  function clearChatTarget() {
+    setChatTarget(null);
+    chatTargetRef.current = null;
+    setIsPlaceScoped(false);
+    // Clear place halo
+    window.dispatchEvent(new CustomEvent('compass-place-halo', {
+      detail: { placeId: null },
+    }));
+  }
 
   const processStream = useCallback(async (response: Response) => {
     const reader = response.body?.getReader();
@@ -172,7 +196,7 @@ export default function ChatWidget() {
             }
 
             if (parsed.toolResult && typeof window !== 'undefined') {
-              if (['add-to-compass', 'save-discovery'].includes(parsed.toolResult)) {
+              if (['add-to-compass', 'save-discovery', 'edit-discovery', 'remove-discovery'].includes(parsed.toolResult)) {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
               }
             }
@@ -229,15 +253,29 @@ export default function ChatWidget() {
 
     abortRef.current = new AbortController();
 
+    // Build request body with chat target context
+    const currentTarget = chatTargetRef.current;
+    const requestBody: Record<string, unknown> = {
+      message: trimmed,
+      history: messages,
+      contextKey: activeContextKeyRef.current,
+    };
+
+    // Add card-level targeting if active
+    if (currentTarget?.card) {
+      requestBody.chatTarget = {
+        cardId: currentTarget.card.id,
+        cardName: currentTarget.card.name,
+        cardType: currentTarget.card.type,
+        cardPlaceId: currentTarget.card.placeId,
+      };
+    }
+
     try {
       const res = await fetch('/api/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          message: trimmed,
-          history: messages,
-          contextKey: activeContextKeyRef.current,
-        }),
+        body: JSON.stringify(requestBody),
         signal: abortRef.current.signal,
       });
 
@@ -349,6 +387,13 @@ export default function ChatWidget() {
     }
   }
 
+  // Derive pill display from chatTarget (for backward compat)
+  const targetPill = chatTarget ? chatTargetPill(chatTarget) : null;
+  // Scoped chip: show if we have a scoped label (from either chat target or context switch)
+  const showScopeChip = !!(scopedLabel || targetPill);
+  const chipEmoji = targetPill ? targetPill.emoji : scopedEmoji;
+  const chipLabel = targetPill ? targetPill.label : scopedLabel || '';
+
   return (
     <div className={`${styles.chatPinned} ${chatExpanded ? styles.chatPinnedExpanded : ''}`}>
       {/* Messages area — only visible when expanded */}
@@ -428,26 +473,23 @@ export default function ChatWidget() {
       )}
 
       {/* Input area — always visible, pinned to bottom */}
-      <div className={`${styles.chatInputBar}${scopedTarget ? ` ${styles.chatInputBarScoped}` : ''}`}>
+      <div className={`${styles.chatInputBar}${showScopeChip ? ` ${styles.chatInputBarScoped}` : ''}`}>
         {/* Scoped target chip */}
-        {scopedTarget && (
+        {showScopeChip && (
           <div className={styles.chatScopeChip}>
-            <span className={styles.chatScopeChipEmoji}>{scopedTarget.emoji}</span>
-            <span className={styles.chatScopeChipLabel}>{scopedTarget.label}</span>
-            <button
-              type="button"
-              className={styles.chatScopeChipDismiss}
-              onClick={() => {
-                setScopedTarget(null);
-                // Clear place target halo
-                window.dispatchEvent(new CustomEvent('compass-chat-target', {
-                  detail: { placeId: null },
-                }));
-              }}
-              aria-label="Exit scoped mode"
-            >
-              ×
-            </button>
+            <span className={styles.chatScopeChipEmoji}>{chipEmoji}</span>
+            <span className={styles.chatScopeChipLabel}>{chipLabel}</span>
+            {/* Only show dismiss for card-level targeting */}
+            {chatTarget && (
+              <button
+                type="button"
+                className={styles.chatScopeChipDismiss}
+                onClick={clearChatTarget}
+                aria-label="Exit scoped mode"
+              >
+                ×
+              </button>
+            )}
           </div>
         )}
         <div className={styles.chatInputRow}>
@@ -464,12 +506,12 @@ export default function ChatWidget() {
           <form className={styles.chatInputForm} onSubmit={handleSend}>
           <textarea
             ref={inputRef}
-            className={`${styles.chatInputField}${scopedTarget ? ` ${styles.chatInputFieldScoped}` : ''}`}
-            placeholder={scopedTarget
-              ? scopedTarget.type === 'place'
-                ? `Ask about ${scopedTarget.label}…`
-                : `Add to ${scopedTarget.label}…`
-              : 'Ask me anything…'
+            className={`${styles.chatInputField}${showScopeChip ? ` ${styles.chatInputFieldScoped}` : ''}`}
+            placeholder={isPlaceScoped && chatTarget?.card
+              ? `Ask about ${chatTarget.card.name}…`
+              : scopedLabel
+                ? `Add to ${scopedLabel}…`
+                : 'Ask me anything…'
             }
             value={input}
             onChange={(e) => setInput(e.target.value)}

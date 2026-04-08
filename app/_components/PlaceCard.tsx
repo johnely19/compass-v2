@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
+import { dispatchChatTarget } from '../_lib/chat-target';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import { resolveImageUrlClient } from '../_lib/image-url';
@@ -11,10 +12,13 @@ import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discove
 interface PlaceCardProps {
   discovery: Discovery;
   contextKey: string;
+  contextLabel?: string;
+  contextEmoji?: string;
+  contextType?: 'trip' | 'outing' | 'radar';
   userId?: string;
 }
 
-export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardProps) {
+export default function PlaceCard({ discovery, contextKey, contextLabel, contextEmoji, contextType, userId }: PlaceCardProps) {
   const { id, place_id, name, type } = discovery;
   // Ensure rating is a number (V1 data may have strings like "4.5")
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
@@ -73,25 +77,41 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     : null;
   const monitorExplanation = getMonitoringExplanation(discovery);
 
-  // Track whether this card is the active chat target
+  // Track whether this card is the active chat target (for halo effect)
   const [isChatTarget, setIsChatTarget] = useState(false);
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent<{ placeId: string | null }>).detail;
       setIsChatTarget(detail?.placeId === place_id && !!place_id);
     };
-    window.addEventListener('compass-chat-target', handler);
-    return () => window.removeEventListener('compass-chat-target', handler);
+    window.addEventListener('compass-place-halo', handler);
+    return () => window.removeEventListener('compass-place-halo', handler);
   }, [place_id]);
 
-  const handleChatAbout = (e: React.MouseEvent) => {
+  const handleChatAbout = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     if (!place_id) return;
-    window.dispatchEvent(new CustomEvent('compass-scope-place', {
-      detail: { placeId: place_id, name, contextKey },
+
+    // Dispatch full ChatTarget with card-level info via existing infrastructure
+    dispatchChatTarget({
+      contextKey,
+      contextLabel: contextLabel || contextKey,
+      contextEmoji,
+      contextType,
+      card: {
+        id: id,
+        name,
+        type,
+        placeId: place_id,
+      },
+    });
+
+    // Broadcast halo event (distinct from compass-chat-target to avoid collision)
+    window.dispatchEvent(new CustomEvent('compass-place-halo', {
+      detail: { placeId: place_id },
     }));
-  };
+  }, [contextKey, contextLabel, contextEmoji, contextType, id, name, type, place_id]);
 
   return (
     <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>

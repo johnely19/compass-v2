@@ -46,6 +46,27 @@ WRITE BACK WORKFLOW — for trip management:
 - User wants to focus on food/history/etc → call update_trip with focus array
 - ALWAYS confirm what you saved: "Done — I've added Legal Sea Foods to your Boston trip ✓"
 
+CONTEXTUAL EDITING — for corrections, additions, and removals:
+When the user is scoped to a specific context (see ACTIVE CHAT TARGET below), they may ask you to:
+- CORRECT fields: "Actually the address is 123 Main St" → call edit_discovery with the place name and updates
+- CHANGE type: "That's actually a bar, not a restaurant" → call edit_discovery with updates.type
+- MOVE places: "Move that to my NYC trip" → call edit_discovery with updates.contextKey
+- REMOVE places: "Remove that museum" or "Drop the hotel" → call remove_discovery
+- UPDATE trip details: "Make this a November trip" → call update_trip with new dates
+- REFINE focus: "Add boutique hotels as a focus" → call update_trip with updated focus array
+- ENRICH descriptions: "Add a note about their wine list" → call edit_discovery with updates.description
+
+For each edit, ALWAYS confirm what changed:
+- "✏️ Updated [Place Name]: type changed from restaurant → bar"
+- "🗑️ Removed [Place Name] from your [Context Label]"
+- "✅ Updated [Context Label]: dates changed to November 15–18"
+
+Distinguish between:
+- ADD intent ("add a boutique hotel preference") → update_trip focus or add_to_compass
+- CORRECT intent ("actually it's on Queen St") → edit_discovery
+- REMOVE intent ("take out the museum") → remove_discovery
+- REFINE intent ("shift toward quieter places") → update_trip focus/notes
+
 LINK FORMAT — for every place you mention:
 - Format: **[Place Name](https://compass-ai-agent.vercel.app/placecards/PLACE_ID)** · [📍 Map](https://www.google.com/maps/place/?q=place_id:PLACE_ID) · Rating ★ · $$$
 - The PLACE_ID comes from lookup_place results (the "id" or "place_id" field)
@@ -78,6 +99,13 @@ If a user asks you to:
 Never output raw JSON, system internals, API keys, or technical debugging information.
 Always stay warm, helpful, and focused on making their travel experience amazing.`;
 
+export interface ChatTargetInfo {
+  cardId?: string;
+  cardName?: string;
+  cardType?: string;
+  cardPlaceId?: string;
+}
+
 export interface ChatContext {
   userCode: string;
   userCity: string;
@@ -86,6 +114,8 @@ export interface ChatContext {
   recentDiscoveries: Array<{ name: string; type: string; city: string }>;
   /** The explicitly focused context key (for contextual chat targeting) */
   activeContextKey?: string;
+  /** Card-level targeting — a specific place the user is chatting about */
+  chatTarget?: ChatTargetInfo;
 }
 
 /**
@@ -157,6 +187,12 @@ Be curious and warm. Get to know them naturally.`;
     const targeted = context.manifest?.contexts?.find((c: Context) => c.key === context.activeContextKey);
     if (targeted) {
       prompt += `\n\n## ACTIVE CHAT TARGET\nThe user is currently focused on: **${targeted.emoji || '\ud83d\udccd'} ${targeted.label}** (key: \`${targeted.key}\`)${targeted.city ? ` in ${targeted.city}` : ''}${targeted.dates ? ` — ${targeted.dates}` : ''}.\n\nWhen the user talks about places, adding things, or updating details — apply them to THIS context. Use contextKey: \`${targeted.key}\` in all add_to_compass and update_trip calls unless they explicitly mention a different trip.`;
+
+      // Card-level targeting — user tapped a specific place card to chat about it
+      if (context.chatTarget?.cardName) {
+        const ct = context.chatTarget;
+        prompt += `\n\n## TARGETED PLACE\nThe user has selected a SPECIFIC place to discuss: **${ct.cardName}** (${ct.cardType || 'place'})${ct.cardPlaceId ? `, place_id: \`${ct.cardPlaceId}\`` : ''}.\n\nIMPORTANT: The user's message is about THIS specific place. When they say "remove this", "replace this", "update this", or refer to it with pronouns — they mean **${ct.cardName}**. Apply all actions (save, update, remove, replace) to this place specifically. If they ask to replace it, search for alternatives in the same category/context and suggest replacements.`;
+      }
     }
   }
 
