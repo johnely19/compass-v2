@@ -337,6 +337,11 @@ export default function ChatWidget() {
           setMessages((prev) => [...prev, assistantMessage]);
         }
 
+        // Notify visible pages that Compass data may have changed.
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('compass-data-changed'));
+        }
+
         setStreamContent('');
         setStreaming(false);
         setToolStatus(null);
@@ -349,6 +354,9 @@ export default function ChatWidget() {
           timestamp: new Date().toISOString(),
         };
         setMessages((prev) => [...prev, assistantMessage]);
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('compass-data-changed'));
+        }
         setLoading(false);
       }
     } catch (e) {

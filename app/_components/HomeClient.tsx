@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
 import { getContextCounts } from '../_lib/triage';
@@ -193,6 +194,7 @@ export default function HomeClient({
   contextMeta = {},
   monitoringQueue = [],
 }: HomeClientProps) {
+  const router = useRouter();
   // Mounted state to avoid hydration mismatch from localStorage reads
   const [mounted, setMounted] = useState(false);
   // Store context counts - initialize with zeros to match server render
@@ -206,6 +208,22 @@ export default function HomeClient({
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
+
+  // Refresh homepage immediately when chat or other client actions mutate Compass data.
+  useEffect(() => {
+    let refreshTimer: ReturnType<typeof setTimeout> | null = null;
+    const handler = () => {
+      if (refreshTimer) clearTimeout(refreshTimer);
+      refreshTimer = setTimeout(() => {
+        router.refresh();
+      }, 120);
+    };
+    window.addEventListener('compass-data-changed', handler);
+    return () => {
+      window.removeEventListener('compass-data-changed', handler);
+      if (refreshTimer) clearTimeout(refreshTimer);
+    };
+  }, [router]);
 
   // Initialize from localStorage after mount
   useEffect(() => {
