@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
 import TypeBadge from './TypeBadge';
@@ -73,8 +73,28 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
     : null;
   const monitorExplanation = getMonitoringExplanation(discovery);
 
+  // Track whether this card is the active chat target
+  const [isChatTarget, setIsChatTarget] = useState(false);
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ placeId: string | null }>).detail;
+      setIsChatTarget(detail?.placeId === place_id && !!place_id);
+    };
+    window.addEventListener('compass-chat-target', handler);
+    return () => window.removeEventListener('compass-chat-target', handler);
+  }, [place_id]);
+
+  const handleChatAbout = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!place_id) return;
+    window.dispatchEvent(new CustomEvent('compass-scope-place', {
+      detail: { placeId: place_id, name, contextKey },
+    }));
+  };
+
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>
       <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
           {!finalImageUrl && <span className="place-card-image-fallback" />}
@@ -127,6 +147,16 @@ export default function PlaceCard({ discovery, contextKey, userId }: PlaceCardPr
         <div className="place-card-triage-overlay">
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
         </div>
+      )}
+      {place_id && (
+        <button
+          className={`place-card-chat-btn${isChatTarget ? ' place-card-chat-btn-active' : ''}`}
+          onClick={handleChatAbout}
+          aria-label={`Chat about ${name}`}
+          title={`Chat about ${name}`}
+        >
+          💬
+        </button>
       )}
     </div>
   );

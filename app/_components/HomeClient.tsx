@@ -281,12 +281,18 @@ export default function HomeClient({
     } catch { /* ignore */ }
   }, [activeKey]);
 
-  // Broadcast active context to chat widget
+  // Broadcast active context to chat widget (include label/emoji for scoped display)
   const broadcastActiveContext = useCallback((key: string) => {
+    const ctx = contexts.find(c => c.key === key);
     window.dispatchEvent(new CustomEvent('compass-context-switched', {
-      detail: { key },
+      detail: {
+        key,
+        label: ctx?.label,
+        emoji: ctx?.emoji || TYPE_EMOJI[ctx?.type ?? ''] || '📌',
+        type: ctx?.type,
+      },
     }));
-  }, []);
+  }, [contexts]);
 
   const handleContextSelect = useCallback((key: string) => {
     setActiveKey(key);

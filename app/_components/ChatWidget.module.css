@@ -327,6 +327,85 @@
   30% { transform: translateY(-4px); opacity: 0.7; }
 }
 
+/* ---- Scoped Chat Target ---- */
+
+.chatInputBarScoped {
+  border-top-color: rgba(196, 112, 75, 0.25);
+}
+
+.chatInputFieldScoped {
+  border-color: rgba(196, 112, 75, 0.35);
+  box-shadow: 0 2px 12px rgba(196, 112, 75, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.chatInputFieldScoped:focus {
+  border-color: #c4704b;
+  box-shadow: 0 4px 20px rgba(196, 112, 75, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.chatScopeChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 4px 8px;
+  background: rgba(196, 112, 75, 0.08);
+  border: 1px solid rgba(196, 112, 75, 0.2);
+  border-radius: 20px;
+  font-size: 0.78rem;
+  color: #6b4832;
+  margin: 0 auto;
+  max-width: 960px;
+  width: fit-content;
+  animation: scope-chip-appear 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes scope-chip-appear {
+  from { opacity: 0; transform: translateY(6px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.chatScopeChipEmoji {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.chatScopeChipLabel {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
+
+.chatScopeChipDismiss {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(196, 112, 75, 0.15);
+  color: #8b5e3c;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+
+.chatScopeChipDismiss:hover {
+  background: rgba(196, 112, 75, 0.3);
+}
+
+.chatInputRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  width: 100%;
+}
+
 /* ---- Error ---- */
 .chatError {
   color: #c0392b;

@@ -37,6 +37,14 @@ function formatTime(isoString: string): string {
   return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 }
 
+interface ScopedTarget {
+  key: string;
+  label: string;
+  emoji: string;
+  type: string;        // 'trip' | 'outing' | 'radar' | 'place'
+  placeId?: string;    // for place-level scoping
+}
+
 export default function ChatWidget() {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
@@ -46,6 +54,9 @@ export default function ChatWidget() {
   const [toolStatus, setToolStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [chatExpanded, setChatExpanded] = useState(false);
+
+  // Scoped chat target — context or place the user is "talking into"
+  const [scopedTarget, setScopedTarget] = useState<ScopedTarget | null>(null);
 
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
@@ -59,17 +70,54 @@ export default function ChatWidget() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  // Listen for context switches from homepage
+  // Listen for context switches from homepage (includes label/emoji for scoped display)
   useEffect(() => {
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ key: string }>).detail;
+      const detail = (e as CustomEvent<{ key: string; label?: string; emoji?: string; type?: string }>).detail;
       if (detail?.key) {
         activeContextKeyRef.current = detail.key;
+        // Update scoped target when context switches (only if not place-scoped)
+        if (!scopedTarget || scopedTarget.type !== 'place') {
+          if (detail.label) {
+            setScopedTarget({
+              key: detail.key,
+              label: detail.label,
+              emoji: detail.emoji || '📌',
+              type: detail.type || 'radar',
+            });
+          }
+        }
       }
     };
     window.addEventListener('compass-context-switched', handler);
     return () => window.removeEventListener('compass-context-switched', handler);
-  }, []);
+  }, [scopedTarget]);
+
+  // Listen for place-level scoping ("chat about this place")
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ placeId: string; name: string; contextKey: string }>).detail;
+      if (detail?.placeId) {
+        setScopedTarget({
+          key: detail.contextKey,
+          label: detail.name,
+          emoji: '📍',
+          type: 'place',
+          placeId: detail.placeId,
+        });
+        activeContextKeyRef.current = detail.contextKey;
+        // Focus input and expand
+        if (!chatExpanded) setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+        // Broadcast that a place is now the chat target (for halo effect)
+        window.dispatchEvent(new CustomEvent('compass-chat-target', {
+          detail: { placeId: detail.placeId },
+        }));
+      }
+    };
+    window.addEventListener('compass-scope-place', handler);
+    return () => window.removeEventListener('compass-scope-place', handler);
+  }, [chatExpanded]);
 
   // Auto-scroll to bottom
   useEffect(() => {
@@ -380,22 +428,49 @@ export default function ChatWidget() {
       )}
 
       {/* Input area — always visible, pinned to bottom */}
-      <div className={styles.chatInputBar}>
-        {chatExpanded && (
-          <button
-            type="button"
-            className={styles.chatMinimizeBtn}
-            onClick={() => setChatExpanded(false)}
-            aria-label="Minimize chat"
-          >
-            ▾
-          </button>
+      <div className={`${styles.chatInputBar}${scopedTarget ? ` ${styles.chatInputBarScoped}` : ''}`}>
+        {/* Scoped target chip */}
+        {scopedTarget && (
+          <div className={styles.chatScopeChip}>
+            <span className={styles.chatScopeChipEmoji}>{scopedTarget.emoji}</span>
+            <span className={styles.chatScopeChipLabel}>{scopedTarget.label}</span>
+            <button
+              type="button"
+              className={styles.chatScopeChipDismiss}
+              onClick={() => {
+                setScopedTarget(null);
+                // Clear place target halo
+                window.dispatchEvent(new CustomEvent('compass-chat-target', {
+                  detail: { placeId: null },
+                }));
+              }}
+              aria-label="Exit scoped mode"
+            >
+              ×
+            </button>
+          </div>
         )}
-        <form className={styles.chatInputForm} onSubmit={handleSend}>
+        <div className={styles.chatInputRow}>
+          {chatExpanded && (
+            <button
+              type="button"
+              className={styles.chatMinimizeBtn}
+              onClick={() => setChatExpanded(false)}
+              aria-label="Minimize chat"
+            >
+              ▾
+            </button>
+          )}
+          <form className={styles.chatInputForm} onSubmit={handleSend}>
           <textarea
             ref={inputRef}
-            className={styles.chatInputField}
-            placeholder="Ask me anything…"
+            className={`${styles.chatInputField}${scopedTarget ? ` ${styles.chatInputFieldScoped}` : ''}`}
+            placeholder={scopedTarget
+              ? scopedTarget.type === 'place'
+                ? `Ask about ${scopedTarget.label}…`
+                : `Add to ${scopedTarget.label}…`
+              : 'Ask me anything…'
+            }
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
@@ -418,6 +493,7 @@ export default function ChatWidget() {
             ➤
           </button>
         </form>
+        </div>
       </div>
     </div>
   );
