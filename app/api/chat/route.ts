@@ -17,8 +17,9 @@ const MAX_MESSAGE_LENGTH = 4000;
 
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-20250514';
-const MAX_TOOL_ROUNDS = 3;
-const MAX_TOOL_TIME_MS = 45_000; // Stop tool loops before Vercel kills us
+const MAX_TOOL_ROUNDS = 5;
+const MAX_TOOL_TIME_MS = 50_000; // Stop tool loops before Vercel kills us
+const PER_ROUND_BUDGET_MS = 12_000; // Warn threshold per round
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -98,12 +99,17 @@ async function executeToolLoop(
     round++;
 
     // Time budget check — stop before Vercel kills the function
-    if (Date.now() - startTime > MAX_TOOL_TIME_MS) {
-      console.warn(`[chat/tool-loop] Time budget exceeded at round ${round} (${Date.now() - startTime}ms)`);
+    const elapsed = Date.now() - startTime;
+    if (elapsed > MAX_TOOL_TIME_MS) {
+      console.warn(`[chat/tool-loop] Time budget exceeded at round ${round} (${elapsed}ms)`);
+      // Graceful degradation: ask the model for a final summary without tools
+      const wrapUp = fullText
+        ? "\n\nI found some great options but ran out of time adding them all. Here's what I have so far — ask me to continue and I'll add the rest! ✨"
+        : "\n\n(I ran out of time on this turn — ask me to continue and I'll pick up where I left off!)";
       controller.enqueue(encoder.encode(
-        `data: ${JSON.stringify({ content: "\n\n(I ran out of time on this turn — ask me to continue and I'll pick up where I left off!)", messageId })}\n\n`
+        `data: ${JSON.stringify({ content: wrapUp, messageId })}\n\n`
       ));
-      fullText += '\n\n(I ran out of time on this turn — ask me to continue and I\'ll pick up where I left off!)';
+      fullText += wrapUp;
       break;
     }
 
@@ -137,43 +143,45 @@ async function executeToolLoop(
     // Add assistant message to conversation
     messages.push({ role: 'assistant', content: data.content });
 
-    // Execute each tool and collect results
-    const toolResults: any[] = [];
+    // Emit tool events to frontend for status display
     for (const toolBlock of toolUseBlocks) {
-      // Emit tool event to frontend for status display
       const frontendToolName = mapToolName(toolBlock.name);
       controller.enqueue(encoder.encode(
         `data: ${JSON.stringify({ tool: frontendToolName, messageId })}\n\n`
       ));
-
       console.log(`[chat/tool] Executing ${toolBlock.name} for user ${userId}:`, JSON.stringify(toolBlock.input).slice(0, 200));
-
-      try {
-        const result = await runToolCall(
-          toolBlock.name as ToolName,
-          toolBlock.input as Record<string, unknown>,
-          userId,
-        );
-        toolResults.push({
-          type: 'tool_result',
-          tool_use_id: toolBlock.id,
-          content: result,
-        });
-
-        // Emit toolResult event so frontend can refresh
-        controller.enqueue(encoder.encode(
-          `data: ${JSON.stringify({ toolResult: frontendToolName, messageId })}\n\n`
-        ));
-      } catch (err) {
-        console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
-        toolResults.push({
-          type: 'tool_result',
-          tool_use_id: toolBlock.id,
-          content: `Error: ${err instanceof Error ? err.message : String(err)}`,
-          is_error: true,
-        });
-      }
     }
+
+    // Execute all tool calls in parallel for speed
+    const toolResults: any[] = await Promise.all(
+      toolUseBlocks.map(async (toolBlock: any) => {
+        const frontendToolName = mapToolName(toolBlock.name);
+        try {
+          const result = await runToolCall(
+            toolBlock.name as ToolName,
+            toolBlock.input as Record<string, unknown>,
+            userId,
+          );
+          // Emit toolResult event so frontend can refresh
+          controller.enqueue(encoder.encode(
+            `data: ${JSON.stringify({ toolResult: frontendToolName, messageId })}\n\n`
+          ));
+          return {
+            type: 'tool_result',
+            tool_use_id: toolBlock.id,
+            content: result,
+          };
+        } catch (err) {
+          console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
+          return {
+            type: 'tool_result',
+            tool_use_id: toolBlock.id,
+            content: `Error: ${err instanceof Error ? err.message : String(err)}`,
+            is_error: true,
+          };
+        }
+      })
+    );
 
     messages.push({ role: 'user', content: toolResults });
     // Continue to next round
