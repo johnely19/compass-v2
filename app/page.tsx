@@ -140,7 +140,12 @@ export default async function HomePage() {
     const matched = enrichedDiscoveries.filter(d => {
       // Type-context compatibility check (e.g. no galleries in dinner outings)
       if (!isTypeCompatible(ctx.key, d.type)) return false;
+      // Exact match first
       if (d.contextKey === ctx.key) return true;
+      // Empty contextKey defaults to first context (typically the active trip)
+      if (!d.contextKey || d.contextKey === '') {
+        return ctx.key === contexts[0]?.key;
+      }
       // Fuzzy: slug contains or is contained by context slug
       const dSlug = d.contextKey.split(':').slice(1).join(':');
       return dSlug === ctxSlug || dSlug.includes(ctxSlug) || ctxSlug.includes(dSlug);
