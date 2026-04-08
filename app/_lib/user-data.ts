@@ -222,10 +222,11 @@ function inferTypeFromName(name: string | undefined | null): string {
 }
 
 function normalizeContextKey(key: string | undefined | null): string {
-  if (!key || key === 'undefined' || !key.includes(':')) return 'radar:toronto-experiences';
+  if (!key || key === 'undefined') return '';
+  if (!key.includes(':')) return '';
   let k = key;
   // Map known non-standard prefixes
-  if (k.startsWith('home:')) return 'radar:toronto-experiences';
+  if (k.startsWith('home:')) return '';
   if (k.startsWith('section:')) k = k.replace(/^section:/, 'radar:');
   // Strip user prefix (e.g. "john:outing:..." → "outing:...")
   if (!k.startsWith('trip:') && !k.startsWith('outing:') && !k.startsWith('radar:')) {
@@ -233,7 +234,7 @@ function normalizeContextKey(key: string | undefined | null): string {
     if (m && m[1] && m[2]) k = m[1] + m[2];
     if (k.startsWith('section:')) k = k.replace(/^section:/, 'radar:');
   }
-  if (!k.includes(':')) return 'radar:toronto-experiences';
+  if (!k.includes(':')) return '';
   return k;
 }
 
