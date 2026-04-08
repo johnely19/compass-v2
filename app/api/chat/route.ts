@@ -2,242 +2,225 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getCurrentUser } from '../../_lib/user';
 import { getUserProfile, getUserPreferences, getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
 import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
-import { buildUserContext } from '../../_lib/chat/user-context';
-import { sendChatMessage as sendAnthropicFallback } from '../../_lib/chat/anthropic-client';
+import { buildSystemPrompt, type ChatContext } from '../../_lib/chat/system-prompt';
+import { TOOLS } from '../../_lib/chat/tools';
+import { runToolCall, type ToolName } from '../../_lib/chat/tools/runner';
 import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
 import type { ChatMessage, Discovery } from '../../_lib/types';
 
 /** Maximum message length to prevent abuse */
 const MAX_MESSAGE_LENGTH = 4000;
 
-const OPENCLAW_TIMEOUT_MS = 90_000; // longer timeout for streaming — tool calls can take time
+const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
+const MODEL = 'claude-sonnet-4-20250514';
+const MAX_TOOL_ROUNDS = 5;
 
-interface OpenClawMessage {
-  role: 'system' | 'user' | 'assistant';
-  content: string;
-}
-
-/** OpenAI function-calling tools for the Concierge agent */
-const CONCIERGE_TOOLS = [
-  {
-    type: 'function' as const,
-    function: {
-      name: 'create-context',
-      description: 'Create a new trip, outing, or radar context in the user\'s Compass.',
-      parameters: {
-        type: 'object',
-        properties: {
-          type: {
-            type: 'string',
-            enum: ['trip', 'outing', 'radar'],
-            description: 'The type of context to create',
-          },
-          label: {
-            type: 'string',
-            description: 'Human-readable label for the context (e.g., "NYC Solo Trip")',
-          },
-          city: {
-            type: 'string',
-            description: 'City name (optional)',
-          },
-          dates: {
-            type: 'string',
-            description: 'Date range (optional, e.g., "Jun 15-22")',
-          },
-          focus: {
-            type: 'array',
-            items: { type: 'string' },
-            description: 'Focus areas (optional, e.g., ["food", "jazz"])',
-          },
-          emoji: {
-            type: 'string',
-            description: 'Emoji icon (optional, defaults by type)',
-          },
-        },
-        required: ['type', 'label'],
-      },
-    },
-  },
-  {
-    type: 'function' as const,
-    function: {
-      name: 'update-trip',
-      description: 'Update an existing trip, outing, or radar context in the user\'s Compass.',
-      parameters: {
-        type: 'object',
-        properties: {
-          contextKey: {
-            type: 'string',
-            description: 'The key of the context to update (e.g., "trip:nyc-solo")',
-          },
-          dates: {
-            type: 'string',
-            description: 'Updated date range (optional)',
-          },
-          city: {
-            type: 'string',
-            description: 'Updated city (optional)',
-          },
-          focus: {
-            type: 'array',
-            items: { type: 'string' },
-            description: 'Updated focus areas (optional)',
-          },
-        },
-        required: ['contextKey'],
-      },
-    },
-  },
-];
-
-/** Execute a tool call locally by calling the appropriate API endpoint */
-async function executeToolCall(
-  toolName: string,
-  args: Record<string, unknown>,
-  userId: string,
-): Promise<unknown> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000';
-  const cookieValue = `compass-user=${userId}`; // Simplified — real impl would need proper auth
-
-  let endpoint = '';
-  let method = 'POST';
-  let body: Record<string, unknown> = {};
-
-  if (toolName === 'create-context') {
-    endpoint = `${baseUrl}/api/compass/create-context`;
-    body = {
-      type: args.type,
-      label: args.label,
-      city: args.city,
-      dates: args.dates,
-      focus: args.focus,
-      emoji: args.emoji,
-    };
-  } else if (toolName === 'update-trip') {
-    endpoint = `${baseUrl}/api/compass/update-trip`;
-    body = {
-      contextKey: args.contextKey,
-      dates: args.dates,
-      city: args.city,
-      focus: args.focus,
-    };
-  } else {
-    throw new Error(`Unknown tool: ${toolName}`);
-  }
-
-  const res = await fetch(endpoint, {
-    method,
-    headers: {
-      'Content-Type': 'application/json',
-      Cookie: cookieValue,
-    },
-    body: JSON.stringify(body),
-  });
-
-  if (!res.ok) {
-    const error = await res.json().catch(() => ({ error: 'Unknown error' }));
-    throw new Error(error.error || `Tool call failed: ${res.status}`);
-  }
-
-  return res.json();
-}
+/* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
- * Stream chat completions from the OpenClaw Gateway via SSE.
- * Returns a ReadableStream or null if gateway is unavailable.
+ * Stream a response from Anthropic with tool execution support.
+ * Handles the full tool-use loop: stream → detect tool_use → execute → continue.
+ * Emits SSE events for both content and tool calls so the frontend can animate.
  */
-async function streamOpenClaw(
-  messages: OpenClawMessage[],
+async function streamAnthropicWithTools(
+  apiKey: string,
+  systemPrompt: string,
+  messages: any[],
   userId: string,
-): Promise<Response | null> {
-  const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL;
-  const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
+  encoder: TextEncoder,
+  controller: ReadableStreamDefaultController,
+  messageId: string,
+): Promise<string> {
+  let fullReply = '';
+  let round = 0;
 
-  if (!gatewayUrl || !gatewayToken) return null;
+  while (round < MAX_TOOL_ROUNDS) {
+    round++;
 
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), OPENCLAW_TIMEOUT_MS);
+    // Call Anthropic with streaming
+    const body: any = {
+      model: MODEL,
+      max_tokens: 2048,
+      system: systemPrompt,
+      messages,
+      tools: TOOLS,
+      stream: true,
+    };
 
-  try {
-    const res = await fetch(`${gatewayUrl}/v1/chat/completions`, {
+    const res = await fetch(ANTHROPIC_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${gatewayToken}`,
-        'x-openclaw-agent-id': 'concierge',
-        'x-openclaw-scopes': 'operator.read,operator.write',
-        'x-openclaw-session-key': `compass:user:${userId}`,
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
       },
-      body: JSON.stringify({
-        model: 'openclaw/concierge',
-        messages,
-        stream: true,
-        tools: CONCIERGE_TOOLS,
-      }),
-      signal: controller.signal,
+      body: JSON.stringify(body),
     });
-
-    clearTimeout(timeout);
 
     if (!res.ok) {
-      console.error('[chat/openclaw] Gateway error:', res.status, await res.text().catch(() => ''));
-      return null;
+      const err = await res.text().catch(() => 'Unknown error');
+      console.error('[chat/anthropic-stream] API error:', res.status, err);
+      const fallbackMsg = "Having a moment — try again? 🙏";
+      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: fallbackMsg, messageId })}\n\n`));
+      fullReply += fallbackMsg;
+      break;
     }
 
-    return res;
-  } catch (err: unknown) {
-    clearTimeout(timeout);
-    if (err instanceof Error && err.name === 'AbortError') {
-      console.warn('[chat/openclaw] Gateway timeout after', OPENCLAW_TIMEOUT_MS, 'ms');
-    } else {
-      console.error('[chat/openclaw] Gateway unreachable:', err instanceof Error ? err.message : err);
+    // Parse the SSE stream from Anthropic
+    const reader = res.body!.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+    let stopReason = '';
+    const contentBlocks: any[] = [];
+    let currentToolUse: { id: string; name: string; inputJson: string } | null = null;
+
+    try {
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || '';
+
+        for (const line of lines) {
+          if (!line.startsWith('data: ')) continue;
+          const data = line.slice(6).trim();
+          if (data === '[DONE]' || !data) continue;
+
+          try {
+            const event = JSON.parse(data);
+
+            if (event.type === 'content_block_start') {
+              const block = event.content_block;
+              if (block.type === 'tool_use') {
+                currentToolUse = { id: block.id, name: block.name, inputJson: '' };
+                // Emit tool event to frontend — map tool names for ChatWidget detection
+                const frontendToolName = mapToolName(block.name);
+                controller.enqueue(encoder.encode(
+                  `data: ${JSON.stringify({ tool: frontendToolName, messageId })}\n\n`
+                ));
+              }
+              contentBlocks.push(block);
+            }
+
+            if (event.type === 'content_block_delta') {
+              const delta = event.delta;
+              if (delta.type === 'text_delta' && delta.text) {
+                fullReply += delta.text;
+                controller.enqueue(encoder.encode(
+                  `data: ${JSON.stringify({ content: delta.text, messageId })}\n\n`
+                ));
+              }
+              if (delta.type === 'input_json_delta' && currentToolUse) {
+                currentToolUse.inputJson += delta.partial_json;
+              }
+            }
+
+            if (event.type === 'content_block_stop') {
+              if (currentToolUse) {
+                // Finalize tool use block
+                const toolBlock = {
+                  type: 'tool_use' as const,
+                  id: currentToolUse.id,
+                  name: currentToolUse.name,
+                  input: JSON.parse(currentToolUse.inputJson || '{}'),
+                };
+                // Replace the placeholder in contentBlocks
+                const idx = contentBlocks.findIndex(
+                  (b: any) => b.type === 'tool_use' && b.id === currentToolUse!.id
+                );
+                if (idx !== -1) contentBlocks[idx] = toolBlock;
+                else contentBlocks.push(toolBlock);
+                currentToolUse = null;
+              }
+            }
+
+            if (event.type === 'message_delta') {
+              if (event.delta?.stop_reason) {
+                stopReason = event.delta.stop_reason;
+              }
+            }
+          } catch {
+            // Skip unparseable lines
+          }
+        }
+      }
+    } catch (err) {
+      console.error('[chat/anthropic-stream] Stream read error:', err);
+      break;
     }
-    return null;
+
+    // If the model wants to use tools, execute them and continue
+    if (stopReason === 'tool_use') {
+      const toolUseBlocks = contentBlocks.filter((b: any) => b.type === 'tool_use');
+      if (toolUseBlocks.length === 0) break;
+
+      // Build assistant message with all content blocks
+      const assistantContent = contentBlocks.map((b: any) => {
+        if (b.type === 'tool_use') return b;
+        if (b.type === 'text') return { type: 'text', text: b.text || '' };
+        return b;
+      });
+      messages.push({ role: 'assistant', content: assistantContent });
+
+      // Execute each tool and collect results
+      const toolResults: any[] = [];
+      for (const toolBlock of toolUseBlocks) {
+        console.log(`[chat/tool] Executing ${toolBlock.name} for user ${userId}:`, JSON.stringify(toolBlock.input).slice(0, 200));
+        try {
+          const result = await runToolCall(
+            toolBlock.name as ToolName,
+            toolBlock.input as Record<string, unknown>,
+            userId,
+          );
+          toolResults.push({
+            type: 'tool_result',
+            tool_use_id: toolBlock.id,
+            content: result,
+          });
+
+          // Emit a status event so the UI can show feedback
+          controller.enqueue(encoder.encode(
+            `data: ${JSON.stringify({ toolResult: mapToolName(toolBlock.name), messageId })}\n\n`
+          ));
+        } catch (err) {
+          console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
+          toolResults.push({
+            type: 'tool_result',
+            tool_use_id: toolBlock.id,
+            content: `Error: ${err instanceof Error ? err.message : String(err)}`,
+            is_error: true,
+          });
+        }
+      }
+
+      messages.push({ role: 'user', content: toolResults });
+      // Continue the loop — next round will stream the follow-up response
+      continue;
+    }
+
+    // Normal end_turn — we're done
+    break;
   }
+
+  return fullReply;
 }
 
 /**
- * Non-streaming OpenClaw fallback (used if stream: true isn't supported).
+ * Map internal tool names (underscores) to frontend-expected names (hyphens).
+ * ChatWidget.tsx checks for 'create-context' and 'update-trip'.
  */
-async function callOpenClawSync(
-  messages: OpenClawMessage[],
-  userId: string,
-): Promise<string | null> {
-  const gatewayUrl = process.env.OPENCLAW_GATEWAY_URL;
-  const gatewayToken = process.env.OPENCLAW_GATEWAY_TOKEN;
-
-  if (!gatewayUrl || !gatewayToken) return null;
-
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 30_000);
-
-  try {
-    const res = await fetch(`${gatewayUrl}/v1/chat/completions`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${gatewayToken}`,
-        'x-openclaw-agent-id': 'concierge',
-        'x-openclaw-scopes': 'operator.read,operator.write',
-        'x-openclaw-session-key': `compass:user:${userId}`,
-      },
-      body: JSON.stringify({
-        model: 'openclaw/concierge',
-        messages,
-        tools: CONCIERGE_TOOLS,
-      }),
-      signal: controller.signal,
-    });
-
-    if (!res.ok) return null;
-
-    const data = await res.json();
-    return data?.choices?.[0]?.message?.content ?? null;
-  } catch {
-    return null;
-  } finally {
-    clearTimeout(timeout);
-  }
+function mapToolName(name: string): string {
+  const mapping: Record<string, string> = {
+    'create_context': 'create-context',
+    'update_trip': 'update-trip',
+    'add_to_compass': 'add-to-compass',
+    'save_discovery': 'save-discovery',
+    'web_search': 'web-search',
+    'lookup_place': 'lookup-place',
+  };
+  return mapping[name] || name;
 }
 
 export async function POST(request: NextRequest) {
@@ -275,6 +258,14 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const apiKey = process.env.ANTHROPIC_API_KEY;
+    if (!apiKey) {
+      return NextResponse.json({
+        reply: "I'm getting set up — check back in a moment! 🔧",
+        messageId: `${Date.now()}-concierge`,
+      });
+    }
+
     // Load user data in parallel
     const [profile, preferences, manifest, discoveries] = await Promise.all([
       getUserProfile(user.id),
@@ -290,127 +281,78 @@ export async function POST(request: NextRequest) {
 
     const history: ChatMessage[] = clientHistory || (await getChatHistory(user.id));
 
-    // Cap history at last 20 messages, truncate long content
+    // Build chat context for system prompt
+    const chatContext: ChatContext = {
+      userCode: user.code,
+      userCity: profile?.city || user.city || '',
+      preferences,
+      manifest,
+      recentDiscoveries,
+    };
+
+    const systemPrompt = buildSystemPrompt(chatContext);
+
+    // Build conversation history — cap at last 20 messages, truncate long content
     const MAX_CONTENT = 2000;
-    const trimmedHistory: OpenClawMessage[] = (history || []).slice(-20).map((msg: ChatMessage) => ({
-      role: (msg.role === 'user' ? 'user' : 'assistant') as 'user' | 'assistant',
-      content:
-        typeof msg.content === 'string' && msg.content.length > MAX_CONTENT
+    const anthropicMessages: any[] = [];
+    if (history && Array.isArray(history)) {
+      for (const msg of history.slice(-20)) {
+        const content = typeof msg.content === 'string' && msg.content.length > MAX_CONTENT
           ? msg.content.slice(0, MAX_CONTENT) + '…'
-          : msg.content,
-    }));
-
-    const systemContent = buildUserContext(user, profile, preferences, manifest, recentDiscoveries);
-
-    const openclawMessages: OpenClawMessage[] = [
-      { role: 'system', content: systemContent },
-      ...trimmedHistory,
-      { role: 'user', content: message },
-    ];
-
-    // Try streaming from OpenClaw Gateway
-    const streamRes = await streamOpenClaw(openclawMessages, user.id);
-
-    if (streamRes?.body) {
-      // Proxy SSE stream to the browser, collecting full text for persistence
-      const encoder = new TextEncoder();
-      const decoder = new TextDecoder();
-      let fullReply = '';
-      const messageId = `${Date.now()}-concierge`;
-
-      const readable = new ReadableStream({
-        async start(controller) {
-          const reader = streamRes.body!.getReader();
-
-          try {
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
-
-              const chunk = decoder.decode(value, { stream: true });
-
-              // Parse SSE lines to extract content deltas
-              const lines = chunk.split('\n');
-              for (const line of lines) {
-                if (line.startsWith('data: ')) {
-                  const data = line.slice(6).trim();
-                  if (data === '[DONE]') {
-                    // Send our own [DONE] marker
-                    controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
-                    continue;
-                  }
-
-                  try {
-                    const parsed = JSON.parse(data);
-                    const delta = parsed?.choices?.[0]?.delta;
-                    if (delta?.content) {
-                      fullReply += delta.content;
-                      // Forward the SSE event to the browser
-                      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: delta.content, messageId })}\n\n`));
-                    }
-                    // Surface tool-use status so UI can show "searching..." etc.
-                    if (delta?.tool_calls) {
-                      const toolName = delta.tool_calls[0]?.function?.name;
-                      if (toolName) {
-                        controller.enqueue(encoder.encode(`data: ${JSON.stringify({ tool: toolName, messageId })}\n\n`));
-                      }
-                    }
-                  } catch {
-                    // Not valid JSON — skip
-                  }
-                }
-              }
-            }
-          } catch (err) {
-            console.error('[chat/stream] Stream read error:', err);
-          } finally {
-            controller.close();
-            // Persist completed chat
-            if (fullReply) {
-              persistChatData(user.id, message, fullReply, messageId, history).catch(() => {});
-            }
-          }
-        },
-      });
-
-      return new Response(readable, {
-        headers: {
-          'Content-Type': 'text/event-stream',
-          'Cache-Control': 'no-cache',
-          Connection: 'keep-alive',
-          'X-Message-Id': messageId,
-          ...rateLimitHeaders(rateResult),
-        },
-      });
+          : msg.content;
+        anthropicMessages.push({
+          role: msg.role === 'user' ? 'user' : 'assistant',
+          content,
+        });
+      }
     }
+    anthropicMessages.push({ role: 'user', content: message });
 
-    // Fallback: try non-streaming OpenClaw, then direct Anthropic
-    console.warn('[chat] OpenClaw streaming unavailable, trying sync fallback');
-    let reply = await callOpenClawSync(openclawMessages, user.id);
-
-    if (reply === null) {
-      console.warn('[chat] OpenClaw unavailable, falling back to direct Anthropic');
-      const context = {
-        userCode: user.code,
-        userCity: profile?.city || user.city || '',
-        preferences,
-        manifest,
-        recentDiscoveries,
-      };
-      const fallback = await sendAnthropicFallback(
-        { message, userId: user.id, userCode: user.code, history },
-        context,
-      );
-      reply = fallback.reply;
-    }
-
+    // Stream response with tool execution
+    const encoder = new TextEncoder();
     const messageId = `${Date.now()}-concierge`;
-    persistChatData(user.id, message, reply!, messageId, history).catch(() => {});
 
-    return NextResponse.json(
-      { reply, messageId },
-      { headers: rateLimitHeaders(rateResult) },
-    );
+    const readable = new ReadableStream({
+      async start(controller) {
+        try {
+          const fullReply = await streamAnthropicWithTools(
+            apiKey,
+            systemPrompt,
+            anthropicMessages,
+            user.id,
+            encoder,
+            controller,
+            messageId,
+          );
+
+          // Signal stream end
+          controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
+
+          // Persist completed chat
+          if (fullReply) {
+            persistChatData(user.id, message, fullReply, messageId, history).catch(() => {});
+          }
+        } catch (err) {
+          console.error('[chat/stream] Fatal error:', err);
+          controller.enqueue(encoder.encode(
+            `data: ${JSON.stringify({ content: "Something went sideways — try again in a sec! 🔄", messageId })}\n\n`
+          ));
+          controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
+        } finally {
+          controller.close();
+        }
+      },
+    });
+
+    return new Response(readable, {
+      headers: {
+        'Content-Type': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+        Connection: 'keep-alive',
+        'X-Message-Id': messageId,
+        ...rateLimitHeaders(rateResult),
+      },
+    });
   } catch (err) {
     console.error('[api/chat]', err instanceof Error ? err.message : err);
     return NextResponse.json({
