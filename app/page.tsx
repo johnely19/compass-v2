@@ -11,7 +11,9 @@ import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
 import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
 import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
-import { bulkPromoteFromAnnotated } from './_lib/monitor-inventory';
+import { bulkPromoteFromAnnotated, loadMonitorInventory } from './_lib/monitor-inventory';
+import type { MonitorChangeKind } from './_lib/monitor-inventory';
+import type { SignificanceLevel } from './_lib/observation-significance';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -204,6 +206,15 @@ export default async function HomePage() {
   // Auto-promote active/priority monitored places into the durable inventory (fire-and-forget)
   bulkPromoteFromAnnotated(user.id, monitoredDiscoveries);
 
+  // Load durable inventory for change signals
+  const inventory = await loadMonitorInventory(user.id);
+  const inventoryById = new Map(
+    inventory.entries.flatMap(e => [
+      [e.id, e],
+      [e.discoveryId, e],
+    ]),
+  );
+
   // Hide contexts with no discoveries in their final ranked bucket (homepage only).
   // Contexts remain accessible in /review and other pages — this suppression is
   // limited to homepage rendering so the page never shows empty carousels.
@@ -239,6 +250,10 @@ export default async function HomePage() {
     monitorExplanation?: string;
     dueNow: boolean;
     placeId?: string;
+    detectedChanges?: MonitorChangeKind[];
+    significanceLevel?: SignificanceLevel;
+    significanceSummary?: string;
+    observationCount?: number;
   }> = monitoredDiscoveries
     .filter(d => d.monitorStatus && d.monitorStatus !== 'none' && (d.monitorDueNow || d.monitorStatus === 'priority'))
     .sort((a, b) => {
@@ -247,19 +262,26 @@ export default async function HomePage() {
       return (rank[a.monitorStatus ?? 'candidate'] ?? 9) - (rank[b.monitorStatus ?? 'candidate'] ?? 9);
     })
     .slice(0, 8)
-    .map(d => ({
-      id: d.id,
-      name: d.name,
-      city: d.city,
-      type: d.type,
-      contextKey: d.contextKey,
-      monitorStatus: d.monitorStatus ?? 'candidate',
-      monitorType: d.monitorType ?? 'general',
-      monitorCadence: d.monitorCadence,
-      monitorExplanation: d.monitorExplanation,
-      dueNow: Boolean(d.monitorDueNow),
-      placeId: d.place_id,
-    }));
+    .map(d => {
+      const inv = inventoryById.get(d.place_id ?? d.id) ?? inventoryById.get(d.id);
+      return {
+        id: d.id,
+        name: d.name,
+        city: d.city,
+        type: d.type,
+        contextKey: d.contextKey,
+        monitorStatus: d.monitorStatus ?? 'candidate',
+        monitorType: d.monitorType ?? 'general',
+        monitorCadence: d.monitorCadence,
+        monitorExplanation: d.monitorExplanation,
+        dueNow: Boolean(d.monitorDueNow),
+        placeId: d.place_id,
+        detectedChanges: inv?.detectedChangeKinds,
+        significanceLevel: inv?.peakSignificanceLevel,
+        significanceSummary: inv?.latestSignificanceSummary,
+        observationCount: inv?.observations?.length ?? 0,
+      };
+    });
 
   return (
     <HomeClient

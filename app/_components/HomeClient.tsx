@@ -22,6 +22,10 @@ interface MonitoringQueueItem {
   monitorExplanation?: string;
   dueNow: boolean;
   placeId?: string;
+  detectedChanges?: string[];
+  significanceLevel?: string;
+  significanceSummary?: string;
+  observationCount?: number;
 }
 
 interface HomeClientProps {
@@ -140,6 +144,29 @@ const TYPE_MONITOR_ICON: Record<string, string> = {
   general: '📍',
 };
 
+const CHANGE_LABELS: Record<string, string> = {
+  'rating-down': 'Rating dropped',
+  'rating-up': 'Rating improved',
+  'closure-signal': 'Closure detected',
+  'operational-change': 'Status changed',
+  'price-changed': 'Price shifted',
+  'description-changed': 'Description rewritten',
+  'review-count-up': 'More reviews',
+  'review-count-down': 'Reviews disappeared',
+  'availability-changed': 'Availability changed',
+  'construction-signal': 'Construction progress',
+  'sentiment-shift': 'Sentiment shifted',
+  'hours-changed': 'Hours updated',
+  'general-update': 'Updated',
+};
+
+function formatChangeKinds(changes: string[]): string {
+  if (changes.length === 0) return '';
+  const primary = CHANGE_LABELS[changes[0] ?? ''] ?? 'Change detected';
+  if (changes.length === 1) return primary;
+  return `${primary} +${changes.length - 1}`;
+}
+
 function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
   const [expanded, setExpanded] = useState(false);
   if (items.length === 0) return null;
@@ -174,6 +201,11 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
               <span className={`monitoring-tray-status monitoring-tray-status-${item.monitorStatus}`}>
                 {item.dueNow ? 'Due now' : STATUS_LABEL[item.monitorStatus] ?? item.monitorStatus}
               </span>
+              {item.detectedChanges && item.detectedChanges.length > 0 && (
+                <span className={`monitoring-tray-changes monitoring-tray-sig-${item.significanceLevel ?? 'noise'}`}>
+                  {item.significanceSummary ?? formatChangeKinds(item.detectedChanges)}
+                </span>
+              )}
             </li>
           );
         })}
