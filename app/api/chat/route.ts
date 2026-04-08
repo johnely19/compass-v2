@@ -22,205 +22,6 @@ const MAX_TOOL_ROUNDS = 5;
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 /**
- * Stream a response from Anthropic with tool execution support.
- * Handles the full tool-use loop: stream → detect tool_use → execute → continue.
- * Emits SSE events for both content and tool calls so the frontend can animate.
- */
-async function streamAnthropicWithTools(
-  apiKey: string,
-  systemPrompt: string,
-  messages: any[],
-  userId: string,
-  encoder: TextEncoder,
-  controller: ReadableStreamDefaultController,
-  messageId: string,
-): Promise<string> {
-  let fullReply = '';
-  let round = 0;
-
-  while (round < MAX_TOOL_ROUNDS) {
-    round++;
-
-    // Call Anthropic with streaming
-    const body: any = {
-      model: MODEL,
-      max_tokens: 2048,
-      system: systemPrompt,
-      messages,
-      tools: TOOLS,
-      stream: true,
-    };
-
-    const res = await fetch(ANTHROPIC_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify(body),
-    });
-
-    if (!res.ok) {
-      const err = await res.text().catch(() => 'Unknown error');
-      console.error(`[chat/anthropic-stream] API error (round ${round}):`, res.status, err);
-      console.error('[chat/anthropic-stream] Messages count:', messages.length, 'Last role:', messages[messages.length - 1]?.role);
-      const fallbackMsg = "Having a moment — try again? 🙏";
-      controller.enqueue(encoder.encode(`data: ${JSON.stringify({ content: fallbackMsg, messageId })}\n\n`));
-      fullReply += fallbackMsg;
-      break;
-    }
-
-    // Parse the SSE stream from Anthropic
-    const reader = res.body!.getReader();
-    const decoder = new TextDecoder();
-    let buffer = '';
-    let stopReason = '';
-    const contentBlocks: any[] = [];
-    let currentToolUse: { id: string; name: string; inputJson: string } | null = null;
-    let currentTextBlockIdx = -1; // index into contentBlocks for the active text block
-
-    try {
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-
-        buffer += decoder.decode(value, { stream: true });
-        const lines = buffer.split('\n');
-        buffer = lines.pop() || '';
-
-        for (const line of lines) {
-          if (!line.startsWith('data: ')) continue;
-          const data = line.slice(6).trim();
-          if (data === '[DONE]' || !data) continue;
-
-          try {
-            const event = JSON.parse(data);
-
-            if (event.type === 'content_block_start') {
-              const block = event.content_block;
-              if (block.type === 'tool_use') {
-                currentToolUse = { id: block.id, name: block.name, inputJson: '' };
-                currentTextBlockIdx = -1;
-                // Emit tool event to frontend — map tool names for ChatWidget detection
-                const frontendToolName = mapToolName(block.name);
-                controller.enqueue(encoder.encode(
-                  `data: ${JSON.stringify({ tool: frontendToolName, messageId })}\n\n`
-                ));
-              } else if (block.type === 'text') {
-                currentTextBlockIdx = contentBlocks.length;
-              }
-              contentBlocks.push({ ...block, text: block.text || '' });
-            }
-
-            if (event.type === 'content_block_delta') {
-              const delta = event.delta;
-              if (delta.type === 'text_delta' && delta.text) {
-                fullReply += delta.text;
-                // Accumulate text into the content block for tool-loop continuations
-                if (currentTextBlockIdx >= 0 && contentBlocks[currentTextBlockIdx]) {
-                  contentBlocks[currentTextBlockIdx].text = (contentBlocks[currentTextBlockIdx].text || '') + delta.text;
-                }
-                controller.enqueue(encoder.encode(
-                  `data: ${JSON.stringify({ content: delta.text, messageId })}\n\n`
-                ));
-              }
-              if (delta.type === 'input_json_delta' && currentToolUse) {
-                currentToolUse.inputJson += delta.partial_json;
-              }
-            }
-
-            if (event.type === 'content_block_stop') {
-              if (currentToolUse) {
-                // Finalize tool use block
-                const toolBlock = {
-                  type: 'tool_use' as const,
-                  id: currentToolUse.id,
-                  name: currentToolUse.name,
-                  input: JSON.parse(currentToolUse.inputJson || '{}'),
-                };
-                // Replace the placeholder in contentBlocks
-                const idx = contentBlocks.findIndex(
-                  (b: any) => b.type === 'tool_use' && b.id === currentToolUse!.id
-                );
-                if (idx !== -1) contentBlocks[idx] = toolBlock;
-                else contentBlocks.push(toolBlock);
-                currentToolUse = null;
-              }
-            }
-
-            if (event.type === 'message_delta') {
-              if (event.delta?.stop_reason) {
-                stopReason = event.delta.stop_reason;
-              }
-            }
-          } catch {
-            // Skip unparseable lines
-          }
-        }
-      }
-    } catch (err) {
-      console.error('[chat/anthropic-stream] Stream read error:', err);
-      break;
-    }
-
-    // If the model wants to use tools, execute them and continue
-    if (stopReason === 'tool_use') {
-      const toolUseBlocks = contentBlocks.filter((b: any) => b.type === 'tool_use');
-      if (toolUseBlocks.length === 0) break;
-
-      // Build assistant message with all content blocks
-      const assistantContent = contentBlocks.map((b: any) => {
-        if (b.type === 'tool_use') return b;
-        if (b.type === 'text') return { type: 'text', text: b.text || '' };
-        return b;
-      });
-      messages.push({ role: 'assistant', content: assistantContent });
-
-      // Execute each tool and collect results
-      const toolResults: any[] = [];
-      for (const toolBlock of toolUseBlocks) {
-        console.log(`[chat/tool] Executing ${toolBlock.name} for user ${userId}:`, JSON.stringify(toolBlock.input).slice(0, 200));
-        try {
-          const result = await runToolCall(
-            toolBlock.name as ToolName,
-            toolBlock.input as Record<string, unknown>,
-            userId,
-          );
-          toolResults.push({
-            type: 'tool_result',
-            tool_use_id: toolBlock.id,
-            content: result,
-          });
-
-          // Emit a status event so the UI can show feedback
-          controller.enqueue(encoder.encode(
-            `data: ${JSON.stringify({ toolResult: mapToolName(toolBlock.name), messageId })}\n\n`
-          ));
-        } catch (err) {
-          console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
-          toolResults.push({
-            type: 'tool_result',
-            tool_use_id: toolBlock.id,
-            content: `Error: ${err instanceof Error ? err.message : String(err)}`,
-            is_error: true,
-          });
-        }
-      }
-
-      messages.push({ role: 'user', content: toolResults });
-      // Continue the loop — next round will stream the follow-up response
-      continue;
-    }
-
-    // Normal end_turn — we're done
-    break;
-  }
-
-  return fullReply;
-}
-
-/**
  * Map internal tool names (underscores) to frontend-expected names (hyphens).
  * ChatWidget.tsx checks for 'create-context' and 'update-trip'.
  */
@@ -234,6 +35,138 @@ function mapToolName(name: string): string {
     'lookup_place': 'lookup-place',
   };
   return mapping[name] || name;
+}
+
+/**
+ * Call Anthropic API (non-streaming) for tool execution rounds.
+ * Returns the parsed response body or null on error.
+ */
+async function callAnthropicSync(
+  apiKey: string,
+  systemPrompt: string,
+  messages: any[],
+): Promise<any> {
+  const res = await fetch(ANTHROPIC_API_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': apiKey,
+      'anthropic-version': '2023-06-01',
+    },
+    body: JSON.stringify({
+      model: MODEL,
+      max_tokens: 2048,
+      system: systemPrompt,
+      messages,
+      tools: TOOLS,
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text().catch(() => 'Unknown error');
+    console.error('[chat/anthropic-sync] API error:', res.status, err);
+    return null;
+  }
+
+  return res.json();
+}
+
+/**
+ * Execute tool rounds synchronously (non-streaming).
+ * Runs the tool loop: call Anthropic → execute tools → repeat.
+ * Emits SSE events for tool usage so frontend can show status.
+ * Returns the final response content blocks and accumulated text.
+ */
+async function executeToolLoop(
+  apiKey: string,
+  systemPrompt: string,
+  messages: any[],
+  userId: string,
+  encoder: TextEncoder,
+  controller: ReadableStreamDefaultController,
+  messageId: string,
+): Promise<{ finalContent: any[]; fullText: string }> {
+  let fullText = '';
+  let round = 0;
+  let data: any = null;
+
+  while (round < MAX_TOOL_ROUNDS) {
+    round++;
+
+    data = await callAnthropicSync(apiKey, systemPrompt, messages);
+    if (!data) {
+      return { finalContent: [], fullText };
+    }
+
+    // Extract text from this round
+    for (const block of (data.content || [])) {
+      if (block.type === 'text' && block.text) {
+        fullText += block.text;
+        // Stream the text to the frontend immediately
+        controller.enqueue(encoder.encode(
+          `data: ${JSON.stringify({ content: block.text, messageId })}\n\n`
+        ));
+      }
+    }
+
+    // If no tool use, we're done
+    if (data.stop_reason !== 'tool_use') {
+      return { finalContent: data.content || [], fullText };
+    }
+
+    // Execute tool calls
+    const toolUseBlocks = (data.content || []).filter((b: any) => b.type === 'tool_use');
+    if (toolUseBlocks.length === 0) {
+      return { finalContent: data.content || [], fullText };
+    }
+
+    // Add assistant message to conversation
+    messages.push({ role: 'assistant', content: data.content });
+
+    // Execute each tool and collect results
+    const toolResults: any[] = [];
+    for (const toolBlock of toolUseBlocks) {
+      // Emit tool event to frontend for status display
+      const frontendToolName = mapToolName(toolBlock.name);
+      controller.enqueue(encoder.encode(
+        `data: ${JSON.stringify({ tool: frontendToolName, messageId })}\n\n`
+      ));
+
+      console.log(`[chat/tool] Executing ${toolBlock.name} for user ${userId}:`, JSON.stringify(toolBlock.input).slice(0, 200));
+
+      try {
+        const result = await runToolCall(
+          toolBlock.name as ToolName,
+          toolBlock.input as Record<string, unknown>,
+          userId,
+        );
+        toolResults.push({
+          type: 'tool_result',
+          tool_use_id: toolBlock.id,
+          content: result,
+        });
+
+        // Emit toolResult event so frontend can refresh
+        controller.enqueue(encoder.encode(
+          `data: ${JSON.stringify({ toolResult: frontendToolName, messageId })}\n\n`
+        ));
+      } catch (err) {
+        console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
+        toolResults.push({
+          type: 'tool_result',
+          tool_use_id: toolBlock.id,
+          content: `Error: ${err instanceof Error ? err.message : String(err)}`,
+          is_error: true,
+        });
+      }
+    }
+
+    messages.push({ role: 'user', content: toolResults });
+    // Continue to next round
+  }
+
+  // Exhausted rounds — return whatever we have
+  return { finalContent: data?.content || [], fullText };
 }
 
 export async function POST(request: NextRequest) {
@@ -328,7 +261,7 @@ export async function POST(request: NextRequest) {
     const readable = new ReadableStream({
       async start(controller) {
         try {
-          const fullReply = await streamAnthropicWithTools(
+          const { fullText } = await executeToolLoop(
             apiKey,
             systemPrompt,
             anthropicMessages,
@@ -342,8 +275,8 @@ export async function POST(request: NextRequest) {
           controller.enqueue(encoder.encode(`data: [DONE]\n\n`));
 
           // Persist completed chat
-          if (fullReply) {
-            persistChatData(user.id, message, fullReply, messageId, history).catch(() => {});
+          if (fullText) {
+            persistChatData(user.id, message, fullText, messageId, history).catch(() => {});
           }
         } catch (err) {
           console.error('[chat/stream] Fatal error:', err);
