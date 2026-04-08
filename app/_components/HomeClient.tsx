@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
@@ -9,6 +9,7 @@ import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
+import ContextSwitcher from './ContextSwitcher';
 
 interface MonitoringQueueItem {
   id: string;
@@ -40,25 +41,20 @@ const TYPE_EMOJI: Record<string, string> = {
 
 /**
  * Format dates naturally.
- * "April 27-30, 2026" → "April 27 - 30"
- * "July 2026 (3+ weeks)" → "This July · 3+ weeks"
- * "April 27-30, 2026" (if current year) → "April 27 - 30"
  */
 function formatDateNatural(dates: string | undefined): string | null {
   if (!dates) return null;
 
   const now = new Date();
   const currentYear = now.getFullYear();
-  const currentMonth = now.getMonth(); // 0-indexed
+  const currentMonth = now.getMonth();
 
   const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
-  // Extract parenthetical note (e.g. "(3+ weeks)")
   const parenMatch = dates.match(/\(([^)]+)\)/);
   const note = parenMatch ? parenMatch[1] : null;
   const cleaned = dates.replace(/\s*\([^)]*\)/, '').trim();
 
-  // ISO: "2026-04-27 to 2026-04-30"
   const isoRange = cleaned.match(/^(\d{4})-(\d{2})-(\d{2})\s+to\s+(\d{4})-(\d{2})-(\d{2})$/);
   if (isoRange) {
     const [, , startMo, startDay, endYr, endMo, endDay] = isoRange;
@@ -74,7 +70,6 @@ function formatDateNatural(dates: string | undefined): string | null {
     return `${sMonth} ${parseInt(startDay ?? '0')} - ${eMonth} ${parseInt(endDay ?? '0')}${yearSuffix}`;
   }
 
-  // "April 27-30, 2026"
   const rangeInMonth = cleaned.match(/^(\w+)\s+(\d+)\s*[--]\s*(\d+),?\s+(\d{4})$/);
   if (rangeInMonth) {
     const [, month, startDay, endDay, year] = rangeInMonth;
@@ -87,7 +82,6 @@ function formatDateNatural(dates: string | undefined): string | null {
     return `${prefix}${month} ${startDay} - ${endDay}${yearSuffix}`;
   }
 
-  // "April 27 - May 2, 2026"
   const rangeAcross = cleaned.match(/^(\w+)\s+(\d+)\s*[--]\s*(\w+)\s+(\d+),?\s+(\d{4})$/);
   if (rangeAcross) {
     const [, m1, d1, m2, d2, year] = rangeAcross;
@@ -96,7 +90,6 @@ function formatDateNatural(dates: string | undefined): string | null {
     return `${m1} ${d1} - ${m2} ${d2}${yearSuffix}`;
   }
 
-  // "July 2026"
   const monthYear = cleaned.match(/^(\w+)\s+(\d{4})$/);
   if (monthYear) {
     const [, month, year] = monthYear;
@@ -111,7 +104,6 @@ function formatDateNatural(dates: string | undefined): string | null {
     return result;
   }
 
-  // Fallback: return as-is but strip year if current
   const withoutYear = cleaned.replace(new RegExp(`,?\\s*${currentYear}`), '');
   return note ? `${withoutYear} · ${note}` : withoutYear;
 }
@@ -195,25 +187,80 @@ export default function HomeClient({
   monitoringQueue = [],
 }: HomeClientProps) {
   const router = useRouter();
-  // Mounted state to avoid hydration mismatch from localStorage reads
   const [mounted, setMounted] = useState(false);
-  // Store context counts - initialize with zeros to match server render
-  const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({}); 
-  // Keys that are currently "emerging" (just created from chat) — gets entrance animation
+  const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
-  // Map of context key → recently-attached attribute pills
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
-
-  // Re-render when triage state changes (for saved count badges)
-  // Must be BEFORE any conditional returns (Rules of Hooks)
   const [, setTriageVersion] = useState(0);
+
+  // Active context key — persisted in localStorage
+  const [activeKey, setActiveKey] = useState<string | null>(null);
+
+  // Initialize active key from localStorage or first context
+  useEffect(() => {
+    setMounted(true);
+    // Load all context counts
+    const counts: Record<string, { saved: number; dismissed: number; resurfaced: number }> = {};
+    for (const ctx of contexts) {
+      counts[ctx.key] = getContextCounts(userId, ctx.key);
+    }
+    setContextCounts(counts);
+
+    // Restore active key
+    try {
+      const stored = localStorage.getItem('compass-active-context');
+      if (stored && contexts.some(c => c.key === stored)) {
+        setActiveKey(stored);
+      } else if (contexts.length > 0) {
+        setActiveKey(contexts[0]!.key);
+      }
+    } catch {
+      if (contexts.length > 0) setActiveKey(contexts[0]!.key);
+    }
+  }, [userId, contexts]);
+
+  // Persist active key
+  useEffect(() => {
+    if (!activeKey) return;
+    try {
+      localStorage.setItem('compass-active-context', activeKey);
+    } catch { /* ignore */ }
+  }, [activeKey]);
+
+  // Broadcast active context to chat widget
+  const broadcastActiveContext = useCallback((key: string) => {
+    window.dispatchEvent(new CustomEvent('compass-context-switched', {
+      detail: { key },
+    }));
+  }, []);
+
+  const handleContextSelect = useCallback((key: string) => {
+    setActiveKey(key);
+    broadcastActiveContext(key);
+  }, [broadcastActiveContext]);
+
+  // Listen for chat-driven context switches
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ key: string }>).detail;
+      if (!detail?.key) return;
+      // If the context exists, switch to it
+      if (contexts.some(c => c.key === detail.key)) {
+        setActiveKey(detail.key);
+      }
+    };
+    window.addEventListener('compass-chat-context-switch', handler);
+    return () => window.removeEventListener('compass-chat-context-switch', handler);
+  }, [contexts]);
+
+  // Triage change listener
   useEffect(() => {
     const handler = () => setTriageVersion((v) => v + 1);
     window.addEventListener('triage-changed', handler);
     return () => window.removeEventListener('triage-changed', handler);
   }, []);
 
-  // Listen for new trip creation from chat and mark the key as emerging
+  // Listen for new trip creation from chat
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent<{ key: string }>).detail;
@@ -223,7 +270,8 @@ export default function HomeClient({
         next.add(detail.key);
         return next;
       });
-      // Remove the emerging flag after the animation completes (600ms animation + buffer)
+      // Switch to the newly created context
+      setActiveKey(detail.key);
       setTimeout(() => {
         setEmergingKeys(prev => {
           const next = new Set(prev);
@@ -245,7 +293,6 @@ export default function HomeClient({
         ...prev,
         [detail.key]: detail.attributes,
       }));
-      // Clear attribute pills after animation
       setTimeout(() => {
         setAttachingAttrs(prev => {
           const next = { ...prev };
@@ -258,7 +305,7 @@ export default function HomeClient({
     return () => window.removeEventListener('compass-trip-attributes', handler);
   }, []);
 
-  // Refresh homepage immediately when chat or other client actions mutate Compass data.
+  // Refresh data when chat mutates
   useEffect(() => {
     let refreshTimer: ReturnType<typeof setTimeout> | null = null;
     const handler = () => {
@@ -274,163 +321,152 @@ export default function HomeClient({
     };
   }, [router]);
 
-  // Initialize from localStorage after mount
+  // Broadcast initial context on mount
   useEffect(() => {
-    setMounted(true);
-    // Load all context counts
-    const counts: Record<string, { saved: number; dismissed: number; resurfaced: number }> = {};
-    for (const ctx of contexts) {
-      counts[ctx.key] = getContextCounts(userId, ctx.key);
+    if (activeKey) {
+      broadcastActiveContext(activeKey);
     }
-    setContextCounts(counts);
-  }, [userId, contexts]);
-
-  // Triage hydration now handled by <TriageHydrator> in root layout
+  }, [activeKey, broadcastActiveContext]);
 
   if (contexts.length === 0) {
     return (
-      <main className="page">
-        <div className="page-header">
+      <main className="page focused-page">
+        <div className="focused-header">
           <h1>🧭 Compass</h1>
-          <p>No active contexts yet. Chat with the concierge to set up your first trip, outing, or radar.</p>
+          <p className="compass-tagline">Your AI travel concierge</p>
+        </div>
+        <div className="focused-empty">
+          <div className="focused-empty-icon">🌍</div>
+          <h2>Where to next?</h2>
+          <p>Start planning by chatting below — tell me about a trip, a dinner out, or a neighbourhood to explore.</p>
         </div>
       </main>
     );
   }
 
+  const ctx = contexts.find(c => c.key === activeKey) || contexts[0]!;
+  const discoveries = discoveryMap[ctx.key] ?? [];
+  const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
+  const naturalDate = formatDateNatural(ctx.dates);
+  const description = buildDescription(ctx);
+  const isEmerging = emergingKeys.has(ctx.key);
+  const landingAttrs = attachingAttrs[ctx.key] ?? [];
+
   return (
-    <main className="page">
-      <div className="page-header compass-header">
-        <h1>🧭 Compass</h1>
-        <p className="compass-tagline">The AI Travel Agent that ensures the best experience on your trips and outings</p>
+    <main className="page focused-page">
+      {/* Header with context switcher */}
+      <div className="focused-header">
+        <div className="focused-header-top">
+          <h1 className="focused-brand">🧭</h1>
+          <ContextSwitcher
+            contexts={contexts.map(c => ({
+              key: c.key,
+              label: c.label,
+              emoji: c.emoji,
+              type: c.type,
+              dates: c.dates,
+            }))}
+            activeKey={activeKey}
+            onSelect={handleContextSelect}
+          />
+        </div>
       </div>
 
-      <BriefingBanner userId={userId} />
-
-      <MonitoringQueueTray items={monitoringQueue} />
-
-      {contexts.map(ctx => {
-        const discoveries = discoveryMap[ctx.key] ?? [];
-        // Use stored counts after mount, or zeros before mount (matches server)
-        const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
-        const naturalDate = formatDateNatural(ctx.dates);
-        const description = buildDescription(ctx);
-
-        const isEmerging = emergingKeys.has(ctx.key);
-        const landingAttrs = attachingAttrs[ctx.key] ?? [];
-        return (
-          <section key={ctx.key} className={`section${isEmerging ? ' section-emerging' : ''}`}>
-            <div className={`section-header${ctx.type === 'trip' ? ' section-header-trip' : ''}`}>
-              <div className="section-header-left">
-                <div className={`section-title-row${ctx.type === 'trip' ? ' section-title-row-trip' : ''}`}>
-                  <span className={ctx.type === 'trip' ? 'section-emoji-trip' : 'section-emoji-large'}>
-                    <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size={ctx.type === 'trip' ? 'xl' : 'lg'} />
-                  </span>
-                  <div className="section-title-text">
-                    <h2 className={ctx.type === 'trip' ? 'section-title-trip' : ''}>{ctx.label}</h2>
-                    <div className="section-meta">
-                      {naturalDate && (
-                        <span className={`section-date${ctx.type === 'trip' ? ' section-date-trip' : ''}`}>{naturalDate}</span>
-                      )}
-                      {/* For non-trip: inline with separator */}
-                      {naturalDate && description && ctx.type !== 'trip' && (
-                        <span className="section-meta-sep">·</span>
-                      )}
-                      {description && ctx.type !== 'trip' && (
-                        <span className="section-desc">{description}</span>
-                      )}
-                    </div>
-                    {/* For trips: description on its own third line */}
-                    {description && ctx.type === 'trip' && (
-                      <div className="section-desc-trip">{description}</div>
-                    )}
-                    {/* Attribute pills — appear when chat attaches new trip attributes */}
-                    {landingAttrs.length > 0 && (
-                      <div className="section-attr-pills">
-                        {landingAttrs.map(attr => (
-                          <span key={attr.field} className="section-attr-pill">
-                            {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              {/* Desktop: trip planning widget inline with header */}
-              {ctx.type === 'trip' && (() => {
-                const raw = ctx as unknown as Record<string, unknown>;
-                return (
-                <div className="section-header-trip-widget">
-                  <TripPlanningWidget
-                    userId={userId}
-                    contextKey={ctx.key}
-                    travel={contextMeta[ctx.key]?.travel as never}
-                    accommodation={contextMeta[ctx.key]?.accommodation as never}
-                    bookingStatus={contextMeta[ctx.key]?.bookingStatus}
-                    savedCount={counts.saved}
-                    purpose={raw.purpose as string | undefined}
-                    people={raw.people as Array<{ name: string; relation?: string }> | undefined}
-                  />
-                </div>
-                );})()}
-
-              <div className="section-header-right">
-                {ctx.type !== 'trip' && counts.saved > 0 && (
-                  <Link
-                    href={`/review/${encodeURIComponent(ctx.key)}?tab=saved`}
-                    className="saved-count-badge"
-                  >
-                    ✓ {counts.saved} saved
-                  </Link>
+      {/* Focused context content */}
+      <div className={`focused-content${isEmerging ? ' section-emerging' : ''}`}>
+        {/* Context hero */}
+        <div className={`focused-hero${ctx.type === 'trip' ? ' focused-hero-trip' : ''}`}>
+          <div className="focused-hero-left">
+            <span className="focused-hero-emoji">
+              <Twemoji emoji={ctx.emoji || TYPE_EMOJI[ctx.type] || '📌'} size={ctx.type === 'trip' ? 'xl' : 'lg'} />
+            </span>
+            <div className="focused-hero-text">
+              <h2 className={`focused-hero-title${ctx.type === 'trip' ? ' focused-hero-title-trip' : ''}`}>{ctx.label}</h2>
+              <div className="focused-hero-meta">
+                {naturalDate && (
+                  <span className={`section-date${ctx.type === 'trip' ? ' section-date-trip' : ''}`}>{naturalDate}</span>
                 )}
-                {ctx.type !== 'trip' && (
-                  <Link
-                    href={`/review/${encodeURIComponent(ctx.key)}`}
-                    className="section-review-link"
-                  >
-                    Review →
-                  </Link>
+                {naturalDate && description && ctx.type !== 'trip' && (
+                  <span className="section-meta-sep">·</span>
+                )}
+                {description && ctx.type !== 'trip' && (
+                  <span className="section-desc">{description}</span>
                 )}
               </div>
+              {description && ctx.type === 'trip' && (
+                <div className="section-desc-trip">{description}</div>
+              )}
+              {landingAttrs.length > 0 && (
+                <div className="section-attr-pills">
+                  {landingAttrs.map(attr => (
+                    <span key={attr.field} className="section-attr-pill">
+                      {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
+          </div>
 
-            {/* Mobile: trip planning widget below header */}
-            {ctx.type === 'trip' && (() => {
-              const raw = ctx as unknown as Record<string, unknown>;
-              return (
-              <div className="section-trip-widget-mobile">
-                <TripPlanningWidget
-                  userId={userId}
-                  contextKey={ctx.key}
-                  travel={contextMeta[ctx.key]?.travel as never}
-                  accommodation={contextMeta[ctx.key]?.accommodation as never}
-                  bookingStatus={contextMeta[ctx.key]?.bookingStatus}
-                  savedCount={counts.saved}
-                  purpose={raw.purpose as string | undefined}
-                  people={raw.people as Array<{ name: string; relation?: string }> | undefined}
-                />
-              </div>
-              );})()}
-
-            {discoveries.length > 0 ? (
-              <PlaceGrid
-                discoveries={discoveries}
-                contextKey={ctx.key}
-                userId={userId}
-                layout="carousel"
-              />
-            ) : (
-              <div className="empty-state">
-                <p className="text-muted text-sm">
-                  No discoveries yet - the radar is scanning.
-                </p>
-              </div>
+          <div className="focused-hero-right">
+            {ctx.type !== 'trip' && counts.saved > 0 && (
+              <Link
+                href={`/review/${encodeURIComponent(ctx.key)}?tab=saved`}
+                className="saved-count-badge"
+              >
+                ✓ {counts.saved} saved
+              </Link>
             )}
-          </section>
-        );
-      })}
+            {ctx.type !== 'trip' && (
+              <Link
+                href={`/review/${encodeURIComponent(ctx.key)}`}
+                className="section-review-link"
+              >
+                Review →
+              </Link>
+            )}
+          </div>
+        </div>
+
+        {/* Trip planning widget */}
+        {ctx.type === 'trip' && (() => {
+          const raw = ctx as unknown as Record<string, unknown>;
+          return (
+            <div className="focused-trip-widget">
+              <TripPlanningWidget
+                userId={userId}
+                contextKey={ctx.key}
+                travel={contextMeta[ctx.key]?.travel as never}
+                accommodation={contextMeta[ctx.key]?.accommodation as never}
+                bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                savedCount={counts.saved}
+                purpose={raw.purpose as string | undefined}
+                people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+              />
+            </div>
+          );
+        })()}
+
+        <BriefingBanner userId={userId} />
+
+        <MonitoringQueueTray items={monitoringQueue.filter(i => i.contextKey === ctx.key)} />
+
+        {/* Discoveries */}
+        {discoveries.length > 0 ? (
+          <PlaceGrid
+            discoveries={discoveries}
+            contextKey={ctx.key}
+            userId={userId}
+            layout="carousel"
+          />
+        ) : (
+          <div className="focused-empty-discoveries">
+            <p className="text-muted text-sm">
+              No discoveries yet — chat below to start exploring.
+            </p>
+          </div>
+        )}
+      </div>
     </main>
   );
 }
