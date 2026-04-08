@@ -88,6 +88,54 @@ const CONCIERGE_TOOLS = [
       },
     },
   },
+  {
+    type: 'function' as const,
+    function: {
+      name: 'add-discovery',
+      description: 'Add a discovered place (restaurant, bar, cafe, etc.) to the user\'s Compass radar or trip.',
+      parameters: {
+        type: 'object',
+        properties: {
+          contextKey: {
+            type: 'string',
+            description: 'The key of the context to add the discovery to (e.g., "radar:toronto" or "trip:nyc-solo")',
+          },
+          discovery: {
+            type: 'object',
+            properties: {
+              name: {
+                type: 'string',
+                description: 'Name of the place',
+              },
+              type: {
+                type: 'string',
+                enum: ['restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum', 'theatre', 'music-venue', 'hotel', 'experience', 'shop', 'park', 'architecture', 'development', 'accommodation', 'neighbourhood'],
+                description: 'Type of place',
+              },
+              city: {
+                type: 'string',
+                description: 'City where the place is located',
+              },
+              address: {
+                type: 'string',
+                description: 'Address (optional)',
+              },
+              place_id: {
+                type: 'string',
+                description: 'Google Places ID (optional)',
+              },
+              rating: {
+                type: 'number',
+                description: 'Rating (optional, 1-5)',
+              },
+            },
+            required: ['name', 'type', 'city'],
+          },
+        },
+        required: ['contextKey', 'discovery'],
+      },
+    },
+  },
 ];
 
 /** Execute a tool call locally by calling the appropriate API endpoint */
@@ -120,6 +168,12 @@ async function executeToolCall(
       dates: args.dates,
       city: args.city,
       focus: args.focus,
+    };
+  } else if (toolName === 'add-discovery') {
+    endpoint = `${baseUrl}/api/compass/add-discovery`;
+    body = {
+      contextKey: args.contextKey,
+      discovery: args.discovery,
     };
   } else {
     throw new Error(`Unknown tool: ${toolName}`);
