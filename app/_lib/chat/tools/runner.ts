@@ -6,6 +6,8 @@ import { braveSearch } from './web-search';
 import { lookupPlace } from './lookup-place';
 import { addToCompass, type AddToCompassInput } from './add-to-compass';
 import { saveDiscovery, type SaveDiscoveryInput } from './save-discovery';
+import { editDiscovery, type EditDiscoveryInput } from './edit-discovery';
+import { removeDiscovery, type RemoveDiscoveryInput } from './remove-discovery';
 import { updateTrip, type UpdateTripInput } from './update-trip';
 import { createContext, type CreateContextInput } from './create-context';
 
@@ -14,6 +16,8 @@ export type ToolName =
   | 'lookup_place'
   | 'add_to_compass'
   | 'save_discovery'
+  | 'edit_discovery'
+  | 'remove_discovery'
   | 'update_trip'
   | 'create_context';
 
@@ -21,6 +25,8 @@ export type ToolInput =
   | { query: string }
   | AddToCompassInput
   | SaveDiscoveryInput
+  | EditDiscoveryInput
+  | RemoveDiscoveryInput
   | UpdateTripInput
   | CreateContextInput;
 
@@ -45,6 +51,10 @@ export async function runToolCall(
       return addToCompass(userId, input as unknown as AddToCompassInput);
     case 'save_discovery':
       return saveDiscovery(userId, input as unknown as SaveDiscoveryInput);
+    case 'edit_discovery':
+      return editDiscovery(userId, input as unknown as EditDiscoveryInput);
+    case 'remove_discovery':
+      return removeDiscovery(userId, input as unknown as RemoveDiscoveryInput);
     case 'update_trip':
       return updateTrip(userId, input as unknown as UpdateTripInput);
     case 'create_context':

@@ -32,6 +32,8 @@ function mapToolName(name: string): string {
     'update_trip': 'update-trip',
     'add_to_compass': 'add-to-compass',
     'save_discovery': 'save-discovery',
+    'edit_discovery': 'edit-discovery',
+    'remove_discovery': 'remove-discovery',
     'web_search': 'web-search',
     'lookup_place': 'lookup-place',
   };
