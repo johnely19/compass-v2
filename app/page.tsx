@@ -14,6 +14,7 @@ import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
 import { bulkPromoteFromAnnotated, loadMonitorInventory } from './_lib/monitor-inventory';
 import type { MonitorChangeKind } from './_lib/monitor-inventory';
 import type { SignificanceLevel } from './_lib/observation-significance';
+import { buildHomepageDigest } from './_lib/monitor-digest';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -283,6 +284,9 @@ export default async function HomePage() {
       };
     });
 
+  // Build significance digest for recent changes banner
+  const homepageDigest = buildHomepageDigest(inventory);
+
   return (
     <HomeClient
       userId={user.id}
@@ -290,6 +294,8 @@ export default async function HomePage() {
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
       monitoringQueue={monitoringQueue}
+      digestTeaser={homepageDigest.teaserText}
+      digestItems={homepageDigest.items}
     />
   );
 }

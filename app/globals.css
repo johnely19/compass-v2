@@ -6775,6 +6775,53 @@ nextjs-portal { display: none !important; }
   flex-shrink: 0;
 }
 
+/* ---- Digest Banner ---- */
+.digest-banner {
+  margin: var(--space-sm) 0 var(--space-md);
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius-lg);
+  background: var(--surface-elevated, #1a1a2e);
+  border-left: 3px solid var(--accent, #f0c040);
+}
+.digest-banner-teaser {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xs);
+  color: var(--text-primary, #fff);
+}
+.digest-banner-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xxs, 4px);
+}
+.digest-banner-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: 0.82rem;
+  color: var(--text-secondary, #aaa);
+}
+.digest-banner-name {
+  font-weight: 500;
+  color: var(--text-primary, #fff);
+  text-decoration: none;
+}
+.digest-banner-name:hover {
+  text-decoration: underline;
+}
+.digest-banner-detail {
+  color: var(--text-tertiary, #888);
+}
+.digest-banner-sig-critical .digest-banner-detail {
+  color: var(--red, #ef4444);
+}
+.digest-banner-sig-notable .digest-banner-detail {
+  color: var(--amber, #f59e0b);
+}
+
 /* ---- Empty State ---- */
 .focused-empty {
   text-align: center;

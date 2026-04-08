@@ -46,8 +46,24 @@
         "hot-page": 6.4
       },
       "averageOverall": 5.799999999999999
+    },
+    {
+      "timestamp": "2026-04-05T06:59:03.192Z",
+      "scores": {
+        "home-full": 6,
+        "placecard-restaurant-cookshop": 5,
+        "placecard-bar-balera": 7.6,
+        "placecard-restaurant-portici": 8,
+        "placecard-cafe-etape22": 6.6,
+        "placecard-cottage-muskoka": 5.2,
+        "review-nyc": 5.2,
+        "review-toronto": 3,
+        "browse-places": 5.8,
+        "hot-page": 6.4
+      },
+      "averageOverall": 5.880000000000001
     }
   ],
-  "lastRun": "2026-04-04T06:04:56.439Z",
-  "currentAverage": 5.8
+  "lastRun": "2026-04-05T06:59:03.192Z",
+  "currentAverage": 5.88
 }

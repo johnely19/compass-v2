@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJC88znZOipBIR3WdZT71ymO8",
+        "name": "El Cafè de la Pedrera",
+        "address": "Pg. de Gràcia 92, Barcelona",
+        "category": "café",
+        "rating": 4.1,
+        "why": "Inside Casa Milà (La Pedrera) — the Gaudí building that defines the upper Passeig. Coffee inside the undulating stone of the facade teaches the Modernista edge condition from within.",
+        "id": "place-pdg-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJx8_n31SjpBIRBs2-C3IS2g0",
+        "name": "Alaire Rooftop Bar",
+        "address": "Hotel Condes de Barcelona, Pg. de Gràcia 73, Barcelona",
+        "category": "bar",
+        "rating": 4.4,
+        "why": "Rooftop terrace directly above Passeig de Gràcia — gives you Jacobs' bird's-eye view of the Eixample grid, the boulevard proportions, and the plane trees stretching toward Diagonal.",
+        "id": "place-pdg-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJmxhkUZmjpBIRjFUtz0o6pxc",
+        "name": "Syra Coffee",
+        "address": "Pg. de Gràcia 11, Barcelona",
+        "category": "café",
+        "rating": 4.8,
+        "why": "Specialty coffee at the lower end of Passeig de Gràcia where it meets Eixample's transition to Ciutat Vella. The active ground-floor retail rhythm Jacobs writes about — even in an H&M.",
+        "id": "place-pdg-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Spain",
-    "highlights": []
+    "highlights": ["El Cafè de la Pedrera", "Alaire Rooftop Bar", "Syra Coffee"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }

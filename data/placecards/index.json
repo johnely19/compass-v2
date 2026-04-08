@@ -1930,5 +1930,29 @@
   "WOODBINE_BEACH_PUBLIC_ART": {
     "name": "Winter Stations 2026: Mirage",
     "type": "restaurant"
+  },
+  "ChIJd9RJT_aipBIRbit5aqjvWnM": {
+    "name": "Virreina Palace",
+    "type": "museum"
+  },
+  "ChIJdTx2T-2ipBIRQM8Gwarzfik": {
+    "name": "Casa Amatller",
+    "type": "museum"
+  },
+  "ChIJ5U1zLh1644kRU8uTv5jgqlk": {
+    "name": "Hotel Commonwealth",
+    "type": "hotel"
+  },
+  "ChIJyZXViNtRqEcRcSwNBFp7GYE": {
+    "name": "Berlin State Opera",
+    "type": "opera_house"
+  },
+  "ChIJF8pyxetv5kcRWm7wMe3tmTA": {
+    "name": "Boutiques Publicisdrugstore",
+    "type": "department_store"
+  },
+  "ChIJPz83mZY0K4gR56TW8EZWnSk": {
+    "name": "BMV Books",
+    "type": "book_store"
   }
 }

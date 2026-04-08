@@ -30,6 +30,46 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJhbDljsRRqEcRFZtUstV1Zf4",
+        "name": "EINSTEIN Unter den Linden",
+        "address": "Unter den Linden 42, 10117 Berlin",
+        "category": "café",
+        "rating": 4.1,
+        "why": "The classic Viennese-style café right on Unter den Linden. Coffee, newspapers, people-watching under the lindens — the street's slow civic ritual. Exactly where Jacobs' 'sitting and staying' happens.",
+        "id": "place-udl-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJnZP4HtxRqEcRw0epcRGQ-_k",
+        "name": "German Historical Museum",
+        "address": "Unter den Linden 2, 10117 Berlin",
+        "category": "museum",
+        "rating": 4.4,
+        "why": "The Zeughaus — Berlin's oldest surviving baroque building, directly on the boulevard at the bridge to Museumsinsel. The great cultural institution that gives Unter den Linden its civic weight and defines its eastern terminus.",
+        "id": "place-udl-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJwTaiW8NRqEcRKa55CQBhVP0",
+        "name": "Dussmann das KulturKaufhaus",
+        "address": "Friedrichstraße 90, 10117 Berlin",
+        "category": "bookstore",
+        "rating": 4.7,
+        "why": "One block off Unter den Linden on Friedrichstraße — Berlin's greatest cultural department store: books, music, films, open until midnight. The edge institution that rewards those who step off the main boulevard.",
+        "id": "place-udl-3"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJKyza98lRqEcRn0Gnw8nxDYE",
+        "name": "Staatsbibliothek zu Berlin",
+        "address": "Unter den Linden 8, 10117 Berlin",
+        "category": "institution",
+        "rating": 4.4,
+        "why": "The Prussian State Library, directly on the boulevard. An extraordinary Wilhelmine building that anchors the institutional weight of the western end. Reading rooms open to the public — the contemplative counterpoint to street life.",
+        "id": "place-udl-4"
       }
     ]
   },
@@ -38,6 +78,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Germany",
-    "highlights": []
+    "highlights": ["EINSTEIN Unter den Linden", "German Historical Museum", "Dussmann das KulturKaufhaus", "Staatsbibliothek zu Berlin"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }

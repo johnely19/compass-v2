@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJweOhn0qNyRIRaugHwMctIWM",
+        "name": "D'Amour",
+        "address": "58 Cours Mirabeau, 13100 Aix-en-Provence",
+        "category": "bar",
+        "rating": 4.4,
+        "why": "Terrace directly on the Cours — the cocktail bar that pulls the street's social life into the evening. The Cours Mirabeau's promenade quality depends on these terraces spilling onto the pavement.",
+        "id": "place-cm-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJ-wUx3ZeNyRIRmAQdAPMHXTI",
+        "name": "Restaurant Côté Cour",
+        "address": "19 Cours Mirabeau, 13100 Aix-en-Provence",
+        "category": "restaurant",
+        "rating": 4.3,
+        "why": "Mediterranean and French cuisine steps from the Fontaine de la Rotonde. The lower end of the Cours, where the street opens to the great fountain — Jacobs' terminal element that gives the promenade its sense of arrival.",
+        "id": "place-cm-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJg0XMOCeNyRIRXwI2dA5E3OM",
+        "name": "Café Caumont",
+        "address": "3 Rue Joseph Cabassol, 13100 Aix-en-Provence",
+        "category": "café",
+        "rating": 4.4,
+        "why": "The café of the Hôtel de Caumont arts centre, one block off the Cours. One of Provence's finest 18th-century hôtels particuliers, now an exhibition venue. The institutional anchor that draws visitors off the boulevard into the hinterland of great streets.",
+        "id": "place-cm-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "France",
-    "highlights": []
+    "highlights": ["D'Amour", "Restaurant Côté Cour", "Café Caumont"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }

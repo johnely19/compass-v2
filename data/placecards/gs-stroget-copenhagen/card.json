@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJl5zhPxBTUkYRiFbi-rjg9Nw",
+        "name": "Paludan Bog & Café",
+        "address": "Fiolstræde 10, 1171 København",
+        "category": "bookstore-café",
+        "rating": 4.5,
+        "why": "Bookstore-café one block off Strøget in the Latin Quarter. Books, coffee, a packed room all day. The off-street discovery that Jacobs says rewards pedestrians who leave the main promenade — Strøget's hinterland.",
+        "id": "place-stroget-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJcVD_XQBTUkYR6J-l2hHxFJg",
+        "name": "Ø12 Coffee & Eatery",
+        "address": "Silkegade 1, 1113 København",
+        "category": "café",
+        "rating": 4.9,
+        "why": "Exceptional specialty coffee immediately adjacent to Strøget. The new Copenhagen coffee culture that has moved into the pedestrian zone's side streets — proof the street's 'aliveness' extends into the grain.",
+        "id": "place-stroget-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJr1W44IBTUkYRWjMZf1bvH6I",
+        "name": "Café Phenix City",
+        "address": "Gråbrødretorv 15, 1154 København",
+        "category": "café",
+        "rating": 4.6,
+        "why": "On Gråbrødretorv (Grey Friars Square), the medieval courtyard that opens off Strøget — one of Copenhagen's most beautiful linked public spaces. Jacobs' street-to-square sequence made edible.",
+        "id": "place-stroget-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Denmark",
-    "highlights": []
+    "highlights": ["Paludan Bog & Café", "Ø12 Coffee & Eatery", "Café Phenix City"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }
