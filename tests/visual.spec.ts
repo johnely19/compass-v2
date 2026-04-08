@@ -18,7 +18,7 @@ test.describe('Visual regression tests', () => {
 
   test('chat bar visual', async ({ page }) => {
     await page.goto('/', { waitUntil: 'networkidle' });
-    const chatBar = page.locator('[class*="chatCollapsed"]').first();
+    const chatBar = page.locator('[class*="chatPinned"]').first();
     if (await chatBar.isVisible()) {
       await expect(chatBar).toHaveScreenshot('chat-bar.png', { maxDiffPixelRatio: 0.02 });
     }
