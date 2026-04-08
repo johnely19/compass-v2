@@ -54,9 +54,14 @@ export default function ChatWidget() {
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
 
-  // Chat target — card/section-level targeting
+  // Chat target — card/section-level targeting (uses ChatTarget infrastructure)
   const [chatTarget, setChatTarget] = useState<ChatTarget | null>(null);
   const chatTargetRef = useRef<ChatTarget | null>(null);
+
+  // Scoped display info (for the scope chip) — derived from chatTarget or context switch
+  const [scopedLabel, setScopedLabel] = useState<string | null>(null);
+  const [scopedEmoji, setScopedEmoji] = useState<string>('📌');
+  const [isPlaceScoped, setIsPlaceScoped] = useState(false);
 
   const createContextUsed = useRef(false);
   const updateTripUsed = useRef<string | null>(null);
@@ -67,16 +72,65 @@ export default function ChatWidget() {
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const abortRef = useRef<AbortController | null>(null);
 
-  // Listen for context switches from homepage
+  // Listen for context switches from homepage (includes label/emoji for scoped display)
   useEffect(() => {
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ key: string }>).detail;
+      const detail = (e as CustomEvent<{ key: string; label?: string; emoji?: string; type?: string }>).detail;
       if (detail?.key) {
         activeContextKeyRef.current = detail.key;
+        // Update scoped display when context switches (only if not card-level scoped)
+        if (!chatTargetRef.current?.card) {
+          if (detail.label) {
+            setScopedLabel(detail.label);
+            setScopedEmoji(detail.emoji || '📌');
+            setIsPlaceScoped(false);
+          }
+        }
       }
     };
     window.addEventListener('compass-context-switched', handler);
     return () => window.removeEventListener('compass-context-switched', handler);
+  }, []); // No deps — uses ref to check card-level scope
+
+  // Listen for chat target events (card-level targeting from PlaceCard)
+  useEffect(() => {
+    const handleTarget = (e: Event) => {
+      const target = (e as CustomEvent<ChatTarget>).detail;
+      if (target) {
+        setChatTarget(target);
+        chatTargetRef.current = target;
+        // Also set the context key
+        activeContextKeyRef.current = target.contextKey;
+        // Update scoped display
+        if (target.card) {
+          setScopedLabel(target.card.name);
+          setScopedEmoji('📍');
+          setIsPlaceScoped(true);
+        } else {
+          setScopedLabel(target.contextLabel);
+          setScopedEmoji(target.contextEmoji || '📌');
+          setIsPlaceScoped(false);
+        }
+        // Expand chat and focus input
+        setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+      }
+    };
+    const handleClear = () => {
+      setChatTarget(null);
+      chatTargetRef.current = null;
+      setIsPlaceScoped(false);
+      // Clear place halo
+      window.dispatchEvent(new CustomEvent('compass-place-halo', {
+        detail: { placeId: null },
+      }));
+    };
+    window.addEventListener(CHAT_TARGET_EVENT, handleTarget);
+    window.addEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    return () => {
+      window.removeEventListener(CHAT_TARGET_EVENT, handleTarget);
+      window.removeEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    };
   }, []);
 
   // Listen for 'new trip' from context switcher — prefill chat with trip prompt
@@ -140,6 +194,16 @@ export default function ChatWidget() {
     inputRef.current?.focus();
   }, []);
 
+  function clearChatTarget() {
+    setChatTarget(null);
+    chatTargetRef.current = null;
+    setIsPlaceScoped(false);
+    // Clear place halo
+    window.dispatchEvent(new CustomEvent('compass-place-halo', {
+      detail: { placeId: null },
+    }));
+  }
+
   const processStream = useCallback(async (response: Response) => {
     const reader = response.body?.getReader();
     if (!reader) throw new Error('No response body');
@@ -198,11 +262,6 @@ export default function ChatWidget() {
 
     return accumulated;
   }, []);
-
-  function clearChatTarget() {
-    setChatTarget(null);
-    chatTargetRef.current = null;
-  }
 
   async function handleSend(e: React.FormEvent) {
     e.preventDefault();
@@ -379,8 +438,12 @@ export default function ChatWidget() {
     }
   }
 
-  // Compute target pill display
+  // Derive pill display from chatTarget (for backward compat)
   const targetPill = chatTarget ? chatTargetPill(chatTarget) : null;
+  // Scoped chip: show if we have a scoped label (from either chat target or context switch)
+  const showScopeChip = !!(scopedLabel || targetPill);
+  const chipEmoji = targetPill ? targetPill.emoji : scopedEmoji;
+  const chipLabel = targetPill ? targetPill.label : scopedLabel || '';
 
   return (
     <div className={`${styles.chatPinned} ${chatExpanded ? styles.chatPinnedExpanded : ''}`}>
@@ -479,22 +542,46 @@ export default function ChatWidget() {
       )}
 
       {/* Input area — always visible, pinned to bottom */}
-      <div className={styles.chatInputBar}>
-        {chatExpanded && (
-          <button
-            type="button"
-            className={styles.chatMinimizeBtn}
-            onClick={() => setChatExpanded(false)}
-            aria-label="Minimize chat"
-          >
-            ▾
-          </button>
+      <div className={`${styles.chatInputBar}${showScopeChip ? ` ${styles.chatInputBarScoped}` : ''}`}>
+        {/* Scoped target chip */}
+        {showScopeChip && (
+          <div className={styles.chatScopeChip}>
+            <span className={styles.chatScopeChipEmoji}>{chipEmoji}</span>
+            <span className={styles.chatScopeChipLabel}>{chipLabel}</span>
+            {/* Only show dismiss for card-level targeting */}
+            {chatTarget && (
+              <button
+                type="button"
+                className={styles.chatScopeChipDismiss}
+                onClick={clearChatTarget}
+                aria-label="Exit scoped mode"
+              >
+                ×
+              </button>
+            )}
+          </div>
         )}
-        <form className={styles.chatInputForm} onSubmit={handleSend}>
+        <div className={styles.chatInputRow}>
+          {chatExpanded && (
+            <button
+              type="button"
+              className={styles.chatMinimizeBtn}
+              onClick={() => setChatExpanded(false)}
+              aria-label="Minimize chat"
+            >
+              ▾
+            </button>
+          )}
+          <form className={styles.chatInputForm} onSubmit={handleSend}>
           <textarea
             ref={inputRef}
-            className={styles.chatInputField}
-            placeholder={chatTarget?.card ? `Ask about ${chatTarget.card.name}…` : 'Ask me anything…'}
+            className={`${styles.chatInputField}${showScopeChip ? ` ${styles.chatInputFieldScoped}` : ''}`}
+            placeholder={isPlaceScoped && chatTarget?.card
+              ? `Ask about ${chatTarget.card.name}…`
+              : scopedLabel
+                ? `Add to ${scopedLabel}…`
+                : 'Ask me anything…'
+            }
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => {
@@ -517,6 +604,7 @@ export default function ChatWidget() {
             ➤
           </button>
         </form>
+        </div>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
 import { dispatchChatTarget } from '../_lib/chat-target';
@@ -77,9 +77,23 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
     : null;
   const monitorExplanation = getMonitoringExplanation(discovery);
 
-  const handleChatInto = useCallback((e: React.MouseEvent) => {
+  // Track whether this card is the active chat target (for halo effect)
+  const [isChatTarget, setIsChatTarget] = useState(false);
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ placeId: string | null }>).detail;
+      setIsChatTarget(detail?.placeId === place_id && !!place_id);
+    };
+    window.addEventListener('compass-place-halo', handler);
+    return () => window.removeEventListener('compass-place-halo', handler);
+  }, [place_id]);
+
+  const handleChatAbout = useCallback((e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
+    if (!place_id) return;
+
+    // Dispatch full ChatTarget with card-level info via existing infrastructure
     dispatchChatTarget({
       contextKey,
       contextLabel: contextLabel || contextKey,
@@ -92,10 +106,15 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
         placeId: place_id,
       },
     });
+
+    // Broadcast halo event (distinct from compass-chat-target to avoid collision)
+    window.dispatchEvent(new CustomEvent('compass-place-halo', {
+      detail: { placeId: place_id },
+    }));
   }, [contextKey, contextLabel, contextEmoji, contextType, id, name, type, place_id]);
 
   return (
-    <div style={{ position: 'relative' }}>
+    <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>
       <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
           {!finalImageUrl && <span className="place-card-image-fallback" />}
@@ -149,14 +168,16 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
         </div>
       )}
-      <button
-        className="place-card-chat-btn"
-        onClick={handleChatInto}
-        aria-label={`Chat about ${name}`}
-        title={`Chat about ${name}`}
-      >
-        💬
-      </button>
+      {place_id && (
+        <button
+          className={`place-card-chat-btn${isChatTarget ? ' place-card-chat-btn-active' : ''}`}
+          onClick={handleChatAbout}
+          aria-label={`Chat about ${name}`}
+          title={`Chat about ${name}`}
+        >
+          💬
+        </button>
+      )}
     </div>
   );
 }
