@@ -12,6 +12,52 @@ import { setUserData, getUserData } from '../../user-data';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
+const VALID_TYPES = new Set<DiscoveryType>([
+  'restaurant', 'bar', 'cafe', 'grocery', 'gallery', 'museum',
+  'theatre', 'music-venue', 'hotel', 'experience', 'shop', 'park',
+  'architecture', 'development', 'accommodation', 'neighbourhood',
+]);
+
+/** Normalize LLM-generated type strings to valid DiscoveryType values */
+function normalizeType(raw: string): DiscoveryType {
+  const t = raw.toLowerCase().replace(/_/g, '-').trim();
+  if (VALID_TYPES.has(t as DiscoveryType)) return t as DiscoveryType;
+  // Common LLM variants
+  const map: Record<string, DiscoveryType> = {
+    'live-music-venue': 'music-venue',
+    'live-music': 'music-venue',
+    'music-hall': 'music-venue',
+    'concert-hall': 'music-venue',
+    'specialty-shop': 'shop',
+    'clothing-shop': 'shop',
+    'retail': 'shop',
+    'boutique': 'shop',
+    'fine-dining': 'restaurant',
+    'bistro': 'restaurant',
+    'brasserie': 'restaurant',
+    'gastropub': 'bar',
+    'pub': 'bar',
+    'cocktail-bar': 'bar',
+    'wine-bar': 'bar',
+    'resort': 'accommodation',
+    'lodge': 'accommodation',
+    'inn': 'accommodation',
+    'hostel': 'accommodation',
+    'b-and-b': 'accommodation',
+    'bed-and-breakfast': 'accommodation',
+    'art-gallery': 'gallery',
+    'art-museum': 'museum',
+    'natural-history-museum': 'museum',
+    'neighborhood': 'neighbourhood',
+    'district': 'neighbourhood',
+    'area': 'neighbourhood',
+    'national-park': 'park',
+    'botanical-garden': 'park',
+    'garden': 'park',
+  };
+  return map[t] || 'experience';
+}
+
 export interface AddToCompassInput {
   name: string;
   city: string;
@@ -48,7 +94,7 @@ export async function addToCompass(
       name: input.name,
       address: input.address,
       city: resolvedCity,
-      type: input.category,
+      type: normalizeType(input.category),
       rating: input.rating,
       heroImage: undefined,
       images: undefined,
