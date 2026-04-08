@@ -191,8 +191,9 @@ export async function recordObservation(params: {
   userId: string;
   entryId: string;
   observation: Omit<MonitorObservation, 'changes'> & { changes?: MonitorChangeKind[] };
+  nextCheckAt?: string;
 }): Promise<MonitorEntry | null> {
-  const { userId, entryId, observation } = params;
+  const { userId, entryId, observation, nextCheckAt } = params;
   const inventory = await loadMonitorInventory(userId);
 
   const entry = inventory.entries.find(e => e.id === entryId || e.discoveryId === entryId);
@@ -217,6 +218,11 @@ export async function recordObservation(params: {
   // Accumulate unique detected change kinds
   const allChanges = new Set([...entry.detectedChangeKinds, ...changes]);
   entry.detectedChangeKinds = Array.from(allChanges);
+
+  // Optionally set next check time
+  if (nextCheckAt) {
+    entry.nextCheckAt = nextCheckAt;
+  }
 
   inventory.updatedAt = now;
   await saveMonitorInventory(userId, inventory);
