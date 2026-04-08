@@ -150,9 +150,9 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           {discovery.rankingExplanation && (
             <div className="place-card-explanation">Why now: {discovery.rankingExplanation}</div>
           )}
-          {discovery.monitorStatus && discovery.monitorStatus !== 'none' && monitorExplanation && (
+          {discovery.monitorStatus && discovery.monitorStatus !== 'none' && (
             <div className="place-card-monitoring">
-              Monitoring: {getMonitorStatusLabel(discovery.monitorStatus)} · {monitorExplanation}
+              Monitoring: {getMonitorStatusLabel(discovery.monitorStatus)}
             </div>
           )}
         </div>

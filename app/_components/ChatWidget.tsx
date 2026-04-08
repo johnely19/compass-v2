@@ -30,10 +30,10 @@ const TOOL_LABELS: Record<string, string> = {
   'lookup-place': '📍 Looking up a place…',
   'save-discovery': '💾 Saving discovery…',
   'add-to-compass': '🧭 Adding to your Compass…',
+  'edit-discovery': '✏️ Updating a place…',
+  'remove-discovery': '🗑️ Removing a place…',
   'update-trip': '✈️ Updating trip…',
   'create-context': '📋 Creating context…',
-  'edit-discovery': '✏️ Editing discovery…',
-  'remove-discovery': '🗑️ Removing discovery…',
 };
 
 function formatTime(isoString: string): string {
@@ -124,6 +124,57 @@ export default function ChatWidget() {
       window.dispatchEvent(new CustomEvent('compass-place-halo', {
         detail: { placeId: null },
       }));
+    };
+    window.addEventListener(CHAT_TARGET_EVENT, handleTarget);
+    window.addEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    return () => {
+      window.removeEventListener(CHAT_TARGET_EVENT, handleTarget);
+      window.removeEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
+    };
+  }, []);
+
+  // Listen for 'new trip' from context switcher — prefill chat with trip prompt
+  useEffect(() => {
+    const handler = () => {
+      setInput('Plan a new trip to ');
+      setChatExpanded(true);
+      setTimeout(() => inputRef.current?.focus(), 100);
+    };
+    window.addEventListener('compass-new-trip', handler);
+    return () => window.removeEventListener('compass-new-trip', handler);
+  }, []);
+
+  // Listen for prefill-chat events from empty state prompts
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<{ text: string }>).detail;
+      if (detail?.text) {
+        setInput(detail.text);
+        setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+      }
+    };
+    window.addEventListener('compass-prefill-chat', handler);
+    return () => window.removeEventListener('compass-prefill-chat', handler);
+  }, []);
+
+  // Listen for chat target events (card-level targeting)
+  useEffect(() => {
+    const handleTarget = (e: Event) => {
+      const target = (e as CustomEvent<ChatTarget>).detail;
+      if (target) {
+        setChatTarget(target);
+        chatTargetRef.current = target;
+        // Also set the context key
+        activeContextKeyRef.current = target.contextKey;
+        // Expand chat and focus input
+        setChatExpanded(true);
+        setTimeout(() => inputRef.current?.focus(), 100);
+      }
+    };
+    const handleClear = () => {
+      setChatTarget(null);
+      chatTargetRef.current = null;
     };
     window.addEventListener(CHAT_TARGET_EVENT, handleTarget);
     window.addEventListener(CHAT_TARGET_CLEAR_EVENT, handleClear);
@@ -405,7 +456,7 @@ export default function ChatWidget() {
                 <div className={styles.chatEmptyIcon}>🧭</div>
                 <div className={styles.chatEmptyTitle}>Hey! I&apos;m your Compass Concierge.</div>
                 <div className={styles.chatEmptyText}>
-                  Ask me about restaurants, places to visit, or help planning your next trip.
+                  Ask me anything about restaurants, places to visit, or help planning your next trip.
                 </div>
               </div>
             )}
@@ -468,6 +519,24 @@ export default function ChatWidget() {
             )}
 
             <div ref={messagesEndRef} />
+          </div>
+        </div>
+      )}
+
+      {/* Target pill — shows what chat is scoped to */}
+      {targetPill && (
+        <div className={styles.chatTargetBar}>
+          <div className={styles.chatTargetPill}>
+            <span className={styles.chatTargetEmoji}>{targetPill.emoji}</span>
+            <span className={styles.chatTargetLabel}>Chatting about <strong>{targetPill.label}</strong></span>
+            <button
+              type="button"
+              className={styles.chatTargetClear}
+              onClick={clearChatTarget}
+              aria-label="Clear chat target"
+            >
+              ✕
+            </button>
           </div>
         </div>
       )}
