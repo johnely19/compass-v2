@@ -14,6 +14,8 @@
 
 import { list, put } from '@vercel/blob';
 import type { MonitorDimension, MonitorReason, MonitorStatus } from './types';
+import { scoreObservation, summarizeEntrySignificance } from './observation-significance';
+import type { SignificanceLevel, SignificanceContext, EntrySignificanceSummary } from './observation-significance';
 
 const BLOB_PREFIX = 'users';
 
@@ -58,6 +60,12 @@ export interface MonitorObservation {
   changes: MonitorChangeKind[];
   /** Human-readable summary of changes */
   changeSummary?: string;
+  /** Significance level: critical / notable / routine / noise */
+  significanceLevel?: SignificanceLevel;
+  /** Numeric significance score (0–100) for sorting */
+  significanceScore?: number;
+  /** One-line explanation of why this observation matters */
+  significanceSummary?: string;
   /** New snapshot taken during this observation */
   state: ObservedState;
 }
@@ -93,6 +101,14 @@ export interface MonitorEntry {
   observations: MonitorObservation[];
   /** Summary of all detected changes across all observations */
   detectedChangeKinds: MonitorChangeKind[];
+  /** Peak significance level across all observations */
+  peakSignificanceLevel?: SignificanceLevel;
+  /** Peak significance score across all observations */
+  peakSignificanceScore?: number;
+  /** Latest observation significance summary */
+  latestSignificanceSummary?: string;
+  /** Whether any critical observation has occurred */
+  hasCriticalChange?: boolean;
 }
 
 export interface MonitorInventory {
@@ -204,9 +220,23 @@ export async function recordObservation(params: {
   // Detect changes between current and new state
   const changes: MonitorChangeKind[] = observation.changes ?? detectChanges(entry.currentState, observation.state);
 
+  // Score significance before building the full observation
+  const sigContext: SignificanceContext = {
+    monitorStatus: entry.monitorStatus,
+    monitorType: entry.monitorType,
+  };
+  const significance = scoreObservation({
+    observation: { ...observation, changes, state: observation.state, observedAt: observation.observedAt, source: observation.source },
+    previousState: entry.currentState,
+    context: sigContext,
+  });
+
   const fullObservation: MonitorObservation = {
     ...observation,
     changes,
+    significanceLevel: significance.level,
+    significanceScore: significance.score,
+    significanceSummary: significance.summary,
   };
 
   // Prepend (newest first), cap at limit
@@ -218,6 +248,17 @@ export async function recordObservation(params: {
   // Accumulate unique detected change kinds
   const allChanges = new Set([...entry.detectedChangeKinds, ...changes]);
   entry.detectedChangeKinds = Array.from(allChanges);
+
+  // Recompute entry-level significance summary
+  const entrySig = summarizeEntrySignificance({
+    observations: entry.observations,
+    baselineState: entry.baselineState,
+    context: sigContext,
+  });
+  entry.peakSignificanceLevel = entrySig.peakLevel;
+  entry.peakSignificanceScore = entrySig.peakScore;
+  entry.latestSignificanceSummary = entrySig.latestSummary;
+  entry.hasCriticalChange = entrySig.hasCritical;
 
   // Optionally set next check time
   if (nextCheckAt) {

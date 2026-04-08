@@ -167,6 +167,9 @@ interface RunResult {
   name: string;
   status: 'observed' | 'skipped-no-place-id' | 'skipped-fetch-failed';
   changes?: string[];
+  significanceLevel?: string;
+  significanceScore?: number;
+  significanceSummary?: string;
   nextCheckAt?: string;
 }
 
@@ -261,6 +264,9 @@ export async function POST(request: NextRequest) {
       name: entry.name,
       status: 'observed',
       changes: latestObs?.changes ?? [],
+      significanceLevel: latestObs?.significanceLevel,
+      significanceScore: latestObs?.significanceScore,
+      significanceSummary: latestObs?.significanceSummary,
       nextCheckAt: updated?.nextCheckAt,
     });
   }

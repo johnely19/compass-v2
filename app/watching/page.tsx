@@ -1,0 +1,155 @@
+import { notFound } from 'next/navigation';
+import { getCurrentUser } from '../_lib/user';
+import { getUserManifest, getUserDiscoveries } from '../_lib/user-data';
+import type { Context, Discovery } from '../_lib/types';
+import { isContextActive } from '../_lib/context-lifecycle';
+import { scoreDiscovery } from '../_lib/discovery-score';
+import { annotateDiscoveriesForMonitoring, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import { loadMonitorInventory } from '../_lib/monitor-inventory';
+import type { SignificanceLevel } from '../_lib/observation-significance';
+import { readFileSync, existsSync } from 'fs';
+import path from 'path';
+import type { UserManifest } from '../_lib/types';
+import WatchingClient from './WatchingClient';
+
+export const dynamic = 'force-dynamic';
+
+function loadLocalManifest(): UserManifest | null {
+  const p = path.join(process.cwd(), 'data', 'compass-manifest.json');
+  if (!existsSync(p)) return null;
+  try {
+    const raw = JSON.parse(readFileSync(p, 'utf8'));
+    return { contexts: raw.contexts ?? [], updatedAt: raw.updatedAt ?? '' };
+  } catch { return null; }
+}
+
+function loadLocalDiscoveries(): Discovery[] {
+  const p = path.join(process.cwd(), 'data', 'local-discoveries.json');
+  if (!existsSync(p)) return [];
+  try {
+    const raw = JSON.parse(readFileSync(p, 'utf8'));
+    return (Array.isArray(raw) ? raw : (raw.discoveries ?? [])) as Discovery[];
+  } catch { return []; }
+}
+
+export interface WatchItem {
+  id: string;
+  placeId?: string;
+  name: string;
+  city: string;
+  type: string;
+  contextKey: string;
+  contextLabel: string;
+  monitorStatus: string;
+  monitorType: string;
+  monitorCadence?: string;
+  monitorExplanation?: string;
+  monitorDimensions?: Array<{ key: string; label: string; description: string }>;
+  monitorSources?: Array<{ key: string; label: string; rationale: string }>;
+  monitorLastObservedAt?: string;
+  monitorNextCheckAt?: string;
+  dueNow: boolean;
+  /** Significance from observation history */
+  significanceLevel?: SignificanceLevel;
+  significanceScore?: number;
+  significanceSummary?: string;
+  hasCriticalChange?: boolean;
+  observationCount?: number;
+}
+
+export default async function WatchingPage() {
+  const user = await getCurrentUser();
+  if (!user) {
+    return (
+      <main className="page">
+        <div className="page-header">
+          <h1>Watching</h1>
+          <p>Sign in to see your monitoring queue.</p>
+        </div>
+      </main>
+    );
+  }
+
+  const [blobManifest, discoveriesData] = await Promise.all([
+    getUserManifest(user.id),
+    getUserDiscoveries(user.id),
+  ]);
+
+  const blobContexts = blobManifest?.contexts ?? [];
+  const localContexts = user.isOwner ? (loadLocalManifest()?.contexts ?? []) : [];
+  const blobKeys = new Set(blobContexts.map(c => c.key));
+  const mergedContexts = [
+    ...blobContexts,
+    ...localContexts.filter(c => !blobKeys.has(c.key)),
+  ];
+  const contexts: Context[] = mergedContexts.filter(c => isContextActive(c));
+
+  const blobDiscoveries = discoveriesData?.discoveries ?? [];
+  const localDisc = user.isOwner ? loadLocalDiscoveries() : [];
+  const blobIds = new Set(blobDiscoveries.map(d => d.id));
+  const allDiscoveries = [
+    ...blobDiscoveries,
+    ...localDisc.filter(d => !blobIds.has(d.id)),
+  ];
+
+  const fullyBuilt = allDiscoveries.filter(
+    d => d.name && (d.address || d.description || d.rating)
+  );
+
+  const contextByKey = new Map(contexts.map(c => [c.key, c]));
+
+  const [annotated, inventory] = await Promise.all([
+    annotateDiscoveriesForMonitoring({
+      userId: user.id,
+      discoveries: fullyBuilt,
+      contexts,
+    }),
+    loadMonitorInventory(user.id),
+  ]);
+
+  // Index inventory entries by id and discoveryId for quick lookup
+  const inventoryById = new Map(
+    inventory.entries.flatMap(e => [
+      [e.id, e],
+      [e.discoveryId, e],
+    ]),
+  );
+
+  const watchItems: WatchItem[] = annotated
+    .filter(d => d.monitorStatus && d.monitorStatus !== 'none')
+    .map(d => {
+      const ctx = contextByKey.get(d.contextKey);
+      const inventoryEntry = inventoryById.get(d.place_id ?? d.id) ?? inventoryById.get(d.id);
+      return {
+        id: d.id,
+        placeId: d.place_id,
+        name: d.name,
+        city: d.city,
+        type: d.type,
+        contextKey: d.contextKey,
+        contextLabel: ctx?.label ?? d.contextKey,
+        monitorStatus: d.monitorStatus ?? 'candidate',
+        monitorType: d.monitorType ?? 'general',
+        monitorCadence: d.monitorCadence,
+        monitorExplanation: d.monitorExplanation,
+        monitorDimensions: d.monitorDimensions,
+        monitorSources: d.monitorSources,
+        monitorLastObservedAt: d.monitorLastObservedAt,
+        monitorNextCheckAt: d.monitorNextCheckAt,
+        dueNow: Boolean(d.monitorDueNow),
+        // Significance from durable inventory
+        significanceLevel: inventoryEntry?.peakSignificanceLevel,
+        significanceScore: inventoryEntry?.peakSignificanceScore,
+        significanceSummary: inventoryEntry?.latestSignificanceSummary,
+        hasCriticalChange: inventoryEntry?.hasCriticalChange,
+        observationCount: inventoryEntry?.observations?.length ?? 0,
+      };
+    })
+    .sort((a, b) => {
+      if (a.dueNow !== b.dueNow) return a.dueNow ? -1 : 1;
+      const rank: Record<string, number> = { priority: 0, active: 1, candidate: 2 };
+      return (rank[a.monitorStatus] ?? 9) - (rank[b.monitorStatus] ?? 9);
+    });
+
+  return <WatchingClient userId={user.id} items={watchItems} />;
+}
