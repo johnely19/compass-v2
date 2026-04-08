@@ -6,6 +6,7 @@
 
 import { put, list } from '@vercel/blob';
 import { getUserData, setUserData } from '../../user-data';
+import { promoteToInventory } from '../../monitor-inventory';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
@@ -110,6 +111,27 @@ export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): 
     await saveTriageStore(userId, store);
 
     console.log(`[save_discovery] ✅ Saved "${input.name}" to context "${input.contextKey}" for user ${userId}`);
+
+    // Auto-promote saved discoveries to the monitor inventory (best-effort)
+    if (input.place_id) {
+      promoteToInventory({
+        userId,
+        entry: {
+          id: input.place_id,
+          place_id: input.place_id,
+          discoveryId,
+          name: input.name,
+          city: resolvedCity,
+          address: input.address,
+          type: input.type || 'restaurant',
+          contextKey: input.contextKey,
+          monitorStatus: 'active' as const,
+          monitorType: 'general',
+          monitorReasons: ['saved' as const],
+          monitorDimensions: [],
+        },
+      }).catch(err => console.warn('[save_discovery] Monitor promote failed (best-effort):', err));
+    }
 
     const compassUrl = input.place_id
       ? `https://compass-ai-agent.vercel.app/placecards/${input.place_id}`
