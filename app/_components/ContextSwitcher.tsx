@@ -107,6 +107,15 @@ export default function ContextSwitcher({ contexts, activeKey, onSelect }: Conte
               </div>
             );
           })}
+          <button
+            className="ctx-switcher-new-trip"
+            onClick={() => {
+              window.dispatchEvent(new CustomEvent('compass-new-trip'));
+              setOpen(false);
+            }}
+          >
+            + New Trip
+          </button>
         </div>
       )}
     </div>

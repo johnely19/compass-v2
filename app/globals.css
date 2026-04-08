@@ -6756,6 +6756,8 @@ nextjs-portal { display: none !important; }
 
 /* ---- Focused Page Layout ---- */
 .focused-page {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 80px; /* space for pinned chat input */
 }
 
@@ -6852,6 +6854,7 @@ nextjs-portal { display: none !important; }
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
+  flex-grow: 1;
 }
 
 /* ---- Focused Hero (context header) ---- */
@@ -6929,10 +6932,47 @@ nextjs-portal { display: none !important; }
 
 /* ---- Empty Discoveries ---- */
 .focused-empty-discoveries {
-  padding: var(--space-xl) var(--space-md);
+  padding: var(--space-lg) var(--space-md);
   text-align: center;
   border: 1px dashed var(--card-border);
   border-radius: var(--radius-md);
+  background: var(--surface-subtle, rgba(0,0,0,0.02));
+}
+
+.focused-empty-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 4px;
+}
+
+.focused-empty-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0 0 10px;
+}
+
+.focused-empty-prompts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.focused-empty-prompt {
+  display: inline-block;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  background: var(--surface, rgba(255,255,255,0.8));
+  border: 1px solid var(--card-border);
+  border-radius: 20px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.focused-empty-prompt:hover {
+  background: var(--surface-hover, rgba(0,0,0,0.04));
 }
 
 /* ---- Context Switcher ---- */
