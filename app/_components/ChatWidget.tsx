@@ -30,6 +30,8 @@ const TOOL_LABELS: Record<string, string> = {
   'lookup-place': '📍 Looking up a place…',
   'save-discovery': '💾 Saving discovery…',
   'add-to-compass': '🧭 Adding to your Compass…',
+  'edit-discovery': '✏️ Updating a place…',
+  'remove-discovery': '🗑️ Removing a place…',
   'update-trip': '✈️ Updating trip…',
   'create-context': '📋 Creating context…',
 };
@@ -156,7 +158,7 @@ export default function ChatWidget() {
             }
 
             if (parsed.toolResult && typeof window !== 'undefined') {
-              if (['add-to-compass', 'save-discovery'].includes(parsed.toolResult)) {
+              if (['add-to-compass', 'save-discovery', 'edit-discovery', 'remove-discovery'].includes(parsed.toolResult)) {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
               }
             }
