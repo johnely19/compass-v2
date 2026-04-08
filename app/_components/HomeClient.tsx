@@ -215,6 +215,7 @@ export default function HomeClient({
 
   // Listen for new trip creation from chat and mark the key as emerging
   useEffect(() => {
+    const timers: ReturnType<typeof setTimeout>[] = [];
     const handler = (e: Event) => {
       const detail = (e as CustomEvent<{ key: string }>).detail;
       if (!detail?.key) return;
@@ -223,21 +224,26 @@ export default function HomeClient({
         next.add(detail.key);
         return next;
       });
-      // Remove the emerging flag after the animation completes (600ms animation + buffer)
-      setTimeout(() => {
+      // Remove the emerging flag after the animation completes (700ms animation + buffer)
+      const timer = setTimeout(() => {
         setEmergingKeys(prev => {
           const next = new Set(prev);
           next.delete(detail.key);
           return next;
         });
       }, 1200);
+      timers.push(timer);
     };
     window.addEventListener('compass-trip-created', handler);
-    return () => window.removeEventListener('compass-trip-created', handler);
+    return () => {
+      window.removeEventListener('compass-trip-created', handler);
+      timers.forEach(clearTimeout);
+    };
   }, []);
 
   // Listen for trip attribute attachments from chat
   useEffect(() => {
+    const timers: ReturnType<typeof setTimeout>[] = [];
     const handler = (e: Event) => {
       const detail = (e as CustomEvent<{ key: string; attributes: Array<{ field: string; value: string }> }>).detail;
       if (!detail?.key || !detail.attributes?.length) return;
@@ -246,16 +252,20 @@ export default function HomeClient({
         [detail.key]: detail.attributes,
       }));
       // Clear attribute pills after animation
-      setTimeout(() => {
+      const timer = setTimeout(() => {
         setAttachingAttrs(prev => {
           const next = { ...prev };
           delete next[detail.key];
           return next;
         });
       }, 2500);
+      timers.push(timer);
     };
     window.addEventListener('compass-trip-attributes', handler);
-    return () => window.removeEventListener('compass-trip-attributes', handler);
+    return () => {
+      window.removeEventListener('compass-trip-attributes', handler);
+      timers.forEach(clearTimeout);
+    };
   }, []);
 
   // Refresh homepage immediately when chat or other client actions mutate Compass data.
