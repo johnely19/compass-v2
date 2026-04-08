@@ -327,6 +327,8 @@ export default function HomeClient({
       });
       // Switch to the newly created context
       setActiveKey(detail.key);
+      // Refresh server data to load the new context
+      router.refresh();
       // Remove the emerging flag after the animation completes (700ms animation + buffer)
       const timer = setTimeout(() => {
         setEmergingKeys(prev => {
@@ -342,7 +344,7 @@ export default function HomeClient({
       window.removeEventListener('compass-trip-created', handler);
       timers.forEach(clearTimeout);
     };
-  }, []);
+  }, [router]);
 
   // Listen for trip attribute attachments from chat
   useEffect(() => {
