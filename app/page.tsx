@@ -11,6 +11,7 @@ import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
 import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
 import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
+import { bulkPromoteFromAnnotated } from './_lib/monitor-inventory';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -199,6 +200,9 @@ export default async function HomePage() {
       .sort((a, b) => (b.rankingScore ?? scoreDiscovery(b).total) - (a.rankingScore ?? scoreDiscovery(a).total));
     byContext.set(ctxKey, ranked);
   }
+
+  // Auto-promote active/priority monitored places into the durable inventory (fire-and-forget)
+  bulkPromoteFromAnnotated(user.id, monitoredDiscoveries);
 
   // Hide contexts with no discoveries in their final ranked bucket (homepage only).
   // Contexts remain accessible in /review and other pages — this suppression is
