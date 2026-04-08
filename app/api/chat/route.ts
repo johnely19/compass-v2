@@ -8,6 +8,10 @@ import { runToolCall, type ToolName } from '../../_lib/chat/tools/runner';
 import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
 import type { ChatMessage, Discovery } from '../../_lib/types';
 
+// Vercel serverless config — tool loops need time
+export const maxDuration = 60;
+export const dynamic = 'force-dynamic';
+
 /** Maximum message length to prevent abuse */
 const MAX_MESSAGE_LENGTH = 4000;
 

@@ -26,10 +26,13 @@ export interface AddToCompassInput {
  */
 async function fetchPhotosForPlace(placeId: string): Promise<PlaceImage[] | null> {
   try {
+    const baseUrl = process.env.NEXT_PUBLIC_APP_URL || process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000';
     const controller = new AbortController();
     const timeoutId = setTimeout(() => controller.abort(), 8000);
 
-    const res = await fetch('/api/internal/fetch-photo', {
+    const res = await fetch(`${baseUrl}/api/internal/fetch-photo`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ placeId, count: 6 }),
