@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJb1MgBMJv5kcROFQGTJ9L6SA",
+        "name": "Brasserie Fouquet's Paris",
+        "address": "99 Av. des Champs-Élysées, 75008 Paris",
+        "category": "brasserie",
+        "rating": 4.3,
+        "why": "The most famous terrace on the Champs-Élysées. Founded 1899, historic monument since 1988. The grand brasserie that anchors the street's social theatre — Jacobs would see it as the edge institution that brings civic life to the boulevard.",
+        "id": "place-ce-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJgfoVfI5v5kcRddBtmdEkm18",
+        "name": "Restaurant LE Drugstore",
+        "address": "133 Av. des Champs-Élysées, 75008 Paris",
+        "category": "brasserie",
+        "rating": 4.6,
+        "why": "The Drugstore Publicis — landmark 1960s building by Michele Saee at the Arc de Triomphe end. Brasserie, cocktail bar, pharmacy, bookshop. Jacobs' active mixed-use edge condition in one address.",
+        "id": "place-ce-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJUWoNhMNv5kcRV_ttmJ0DYFw",
+        "name": "L'Alsace",
+        "address": "39 Av. des Champs-Élysées, 75008 Paris",
+        "category": "brasserie",
+        "rating": 4.5,
+        "why": "Open 24 hours — one of the great Alsatian brasseries of Paris, on the lower half of the Champs. The street's nocturnal dimension: when the boulevard belongs to workers, insomniacs, and tourists who walk it for the light.",
+        "id": "place-ce-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "France",
-    "highlights": []
+    "highlights": ["Brasserie Fouquet's Paris", "Restaurant LE Drugstore", "L'Alsace"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }

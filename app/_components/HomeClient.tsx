@@ -29,12 +29,32 @@ interface MonitoringQueueItem {
   observationCount?: number;
 }
 
+interface DigestItemProp {
+  entryId: string;
+  name: string;
+  city: string;
+  monitorType: string;
+  contextKey: string;
+  significanceLevel: string;
+  significanceSummary: string;
+  changes: string[];
+  stateContext?: {
+    rating?: number;
+    previousRating?: number;
+    operationalStatus?: string;
+    previousOperationalStatus?: string;
+  };
+  placeId?: string;
+}
+
 interface HomeClientProps {
   userId: string;
   contexts: Context[];
   discoveryMap: Record<string, Discovery[]>;
   contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
   monitoringQueue?: MonitoringQueueItem[];
+  digestTeaser?: string | null;
+  digestItems?: DigestItemProp[];
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -217,6 +237,8 @@ export default function HomeClient({
   discoveryMap,
   contextMeta = {},
   monitoringQueue = [],
+  digestTeaser,
+  digestItems = [],
 }: HomeClientProps) {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -492,6 +514,28 @@ export default function HomeClient({
         })()}
 
         <BriefingBanner userId={userId} />
+
+        {/* Significance digest banner — shows when monitored places have recent notable changes */}
+        {digestTeaser && digestItems.length > 0 && (
+          <div className="digest-banner">
+            <div className="digest-banner-teaser">{digestTeaser}</div>
+            <ul className="digest-banner-list">
+              {digestItems.slice(0, 3).map(item => {
+                const href = `/placecards/${item.placeId || item.entryId}?context=${encodeURIComponent(item.contextKey)}`;
+                return (
+                  <li key={item.entryId} className={`digest-banner-item digest-banner-sig-${item.significanceLevel}`}>
+                    <Link href={href} className="digest-banner-name">{item.name}</Link>
+                    <span className="digest-banner-detail">
+                      {item.stateContext?.previousRating !== undefined && item.stateContext?.rating !== undefined
+                        ? `${item.stateContext.previousRating} \u2192 ${item.stateContext.rating}`
+                        : item.significanceSummary}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
 
         <MonitoringQueueTray items={monitoringQueue.filter(i => i.contextKey === ctx.key)} />
 

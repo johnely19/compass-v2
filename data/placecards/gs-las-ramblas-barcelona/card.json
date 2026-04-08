@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJLbFaN_aipBIRtZhWRrruSFg",
+        "name": "Bar Quiosc Modern",
+        "address": "La Rambla, Boqueria section, Barcelona",
+        "category": "bar",
+        "rating": 4.8,
+        "why": "One of the original kiosk bars built into the median promenade itself — the edge condition Jacobs admires most. Sit here and you ARE La Rambla.",
+        "id": "place-las-ramblas-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJb0LaPa6jpBIR8lHIpvuZiX8",
+        "name": "Bar Boqueria",
+        "address": "Mercat de la Boqueria, La Rambla 91, Barcelona",
+        "category": "bar",
+        "rating": 4.8,
+        "why": "Inside La Boqueria market — the great market hall that anchors the most famous section of La Rambla. The covered market as edge institution, drawing street life inward.",
+        "id": "place-las-ramblas-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJDRdE6veipBIRw42KcA36Q0I",
+        "name": "Mític Bar",
+        "address": "La Rambla 91, Mercat de la Boqueria, Barcelona",
+        "category": "bar",
+        "rating": 4.7,
+        "why": "Another market bar at the Boqueria stalls. The ritual of eating at the market counter while the promenade flows outside is one of Barcelona's defining urban pleasures.",
+        "id": "place-las-ramblas-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Spain",
-    "highlights": []
+    "highlights": ["Bar Quiosc Modern", "Bar Boqueria", "Mític Bar"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }

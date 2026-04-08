@@ -14,6 +14,7 @@ import { annotateDiscoveriesForMonitoring } from './_lib/discovery-monitoring';
 import { bulkPromoteFromAnnotated, loadMonitorInventory } from './_lib/monitor-inventory';
 import type { MonitorChangeKind } from './_lib/monitor-inventory';
 import type { SignificanceLevel } from './_lib/observation-significance';
+import { buildHomepageDigest } from './_lib/monitor-digest';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
@@ -139,7 +140,12 @@ export default async function HomePage() {
     const matched = enrichedDiscoveries.filter(d => {
       // Type-context compatibility check (e.g. no galleries in dinner outings)
       if (!isTypeCompatible(ctx.key, d.type)) return false;
+      // Exact match first
       if (d.contextKey === ctx.key) return true;
+      // Empty contextKey defaults to first context (typically the active trip)
+      if (!d.contextKey || d.contextKey === '') {
+        return ctx.key === contexts[0]?.key;
+      }
       // Fuzzy: slug contains or is contained by context slug
       const dSlug = d.contextKey.split(':').slice(1).join(':');
       return dSlug === ctxSlug || dSlug.includes(ctxSlug) || ctxSlug.includes(dSlug);
@@ -283,6 +289,9 @@ export default async function HomePage() {
       };
     });
 
+  // Build significance digest for recent changes banner
+  const homepageDigest = buildHomepageDigest(inventory);
+
   return (
     <HomeClient
       userId={user.id}
@@ -290,6 +299,8 @@ export default async function HomePage() {
       discoveryMap={Object.fromEntries(byContext)}
       contextMeta={contextMeta}
       monitoringQueue={monitoringQueue}
+      digestTeaser={homepageDigest.teaserText}
+      digestItems={homepageDigest.items}
     />
   );
 }

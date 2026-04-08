@@ -30,6 +30,32 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJN_AW9wt644kRqBK2oztOokI",
+        "name": "Buttermilk & Bourbon",
+        "address": "160 Commonwealth Ave, Boston, MA 02116",
+        "category": "restaurant",
+        "rating": 4.4,
+        "why": "Right on Commonwealth Ave in the heart of Back Bay. Southern food and cocktails in a brownstone storefront — the active ground floor that keeps Jacobs' great street fed and inhabited.",
+        "id": "place-ca-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJbxuswgR644kRlRCoQxZTZws",
+        "name": "Deuxave",
+        "address": "371 Commonwealth Ave, Boston, MA 02115",
+        "category": "restaurant",
+        "rating": 4.5,
+        "why": "Named for 2 Av — the address says it all. Fine dining in a brownstone on Commonwealth's mall section. Where the street dresses up; the kind of institution Jacobs sees anchoring a great boulevard's residential blocks.",
+        "id": "place-ca-2"
+      },
+      {
+        "type": "prose",
+        "title": "The Mall Statues",
+        "body": "Walk the central mall and look for the Leif Eriksson statue, the Patrick Collins memorial, and Samuel Eliot Morison seated on a boulder. These monuments break up the long axis and give the walker reasons to stop — exactly the punctuation Jacobs praises in great pedestrian corridors.",
+        "id": "place-ca-3"
       }
     ]
   },
@@ -38,6 +64,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "USA",
-    "highlights": []
+    "highlights": ["Buttermilk & Bourbon", "Deuxave", "Mall Statues Walk"],
+    "placesUpdatedAt": "2026-04-08T16:22:00.000Z"
   }
 }
