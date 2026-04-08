@@ -17,7 +17,8 @@ const MAX_MESSAGE_LENGTH = 4000;
 
 const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-20250514';
-const MAX_TOOL_ROUNDS = 5;
+const MAX_TOOL_ROUNDS = 3;
+const MAX_TOOL_TIME_MS = 45_000; // Stop tool loops before Vercel kills us
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -89,9 +90,20 @@ async function executeToolLoop(
   let fullText = '';
   let round = 0;
   let data: any = null;
+  const startTime = Date.now();
 
   while (round < MAX_TOOL_ROUNDS) {
     round++;
+
+    // Time budget check — stop before Vercel kills the function
+    if (Date.now() - startTime > MAX_TOOL_TIME_MS) {
+      console.warn(`[chat/tool-loop] Time budget exceeded at round ${round} (${Date.now() - startTime}ms)`);
+      controller.enqueue(encoder.encode(
+        `data: ${JSON.stringify({ content: "\n\n(I ran out of time on this turn — ask me to continue and I'll pick up where I left off!)", messageId })}\n\n`
+      ));
+      fullText += '\n\n(I ran out of time on this turn — ask me to continue and I\'ll pick up where I left off!)';
+      break;
+    }
 
     data = await callAnthropicSync(apiKey, systemPrompt, messages);
     if (!data) {
