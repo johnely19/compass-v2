@@ -152,9 +152,11 @@ async function executeToolLoop(
       console.log(`[chat/tool] Executing ${toolBlock.name} for user ${userId}:`, JSON.stringify(toolBlock.input).slice(0, 200));
     }
 
-    // Execute all tool calls in parallel for speed
-    const toolResults: any[] = await Promise.all(
-      toolUseBlocks.map(async (toolBlock: any) => {
+    // Execute tool calls SEQUENTIALLY to avoid Blob race conditions.
+    // Parallel adds cause read-modify-write conflicts where last write wins,
+    // losing earlier discoveries. Sequential is ~3s slower but correct.
+    const toolResults: any[] = [];
+    for (const toolBlock of toolUseBlocks) {
         const frontendToolName = mapToolName(toolBlock.name);
         try {
           const result = await runToolCall(
@@ -166,22 +168,21 @@ async function executeToolLoop(
           controller.enqueue(encoder.encode(
             `data: ${JSON.stringify({ toolResult: frontendToolName, messageId })}\n\n`
           ));
-          return {
+          toolResults.push({
             type: 'tool_result',
             tool_use_id: toolBlock.id,
             content: result,
-          };
+          });
         } catch (err) {
           console.error(`[chat/tool] Error executing ${toolBlock.name}:`, err);
-          return {
+          toolResults.push({
             type: 'tool_result',
             tool_use_id: toolBlock.id,
             content: `Error: ${err instanceof Error ? err.message : String(err)}`,
             is_error: true,
-          };
+          });
         }
-      })
-    );
+    }
 
     messages.push({ role: 'user', content: toolResults });
     // Continue to next round
