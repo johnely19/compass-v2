@@ -116,28 +116,52 @@ function buildObservedState(data: PlaceData): ObservedState {
   };
 }
 
-// ---- Cadence computation (mirrors discovery-monitoring.ts) ----
+// ---- Cadence computation ----
 
-function cadenceIntervalMs(monitorType: string, monitorStatus: string): number {
-  // Priority entries check more frequently
-  const isPriority = monitorStatus === 'priority';
+const DAY_MS = 24 * 60 * 60 * 1000;
 
-  // Type-based cadence defaults
+/**
+ * Base check interval by monitorType.
+ * Keys match Discovery['monitorType']: hospitality | stay | development | culture | general
+ */
+function baseIntervalMs(monitorType: string): number {
   const cadenceMap: Record<string, number> = {
-    'dining': 7 * 24 * 60 * 60 * 1000,          // weekly
-    'nightlife': 7 * 24 * 60 * 60 * 1000,        // weekly
-    'accommodation': 14 * 24 * 60 * 60 * 1000,   // bi-weekly
-    'cultural': 14 * 24 * 60 * 60 * 1000,        // bi-weekly
-    'experience': 14 * 24 * 60 * 60 * 1000,      // bi-weekly
-    'general': 14 * 24 * 60 * 60 * 1000,         // bi-weekly
+    'hospitality':  7 * DAY_MS,   // weekly — restaurants/bars change frequently
+    'stay':        14 * DAY_MS,   // bi-weekly — hotels/rentals
+    'development': 14 * DAY_MS,   // bi-weekly — construction timelines
+    'culture':     14 * DAY_MS,   // bi-weekly — museums/galleries
+    'general':     14 * DAY_MS,   // bi-weekly — default
   };
-
-  const base = cadenceMap[monitorType] ?? cadenceMap.general ?? 14 * 24 * 60 * 60 * 1000;
-  return isPriority ? Math.floor(base * 0.5) : base;
+  return cadenceMap[monitorType] ?? cadenceMap.general ?? 14 * DAY_MS;
 }
 
+/**
+ * Compute next check time for a monitor entry.
+ *
+ * Adaptive scheduling:
+ *  - critical significance → re-check in 2 days (something may still be changing)
+ *  - notable significance  → re-check in 5 days
+ *  - priority status       → halve the base cadence
+ *  - routine / noise       → use full base cadence
+ *
+ * This keeps critical/notable entries in tight review without burning quota
+ * on quiet entries.
+ */
 function computeNextCheckAt(entry: MonitorEntry, observedAt: string): string {
-  const intervalMs = cadenceIntervalMs(entry.monitorType, entry.monitorStatus);
+  const base = baseIntervalMs(entry.monitorType);
+  const latestObs = entry.observations?.[0];
+  const latestLevel = latestObs?.significanceLevel;
+
+  let intervalMs: number;
+  if (latestLevel === 'critical') {
+    intervalMs = 2 * DAY_MS;    // re-check soon — situation may still be developing
+  } else if (latestLevel === 'notable') {
+    intervalMs = 5 * DAY_MS;    // elevated cadence while something meaningful is happening
+  } else {
+    // priority status halves the regular cadence; otherwise use base
+    intervalMs = entry.monitorStatus === 'priority' ? Math.floor(base * 0.5) : base;
+  }
+
   const baseMs = new Date(observedAt).getTime();
   return new Date(baseMs + intervalMs).toISOString();
 }
