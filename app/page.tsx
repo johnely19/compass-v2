@@ -2,7 +2,7 @@ import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import Link from 'next/link';
 import { getCurrentUser } from './_lib/user';
-import { getUserManifest, getUserDiscoveries } from './_lib/user-data';
+import { getUserManifest, getDerivedUserDiscoveries } from './_lib/user-data';
 import type { Context, Discovery, UserManifest } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
 import { resolveImageUrl } from './_lib/image-url';
@@ -68,7 +68,7 @@ export default async function HomePage() {
   // Load user data from Blob, with local manifest as fallback
   const [blobManifest, discoveriesData] = await Promise.all([
     getUserManifest(user.id),
-    getUserDiscoveries(user.id),
+    getDerivedUserDiscoveries(user.id),
   ]);
 
   // Non-owner with no manifest → onboarding

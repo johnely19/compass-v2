@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { getCurrentUser } from '../../_lib/user';
-import { getUserDiscoveries } from '../../_lib/user-data';
+import { getDerivedUserDiscoveries } from '../../_lib/user-data';
 import { adaptCard } from '../../_lib/card-adapter';
 import { resolveImageUrl } from '../../_lib/image-url';
 import { PlaceCardStore } from '../../_lib/place-card-store';
@@ -110,7 +110,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
       const user = await getCurrentUser();
       let contextKey = contextFromUrl;
       if (user) {
-        const discData = await getUserDiscoveries(user.id);
+        const discData = await getDerivedUserDiscoveries(user.id);
         const match = discData?.discoveries?.find(
           d => d.place_id === placeId || d.id === placeId
         );
@@ -185,7 +185,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
   let contextKey = contextFromUrl;
   let discoveryData: Partial<Discovery> | undefined;
   if (user) {
-    const discData = await getUserDiscoveries(user.id);
+    const discData = await getDerivedUserDiscoveries(user.id);
     const match = discData?.discoveries?.find(d => d.place_id === placeId);
     if (match) {
       if (!contextKey) contextKey = match.contextKey;
