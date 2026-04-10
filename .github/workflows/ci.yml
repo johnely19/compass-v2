@@ -18,6 +18,15 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Run unit tests
+        run: |
+          TEST_FILES=$(ls tests/*.test.ts 2>/dev/null | tr '\n' ' ')
+          if [ -n "$TEST_FILES" ]; then
+            node --import tsx --test $TEST_FILES
+          else
+            echo "No unit test files found, skipping."
+          fi
+
       - name: Build
         run: npx next build
         env:
