@@ -4,8 +4,8 @@ const PAGES = ['/', '/placecards', '/hot', '/review', '/admin'];
 
 test.describe('Page load and console error tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Authenticate as the QA test user (has static fixture data — works in CI without Blob)
-    await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
+    // Auth is pre-seeded by global-setup.ts (compass-user cookie for qa-test-user)
+    // No explicit /u/... navigation needed here
   });
 
   for (const path of PAGES) {
