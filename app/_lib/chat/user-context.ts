@@ -3,7 +3,7 @@
  *
  * This replaces the old monolithic system prompt — the Concierge agent's
  * personality and tool definitions now live in OpenClaw's agent config.
- * We only need to inject who the user is, their preferences, and active contexts
+ * We only need to inject who the user is, their preferences, and known contexts
  * so the agent can personalize its responses.
  */
 
@@ -25,6 +25,50 @@ interface RecentDiscovery {
   name: string;
   type: string;
   city: string;
+}
+
+type RichContext = Context & Record<string, unknown>;
+
+function truncate(value: string, max = 160): string {
+  const normalized = value.replace(/\s+/g, ' ').trim();
+  if (normalized.length <= max) return normalized;
+  return `${normalized.slice(0, max - 1).trimEnd()}…`;
+}
+
+function isContextActive(context: Context): boolean {
+  if (context.status) return context.status === 'active';
+  return Boolean(context.active);
+}
+
+function summarizeContext(context: Context): string {
+  const raw = context as RichContext;
+  const status = typeof raw.status === 'string' && raw.status.length > 0
+    ? raw.status
+    : raw.active ? 'active' : 'inactive';
+  const bookingStatus = typeof raw.bookingStatus === 'string' ? raw.bookingStatus : '';
+  const facts = [
+    context.city ? `Location: ${context.city}` : '',
+    context.dates ? `Dates: ${context.dates}` : '',
+    context.focus?.length ? `Focus: ${context.focus.join(', ')}` : '',
+    bookingStatus ? `Booking: ${bookingStatus}` : '',
+  ].filter(Boolean);
+
+  const extras = [
+    raw.accommodation && typeof raw.accommodation === 'object'
+      ? `Accommodation: ${[
+          typeof (raw.accommodation as { name?: unknown }).name === 'string' ? (raw.accommodation as { name: string }).name : '',
+          typeof (raw.accommodation as { address?: unknown }).address === 'string' ? (raw.accommodation as { address: string }).address : '',
+        ].filter(Boolean).join(', ')}`
+      : '',
+    typeof raw.purpose === 'string' && raw.purpose.trim() ? `Purpose: ${truncate(raw.purpose)}` : '',
+    typeof raw.notes === 'string' && raw.notes.trim() ? `Notes: ${truncate(raw.notes)}` : '',
+  ].filter(Boolean);
+
+  return [
+    `- ${context.emoji || '📍'} ${context.label} [${context.type}, ${status}${bookingStatus ? `, booking: ${bookingStatus}` : ''}] [key: ${context.key}]`,
+    ...(facts.length > 0 ? [`  ${facts.join(' · ')}`] : []),
+    ...extras.slice(0, 2).map((extra) => `  ${extra}`),
+  ].join('\n');
 }
 
 export function buildUserContext(
@@ -53,17 +97,20 @@ export function buildUserContext(
     }
   }
 
-  // Active contexts (trips, outings, radars)
-  const activeContexts = manifest?.contexts?.filter((c: Context) => c.active) || [];
-  if (activeContexts.length > 0) {
-    const ctxLines = activeContexts.map((ctx: Context) => {
-      const dates = ctx.dates ? ` (${ctx.dates})` : '';
-      const focus = ctx.focus?.length ? ` — Focus: ${ctx.focus.join(', ')}` : '';
-      return `- ${ctx.emoji || '📍'} ${ctx.label}${dates}${focus}  [key: ${ctx.key}]`;
-    });
-    parts.push(`## Active Contexts\n${ctxLines.join('\n')}`);
+  const allContexts = manifest?.contexts || [];
+  if (allContexts.length > 0) {
+    const activeContexts = allContexts.filter(isContextActive);
+    const otherContexts = allContexts.filter((context) => !isContextActive(context));
+
+    if (activeContexts.length > 0) {
+      parts.push(`## Active Contexts\n${activeContexts.map(summarizeContext).join('\n')}`);
+    }
+
+    if (otherContexts.length > 0) {
+      parts.push(`## Other Known Contexts\n${otherContexts.map(summarizeContext).join('\n')}`);
+    }
   } else {
-    parts.push(`## Contexts\nNo active trips, outings, or radars.`);
+    parts.push(`## Contexts\nNo saved trips, outings, or radars.`);
   }
 
   // Recent discoveries
@@ -79,7 +126,7 @@ export function buildUserContext(
 
 When the user wants to plan or create a trip, outing, or radar, use the "create-context" tool.
 
-When the user mentions dates, city, focus areas, or accommodation for an existing trip, use the "update-trip" tool.
+When the user mentions dates, city, focus areas, accommodation, or other known trip details for an existing trip, use the "update-trip" tool.
 
 When you find or recommend places (restaurants, bars, cafes, etc.), use the "add-discovery" tool to save them to the user's radar or trip.
 
