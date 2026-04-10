@@ -1,0 +1,46 @@
+{
+  "discoveries": [
+    {
+      "id": "qa-bar-isabel",
+      "place_id": "ChIJJWqQJPc0K4gR8cIF0ZNyuQc",
+      "name": "Bar Isabel",
+      "city": "Toronto",
+      "type": "bar",
+      "rating": 4.5,
+      "address": "797 College St, Toronto, ON M6G 1C7",
+      "contextKey": "radar:toronto-experiences",
+      "why": "Intimate Spanish-inspired bar with exceptional natural wine and small plates. A College Street institution.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJJWqQJPc0K4gR8cIF0ZNyuQc/photos/1.jpg",
+      "discoveredAt": "2026-01-01T00:00:00.000Z",
+      "source": "fixture"
+    },
+    {
+      "id": "qa-alo",
+      "place_id": "ChIJryijc9s0K4gRG9aU7SDTXdA",
+      "name": "Alo Restaurant",
+      "city": "Toronto",
+      "type": "fine_dining_restaurant",
+      "rating": 4.6,
+      "address": "163 Spadina Ave, Toronto, ON M5V 2L6",
+      "contextKey": "radar:toronto-experiences",
+      "why": "Toronto's finest tasting menu. Multi-course French-inspired cuisine in a rooftop space above Spadina.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJryijc9s0K4gRG9aU7SDTXdA/photos/1.jpg",
+      "discoveredAt": "2026-01-01T00:00:00.000Z",
+      "source": "fixture"
+    },
+    {
+      "id": "qa-fat-choi",
+      "place_id": "ChIJASCo-jM1K4gRot-ElT8gbnM",
+      "name": "Fat Choi",
+      "city": "Toronto",
+      "type": "restaurant",
+      "rating": 4.6,
+      "address": "894 Dundas St W, Toronto, ON M6J 1V9",
+      "contextKey": "radar:toronto-experiences",
+      "why": "Hong Kong-style diner doing incredible congee and wonton noodle soup. Late-night Dundas staple.",
+      "heroImage": "https://m0xwjuazo5epn9u7.public.blob.vercel-storage.com/place-photos/ChIJASCo-jM1K4gRot-ElT8gbnM/photos/1-ZuSVrBRhpiztcim0ejfxLtCOKam2Li.jpg",
+      "discoveredAt": "2026-01-01T00:00:00.000Z",
+      "source": "fixture"
+    }
+  ]
+}

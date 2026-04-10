@@ -6,7 +6,8 @@
  */
 import { test, expect, type Page } from '@playwright/test';
 
-const TEST_USER = 'seb2679';
+// qa-test-user has static fixture data — works in CI without Blob token
+const TEST_USER = 'qa-test-user5506';
 
 /** Authenticate and navigate to homepage */
 async function loginAndGoHome(page: Page) {
@@ -91,13 +92,14 @@ test.describe('Context Switcher', () => {
   test('opens dropdown with available trips', async ({ page }) => {
     await loginAndGoHome(page);
 
-    // Click the context switcher
-    const switcher = page.locator('.ctx-switcher-button, [class*="ctx-switcher"] button').first();
+    // Click the context switcher trigger
+    const switcher = page.locator('.ctx-switcher-trigger, [class*="ctx-switcher-trigger"]').first();
+    await expect(switcher).toBeVisible({ timeout: 8000 });
     await switcher.click();
     await page.waitForTimeout(300);
 
     // Dropdown should be visible with at least one trip
-    const dropdown = page.locator('.ctx-switcher-dropdown, [class*="ctx-dropdown"], [class*="switcher-menu"]');
+    const dropdown = page.locator('.ctx-switcher-dropdown, [class*="ctx-switcher-dropdown"]');
     await expect(dropdown.first()).toBeVisible();
   });
 });
@@ -144,7 +146,9 @@ test.describe('Chat Functionality', () => {
 });
 
 test.describe('Trip Creation Flow', () => {
+  // Requires live AI API — skip in CI where ANTHROPIC_API_KEY is not available
   test('creating a trip via chat updates the homepage', async ({ page }) => {
+    test.skip(!!process.env.CI, 'Requires live AI API key — run locally only');
     await loginAndGoHome(page);
 
     // Remember initial trip title

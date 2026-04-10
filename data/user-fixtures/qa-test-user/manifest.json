@@ -1,0 +1,24 @@
+{
+  "contexts": [
+    {
+      "key": "radar:toronto-experiences",
+      "label": "Toronto Experiences",
+      "emoji": "🌆",
+      "type": "radar",
+      "city": "Toronto",
+      "focus": ["local gems", "new openings", "culture", "food"],
+      "active": true
+    },
+    {
+      "key": "trip:new-york-2026",
+      "label": "New York Trip",
+      "emoji": "✈️",
+      "type": "trip",
+      "city": "New York",
+      "dates": "May 2026",
+      "focus": ["food", "art", "music"],
+      "active": true
+    }
+  ],
+  "updatedAt": "2026-01-01T00:00:00.000Z"
+}

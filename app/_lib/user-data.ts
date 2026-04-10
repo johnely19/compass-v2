@@ -44,12 +44,35 @@ export async function getUserData<T extends UserDocType>(
     // List blobs matching this path
     const { blobs } = await list({ prefix: blobPath, limit: 1 });
     const blob = blobs[0];
-    if (!blob) return null;
+    if (!blob) {
+      // Filesystem fixture fallback — used when Blob is unavailable (CI, local dev without token)
+      return readUserFixture<T>(userId, docType);
+    }
 
     const res = await fetch(blob.url);
-    if (!res.ok) return null;
+    if (!res.ok) return readUserFixture<T>(userId, docType);
 
-    return (await res.json()) as UserDocMap[T];
+    try {
+      return (await res.json()) as UserDocMap[T];
+    } catch {
+      // Blob content is not valid JSON (e.g. stale 404 HTML) — fall back to fixture
+      return readUserFixture<T>(userId, docType);
+    }
+  } catch {
+    // Blob unavailable (no token, network error) — fall back to fixture
+    return readUserFixture<T>(userId, docType);
+  }
+}
+
+/**
+ * Read static fixture data for a user from data/user-fixtures/{userId}/{docType}.json.
+ * Used as a fallback when Vercel Blob is unavailable (CI, local dev without token).
+ */
+function readUserFixture<T extends UserDocType>(userId: string, docType: T): UserDocMap[T] | null {
+  try {
+    const fixturePath = path.join(process.cwd(), 'data', 'user-fixtures', userId, `${docType}.json`);
+    if (!existsSync(fixturePath)) return null;
+    return JSON.parse(readFileSync(fixturePath, 'utf8')) as UserDocMap[T];
   } catch {
     return null;
   }

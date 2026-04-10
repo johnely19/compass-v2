@@ -4,8 +4,8 @@ const PAGES = ['/', '/placecards', '/hot', '/review', '/admin'];
 
 test.describe('Page load and console error tests', () => {
   test.beforeEach(async ({ page }) => {
-    // Authenticate first by visiting /u/john2824
-    await page.goto('/u/john2824', { waitUntil: 'networkidle' });
+    // Authenticate as the QA test user (has static fixture data — works in CI without Blob)
+    await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
   });
 
   for (const path of PAGES) {
