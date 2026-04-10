@@ -367,6 +367,9 @@ export default function HomeClient({
       if (!detail?.key) return;
       if (contexts.some(c => c.key === detail.key)) {
         applyActiveKey(detail.key);
+        // Mirror manual context selection: broadcast immediately so
+        // chat-scoped UI stays aligned on multi-hop conversational switches.
+        broadcastActiveContext(detail.key);
       } else {
         pendingContextKeyRef.current = detail.key;
         // Persist immediately so a subsequent mount/hydration cycle
@@ -376,7 +379,7 @@ export default function HomeClient({
     };
     window.addEventListener('compass-chat-context-switch', handler);
     return () => window.removeEventListener('compass-chat-context-switch', handler);
-  }, [contexts, applyActiveKey]);
+  }, [contexts, applyActiveKey, broadcastActiveContext]);
 
   // Triage change listener
   useEffect(() => {

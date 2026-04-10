@@ -112,6 +112,25 @@ function initialState(): SwitchState {
 }
 
 // ---------------------------------------------------------------------------
+// Tiny helper modelling ChatWidget's toolResult -> switch-event forwarding.
+// The key regression for #289 is that "already on this key" dedupe is unsafe:
+// the ref can drift ahead of actual homepage state, so the event still needs
+// to fire to repair the UI on a return hop.
+// ---------------------------------------------------------------------------
+function forwardToolResultContextKey(
+  refKey: string | null,
+  parsedContextKey: string | undefined,
+): { nextRefKey: string | null; dispatchedKeys: string[] } {
+  if (!parsedContextKey) {
+    return { nextRefKey: refKey, dispatchedKeys: [] };
+  }
+  return {
+    nextRefKey: parsedContextKey,
+    dispatchedKeys: [parsedContextKey],
+  };
+}
+
+// ---------------------------------------------------------------------------
 describe('route.resolveTargetContextKey', () => {
   test('create_context derives key from type + label (matches tool slug)', () => {
     const key = resolveTargetContextKey('create_context', { type: 'trip', label: 'Barcelona November 2026' });
@@ -252,5 +271,31 @@ describe('HomeClient chat switch reducer (issue #287)', () => {
     assert.equal(s.activeKey, 'trip:c');
     // Final localStorage reflects the last switch.
     assert.equal(s.localStorage, 'trip:c');
+  });
+});
+
+// ---------------------------------------------------------------------------
+describe('ChatWidget toolResult forwarding (issue #289)', () => {
+  test('re-emits a switch event even when the local ref already matches the target key', () => {
+    const result = forwardToolResultContextKey('trip:nyc-solo-trip', 'trip:nyc-solo-trip');
+    assert.equal(result.nextRefKey, 'trip:nyc-solo-trip');
+    assert.deepEqual(result.dispatchedKeys, ['trip:nyc-solo-trip']);
+  });
+
+  test('multi-hop existing-trip switches forward every hop in order', () => {
+    let refKey: string | null = 'trip:nyc-solo-trip';
+    const dispatched: string[] = [];
+
+    for (const hop of ['trip:ontario-cottage-july-2026', 'trip:nyc-solo-trip']) {
+      const result = forwardToolResultContextKey(refKey, hop);
+      refKey = result.nextRefKey;
+      dispatched.push(...result.dispatchedKeys);
+    }
+
+    assert.equal(refKey, 'trip:nyc-solo-trip');
+    assert.deepEqual(dispatched, [
+      'trip:ontario-cottage-july-2026',
+      'trip:nyc-solo-trip',
+    ]);
   });
 });
