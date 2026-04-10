@@ -34,6 +34,7 @@ const TOOL_LABELS: Record<string, string> = {
   'remove-discovery': '🗑️ Removing a place…',
   'update-trip': '✈️ Updating trip…',
   'create-context': '📋 Creating context…',
+  'set-active-context': '🎯 Focusing context…',
 };
 
 function formatTime(isoString: string): string {
@@ -250,7 +251,12 @@ export default function ChatWidget() {
               if (['add-to-compass', 'save-discovery', 'edit-discovery', 'remove-discovery'].includes(parsed.toolResult)) {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
               }
-              // Auto-switch homepage when tool targets a different context
+              // Auto-switch homepage whenever a tool targets a specific
+              // context. This is the deterministic signal for both the
+              // existing-trip flow (add-to-compass, update-trip,
+              // edit-discovery, save-discovery, set-active-context) and
+              // the new-trip flow (create-context, where the route
+              // derives the key from the tool input).
               if (parsed.contextKey && parsed.contextKey !== activeContextKeyRef.current) {
                 activeContextKeyRef.current = parsed.contextKey;
                 window.dispatchEvent(new CustomEvent('compass-chat-context-switch', {

@@ -267,7 +267,13 @@ export default async function HomePage() {
     .sort((a, b) => {
       if (a.monitorDueNow !== b.monitorDueNow) return a.monitorDueNow ? -1 : 1;
       const rank: Record<string, number> = { priority: 0, active: 1, candidate: 2 };
-      return (rank[a.monitorStatus ?? 'candidate'] ?? 9) - (rank[b.monitorStatus ?? 'candidate'] ?? 9);
+      const statusDiff = (rank[a.monitorStatus ?? 'candidate'] ?? 9) - (rank[b.monitorStatus ?? 'candidate'] ?? 9);
+      if (statusDiff !== 0) return statusDiff;
+      // Within same status group: critical/notable significance first
+      const sigRank: Record<string, number> = { critical: 3, notable: 2, routine: 1, noise: 0 };
+      const aInv = inventoryById.get(a.place_id ?? a.id) ?? inventoryById.get(a.id);
+      const bInv = inventoryById.get(b.place_id ?? b.id) ?? inventoryById.get(b.id);
+      return (sigRank[bInv?.peakSignificanceLevel ?? 'noise'] ?? 0) - (sigRank[aInv?.peakSignificanceLevel ?? 'noise'] ?? 0);
     })
     .slice(0, 8)
     .map(d => {

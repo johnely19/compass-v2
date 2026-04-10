@@ -2355,6 +2355,13 @@ a:hover {
   color: #7c3aed;
 }
 
+.monitoring-tray-count-note {
+  font-size: 0.72rem;
+  color: var(--text-muted, #8a857c);
+  padding: 0.2rem 0.1rem 0.3rem;
+  list-style: none;
+}
+
 .monitoring-tray-toggle {
   margin-top: 8px;
   background: none;
@@ -6774,6 +6781,26 @@ nextjs-portal { display: none !important; }
 
 .sig-label {
   line-height: 1.3;
+}
+
+.sig-source {
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.05rem 0.3rem;
+  border-radius: 3px;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.sig-source-web {
+  background: rgba(99, 102, 241, 0.12);
+  color: #4f46e5;
+}
+
+.sig-source-places {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
 }
 
 .watch-row-dims {

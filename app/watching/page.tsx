@@ -55,6 +55,8 @@ export interface WatchItem {
   significanceSummary?: string;
   hasCriticalChange?: boolean;
   observationCount?: number;
+  /** Source of the latest notable/critical observation ('google-places' | 'web-search' | 'manual') */
+  latestSignificantSource?: string;
 }
 
 export default async function WatchingPage() {
@@ -143,12 +145,19 @@ export default async function WatchingPage() {
         significanceSummary: inventoryEntry?.latestSignificanceSummary,
         hasCriticalChange: inventoryEntry?.hasCriticalChange,
         observationCount: inventoryEntry?.observations?.length ?? 0,
+        // Source of the latest observation that had notable/critical significance
+        latestSignificantSource: inventoryEntry?.observations?.find(
+          o => o.significanceLevel === 'critical' || o.significanceLevel === 'notable'
+        )?.source,
       };
     })
     .sort((a, b) => {
       if (a.dueNow !== b.dueNow) return a.dueNow ? -1 : 1;
       const rank: Record<string, number> = { priority: 0, active: 1, candidate: 2 };
-      return (rank[a.monitorStatus] ?? 9) - (rank[b.monitorStatus] ?? 9);
+      const statusDiff = (rank[a.monitorStatus] ?? 9) - (rank[b.monitorStatus] ?? 9);
+      if (statusDiff !== 0) return statusDiff;
+      // Within same status group: sort by significance score descending (highest significance first)
+      return (b.significanceScore ?? 0) - (a.significanceScore ?? 0);
     });
 
   return <WatchingClient userId={user.id} items={watchItems} />;

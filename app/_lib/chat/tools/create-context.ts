@@ -16,13 +16,25 @@ export interface CreateContextInput {
   setActive?: boolean;      // whether to mark this context active (default: true)
 }
 
-function slugify(label: string): string {
+export function slugifyContextLabel(label: string): string {
   return label
     .toLowerCase()
     .replace(/[^a-z0-9\s-]/g, '')
     .trim()
     .replace(/\s+/g, '-')
     .slice(0, 40);
+}
+
+// Deprecated local alias retained for clarity at the call site.
+const slugify = slugifyContextLabel;
+
+/**
+ * Compute the context key that `createContext` will use for a given input.
+ * Exposed so callers (e.g. the chat route SSE layer) can predict and forward
+ * the target contextKey for new-trip auto-switching.
+ */
+export function computeContextKey(input: { type: string; label: string }): string {
+  return `${input.type}:${slugifyContextLabel(input.label)}`;
 }
 
 function defaultEmoji(type: ContextType, city?: string): string {

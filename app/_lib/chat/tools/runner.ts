@@ -10,6 +10,7 @@ import { editDiscovery, type EditDiscoveryInput } from './edit-discovery';
 import { removeDiscovery, type RemoveDiscoveryInput } from './remove-discovery';
 import { updateTrip, type UpdateTripInput } from './update-trip';
 import { createContext, type CreateContextInput } from './create-context';
+import { setActiveContext, type SetActiveContextInput } from './set-active-context';
 
 export type ToolName =
   | 'web_search'
@@ -19,7 +20,8 @@ export type ToolName =
   | 'edit_discovery'
   | 'remove_discovery'
   | 'update_trip'
-  | 'create_context';
+  | 'create_context'
+  | 'set_active_context';
 
 export type ToolInput =
   | { query: string }
@@ -28,7 +30,8 @@ export type ToolInput =
   | EditDiscoveryInput
   | RemoveDiscoveryInput
   | UpdateTripInput
-  | CreateContextInput;
+  | CreateContextInput
+  | SetActiveContextInput;
 
 /**
  * Execute a tool call by name.
@@ -59,6 +62,8 @@ export async function runToolCall(
       return updateTrip(userId, input as unknown as UpdateTripInput);
     case 'create_context':
       return createContext(userId, input as unknown as CreateContextInput);
+    case 'set_active_context':
+      return setActiveContext(userId, input as unknown as SetActiveContextInput);
     default:
       return `Unknown tool: ${name as string}`;
   }
