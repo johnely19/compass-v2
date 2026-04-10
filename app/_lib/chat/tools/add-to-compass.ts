@@ -8,6 +8,7 @@
  * a single turn. Places without photos are filtered from display until enriched.
  */
 
+import { buildPlaceCardUrl } from '../../app-url';
 import { setUserData, getUserData, getUserManifest } from '../../user-data';
 import type { Discovery, DiscoveryType, PlaceImage, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
@@ -127,6 +128,7 @@ async function enrichPhotosAsync(userId: string, discoveryId: string, placeId: s
 export async function addToCompass(
   userId: string,
   input: AddToCompassInput,
+  options: { appOrigin?: string } = {},
 ): Promise<string> {
   try {
     // Generate unique ID for the discovery
@@ -220,13 +222,19 @@ export async function addToCompass(
     }
 
     // Build response URLs
+    const compassUrl = input.place_id
+      ? buildPlaceCardUrl(input.place_id, {
+          appOrigin: options.appOrigin,
+          contextKey: resolvedContextKey || undefined,
+        })
+      : null;
     const mapsUrl = input.place_id
       ? `https://www.google.com/maps/place/?q=place_id:${input.place_id}`
       : (input.address
         ? `https://www.google.com/maps/search/${encodeURIComponent(input.name + ' ' + resolvedCity)}`
         : null);
 
-    return `✅ Added "${input.name}" to Compass!${mapsUrl ? ` [Map](${mapsUrl})` : ''} Photos will load shortly.`;
+    return `✅ Added "${input.name}" to Compass!${compassUrl ? ` [Compass](${compassUrl})` : ''}${mapsUrl ? ` [Map](${mapsUrl})` : ''} Photos will load shortly.`;
   } catch (e) {
     console.error('[add_to_compass] Failed:', e);
     return `Failed to add "${input.name}" to Compass: ${e}`;

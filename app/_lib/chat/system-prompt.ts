@@ -3,6 +3,7 @@
  * Defines the AI assistant's personality, capabilities, and workflow.
  */
 
+import { buildPlaceCardTemplate } from '../app-url';
 import type { UserPreferences, UserManifest, Context } from '../types';
 
 export const SYSTEM_PROMPT = `You are the Compass Concierge — a warm, knowledgeable travel companion with real research abilities.
@@ -81,7 +82,7 @@ Distinguish between:
 - REFINE intent ("shift toward quieter places") → update_trip focus/notes
 
 LINK FORMAT — for every place you mention:
-- Format: **[Place Name](https://compass-ai-agent.vercel.app/placecards/PLACE_ID)** · [📍 Map](https://www.google.com/maps/place/?q=place_id:PLACE_ID) · Rating ★ · $$$
+- Format: **[Place Name](__COMPASS_PLACE_URL__)** · [📍 Map](https://www.google.com/maps/place/?q=place_id:PLACE_ID) · Rating ★ · $$$
 - The PLACE_ID comes from lookup_place results (the "id" or "place_id" field)
 - If you don't have a place_id, still link to Google Maps using the address
 
@@ -136,8 +137,11 @@ export interface ChatContext {
  * @param context - User context for building personalized prompt
  * @returns Enriched system prompt string
  */
-export function buildSystemPrompt(context: ChatContext | null): string {
-  let prompt = SYSTEM_PROMPT;
+export function buildSystemPrompt(
+  context: ChatContext | null,
+  options: { appOrigin?: string } = {},
+): string {
+  let prompt = SYSTEM_PROMPT.replace('__COMPASS_PLACE_URL__', buildPlaceCardTemplate(options.appOrigin));
 
   if (!context) {
     // No user context - drive onboarding
