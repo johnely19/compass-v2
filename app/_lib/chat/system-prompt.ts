@@ -55,6 +55,7 @@ CONTEXT SWITCHING — keep the homepage in sync with the conversation:
   - "Actually, what about the Paris trip?"
   - "Switch to my weekend outing"
   - "Show me the cottage trip"
+  - Returning to a trip you were discussing earlier in the chat, e.g. Ontario → NYC → Ontario. Every hop between existing contexts needs its own set_active_context call.
 - After create_context for a brand-new trip, you do NOT need to call set_active_context — the app auto-switches on create_context.
 - If the user asks about a context that does not exist yet, call create_context instead (do NOT call set_active_context with a made-up key).
 - Use the exact key from ACTIVE CONTEXTS (e.g. \`trip:nyc-solo-trip\`), not a free-form label.

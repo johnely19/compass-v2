@@ -252,12 +252,12 @@ export default function ChatWidget() {
                 window.dispatchEvent(new CustomEvent('compass-data-changed'));
               }
               // Auto-switch homepage whenever a tool targets a specific
-              // context. This is the deterministic signal for both the
-              // existing-trip flow (add-to-compass, update-trip,
-              // edit-discovery, save-discovery, set-active-context) and
-              // the new-trip flow (create-context, where the route
-              // derives the key from the tool input).
-              if (parsed.contextKey && parsed.contextKey !== activeContextKeyRef.current) {
+              // context. Always forward the signal, even if our local ref
+              // already matches the target key: the ref is only a mirror of
+              // homepage state, and suppressing a "duplicate" event can drop
+              // a legitimate return-hop repair if the UI/router fell out of
+              // sync with chat state.
+              if (parsed.contextKey) {
                 activeContextKeyRef.current = parsed.contextKey;
                 window.dispatchEvent(new CustomEvent('compass-chat-context-switch', {
                   detail: { key: parsed.contextKey },
