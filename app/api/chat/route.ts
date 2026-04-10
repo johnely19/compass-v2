@@ -117,6 +117,7 @@ async function executeToolLoop(
   systemPrompt: string,
   messages: any[],
   userId: string,
+  appOrigin: string,
   encoder: TextEncoder,
   controller: ReadableStreamDefaultController,
   messageId: string,
@@ -194,6 +195,7 @@ async function executeToolLoop(
             toolBlock.name as ToolName,
             toolBlock.input as Record<string, unknown>,
             userId,
+            { appOrigin },
           );
           // Emit toolResult event so frontend can refresh
           // Include contextKey so frontend can auto-switch homepage. For
@@ -318,7 +320,8 @@ export async function POST(request: NextRequest) {
       } : undefined,
     };
 
-    const systemPrompt = buildSystemPrompt(chatContext);
+    const appOrigin = request.nextUrl.origin;
+    const systemPrompt = buildSystemPrompt(chatContext, { appOrigin });
 
     // Build conversation history — cap at last 20 messages, truncate long content
     const MAX_CONTENT = 2000;
@@ -348,6 +351,7 @@ export async function POST(request: NextRequest) {
             systemPrompt,
             anthropicMessages,
             user.id,
+            appOrigin,
             encoder,
             controller,
             messageId,

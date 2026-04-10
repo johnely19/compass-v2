@@ -44,6 +44,7 @@ export async function runToolCall(
   name: ToolName,
   input: Record<string, unknown>,
   userId: string,
+  options: { appOrigin?: string } = {},
 ): Promise<string> {
   switch (name) {
     case 'web_search':
@@ -51,9 +52,9 @@ export async function runToolCall(
     case 'lookup_place':
       return lookupPlace(input.query as string);
     case 'add_to_compass':
-      return addToCompass(userId, input as unknown as AddToCompassInput);
+      return addToCompass(userId, input as unknown as AddToCompassInput, options);
     case 'save_discovery':
-      return saveDiscovery(userId, input as unknown as SaveDiscoveryInput);
+      return saveDiscovery(userId, input as unknown as SaveDiscoveryInput, options);
     case 'edit_discovery':
       return editDiscovery(userId, input as unknown as EditDiscoveryInput);
     case 'remove_discovery':

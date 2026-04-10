@@ -5,6 +5,7 @@
  */
 
 import { put, list } from '@vercel/blob';
+import { buildPlaceCardUrl } from '../../app-url';
 import { getUserData, setUserData } from '../../user-data';
 import { promoteToInventory } from '../../monitor-inventory';
 import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
@@ -55,7 +56,11 @@ async function saveTriageStore(userId: string, store: TriageStore): Promise<void
   });
 }
 
-export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): Promise<string> {
+export async function saveDiscovery(
+  userId: string,
+  input: SaveDiscoveryInput,
+  options: { appOrigin?: string } = {},
+): Promise<string> {
   try {
     const discoveryId = `disco_${Date.now()}_${Math.random().toString(36).slice(2, 8)}`;
 
@@ -134,10 +139,13 @@ export async function saveDiscovery(userId: string, input: SaveDiscoveryInput): 
     }
 
     const compassUrl = input.place_id
-      ? `https://compass-ai-agent.vercel.app/placecards/${input.place_id}`
+      ? buildPlaceCardUrl(input.place_id, {
+          appOrigin: options.appOrigin,
+          contextKey: input.contextKey,
+        })
       : null;
 
-    return `✅ Saved "${input.name}" to ${input.contextKey}${compassUrl ? ` — ${compassUrl}` : ''}`;
+    return `✅ Saved "${input.name}" to ${input.contextKey}${compassUrl ? ` [Compass](${compassUrl})` : ''}`;
   } catch (e) {
     console.error('[save_discovery] Failed:', e);
     return `Failed to save discovery: ${e}`;
