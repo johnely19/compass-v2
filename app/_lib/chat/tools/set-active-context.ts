@@ -10,7 +10,7 @@
  * "let's review the NYC trip" while the homepage is showing Boston.
  */
 
-import { getUserManifest } from '../../user-data';
+import { getEffectiveUserManifest } from '../../effective-user-data';
 
 export interface SetActiveContextInput {
   contextKey: string;
@@ -26,7 +26,7 @@ export async function setActiveContext(
   }
 
   try {
-    const manifest = await getUserManifest(userId);
+    const manifest = await getEffectiveUserManifest(userId);
     const ctx = manifest?.contexts?.find(c => c.key === key);
     if (!ctx) {
       return `Context not found for key: ${key}`;

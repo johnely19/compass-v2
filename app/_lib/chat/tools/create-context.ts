@@ -3,7 +3,8 @@
  * Called by Concierge when user says "I'm planning a trip to Boston" or "add a NYC radar".
  */
 
-import { getUserManifest, setUserData } from '../../user-data';
+import { setUserData } from '../../user-data';
+import { getWritableUserManifest } from '../../effective-user-data';
 import type { Context, ContextType, UserManifest } from '../../types';
 
 export interface CreateContextInput {
@@ -68,11 +69,7 @@ export async function createContext(userId: string, input: CreateContextInput): 
       active: input.setActive !== false,
     };
 
-    let manifest = await getUserManifest(userId);
-    if (!manifest) {
-      // Create new manifest
-      manifest = { contexts: [], updatedAt: new Date().toISOString() } as UserManifest;
-    }
+    const manifest = (await getWritableUserManifest(userId)) as UserManifest;
 
     // Check if key already exists
     const existing = manifest.contexts.findIndex(c => c.key === key);

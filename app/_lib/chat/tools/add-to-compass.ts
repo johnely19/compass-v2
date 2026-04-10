@@ -9,8 +9,9 @@
  */
 
 import { buildPlaceCardUrl } from '../../app-url';
-import { setUserData, getUserData, getUserManifest } from '../../user-data';
-import type { Discovery, DiscoveryType, PlaceImage, UserDiscoveries } from '../../types';
+import { getEffectiveUserManifest } from '../../effective-user-data';
+import { setUserData, getUserData } from '../../user-data';
+import type { Discovery, DiscoveryType, UserDiscoveries } from '../../types';
 import { resolveCity } from './resolve-city';
 
 const VALID_TYPES = new Set<DiscoveryType>([
@@ -142,7 +143,7 @@ export async function addToCompass(
     let resolvedContextKey = input.contextKey || '';
     if (resolvedContextKey) {
       try {
-        const manifest = await getUserManifest(userId);
+        const manifest = await getEffectiveUserManifest(userId);
         if (manifest?.contexts?.length) {
           const exact = manifest.contexts.find(c => c.key === resolvedContextKey);
           if (!exact) {

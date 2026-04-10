@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { getCurrentUser } from '../../_lib/user';
-import { getUserProfile, getUserPreferences, getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
+import { getUserProfile, getUserPreferences } from '../../_lib/user-data';
+import { getEffectiveDerivedUserDiscoveries, getEffectiveUserManifest } from '../../_lib/effective-user-data';
 import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
 import { buildSystemPrompt, type ChatContext } from '../../_lib/chat/system-prompt';
 import { TOOLS } from '../../_lib/chat/tools';
@@ -20,7 +21,6 @@ const ANTHROPIC_API_URL = 'https://api.anthropic.com/v1/messages';
 const MODEL = 'claude-sonnet-4-20250514';
 const MAX_TOOL_ROUNDS = 5;
 const MAX_TOOL_TIME_MS = 50_000; // Stop tool loops before Vercel kills us
-const PER_ROUND_BUDGET_MS = 12_000; // Warn threshold per round
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -279,8 +279,8 @@ export async function POST(request: NextRequest) {
     const [profile, preferences, manifest, discoveries] = await Promise.all([
       getUserProfile(user.id),
       getUserPreferences(user.id),
-      getUserManifest(user.id),
-      getUserDiscoveries(user.id),
+      getEffectiveUserManifest(user.id),
+      getEffectiveDerivedUserDiscoveries(user.id),
     ]);
 
     const allDiscoveries = discoveries?.discoveries || [];

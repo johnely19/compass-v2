@@ -1,9 +1,7 @@
-import { readFileSync, existsSync } from 'fs';
-import path from 'path';
 import Link from 'next/link';
 import { getCurrentUser } from './_lib/user';
-import { getUserManifest, getDerivedUserDiscoveries } from './_lib/user-data';
-import type { Context, Discovery, UserManifest } from './_lib/types';
+import { getEffectiveDerivedUserDiscoveries, getEffectiveUserManifest } from './_lib/effective-user-data';
+import type { Context, Discovery } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
 import { resolveImageUrl } from './_lib/image-url';
 import { getManifestHeroImage } from './_lib/image-url.server';
@@ -18,26 +16,6 @@ import { buildHomepageDigest } from './_lib/monitor-digest';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
-
-/** Load local manifest as fallback when Blob has none */
-function loadLocalManifest(): UserManifest | null {
-  const p = path.join(process.cwd(), 'data', 'compass-manifest.json');
-  if (!existsSync(p)) return null;
-  try {
-    const raw = JSON.parse(readFileSync(p, 'utf8'));
-    return { contexts: raw.contexts ?? [], updatedAt: raw.updatedAt ?? '' };
-  } catch { return null; }
-}
-
-/** Load local discoveries (cottages, developments) */
-function loadLocalDiscoveries(): Discovery[] {
-  const p = path.join(process.cwd(), 'data', 'local-discoveries.json');
-  if (!existsSync(p)) return [];
-  try {
-    const raw = JSON.parse(readFileSync(p, 'utf8'));
-    return (Array.isArray(raw) ? raw : (raw.discoveries ?? [])) as Discovery[];
-  } catch { return []; }
-}
 
 function sortContexts(contexts: Context[]): Context[] {
   return [...contexts].sort((a, b) => {
@@ -65,39 +43,21 @@ export default async function HomePage() {
     );
   }
 
-  // Load user data from Blob, with local manifest as fallback
-  const [blobManifest, discoveriesData] = await Promise.all([
-    getUserManifest(user.id),
-    getDerivedUserDiscoveries(user.id),
+  const [manifest, discoveriesData] = await Promise.all([
+    getEffectiveUserManifest(user.id),
+    getEffectiveDerivedUserDiscoveries(user.id),
   ]);
 
   // Non-owner with no manifest → onboarding
-  if (!user.isOwner && (!blobManifest || blobManifest.contexts.length === 0)) {
+  if (!user.isOwner && (!manifest || manifest.contexts.length === 0)) {
     const { redirect } = await import('next/navigation');
     redirect('/onboarding');
   }
 
-  // Merge contexts: Blob manifest + local manifest (owner only)
-  const blobContexts = blobManifest?.contexts ?? [];
-  const localContexts = user.isOwner ? (loadLocalManifest()?.contexts ?? []) : [];
-  const blobKeys = new Set(blobContexts.map(c => c.key));
-  const mergedContexts = [
-    ...blobContexts,
-    ...localContexts.filter(c => !blobKeys.has(c.key)),
-  ];
-
   const contexts = sortContexts(
-    mergedContexts.filter(c => isContextActive(c)),
+    (manifest?.contexts ?? []).filter(c => isContextActive(c)),
   );
-  // Merge Blob discoveries with local discoveries (cottages, developments)
-  const blobDiscoveries = discoveriesData?.discoveries ?? [];
-  // Local discoveries (cottages, developments) — owner only
-  const localDisc = user.isOwner ? loadLocalDiscoveries() : [];
-  const blobIds = new Set(blobDiscoveries.map(d => d.id));
-  const discoveries = [
-    ...blobDiscoveries,
-    ...localDisc.filter(d => !blobIds.has(d.id)),
-  ];
+  const discoveries = discoveriesData?.discoveries ?? [];
 
   // Filter out discoveries that are not fully built
   // A discovery must have at minimum: a name AND (address OR description OR rating)
