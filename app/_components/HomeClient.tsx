@@ -261,20 +261,41 @@ export default function HomeClient({
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const initializedRef = useRef(false);
+  // Target context key from chat that isn't (yet) in the `contexts` prop.
+  // Applied the next time contexts update and the key becomes present.
+  const pendingContextKeyRef = useRef<string | null>(null);
 
-  // Initialize active key from localStorage on first mount;
-  // on subsequent context refreshes, keep current key if still valid.
+  /**
+   * Apply a new active context key atomically.
+   * - Updates React state
+   * - Writes localStorage synchronously (so concurrent refresh-driven
+   *   init effects never read a stale value)
+   * - Clears any pending ref if the target is satisfied
+   */
+  const applyActiveKey = useCallback((key: string) => {
+    setActiveKey(key);
+    try { localStorage.setItem('compass-active-context', key); } catch { /* ignore */ }
+    if (pendingContextKeyRef.current === key) {
+      pendingContextKeyRef.current = null;
+    }
+  }, []);
+
+  // Load triage counts whenever contexts change.
   useEffect(() => {
     setMounted(true);
-    // Load all context counts
     const counts: Record<string, { saved: number; dismissed: number; resurfaced: number }> = {};
     for (const ctx of contexts) {
       counts[ctx.key] = getContextCounts(userId, ctx.key);
     }
     setContextCounts(counts);
+  }, [userId, contexts]);
 
-    // Restore active key — respect localStorage even if context isn't in server data yet
-    // (newly created contexts may not appear in the first refresh)
+  // Initialize active key from localStorage on FIRST mount only.
+  // Later context refreshes must not clobber a chat-driven switch by
+  // reading a possibly-stale localStorage value.
+  useEffect(() => {
+    if (initializedRef.current) return;
+    initializedRef.current = true;
     try {
       const stored = localStorage.getItem('compass-active-context');
       if (stored) {
@@ -285,9 +306,32 @@ export default function HomeClient({
     } catch {
       if (contexts.length > 0) setActiveKey(contexts[0]!.key);
     }
-  }, [userId, contexts]);
+    // Intentionally runs only once; subsequent switches go through
+    // applyActiveKey / chat switch / trip-created handlers.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // Persist active key
+  // Defensive fallback: if activeKey ever becomes null (e.g. first
+  // mount raced with contexts arriving), seed it from the first context.
+  useEffect(() => {
+    if (activeKey === null && contexts.length > 0) {
+      setActiveKey(contexts[0]!.key);
+    }
+  }, [activeKey, contexts]);
+
+  // When contexts update, apply any pending chat-driven target key that
+  // is now available. This fixes the case where a chat switch arrives
+  // before the newly-created trip reaches the homepage props.
+  useEffect(() => {
+    const pending = pendingContextKeyRef.current;
+    if (!pending) return;
+    if (contexts.some(c => c.key === pending)) {
+      applyActiveKey(pending);
+    }
+  }, [contexts, applyActiveKey]);
+
+  // Persist active key (belt-and-braces; applyActiveKey also writes
+  // synchronously). Handles the initial-mount setActiveKey path.
   useEffect(() => {
     if (!activeKey) return;
     try {
@@ -309,23 +353,30 @@ export default function HomeClient({
   }, [contexts]);
 
   const handleContextSelect = useCallback((key: string) => {
-    setActiveKey(key);
+    applyActiveKey(key);
     broadcastActiveContext(key);
-  }, [broadcastActiveContext]);
+  }, [applyActiveKey, broadcastActiveContext]);
 
-  // Listen for chat-driven context switches
+  // Listen for chat-driven context switches.
+  // If the target key is already in `contexts`, apply it immediately.
+  // Otherwise stash it on pendingContextKeyRef so the next contexts
+  // refresh can apply it instead of dropping the event.
   useEffect(() => {
     const handler = (e: Event) => {
       const detail = (e as CustomEvent<{ key: string }>).detail;
       if (!detail?.key) return;
-      // If the context exists, switch to it
       if (contexts.some(c => c.key === detail.key)) {
-        setActiveKey(detail.key);
+        applyActiveKey(detail.key);
+      } else {
+        pendingContextKeyRef.current = detail.key;
+        // Persist immediately so a subsequent mount/hydration cycle
+        // can still honor the switch even before contexts refresh.
+        try { localStorage.setItem('compass-active-context', detail.key); } catch { /* ignore */ }
       }
     };
     window.addEventListener('compass-chat-context-switch', handler);
     return () => window.removeEventListener('compass-chat-context-switch', handler);
-  }, [contexts]);
+  }, [contexts, applyActiveKey]);
 
   // Triage change listener
   useEffect(() => {
@@ -345,10 +396,14 @@ export default function HomeClient({
         next.add(detail.key);
         return next;
       });
-      // Switch to the newly created context
-      setActiveKey(detail.key);
-      // Save to localStorage immediately so it survives the refresh re-init
-      try { localStorage.setItem('compass-active-context', detail.key); } catch {}
+      // Switch to the newly created context, atomically persisting
+      // to localStorage to survive the refresh re-init race.
+      applyActiveKey(detail.key);
+      // If the context isn't in props yet, mark it pending so the
+      // next contexts refresh applies it deterministically.
+      if (!contexts.some(c => c.key === detail.key)) {
+        pendingContextKeyRef.current = detail.key;
+      }
       // Delay refresh slightly to let Blob write propagate
       setTimeout(() => router.refresh(), 1500);
       // Remove the emerging flag after the animation completes (700ms animation + buffer)
@@ -366,7 +421,7 @@ export default function HomeClient({
       window.removeEventListener('compass-trip-created', handler);
       timers.forEach(clearTimeout);
     };
-  }, [router]);
+  }, [router, contexts, applyActiveKey]);
 
   // Listen for trip attribute attachments from chat
   useEffect(() => {

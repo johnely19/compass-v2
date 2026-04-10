@@ -5,6 +5,7 @@ import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
 import { buildSystemPrompt, type ChatContext } from '../../_lib/chat/system-prompt';
 import { TOOLS } from '../../_lib/chat/tools';
 import { runToolCall, type ToolName } from '../../_lib/chat/tools/runner';
+import { computeContextKey } from '../../_lib/chat/tools/create-context';
 import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
 import type { ChatMessage, Discovery } from '../../_lib/types';
 
@@ -30,6 +31,7 @@ const PER_ROUND_BUDGET_MS = 12_000; // Warn threshold per round
 function mapToolName(name: string): string {
   const mapping: Record<string, string> = {
     'create_context': 'create-context',
+    'set_active_context': 'set-active-context',
     'update_trip': 'update-trip',
     'add_to_compass': 'add-to-compass',
     'save_discovery': 'save-discovery',
@@ -39,6 +41,35 @@ function mapToolName(name: string): string {
     'lookup_place': 'lookup-place',
   };
   return mapping[name] || name;
+}
+
+/**
+ * Resolve the contextKey that a tool call targets so the SSE layer can
+ * include it in the toolResult event. ChatWidget uses this to dispatch
+ * `compass-chat-context-switch` and HomeClient switches focus accordingly.
+ *
+ * - For create_context, derive the key from type+label using the same
+ *   slugify rule as the tool implementation.
+ * - For every other tool, prefer the explicit contextKey in the input.
+ */
+function resolveTargetContextKey(
+  toolName: string,
+  input: Record<string, unknown>,
+): string | undefined {
+  if (toolName === 'create_context') {
+    const type = typeof input?.type === 'string' ? input.type : undefined;
+    const label = typeof input?.label === 'string' ? input.label : undefined;
+    if (type && label) {
+      try {
+        return computeContextKey({ type, label });
+      } catch {
+        return undefined;
+      }
+    }
+    return undefined;
+  }
+  const ck = input?.contextKey;
+  return typeof ck === 'string' && ck.length > 0 ? ck : undefined;
 }
 
 /**
@@ -165,8 +196,13 @@ async function executeToolLoop(
             userId,
           );
           // Emit toolResult event so frontend can refresh
-          // Include contextKey so frontend can auto-switch homepage
-          const toolContextKey = (toolBlock.input as Record<string, unknown>)?.contextKey as string | undefined;
+          // Include contextKey so frontend can auto-switch homepage. For
+          // create_context, this key is derived from the tool input (the
+          // tool itself uses the same derivation).
+          const toolContextKey = resolveTargetContextKey(
+            toolBlock.name as string,
+            (toolBlock.input as Record<string, unknown>) || {},
+          );
           controller.enqueue(encoder.encode(
             `data: ${JSON.stringify({ toolResult: frontendToolName, messageId, ...(toolContextKey ? { contextKey: toolContextKey } : {}) })}\n\n`
           ));
