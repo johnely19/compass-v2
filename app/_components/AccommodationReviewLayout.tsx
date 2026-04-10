@@ -6,7 +6,7 @@ import type { Discovery } from '../_lib/types';
 import type { Context } from '../_lib/types';
 import { getTriageState } from '../_lib/triage';
 import TriageButtons from './TriageButtons';
-import { resolveImageUrlClient } from '../_lib/image-url';
+import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
 import { getPlatformInfo } from '../_lib/platform';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
@@ -88,7 +88,7 @@ function AccommodationCard({
   const placeId = discovery.place_id ?? discovery.id;
 
   // Resolve hero image
-  const hero = resolveImageUrlClient(discovery.heroImage) || null;
+  const hero = getDiscoveryPrimaryImageUrl(discovery);
 
   // Extract cottage-specific fields (all from _cottage since migration update)
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -144,12 +144,10 @@ function AccommodationCard({
   const enrichedVibeTags = vibeTags && vibeTags.length > 0 ? vibeTags : [];
   const topVibeTags = enrichedVibeTags.slice(0, 4);
 
-  // Shortened swimVerdict for potential tag (not currently used as a tag)
-  const shortSwimVerdict = swimVerdict && swimVerdict.length > 40 ? swimVerdict.slice(0, 37) + '...' : swimVerdict;
-
   // Location: city · water body
-  const city = (discovery as any).city as string | undefined;
-  const waterBody = (discovery as any).water_body as string | undefined;
+  const discoveryRecord = discovery as unknown as Record<string, unknown>;
+  const city = discoveryRecord.city as string | undefined;
+  const waterBody = discoveryRecord.water_body as string | undefined;
   const locationStr = [city, waterBody].filter(Boolean).join(' · ');
 
   return (
@@ -311,8 +309,8 @@ export default function AccommodationReviewLayout({
       const scoreB = preferenceScore(b);
       if (scoreB !== scoreA) return scoreB - scoreA;
       // Tiebreak: cards with hero image first
-      const hasHeroA = !!resolveImageUrlClient(a.heroImage);
-      const hasHeroB = !!resolveImageUrlClient(b.heroImage);
+      const hasHeroA = !!getDiscoveryPrimaryImageUrl(a);
+      const hasHeroB = !!getDiscoveryPrimaryImageUrl(b);
       if (hasHeroA !== hasHeroB) return hasHeroA ? -1 : 1;
       return 0;
     });

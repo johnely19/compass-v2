@@ -3,8 +3,7 @@ import { getCurrentUser } from './_lib/user';
 import { getEffectiveDerivedUserDiscoveries, getEffectiveUserManifest } from './_lib/effective-user-data';
 import type { Context, Discovery } from './_lib/types';
 import { isContextActive } from './_lib/context-lifecycle';
-import { resolveImageUrl } from './_lib/image-url';
-import { getManifestHeroImage } from './_lib/image-url.server';
+import { getHeroImage } from './_lib/image-url.server';
 import { isTypeCompatible } from './_lib/context-compat';
 import { scoreDiscovery } from './_lib/discovery-score';
 import { rankDiscoveriesForHomepage } from './_lib/discovery-preferences';
@@ -26,6 +25,13 @@ function sortContexts(contexts: Context[]): Context[] {
     if (a.type === 'outing' && b.type === 'radar') return -1;
     if (b.type === 'outing' && a.type === 'radar') return 1;
     return 0;
+  });
+}
+
+function enrichDiscoveriesWithImageMinimums(discoveries: Discovery[]): Discovery[] {
+  return discoveries.map((discovery) => {
+    const heroImage = getHeroImage(discovery.place_id, discovery.heroImage);
+    return heroImage ? { ...discovery, heroImage } : discovery;
   });
 }
 
@@ -73,26 +79,7 @@ export default async function HomePage() {
   });
   const discoveries_final = fullyBuilt;
 
-  // Enrich discoveries with resolved image URLs
-  // Priority: heroImage field (already resolved) > manifest fallback > Blob place-cards/
-  const BLOB_BASE_URL = process.env.NEXT_PUBLIC_BLOB_BASE_URL || '';
-  const enrichedDiscoveries = discoveries_final.map(d => {
-    // 1. Use heroImage if present
-    let heroImage: string | null = resolveImageUrl(d.heroImage);
-    // 2. Fall back to manifest (local fs)
-    if (!heroImage && d.place_id) {
-      heroImage = getManifestHeroImage(d.place_id);
-    }
-    // 3. Fall back to Blob place-cards/{id}/card.json heroImage via URL pattern
-    //    (card stubs may have heroImage set from the migration; use URL directly)
-    if (!heroImage && d.place_id && BLOB_BASE_URL) {
-      // Point at the Blob-hosted card; PlaceCardStore will resolve at render time.
-      // For now, mark with a synthetic Blob photo URL to signal availability.
-      // Actual resolution happens client-side for cards with real photos in Blob.
-      heroImage = null; // leave null — handled below by photo-first sort
-    }
-    return heroImage ? { ...d, heroImage } : d;
-  });
+  const enrichedDiscoveries = enrichDiscoveriesWithImageMinimums(discoveries_final);
 
   // Group discoveries by context — fuzzy match on slug to handle key variants
   // Fix #108: deduplicate by place_id within each context bucket

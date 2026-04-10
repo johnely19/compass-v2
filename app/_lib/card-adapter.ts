@@ -4,6 +4,7 @@
    ============================================================ */
 
 import type { PlaceCard, DiscoveryType } from './types';
+import { mergePlaceCardImages } from './image-url';
 
 // V1 card.json structure
 interface V1Card {
@@ -60,9 +61,18 @@ function normalizeType(raw?: string): DiscoveryType {
  * Optionally pass manifest data to include image URLs.
  */
 export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string, unknown>): PlaceCard {
+  const manifestImages = manifest?.images as Array<{ path?: string; category?: string }> | undefined;
+
   // Already V2 format?
   if (raw.data && typeof raw.data === 'object' && raw.type) {
-    return raw as unknown as PlaceCard;
+    const v2 = raw as unknown as PlaceCard;
+    return {
+      ...v2,
+      data: {
+        ...v2.data,
+        images: mergePlaceCardImages(v2.data.images, manifestImages),
+      },
+    };
   }
 
   // V1 format
@@ -165,17 +175,7 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
     }
   }
 
-  // Merge images from manifest if available
-  if (manifest) {
-    const manifestImages = manifest.images as Array<{ path?: string; category?: string }> | undefined;
-    if (manifestImages && manifestImages.length > 0 && images.length === 0) {
-      for (const img of manifestImages) {
-        if (img.path) {
-          images.push({ path: img.path, category: img.category ?? 'general' });
-        }
-      }
-    }
-  }
+  const mergedImages = mergePlaceCardImages(images, manifestImages);
 
   return {
     place_id: v1.place_id ?? identity.place_id ?? '',
@@ -185,7 +185,7 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
       description,
       highlights,
       hours,
-      images,
+      images: mergedImages,
       ...(menu ? { menu } : {}),
       ...(rating !== undefined ? { rating } : {}),
       ...(reviewCount !== undefined ? { reviewCount } : {}),

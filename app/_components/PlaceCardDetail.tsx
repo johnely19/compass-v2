@@ -239,14 +239,30 @@ interface PlaceCardDetailProps {
   discovery?: Partial<Discovery>;
 }
 
+function dedupeResolvedPlaceCardImages(images: Array<{ path: string; category: string }>): Array<{ path: string; category: string }> {
+  const deduped: Array<{ path: string; category: string }> = [];
+  const seen = new Set<string>();
+
+  for (const image of images) {
+    const resolvedPath = resolveImageUrlClient(image.path) || image.path;
+    if (!resolvedPath || seen.has(resolvedPath)) continue;
+    seen.add(resolvedPath);
+    deduped.push({
+      path: resolvedPath,
+      category: image.category,
+    });
+  }
+
+  return deduped;
+}
+
 export default function PlaceCardDetail({ card, userId, contextKey, discovery }: PlaceCardDetailProps) {
   const typeMeta = getTypeMeta(card.type);
   const data = card.data ?? { description: '', highlights: [], images: [] };
 
-  // Hero image — prefer interior_vibe category, then first available
-  const allImages = (data.images ?? []) as Array<{ path: string; category: string }>;
+  const allImages = dedupeResolvedPlaceCardImages((data.images ?? []) as Array<{ path: string; category: string }>);
   const heroImg = allImages.find(i => i.category === 'interior_vibe') || allImages[0];
-  const heroImage = heroImg ? resolveImageUrlClient(heroImg.path) : null;
+  const heroImage = heroImg?.path ?? null;
   const gradient = TYPE_GRADIENTS[card.type] || DEFAULT_GRADIENT;
   const isDark = DARK_TYPES.has(card.type);
   const isDevelopment = card.type === 'development';
@@ -307,10 +323,11 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
     ? `https://earth.google.com/web/search/${encodeURIComponent([card.name, city || address?.split(',').slice(-2, -1)[0]?.trim()].filter(Boolean).join(' '))}`
     : null;
 
-  // Photo gallery — exclude hero, categorize
-  const foodPhotos = allImages.filter(i => ['food', 'drinks'].includes(i.category) && i !== heroImg);
-  const interiorPhotos = allImages.filter(i => ['interior_vibe', 'interior_detail'].includes(i.category) && i !== heroImg);
-  const otherPhotos = allImages.filter(i => !['food', 'drinks', 'interior_vibe', 'interior_detail'].includes(i.category) && i !== heroImg);
+  const gallerySeed = allImages.filter(i => i !== heroImg);
+  const galleryImages = gallerySeed.length >= 3 ? gallerySeed : allImages.slice(0, Math.max(3, allImages.length));
+  const foodPhotos = galleryImages.filter(i => ['food', 'drinks'].includes(i.category));
+  const interiorPhotos = galleryImages.filter(i => ['interior_vibe', 'interior_detail'].includes(i.category));
+  const otherPhotos = galleryImages.filter(i => !['food', 'drinks', 'interior_vibe', 'interior_detail'].includes(i.category));
 
   return (
     <div className={`place-detail-v2 ${isDark ? 'place-detail-dark' : ''}`}>
@@ -518,7 +535,7 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         )}
 
         {/* Interior gallery — below fold, for applicable types */}
-        {hasInteriorGallery && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
+        {hasInteriorGallery && galleryImages.length > 0 && (interiorPhotos.length > 0 || otherPhotos.length > 0) && (
           <div className="place-detail-v2-interior-gallery">
             <PhotoGallery images={[...interiorPhotos, ...otherPhotos]} />
           </div>
