@@ -110,6 +110,12 @@ function WatchRow({
           <div className={`watch-row-significance ${SIGNIFICANCE_BADGE[item.significanceLevel]?.className ?? ''}`}>
             <span className="sig-icon">{SIGNIFICANCE_BADGE[item.significanceLevel]?.icon ?? ''}</span>
             <span className="sig-label">{item.significanceSummary ?? item.significanceLevel}</span>
+            {item.latestSignificantSource === 'web-search' && (
+              <span className="sig-source sig-source-web" title="Detected via web search">web</span>
+            )}
+            {item.latestSignificantSource === 'google-places' && (
+              <span className="sig-source sig-source-places" title="Detected via Google Places">places</span>
+            )}
           </div>
         )}
         {item.monitorDimensions && item.monitorDimensions.length > 0 && (

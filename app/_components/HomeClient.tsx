@@ -185,7 +185,15 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
 
   const dueItems = items.filter(i => i.dueNow);
   const otherItems = items.filter(i => !i.dueNow);
-  const shown = expanded ? items : items.slice(0, 3);
+  // Sort: due first, then by significance level (critical > notable > routine > noise), then by observationCount
+  const SIGNIFICANCE_RANK: Record<string, number> = { critical: 3, notable: 2, routine: 1, noise: 0 };
+  const sorted = [...items].sort((a, b) => {
+    if (a.dueNow !== b.dueNow) return a.dueNow ? -1 : 1;
+    const sigDiff = (SIGNIFICANCE_RANK[b.significanceLevel ?? 'noise'] ?? 0) - (SIGNIFICANCE_RANK[a.significanceLevel ?? 'noise'] ?? 0);
+    if (sigDiff !== 0) return sigDiff;
+    return (b.observationCount ?? 0) - (a.observationCount ?? 0);
+  });
+  const shown = expanded ? sorted : sorted.slice(0, 3);
   const hasDue = dueItems.length > 0;
 
   return (
@@ -200,6 +208,9 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
         </span>
       </div>
       <ul className="monitoring-tray-list">
+        {sorted.length > 3 && (
+          <li className="monitoring-tray-count-note">{sorted.length} places watched in this context</li>
+        )}
         {shown.map(item => {
           const href = `/placecards/${item.placeId || item.id}?context=${encodeURIComponent(item.contextKey)}`;
           return (
