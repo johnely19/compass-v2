@@ -16,21 +16,20 @@ export default async function globalSetup(config: FullConfig) {
   const browser = await chromium.launch();
   const context = await browser.newContext({ baseURL });
 
-  // Set the auth cookie directly — bypasses onboarding redirect
+  // Set the auth cookie directly — bypasses onboarding redirect.
+  // Use the baseURL to navigate first, then set cookies, so domain is inferred correctly.
+  const page = await context.newPage();
+  // Navigate to the server first so cookie domain is established
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
   await context.addCookies([
     {
       name: 'compass-user',
       value: 'qa-test-user',
-      domain: 'localhost',
-      path: '/',
-      httpOnly: true,
-      secure: false,
-      sameSite: 'Lax',
+      url: baseURL,
     },
   ]);
 
   // Verify the auth works by hitting /api/auth
-  const page = await context.newPage();
   const res = await page.request.get('/api/auth');
   const body = await res.json().catch(() => null);
   if (!body?.user) {
