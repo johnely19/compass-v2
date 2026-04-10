@@ -57,7 +57,7 @@ CONTEXT SWITCHING — keep the homepage in sync with the conversation:
   - "Show me the cottage trip"
 - After create_context for a brand-new trip, you do NOT need to call set_active_context — the app auto-switches on create_context.
 - If the user asks about a context that does not exist yet, call create_context instead (do NOT call set_active_context with a made-up key).
-- Use the exact key from ACTIVE CONTEXTS (e.g. \`trip:nyc-solo-trip\`), not a free-form label.
+- Use the exact key from KNOWN CONTEXTS (e.g. \`trip:nyc-solo-trip\`), not a free-form label.
 
 CONTEXTUAL EDITING — for corrections, additions, and removals:
 When the user is scoped to a specific context (see ACTIVE CHAT TARGET below), they may ask you to:
@@ -119,16 +119,201 @@ export interface ChatTargetInfo {
   cardPlaceId?: string;
 }
 
+export interface KnownContextDiscovery {
+  contextKey: string;
+  name: string;
+  type: string;
+  city: string;
+  address?: string;
+  discoveredAt?: string;
+}
+
 export interface ChatContext {
   userCode: string;
   userCity: string;
   preferences: UserPreferences | null;
   manifest: UserManifest | null;
   recentDiscoveries: Array<{ name: string; type: string; city: string }>;
+  knownDiscoveries?: KnownContextDiscovery[];
   /** The explicitly focused context key (for contextual chat targeting) */
   activeContextKey?: string;
   /** Card-level targeting — a specific place the user is chatting about */
   chatTarget?: ChatTargetInfo;
+}
+
+type RichContext = Context & Record<string, unknown>;
+
+function truncate(value: string, max = 180): string {
+  const normalized = value.replace(/\s+/g, ' ').trim();
+  if (normalized.length <= max) return normalized;
+  return `${normalized.slice(0, max - 1).trimEnd()}…`;
+}
+
+function isContextActive(context: Context): boolean {
+  if (context.status) return context.status === 'active';
+  return Boolean(context.active);
+}
+
+function getContextStatus(context: RichContext): string {
+  if (typeof context.status === 'string' && context.status.length > 0) return context.status;
+  return context.active ? 'active' : 'inactive';
+}
+
+function getStringList(value: unknown, limit = 4): string[] {
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((item) => {
+      if (typeof item === 'string') return item.trim();
+      if (item && typeof item === 'object' && typeof (item as { name?: unknown }).name === 'string') {
+        return ((item as { name: string }).name || '').trim();
+      }
+      return '';
+    })
+    .filter(Boolean)
+    .slice(0, limit);
+}
+
+function getPeopleSummary(context: RichContext): string | null {
+  if (!Array.isArray(context.people)) return null;
+  const people = context.people
+    .map((person) => {
+      if (!person || typeof person !== 'object') return null;
+      const name = typeof person.name === 'string' ? person.name.trim() : '';
+      if (!name) return null;
+      const relation = typeof person.relation === 'string' ? person.relation.trim() : '';
+      return relation ? `${name} (${relation})` : name;
+    })
+    .filter((person): person is string => Boolean(person))
+    .slice(0, 4);
+
+  return people.length > 0 ? people.join(', ') : null;
+}
+
+function getAccommodationSummary(context: RichContext): string | null {
+  if (context.accommodation && typeof context.accommodation === 'object') {
+    const accommodation = context.accommodation as Record<string, unknown>;
+    const name = typeof accommodation.name === 'string' ? accommodation.name.trim() : '';
+    const address = typeof accommodation.address === 'string' ? accommodation.address.trim() : '';
+    const status = typeof accommodation.status === 'string' ? accommodation.status.trim() : '';
+    const parts = [name, address, status ? `status: ${status}` : ''].filter(Boolean);
+    if (parts.length > 0) return parts.join(', ');
+  }
+
+  const name = typeof context.accommodationName === 'string' ? context.accommodationName.trim() : '';
+  const address = typeof context.accommodationAddress === 'string' ? context.accommodationAddress.trim() : '';
+  const parts = [name, address].filter(Boolean);
+  return parts.length > 0 ? parts.join(', ') : null;
+}
+
+function getBaseSummary(context: RichContext): string | null {
+  if (!context.base || typeof context.base !== 'object') return null;
+  const base = context.base as Record<string, unknown>;
+  const address = typeof base.address === 'string' ? base.address.trim() : '';
+  const host = typeof base.host === 'string' ? base.host.trim() : '';
+  const zone = typeof base.zone === 'string' ? base.zone.trim() : '';
+  const parts = [address, host ? `host: ${host}` : '', zone ? `zone: ${zone}` : ''].filter(Boolean);
+  return parts.length > 0 ? parts.join(', ') : null;
+}
+
+function getTravelSummary(context: RichContext): string | null {
+  if (!context.travel || typeof context.travel !== 'object') return null;
+  const travel = context.travel as Record<string, unknown>;
+
+  if (typeof travel.note === 'string' && travel.note.trim()) {
+    return truncate(travel.note, 140);
+  }
+
+  const outbound = travel.outbound && typeof travel.outbound === 'object'
+    ? travel.outbound as Record<string, unknown>
+    : null;
+  const inbound = travel.return && typeof travel.return === 'object'
+    ? travel.return as Record<string, unknown>
+    : null;
+
+  const segments = [outbound, inbound]
+    .filter((segment): segment is Record<string, unknown> => Boolean(segment))
+    .map((segment) => {
+      const from = typeof segment.from === 'string' ? segment.from.trim() : '';
+      const to = typeof segment.to === 'string' ? segment.to.trim() : '';
+      const departs = typeof segment.departs === 'string' ? segment.departs.trim() : '';
+      const arrives = typeof segment.arrives === 'string' ? segment.arrives.trim() : '';
+      if (!from && !to) return '';
+      const route = [from, to].filter(Boolean).join(' → ');
+      const timing = [departs ? `departs ${departs}` : '', arrives ? `arrives ${arrives}` : ''].filter(Boolean).join(', ');
+      return [route, timing].filter(Boolean).join(' ');
+    })
+    .filter(Boolean);
+
+  return segments.length > 0 ? segments.join(' | ') : null;
+}
+
+function getContextDiscoveries(
+  context: Context,
+  discoveries: KnownContextDiscovery[] = [],
+  limit = 3,
+): string[] {
+  return discoveries
+    .filter((discovery) => discovery.contextKey === context.key)
+    .sort((a, b) => {
+      const aPriority = a.type === 'accommodation' || a.type === 'hotel' ? 0 : 1;
+      const bPriority = b.type === 'accommodation' || b.type === 'hotel' ? 0 : 1;
+      if (aPriority !== bPriority) return aPriority - bPriority;
+      return new Date(b.discoveredAt || 0).getTime() - new Date(a.discoveredAt || 0).getTime();
+    })
+    .slice(0, limit)
+    .map((discovery) => {
+      const location = discovery.address || discovery.city;
+      return `${discovery.name} (${discovery.type}${location ? `, ${location}` : ''})`;
+    });
+}
+
+function formatContextSummary(
+  context: Context,
+  discoveries: KnownContextDiscovery[] = [],
+  detailLevel: 'concise' | 'full' = 'concise',
+): string {
+  const richContext = context as RichContext;
+  const status = getContextStatus(richContext);
+  const bookingStatus = typeof richContext.bookingStatus === 'string' ? richContext.bookingStatus.trim() : '';
+  const headerParts = [context.type, status, bookingStatus ? `booking: ${bookingStatus}` : ''].filter(Boolean);
+  const lines: string[] = [
+    `- ${context.emoji || '📍'} ${context.label} [${headerParts.join(', ')}]`,
+    `  Key: ${context.key}`,
+  ];
+
+  const facts = [
+    context.city ? `Location: ${context.city}` : '',
+    context.dates ? `Dates: ${context.dates}` : '',
+    context.focus?.length ? `Focus: ${context.focus.join(', ')}` : '',
+  ].filter(Boolean);
+  if (facts.length > 0) lines.push(`  ${facts.join(' · ')}`);
+
+  const accommodation = getAccommodationSummary(richContext);
+  const base = getBaseSummary(richContext);
+  const travel = getTravelSummary(richContext);
+  const people = getPeopleSummary(richContext);
+  const priorities = getStringList(richContext.priorities);
+  const mustDo = getStringList(richContext.mustDo);
+  const places = getContextDiscoveries(context, discoveries, detailLevel === 'full' ? 3 : 2);
+
+  const extras = [
+    accommodation ? `Accommodation: ${accommodation}` : '',
+    base ? `Base: ${base}` : '',
+    travel ? `Travel: ${travel}` : '',
+    people ? `People: ${people}` : '',
+    typeof richContext.purpose === 'string' && richContext.purpose.trim() ? `Purpose: ${truncate(richContext.purpose, 170)}` : '',
+    typeof richContext.notes === 'string' && richContext.notes.trim() ? `Notes: ${truncate(richContext.notes, 170)}` : '',
+    priorities.length > 0 ? `Priorities: ${priorities.join(', ')}` : '',
+    mustDo.length > 0 ? `Must do: ${mustDo.join(', ')}` : '',
+    places.length > 0 ? `Known places: ${places.join('; ')}` : '',
+  ].filter(Boolean);
+
+  const maxExtras = detailLevel === 'full' ? 6 : 2;
+  for (const extra of extras.slice(0, maxExtras)) {
+    lines.push(`  ${extra}`);
+  }
+
+  return lines.join('\n');
 }
 
 /**
@@ -173,18 +358,35 @@ Be curious and warm. Get to know them naturally.`;
     }
   }
 
-  // Add active contexts (trips, outings, radars)
-  const activeContexts = context.manifest?.contexts?.filter((c: Context) => c.active) || [];
-  if (activeContexts.length > 0) {
-    prompt += `\n\n## ACTIVE CONTEXTS\n`;
-    for (const ctx of activeContexts) {
-      const dates = ctx.dates ? ` (${ctx.dates})` : '';
-      const focus = ctx.focus?.length ? ` — Focus: ${ctx.focus.join(', ')}` : '';
-      prompt += `- ${ctx.emoji} ${ctx.label}${dates}${focus}\n`;
-      prompt += `  Key: ${ctx.key}\n`;
+  // Add known contexts with rich trip facts
+  const allContexts = context.manifest?.contexts || [];
+  if (allContexts.length > 0) {
+    const activeContexts = allContexts.filter(isContextActive);
+    const prioritizedKeys = new Set<string>([
+      ...activeContexts.map((ctx) => ctx.key),
+      ...(context.activeContextKey ? [context.activeContextKey] : []),
+    ]);
+
+    prompt += `\n\n## KNOWN CONTEXTS\nThese are the user's existing trips, outings, radars, and saved planning contexts. Treat these as already-known facts from the app. Do not ask the user to repeat details that are already listed here.`;
+
+    const prioritizedContexts = allContexts.filter((ctx) => prioritizedKeys.has(ctx.key));
+    const otherContexts = allContexts.filter((ctx) => !prioritizedKeys.has(ctx.key));
+
+    if (prioritizedContexts.length > 0) {
+      prompt += `\n\n### PRIORITY CONTEXTS\n`;
+      for (const ctx of prioritizedContexts) {
+        prompt += `${formatContextSummary(ctx, context.knownDiscoveries, 'full')}\n`;
+      }
+    }
+
+    if (otherContexts.length > 0) {
+      prompt += `\n### OTHER KNOWN CONTEXTS\n`;
+      for (const ctx of otherContexts) {
+        prompt += `${formatContextSummary(ctx, context.knownDiscoveries, ctx.type === 'trip' ? 'full' : 'concise')}\n`;
+      }
     }
   } else {
-    prompt += `\n\n## CONTEXTS\nNo active trips, outings, or radars. If the user mentions an upcoming trip or outing, help them set it up.`;
+    prompt += `\n\n## CONTEXTS\nNo saved trips, outings, or radars yet. If the user mentions an upcoming trip or outing, help them set it up.`;
   }
 
   // Add recent discoveries
@@ -199,7 +401,7 @@ Be curious and warm. Get to know them naturally.`;
   if (context.activeContextKey) {
     const targeted = context.manifest?.contexts?.find((c: Context) => c.key === context.activeContextKey);
     if (targeted) {
-      prompt += `\n\n## ACTIVE CHAT TARGET\nThe user is currently focused on: **${targeted.emoji || '\ud83d\udccd'} ${targeted.label}** (key: \`${targeted.key}\`)${targeted.city ? ` in ${targeted.city}` : ''}${targeted.dates ? ` — ${targeted.dates}` : ''}.\n\nWhen the user talks about places, adding things, or updating details — apply them to THIS context. Use contextKey: \`${targeted.key}\` in all add_to_compass and update_trip calls unless they explicitly mention a different trip.`;
+      prompt += `\n\n## ACTIVE CHAT TARGET\nThe user is currently focused on: **${targeted.emoji || '📍'} ${targeted.label}** (key: \`${targeted.key}\`)${targeted.city ? ` in ${targeted.city}` : ''}${targeted.dates ? ` — ${targeted.dates}` : ''}.\n\nKnown facts for this target:\n${formatContextSummary(targeted, context.knownDiscoveries, 'full')}\n\nWhen the user talks about places, adding things, or updating details, apply them to THIS context. Use contextKey: \`${targeted.key}\` in all add_to_compass and update_trip calls unless they explicitly mention a different trip.`;
 
       // Card-level targeting — user tapped a specific place card to chat about it
       if (context.chatTarget?.cardName) {
@@ -210,7 +412,7 @@ Be curious and warm. Get to know them naturally.`;
   }
 
   // Add contextKey instruction
-  prompt += `\n\n## CONTEXTKEY USAGE\nWhen recommending places, use the appropriate contextKey from the ACTIVE CONTEXTS above in your add_to_compass calls. Match the city and focus areas to the context. If no context matches, omit contextKey.`;
+  prompt += `\n\n## CONTEXTKEY USAGE\nWhen recommending places, use the appropriate contextKey from the KNOWN CONTEXTS above in your add_to_compass calls. Match the city and focus areas to the context. If no context matches, omit contextKey.`;
 
   return prompt;
 }

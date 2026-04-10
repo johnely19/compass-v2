@@ -149,11 +149,11 @@ export const TOOLS: ToolDefinition[] = [
   },
   {
     name: 'set_active_context',
-    description: 'Switch the homepage focus to a specific existing trip/outing/radar context. Call this whenever the conversation shifts to discuss a different context than the one the user is currently viewing — e.g. the user says "let\'s review the NYC trip" or "actually, what about Boston?". This does NOT create a new context (use create_context for that) and does NOT add or update discoveries — it just signals the app to switch the visible context. Use the exact context key from the ACTIVE CONTEXTS list.',
+    description: 'Switch the homepage focus to a specific existing trip/outing/radar context. Call this whenever the conversation shifts to discuss a different context than the one the user is currently viewing — e.g. the user says "let\'s review the NYC trip" or "actually, what about Boston?". This does NOT create a new context (use create_context for that) and does NOT add or update discoveries — it just signals the app to switch the visible context. Use the exact context key from the KNOWN CONTEXTS list.',
     input_schema: {
       type: 'object' as const,
       properties: {
-        contextKey: { type: 'string' as const, description: 'The exact context key to focus, e.g. trip:nyc-solo-trip or trip:boston-august-2026. Must match one of the keys in ACTIVE CONTEXTS.' },
+        contextKey: { type: 'string' as const, description: 'The exact context key to focus, e.g. trip:nyc-solo-trip or trip:boston-august-2026. Must match one of the keys in KNOWN CONTEXTS.' },
       },
       required: ['contextKey'],
     },

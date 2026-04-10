@@ -281,10 +281,23 @@ export async function POST(request: NextRequest) {
       getUserDiscoveries(user.id),
     ]);
 
-    const recentDiscoveries = (discoveries?.discoveries || [])
+    const allDiscoveries = discoveries?.discoveries || [];
+
+    const recentDiscoveries = allDiscoveries
       .sort((a: Discovery, b: Discovery) => new Date(b.discoveredAt).getTime() - new Date(a.discoveredAt).getTime())
       .slice(0, 5)
       .map((d: Discovery) => ({ name: d.name, type: d.type, city: d.city }));
+
+    const knownDiscoveries = allDiscoveries
+      .filter((d: Discovery) => Boolean(d.contextKey))
+      .map((d: Discovery) => ({
+        contextKey: d.contextKey,
+        name: d.name,
+        type: d.type,
+        city: d.city,
+        address: d.address,
+        discoveredAt: d.discoveredAt,
+      }));
 
     const history: ChatMessage[] = clientHistory || (await getChatHistory(user.id));
 
@@ -295,6 +308,7 @@ export async function POST(request: NextRequest) {
       preferences,
       manifest,
       recentDiscoveries,
+      knownDiscoveries,
       activeContextKey: typeof activeContextKey === 'string' ? activeContextKey : undefined,
       chatTarget: chatTarget && typeof chatTarget === 'object' ? {
         cardId: typeof chatTarget.cardId === 'string' ? chatTarget.cardId : undefined,
