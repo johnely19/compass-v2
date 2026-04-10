@@ -260,6 +260,20 @@ export async function recordObservation(params: {
   entry.latestSignificanceSummary = entrySig.latestSummary;
   entry.hasCriticalChange = entrySig.hasCritical;
 
+  // Significance-triggered status escalation:
+  // A critical observation escalates candidate → active, active → priority.
+  // We never demote — escalation is one-way (a place that mattered, still matters).
+  if (significance.level === 'critical') {
+    if (entry.monitorStatus === 'candidate') entry.monitorStatus = 'active';
+    else if (entry.monitorStatus === 'active') entry.monitorStatus = 'priority';
+  } else if (significance.level === 'notable' && entry.monitorStatus === 'candidate') {
+    // Repeated notable signals promote candidate → active
+    const recentNotableCount = entry.observations.filter(
+      o => o.significanceLevel === 'notable' || o.significanceLevel === 'critical',
+    ).length;
+    if (recentNotableCount >= 2) entry.monitorStatus = 'active';
+  }
+
   // Optionally set next check time
   if (nextCheckAt) {
     entry.nextCheckAt = nextCheckAt;

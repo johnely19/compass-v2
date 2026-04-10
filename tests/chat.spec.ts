@@ -1,10 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('chat widget has correct light background', async ({ page }) => {
-  // Authenticate as QA test user (fixture-backed, works in CI without Blob)
-  await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
-
-  // Navigate to home page
+  // Auth pre-seeded by global-setup.ts
   await page.goto('/', { waitUntil: 'networkidle' });
 
   // Look for the chat textarea using a resilient placeholder locator

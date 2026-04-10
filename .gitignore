@@ -52,3 +52,4 @@ logs/*.log
 # test artifacts
 test-results/
 playwright-report/
+tests/.auth-state.json

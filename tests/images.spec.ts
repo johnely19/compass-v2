@@ -1,10 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('all visible images load correctly', async ({ page }) => {
-  // Authenticate as QA test user (fixture-backed, works in CI without Blob)
-  await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
-
-  // Navigate to home page
+  // Auth pre-seeded by global-setup.ts
   await page.goto('/', { waitUntil: 'networkidle' });
 
   // Find all img elements with src attributes

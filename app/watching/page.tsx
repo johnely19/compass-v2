@@ -130,7 +130,8 @@ export default async function WatchingPage() {
         type: d.type,
         contextKey: d.contextKey,
         contextLabel: ctx?.label ?? d.contextKey,
-        monitorStatus: d.monitorStatus ?? 'candidate',
+        // Prefer durable inventory status (may have been escalated by significance)
+        monitorStatus: inventoryEntry?.monitorStatus ?? d.monitorStatus ?? 'candidate',
         monitorType: d.monitorType ?? 'general',
         monitorCadence: d.monitorCadence,
         monitorExplanation: d.monitorExplanation,

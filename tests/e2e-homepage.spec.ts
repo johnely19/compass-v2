@@ -6,12 +6,10 @@
  */
 import { test, expect, type Page } from '@playwright/test';
 
-// qa-test-user has static fixture data — works in CI without Blob token
-const TEST_USER = 'qa-test-user5506';
+// Auth is pre-seeded by global-setup.ts (compass-user cookie for qa-test-user)
 
-/** Authenticate and navigate to homepage */
+/** Navigate to homepage (auth already set by global-setup) */
 async function loginAndGoHome(page: Page) {
-  await page.goto(`/u/${TEST_USER}`, { waitUntil: 'networkidle' });
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.waitForTimeout(1000); // let client hydrate
 }

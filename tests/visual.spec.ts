@@ -5,10 +5,8 @@ import { test, expect } from '@playwright/test';
 // To capture/update: npx playwright test tests/visual.spec.ts --update-snapshots
 test.describe('Visual regression tests', () => {
   test.skip(!!process.env.CI, 'Visual baselines are platform-specific — run locally only');
-  test.beforeEach(async ({ page }) => {
-    // Auth as QA test user (fixture-backed, works in CI)
-    await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
-  });
+  // Auth pre-seeded by global-setup.ts
+  test.beforeEach(async (_) => { /* no-op: global-setup handles auth */ });
 
   test('homepage visual', async ({ page }) => {
     await page.goto('/', { waitUntil: 'networkidle' });
