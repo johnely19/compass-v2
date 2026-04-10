@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 test('all visible images load correctly', async ({ page }) => {
-  // Authenticate first by visiting /u/john2824
-  await page.goto('/u/john2824', { waitUntil: 'networkidle' });
+  // Authenticate as QA test user (fixture-backed, works in CI without Blob)
+  await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
 
   // Navigate to home page
   await page.goto('/', { waitUntil: 'networkidle' });

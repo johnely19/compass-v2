@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
 
 test('chat widget has correct light background', async ({ page }) => {
-  // Authenticate first by visiting /u/john2824
-  await page.goto('/u/john2824', { waitUntil: 'networkidle' });
+  // Authenticate as QA test user (fixture-backed, works in CI without Blob)
+  await page.goto('/u/qa-test-user5506', { waitUntil: 'networkidle' });
 
   // Navigate to home page
   await page.goto('/', { waitUntil: 'networkidle' });
 
   // Look for the chat textarea using a resilient placeholder locator
-  const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+  const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
 
   // Assert it exists and is visible
   await expect(chatInput).toBeVisible();

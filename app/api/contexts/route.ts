@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getCurrentUser } from '../../_lib/user';
-import { getUserManifest } from '../../_lib/user-data';
+import { getEffectiveUserManifest } from '../../_lib/effective-user-data';
 import { isContextActive } from '../../_lib/context-lifecycle';
 
 /**
@@ -16,7 +16,7 @@ export async function GET() {
     return NextResponse.json({ error: 'Not authenticated' }, { status: 401 });
   }
 
-  const manifest = await getUserManifest(user.id);
+  const manifest = await getEffectiveUserManifest(user.id);
   const contexts = (manifest?.contexts ?? []).filter(isContextActive);
 
   return NextResponse.json({
