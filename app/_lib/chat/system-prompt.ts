@@ -4,6 +4,7 @@
  */
 
 import { buildPlaceCardTemplate } from '../app-url';
+import { buildContextAliases, type KnownContextDiscovery, type ResolvedContextMatch } from './context-resolution';
 import type { UserPreferences, UserManifest, Context } from '../types';
 
 export const SYSTEM_PROMPT = `You are the Compass Concierge — a warm, knowledgeable travel companion with real research abilities.
@@ -59,7 +60,7 @@ CONTEXT SWITCHING — keep the homepage in sync with the conversation:
   - Returning to a trip you were discussing earlier in the chat, e.g. Ontario → NYC → Ontario. Every hop between existing contexts needs its own set_active_context call.
 - After create_context for a brand-new trip, you do NOT need to call set_active_context — the app auto-switches on create_context.
 - If the user asks about a context that does not exist yet, call create_context instead (do NOT call set_active_context with a made-up key).
-- Use the exact key from KNOWN CONTEXTS (e.g. \`trip:nyc-solo-trip\`), not a free-form label.
+- Match against the context facts and alias cues in KNOWN CONTEXTS, then use the exact saved key (e.g. \`trip:nyc-solo-trip\`) in the tool call, not a free-form label.
 
 CONTEXTUAL EDITING — for corrections, additions, and removals:
 When the user is scoped to a specific context (see ACTIVE CHAT TARGET below), they may ask you to:
@@ -121,15 +122,6 @@ export interface ChatTargetInfo {
   cardPlaceId?: string;
 }
 
-export interface KnownContextDiscovery {
-  contextKey: string;
-  name: string;
-  type: string;
-  city: string;
-  address?: string;
-  discoveredAt?: string;
-}
-
 export interface ChatContext {
   userCode: string;
   userCity: string;
@@ -141,6 +133,8 @@ export interface ChatContext {
   activeContextKey?: string;
   /** Card-level targeting — a specific place the user is chatting about */
   chatTarget?: ChatTargetInfo;
+  /** High-confidence structured resolution for the latest user message */
+  resolvedContextReference?: ResolvedContextMatch;
 }
 
 type RichContext = Context & Record<string, unknown>;
@@ -297,6 +291,7 @@ function formatContextSummary(
   const priorities = getStringList(richContext.priorities);
   const mustDo = getStringList(richContext.mustDo);
   const places = getContextDiscoveries(context, discoveries, detailLevel === 'full' ? 3 : 2);
+  const aliases = buildContextAliases(context, discoveries, detailLevel === 'full' ? 5 : 3);
 
   const extras = [
     accommodation ? `Accommodation: ${accommodation}` : '',
@@ -308,6 +303,7 @@ function formatContextSummary(
     priorities.length > 0 ? `Priorities: ${priorities.join(', ')}` : '',
     mustDo.length > 0 ? `Must do: ${mustDo.join(', ')}` : '',
     places.length > 0 ? `Known places: ${places.join('; ')}` : '',
+    aliases.length > 0 ? `Alias cues: ${aliases.join('; ')}` : '',
   ].filter(Boolean);
 
   const maxExtras = detailLevel === 'full' ? 6 : 2;
@@ -392,6 +388,14 @@ Be curious and warm. Get to know them naturally.`;
     }
   } else {
     prompt += `\n\n## CONTEXTS\nNo saved trips, outings, or radars yet. If the user mentions an upcoming trip or outing, help them set it up.`;
+  }
+
+  if (context.resolvedContextReference) {
+    const resolved = context.resolvedContextReference;
+    const matchedFacts = [...resolved.matchedAliases, ...resolved.matchedTokens]
+      .filter(Boolean)
+      .slice(0, 5);
+    prompt += `\n\n## STRUCTURED CONTEXT MATCH\nThe latest user message most likely refers to **${resolved.context.emoji || '📍'} ${resolved.context.label}** (key: \`${resolved.context.key}\`).${matchedFacts.length > 0 ? ` Matching cues: ${matchedFacts.join(', ')}.` : ''}\n\nUnless the user is clearly creating a different brand-new context, treat this as a reference to the existing saved context. If it differs from ACTIVE CHAT TARGET, call set_active_context with \`${resolved.context.key}\` before other tools.`;
   }
 
   // Add recent discoveries

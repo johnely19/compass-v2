@@ -3,7 +3,8 @@
  * Called by Concierge when the user shares trip details, dates, accommodation, etc.
  */
 
-import { getUserManifest, setUserData } from '../../user-data';
+import { getUserDiscoveries, getUserManifest, setUserData } from '../../user-data';
+import { resolveContextReference, type KnownContextDiscovery } from '../context-resolution';
 import type { Context } from '../../types';
 
 export interface UpdateTripInput {
@@ -20,12 +21,29 @@ export interface UpdateTripInput {
 
 export async function updateTrip(userId: string, input: UpdateTripInput): Promise<string> {
   try {
-    const manifest = await getUserManifest(userId);
+    const [manifest, discoveries] = await Promise.all([
+      getUserManifest(userId),
+      getUserDiscoveries(userId),
+    ]);
     if (!manifest) {
       return `❌ No manifest found for user. Can't update trip.`;
     }
 
-    const idx = manifest.contexts.findIndex(c => c.key === input.contextKey);
+    const knownDiscoveries: KnownContextDiscovery[] = (discoveries?.discoveries || [])
+      .filter((discovery) => Boolean(discovery.contextKey))
+      .map((discovery) => ({
+        contextKey: discovery.contextKey,
+        name: discovery.name,
+        type: discovery.type,
+        city: discovery.city,
+        address: discovery.address,
+        discoveredAt: discovery.discoveredAt,
+      }));
+
+    const resolved = resolveContextReference(input.contextKey, manifest, knownDiscoveries);
+    const resolvedContextKey = resolved?.context.key || input.contextKey;
+
+    const idx = manifest.contexts.findIndex(c => c.key === resolvedContextKey);
     if (idx === -1) {
       return `❌ Context not found: "${input.contextKey}". Available contexts: ${manifest.contexts.map(c => c.key).join(', ')}`;
     }
@@ -53,7 +71,7 @@ export async function updateTrip(userId: string, input: UpdateTripInput): Promis
     if (input.focus) changes.push(`focus → ${input.focus.join(', ')}`);
     if (input.accommodationName) changes.push(`accommodation → ${input.accommodationName}`);
 
-    console.log(`[update_trip] ✅ Updated context "${input.contextKey}" for user ${userId}: ${changes.join('; ')}`);
+    console.log(`[update_trip] ✅ Updated context "${resolvedContextKey}" for user ${userId}: ${changes.join('; ')}`);
     return `✅ Updated ${updated.emoji} ${updated.label}: ${changes.join(', ')}`;
   } catch (e) {
     console.error('[update_trip] Failed:', e);

@@ -10,8 +10,8 @@
  *
  * Covered behaviours:
  * 1. Route-level resolution of a tool call's target contextKey
- *    (create_context derives the key from label; everything else reads the
- *    explicit contextKey from the tool input).
+ *    (create_context derives the key from label; existing-context tools
+ *    canonically resolve natural phrasing to the saved key when possible).
  * 2. HomeClient-style reducer for chat-driven switches:
  *    - If the target key is in the current contexts → apply immediately
  *    - If the target key is NOT yet in contexts → stash as pending
@@ -22,7 +22,9 @@
 import { test, describe } from 'node:test';
 import assert from 'node:assert/strict';
 
+import { resolveContextKey, type KnownContextDiscovery } from '../app/_lib/chat/context-resolution';
 import { computeContextKey } from '../app/_lib/chat/tools/create-context';
+import type { UserManifest } from '../app/_lib/types';
 
 // ---------------------------------------------------------------------------
 // Pure function mirroring app/api/chat/route.ts resolveTargetContextKey.
@@ -31,6 +33,8 @@ import { computeContextKey } from '../app/_lib/chat/tools/create-context';
 function resolveTargetContextKey(
   toolName: string,
   input: Record<string, unknown>,
+  manifest: UserManifest | null = null,
+  knownDiscoveries: KnownContextDiscovery[] = [],
 ): string | undefined {
   if (toolName === 'create_context') {
     const type = typeof input?.type === 'string' ? input.type : undefined;
@@ -41,7 +45,8 @@ function resolveTargetContextKey(
     return undefined;
   }
   const ck = input?.contextKey;
-  return typeof ck === 'string' && ck.length > 0 ? ck : undefined;
+  if (typeof ck !== 'string' || ck.length === 0) return undefined;
+  return resolveContextKey(ck, manifest, knownDiscoveries) || ck;
 }
 
 // ---------------------------------------------------------------------------
@@ -132,6 +137,43 @@ function forwardToolResultContextKey(
 
 // ---------------------------------------------------------------------------
 describe('route.resolveTargetContextKey', () => {
+  const manifest: UserManifest = {
+    updatedAt: '2026-04-10T00:00:00.000Z',
+    contexts: [
+      {
+        key: 'trip:cottage-july-2026',
+        label: 'Ontario Cottage',
+        emoji: '🏊',
+        type: 'trip',
+        city: 'Lake Huron',
+        dates: 'July 2026 (3+ weeks)',
+        focus: ['waterfront', 'swimming'],
+        active: true,
+      },
+      {
+        key: 'trip:nyc-solo-trip',
+        label: 'NYC Solo Trip',
+        emoji: '🗽',
+        type: 'trip',
+        city: 'New York',
+        dates: '2026-04-27 to 2026-04-30',
+        focus: ['galleries', 'jazz'],
+        active: true,
+      },
+    ],
+  };
+
+  const knownDiscoveries: KnownContextDiscovery[] = [
+    {
+      contextKey: 'trip:cottage-july-2026',
+      name: 'The Lookout',
+      type: 'accommodation',
+      city: 'Port Albert',
+      address: 'Port Albert',
+      discoveredAt: '2026-03-15T00:00:00.000Z',
+    },
+  ];
+
   test('create_context derives key from type + label (matches tool slug)', () => {
     const key = resolveTargetContextKey('create_context', { type: 'trip', label: 'Barcelona November 2026' });
     assert.equal(key, 'trip:barcelona-november-2026');
@@ -148,23 +190,33 @@ describe('route.resolveTargetContextKey', () => {
   });
 
   test('add_to_compass reads contextKey from input', () => {
-    const key = resolveTargetContextKey('add_to_compass', { contextKey: 'trip:boston-aug-2026', name: 'x' });
+    const key = resolveTargetContextKey('add_to_compass', { contextKey: 'trip:boston-aug-2026', name: 'x' }, manifest, knownDiscoveries);
     assert.equal(key, 'trip:boston-aug-2026');
   });
 
   test('update_trip reads contextKey from input', () => {
-    const key = resolveTargetContextKey('update_trip', { contextKey: 'trip:nyc-solo-trip', dates: 'April 27-30, 2026' });
+    const key = resolveTargetContextKey('update_trip', { contextKey: 'trip:nyc-solo-trip', dates: 'April 27-30, 2026' }, manifest, knownDiscoveries);
     assert.equal(key, 'trip:nyc-solo-trip');
   });
 
   test('set_active_context reads contextKey from input', () => {
-    const key = resolveTargetContextKey('set_active_context', { contextKey: 'trip:paris-2027' });
+    const key = resolveTargetContextKey('set_active_context', { contextKey: 'trip:paris-2027' }, manifest, knownDiscoveries);
     assert.equal(key, 'trip:paris-2027');
   });
 
+  test('canonicalizes semantic trip phrasing to the saved key', () => {
+    const key = resolveTargetContextKey('set_active_context', { contextKey: 'Lake Huron cottage trip' }, manifest, knownDiscoveries);
+    assert.equal(key, 'trip:cottage-july-2026');
+  });
+
+  test('canonicalizes saved-place phrasing to the saved key', () => {
+    const key = resolveTargetContextKey('set_active_context', { contextKey: 'The Lookout trip' }, manifest, knownDiscoveries);
+    assert.equal(key, 'trip:cottage-july-2026');
+  });
+
   test('edit_discovery / remove_discovery also surface contextKey', () => {
-    assert.equal(resolveTargetContextKey('edit_discovery', { contextKey: 'outing:sat-dinner', name: 'x', updates: {} }), 'outing:sat-dinner');
-    assert.equal(resolveTargetContextKey('remove_discovery', { contextKey: 'radar:downtown', name: 'x' }), 'radar:downtown');
+    assert.equal(resolveTargetContextKey('edit_discovery', { contextKey: 'outing:sat-dinner', name: 'x', updates: {} }, manifest, knownDiscoveries), 'outing:sat-dinner');
+    assert.equal(resolveTargetContextKey('remove_discovery', { contextKey: 'radar:downtown', name: 'x' }, manifest, knownDiscoveries), 'radar:downtown');
   });
 
   test('returns undefined when no contextKey is present', () => {

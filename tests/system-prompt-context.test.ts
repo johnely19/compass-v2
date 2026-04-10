@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 
+import { resolveContextReference } from '../app/_lib/chat/context-resolution';
 import { buildSystemPrompt, type ChatContext } from '../app/_lib/chat/system-prompt';
 
 test('buildSystemPrompt includes rich facts for known trip contexts', () => {
@@ -53,8 +54,57 @@ test('buildSystemPrompt includes rich facts for known trip contexts', () => {
   assert.match(prompt, /Ontario Cottage/);
   assert.match(prompt, /Location: Lake Huron/);
   assert.match(prompt, /Known places: The Lookout \(accommodation, Port Albert\)/);
+  assert.match(prompt, /Alias cues: Ontario Cottage; Ontario Cottage trip; Lake Huron; Lake Huron cottage trip/);
   assert.match(prompt, /Boston Long Weekend/);
   assert.match(prompt, /archived/);
+});
+
+
+test('buildSystemPrompt surfaces structured semantic context matches', () => {
+  const context: ChatContext = {
+    userCode: 'john',
+    userCity: 'Toronto',
+    preferences: null,
+    manifest: {
+      updatedAt: '2026-04-10T00:00:00.000Z',
+      contexts: [
+        {
+          key: 'trip:cottage-july-2026',
+          label: 'Ontario Cottage',
+          emoji: '🏊',
+          type: 'trip',
+          city: 'Lake Huron',
+          dates: 'July 2026 (3+ weeks)',
+          focus: ['waterfront', 'swimming'],
+          active: true,
+        },
+      ],
+    },
+    recentDiscoveries: [],
+    knownDiscoveries: [
+      {
+        contextKey: 'trip:cottage-july-2026',
+        name: 'The Lookout',
+        type: 'accommodation',
+        city: 'Port Albert',
+        address: 'Port Albert',
+        discoveredAt: '2026-03-15T00:00:00.000Z',
+      },
+    ],
+  };
+
+  context.resolvedContextReference = resolveContextReference(
+    'What about the Lake Huron cottage trip?',
+    context.manifest,
+    context.knownDiscoveries,
+  ) || undefined;
+
+  const prompt = buildSystemPrompt(context);
+
+  assert.match(prompt, /## STRUCTURED CONTEXT MATCH/);
+  assert.match(prompt, /Ontario Cottage/);
+  assert.match(prompt, /trip:cottage-july-2026/);
+  assert.match(prompt, /Lake Huron cottage trip/);
 });
 
 test('buildSystemPrompt expands active chat target with trip details', () => {

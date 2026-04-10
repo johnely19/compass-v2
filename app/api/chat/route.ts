@@ -3,11 +3,12 @@ import { getCurrentUser } from '../../_lib/user';
 import { getUserProfile, getUserPreferences, getUserManifest, getUserDiscoveries } from '../../_lib/user-data';
 import { persistChatData, getChatHistory } from '../../_lib/chat/persistence';
 import { buildSystemPrompt, type ChatContext } from '../../_lib/chat/system-prompt';
+import { resolveContextKey, resolveContextReference, type KnownContextDiscovery } from '../../_lib/chat/context-resolution';
 import { TOOLS } from '../../_lib/chat/tools';
 import { runToolCall, type ToolName } from '../../_lib/chat/tools/runner';
 import { computeContextKey } from '../../_lib/chat/tools/create-context';
 import { checkRateLimit, rateLimitHeaders } from '../../_lib/chat/rate-limiter';
-import type { ChatMessage, Discovery } from '../../_lib/types';
+import type { ChatMessage, Discovery, UserManifest } from '../../_lib/types';
 
 // Vercel serverless config — tool loops need time
 export const maxDuration = 60;
@@ -50,11 +51,14 @@ function mapToolName(name: string): string {
  *
  * - For create_context, derive the key from type+label using the same
  *   slugify rule as the tool implementation.
- * - For every other tool, prefer the explicit contextKey in the input.
+ * - For every other tool, canonically resolve the provided context reference
+ *   to a saved context key when possible, then fall back to the raw input.
  */
 function resolveTargetContextKey(
   toolName: string,
   input: Record<string, unknown>,
+  manifest: UserManifest | null,
+  knownDiscoveries: KnownContextDiscovery[] = [],
 ): string | undefined {
   if (toolName === 'create_context') {
     const type = typeof input?.type === 'string' ? input.type : undefined;
@@ -69,7 +73,8 @@ function resolveTargetContextKey(
     return undefined;
   }
   const ck = input?.contextKey;
-  return typeof ck === 'string' && ck.length > 0 ? ck : undefined;
+  if (typeof ck !== 'string' || ck.length === 0) return undefined;
+  return resolveContextKey(ck, manifest, knownDiscoveries) || ck;
 }
 
 /**
@@ -204,6 +209,8 @@ async function executeToolLoop(
           const toolContextKey = resolveTargetContextKey(
             toolBlock.name as string,
             (toolBlock.input as Record<string, unknown>) || {},
+            manifest,
+            knownDiscoveries,
           );
           controller.enqueue(encoder.encode(
             `data: ${JSON.stringify({ toolResult: frontendToolName, messageId, ...(toolContextKey ? { contextKey: toolContextKey } : {}) })}\n\n`
@@ -290,7 +297,7 @@ export async function POST(request: NextRequest) {
       .slice(0, 5)
       .map((d: Discovery) => ({ name: d.name, type: d.type, city: d.city }));
 
-    const knownDiscoveries = allDiscoveries
+    const knownDiscoveries: KnownContextDiscovery[] = allDiscoveries
       .filter((d: Discovery) => Boolean(d.contextKey))
       .map((d: Discovery) => ({
         contextKey: d.contextKey,
@@ -304,6 +311,8 @@ export async function POST(request: NextRequest) {
     const history: ChatMessage[] = clientHistory || (await getChatHistory(user.id));
 
     // Build chat context for system prompt
+    const resolvedContextReference = resolveContextReference(message, manifest, knownDiscoveries);
+
     const chatContext: ChatContext = {
       userCode: user.code,
       userCity: profile?.city || user.city || '',
@@ -318,6 +327,7 @@ export async function POST(request: NextRequest) {
         cardType: typeof chatTarget.cardType === 'string' ? chatTarget.cardType : undefined,
         cardPlaceId: typeof chatTarget.cardPlaceId === 'string' ? chatTarget.cardPlaceId : undefined,
       } : undefined,
+      resolvedContextReference,
     };
 
     const appOrigin = request.nextUrl.origin;

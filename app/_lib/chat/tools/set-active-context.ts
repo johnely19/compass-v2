@@ -10,7 +10,8 @@
  * "let's review the NYC trip" while the homepage is showing Boston.
  */
 
-import { getUserManifest } from '../../user-data';
+import { getUserDiscoveries, getUserManifest } from '../../user-data';
+import { resolveContextReference, type KnownContextDiscovery } from '../context-resolution';
 
 export interface SetActiveContextInput {
   contextKey: string;
@@ -26,12 +27,28 @@ export async function setActiveContext(
   }
 
   try {
-    const manifest = await getUserManifest(userId);
-    const ctx = manifest?.contexts?.find(c => c.key === key);
+    const [manifest, discoveries] = await Promise.all([
+      getUserManifest(userId),
+      getUserDiscoveries(userId),
+    ]);
+
+    const knownDiscoveries: KnownContextDiscovery[] = (discoveries?.discoveries || [])
+      .filter((discovery) => Boolean(discovery.contextKey))
+      .map((discovery) => ({
+        contextKey: discovery.contextKey,
+        name: discovery.name,
+        type: discovery.type,
+        city: discovery.city,
+        address: discovery.address,
+        discoveredAt: discovery.discoveredAt,
+      }));
+
+    const resolved = resolveContextReference(key, manifest, knownDiscoveries);
+    const ctx = resolved?.context || manifest?.contexts?.find(c => c.key === key);
     if (!ctx) {
       return `Context not found for key: ${key}`;
     }
-    return `🎯 Focused on ${ctx.emoji || '📌'} ${ctx.label} (${key})`;
+    return `🎯 Focused on ${ctx.emoji || '📌'} ${ctx.label} (${ctx.key})`;
   } catch (e) {
     console.error('[set_active_context] Failed:', e);
     return `Failed to set active context: ${e instanceof Error ? e.message : String(e)}`;
