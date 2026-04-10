@@ -30,7 +30,7 @@ test.describe('Homepage Layout', () => {
     await expect(switcher).toBeVisible();
 
     // Chat input pinned at bottom
-    const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+    const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
     await expect(chatInput).toBeVisible({ timeout: 8000 });
 
     // Send button exists
@@ -75,7 +75,7 @@ test.describe('Homepage Layout', () => {
     await page.setViewportSize({ width: 390, height: 844 });
     await loginAndGoHome(page);
 
-    const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+    const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
     await expect(chatInput).toBeVisible({ timeout: 8000 });
     
     // Chat should be in the viewport without scrolling
@@ -106,7 +106,7 @@ test.describe('Chat Functionality', () => {
   test('can type and send a message', async ({ page }) => {
     await loginAndGoHome(page);
 
-    const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+    const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
     await chatInput.fill('Hello');
     
     // Send button should be enabled
@@ -128,7 +128,7 @@ test.describe('Chat Functionality', () => {
   test('shows tool status during operations', async ({ page }) => {
     await loginAndGoHome(page);
 
-    const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+    const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
     await chatInput.fill('What is the weather like in Tokyo?');
     await chatInput.press('Enter');
 
@@ -150,7 +150,7 @@ test.describe('Trip Creation Flow', () => {
     // Remember initial trip title
     const initialTitle = await page.locator('h2').first().textContent();
 
-    const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+    const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
     const uniqueName = `Test Trip ${Date.now()}`;
     await chatInput.fill(`Plan a trip to Reykjavik called "${uniqueName}"`);
     await chatInput.press('Enter');
@@ -210,7 +210,7 @@ test.describe('Responsive Design', () => {
 
       // Core elements should be visible at any viewport
       await expect(page.getByRole('navigation')).toBeVisible();
-      const chatInput = page.locator('[class*="chatInput"], input[type="text"], textarea').first();
+      const chatInput = page.locator('textarea[class*="chatInput"], textarea').first();
       await expect(chatInput).toBeVisible();
 
       // Take screenshot for manual review
