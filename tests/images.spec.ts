@@ -1,39 +1,55 @@
-import { test, expect } from '@playwright/test';
+import { test, expect, type Locator, type Page } from '@playwright/test';
 
-test('all visible images load correctly', async ({ page }) => {
-  // Auth pre-seeded by global-setup.ts
+const OWNER_AUTH_CODE = 'john2824';
+const IMAGE_RICH_CONTEXT_KEY = 'trip:cottage-july-2026';
+const IMAGE_RICH_PLACE_ID = 'ChIJCxjDu8c1K4gR33Dh5X2QMlc';
+
+async function loginAsOwner(page: Page) {
+  await page.goto(`/u/${OWNER_AUTH_CODE}`, { waitUntil: 'networkidle' });
+}
+
+async function expectPreviewBackgrounds(locator: Locator, minimumCards: number) {
+  const count = await locator.count();
+  expect(count).toBeGreaterThanOrEqual(minimumCards);
+
+  for (let i = 0; i < Math.min(count, minimumCards); i++) {
+    const backgroundImage = await locator.nth(i).evaluate((el) => getComputedStyle(el).backgroundImage);
+    expect(backgroundImage).not.toBe('none');
+  }
+}
+
+async function expectLoadedGalleryImages(locator: Locator, minimumImages: number) {
+  const count = await locator.count();
+  expect(count).toBeGreaterThanOrEqual(minimumImages);
+
+  for (let i = 0; i < minimumImages; i++) {
+    const naturalWidth = await locator.nth(i).evaluate((el) => (el as HTMLImageElement).naturalWidth);
+    expect(naturalWidth).toBeGreaterThan(0);
+  }
+}
+
+test('homepage place cards show preview images for the Ontario Cottage context', async ({ page }) => {
+  await loginAsOwner(page);
+  await page.evaluate((contextKey) => {
+    window.localStorage.setItem('compass-active-context', contextKey);
+  }, IMAGE_RICH_CONTEXT_KEY);
   await page.goto('/', { waitUntil: 'networkidle' });
 
-  // Find all img elements with src attributes
-  const images = page.locator('img[src]');
-  const count = await images.count();
+  const previews = page.locator('.place-card-image');
+  await expectPreviewBackgrounds(previews, 3);
+});
 
-  expect(count).toBeGreaterThan(0);
+test('review cards show preview images for the Ontario Cottage context', async ({ page }) => {
+  await loginAsOwner(page);
+  await page.goto(`/review/${encodeURIComponent(IMAGE_RICH_CONTEXT_KEY)}`, { waitUntil: 'networkidle' });
 
-  const brokenImages: string[] = [];
+  const previews = page.locator('.accomm-card-hero');
+  await expectPreviewBackgrounds(previews, 4);
+});
 
-  for (let i = 0; i < count; i++) {
-    const img = images.nth(i);
-    const src = await img.getAttribute('src');
+test('image-rich place cards expose at least three gallery images when available', async ({ page }) => {
+  await page.goto(`/placecards/${IMAGE_RICH_PLACE_ID}`, { waitUntil: 'networkidle' });
 
-    // Check if image is visible
-    const isVisible = await img.isVisible();
-    if (!isVisible) continue;
-
-    // Wait for the image to potentially load
-    await img.waitFor({ state: 'attached', timeout: 5000 }).catch(() => {});
-
-    // Get naturalWidth to check if image loaded
-    const naturalWidth = await img.evaluate((el) => (el as HTMLImageElement).naturalWidth);
-
-    if (naturalWidth === 0) {
-      brokenImages.push(src || 'unknown');
-    }
-  }
-
-  if (brokenImages.length > 0) {
-    console.log('Broken images found:', brokenImages);
-  }
-
-  expect(brokenImages).toHaveLength(0);
+  const galleryImages = page.locator('.place-detail-v2 .photo-gallery-item img');
+  await expectLoadedGalleryImages(galleryImages, 3);
 });

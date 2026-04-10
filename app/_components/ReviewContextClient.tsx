@@ -9,6 +9,7 @@ import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import ReviewMarkersMap from './ReviewMarkersMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
+import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -245,12 +246,7 @@ export default function ReviewContextClient({
                 {group.items.map(d => {
                   const placeId = d.place_id ?? d.id;
                   const entry = getTriageEntry(userId, context.key, placeId);
-                  const heroImage = (d as unknown as Record<string,string>).heroImage;
-                  const resolvedHero = heroImage
-                    ? (heroImage.startsWith('http') ? heroImage
-                      : heroImage.startsWith('/cottages/') || heroImage.startsWith('/developments/') ? heroImage
-                      : `${process.env.NEXT_PUBLIC_BLOB_BASE_URL || ''}${heroImage}`)
-                    : null;
+                  const resolvedHero = getDiscoveryPrimaryImageUrl(d);
                   // Distance badge for anchor contexts
                   const distanceM = (d as unknown as { distanceM?: number }).distanceM;
                   const walkable = context.anchor && distanceM !== undefined

@@ -1,3 +1,5 @@
+import type { Discovery, PlaceCardImage } from './types';
+
 /* ============================================================
    Compass v2 — Unified Image URL Resolution
    SINGLE source of truth for ALL image paths.
@@ -40,3 +42,59 @@ export function resolveImageUrlClient(path: string | undefined | null): string |
   if (path.startsWith('/') && base) return `${base}${path}`;
   return path;
 }
+
+function pushUniqueImage(
+  target: string[],
+  seen: Set<string>,
+  rawPath: string | undefined | null,
+) {
+  const resolved = resolveImageUrl(rawPath);
+  if (!resolved || seen.has(resolved)) return;
+  seen.add(resolved);
+  target.push(resolved);
+}
+
+export function getDiscoveryImageUrls(
+  discovery: Pick<Discovery, 'heroImage' | 'images'> | null | undefined,
+): string[] {
+  const urls: string[] = [];
+  const seen = new Set<string>();
+
+  pushUniqueImage(urls, seen, discovery?.heroImage);
+  for (const image of discovery?.images ?? []) {
+    pushUniqueImage(urls, seen, image?.url);
+  }
+
+  return urls;
+}
+
+export function getDiscoveryPrimaryImageUrl(
+  discovery: Pick<Discovery, 'heroImage' | 'images'> | null | undefined,
+): string | null {
+  return getDiscoveryImageUrls(discovery)[0] ?? null;
+}
+
+export function mergePlaceCardImages(
+  images: Array<{ path?: string | null; category?: string | null }> | undefined,
+  manifestImages: Array<{ path?: string | null; category?: string | null }> | undefined,
+): PlaceCardImage[] {
+  const merged: PlaceCardImage[] = [];
+  const seen = new Set<string>();
+
+  const push = (image: { path?: string | null; category?: string | null } | undefined | null) => {
+    if (!image?.path) return;
+    const resolved = resolveImageUrl(image.path) || image.path;
+    if (seen.has(resolved)) return;
+    seen.add(resolved);
+    merged.push({
+      path: image.path,
+      category: image.category || 'general',
+    });
+  };
+
+  for (const image of images ?? []) push(image);
+  for (const image of manifestImages ?? []) push(image);
+
+  return merged;
+}
+

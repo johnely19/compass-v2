@@ -6,8 +6,8 @@ import type { Discovery } from '../_lib/types';
 import { dispatchChatTarget } from '../_lib/chat-target';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
-import { resolveImageUrlClient } from '../_lib/image-url';
-import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
+import { getMonitorStatusLabel } from '../_lib/discovery-monitoring';
 
 interface PlaceCardProps {
   discovery: Discovery;
@@ -24,9 +24,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
   const safeRating = rating != null && !isNaN(rating) ? rating : null;
 
-  // Resolve image URL — prioritize new images array, then legacy heroImage
-  const rawImage = discovery.images?.[0]?.url || discovery.heroImage;
-  const imageUrl = resolveImageUrlClient(rawImage);
+  const imageUrl = getDiscoveryPrimaryImageUrl(discovery);
 
   // Fix #211: onError recovery - if image fails to load, trigger fetch from API
   const [fetchedImageUrl, setFetchedImageUrl] = useState<string | null>(null);
@@ -75,7 +73,6 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
   const mapsUrl = place_id
     ? `https://www.google.com/maps/place/?q=place_id:${place_id}`
     : null;
-  const monitorExplanation = getMonitoringExplanation(discovery);
 
   // Track whether this card is the active chat target (for halo effect)
   const [isChatTarget, setIsChatTarget] = useState(false);
