@@ -1,5 +1,6 @@
+import Link from 'next/link';
 import { getCurrentUser } from '../_lib/user';
-import { getUserManifest, getDerivedUserDiscoveries } from '../_lib/user-data';
+import { getEffectiveDerivedUserDiscoveries, getEffectiveUserManifest } from '../_lib/effective-user-data';
 import { getContextStatus } from '../_lib/context-lifecycle';
 import ReviewHubClient from '../_components/ReviewHubClient';
 
@@ -13,15 +14,15 @@ export default async function ReviewPage() {
       <main className="page">
         <div className="page-header">
           <h1>Review</h1>
-          <p className="text-muted"><a href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</a> to manage your discoveries.</p>
+          <p className="text-muted"><Link href="/u/join" style={{textDecoration: 'underline', color: 'inherit'}}>Sign in</Link> to manage your discoveries.</p>
         </div>
       </main>
     );
   }
 
   const [manifest, discoveriesData] = await Promise.all([
-    getUserManifest(user.id),
-    getDerivedUserDiscoveries(user.id),
+    getEffectiveUserManifest(user.id),
+    getEffectiveDerivedUserDiscoveries(user.id),
   ]);
 
   const allContexts = manifest?.contexts ?? [];

@@ -3,7 +3,8 @@
  * Called by Concierge when the user shares trip details, dates, accommodation, etc.
  */
 
-import { getUserManifest, setUserData } from '../../user-data';
+import { setUserData } from '../../user-data';
+import { getWritableUserManifest } from '../../effective-user-data';
 import type { Context } from '../../types';
 
 export interface UpdateTripInput {
@@ -20,10 +21,7 @@ export interface UpdateTripInput {
 
 export async function updateTrip(userId: string, input: UpdateTripInput): Promise<string> {
   try {
-    const manifest = await getUserManifest(userId);
-    if (!manifest) {
-      return `❌ No manifest found for user. Can't update trip.`;
-    }
+    const manifest = await getWritableUserManifest(userId);
 
     const idx = manifest.contexts.findIndex(c => c.key === input.contextKey);
     if (idx === -1) {
