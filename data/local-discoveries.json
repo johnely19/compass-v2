@@ -3955,7 +3955,25 @@
         "tips": [
           "Official site: ajuntament.barcelona.cat/lavirreina",
           "Typical hours from Google Places: Tue–Sun 11am–8pm, closed Monday"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "Street-defining palace turned image centre, directly on Las Ramblas."
       }
     },
     {
@@ -3979,7 +3997,25 @@
         "tips": [
           "Official site: amatller.org",
           "Google Places hours currently show daily 10am–7pm"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "One of the key façades that makes the street itself worth reading block by block."
       }
     },
     {
@@ -4001,7 +4037,25 @@
         "whyInteresting": "Historic-hotel scale at a major Commonwealth node, helping the boulevard read as lived city rather than pure scenery.",
         "tips": [
           "Official site: hotelcommonwealth.com"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "Historic-hotel scale at a major Commonwealth node, helping the boulevard read as lived city rather than pure scenery."
       }
     },
     {
@@ -4024,7 +4078,25 @@
         "whyInteresting": "A functioning cultural institution that keeps Unter den Linden from being just a postcard axis.",
         "tips": [
           "Official site: staatsoper-berlin.de"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "A functioning cultural institution that keeps Unter den Linden from being just a postcard axis."
       }
     },
     {
@@ -4048,7 +4120,25 @@
         "tips": [
           "Official site: publicisdrugstore.com",
           "Google Places currently shows late-night hours, often until 2am"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "Shows the Champs at its most urban: a flagship that works like infrastructure, not just luxury frontage."
       }
     },
     {
@@ -4071,7 +4161,25 @@
         "tips": [
           "Official site: bmvbooks.com",
           "Google Places currently shows late closing Thu–Sat"
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "goplaces-verified",
+          "supportingSources": [
+            "goplaces-verified"
+          ],
+          "verifiedBy": [
+            "google-places"
+          ],
+          "lastVerifiedAt": "2026-04-04T23:29:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "One of the clearest present-day examples of the Annex strip still working as a true great street edge."
       }
     },
     {
@@ -4093,7 +4201,25 @@
         "tips": [
           "Official site: lesdeuxgarcons.fr",
           "Use it as a street-reading stop rather than only a meal stop — the terrace is the point."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "Historic brasserie frontage that lets you read the avenue as social theater, not just postcard architecture."
       }
     },
     {
@@ -4115,7 +4241,25 @@
         "tips": [
           "Official site: illum.dk",
           "Current official programming includes Friday rooftop DJs (17:00–21:00)."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "A classic Strøget street machine: major frontage on the pedestrian spine, with rooftop and underground programs extending the street upward and downward."
       }
     },
     {
@@ -4137,7 +4281,25 @@
         "tips": [
           "Official site: saltonline.org/en",
           "Check the live program before a walk; exhibitions and talks are actively changing."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "A real civic interior on the avenue — the kind of place that proves İstiklal is a cultural corridor, not just a shopping street."
       }
     },
     {
@@ -4159,7 +4321,25 @@
         "tips": [
           "Official site: rome.intercontinental.com",
           "Useful as an evening-read stop even if John is not staying there."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "A current luxury anchor on the boulevard that helps Via Veneto still read as a grand hotel street."
       }
     },
     {
@@ -4181,7 +4361,25 @@
         "tips": [
           "Official source: chicago.gov Chicago Cultural Center page",
           "Open daily 10am–5pm per the City page; exhibitions close 15 minutes before building close."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "One of the best civic interiors off Michigan Avenue, turning the grand street into a cultural sequence rather than a shopping strip."
       }
     },
     {
@@ -4203,7 +4401,25 @@
         "tips": [
           "Official site: fundaciontelefonica.com/espacio-fundacion-telefonica/",
           "Official hours listed: Tue–Fri 10:00–20:00; Sat/Sun/holidays 11:00–20:00."
-        ]
+        ],
+        "streetRank": 1,
+        "streetScore": 88,
+        "confidence": "high",
+        "rarity": "notable",
+        "streetFit": "strong",
+        "provenanceGrade": "A",
+        "provenance": {
+          "leadSource": "official-web-verified",
+          "supportingSources": [
+            "official-web-verified"
+          ],
+          "verifiedBy": [
+            "official-website"
+          ],
+          "lastVerifiedAt": "2026-04-06T00:31:00.000Z",
+          "sourceType": "live-verification"
+        },
+        "whyThisPlaceMatters": "A serious public program plugged into the Gran Vía edge condition, where commercial spectacle meets ideas and exhibitions."
       }
     }
   ]
