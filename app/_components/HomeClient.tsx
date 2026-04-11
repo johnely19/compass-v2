@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { type TripAttributeEvent } from '../_lib/chat/emergence';
 import type { Context, Discovery } from '../_lib/types';
 import { getContextCounts } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
@@ -202,7 +203,7 @@ export default function HomeClient({
   // Keys that are currently "emerging" (just created from chat) — gets entrance animation
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   // Map of context key → recently-attached attribute pills
-  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
+  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, TripAttributeEvent[]>>({});
 
   // Re-render when triage state changes (for saved count badges)
   // Must be BEFORE any conditional returns (Rules of Hooks)
@@ -245,7 +246,7 @@ export default function HomeClient({
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = [];
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ key: string; attributes: Array<{ field: string; value: string }> }>).detail;
+      const detail = (e as CustomEvent<{ key: string; attributes: TripAttributeEvent[] }>).detail;
       if (!detail?.key || !detail.attributes?.length) return;
       setAttachingAttrs(prev => ({
         ...prev,
@@ -358,8 +359,8 @@ export default function HomeClient({
                     {landingAttrs.length > 0 && (
                       <div className="section-attr-pills">
                         {landingAttrs.map(attr => (
-                          <span key={attr.field} className="section-attr-pill">
-                            {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
+                          <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
+                            {attr.icon} {attr.label}: {attr.value}
                           </span>
                         ))}
                       </div>

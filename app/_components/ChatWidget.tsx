@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { diffTripAttributes, snapshotContext, type ContextSnapshot } from '../_lib/chat/emergence';
 import type { ChatMessage } from '../_lib/types';
 import styles from './ChatWidget.module.css';
 
@@ -83,7 +84,7 @@ export default function ChatWidget() {
   const updateTripUsed = useRef<string | null>(null); // stores contextKey if update_trip was used
   // Snapshot of context state before the chat turn
   const preContextKeys = useRef<Set<string>>(new Set());
-  const preContextSnapshots = useRef<Record<string, { dates?: string; city?: string; focus?: string[] }>>({});
+  const preContextSnapshots = useRef<Record<string, ContextSnapshot>>({});
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const collapsedInputRef = useRef<HTMLInputElement>(null);
@@ -316,11 +317,11 @@ export default function ChatWidget() {
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (data?.contexts) {
-          const ctxs = data.contexts as Array<{ key: string; dates?: string; city?: string; focus?: string[] }>;
+          const ctxs = data.contexts as Array<{ key: string; label?: string; emoji?: string; dates?: string; city?: string; focus?: string[] }>;
           preContextKeys.current = new Set(ctxs.map(c => c.key));
-          const snapshots: Record<string, { dates?: string; city?: string; focus?: string[] }> = {};
+          const snapshots: Record<string, ContextSnapshot> = {};
           for (const c of ctxs) {
-            snapshots[c.key] = { dates: c.dates, city: c.city, focus: c.focus };
+            snapshots[c.key] = snapshotContext(c);
           }
           preContextSnapshots.current = snapshots;
         }
@@ -408,17 +409,7 @@ export default function ChatWidget() {
                   for (const ctx of allCtxs) {
                     const prev = preContextSnapshots.current[ctx.key];
                     if (!prev) continue;
-                    const changedAttrs: Array<{ field: string; value: string }> = [];
-                    if (ctx.dates && ctx.dates !== prev.dates) {
-                      changedAttrs.push({ field: 'dates', value: ctx.dates });
-                    }
-                    if (ctx.city && ctx.city !== prev.city) {
-                      changedAttrs.push({ field: 'city', value: ctx.city });
-                    }
-                    const newFocus = (ctx.focus ?? []).filter(f => !(prev.focus ?? []).includes(f));
-                    if (newFocus.length > 0) {
-                      changedAttrs.push({ field: 'focus', value: newFocus.join(', ') });
-                    }
+                    const changedAttrs = diffTripAttributes(prev, snapshotContext(ctx));
                     if (changedAttrs.length > 0) {
                       window.dispatchEvent(new CustomEvent('compass-trip-attributes', {
                         detail: { key: ctx.key, attributes: changedAttrs },
