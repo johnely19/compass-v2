@@ -3763,6 +3763,50 @@ body {
   text-overflow: ellipsis;
 }
 
+.tpw-snapshot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: var(--space-sm);
+}
+
+.tpw-snapshot-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 100%;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--bg-elevated) 88%, white 12%);
+  border: 1px solid color-mix(in srgb, var(--card-border) 78%, transparent);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
+
+.tpw-snapshot-chip-highlighted {
+  background: color-mix(in srgb, var(--accent) 14%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--accent) 34%, transparent);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
+.tpw-snapshot-chip-icon {
+  flex-shrink: 0;
+}
+
+.tpw-snapshot-chip-label {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.tpw-snapshot-chip-value {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* Trip Notes inline row */
 .tpw-notes-row {
   display: flex;

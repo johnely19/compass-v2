@@ -383,6 +383,11 @@ export default function HomeClient({
                     savedCount={counts.saved}
                     purpose={raw.purpose as string | undefined}
                     people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                    city={ctx.city}
+                    dates={ctx.dates}
+                    focus={ctx.focus}
+                    emoji={ctx.emoji}
+                    recentAttributes={landingAttrs}
                   />
                 </div>
                 );})()}
@@ -421,6 +426,11 @@ export default function HomeClient({
                   savedCount={counts.saved}
                   purpose={raw.purpose as string | undefined}
                   people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                  city={ctx.city}
+                  dates={ctx.dates}
+                  focus={ctx.focus}
+                  emoji={ctx.emoji}
+                  recentAttributes={landingAttrs}
                 />
               </div>
               );})()}

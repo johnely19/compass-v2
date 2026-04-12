@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
+import type { TripAttributeEvent } from '../_lib/chat/emergence';
+import { buildTripSnapshotItems } from '../_lib/chat/trip-snapshot';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
 import TripIntelInput from './TripIntelInput';
 
@@ -48,6 +50,11 @@ interface TripPlanningWidgetProps {
   savedCount?: number;
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  city?: string;
+  dates?: string;
+  focus?: string[];
+  emoji?: string;
+  recentAttributes?: TripAttributeEvent[];
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
@@ -99,7 +106,19 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
 }
 
 export default function TripPlanningWidget({
-  userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0, purpose, people,
+  userId,
+  contextKey,
+  travel,
+  accommodation,
+  bookingStatus,
+  savedCount = 0,
+  purpose,
+  people,
+  city,
+  dates,
+  focus,
+  emoji,
+  recentAttributes = [],
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
   const [mounted, setMounted] = useState(false);
@@ -178,6 +197,7 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
+  const snapshotItems = buildTripSnapshotItems({ city, dates, focus, emoji }, recentAttributes);
 
   // Build compact travel summary line
   const travelSummary = travel?.outbound
@@ -204,6 +224,21 @@ export default function TripPlanningWidget({
 
   return (
     <div className="tpw">
+
+      {snapshotItems.length > 0 && (
+        <div className="tpw-snapshot" aria-label="Trip snapshot">
+          {snapshotItems.map(item => (
+            <span
+              key={item.field}
+              className={`tpw-snapshot-chip${item.highlighted ? ' tpw-snapshot-chip-highlighted' : ''}`}
+            >
+              <span className="tpw-snapshot-chip-icon">{item.icon}</span>
+              <span className="tpw-snapshot-chip-label">{item.label}</span>
+              <span className="tpw-snapshot-chip-value">{item.value}</span>
+            </span>
+          ))}
+        </div>
+      )}
 
       {/* Row 1: Travel  [Booked]  YTZ-LGA Apr 27   (1 saved) */}
       <div className="tpw-row">
