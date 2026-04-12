@@ -5,6 +5,8 @@ export interface TripSnapshotInput {
   dates?: string;
   focus?: string[];
   emoji?: string;
+  purpose?: string;
+  people?: Array<{ name?: string; relation?: string }>;
 }
 
 export interface TripSnapshotItem {
@@ -23,6 +25,7 @@ function cleanText(value: string | undefined): string | undefined {
 export function buildTripSnapshotItems(input: TripSnapshotInput, recentAttributes: TripAttributeEvent[] = []): TripSnapshotItem[] {
   const recentFields = new Set(recentAttributes.map(attr => attr.field));
   const focus = Array.from(new Set((input.focus ?? []).map(v => v.trim()).filter(Boolean)));
+  const people = Array.from(new Set((input.people ?? []).map(person => cleanText(person.name)).filter(Boolean))) as string[];
 
   const items: Array<TripSnapshotItem | null> = [
     cleanText(input.city)
@@ -50,6 +53,24 @@ export function buildTripSnapshotItems(input: TripSnapshotInput, recentAttribute
           icon: '🏷️',
           value: focus.join(', '),
           highlighted: recentFields.has('focus'),
+        }
+      : null,
+    cleanText(input.purpose)
+      ? {
+          field: 'purpose',
+          label: 'Purpose',
+          icon: '🎯',
+          value: cleanText(input.purpose) as string,
+          highlighted: recentFields.has('purpose'),
+        }
+      : null,
+    people.length > 0
+      ? {
+          field: 'people',
+          label: people.length === 1 ? 'With' : 'People',
+          icon: '👥',
+          value: people.join(', '),
+          highlighted: recentFields.has('people'),
         }
       : null,
     cleanText(input.emoji)

@@ -197,7 +197,7 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
-  const snapshotItems = buildTripSnapshotItems({ city, dates, focus, emoji }, recentAttributes);
+  const snapshotItems = buildTripSnapshotItems({ city, dates, focus, emoji, purpose, people }, recentAttributes);
 
   // Build compact travel summary line
   const travelSummary = travel?.outbound

@@ -13,6 +13,8 @@ test('buildTripSnapshotItems creates durable trip snapshot items in display orde
       city: 'Boston',
       dates: 'April 27-30, 2026',
       focus: ['food', 'architecture', 'food'],
+      purpose: 'Long weekend for food and architecture',
+      people: [{ name: 'John' }, { name: 'Huzur' }, { name: 'John' }],
       emoji: '🦞',
     },
     [{ field: 'dates', value: 'April 27-30, 2026', icon: '📅', label: 'Dates' }]
@@ -22,6 +24,8 @@ test('buildTripSnapshotItems creates durable trip snapshot items in display orde
     { field: 'city', label: 'Destination', icon: '📍', value: 'Boston', highlighted: false },
     { field: 'dates', label: 'Dates', icon: '📅', value: 'April 27-30, 2026', highlighted: true },
     { field: 'focus', label: 'Focus', icon: '🏷️', value: 'food, architecture', highlighted: false },
+    { field: 'purpose', label: 'Purpose', icon: '🎯', value: 'Long weekend for food and architecture', highlighted: false },
+    { field: 'people', label: 'People', icon: '👥', value: 'John, Huzur', highlighted: false },
     { field: 'emoji', label: 'Mood', icon: '✨', value: '🦞', highlighted: false },
   ]);
 });
@@ -31,13 +35,18 @@ test('buildTripSnapshotItems omits empty values and highlights matching recent f
     {
       city: '  ',
       focus: [' jazz ', ''],
+      people: [{ name: 'Dessa' }],
       emoji: '🎷',
     },
-    [{ field: 'emoji', value: '🎷', icon: '✨', label: 'Mood' }]
+    [
+      { field: 'people', value: 'Dessa', icon: '👥', label: 'With' },
+      { field: 'emoji', value: '🎷', icon: '✨', label: 'Mood' },
+    ]
   );
 
   assert.deepEqual(items, [
     { field: 'focus', label: 'Focus', icon: '🏷️', value: 'jazz', highlighted: false },
+    { field: 'people', label: 'With', icon: '👥', value: 'Dessa', highlighted: true },
     { field: 'emoji', label: 'Mood', icon: '✨', value: '🎷', highlighted: true },
   ]);
 });
