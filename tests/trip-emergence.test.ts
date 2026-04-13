@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
+import { buildIntelligenceAttachmentChips, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
 
 describe('diffTripEmergenceAttributes', () => {
   test('returns only newly attached focus items', () => {
@@ -65,6 +65,66 @@ describe('diffTripEmergenceAttributes', () => {
       { field: 'focus', value: 'design' },
       { field: 'purpose', value: 'Spring architecture trip' },
       { field: 'people', value: 'John, Dessa (daughter)' },
+    ]);
+  });
+});
+
+describe('buildIntelligenceAttachmentChips', () => {
+  test('selects only new notable or critical digest items for the active context', () => {
+    const chips = buildIntelligenceAttachmentChips({
+      contextKey: 'trip:nyc',
+      previousEntryIds: ['entry-1'],
+      digestItems: [
+        {
+          entryId: 'entry-1',
+          contextKey: 'trip:nyc',
+          name: 'Sailor',
+          significanceLevel: 'critical',
+          significanceSummary: 'Closure detected',
+        },
+        {
+          entryId: 'entry-2',
+          contextKey: 'trip:nyc',
+          name: 'The Jazz Gallery',
+          significanceLevel: 'notable',
+          significanceSummary: 'Hours updated',
+        },
+        {
+          entryId: 'entry-3',
+          contextKey: 'trip:paris',
+          name: 'Folderol',
+          significanceLevel: 'critical',
+          significanceSummary: 'Rating dropped',
+        },
+        {
+          entryId: 'entry-4',
+          contextKey: 'trip:nyc',
+          name: 'Casa Mono',
+          significanceLevel: 'routine',
+          significanceSummary: 'More reviews',
+        },
+      ],
+    });
+
+    assert.deepEqual(chips, [
+      { field: 'intelligence', value: 'The Jazz Gallery · Hours updated' },
+    ]);
+  });
+
+  test('caps intelligence chips to a small low-noise set', () => {
+    const chips = buildIntelligenceAttachmentChips({
+      contextKey: 'trip:nyc',
+      limit: 2,
+      digestItems: [
+        { entryId: 'a', contextKey: 'trip:nyc', name: 'A', significanceLevel: 'critical', significanceSummary: 'One' },
+        { entryId: 'b', contextKey: 'trip:nyc', name: 'B', significanceLevel: 'notable', significanceSummary: 'Two' },
+        { entryId: 'c', contextKey: 'trip:nyc', name: 'C', significanceLevel: 'critical', significanceSummary: 'Three' },
+      ],
+    });
+
+    assert.deepEqual(chips, [
+      { field: 'intelligence', value: 'A · One' },
+      { field: 'intelligence', value: 'B · Two' },
     ]);
   });
 });

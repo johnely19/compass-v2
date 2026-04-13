@@ -11,8 +11,16 @@ export interface TripEmergenceSnapshot {
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence';
   value: string;
+}
+
+export interface IntelligenceDigestLike {
+  entryId: string;
+  contextKey: string;
+  name: string;
+  significanceLevel: 'critical' | 'notable' | 'routine' | 'noise' | string;
+  significanceSummary: string;
 }
 
 function normalizePeople(people: TripEmergenceSnapshot['people']): string[] {
@@ -61,4 +69,24 @@ export function diffTripEmergenceAttributes(
   }
 
   return changedAttrs;
+}
+
+export function buildIntelligenceAttachmentChips(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  previousEntryIds?: string[];
+  limit?: number;
+}): TripAttributeChip[] {
+  const { contextKey, digestItems, previousEntryIds = [], limit = 2 } = params;
+  const previous = new Set(previousEntryIds);
+
+  return digestItems
+    .filter(item => item.contextKey === contextKey)
+    .filter(item => item.significanceLevel === 'critical' || item.significanceLevel === 'notable')
+    .filter(item => !previous.has(item.entryId))
+    .slice(0, limit)
+    .map(item => ({
+      field: 'intelligence' as const,
+      value: `${item.name} · ${item.significanceSummary}`,
+    }));
 }
