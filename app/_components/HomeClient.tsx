@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
@@ -10,6 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
+import { buildIntelligenceAttachmentChips } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -257,6 +258,7 @@ export default function HomeClient({
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
+  const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -476,6 +478,43 @@ export default function HomeClient({
     }
   }, [activeKey, broadcastActiveContext]);
 
+  const visibleDigestItems = useMemo(
+    () => digestItems.filter(item => item.contextKey === activeKey),
+    [digestItems, activeKey],
+  );
+
+  useEffect(() => {
+    if (!activeKey || visibleDigestItems.length === 0) return;
+
+    const previousEntryIds = seenDigestEntryIdsRef.current[activeKey] ?? [];
+    const newChips = buildIntelligenceAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+    });
+
+    seenDigestEntryIdsRef.current[activeKey] = visibleDigestItems.map(item => item.entryId);
+
+    if (newChips.length === 0) return;
+
+    setAttachingAttrs(prev => ({
+      ...prev,
+      [activeKey]: [...(prev[activeKey] ?? []), ...newChips],
+    }));
+
+    const timer = setTimeout(() => {
+      setAttachingAttrs(prev => {
+        const next = { ...prev };
+        const remaining = (next[activeKey] ?? []).filter(attr => !newChips.some(chip => chip.field === attr.field && chip.value === attr.value));
+        if (remaining.length > 0) next[activeKey] = remaining;
+        else delete next[activeKey];
+        return next;
+      });
+    }, 3200);
+
+    return () => clearTimeout(timer);
+  }, [activeKey, visibleDigestItems]);
+
   if (contexts.length === 0) {
     return (
       <main className="page focused-page">
@@ -555,7 +594,9 @@ export default function HomeClient({
                           ? '🎯'
                           : attr.field === 'people'
                             ? '👥'
-                            : '🏷';
+                            : attr.field === 'intelligence'
+                              ? '🛰️'
+                              : '🏷';
                     return (
                       <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
                         {icon} {attr.value}
