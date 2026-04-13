@@ -8,7 +8,11 @@ async function loginAsOwner(page: Page) {
   await page.goto(`/u/${OWNER_AUTH_CODE}`, { waitUntil: 'networkidle' });
 }
 
-async function expectPreviewBackgrounds(locator: Locator, minimumCards: number, minimumHeight = 0) {
+async function expectPreviewBackgrounds(
+  locator: Locator,
+  minimumCards: number,
+  minimumSize: { height?: number; width?: number } = {},
+) {
   const count = await locator.count();
   expect(count).toBeGreaterThanOrEqual(minimumCards);
 
@@ -17,9 +21,17 @@ async function expectPreviewBackgrounds(locator: Locator, minimumCards: number, 
     const backgroundImage = await preview.evaluate((el) => getComputedStyle(el).backgroundImage);
     expect(backgroundImage).not.toBe('none');
 
-    if (minimumHeight > 0) {
-      const height = await preview.evaluate((el) => el.getBoundingClientRect().height);
-      expect(height).toBeGreaterThanOrEqual(minimumHeight);
+    const box = await preview.evaluate((el) => {
+      const { width, height } = el.getBoundingClientRect();
+      return { width, height };
+    });
+
+    if (minimumSize.height != null) {
+      expect(box.height).toBeGreaterThanOrEqual(minimumSize.height);
+    }
+
+    if (minimumSize.width != null) {
+      expect(box.width).toBeGreaterThanOrEqual(minimumSize.width);
     }
   }
 }
@@ -42,7 +54,7 @@ test('homepage place cards show preview images for the Ontario Cottage context',
   await page.goto('/', { waitUntil: 'networkidle' });
 
   const previews = page.locator('.place-card-image');
-  await expectPreviewBackgrounds(previews, 3, 150);
+  await expectPreviewBackgrounds(previews, 3, { height: 150, width: 150 });
 });
 
 test('review cards show preview images for the Ontario Cottage context', async ({ page }) => {
