@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import type { ChatMessage } from '../_lib/types';
 import type { ChatTarget } from '../_lib/chat-target';
 import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
@@ -44,6 +45,9 @@ function formatTime(isoString: string): string {
 }
 
 export default function ChatWidget() {
+  const pathname = usePathname();
+  const isDedicatedChatPage = pathname === '/chat';
+
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -51,7 +55,7 @@ export default function ChatWidget() {
   const [streamContent, setStreamContent] = useState('');
   const [toolStatus, setToolStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [chatExpanded, setChatExpanded] = useState(false);
+  const [chatExpanded, setChatExpanded] = useState(isDedicatedChatPage);
 
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
@@ -190,6 +194,13 @@ export default function ChatWidget() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, streamContent, toolStatus]);
+
+  // Open chat by default on the dedicated /chat page
+  useEffect(() => {
+    if (isDedicatedChatPage) {
+      setChatExpanded(true);
+    }
+  }, [isDedicatedChatPage]);
 
   // Focus input on mount
   useEffect(() => {
