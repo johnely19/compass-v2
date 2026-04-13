@@ -546,11 +546,22 @@ export default function HomeClient({
               )}
               {landingAttrs.length > 0 && (
                 <div className="section-attr-pills">
-                  {landingAttrs.map(attr => (
-                    <span key={attr.field} className="section-attr-pill">
-                      {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
-                    </span>
-                  ))}
+                  {landingAttrs.map(attr => {
+                    const icon = attr.field === 'dates'
+                      ? '📅'
+                      : attr.field === 'city'
+                        ? '📍'
+                        : attr.field === 'purpose'
+                          ? '🎯'
+                          : attr.field === 'people'
+                            ? '👥'
+                            : '🏷';
+                    return (
+                      <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
+                        {icon} {attr.value}
+                      </span>
+                    );
+                  })}
                 </div>
               )}
             </div>
