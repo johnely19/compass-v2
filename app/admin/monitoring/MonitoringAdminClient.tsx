@@ -254,6 +254,9 @@ export default function MonitoringAdminClient({ entries: initialEntries, updated
       if (invRes.ok) {
         const inv = await invRes.json();
         setEntries(inv.entries ?? []);
+        if (typeof window !== 'undefined') {
+          window.dispatchEvent(new CustomEvent('compass-data-changed'));
+        }
       }
     } catch (err) {
       setObsResult('Error running observations');
