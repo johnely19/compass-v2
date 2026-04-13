@@ -11,6 +11,7 @@ import type {
 } from './types';
 import { getDiscoveryHistoryKey, listRecentDiscoveryHistory } from './discovery-history';
 import { loadCheckinStore, getLatestCheckinAt } from './monitor-checkins';
+import { loadMonitorInventory } from './monitor-inventory';
 
 const BLOB_PREFIX = 'users';
 const MONITOR_HISTORY_LIMIT = 60;
@@ -411,11 +412,32 @@ export async function annotateDiscoveriesForMonitoring(params: {
   contexts: Context[];
 }): Promise<Discovery[]> {
   const { userId, discoveries, contexts } = params;
-  const [triageStore, historyEvents, checkinStore] = await Promise.all([
+  const [triageStore, historyEvents, checkinStore, monitorInventory] = await Promise.all([
     loadServerTriageStore(userId),
     listRecentDiscoveryHistory(userId, MONITOR_HISTORY_LIMIT),
     loadCheckinStore(userId),
+    loadMonitorInventory(userId),
   ]);
+
+  // Build a lookup from discovery key to inventory entry for timing overlay
+  const inventoryByKey = new Map<string, { lastObservedAt?: string; nextCheckAt?: string }>();
+  for (const entry of monitorInventory.entries) {
+    const key = getDiscoveryHistoryKey({
+      id: entry.discoveryId,
+      place_id: entry.place_id,
+      name: entry.name,
+      city: entry.city,
+      type: entry.type as Discovery['type'],
+      contextKey: entry.contextKey,
+      source: 'inventory',
+      discoveredAt: entry.firstPromotedAt,
+      placeIdStatus: entry.place_id ? 'verified' : 'pending',
+    });
+    inventoryByKey.set(key, {
+      lastObservedAt: entry.lastObservedAt,
+      nextCheckAt: entry.nextCheckAt,
+    });
+  }
 
   const observations = summarizeObservations(discoveries, historyEvents);
   const activeTripContextKeys = new Set(
@@ -465,9 +487,26 @@ export async function annotateDiscoveriesForMonitoring(params: {
     });
     const monitorSources = getMonitorSources(discovery, monitorStatus);
     const checkinAt = getLatestCheckinAt(checkinStore, getDiscoveryHistoryKey(discovery));
-    // Checkin timestamp wins over discovery history (most recent manual review resets the clock)
-    const monitorLastObservedAt = latestIso(checkinAt, observation.lastObservedAt) ?? discovery.discoveredAt;
-    const monitorNextCheckAt = monitorStatus === 'none' ? undefined : getNextCheckAt(monitorLastObservedAt, monitorCadence);
+
+    // Look up matching inventory entry for timing overlay
+    const discoveryKey = getDiscoveryHistoryKey(discovery);
+    const inventoryTiming = inventoryByKey.get(discoveryKey);
+
+    // Overlay inventory timing when available (actual observation cadence from durable inventory)
+    // Priority: inventory > checkin > discovery history > discoveredAt
+    let monitorLastObservedAt: string | undefined;
+    let monitorNextCheckAt: string | undefined;
+
+    if (inventoryTiming) {
+      // Use real observation timing from inventory
+      monitorLastObservedAt = inventoryTiming.lastObservedAt ?? latestIso(checkinAt, observation.lastObservedAt) ?? discovery.discoveredAt;
+      monitorNextCheckAt = inventoryTiming.nextCheckAt ?? (monitorStatus === 'none' ? undefined : getNextCheckAt(monitorLastObservedAt, monitorCadence));
+    } else {
+      // Fall back to discovery-history based timing
+      monitorLastObservedAt = latestIso(checkinAt, observation.lastObservedAt) ?? discovery.discoveredAt;
+      monitorNextCheckAt = monitorStatus === 'none' ? undefined : getNextCheckAt(monitorLastObservedAt, monitorCadence);
+    }
+
     const monitorDueNow = Boolean(monitorNextCheckAt && new Date(monitorNextCheckAt).getTime() <= Date.now());
 
     const explanationParts: string[] = [];

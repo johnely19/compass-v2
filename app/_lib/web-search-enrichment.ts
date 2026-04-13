@@ -14,6 +14,8 @@
 
 import type { MonitorChangeKind } from './monitor-inventory';
 
+const WEB_ENRICHMENT_FETCH_TIMEOUT_MS = 5000;
+
 // ---- Types ----
 
 export interface WebEnrichmentResult {
@@ -181,6 +183,9 @@ export async function runWebEnrichment(params: {
   const query = buildSearchQuery({ name, city, monitorType });
 
   let results: BraveWebResult[] = [];
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), WEB_ENRICHMENT_FETCH_TIMEOUT_MS);
+
   try {
     const url = `https://api.search.brave.com/res/v1/web/search?q=${encodeURIComponent(query)}&count=5&freshness=pm`;
     const res = await fetch(url, {
@@ -188,6 +193,7 @@ export async function runWebEnrichment(params: {
         'X-Subscription-Token': apiKey,
         'Accept': 'application/json',
       },
+      signal: controller.signal,
     });
     if (!res.ok) {
       console.error(`[web-enrichment] Brave search error ${res.status} for "${name}"`);
@@ -196,8 +202,14 @@ export async function runWebEnrichment(params: {
     const data = await res.json();
     results = (data.web?.results ?? []).slice(0, 5) as BraveWebResult[];
   } catch (err) {
+    if (err instanceof Error && err.name === 'AbortError') {
+      console.error(`[web-enrichment] Search timeout for "${name}"`);
+      return null;
+    }
     console.error(`[web-enrichment] Search failed for "${name}":`, err);
     return null;
+  } finally {
+    clearTimeout(timeoutId);
   }
 
   if (results.length === 0) return null;
