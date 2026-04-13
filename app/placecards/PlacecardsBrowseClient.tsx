@@ -20,7 +20,7 @@ function PlaceCardImage({ src }: { src: string | null }) {
 
   return (
     <div
-      className="place-card-image"
+      className="place-browse-card-image"
       style={{
         aspectRatio: '3/2',
         background: imgLoaded
