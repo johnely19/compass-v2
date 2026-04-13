@@ -259,6 +259,7 @@ export default function HomeClient({
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
   const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
+  const digestHydratedContextsRef = useRef<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -484,7 +485,21 @@ export default function HomeClient({
   );
 
   useEffect(() => {
-    if (!activeKey || visibleDigestItems.length === 0) return;
+    if (!activeKey) return;
+
+    const entryIds = visibleDigestItems.map(item => item.entryId);
+    const hydrated = digestHydratedContextsRef.current.has(activeKey);
+
+    if (!hydrated) {
+      seenDigestEntryIdsRef.current[activeKey] = entryIds;
+      digestHydratedContextsRef.current.add(activeKey);
+      return;
+    }
+
+    if (visibleDigestItems.length === 0) {
+      seenDigestEntryIdsRef.current[activeKey] = [];
+      return;
+    }
 
     const previousEntryIds = seenDigestEntryIdsRef.current[activeKey] ?? [];
     const newChips = buildIntelligenceAttachmentChips({
@@ -493,7 +508,7 @@ export default function HomeClient({
       previousEntryIds,
     });
 
-    seenDigestEntryIdsRef.current[activeKey] = visibleDigestItems.map(item => item.entryId);
+    seenDigestEntryIdsRef.current[activeKey] = entryIds;
 
     if (newChips.length === 0) return;
 
