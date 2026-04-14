@@ -172,6 +172,16 @@ const CHANGE_LABELS: Record<string, string> = {
   'general-update': 'Updated',
 };
 
+export function getHomepageMonitoringExplanation(item: Pick<MonitoringQueueItem, 'dueNow' | 'significanceLevel' | 'monitorExplanation'>): string | null {
+  const explanation = item.monitorExplanation?.trim();
+  if (!explanation) return null;
+  const sig = item.significanceLevel ?? 'noise';
+  if (item.dueNow || sig === 'critical' || sig === 'notable') {
+    return explanation;
+  }
+  return null;
+}
+
 function formatChangeKinds(changes: string[]): string {
   if (changes.length === 0) return '';
   const primary = CHANGE_LABELS[changes[0] ?? ''] ?? 'Change detected';
@@ -213,13 +223,14 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
         )}
         {shown.map(item => {
           const href = `/placecards/${item.placeId || item.id}?context=${encodeURIComponent(item.contextKey)}`;
+          const explanation = getHomepageMonitoringExplanation(item);
           return (
             <li key={`${item.contextKey}:${item.id}`} className={`monitoring-tray-item${item.dueNow ? ' monitoring-tray-item-due' : ''}`}>
               <span className="monitoring-tray-icon">{TYPE_MONITOR_ICON[item.monitorType] ?? '📍'}</span>
               <span className="monitoring-tray-item-body">
                 <Link href={href} className="monitoring-tray-name">{item.name}</Link>
                 <span className="monitoring-tray-meta">{item.city}</span>
-                {/* explanation hidden in tray — shown in full /watching page */}
+                {explanation && <span className="monitoring-tray-reason">{explanation}</span>}
               </span>
               <span className={`monitoring-tray-status monitoring-tray-status-${item.monitorStatus}`}>
                 {item.dueNow ? 'Due now' : STATUS_LABEL[item.monitorStatus] ?? item.monitorStatus}
