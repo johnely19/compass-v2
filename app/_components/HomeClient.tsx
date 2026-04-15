@@ -172,14 +172,24 @@ const CHANGE_LABELS: Record<string, string> = {
   'general-update': 'Updated',
 };
 
-export function getHomepageMonitoringExplanation(item: Pick<MonitoringQueueItem, 'dueNow' | 'significanceLevel' | 'monitorExplanation'>): string | null {
+export function getHomepageMonitoringExplanation(item: Pick<MonitoringQueueItem, 'dueNow' | 'significanceLevel' | 'monitorExplanation' | 'monitorCadence'>): string | null {
   const explanation = item.monitorExplanation?.trim();
   if (!explanation) return null;
   const sig = item.significanceLevel ?? 'noise';
-  if (item.dueNow || sig === 'critical' || sig === 'notable') {
-    return explanation;
+  if (!item.dueNow && sig !== 'critical' && sig !== 'notable') {
+    return null;
   }
-  return null;
+
+  const cadence = item.monitorCadence?.trim();
+  if (!cadence) return explanation;
+  if (!item.dueNow) return explanation;
+
+  const compactCadence = cadence
+    .replace(/^Check\s+/i, '')
+    .replace(/\.$/, '')
+    .replace(/^while\s+/i, 'while ');
+
+  return `${explanation} · ${compactCadence}`;
 }
 
 function formatChangeKinds(changes: string[]): string {
