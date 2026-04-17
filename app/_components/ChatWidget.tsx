@@ -591,7 +591,7 @@ export default function ChatWidget() {
             className={`${styles.chatInputField}${showScopeChip ? ` ${styles.chatInputFieldScoped}` : ''}`}
             placeholder={isPlaceScoped && chatTarget?.card
               ? `Ask about ${chatTarget.card.name}…`
-              : scopedLabel
+              : chatTarget && scopedLabel
                 ? `Add to ${scopedLabel}…`
                 : 'Ask me anything…'
             }

@@ -9,6 +9,7 @@ test('chat widget has correct light background', async ({ page }) => {
 
   // Assert it exists and is visible
   await expect(chatInput).toBeVisible();
+  await expect(chatInput).toHaveAttribute('placeholder', /Ask me anything/i);
 
   // Check its computed background-color is a warm/light color (not dark)
   // rgb values where all channels > 200 means light color
