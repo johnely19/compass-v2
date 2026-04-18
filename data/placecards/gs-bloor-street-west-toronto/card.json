@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJPz83mZY0K4gR56TW8EZWnSk",
+        "name": "BMV Books",
+        "address": "471 Bloor St W, Toronto, ON M5S 1X9, Canada",
+        "category": "bookstore",
+        "rating": 4.7,
+        "why": "A massive used bookstore directly on Bloor's active edge. It shows the kind of dense, low-rise cultural frontage Jacobs values, where browsing spills pedestrian energy back onto the sidewalk.",
+        "id": "place-bloor-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJJx6bz5M0K4gRxRx385CYfBY",
+        "name": "Hot Docs Ted Rogers Cinema",
+        "address": "506 Bloor St W, Toronto, ON M5S 1Y3, Canada",
+        "category": "cinema",
+        "rating": 4.6,
+        "why": "An institutional anchor right on the corridor. The marquee, festival programming, and constant foot traffic give Bloor the cultural rhythm that makes a great street feel inhabited beyond shopping hours.",
+        "id": "place-bloor-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJq1tr_5M0K4gRUrOjC86tYLU",
+        "name": "Seekers Books",
+        "address": "509 Bloor St W, Toronto, ON M5S 1Y2, Canada",
+        "category": "bookstore",
+        "rating": 4.8,
+        "why": "A tightly packed occult and secondhand bookshop beside caf\u00e9s and cinemas. This is Annex Bloor at its most fine-grained, proving how variety and small storefronts keep the block visually and socially alive.",
+        "id": "place-bloor-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Canada",
-    "highlights": []
+    "highlights": ["BMV Books", "Hot Docs Ted Rogers Cinema", "Seekers Books"],
+    "placesUpdatedAt": "2026-04-14T15:36:00.000Z"
   }
 }

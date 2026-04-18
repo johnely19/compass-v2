@@ -1,0 +1,34 @@
+{
+  "place_id": "ChIJPz83mZY0K4gR56TW8EZWnSk",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJPz83mZY0K4gR56TW8EZWnSk",
+    "name": "BMV Books",
+    "city": "Toronto",
+    "country": "Canada",
+    "address": "471 Bloor St W, Toronto, ON M5S 1X9, Canada",
+    "type": "book_store",
+    "rating": 4.7,
+    "review_count": 3717,
+    "phone": "(416) 967-5757",
+    "website": "http://www.bmvbooks.com/",
+    "hours": [
+      "Monday: 12:00 – 7:00 PM",
+      "Tuesday: 12:00 – 7:00 PM",
+      "Wednesday: 12:00 – 7:00 PM",
+      "Thursday: 10:00 AM – 11:00 PM",
+      "Friday: 10:00 AM – 11:00 PM",
+      "Saturday: 10:00 AM – 11:00 PM",
+      "Sunday: 12:00 – 7:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Bloor Street West: BMV is the kind of dense, independent, heavily-used frontage that makes the Annex stretch still read as a great street.",
+    "contextKey": "section:great-streets:bloor-street-west",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "Used-book abundance, long hours, real foot traffic — one of the clearest current Annex edge conditions worth keeping.",
+    "blocks": []
+  }
+}

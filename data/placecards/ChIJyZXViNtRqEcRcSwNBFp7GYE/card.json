@@ -1,0 +1,26 @@
+{
+  "place_id": "ChIJyZXViNtRqEcRcSwNBFp7GYE",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJyZXViNtRqEcRcSwNBFp7GYE",
+    "name": "Berlin State Opera",
+    "city": "Berlin",
+    "country": "Germany",
+    "address": "Unter den Linden 7, 10117 Berlin, Germany",
+    "type": "opera_house",
+    "subtype": "performing_arts_theater",
+    "rating": 4.7,
+    "review_count": 4956,
+    "phone": "030 20354555",
+    "website": "http://www.staatsoper-berlin.de/"
+  },
+  "discovery": {
+    "text": "Verified for Unter den Linden: the Staatsoper is one of the boulevard's clearest civic anchors, giving the street a strong nighttime cultural life.",
+    "contextKey": "section:great-streets:unter-den-linden",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "Ceremonial architecture plus live programming — a real reason to experience Unter den Linden beyond daylight sightseeing.",
+    "blocks": []
+  }
+}

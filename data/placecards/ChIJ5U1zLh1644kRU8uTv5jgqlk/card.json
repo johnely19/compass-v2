@@ -1,0 +1,25 @@
+{
+  "place_id": "ChIJ5U1zLh1644kRU8uTv5jgqlk",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJ5U1zLh1644kRU8uTv5jgqlk",
+    "name": "Hotel Commonwealth",
+    "city": "Boston",
+    "country": "USA",
+    "address": "500 Commonwealth Ave, Boston, MA 02215, USA",
+    "type": "hotel",
+    "rating": 4.5,
+    "review_count": 1798,
+    "phone": "(617) 933-5000",
+    "website": "https://www.hotelcommonwealth.com/?utm_source=google-gbp&utm_medium=organic&utm_campaign=gbp"
+  },
+  "discovery": {
+    "text": "Verified for Commonwealth Avenue: Hotel Commonwealth gives the boulevard a strong addressable frontage at Kenmore, useful in understanding the avenue as lived city rather than only a landscaped mall.",
+    "contextKey": "section:great-streets:commonwealth-ave",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A major Commonwealth Avenue frontage at Kenmore — one of the clearer street-facing anchors on the avenue.",
+    "blocks": []
+  }
+}

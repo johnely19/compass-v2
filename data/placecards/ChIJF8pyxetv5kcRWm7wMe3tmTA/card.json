@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJF8pyxetv5kcRWm7wMe3tmTA",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJF8pyxetv5kcRWm7wMe3tmTA",
+    "name": "Boutiques Publicisdrugstore",
+    "city": "Paris",
+    "country": "France",
+    "address": "133 Av. des Champs-Élysées, 75008 Paris, France",
+    "type": "department_store",
+    "subtype": "book_store",
+    "rating": 3.8,
+    "review_count": 1135,
+    "phone": "07 70 27 69 69",
+    "website": "http://www.publicisdrugstore.com/",
+    "hours": [
+      "Monday: 8:00 AM – 2:00 AM",
+      "Tuesday: 8:00 AM – 2:00 AM",
+      "Wednesday: 8:00 AM – 2:00 AM",
+      "Thursday: 8:00 AM – 2:00 AM",
+      "Friday: 8:00 AM – 2:00 AM",
+      "Saturday: 10:00 AM – 2:00 AM",
+      "Sunday: 10:00 AM – 2:00 AM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Champs-Élysées: Publicisdrugstore is a durable hybrid flagship — books, food, pharmacy, and late hours — that shows the avenue operating as urban infrastructure, not just brand frontage.",
+    "contextKey": "section:great-streets:champs-elysees",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A late-night Champs street machine: retail, food, and utility compressed into one landmark address.",
+    "blocks": []
+  }
+}
