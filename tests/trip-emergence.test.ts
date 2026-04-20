@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { applyTripAttributeChips, buildIntelligenceAttachmentChips, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildTripMonitoringHighlights, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
 
 describe('diffTripEmergenceAttributes', () => {
   test('returns only newly attached focus items', () => {
@@ -101,6 +101,25 @@ describe('applyTripAttributeChips', () => {
         { name: 'Huzur', relation: 'wife' },
       ],
     });
+  });
+});
+
+describe('buildTripMonitoringHighlights', () => {
+  test('keeps a small durable set of high-signal monitoring highlights for the active trip', () => {
+    const highlights = buildTripMonitoringHighlights({
+      contextKey: 'trip:nyc',
+      digestItems: [
+        { entryId: 'a', contextKey: 'trip:nyc', name: 'Sailor', significanceLevel: 'critical', significanceSummary: 'Closure detected' },
+        { entryId: 'b', contextKey: 'trip:nyc', name: 'The Jazz Gallery', significanceLevel: 'notable', significanceSummary: 'Hours updated' },
+        { entryId: 'c', contextKey: 'trip:nyc', name: 'Casa Mono', significanceLevel: 'routine', significanceSummary: 'More reviews' },
+        { entryId: 'd', contextKey: 'trip:paris', name: 'Folderol', significanceLevel: 'critical', significanceSummary: 'Rating dropped' },
+      ],
+    });
+
+    assert.deepEqual(highlights, [
+      'Sailor · Closure detected',
+      'The Jazz Gallery · Hours updated',
+    ]);
   });
 });
 

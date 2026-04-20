@@ -138,6 +138,24 @@ export function applyTripAttributeChips(
   return next;
 }
 
+function isHighSignalIntelligence(item: IntelligenceDigestLike): boolean {
+  return item.significanceLevel === 'critical' || item.significanceLevel === 'notable';
+}
+
+export function buildTripMonitoringHighlights(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  limit?: number;
+}): string[] {
+  const { contextKey, digestItems, limit = 2 } = params;
+
+  return digestItems
+    .filter(item => item.contextKey === contextKey)
+    .filter(isHighSignalIntelligence)
+    .slice(0, limit)
+    .map(item => `${item.name} · ${item.significanceSummary}`);
+}
+
 export function buildIntelligenceAttachmentChips(params: {
   contextKey: string;
   digestItems: IntelligenceDigestLike[];
@@ -149,7 +167,7 @@ export function buildIntelligenceAttachmentChips(params: {
 
   return digestItems
     .filter(item => item.contextKey === contextKey)
-    .filter(item => item.significanceLevel === 'critical' || item.significanceLevel === 'notable')
+    .filter(isHighSignalIntelligence)
     .filter(item => !previous.has(item.entryId))
     .slice(0, limit)
     .map(item => ({

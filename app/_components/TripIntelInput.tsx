@@ -8,6 +8,7 @@ interface TripIntelInputProps {
   inlineMode?: boolean; // always-visible transparent input row
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  monitoringHighlights?: string[];
 }
 
 interface SaveResult {
@@ -17,7 +18,7 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, monitoringHighlights = [] }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -92,6 +93,16 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
                     {p.relation && <span className="tpw-notes-expand-person-rel">({p.relation})</span>}
                   </span>
                 ))}
+              </div>
+            )}
+            {monitoringHighlights.length > 0 && (
+              <div className="tpw-notes-monitoring">
+                <div className="tpw-notes-monitoring-label">Watch changes</div>
+                <div className="tpw-notes-monitoring-list">
+                  {monitoringHighlights.map((item, i) => (
+                    <div key={`${i}:${item}`} className="tpw-notes-monitoring-item">{item}</div>
+                  ))}
+                </div>
               </div>
             )}
             <button className="tpw-archive-btn" onClick={handleArchive} disabled={loading}>
