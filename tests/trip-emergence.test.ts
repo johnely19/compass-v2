@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { buildIntelligenceAttachmentChips, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
 
 describe('diffTripEmergenceAttributes', () => {
   test('returns only newly attached focus items', () => {
@@ -66,6 +66,41 @@ describe('diffTripEmergenceAttributes', () => {
       { field: 'purpose', value: 'Spring architecture trip' },
       { field: 'people', value: 'John, Dessa (daughter)' },
     ]);
+  });
+});
+
+describe('applyTripAttributeChips', () => {
+  test('optimistically folds incoming chips into the visible trip snapshot', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:tokyo',
+        dates: 'May 2027',
+        city: 'Tokyo',
+        focus: ['food'],
+        purpose: 'Food trip',
+        people: [{ name: 'John' }],
+      },
+      [
+        { field: 'dates', value: 'May 10 to May 18, 2027' },
+        { field: 'focus', value: 'design, architecture' },
+        { field: 'purpose', value: 'Spring architecture trip' },
+        { field: 'people', value: 'Dessa (daughter), Huzur (wife)' },
+        { field: 'intelligence', value: 'Ignored for optimistic card body' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:tokyo',
+      dates: 'May 10 to May 18, 2027',
+      city: 'Tokyo',
+      focus: ['food', 'design', 'architecture'],
+      purpose: 'Spring architecture trip',
+      people: [
+        { name: 'John' },
+        { name: 'Dessa', relation: 'daughter' },
+        { name: 'Huzur', relation: 'wife' },
+      ],
+    });
   });
 });
 

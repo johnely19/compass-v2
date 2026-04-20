@@ -10,7 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
-import { buildIntelligenceAttachmentChips } from '../_lib/trip-emergence';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -547,12 +547,33 @@ export default function HomeClient({
   }
 
   const ctx = contexts.find(c => c.key === activeKey) || contexts[0]!;
+  const landingAttrs = attachingAttrs[ctx.key] ?? [];
+  const optimisticTrip = ctx.type === 'trip'
+    ? applyTripAttributeChips({
+        key: ctx.key,
+        label: ctx.label,
+        type: ctx.type,
+        emoji: ctx.emoji,
+        dates: ctx.dates,
+        city: ctx.city,
+        focus: ctx.focus,
+        purpose: (ctx as unknown as Record<string, unknown>).purpose as string | undefined,
+        people: (ctx as unknown as Record<string, unknown>).people as Array<{ name: string; relation?: string }> | undefined,
+      } satisfies TripEmergenceSnapshot, landingAttrs)
+    : null;
+  const effectiveCtx = optimisticTrip
+    ? {
+        ...ctx,
+        dates: optimisticTrip.dates,
+        city: optimisticTrip.city,
+        focus: optimisticTrip.focus,
+      }
+    : ctx;
   const discoveries = discoveryMap[ctx.key] ?? [];
   const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
-  const naturalDate = formatDateNatural(ctx.dates);
-  const description = buildDescription(ctx);
+  const naturalDate = formatDateNatural(effectiveCtx.dates);
+  const description = buildDescription(effectiveCtx);
   const isEmerging = emergingKeys.has(ctx.key);
-  const landingAttrs = attachingAttrs[ctx.key] ?? [];
 
   return (
     <main className="page focused-page">
@@ -655,8 +676,8 @@ export default function HomeClient({
                 accommodation={contextMeta[ctx.key]?.accommodation as never}
                 bookingStatus={contextMeta[ctx.key]?.bookingStatus}
                 savedCount={counts.saved}
-                purpose={raw.purpose as string | undefined}
-                people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                purpose={optimisticTrip?.purpose ?? raw.purpose as string | undefined}
+                people={optimisticTrip?.people ?? raw.people as Array<{ name: string; relation?: string }> | undefined}
               />
             </div>
           );

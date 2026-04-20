@@ -71,6 +71,73 @@ export function diffTripEmergenceAttributes(
   return changedAttrs;
 }
 
+function parsePeopleValue(value: string): Array<{ name: string; relation?: string }> {
+  return value
+    .split(',')
+    .map(part => part.trim())
+    .filter(Boolean)
+    .map(part => {
+      const match = part.match(/^(.*?)\s*\((.*?)\)$/);
+      if (!match) return { name: part };
+      return {
+        name: match[1]?.trim() || part,
+        relation: match[2]?.trim() || undefined,
+      };
+    });
+}
+
+export function applyTripAttributeChips(
+  snapshot: TripEmergenceSnapshot,
+  chips: TripAttributeChip[],
+): TripEmergenceSnapshot {
+  if (chips.length === 0) return snapshot;
+
+  const next: TripEmergenceSnapshot = {
+    ...snapshot,
+    focus: [...(snapshot.focus ?? [])],
+    people: [...(snapshot.people ?? [])],
+  };
+
+  for (const chip of chips) {
+    if (!chip.value) continue;
+
+    if (chip.field === 'dates') {
+      next.dates = chip.value;
+      continue;
+    }
+
+    if (chip.field === 'city') {
+      next.city = chip.value;
+      continue;
+    }
+
+    if (chip.field === 'focus') {
+      const additions = chip.value.split(',').map(value => value.trim()).filter(Boolean);
+      next.focus = [...new Set([...(next.focus ?? []), ...additions])];
+      continue;
+    }
+
+    if (chip.field === 'purpose') {
+      next.purpose = chip.value;
+      continue;
+    }
+
+    if (chip.field === 'people') {
+      const existing = normalizePeople(next.people);
+      const additions = parsePeopleValue(chip.value);
+      for (const person of additions) {
+        const normalized = person.relation ? `${person.name} (${person.relation})` : person.name;
+        if (!existing.includes(normalized)) {
+          (next.people ??= []).push(person);
+          existing.push(normalized);
+        }
+      }
+    }
+  }
+
+  return next;
+}
+
 export function buildIntelligenceAttachmentChips(params: {
   contextKey: string;
   digestItems: IntelligenceDigestLike[];
