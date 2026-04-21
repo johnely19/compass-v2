@@ -9,6 +9,7 @@ interface TripIntelInputProps {
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
   monitoringHighlights?: string[];
+  monitoringPrompts?: Array<{ label: string; detail: string }>;
 }
 
 interface SaveResult {
@@ -18,7 +19,7 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, monitoringHighlights = [] }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, monitoringHighlights = [], monitoringPrompts = [] }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -101,6 +102,18 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
                 <div className="tpw-notes-monitoring-list">
                   {monitoringHighlights.map((item, i) => (
                     <div key={`${i}:${item}`} className="tpw-notes-monitoring-item">{item}</div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {monitoringPrompts.length > 0 && (
+              <div className="tpw-notes-monitoring">
+                <div className="tpw-notes-monitoring-label">Suggested next move</div>
+                <div className="tpw-notes-monitoring-list">
+                  {monitoringPrompts.map((item, i) => (
+                    <div key={`${i}:${item.label}`} className="tpw-notes-monitoring-item">
+                      <strong>{item.label}:</strong> {item.detail}
+                    </div>
                   ))}
                 </div>
               </div>

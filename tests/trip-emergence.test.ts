@@ -1,7 +1,7 @@
 import { describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 
-import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildTripMonitoringHighlights, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildTripMonitoringHighlights, diffTripEmergenceAttributes } from '../app/_lib/trip-emergence';
 
 describe('diffTripEmergenceAttributes', () => {
   test('returns only newly attached focus items', () => {
@@ -119,6 +119,24 @@ describe('buildTripMonitoringHighlights', () => {
     assert.deepEqual(highlights, [
       'Sailor · Closure detected',
       'The Jazz Gallery · Hours updated',
+    ]);
+  });
+});
+
+describe('buildMonitoringActionPrompts', () => {
+  test('turns high-signal monitoring changes into compact action-oriented prompts', () => {
+    const prompts = buildMonitoringActionPrompts({
+      contextKey: 'trip:nyc',
+      digestItems: [
+        { entryId: 'a', contextKey: 'trip:nyc', name: 'Sailor', significanceLevel: 'critical', significanceSummary: 'Closure detected' },
+        { entryId: 'b', contextKey: 'trip:nyc', name: 'The Jazz Gallery', significanceLevel: 'notable', significanceSummary: 'Hours updated' },
+        { entryId: 'c', contextKey: 'trip:nyc', name: 'Casa Mono', significanceLevel: 'notable', significanceSummary: 'Availability changed' },
+      ],
+    });
+
+    assert.deepEqual(prompts, [
+      { label: 'Backup plan', detail: 'Sailor may be at risk, line up an alternate now.' },
+      { label: 'Reconfirm timing', detail: 'The Jazz Gallery changed hours, recheck before you go.' },
     ]);
   });
 });

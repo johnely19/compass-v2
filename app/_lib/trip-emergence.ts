@@ -23,6 +23,11 @@ export interface IntelligenceDigestLike {
   significanceSummary: string;
 }
 
+export interface MonitoringActionPrompt {
+  label: string;
+  detail: string;
+}
+
 function normalizePeople(people: TripEmergenceSnapshot['people']): string[] {
   if (!Array.isArray(people)) return [];
   return people
@@ -154,6 +159,51 @@ export function buildTripMonitoringHighlights(params: {
     .filter(isHighSignalIntelligence)
     .slice(0, limit)
     .map(item => `${item.name} · ${item.significanceSummary}`);
+}
+
+export function buildMonitoringActionPrompts(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  limit?: number;
+}): MonitoringActionPrompt[] {
+  const { contextKey, digestItems, limit = 2 } = params;
+
+  return digestItems
+    .filter(item => item.contextKey === contextKey)
+    .filter(isHighSignalIntelligence)
+    .map((item): MonitoringActionPrompt | null => {
+      const summary = item.significanceSummary.toLowerCase();
+      if (summary.includes('closure')) {
+        return {
+          label: 'Backup plan',
+          detail: `${item.name} may be at risk, line up an alternate now.`,
+        };
+      }
+      if (summary.includes('hours')) {
+        return {
+          label: 'Reconfirm timing',
+          detail: `${item.name} changed hours, recheck before you go.`,
+        };
+      }
+      if (summary.includes('rating dropped')) {
+        return {
+          label: 'Quality check',
+          detail: `${item.name} slipped, make sure it still deserves a slot.`,
+        };
+      }
+      if (summary.includes('availability')) {
+        return {
+          label: 'Booking window',
+          detail: `${item.name} availability moved, it may be time to act.`,
+        };
+      }
+      return {
+        label: 'Watch closely',
+        detail: `${item.name} changed, worth a quick recheck.`,
+      };
+    })
+    .filter((item): item is MonitoringActionPrompt => Boolean(item))
+    .slice(0, limit);
 }
 
 export function buildIntelligenceAttachmentChips(params: {

@@ -10,7 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
-import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildTripMonitoringHighlights, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildTripMonitoringHighlights, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -573,6 +573,10 @@ export default function HomeClient({
     contextKey: ctx.key,
     digestItems: visibleDigestItems,
   });
+  const monitoringPrompts = buildMonitoringActionPrompts({
+    contextKey: ctx.key,
+    digestItems: visibleDigestItems,
+  });
   const discoveries = discoveryMap[ctx.key] ?? [];
   const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
   const naturalDate = formatDateNatural(effectiveCtx.dates);
@@ -683,6 +687,7 @@ export default function HomeClient({
                 purpose={optimisticTrip?.purpose ?? raw.purpose as string | undefined}
                 people={optimisticTrip?.people ?? raw.people as Array<{ name: string; relation?: string }> | undefined}
                 monitoringHighlights={monitoringHighlights}
+                monitoringPrompts={monitoringPrompts}
               />
             </div>
           );
