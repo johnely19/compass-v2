@@ -10,6 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
+import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -499,6 +500,10 @@ export default function HomeClient({
   const description = buildDescription(ctx);
   const isEmerging = emergingKeys.has(ctx.key);
   const landingAttrs = attachingAttrs[ctx.key] ?? [];
+  const monitoringActionPrompts = buildMonitoringActionPrompts({
+    contextKey: ctx.key,
+    digestItems: digestItems.filter(item => item.contextKey === ctx.key),
+  });
 
   return (
     <main className="page focused-page">
@@ -601,6 +606,7 @@ export default function HomeClient({
                 savedCount={counts.saved}
                 purpose={raw.purpose as string | undefined}
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                monitoringActionPrompts={monitoringActionPrompts}
               />
             </div>
           );

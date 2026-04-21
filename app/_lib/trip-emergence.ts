@@ -11,8 +11,25 @@ export interface TripEmergenceSnapshot {
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence';
   value: string;
+  icon?: string;
+  label?: string;
+  tone?: 'neutral' | 'critical' | 'notable';
+}
+
+export interface MonitoringActionPrompt {
+  label: string;
+  detail: string;
+  tone: 'critical' | 'notable';
+}
+
+export interface IntelligenceDigestLike {
+  entryId: string;
+  contextKey: string;
+  name: string;
+  significanceLevel: 'critical' | 'notable' | 'routine' | 'noise' | string;
+  significanceSummary: string;
 }
 
 function normalizePeople(people: TripEmergenceSnapshot['people']): string[] {
@@ -61,4 +78,146 @@ export function diffTripEmergenceAttributes(
   }
 
   return changedAttrs;
+}
+
+function getGenericIntelligenceChipMetadata(significanceLevel: string): Pick<TripAttributeChip, 'icon' | 'label' | 'tone'> {
+  if (significanceLevel === 'critical') {
+    return {
+      icon: '🚨',
+      label: 'Critical update',
+      tone: 'critical',
+    };
+  }
+
+  return {
+    icon: '🟡',
+    label: 'Notable update',
+    tone: 'notable',
+  };
+}
+
+function summarizeIntelligenceChip(item: IntelligenceDigestLike): Pick<TripAttributeChip, 'icon' | 'label' | 'tone' | 'value'> {
+  const summary = item.significanceSummary.trim();
+  const normalized = summary.toLowerCase();
+  const generic = getGenericIntelligenceChipMetadata(item.significanceLevel);
+
+  if (/(reopen|re-open|reopened|reopening)/.test(normalized)) {
+    return {
+      ...generic,
+      icon: '🟢',
+      label: 'Reopened',
+      value: `${item.name} reopened`,
+    };
+  }
+
+  if (/(closure|closed|closing|shutdown|shut down|permanent close|may close)/.test(normalized)) {
+    return {
+      ...generic,
+      icon: item.significanceLevel === 'critical' ? '🚨' : '🚪',
+      label: item.significanceLevel === 'critical' ? 'Closure risk' : 'Closure update',
+      value: `${item.name} · ${summary}`,
+    };
+  }
+
+  if (/(hours|open now|opening|operating|service change|service update|temporarily closed|reservation)/.test(normalized)) {
+    return {
+      ...generic,
+      icon: '🕒',
+      label: 'Hours update',
+      value: `${item.name} · ${summary}`,
+    };
+  }
+
+  if (/(review|reviews|rating|ratings|stars?|sentiment|buzz)/.test(normalized)) {
+    return {
+      ...generic,
+      icon: '📈',
+      label: 'Review momentum',
+      value: `${item.name} · ${summary}`,
+    };
+  }
+
+  return {
+    ...generic,
+    value: `${item.name} · ${summary}`,
+  };
+}
+
+export function buildIntelligenceAttachmentChips(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  previousEntryIds?: string[];
+  limit?: number;
+}): TripAttributeChip[] {
+  const { contextKey, digestItems, previousEntryIds = [], limit = 2 } = params;
+  const previous = new Set(previousEntryIds);
+
+  return digestItems
+    .filter(item => item.contextKey === contextKey)
+    .filter(item => item.significanceLevel === 'critical' || item.significanceLevel === 'notable')
+    .filter(item => !previous.has(item.entryId))
+    .slice(0, limit)
+    .map(item => ({
+      field: 'intelligence' as const,
+      ...summarizeIntelligenceChip(item),
+    }));
+}
+
+export function buildMonitoringActionPrompts(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  limit?: number;
+}): MonitoringActionPrompt[] {
+  const { contextKey, digestItems, limit = 2 } = params;
+  const prompts: MonitoringActionPrompt[] = [];
+  const seen = new Set<string>();
+
+  for (const item of digestItems) {
+    if (item.contextKey !== contextKey) continue;
+    const summary = item.significanceSummary.trim();
+    const normalized = summary.toLowerCase();
+
+    let prompt: MonitoringActionPrompt | null = null;
+
+    if (/(closure|closed|closing|shutdown|shut down|permanent close|may close)/.test(normalized)) {
+      prompt = {
+        label: 'Line up a backup',
+        detail: `${item.name} shows closure risk. Save a fallback now.`,
+        tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+      };
+    } else if (/(hours|open now|opening|service change|temporarily closed|reservation)/.test(normalized)) {
+      prompt = {
+        label: 'Re-check timing',
+        detail: `${item.name} changed hours or service details. Confirm before you go.`,
+        tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+      };
+    } else if (/(availability|selling fast|book fast|scarce|limited|reservation)/.test(normalized)) {
+      prompt = {
+        label: 'Book sooner',
+        detail: `${item.name} looks tighter than before. If it matters, lock it in.`,
+        tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+      };
+    } else if (/(reopen|re-open|reopened|reopening)/.test(normalized)) {
+      prompt = {
+        label: 'Reconsider this stop',
+        detail: `${item.name} is back. It may be worth putting back in the plan.`,
+        tone: 'notable',
+      };
+    } else if (/(review|reviews|rating|ratings|stars?|sentiment|buzz)/.test(normalized)) {
+      prompt = {
+        label: 'Check momentum',
+        detail: `${item.name} has shifted in the reviews. Decide if it still fits the trip.`,
+        tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+      };
+    }
+
+    if (!prompt) continue;
+    const dedupeKey = `${prompt.label}:${prompt.detail}`;
+    if (seen.has(dedupeKey)) continue;
+    seen.add(dedupeKey);
+    prompts.push(prompt);
+    if (prompts.length >= limit) break;
+  }
+
+  return prompts;
 }

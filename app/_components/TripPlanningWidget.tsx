@@ -39,6 +39,12 @@ interface TripPlanning {
   accommodation: PlanningItem;
 }
 
+interface MonitoringActionPrompt {
+  label: string;
+  detail: string;
+  tone: 'critical' | 'notable';
+}
+
 interface TripPlanningWidgetProps {
   userId: string;
   contextKey: string;
@@ -48,6 +54,7 @@ interface TripPlanningWidgetProps {
   savedCount?: number;
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  monitoringActionPrompts?: MonitoringActionPrompt[];
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
@@ -99,7 +106,15 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
 }
 
 export default function TripPlanningWidget({
-  userId, contextKey, travel, accommodation, bookingStatus, savedCount = 0, purpose, people,
+  userId,
+  contextKey,
+  travel,
+  accommodation,
+  bookingStatus,
+  savedCount = 0,
+  purpose,
+  people,
+  monitoringActionPrompts = [],
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
   const [mounted, setMounted] = useState(false);
@@ -272,6 +287,20 @@ export default function TripPlanningWidget({
             </button>
             <button className="tpw-accom-cancel" onClick={() => setAccomInputOpen(false)}>Cancel</button>
           </div>
+        </div>
+      )}
+
+      {monitoringActionPrompts.length > 0 && (
+        <div className="tpw-monitoring-prompts">
+          <div className="tpw-monitoring-prompts-title">Suggested next move</div>
+          <ul className="tpw-monitoring-prompts-list">
+            {monitoringActionPrompts.map(prompt => (
+              <li key={`${prompt.label}:${prompt.detail}`} className={`tpw-monitoring-prompt tpw-monitoring-prompt-${prompt.tone}`}>
+                <span className="tpw-monitoring-prompt-label">{prompt.label}</span>
+                <span className="tpw-monitoring-prompt-detail">{prompt.detail}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       )}
 
