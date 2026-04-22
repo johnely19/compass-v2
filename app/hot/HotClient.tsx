@@ -4,25 +4,10 @@ import { useState, useMemo, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
 import { getTypeMeta } from '../_lib/discovery-types';
+import type { MonitorChangeKind } from '../_lib/monitor-inventory';
+import { SIGNIFICANCE_RANK, getHotSignalLabel } from '../_lib/hot-intelligence';
 import TypeBadge from '../_components/TypeBadge';
 import TriageButtons from '../_components/TriageButtons';
-
-const SIGNIFICANCE_RANK: Record<string, number> = { critical: 3, notable: 2, routine: 1, noise: 0 };
-const CHANGE_LABELS: Record<string, string> = {
-  'rating-down': 'Rating dropped',
-  'rating-up': 'Rating improved',
-  'closure-signal': 'Closure detected',
-  'operational-change': 'Status changed',
-  'price-changed': 'Price moved',
-  'availability-changed': 'Availability changed',
-  'construction-signal': 'Construction update',
-  'review-count-up': 'More reviews',
-  'review-count-down': 'Reviews disappeared',
-  'description-changed': 'Description updated',
-  'hours-changed': 'Hours updated',
-  'general-update': 'Updated',
-  'sentiment-shift': 'Sentiment shifted',
-};
 
 export interface HotPlaceCard {
   placeId: string;
@@ -36,7 +21,7 @@ export interface HotPlaceCard {
   contextKey?: string;
   significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
   significanceSummary?: string;
-  detectedChanges?: string[];
+  detectedChanges?: MonitorChangeKind[];
   lastObservedAt?: string;
   hasRecentSignal: boolean;
 }
@@ -167,14 +152,6 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
     accommodation: 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)',
   };
 
-  function getSignalLabel(card: HotPlaceCard): string | null {
-    if (!card.significanceLevel) return null;
-    if (card.significanceLevel === 'critical') return 'Urgent signal';
-    if (card.significanceSummary) return card.significanceSummary;
-    const primaryChange = card.detectedChanges?.[0];
-    return primaryChange ? CHANGE_LABELS[primaryChange] ?? 'Fresh signal' : 'Fresh signal';
-  }
-
   function renderCard(card: HotPlaceCard) {
     const gradient = TYPE_GRADIENTS[card.type] || 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
     const bgStyle = card.heroImage
@@ -199,7 +176,7 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
                 )}
                 {card.hasRecentSignal && card.significanceLevel && (
                   <span className={`hot-place-card-signal hot-place-card-signal-${card.significanceLevel}`}>
-                    {getSignalLabel(card)}
+                    {getHotSignalLabel(card)}
                   </span>
                 )}
               </div>

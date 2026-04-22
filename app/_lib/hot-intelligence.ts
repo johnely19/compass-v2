@@ -10,11 +10,27 @@ export interface HotCardSignal {
   lastObservedAt?: string;
 }
 
-const SIGNIFICANCE_RANK: Record<SignificanceLevel, number> = {
+export const SIGNIFICANCE_RANK: Record<SignificanceLevel, number> = {
   critical: 3,
   notable: 2,
   routine: 1,
   noise: 0,
+};
+
+export const CHANGE_LABELS: Record<MonitorChangeKind, string> = {
+  'rating-down': 'Rating dropped',
+  'rating-up': 'Rating improved',
+  'closure-signal': 'Closure detected',
+  'operational-change': 'Status changed',
+  'price-changed': 'Price moved',
+  'availability-changed': 'Availability changed',
+  'construction-signal': 'Construction update',
+  'review-count-up': 'More reviews',
+  'review-count-down': 'Reviews disappeared',
+  'description-changed': 'Description updated',
+  'hours-changed': 'Hours updated',
+  'general-update': 'Updated',
+  'sentiment-shift': 'Sentiment shifted',
 };
 
 export function buildHotSignalMap(entries: MonitorEntry[]): Map<string, HotCardSignal> {
@@ -59,4 +75,12 @@ export function isRecentHotSignal(signal: HotCardSignal, maxAgeHours = 168): boo
   if (SIGNIFICANCE_RANK[signal.significanceLevel] < SIGNIFICANCE_RANK.notable) return false;
   const ageMs = Date.now() - new Date(signal.lastObservedAt).getTime();
   return ageMs <= maxAgeHours * 60 * 60 * 1000;
+}
+
+export function getHotSignalLabel(signal: HotCardSignal): string | null {
+  if (!signal.significanceLevel) return null;
+  if (signal.significanceLevel === 'critical') return 'Urgent signal';
+  if (signal.significanceSummary) return signal.significanceSummary;
+  const primaryChange = signal.detectedChanges?.[0];
+  return primaryChange ? CHANGE_LABELS[primaryChange] ?? 'Fresh signal' : 'Fresh signal';
 }

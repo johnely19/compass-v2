@@ -5,6 +5,7 @@ import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
 import { getManifestHeroImage } from '../_lib/image-url.server';
 import { loadMonitorInventory } from '../_lib/monitor-inventory';
+import type { MonitorChangeKind } from '../_lib/monitor-inventory';
 import { buildHotSignalMap } from '../_lib/hot-intelligence';
 import HotClient from './HotClient';
 
@@ -74,7 +75,7 @@ interface HotPlaceCard {
   contextKey?: string;
   significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
   significanceSummary?: string;
-  detectedChanges?: string[];
+  detectedChanges?: MonitorChangeKind[];
   lastObservedAt?: string;
   hasRecentSignal: boolean;
 }

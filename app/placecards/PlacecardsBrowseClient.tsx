@@ -1,20 +1,17 @@
 'use client';
 
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import Link from 'next/link';
 import type { DiscoveryType } from '../_lib/types';
-import { ALL_TYPES, getTypeMeta } from '../_lib/discovery-types';
+import { getTypeMeta } from '../_lib/discovery-types';
+import type { MonitorChangeKind } from '../_lib/monitor-inventory';
+import { SIGNIFICANCE_RANK, getHotSignalLabel } from '../_lib/hot-intelligence';
 import TypeBadge from '../_components/TypeBadge';
 import TriageButtons from '../_components/TriageButtons';
 
 function PlaceCardImage({ src }: { src: string | null }) {
   const [imgError, setImgError] = useState(false);
   const [imgLoaded, setImgLoaded] = useState(false);
-
-  useEffect(() => {
-    setImgError(false);
-    setImgLoaded(false);
-  }, [src]);
 
   if (!src) return null;
 
@@ -56,6 +53,12 @@ export interface PlaceCardData {
   city: string;
   rating: number | null;
   heroImage: string | null;
+  monitorStatus?: string;
+  significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
+  significanceSummary?: string;
+  detectedChanges?: MonitorChangeKind[];
+  lastObservedAt?: string;
+  hasRecentSignal: boolean;
 }
 
 export interface PlacecardsBrowseClientProps {
@@ -64,12 +67,7 @@ export interface PlacecardsBrowseClientProps {
   userId?: string;
 }
 
-type SortOption = 'name-asc' | 'name-desc' | 'type';
-
-interface FilterState {
-  types: DiscoveryType[];
-  minRating: number | null;
-}
+type SortOption = 'signals' | 'name-asc' | 'name-desc' | 'type';
 
 export default function PlacecardsBrowseClient({
   cards, userId,
@@ -93,6 +91,19 @@ export default function PlacecardsBrowseClient({
   }, []);
 
   const hasActiveFilters = selectedTypes.length > 0 || minRating !== null || searchQuery !== '';
+
+  const recentSignals = useMemo(
+    () =>
+      cards
+        .filter((card) => card.hasRecentSignal)
+        .sort((a, b) => {
+          const sigDiff = (SIGNIFICANCE_RANK[b.significanceLevel ?? 'noise'] ?? 0) - (SIGNIFICANCE_RANK[a.significanceLevel ?? 'noise'] ?? 0);
+          if (sigDiff !== 0) return sigDiff;
+          return new Date(b.lastObservedAt ?? 0).getTime() - new Date(a.lastObservedAt ?? 0).getTime();
+        })
+        .slice(0, 6),
+    [cards]
+  );
 
   const filteredCards = useMemo(() => {
     let result = cards;
@@ -124,6 +135,13 @@ export default function PlacecardsBrowseClient({
           return b.name.localeCompare(a.name);
         case 'type':
           return a.type.localeCompare(b.type) || a.name.localeCompare(b.name);
+        case 'signals': {
+          const sigDiff = (SIGNIFICANCE_RANK[b.significanceLevel ?? 'noise'] ?? 0) - (SIGNIFICANCE_RANK[a.significanceLevel ?? 'noise'] ?? 0);
+          if (sigDiff !== 0) return sigDiff;
+          const timeDiff = new Date(b.lastObservedAt ?? 0).getTime() - new Date(a.lastObservedAt ?? 0).getTime();
+          if (timeDiff !== 0) return timeDiff;
+          return a.name.localeCompare(b.name);
+        }
         default:
           return 0;
       }
@@ -143,7 +161,36 @@ export default function PlacecardsBrowseClient({
               : `${filteredCards.length} of ${cards.length}`}
           </span>
         </div>
+        {recentSignals.length > 0 && (
+          <p className="text-muted" style={{ marginTop: '0.4rem' }}>
+            {recentSignals.length} places have fresh notable monitoring signals.
+          </p>
+        )}
       </div>
+
+      {recentSignals.length > 0 && (
+        <section className="place-browse-signals-strip">
+          <div className="place-browse-signals-header">
+            <h2 className="hot-section-title">📡 Recent Signals</h2>
+            <button className="filter-clear" onClick={() => setSortOption('signals')}>
+              Sort by signals
+            </button>
+          </div>
+          <div className="place-browse-signals-list">
+            {recentSignals.map((card) => (
+              <Link key={card.placeId} href={`/placecards/${card.placeId}`} className="place-browse-signal-pill">
+                <span className="place-browse-signal-pill-name">{card.name}</span>
+                {card.city && <span className="place-browse-signal-pill-city">{card.city}</span>}
+                {card.significanceLevel && (
+                  <span className={`hot-place-card-signal hot-place-card-signal-${card.significanceLevel}`}>
+                    {getHotSignalLabel(card)}
+                  </span>
+                )}
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Filter Bar */}
       <div className="browse-controls">
@@ -201,6 +248,7 @@ export default function PlacecardsBrowseClient({
                 value={sortOption}
                 onChange={(e) => setSortOption(e.target.value as SortOption)}
               >
+                <option value="signals">Recent signals</option>
                 <option value="name-asc">Name (A-Z)</option>
                 <option value="name-desc">Name (Z-A)</option>
                 <option value="type">Type</option>
@@ -221,10 +269,17 @@ export default function PlacecardsBrowseClient({
         {filteredCards.map((card) => (
           <div key={card.placeId} className="card place-browse-card" style={{ position: 'relative' }}>
             <Link href={`/placecards/${card.placeId}`} className="place-browse-card-link">
-              <PlaceCardImage src={card.heroImage} />
+              <PlaceCardImage key={card.heroImage ?? card.placeId} src={card.heroImage} />
               <div className="card-body">
                 <h3 className="place-browse-name">{card.name}</h3>
                 <TypeBadge type={card.type} />
+                {card.hasRecentSignal && card.significanceLevel && (
+                  <div className="place-browse-signal-row">
+                    <span className={`hot-place-card-signal hot-place-card-signal-${card.significanceLevel}`}>
+                      {getHotSignalLabel(card)}
+                    </span>
+                  </div>
+                )}
                 {card.city && (
                   <span className="place-browse-city">{card.city}</span>
                 )}

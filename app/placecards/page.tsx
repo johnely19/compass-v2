@@ -1,16 +1,13 @@
-import { notFound } from 'next/navigation';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
 import { PlaceCardStore } from '../_lib/place-card-store';
+import { loadMonitorInventory } from '../_lib/monitor-inventory';
+import type { MonitorChangeKind } from '../_lib/monitor-inventory';
+import { buildHotSignalMap, isRecentHotSignal } from '../_lib/hot-intelligence';
 import PlacecardsBrowseClient from './PlacecardsBrowseClient';
 
 export const dynamic = 'force-dynamic';
-
-interface IndexEntry {
-  name: string;
-  type: DiscoveryType;
-}
 
 interface CardData {
   identity?: {
@@ -38,6 +35,12 @@ interface PlaceCardData {
   city: string;
   rating: number | null;
   heroImage: string | null;
+  monitorStatus?: string;
+  significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
+  significanceSummary?: string;
+  detectedChanges?: MonitorChangeKind[];
+  lastObservedAt?: string;
+  hasRecentSignal: boolean;
 }
 
 export default async function PlacecardsPage() {
@@ -53,7 +56,11 @@ export default async function PlacecardsPage() {
     );
   }
 
-  const index = await PlaceCardStore.getIndex();
+  const [index, inventory] = await Promise.all([
+    PlaceCardStore.getIndex(),
+    loadMonitorInventory(user.id),
+  ]);
+  const signalById = buildHotSignalMap(inventory.entries);
 
   // Build enriched card data with city and rating
   // Note: During migration, we may fall back to local data for some cards
@@ -62,6 +69,7 @@ export default async function PlacecardsPage() {
       const cardData = await PlaceCardStore.getCard(placeId) as CardData | null;
       const city = cardData?.identity?.city ?? '';
       const rating = extractRating(cardData?.narrative?.summary ?? null);
+      const signal = signalById.get(placeId);
 
       return {
         placeId,
@@ -70,6 +78,12 @@ export default async function PlacecardsPage() {
         city,
         rating,
         heroImage: `/api/internal/place-photo?placeId=${placeId}`,
+        monitorStatus: signal?.monitorStatus,
+        significanceLevel: signal?.significanceLevel,
+        significanceSummary: signal?.significanceSummary,
+        detectedChanges: signal?.detectedChanges,
+        lastObservedAt: signal?.lastObservedAt,
+        hasRecentSignal: signal ? isRecentHotSignal(signal) : false,
       };
     })
   );
