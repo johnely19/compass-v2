@@ -31,11 +31,6 @@ export default async function HomePage() {
       userId={user.id}
       contexts={homepageData.contexts}
       initialContextKey={homepageData.initialContextKey}
-      initialDiscoveries={homepageData.initialDiscoveries}
-      initialMonitoringQueue={homepageData.initialMonitoringQueue}
-      contextMeta={homepageData.contextMeta}
-      digestTeaser={homepageData.digestTeaser}
-      digestItems={homepageData.digestItems}
     />
   );
 }

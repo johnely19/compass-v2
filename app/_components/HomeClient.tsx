@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { ContextType, Discovery } from '../_lib/types';
+import type { HomepageDigestItem } from '../_lib/homepage-data';
 import { getContextCounts } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
@@ -29,24 +30,6 @@ interface MonitoringQueueItem {
   observationCount?: number;
 }
 
-interface DigestItemProp {
-  entryId: string;
-  name: string;
-  city: string;
-  monitorType: string;
-  contextKey: string;
-  significanceLevel: string;
-  significanceSummary: string;
-  changes: string[];
-  stateContext?: {
-    rating?: number;
-    previousRating?: number;
-    operationalStatus?: string;
-    previousOperationalStatus?: string;
-  };
-  placeId?: string;
-}
-
 interface HomeContext {
   key: string;
   label: string;
@@ -63,11 +46,6 @@ interface HomeClientProps {
   userId: string;
   contexts: HomeContext[];
   initialContextKey?: string | null;
-  initialDiscoveries?: Discovery[];
-  initialMonitoringQueue?: MonitoringQueueItem[];
-  contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
-  digestTeaser?: string | null;
-  digestItems?: DigestItemProp[];
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -259,11 +237,6 @@ export default function HomeClient({
   userId,
   contexts,
   initialContextKey = null,
-  initialDiscoveries = [],
-  initialMonitoringQueue = [],
-  contextMeta = {},
-  digestTeaser,
-  digestItems = [],
 }: HomeClientProps) {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -271,12 +244,11 @@ export default function HomeClient({
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
-  const [discoveriesByContext, setDiscoveriesByContext] = useState<Record<string, Discovery[]>>(() => (
-    initialContextKey && initialDiscoveries.length > 0 ? { [initialContextKey]: initialDiscoveries } : {}
-  ));
-  const [monitoringQueueByContext, setMonitoringQueueByContext] = useState<Record<string, MonitoringQueueItem[]>>(() => (
-    initialContextKey && initialMonitoringQueue.length > 0 ? { [initialContextKey]: initialMonitoringQueue } : {}
-  ));
+  const [discoveriesByContext, setDiscoveriesByContext] = useState<Record<string, Discovery[]>>({});
+  const [monitoringQueueByContext, setMonitoringQueueByContext] = useState<Record<string, MonitoringQueueItem[]>>({});
+  const [contextMetaByKey, setContextMetaByKey] = useState<Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>>({});
+  const [digestTeaser, setDigestTeaser] = useState<string | null>(null);
+  const [digestItems, setDigestItems] = useState<HomepageDigestItem[]>([]);
   const [loadingDiscoveries, setLoadingDiscoveries] = useState<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
@@ -380,17 +352,30 @@ export default function HomeClient({
   const ensureContextData = useCallback((key: string) => {
     if (Object.prototype.hasOwnProperty.call(discoveriesByContext, key) || loadingDiscoveries.has(key)) return;
     setLoadingDiscoveries(prev => new Set(prev).add(key));
-    fetch(`/api/home/context?key=${encodeURIComponent(key)}`)
+    const endpoint = digestItems.length === 0 && Object.keys(contextMetaByKey).length === 0
+      ? `/api/home/bootstrap?key=${encodeURIComponent(key)}`
+      : `/api/home/context?key=${encodeURIComponent(key)}`;
+    fetch(endpoint)
       .then(async (res) => {
         if (!res.ok) throw new Error(`Failed to load context ${key}`);
         return res.json();
       })
       .then((data) => {
+        const resolvedKey = typeof data?.contextKey === 'string' ? data.contextKey : key;
         if (Array.isArray(data?.discoveries)) {
-          setDiscoveriesByContext(prev => ({ ...prev, [key]: data.discoveries }));
+          setDiscoveriesByContext(prev => ({ ...prev, [resolvedKey]: data.discoveries }));
         }
         if (Array.isArray(data?.monitoringQueue)) {
-          setMonitoringQueueByContext(prev => ({ ...prev, [key]: data.monitoringQueue }));
+          setMonitoringQueueByContext(prev => ({ ...prev, [resolvedKey]: data.monitoringQueue }));
+        }
+        if (data?.contextMeta) {
+          setContextMetaByKey(prev => ({ ...prev, [resolvedKey]: data.contextMeta }));
+        }
+        if (typeof data?.digestTeaser === 'string' || data?.digestTeaser === null) {
+          setDigestTeaser(data.digestTeaser ?? null);
+        }
+        if (Array.isArray(data?.digestItems)) {
+          setDigestItems(data.digestItems);
         }
       })
       .catch(console.error)
@@ -401,7 +386,7 @@ export default function HomeClient({
           return next;
         });
       });
-  }, [discoveriesByContext, loadingDiscoveries]);
+  }, [contextMetaByKey, digestItems.length, discoveriesByContext, loadingDiscoveries]);
 
   const handleContextSelect = useCallback((key: string) => {
     applyActiveKey(key);
@@ -642,9 +627,9 @@ export default function HomeClient({
               <TripPlanningWidget
                 userId={userId}
                 contextKey={ctx.key}
-                travel={contextMeta[ctx.key]?.travel as never}
-                accommodation={contextMeta[ctx.key]?.accommodation as never}
-                bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                travel={contextMetaByKey[ctx.key]?.travel as never}
+                accommodation={contextMetaByKey[ctx.key]?.accommodation as never}
+                bookingStatus={contextMetaByKey[ctx.key]?.bookingStatus}
                 savedCount={counts.saved}
                 purpose={raw.purpose as string | undefined}
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}

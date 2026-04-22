@@ -55,30 +55,36 @@ export interface HomepageContextData {
   }>;
 }
 
+export interface HomepageDigestItem {
+  entryId: string;
+  name: string;
+  city: string;
+  monitorType: string;
+  contextKey: string;
+  significanceLevel: string;
+  significanceSummary: string;
+  changes: string[];
+  stateContext?: {
+    rating?: number;
+    previousRating?: number;
+    operationalStatus?: string;
+    previousOperationalStatus?: string;
+  };
+  placeId?: string;
+}
+
 export interface HomepageData {
   contexts: HomepageContext[];
   initialContextKey: string | null;
-  initialDiscoveries: HomepageDiscovery[];
-  initialMonitoringQueue: HomepageContextData['monitoringQueue'];
-  contextMeta: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
+}
+
+export interface HomepageBootstrapData {
+  contextKey: string | null;
+  discoveries: HomepageDiscovery[];
+  monitoringQueue: HomepageContextData['monitoringQueue'];
+  contextMeta?: { travel?: unknown; accommodation?: unknown; bookingStatus?: string };
   digestTeaser: string | null;
-  digestItems: Array<{
-    entryId: string;
-    name: string;
-    city: string;
-    monitorType: string;
-    contextKey: string;
-    significanceLevel: string;
-    significanceSummary: string;
-    changes: string[];
-    stateContext?: {
-      rating?: number;
-      previousRating?: number;
-      operationalStatus?: string;
-      previousOperationalStatus?: string;
-    };
-    placeId?: string;
-  }>;
+  digestItems: HomepageDigestItem[];
 }
 
 function sortContexts(contexts: Context[]): Context[] {
@@ -286,18 +292,25 @@ async function prepareHomepageState(userId: string) {
 }
 
 export async function getHomepageData(userId: string): Promise<HomepageData> {
-  const { homepageContexts, byContext, contextMeta, monitoringQueue, homepageDigest } = await prepareHomepageState(userId);
+  const { homepageContexts } = await prepareHomepageState(userId);
   const initialContextKey = homepageContexts[0]?.key ?? null;
-  // Keep all contexts for the switcher UI, but only SSR discoveries for the active context
-  // to keep HTML under 50KB - other contexts load lazily via /api/home/context
   return {
     contexts: homepageContexts,
     initialContextKey,
-    // Keep homepage SSR shell lean. Active-context discoveries/monitoring
-    // load immediately on the client after mount.
-    initialDiscoveries: [],
-    initialMonitoringQueue: [],
-    contextMeta,
+  };
+}
+
+export async function getHomepageBootstrapData(userId: string, contextKey?: string | null): Promise<HomepageBootstrapData> {
+  const { homepageContexts, byContext, contextMeta, monitoringQueue, homepageDigest } = await prepareHomepageState(userId);
+  const resolvedContextKey = contextKey && homepageContexts.some((item) => item.key === contextKey)
+    ? contextKey
+    : (homepageContexts[0]?.key ?? null);
+
+  return {
+    contextKey: resolvedContextKey,
+    discoveries: resolvedContextKey ? (byContext.get(resolvedContextKey) ?? []).map(toHomepageDiscovery) : [],
+    monitoringQueue: resolvedContextKey ? monitoringQueue.filter((item) => item.contextKey === resolvedContextKey) : [],
+    contextMeta: resolvedContextKey ? contextMeta[resolvedContextKey] : undefined,
     digestTeaser: homepageDigest.teaserText,
     digestItems: homepageDigest.items,
   };
