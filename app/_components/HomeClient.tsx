@@ -3,7 +3,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
-import type { Context, Discovery } from '../_lib/types';
+import type { ContextType, Discovery } from '../_lib/types';
+import type { HomepageDigestItem } from '../_lib/homepage-data';
 import { getContextCounts } from '../_lib/triage';
 import PlaceGrid from './PlaceGrid';
 import BriefingBanner from './BriefingBanner';
@@ -29,32 +30,22 @@ interface MonitoringQueueItem {
   observationCount?: number;
 }
 
-interface DigestItemProp {
-  entryId: string;
-  name: string;
-  city: string;
-  monitorType: string;
-  contextKey: string;
-  significanceLevel: string;
-  significanceSummary: string;
-  changes: string[];
-  stateContext?: {
-    rating?: number;
-    previousRating?: number;
-    operationalStatus?: string;
-    previousOperationalStatus?: string;
-  };
-  placeId?: string;
+interface HomeContext {
+  key: string;
+  label: string;
+  emoji: string;
+  type: ContextType;
+  city?: string;
+  dates?: string;
+  focus: string[];
+  purpose?: string;
+  people?: Array<{ name: string; relation?: string }>;
 }
 
 interface HomeClientProps {
   userId: string;
-  contexts: Context[];
-  discoveryMap: Record<string, Discovery[]>;
-  contextMeta?: Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>;
-  monitoringQueue?: MonitoringQueueItem[];
-  digestTeaser?: string | null;
-  digestItems?: DigestItemProp[];
+  contexts: HomeContext[];
+  initialContextKey?: string | null;
 }
 
 const TYPE_EMOJI: Record<string, string> = {
@@ -135,7 +126,7 @@ function formatDateNatural(dates: string | undefined): string | null {
 /**
  * Build a short description from context focus areas.
  */
-function buildDescription(ctx: Context): string | null {
+function buildDescription(ctx: HomeContext): string | null {
   if (ctx.focus && ctx.focus.length > 0) {
     return ctx.focus.slice(0, 5).join(' · ');
   }
@@ -245,11 +236,7 @@ function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
 export default function HomeClient({
   userId,
   contexts,
-  discoveryMap,
-  contextMeta = {},
-  monitoringQueue = [],
-  digestTeaser,
-  digestItems = [],
+  initialContextKey = null,
 }: HomeClientProps) {
   const router = useRouter();
   const [mounted, setMounted] = useState(false);
@@ -257,6 +244,12 @@ export default function HomeClient({
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
+  const [discoveriesByContext, setDiscoveriesByContext] = useState<Record<string, Discovery[]>>({});
+  const [monitoringQueueByContext, setMonitoringQueueByContext] = useState<Record<string, MonitoringQueueItem[]>>({});
+  const [contextMetaByKey, setContextMetaByKey] = useState<Record<string, { travel?: unknown; accommodation?: unknown; bookingStatus?: string }>>({});
+  const [digestTeaser, setDigestTeaser] = useState<string | null>(null);
+  const [digestItems, setDigestItems] = useState<HomepageDigestItem[]>([]);
+  const [loadingDiscoveries, setLoadingDiscoveries] = useState<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -300,24 +293,28 @@ export default function HomeClient({
       const stored = localStorage.getItem('compass-active-context');
       if (stored) {
         setActiveKey(stored);
+      } else if (initialContextKey) {
+        setActiveKey(initialContextKey);
       } else if (contexts.length > 0) {
         setActiveKey(contexts[0]!.key);
       }
     } catch {
-      if (contexts.length > 0) setActiveKey(contexts[0]!.key);
+      if (initialContextKey) setActiveKey(initialContextKey);
+      else if (contexts.length > 0) setActiveKey(contexts[0]!.key);
     }
     // Intentionally runs only once; subsequent switches go through
     // applyActiveKey / chat switch / trip-created handlers.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [contexts, initialContextKey]);
 
   // Defensive fallback: if activeKey ever becomes null (e.g. first
   // mount raced with contexts arriving), seed it from the first context.
   useEffect(() => {
-    if (activeKey === null && contexts.length > 0) {
-      setActiveKey(contexts[0]!.key);
+    if (activeKey === null) {
+      if (initialContextKey) setActiveKey(initialContextKey);
+      else if (contexts.length > 0) setActiveKey(contexts[0]!.key);
     }
-  }, [activeKey, contexts]);
+  }, [activeKey, contexts, initialContextKey]);
 
   // When contexts update, apply any pending chat-driven target key that
   // is now available. This fixes the case where a chat switch arrives
@@ -352,10 +349,50 @@ export default function HomeClient({
     }));
   }, [contexts]);
 
+  const ensureContextData = useCallback((key: string) => {
+    if (Object.prototype.hasOwnProperty.call(discoveriesByContext, key) || loadingDiscoveries.has(key)) return;
+    setLoadingDiscoveries(prev => new Set(prev).add(key));
+    const endpoint = digestItems.length === 0 && Object.keys(contextMetaByKey).length === 0
+      ? `/api/home/bootstrap?key=${encodeURIComponent(key)}`
+      : `/api/home/context?key=${encodeURIComponent(key)}`;
+    fetch(endpoint)
+      .then(async (res) => {
+        if (!res.ok) throw new Error(`Failed to load context ${key}`);
+        return res.json();
+      })
+      .then((data) => {
+        const resolvedKey = typeof data?.contextKey === 'string' ? data.contextKey : key;
+        if (Array.isArray(data?.discoveries)) {
+          setDiscoveriesByContext(prev => ({ ...prev, [resolvedKey]: data.discoveries }));
+        }
+        if (Array.isArray(data?.monitoringQueue)) {
+          setMonitoringQueueByContext(prev => ({ ...prev, [resolvedKey]: data.monitoringQueue }));
+        }
+        if (data?.contextMeta) {
+          setContextMetaByKey(prev => ({ ...prev, [resolvedKey]: data.contextMeta }));
+        }
+        if (typeof data?.digestTeaser === 'string' || data?.digestTeaser === null) {
+          setDigestTeaser(data.digestTeaser ?? null);
+        }
+        if (Array.isArray(data?.digestItems)) {
+          setDigestItems(data.digestItems);
+        }
+      })
+      .catch(console.error)
+      .finally(() => {
+        setLoadingDiscoveries(prev => {
+          const next = new Set(prev);
+          next.delete(key);
+          return next;
+        });
+      });
+  }, [contextMetaByKey, digestItems.length, discoveriesByContext, loadingDiscoveries]);
+
   const handleContextSelect = useCallback((key: string) => {
     applyActiveKey(key);
     broadcastActiveContext(key);
-  }, [applyActiveKey, broadcastActiveContext]);
+    ensureContextData(key);
+  }, [applyActiveKey, broadcastActiveContext, ensureContextData]);
 
   // Listen for chat-driven context switches.
   // If the target key is already in `contexts`, apply it immediately.
@@ -370,6 +407,7 @@ export default function HomeClient({
         // Mirror manual context selection: broadcast immediately so
         // chat-scoped UI stays aligned on multi-hop conversational switches.
         broadcastActiveContext(detail.key);
+        ensureContextData(detail.key);
       } else {
         pendingContextKeyRef.current = detail.key;
         // Persist immediately so a subsequent mount/hydration cycle
@@ -379,7 +417,7 @@ export default function HomeClient({
     };
     window.addEventListener('compass-chat-context-switch', handler);
     return () => window.removeEventListener('compass-chat-context-switch', handler);
-  }, [contexts, applyActiveKey, broadcastActiveContext]);
+  }, [contexts, applyActiveKey, broadcastActiveContext, ensureContextData]);
 
   // Triage change listener
   useEffect(() => {
@@ -473,8 +511,9 @@ export default function HomeClient({
   useEffect(() => {
     if (activeKey) {
       broadcastActiveContext(activeKey);
+      ensureContextData(activeKey);
     }
-  }, [activeKey, broadcastActiveContext]);
+  }, [activeKey, broadcastActiveContext, ensureContextData]);
 
   if (contexts.length === 0) {
     return (
@@ -493,7 +532,11 @@ export default function HomeClient({
   }
 
   const ctx = contexts.find(c => c.key === activeKey) || contexts[0]!;
-  const discoveries = discoveryMap[ctx.key] ?? [];
+  // Combine SSR discoveries (active context) with lazy-loaded discoveries (other contexts)
+  const discoveries = discoveriesByContext[ctx.key] ?? [];
+  const contextMonitoringQueue = monitoringQueueByContext[ctx.key] ?? [];
+  const hasLoadedContextDiscoveries = Object.prototype.hasOwnProperty.call(discoveriesByContext, ctx.key);
+  const isLoadingContext = loadingDiscoveries.has(ctx.key) || !hasLoadedContextDiscoveries;
   const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
   const naturalDate = formatDateNatural(ctx.dates);
   const description = buildDescription(ctx);
@@ -584,9 +627,9 @@ export default function HomeClient({
               <TripPlanningWidget
                 userId={userId}
                 contextKey={ctx.key}
-                travel={contextMeta[ctx.key]?.travel as never}
-                accommodation={contextMeta[ctx.key]?.accommodation as never}
-                bookingStatus={contextMeta[ctx.key]?.bookingStatus}
+                travel={contextMetaByKey[ctx.key]?.travel as never}
+                accommodation={contextMetaByKey[ctx.key]?.accommodation as never}
+                bookingStatus={contextMetaByKey[ctx.key]?.bookingStatus}
                 savedCount={counts.saved}
                 purpose={raw.purpose as string | undefined}
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}
@@ -619,10 +662,14 @@ export default function HomeClient({
           </div>
         )}
 
-        <MonitoringQueueTray items={monitoringQueue.filter(i => i.contextKey === ctx.key)} />
+        <MonitoringQueueTray items={contextMonitoringQueue} />
 
         {/* Discoveries */}
-        {discoveries.length > 0 ? (
+        {isLoadingContext ? (
+          <div className="focused-empty-discoveries focused-empty-discoveries-compact">
+            <p className="focused-empty-title">Loading discoveries…</p>
+          </div>
+        ) : discoveries.length > 0 ? (
           <PlaceGrid
             discoveries={discoveries}
             contextKey={ctx.key}

@@ -10,7 +10,7 @@ export default defineConfig({
   reporter: [['html', { open: 'never' }]],
   outputDir: 'test-results',
   use: {
-    baseURL: 'http://localhost:3002',
+    baseURL: process.env.PLAYWRIGHT_BASE_URL || 'http://localhost:3002',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
     // Reuse auth state seeded by global-setup (compass-user cookie)
