@@ -10,7 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
-import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts } from '../_lib/trip-emergence';
+import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildMonitoringPromptAttachmentChips } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -258,6 +258,8 @@ export default function HomeClient({
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
+  const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
+  const digestHydratedContextsRef = useRef<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -454,6 +456,61 @@ export default function HomeClient({
     };
   }, []);
 
+
+  useEffect(() => {
+    if (!activeKey) return;
+
+    const visibleDigestItems = digestItems.filter(item => item.contextKey === activeKey);
+    const entryIds = visibleDigestItems.map(item => item.entryId);
+    const hydrated = digestHydratedContextsRef.current.has(activeKey);
+
+    if (!hydrated) {
+      seenDigestEntryIdsRef.current[activeKey] = entryIds;
+      digestHydratedContextsRef.current.add(activeKey);
+      return;
+    }
+
+    if (visibleDigestItems.length === 0) {
+      seenDigestEntryIdsRef.current[activeKey] = [];
+      return;
+    }
+
+    const previousEntryIds = seenDigestEntryIdsRef.current[activeKey] ?? [];
+    const promptChips = buildMonitoringPromptAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+      limit: 1,
+    });
+    const intelChips = buildIntelligenceAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+      limit: 1,
+    });
+    seenDigestEntryIdsRef.current[activeKey] = entryIds;
+
+    const nextChips = [...promptChips, ...intelChips].slice(0, 2);
+    if (nextChips.length === 0) return;
+
+    setAttachingAttrs(prev => ({
+      ...prev,
+      [activeKey]: [...(prev[activeKey] ?? []), ...nextChips],
+    }));
+
+    const timer = setTimeout(() => {
+      setAttachingAttrs(prev => {
+        const next = { ...prev };
+        const remaining = (next[activeKey] ?? []).filter(attr => !nextChips.some(chip => chip.field === attr.field && chip.value === attr.value && chip.label === attr.label));
+        if (remaining.length > 0) next[activeKey] = remaining;
+        else delete next[activeKey];
+        return next;
+      });
+    }, 3200);
+
+    return () => clearTimeout(timer);
+  }, [activeKey, digestItems]);
+
   // Refresh data when chat mutates
   useEffect(() => {
     let refreshTimer: ReturnType<typeof setTimeout> | null = null;
@@ -552,7 +609,7 @@ export default function HomeClient({
               {landingAttrs.length > 0 && (
                 <div className="section-attr-pills">
                   {landingAttrs.map(attr => {
-                    const icon = attr.field === 'dates'
+                    const icon = attr.icon ?? (attr.field === 'dates'
                       ? '📅'
                       : attr.field === 'city'
                         ? '📍'
@@ -560,10 +617,12 @@ export default function HomeClient({
                           ? '🎯'
                           : attr.field === 'people'
                             ? '👥'
-                            : '🏷';
+                            : attr.field === 'intelligence'
+                              ? '🛰️'
+                              : '🏷');
                     return (
                       <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
-                        {icon} {attr.value}
+                        {icon} {attr.label ? `${attr.label}: ` : ''}{attr.value}
                       </span>
                     );
                   })}

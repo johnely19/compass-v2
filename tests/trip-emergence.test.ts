@@ -4,6 +4,7 @@ import assert from 'node:assert/strict';
 import {
   buildIntelligenceAttachmentChips,
   buildMonitoringActionPrompts,
+  buildMonitoringPromptAttachmentChips,
   diffTripEmergenceAttributes,
 } from '../app/_lib/trip-emergence';
 
@@ -190,6 +191,81 @@ describe('buildMonitoringActionPrompts', () => {
         label: 'Check momentum',
         detail: 'C has shifted in the reviews. Decide if it still fits the trip.',
         tone: 'notable',
+      },
+    ]);
+  });
+});
+
+
+describe('buildMonitoringPromptAttachmentChips', () => {
+  test('turns fresh monitoring signals into a single durable next-move attachment chip', () => {
+    const chips = buildMonitoringPromptAttachmentChips({
+      contextKey: 'trip:nyc',
+      previousEntryIds: ['old'],
+      digestItems: [
+        {
+          entryId: 'old',
+          contextKey: 'trip:nyc',
+          name: 'Old Place',
+          significanceLevel: 'critical',
+          significanceSummary: 'Possible closure after shutdown notice',
+        },
+        {
+          entryId: 'new',
+          contextKey: 'trip:nyc',
+          name: 'Sailor',
+          significanceLevel: 'critical',
+          significanceSummary: 'Possible closure after shutdown notice',
+        },
+        {
+          entryId: 'other',
+          contextKey: 'trip:paris',
+          name: 'Other',
+          significanceLevel: 'notable',
+          significanceSummary: 'Hours updated',
+        },
+      ],
+    });
+
+    assert.deepEqual(chips, [
+      {
+        field: 'intelligence',
+        label: 'Line up a backup',
+        value: 'Sailor shows closure risk. Save a fallback now.',
+        tone: 'critical',
+        icon: '🚨',
+      },
+    ]);
+  });
+
+  test('keeps prompt attachment low-noise when several fresh entries imply the same move', () => {
+    const chips = buildMonitoringPromptAttachmentChips({
+      contextKey: 'trip:nyc',
+      digestItems: [
+        {
+          entryId: 'a',
+          contextKey: 'trip:nyc',
+          name: 'A',
+          significanceLevel: 'critical',
+          significanceSummary: 'Possible closure after shutdown notice',
+        },
+        {
+          entryId: 'b',
+          contextKey: 'trip:nyc',
+          name: 'B',
+          significanceLevel: 'critical',
+          significanceSummary: 'Possible closure after shutdown notice',
+        },
+      ],
+    });
+
+    assert.deepEqual(chips, [
+      {
+        field: 'intelligence',
+        label: 'Line up a backup',
+        value: 'A shows closure risk. Save a fallback now.',
+        tone: 'critical',
+        icon: '🚨',
       },
     ]);
   });

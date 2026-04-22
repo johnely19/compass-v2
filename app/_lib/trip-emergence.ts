@@ -220,3 +220,29 @@ export function buildMonitoringActionPrompts(params: {
 
   return prompts;
 }
+
+
+export function buildMonitoringPromptAttachmentChips(params: {
+  contextKey: string;
+  digestItems: IntelligenceDigestLike[];
+  previousEntryIds?: string[];
+  limit?: number;
+}): TripAttributeChip[] {
+  const { contextKey, digestItems, previousEntryIds = [], limit = 1 } = params;
+  const previous = new Set(previousEntryIds);
+  const freshItems = digestItems
+    .filter(item => item.contextKey === contextKey)
+    .filter(item => (item.significanceLevel === 'critical' || item.significanceLevel === 'notable') && !previous.has(item.entryId));
+
+  return buildMonitoringActionPrompts({
+    contextKey,
+    digestItems: freshItems,
+    limit,
+  }).map(prompt => ({
+    field: 'intelligence' as const,
+    value: prompt.detail,
+    label: prompt.label,
+    tone: prompt.tone,
+    icon: prompt.tone === 'critical' ? '🚨' : '🧭',
+  }));
+}
