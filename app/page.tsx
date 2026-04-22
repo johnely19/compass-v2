@@ -1,9 +1,26 @@
 import Link from 'next/link';
 import { getCurrentUser } from './_lib/user';
-import { getHomepageData } from './_lib/homepage-data';
+import { getHomepageData, type HomepageContext } from './_lib/homepage-data';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
+
+function sanitizeHomepageContexts(contexts: HomepageContext[]): HomepageContext[] {
+  return contexts.map((context) => ({
+    key: context.key,
+    label: context.label,
+    emoji: context.emoji,
+    type: context.type,
+    city: context.city,
+    dates: context.dates,
+    focus: [...context.focus],
+    purpose: context.purpose,
+    people: context.people?.map((person) => ({
+      name: person.name,
+      relation: person.relation,
+    })),
+  }));
+}
 
 export default async function HomePage() {
   const user = await getCurrentUser();
@@ -20,8 +37,9 @@ export default async function HomePage() {
   }
 
   const homepageData = await getHomepageData(user.id);
+  const contexts = sanitizeHomepageContexts(homepageData.contexts);
 
-  if (!user.isOwner && homepageData.contexts.length === 0) {
+  if (!user.isOwner && contexts.length === 0) {
     const { redirect } = await import('next/navigation');
     redirect('/onboarding');
   }
@@ -29,7 +47,7 @@ export default async function HomePage() {
   return (
     <HomeClient
       userId={user.id}
-      contexts={homepageData.contexts}
+      contexts={contexts}
       initialContextKey={homepageData.initialContextKey}
     />
   );
