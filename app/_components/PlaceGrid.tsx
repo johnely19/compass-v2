@@ -14,6 +14,18 @@ interface PlaceGridProps {
   userId?: string;
   showFilters?: boolean;
   layout?: 'grid' | 'carousel';
+  trendSignals?: Record<string, { label: string; tone: 'critical' | 'notable' | 'routine' }>;
+}
+
+function TrendBadge({ signal }: { signal?: { label: string; tone: 'critical' | 'notable' | 'routine' } }) {
+  if (!signal) return null;
+  return (
+    <div className="place-grid-trend-wrap">
+      <span className={`place-card-trend-badge place-card-trend-${signal.tone}`}>
+        {signal.label}
+      </span>
+    </div>
+  );
 }
 
 /** Filter to only unreviewed/resurfaced discoveries */
@@ -35,6 +47,7 @@ export default function PlaceGrid({
   contextType,
   userId,
   layout = 'grid',
+  trendSignals = {},
 }: PlaceGridProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
@@ -112,7 +125,8 @@ export default function PlaceGrid({
         )}
         <div className="carousel-track" ref={scrollRef}>
           {visibleDiscoveries.map((discovery) => (
-            <div key={discovery.id} className="carousel-item">
+            <div key={discovery.id} className="carousel-item place-grid-trend-card">
+              <TrendBadge signal={trendSignals[discovery.place_id || discovery.id]} />
               <PlaceCard
                 discovery={discovery}
                 contextKey={contextKey}
@@ -135,15 +149,17 @@ export default function PlaceGrid({
     <div className="place-grid-container">
       <div className="grid grid-auto">
         {visibleDiscoveries.map((discovery) => (
-          <PlaceCard
-            key={discovery.id}
-            discovery={discovery}
-            contextKey={contextKey}
-            contextLabel={contextLabel}
-            contextEmoji={contextEmoji}
-            contextType={contextType}
-            userId={userId}
-          />
+          <div key={discovery.id} className="place-grid-trend-card">
+            <TrendBadge signal={trendSignals[discovery.place_id || discovery.id]} />
+            <PlaceCard
+              discovery={discovery}
+              contextKey={contextKey}
+              contextLabel={contextLabel}
+              contextEmoji={contextEmoji}
+              contextType={contextType}
+              userId={userId}
+            />
+          </div>
         ))}
       </div>
     </div>

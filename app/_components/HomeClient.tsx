@@ -180,6 +180,15 @@ function formatChangeKinds(changes: string[]): string {
   return `${primary} +${changes.length - 1}`;
 }
 
+function getTrendBadgeLabel(item: DigestItemProp): string {
+  if (item.significanceLevel === 'critical') return 'Urgent update';
+  if (item.changes.includes('rating-up')) return 'Trending up';
+  if (item.changes.includes('review-count-up')) return 'Buzzing';
+  if (item.changes.includes('availability-changed')) return 'Watch availability';
+  if (item.changes.includes('price-changed')) return 'Price moved';
+  return 'Fresh signal';
+}
+
 function MonitoringQueueTray({ items }: { items: MonitoringQueueItem[] }) {
   const [expanded, setExpanded] = useState(false);
   if (items.length === 0) return null;
@@ -484,6 +493,17 @@ export default function HomeClient({
     [digestItems, activeKey],
   );
 
+  const trendSignals = useMemo(() => {
+    const entries = visibleDigestItems.map(item => [
+      item.placeId || item.entryId,
+      {
+        label: getTrendBadgeLabel(item),
+        tone: item.significanceLevel === 'critical' ? 'critical' : item.significanceLevel === 'notable' ? 'notable' : 'routine',
+      },
+    ] as const);
+    return Object.fromEntries(entries);
+  }, [visibleDigestItems]);
+
   useEffect(() => {
     if (!activeKey) return;
 
@@ -665,11 +685,14 @@ export default function HomeClient({
         <BriefingBanner userId={userId} />
 
         {/* Significance digest banner — shows when monitored places have recent notable changes */}
-        {digestTeaser && digestItems.length > 0 && (
+        {digestTeaser && visibleDigestItems.length > 0 && (
           <div className="digest-banner">
-            <div className="digest-banner-teaser">{digestTeaser}</div>
+            <div className="digest-banner-header">
+              <div className="digest-banner-teaser">{digestTeaser}</div>
+              <Link href="/hot" className="digest-banner-link">Open What&apos;s Hot →</Link>
+            </div>
             <ul className="digest-banner-list">
-              {digestItems.slice(0, 3).map(item => {
+              {visibleDigestItems.slice(0, 3).map(item => {
                 const href = `/placecards/${item.placeId || item.entryId}?context=${encodeURIComponent(item.contextKey)}`;
                 return (
                   <li key={item.entryId} className={`digest-banner-item digest-banner-sig-${item.significanceLevel}`}>
@@ -698,6 +721,7 @@ export default function HomeClient({
             contextType={ctx.type}
             userId={userId}
             layout="carousel"
+            trendSignals={trendSignals}
           />
         ) : (
           <div className="focused-empty-discoveries focused-empty-discoveries-compact">
