@@ -170,7 +170,7 @@ export function buildMonitoringActionPrompts(params: {
 }): MonitoringActionPrompt[] {
   const { contextKey, digestItems, limit = 2 } = params;
   const prompts: MonitoringActionPrompt[] = [];
-  const seen = new Set<string>();
+  const seenLabels = new Set<string>();
 
   for (const item of digestItems) {
     if (item.contextKey !== contextKey) continue;
@@ -212,9 +212,8 @@ export function buildMonitoringActionPrompts(params: {
     }
 
     if (!prompt) continue;
-    const dedupeKey = `${prompt.label}:${prompt.detail}`;
-    if (seen.has(dedupeKey)) continue;
-    seen.add(dedupeKey);
+    if (seenLabels.has(prompt.label)) continue;
+    seenLabels.add(prompt.label);
     prompts.push(prompt);
     if (prompts.length >= limit) break;
   }

@@ -151,10 +151,10 @@ describe('buildMonitoringActionPrompts', () => {
     ]);
   });
 
-  test('dedupes repeated prompts and respects limit', () => {
+  test('keeps next-move prompts low-noise by suppressing repeated labels', () => {
     const prompts = buildMonitoringActionPrompts({
       contextKey: 'trip:nyc',
-      limit: 2,
+      limit: 3,
       digestItems: [
         {
           entryId: 'a',
@@ -187,9 +187,9 @@ describe('buildMonitoringActionPrompts', () => {
         tone: 'critical',
       },
       {
-        label: 'Line up a backup',
-        detail: 'B shows closure risk. Save a fallback now.',
-        tone: 'critical',
+        label: 'Check momentum',
+        detail: 'C has shifted in the reviews. Decide if it still fits the trip.',
+        tone: 'notable',
       },
     ]);
   });
