@@ -1,10 +1,11 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import Link from 'next/link';
-import type { Context, Discovery, TriageState } from '../_lib/types';
+import type { Context, Discovery } from '../_lib/types';
 import { getTriageState, getTriageEntry } from '../_lib/triage';
 import { haversineDistance, formatDistance, isWalkable } from '../_lib/distance';
+import { getHotSignalLabel, type HotCardSignal } from '../_lib/hot-intelligence';
 import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import ReviewMarkersMap from './ReviewMarkersMap';
@@ -17,6 +18,14 @@ interface ReviewContextClientProps {
   userId: string;
   context: Context;
   discoveries: Discovery[];
+  recentSignals: Array<{
+    placeId: string;
+    name: string;
+    label: string;
+    significanceLevel: 'critical' | 'notable' | 'routine' | 'noise';
+    lastObservedAt?: string;
+  }>;
+  signalByPlaceId: Record<string, HotCardSignal>;
 }
 
 // Cache for place card coordinates (loaded lazily)
@@ -58,12 +67,18 @@ export default function ReviewContextClient({
   userId,
   context,
   discoveries,
+  recentSignals,
+  signalByPlaceId,
 }: ReviewContextClientProps) {
   const [tab, setTab] = useState<Tab>('unreviewed');
   // triageKey changes when triage state changes — forces memo/state recompute
   const [triageKey, setTriageKey] = useState(0);
   // Coordinates for place cards (for anchor-based sorting)
   const [placeCoords, setPlaceCoords] = useState<Record<string, { lat: number; lng: number }>>({});
+  const placeCoordLoadKey = useMemo(
+    () => discoveries.map(d => d.place_id ?? d.id).join(','),
+    [discoveries],
+  );
 
   // Load coordinates for discoveries when context has anchor
   useEffect(() => {
@@ -81,7 +96,7 @@ export default function ReviewContextClient({
       }
       setPlaceCoords(prev => ({ ...prev, ...newCoords }));
     });
-  }, [context.anchor, discoveries.map(d => d.place_id ?? d.id).join(',')]);
+  }, [context.anchor, discoveries, placeCoordLoadKey]);
 
   useEffect(() => {
     const handler = () => setTriageKey(k => k + 1);
@@ -200,6 +215,34 @@ export default function ReviewContextClient({
         />
       )}
 
+      {recentSignals.length > 0 && (
+        <section className="review-signals-strip card">
+          <div className="card-body">
+            <div className="review-signals-strip-header">
+              <div>
+                <p className="monitoring-note-kicker">Monitoring signals</p>
+                <h2>Fresh monitoring worth reviewing first</h2>
+              </div>
+              <span className="badge badge-muted">{recentSignals.length} recent</span>
+            </div>
+            <div className="review-signals-pill-list">
+              {recentSignals.map((signal) => (
+                <Link
+                  key={signal.placeId}
+                  href={`/placecards/${signal.placeId}?context=${encodeURIComponent(context.key)}`}
+                  className="review-signals-pill"
+                >
+                  <span className="review-signals-pill-name">{signal.name}</span>
+                  <span className={`hot-place-card-signal hot-place-card-signal-${signal.significanceLevel}`}>
+                    {signal.label}
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       <div className="review-tabs">
         {tabs.map(t => (
           <button
@@ -247,6 +290,8 @@ export default function ReviewContextClient({
                   const placeId = d.place_id ?? d.id;
                   const entry = getTriageEntry(userId, context.key, placeId);
                   const resolvedHero = getDiscoveryPrimaryImageUrl(d);
+                  const signal = signalByPlaceId[placeId];
+                  const signalLabel = signal ? getHotSignalLabel(signal) : null;
                   // Distance badge for anchor contexts
                   const distanceM = (d as unknown as { distanceM?: number }).distanceM;
                   const walkable = context.anchor && distanceM !== undefined
@@ -264,6 +309,11 @@ export default function ReviewContextClient({
                           </Link>
                           <div className="flex items-center gap-sm">
                             <TypeBadge type={d.type} />
+                            {signal?.significanceLevel && signalLabel && (
+                              <span className={`hot-place-card-signal hot-place-card-signal-${signal.significanceLevel}`}>
+                                {signalLabel}
+                              </span>
+                            )}
                             {/* Distance badge for anchor contexts */}
                             {context.anchor && distanceM !== undefined && (
                               walkable ? (

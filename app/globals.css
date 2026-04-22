@@ -2067,6 +2067,52 @@ a:hover {
 
 /* ---- 21. Review Context ---- */
 
+.review-signals-strip {
+  margin-bottom: var(--space-lg);
+}
+
+.review-signals-strip-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  margin-bottom: var(--space-sm);
+}
+
+.review-signals-strip-header h2 {
+  font-size: 1rem;
+  margin: 4px 0 0;
+}
+
+.review-signals-pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+.review-signals-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  max-width: 100%;
+  text-decoration: none;
+  color: inherit;
+  padding: 10px 12px;
+  border-radius: 999px;
+  background: var(--bg-secondary);
+  border: 1px solid color-mix(in srgb, var(--card-border) 75%, transparent);
+}
+
+.review-signals-pill:hover {
+  color: inherit;
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--card-border));
+}
+
+.review-signals-pill-name {
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
 .review-tabs {
   display: flex;
   gap: 4px;
