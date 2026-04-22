@@ -1,9 +1,11 @@
-import { readFileSync, existsSync, readdirSync } from 'fs';
+import { readFileSync, existsSync } from 'fs';
 import path from 'path';
 import type { DiscoveryType } from '../_lib/types';
 import { ALL_TYPES } from '../_lib/discovery-types';
 import { getCurrentUser } from '../_lib/user';
 import { getManifestHeroImage } from '../_lib/image-url.server';
+import { loadMonitorInventory } from '../_lib/monitor-inventory';
+import { buildHotSignalMap } from '../_lib/hot-intelligence';
 import HotClient from './HotClient';
 
 export const dynamic = 'force-dynamic';
@@ -68,6 +70,13 @@ interface HotPlaceCard {
   isNewOpening: boolean;
   addedAt: string | null;
   heroImage: string | null;
+  monitorStatus?: string;
+  contextKey?: string;
+  significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
+  significanceSummary?: string;
+  detectedChanges?: string[];
+  lastObservedAt?: string;
+  hasRecentSignal: boolean;
 }
 
 export default async function HotPage() {
@@ -85,7 +94,13 @@ export default async function HotPage() {
     );
   }
 
-  const index = loadIndex();
+  const [inventory, index] = await Promise.all([
+    loadMonitorInventory(user.id),
+    Promise.resolve(loadIndex()),
+  ]);
+  const signalById = buildHotSignalMap(inventory.entries);
+
+  const nowTime = new Date().getTime();
 
   // Build enriched card data with city, new opening detection, and date
   const cards: HotPlaceCard[] = Object.entries(index).map(([placeId, entry]) => {
@@ -97,6 +112,13 @@ export default async function HotPage() {
     const addedAt = cardData.built ?? null;
 
     const heroImage = getManifestHeroImage(placeId);
+    const signal = signalById.get(placeId);
+    const signalObservedAt = signal?.lastObservedAt ? new Date(signal.lastObservedAt).getTime() : 0;
+    const hasRecentSignal = Boolean(
+      signal?.significanceLevel &&
+        signalObservedAt > 0 &&
+        nowTime - signalObservedAt <= 7 * 24 * 60 * 60 * 1000,
+    );
 
     return {
       placeId,
@@ -106,6 +128,13 @@ export default async function HotPage() {
       isNewOpening: isNew,
       addedAt,
       heroImage,
+      monitorStatus: signal?.monitorStatus,
+      contextKey: signal?.contextKey,
+      significanceLevel: signal?.significanceLevel,
+      significanceSummary: signal?.significanceSummary,
+      detectedChanges: signal?.detectedChanges,
+      lastObservedAt: signal?.lastObservedAt,
+      hasRecentSignal,
     };
   });
 

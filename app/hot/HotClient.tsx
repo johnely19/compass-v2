@@ -7,6 +7,23 @@ import { getTypeMeta } from '../_lib/discovery-types';
 import TypeBadge from '../_components/TypeBadge';
 import TriageButtons from '../_components/TriageButtons';
 
+const SIGNIFICANCE_RANK: Record<string, number> = { critical: 3, notable: 2, routine: 1, noise: 0 };
+const CHANGE_LABELS: Record<string, string> = {
+  'rating-down': 'Rating dropped',
+  'rating-up': 'Rating improved',
+  'closure-signal': 'Closure detected',
+  'operational-change': 'Status changed',
+  'price-changed': 'Price moved',
+  'availability-changed': 'Availability changed',
+  'construction-signal': 'Construction update',
+  'review-count-up': 'More reviews',
+  'review-count-down': 'Reviews disappeared',
+  'description-changed': 'Description updated',
+  'hours-changed': 'Hours updated',
+  'general-update': 'Updated',
+  'sentiment-shift': 'Sentiment shifted',
+};
+
 export interface HotPlaceCard {
   placeId: string;
   name: string;
@@ -15,6 +32,13 @@ export interface HotPlaceCard {
   isNewOpening: boolean;
   addedAt: string | null;
   heroImage?: string | null;
+  monitorStatus?: string;
+  contextKey?: string;
+  significanceLevel?: 'critical' | 'notable' | 'routine' | 'noise';
+  significanceSummary?: string;
+  detectedChanges?: string[];
+  lastObservedAt?: string;
+  hasRecentSignal: boolean;
 }
 
 export interface HotClientProps {
@@ -79,6 +103,19 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cards, selectedTypes, userId, triageVersion]);
 
+  const recentSignals = useMemo(
+    () =>
+      filteredCards
+        .filter((c) => c.hasRecentSignal)
+        .sort((a, b) => {
+          const sigDiff = (SIGNIFICANCE_RANK[b.significanceLevel ?? 'noise'] ?? 0) - (SIGNIFICANCE_RANK[a.significanceLevel ?? 'noise'] ?? 0);
+          if (sigDiff !== 0) return sigDiff;
+          return new Date(b.lastObservedAt ?? 0).getTime() - new Date(a.lastObservedAt ?? 0).getTime();
+        })
+        .slice(0, 12),
+    [filteredCards]
+  );
+
   // New Openings: cards with isNewOpening flag
   const newOpenings = useMemo(
     () => filteredCards.filter((c) => c.isNewOpening).slice(0, 12),
@@ -130,6 +167,14 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
     accommodation: 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)',
   };
 
+  function getSignalLabel(card: HotPlaceCard): string | null {
+    if (!card.significanceLevel) return null;
+    if (card.significanceLevel === 'critical') return 'Urgent signal';
+    if (card.significanceSummary) return card.significanceSummary;
+    const primaryChange = card.detectedChanges?.[0];
+    return primaryChange ? CHANGE_LABELS[primaryChange] ?? 'Fresh signal' : 'Fresh signal';
+  }
+
   function renderCard(card: HotPlaceCard) {
     const gradient = TYPE_GRADIENTS[card.type] || 'linear-gradient(135deg, #1e3a5f 0%, #3b82f6 100%)';
     const bgStyle = card.heroImage
@@ -148,9 +193,16 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
               <TypeBadge type={card.type} size="sm" />
               <h3 className="hot-place-card-name">{card.name}</h3>
               {card.city && <span className="hot-place-card-city">{card.city}</span>}
-              {card.isNewOpening && (
-                <span className="place-browse-newopening">New Opening</span>
-              )}
+              <div className="hot-place-card-flags">
+                {card.isNewOpening && (
+                  <span className="place-browse-newopening">New Opening</span>
+                )}
+                {card.hasRecentSignal && card.significanceLevel && (
+                  <span className={`hot-place-card-signal hot-place-card-signal-${card.significanceLevel}`}>
+                    {getSignalLabel(card)}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
         </Link>
@@ -231,6 +283,7 @@ export default function HotClient({ cards, availableTypes, userId }: HotClientPr
       </div>
 
       {/* Sections */}
+      {renderSection('📡 Recent Signals', recentSignals)}
       {renderSection('🆕 New Openings', newOpenings)}
       {renderSection('📍 Recently Discovered', recentlyDiscovered.slice(0, 24))}
       {featuredTypes.map(renderFeaturedTypeSection)}
