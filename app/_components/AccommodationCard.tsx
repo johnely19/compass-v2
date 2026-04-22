@@ -3,9 +3,11 @@
 import { resolveImageUrlClient } from '../_lib/image-url';
 import { getPlatformInfo } from '../_lib/platform';
 import type { Discovery } from '../_lib/types';
+import type { HotCardSignal } from '../_lib/hot-intelligence';
 import TriageWidget from './TriageWidget';
 import ProvenanceSection from './ProvenanceSection';
 import MapWidget from './widgets/MapWidget';
+import MonitoringSignalCallout from './MonitoringSignalCallout';
 
 /* ---- Amenity icon map ---- */
 const AMENITY_ICONS: Record<string, { icon: string; label: string }> = {
@@ -142,6 +144,7 @@ interface AccommodationCardProps {
   userId?: string;
   contextKey?: string;
   discovery?: Partial<Discovery>;
+  signal?: HotCardSignal;
 }
 
 /* ---- Feature callout sub-component ---- */
@@ -167,7 +170,7 @@ function SleepingCard({ label, details }: { label: string; details: string }) {
   );
 }
 
-export default function AccommodationCard({ data, placeId, userId, contextKey, discovery }: AccommodationCardProps) {
+export default function AccommodationCard({ data, placeId, userId, contextKey, discovery, signal }: AccommodationCardProps) {
   const name = data.name || 'Cottage';
   const region = data.region || data.address || data.city || '';
   const summary = data.description || '';
@@ -430,6 +433,8 @@ export default function AccommodationCard({ data, placeId, userId, contextKey, d
               <p className="ac-guest-summary-text">&ldquo;{guestSummary}&rdquo;</p>
             </div>
           )}
+
+          <MonitoringSignalCallout signal={signal} />
 
           {/* Feature Callouts (Hipcamp style) */}
           {features.length > 0 && (

@@ -13,6 +13,8 @@ import TravelIntelWidget from './widgets/TravelIntelWidget';
 import { scoreDiscovery } from '../_lib/discovery-score';
 import type { ScoreBreakdown } from '../_lib/discovery-score';
 import { getMonitoringExplanation, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import type { HotCardSignal } from '../_lib/hot-intelligence';
+import MonitoringSignalCallout from './MonitoringSignalCallout';
 
 /* ---- Share button ---- */
 function ShareButton({ name }: { name: string }) {
@@ -237,6 +239,7 @@ interface PlaceCardDetailProps {
   userId?: string;
   contextKey?: string;
   discovery?: Partial<Discovery>;
+  signal?: HotCardSignal;
 }
 
 function dedupeResolvedPlaceCardImages(images: Array<{ path: string; category: string }>): Array<{ path: string; category: string }> {
@@ -256,7 +259,7 @@ function dedupeResolvedPlaceCardImages(images: Array<{ path: string; category: s
   return deduped;
 }
 
-export default function PlaceCardDetail({ card, userId, contextKey, discovery }: PlaceCardDetailProps) {
+export default function PlaceCardDetail({ card, userId, contextKey, discovery, signal }: PlaceCardDetailProps) {
   const typeMeta = getTypeMeta(card.type);
   const data = card.data ?? { description: '', highlights: [], images: [] };
 
@@ -465,6 +468,8 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         {narrativeBlocks.filter(b => /vibe|review/i.test(normalizeBlockTitle(b.title))).map((block, i) => (
           <NarrativeBlock key={`vibe-${i}`} title={block.title} body={block.body} truncate={2} />
         ))}
+
+        <MonitoringSignalCallout signal={signal} />
 
         {discovery?.monitorStatus && discovery.monitorStatus !== 'none' && monitoringExplanation && (
           <section className="monitoring-note">

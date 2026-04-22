@@ -4,6 +4,8 @@ import { getDerivedUserDiscoveries } from '../../_lib/user-data';
 import { adaptCard } from '../../_lib/card-adapter';
 import { resolveImageUrl } from '../../_lib/image-url';
 import { PlaceCardStore } from '../../_lib/place-card-store';
+import { loadMonitorInventory } from '../../_lib/monitor-inventory';
+import { buildHotSignalMap, type HotCardSignal } from '../../_lib/hot-intelligence';
 import PlaceCardDetail from '../../_components/PlaceCardDetail';
 import AccommodationCard from '../../_components/AccommodationCard';
 import type { PlaceCard, Discovery } from '../../_lib/types';
@@ -110,12 +112,17 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
       const user = await getCurrentUser();
       let contextKey = contextFromUrl;
       if (user) {
-        const discData = await getDerivedUserDiscoveries(user.id);
+        const [discData, inventory] = await Promise.all([
+          getDerivedUserDiscoveries(user.id),
+          loadMonitorInventory(user.id),
+        ]);
         const match = discData?.discoveries?.find(
           d => d.place_id === placeId || d.id === placeId
         );
         if (!match) notFound();
         if (!contextKey) contextKey = match.contextKey;
+        const signalById = buildHotSignalMap(inventory.entries);
+        const signal = signalById.get(placeId) ?? signalById.get(match.id);
 
         // Build a PlaceCard from discovery data — pass all known fields
         const disc = match as unknown as Record<string, unknown>;
@@ -163,6 +170,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
               userId={user.id}
               contextKey={contextKey}
               discovery={match}
+              signal={signal}
             />
           );
         }
@@ -172,6 +180,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
             userId={user.id}
             contextKey={contextKey}
             discovery={match}
+            signal={signal}
           />
         );
       }
@@ -184,13 +193,19 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
   // Determine context: URL param > first matching context from user's discoveries
   let contextKey = contextFromUrl;
   let discoveryData: Partial<Discovery> | undefined;
+  let signal: HotCardSignal | undefined;
   if (user) {
-    const discData = await getDerivedUserDiscoveries(user.id);
+    const [discData, inventory] = await Promise.all([
+      getDerivedUserDiscoveries(user.id),
+      loadMonitorInventory(user.id),
+    ]);
     const match = discData?.discoveries?.find(d => d.place_id === placeId);
     if (match) {
       if (!contextKey) contextKey = match.contextKey;
       discoveryData = match;
     }
+    const signalById = buildHotSignalMap(inventory.entries);
+    signal = signalById.get(placeId) ?? signalById.get(discoveryData?.id ?? '');
   }
 
   // Accommodation type gets the dedicated rental card UI
@@ -202,6 +217,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
         userId={user?.id}
         contextKey={contextKey}
         discovery={discoveryData}
+        signal={signal}
       />
     );
   }
@@ -212,6 +228,7 @@ export default async function PlaceCardPage({ params, searchParams }: PageProps)
       userId={user?.id}
       contextKey={contextKey}
       discovery={discoveryData}
+      signal={signal}
     />
   );
 }
