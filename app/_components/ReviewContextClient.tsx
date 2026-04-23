@@ -262,6 +262,7 @@ export default function ReviewContextClient({
           context={context}
           discoveries={discoveries}
           tab={tab}
+          signalByPlaceId={signalByPlaceId}
         />
       ) : (
         <div className="review-list">

@@ -8,6 +8,7 @@ import { getTriageState } from '../_lib/triage';
 import TriageButtons from './TriageButtons';
 import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
 import { getPlatformInfo } from '../_lib/platform';
+import { getHotSignalLabel, isRecentHotSignal, SIGNIFICANCE_RANK, type HotCardSignal } from '../_lib/hot-intelligence';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -16,6 +17,7 @@ interface AccommodationReviewLayoutProps {
   context: Context;
   discoveries: Discovery[];
   tab: Tab;
+  signalByPlaceId?: Record<string, HotCardSignal>;
 }
 
 /* ---- Weighted preference score (module scope — used by sort AND card badge) ---- */
@@ -83,8 +85,8 @@ function julyPill(available?: boolean): { label: string; cls: string } {
 
 /* ---- Single accommodation card ---- */
 function AccommodationCard({
-  discovery, userId, contextKey,
-}: { discovery: Discovery; userId: string; contextKey: string }) {
+  discovery, userId, contextKey, signal,
+}: { discovery: Discovery; userId: string; contextKey: string; signal?: HotCardSignal }) {
   const placeId = discovery.place_id ?? discovery.id;
 
   // Resolve hero image
@@ -137,6 +139,7 @@ function AccommodationCard({
   const topAmenities = getTopAmenities(amenities);
   const july = julyPill(julyAvail);
   const perNight = pricePerWeek ? Math.round(pricePerWeek / 7) : null;
+  const signalLabel = signal ? getHotSignalLabel(signal) : null;
 
   const GRADIENT = 'linear-gradient(135deg, #0ea5e9 0%, #0369a1 100%)';
 
@@ -197,6 +200,14 @@ function AccommodationCard({
         {/* Location */}
         {locationStr && (
           <div className="accomm-card-location">{locationStr}</div>
+        )}
+
+        {signal?.significanceLevel && signalLabel && (
+          <div className="accomm-vibe-tags" style={{ marginTop: locationStr ? '0.4rem' : 0 }}>
+            <span className={`hot-place-card-signal hot-place-card-signal-${signal.significanceLevel}`}>
+              {signalLabel}
+            </span>
+          </div>
         )}
 
         {/* Vibe tags */}
@@ -283,7 +294,7 @@ function AccommodationMapSidebar({ discoveries }: { discoveries: Discovery[] }) 
 
 /* ---- Main layout ---- */
 export default function AccommodationReviewLayout({
-  userId, context, discoveries, tab,
+  userId, context, discoveries, tab, signalByPlaceId = {},
 }: AccommodationReviewLayoutProps) {
   const [, setRefresh] = useState(0);
   const [showMap, setShowMap] = useState(false);
@@ -305,6 +316,16 @@ export default function AccommodationReviewLayout({
 
     // Sort by weighted preference score (module-level preferenceScore fn)
     result = result.sort((a, b) => {
+      const signalA = signalByPlaceId[a.place_id ?? a.id];
+      const signalB = signalByPlaceId[b.place_id ?? b.id];
+      const recentSignalA = signalA && isRecentHotSignal(signalA) ? signalA : undefined;
+      const recentSignalB = signalB && isRecentHotSignal(signalB) ? signalB : undefined;
+      const sigDiff = (SIGNIFICANCE_RANK[recentSignalB?.significanceLevel ?? 'noise'] ?? 0) - (SIGNIFICANCE_RANK[recentSignalA?.significanceLevel ?? 'noise'] ?? 0);
+      if (sigDiff !== 0) return sigDiff;
+      const signalTimeA = recentSignalA?.lastObservedAt ? new Date(recentSignalA.lastObservedAt).getTime() : 0;
+      const signalTimeB = recentSignalB?.lastObservedAt ? new Date(recentSignalB.lastObservedAt).getTime() : 0;
+      if (signalTimeB !== signalTimeA) return signalTimeB - signalTimeA;
+
       const scoreA = preferenceScore(a);
       const scoreB = preferenceScore(b);
       if (scoreB !== scoreA) return scoreB - scoreA;
@@ -316,7 +337,7 @@ export default function AccommodationReviewLayout({
     });
 
     return result;
-  }, [discoveries, userId, context.key, tab]);
+  }, [discoveries, userId, context.key, tab, signalByPlaceId]);
 
   return (
     <div className={`accomm-review-layout ${showMap ? 'accomm-review-layout--split' : ''}`}>
@@ -340,6 +361,7 @@ export default function AccommodationReviewLayout({
             discovery={d}
             userId={userId}
             contextKey={context.key}
+            signal={signalByPlaceId[d.place_id ?? d.id]}
           />
         ))}
         {filtered.length === 0 && (
