@@ -6961,8 +6961,8 @@ nextjs-portal { display: none !important; }
 .focused-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  flex-grow: 0; /* don't stretch to fill viewport — avoid empty space gap */
+  gap: var(--space-md);
+  flex-grow: 0; /* keep the first carousel clear of the pinned chat bar */
 }
 
 /* ---- Focused Hero (context header) ---- */
