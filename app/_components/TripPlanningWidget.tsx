@@ -68,6 +68,7 @@ interface TripPlanningWidgetProps {
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
+const MONITORING_DISMISS_KEY_PREFIX = 'compass-trip-monitoring-dismissed-';
 
 function load(userId: string, contextKey: string): TripPlanning {
   if (typeof window === 'undefined') return defaultPlanning();
@@ -115,6 +116,10 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
   );
 }
 
+function monitoringDismissKey(userId: string, contextKey: string): string {
+  return `${MONITORING_DISMISS_KEY_PREFIX}${userId}-${contextKey}`;
+}
+
 export default function TripPlanningWidget({
   userId,
   contextKey,
@@ -136,10 +141,16 @@ export default function TripPlanningWidget({
   const [accomText, setAccomText] = useState('');
   const [accomParsing, setAccomParsing] = useState(false);
   const [parsedAccom, setParsedAccom] = useState<ParsedAccommodation | null>(null);
+  const [dismissedMonitoringSummary, setDismissedMonitoringSummary] = useState<string | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const p = load(userId, contextKey);
+    try {
+      setDismissedMonitoringSummary(localStorage.getItem(monitoringDismissKey(userId, contextKey)));
+    } catch {
+      setDismissedMonitoringSummary(null);
+    }
     // Auto-mark booked if manifest has data
     if ((travel?.outbound || bookingStatus === 'fully-booked') && p.travel.status === 'open') {
       p.travel = { status: 'booked' };
@@ -204,6 +215,9 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
+  const visibleMonitoringSummary = monitoringActionSummary && monitoringActionSummary.detail !== dismissedMonitoringSummary
+    ? monitoringActionSummary
+    : null;
   const monitoringPromptHref = (action?: MonitoringActionPrompt['action']) => {
     if (action === 'saved') return `${reviewUrl}?tab=saved`;
     return reviewUrl;
@@ -211,6 +225,13 @@ export default function TripPlanningWidget({
   const monitoringPromptCta = (action?: MonitoringActionPrompt['action']) => {
     if (action === 'saved') return 'Review saved';
     return 'Open review';
+  };
+  const dismissMonitoringSummary = () => {
+    if (!monitoringActionSummary) return;
+    setDismissedMonitoringSummary(monitoringActionSummary.detail);
+    try {
+      localStorage.setItem(monitoringDismissKey(userId, contextKey), monitoringActionSummary.detail);
+    } catch {}
   };
 
   // Build compact travel summary line
@@ -309,16 +330,21 @@ export default function TripPlanningWidget({
         </div>
       )}
 
-      {monitoringActionSummary && (
-        <div className={`tpw-monitoring-checklist tpw-monitoring-checklist-${monitoringActionSummary.tone}`}>
-          <div className="tpw-monitoring-checklist-title">Action needed</div>
+      {visibleMonitoringSummary && (
+        <div className={`tpw-monitoring-checklist tpw-monitoring-checklist-${visibleMonitoringSummary.tone}`}>
+          <div className="tpw-monitoring-checklist-header">
+            <div className="tpw-monitoring-checklist-title">Action needed</div>
+            <button type="button" className="tpw-monitoring-checklist-dismiss" onClick={dismissMonitoringSummary}>
+              Dismiss
+            </button>
+          </div>
           <div className="tpw-monitoring-checklist-row">
             <span className="tpw-monitoring-checklist-copy">
-              <strong>{monitoringActionSummary.label}</strong>
-              <span>{monitoringActionSummary.detail}</span>
+              <strong>{visibleMonitoringSummary.label}</strong>
+              <span>{visibleMonitoringSummary.detail}</span>
             </span>
-            <Link href={monitoringPromptHref(monitoringActionSummary.action)} className="tpw-monitoring-checklist-link">
-              {monitoringPromptCta(monitoringActionSummary.action)} →
+            <Link href={monitoringPromptHref(visibleMonitoringSummary.action)} className="tpw-monitoring-checklist-link">
+              {monitoringPromptCta(visibleMonitoringSummary.action)} →
             </Link>
           </div>
         </div>

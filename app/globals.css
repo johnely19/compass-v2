@@ -4096,12 +4096,33 @@ body {
   background: rgba(37, 99, 235, 0.05);
 }
 
+.tpw-monitoring-checklist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
 .tpw-monitoring-checklist-title {
   font-size: 0.74rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+.tpw-monitoring-checklist-dismiss {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tpw-monitoring-checklist-dismiss:hover {
+  color: var(--text-primary);
 }
 
 .tpw-monitoring-checklist-row {
