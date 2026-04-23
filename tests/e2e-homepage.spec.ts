@@ -15,6 +15,14 @@ async function loginAndGoHome(page: Page) {
 }
 
 test.describe('Homepage Layout', () => {
+  test('place card pages render a visible View in Maps action for place_id-backed cards', async ({ page }) => {
+    await page.goto('/placecards/ChIJW_WGT2BZwokRNpvZ4k3lVcs?context=trip%3Anyc-april-2026', { waitUntil: 'networkidle' });
+
+    const mapsLink = page.getByRole('link', { name: /View in Maps/i }).first();
+    await expect(mapsLink).toBeVisible({ timeout: 8000 });
+    await expect(mapsLink).toHaveAttribute('href', 'https://www.google.com/maps/place/?q=place_id:ChIJW_WGT2BZwokRNpvZ4k3lVcs');
+  });
+
   test('renders single-track focused view with all key elements', async ({ page }) => {
     await loginAndGoHome(page);
 
