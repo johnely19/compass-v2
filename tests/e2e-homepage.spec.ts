@@ -9,7 +9,16 @@ import { test, expect, type Page } from '@playwright/test';
 // Auth is pre-seeded by global-setup.ts (compass-user cookie for qa-test-user)
 
 /** Navigate to homepage (auth already set by global-setup) */
-async function loginAndGoHome(page: Page) {
+async function loginAndGoHome(page: Page, userId?: string) {
+  if (userId) {
+    await page.context().addCookies([
+      {
+        name: 'compass-user',
+        value: userId,
+        url: 'http://localhost:3002',
+      },
+    ]);
+  }
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.waitForTimeout(1000); // let client hydrate
 }
@@ -67,6 +76,23 @@ test.describe('Homepage Layout', () => {
         expect(await prompts.count()).toBeGreaterThanOrEqual(1);
       }
     }
+  });
+
+  test('homepage place cards navigate when their visible center is clicked', async ({ page }) => {
+    await loginAndGoHome(page, 'john');
+
+    const cardLink = page.locator('a.place-card[href*="/placecards/"]').first();
+    await expect(cardLink).toBeVisible({ timeout: 8000 });
+    const href = await cardLink.getAttribute('href');
+    expect(href).toBeTruthy();
+
+    const box = await cardLink.boundingBox();
+    expect(box).not.toBeNull();
+    if (!box) return;
+
+    await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+    await page.waitForURL((url) => url.pathname.startsWith('/placecards/'), { timeout: 10000 });
+    expect(page.url()).toContain('/placecards/');
   });
 
   test('chat input is accessible without scrolling on mobile', async ({ page }) => {
