@@ -238,8 +238,8 @@ export function buildMonitoringActionPrompts(params: {
 
 
 export function summarizeMonitoringActionPrompts(prompts: MonitoringActionPrompt[]): MonitoringActionSummary | null {
-  if (prompts.length === 0) return null;
   const first = prompts[0];
+  if (!first) return null;
   const action = first.action ?? 'review';
   return {
     label: action === 'saved'
