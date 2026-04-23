@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
+import { resolveVisibleMonitoringSummary } from '../_lib/trip-emergence';
 import TripIntelInput from './TripIntelInput';
 
 interface FlightLeg {
@@ -215,9 +216,7 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
-  const visibleMonitoringSummary = monitoringActionSummary && monitoringActionSummary.detail !== dismissedMonitoringSummary
-    ? monitoringActionSummary
-    : null;
+  const visibleMonitoringSummary = resolveVisibleMonitoringSummary(monitoringActionSummary, dismissedMonitoringSummary);
   const monitoringPromptHref = (action?: MonitoringActionPrompt['action']) => {
     if (action === 'saved') return `${reviewUrl}?tab=saved`;
     return reviewUrl;

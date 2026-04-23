@@ -252,6 +252,15 @@ export function summarizeMonitoringActionPrompts(prompts: MonitoringActionPrompt
   };
 }
 
+export function resolveVisibleMonitoringSummary(
+  summary: MonitoringActionSummary | null | undefined,
+  dismissedDetail: string | null | undefined,
+): MonitoringActionSummary | null {
+  if (!summary) return null;
+  if (summary.detail === dismissedDetail) return null;
+  return summary;
+}
+
 export function buildMonitoringPromptAttachmentChips(params: {
   contextKey: string;
   digestItems: IntelligenceDigestLike[];

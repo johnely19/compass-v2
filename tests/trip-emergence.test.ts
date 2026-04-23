@@ -6,6 +6,7 @@ import {
   buildMonitoringActionPrompts,
   buildMonitoringPromptAttachmentChips,
   diffTripEmergenceAttributes,
+  resolveVisibleMonitoringSummary,
   summarizeMonitoringActionPrompts,
 } from '../app/_lib/trip-emergence';
 
@@ -226,6 +227,21 @@ describe('summarizeMonitoringActionPrompts', () => {
       count: 2,
       detail: 'Sailor shows closure risk. Save a fallback now.',
     });
+  });
+});
+
+describe('resolveVisibleMonitoringSummary', () => {
+  test('suppresses a dismissed monitoring detail until the lead signal changes', () => {
+    const summary = {
+      label: 'Backup move ready',
+      action: 'saved' as const,
+      tone: 'critical' as const,
+      count: 1,
+      detail: 'Sailor shows closure risk. Save a fallback now.',
+    };
+
+    assert.equal(resolveVisibleMonitoringSummary(summary, 'Sailor shows closure risk. Save a fallback now.'), null);
+    assert.deepEqual(resolveVisibleMonitoringSummary(summary, 'The Jazz Gallery changed hours or service details. Confirm before you go.'), summary);
   });
 });
 
