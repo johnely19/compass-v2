@@ -11,6 +11,7 @@ import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
 import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildMonitoringPromptAttachmentChips, summarizeMonitoringActionPrompts } from '../_lib/trip-emergence';
+import type { TripAttributeChip } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -256,7 +257,7 @@ export default function HomeClient({
   const [mounted, setMounted] = useState(false);
   const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
-  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
+  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, TripAttributeChip[]>>({});
   const [, setTriageVersion] = useState(0);
   const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
   const digestHydratedContextsRef = useRef<Set<string>>(new Set());
@@ -433,7 +434,7 @@ export default function HomeClient({
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = [];
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ key: string; attributes: Array<{ field: string; value: string }> }>).detail;
+      const detail = (e as CustomEvent<{ key: string; attributes: TripAttributeChip[] }>).detail;
       if (!detail?.key || !detail.attributes?.length) return;
       setAttachingAttrs(prev => ({
         ...prev,
