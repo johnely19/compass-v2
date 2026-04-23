@@ -557,6 +557,7 @@ export default function HomeClient({
   const description = buildDescription(ctx);
   const isEmerging = emergingKeys.has(ctx.key);
   const landingAttrs = attachingAttrs[ctx.key] ?? [];
+  const reviewUrl = `/review/${encodeURIComponent(ctx.key)}`;
   const monitoringActionPrompts = buildMonitoringActionPrompts({
     contextKey: ctx.key,
     digestItems: digestItems.filter(item => item.contextKey === ctx.key),
@@ -620,9 +621,15 @@ export default function HomeClient({
                             : attr.field === 'intelligence'
                               ? '🛰️'
                               : '🏷');
+                    const attrHref = attr.action === 'saved' ? `${reviewUrl}?tab=saved` : attr.action === 'review' ? reviewUrl : null;
                     return (
                       <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
-                        {icon} {attr.label ? `${attr.label}: ` : ''}{attr.value}
+                        <span>{icon} {attr.label ? `${attr.label}: ` : ''}{attr.value}</span>
+                        {attrHref && (
+                          <Link href={attrHref} className="section-attr-pill-link">
+                            {attr.action === 'saved' ? 'Review saved' : 'Open review'} →
+                          </Link>
+                        )}
                       </span>
                     );
                   })}

@@ -479,7 +479,20 @@ a:hover {
   border: 1px solid rgba(99, 179, 237, 0.35);
   animation: attrPillLand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both,
              attrPillFade 2.5s ease 0.5s both;
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.section-attr-pill-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border-left: 1px solid rgba(99, 179, 237, 0.35);
+  margin-left: 4px;
+  padding-left: 6px;
+}
+
+.section-attr-pill-link:hover {
+  text-decoration: underline;
 }
 
 .section-header {
@@ -4033,6 +4046,83 @@ body {
 }
 
 .tpw-accom-cancel:hover { color: var(--text-primary); }
+
+.tpw-monitoring-prompts {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-prompts-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tpw-monitoring-prompts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  background: color-mix(in srgb, var(--bg-secondary) 72%, transparent);
+}
+
+.tpw-monitoring-prompt-critical {
+  border-color: rgba(220, 38, 38, 0.25);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.tpw-monitoring-prompt-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.tpw-monitoring-prompt-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.tpw-monitoring-prompt-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tpw-monitoring-prompt-detail {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.tpw-monitoring-prompt-link {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-prompt-link:hover {
+  text-decoration: underline;
+}
 
 .tpw-flights {
   margin-top: var(--space-sm);

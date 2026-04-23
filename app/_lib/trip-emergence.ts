@@ -16,12 +16,14 @@ export interface TripAttributeChip {
   icon?: string;
   label?: string;
   tone?: 'neutral' | 'critical' | 'notable';
+  action?: 'review' | 'saved';
 }
 
 export interface MonitoringActionPrompt {
   label: string;
   detail: string;
   tone: 'critical' | 'notable';
+  action?: 'review' | 'saved';
 }
 
 export interface IntelligenceDigestLike {
@@ -184,30 +186,35 @@ export function buildMonitoringActionPrompts(params: {
         label: 'Line up a backup',
         detail: `${item.name} shows closure risk. Save a fallback now.`,
         tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+        action: 'saved',
       };
     } else if (/(hours|open now|opening|service change|temporarily closed|reservation)/.test(normalized)) {
       prompt = {
         label: 'Re-check timing',
         detail: `${item.name} changed hours or service details. Confirm before you go.`,
         tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+        action: 'review',
       };
     } else if (/(availability|selling fast|book fast|scarce|limited|reservation)/.test(normalized)) {
       prompt = {
         label: 'Book sooner',
         detail: `${item.name} looks tighter than before. If it matters, lock it in.`,
         tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+        action: 'review',
       };
     } else if (/(reopen|re-open|reopened|reopening)/.test(normalized)) {
       prompt = {
         label: 'Reconsider this stop',
         detail: `${item.name} is back. It may be worth putting back in the plan.`,
         tone: 'notable',
+        action: 'review',
       };
     } else if (/(review|reviews|rating|ratings|stars?|sentiment|buzz)/.test(normalized)) {
       prompt = {
         label: 'Check momentum',
         detail: `${item.name} has shifted in the reviews. Decide if it still fits the trip.`,
         tone: item.significanceLevel === 'critical' ? 'critical' : 'notable',
+        action: 'review',
       };
     }
 
@@ -244,5 +251,6 @@ export function buildMonitoringPromptAttachmentChips(params: {
     label: prompt.label,
     tone: prompt.tone,
     icon: prompt.tone === 'critical' ? '🚨' : '🧭',
+    action: prompt.action,
   }));
 }

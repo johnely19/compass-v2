@@ -143,11 +143,13 @@ describe('buildMonitoringActionPrompts', () => {
         label: 'Line up a backup',
         detail: 'Sailor shows closure risk. Save a fallback now.',
         tone: 'critical',
+        action: 'saved',
       },
       {
         label: 'Re-check timing',
         detail: 'The Jazz Gallery changed hours or service details. Confirm before you go.',
         tone: 'notable',
+        action: 'review',
       },
     ]);
   });
@@ -186,11 +188,13 @@ describe('buildMonitoringActionPrompts', () => {
         label: 'Line up a backup',
         detail: 'A shows closure risk. Save a fallback now.',
         tone: 'critical',
+        action: 'saved',
       },
       {
         label: 'Check momentum',
         detail: 'C has shifted in the reviews. Decide if it still fits the trip.',
         tone: 'notable',
+        action: 'review',
       },
     ]);
   });
@@ -234,6 +238,7 @@ describe('buildMonitoringPromptAttachmentChips', () => {
         value: 'Sailor shows closure risk. Save a fallback now.',
         tone: 'critical',
         icon: '🚨',
+        action: 'saved',
       },
     ]);
   });
@@ -266,6 +271,7 @@ describe('buildMonitoringPromptAttachmentChips', () => {
         value: 'A shows closure risk. Save a fallback now.',
         tone: 'critical',
         icon: '🚨',
+        action: 'saved',
       },
     ]);
   });

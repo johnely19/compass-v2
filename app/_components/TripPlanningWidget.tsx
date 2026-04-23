@@ -43,6 +43,7 @@ interface MonitoringActionPrompt {
   label: string;
   detail: string;
   tone: 'critical' | 'notable';
+  action?: 'review' | 'saved';
 }
 
 interface TripPlanningWidgetProps {
@@ -193,6 +194,14 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
+  const monitoringPromptHref = (action?: MonitoringActionPrompt['action']) => {
+    if (action === 'saved') return `${reviewUrl}?tab=saved`;
+    return reviewUrl;
+  };
+  const monitoringPromptCta = (action?: MonitoringActionPrompt['action']) => {
+    if (action === 'saved') return 'Review saved';
+    return 'Open review';
+  };
 
   // Build compact travel summary line
   const travelSummary = travel?.outbound
@@ -296,8 +305,13 @@ export default function TripPlanningWidget({
           <ul className="tpw-monitoring-prompts-list">
             {monitoringActionPrompts.map(prompt => (
               <li key={`${prompt.label}:${prompt.detail}`} className={`tpw-monitoring-prompt tpw-monitoring-prompt-${prompt.tone}`}>
-                <span className="tpw-monitoring-prompt-label">{prompt.label}</span>
-                <span className="tpw-monitoring-prompt-detail">{prompt.detail}</span>
+                <span className="tpw-monitoring-prompt-copy">
+                  <span className="tpw-monitoring-prompt-label">{prompt.label}</span>
+                  <span className="tpw-monitoring-prompt-detail">{prompt.detail}</span>
+                </span>
+                <Link href={monitoringPromptHref(prompt.action)} className="tpw-monitoring-prompt-link">
+                  {monitoringPromptCta(prompt.action)} →
+                </Link>
               </li>
             ))}
           </ul>
