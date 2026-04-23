@@ -1,11 +1,10 @@
-import { notFound } from 'next/navigation';
 import { getCurrentUser } from '../_lib/user';
 import { getUserManifest, getUserDiscoveries } from '../_lib/user-data';
 import type { Context, Discovery } from '../_lib/types';
 import { isContextActive } from '../_lib/context-lifecycle';
-import { scoreDiscovery } from '../_lib/discovery-score';
-import { annotateDiscoveriesForMonitoring, getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import { annotateDiscoveriesForMonitoring } from '../_lib/discovery-monitoring';
 import { loadMonitorInventory } from '../_lib/monitor-inventory';
+import { buildHotSignalMap, getHotSignalLabel, isRecentHotSignal } from '../_lib/hot-intelligence';
 import type { SignificanceLevel } from '../_lib/observation-significance';
 import { readFileSync, existsSync } from 'fs';
 import path from 'path';
@@ -57,6 +56,8 @@ export interface WatchItem {
   observationCount?: number;
   /** Source of the latest notable/critical observation ('google-places' | 'web-search' | 'manual') */
   latestSignificantSource?: string;
+  signalLabel?: string;
+  hasRecentSignal?: boolean;
 }
 
 export default async function WatchingPage() {
@@ -109,6 +110,8 @@ export default async function WatchingPage() {
     loadMonitorInventory(user.id),
   ]);
 
+  const signalById = buildHotSignalMap(inventory.entries);
+
   // Index inventory entries by id and discoveryId for quick lookup
   const inventoryById = new Map(
     inventory.entries.flatMap(e => [
@@ -122,6 +125,7 @@ export default async function WatchingPage() {
     .map(d => {
       const ctx = contextByKey.get(d.contextKey);
       const inventoryEntry = inventoryById.get(d.place_id ?? d.id) ?? inventoryById.get(d.id);
+      const signal = signalById.get(d.place_id ?? d.id) ?? signalById.get(d.id);
       return {
         id: d.id,
         placeId: d.place_id,
@@ -150,6 +154,8 @@ export default async function WatchingPage() {
         latestSignificantSource: inventoryEntry?.observations?.find(
           o => o.significanceLevel === 'critical' || o.significanceLevel === 'notable'
         )?.source,
+        signalLabel: signal ? getHotSignalLabel(signal) ?? undefined : undefined,
+        hasRecentSignal: signal ? isRecentHotSignal(signal) : false,
       };
     })
     .sort((a, b) => {
@@ -161,5 +167,5 @@ export default async function WatchingPage() {
       return (b.significanceScore ?? 0) - (a.significanceScore ?? 0);
     });
 
-  return <WatchingClient userId={user.id} items={watchItems} />;
+  return <WatchingClient items={watchItems} />;
 }

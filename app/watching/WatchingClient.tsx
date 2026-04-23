@@ -1,11 +1,11 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import Link from 'next/link';
+import { SIGNIFICANCE_RANK } from '../_lib/hot-intelligence';
 import type { WatchItem } from './page';
 
 interface WatchingClientProps {
-  userId: string;
   items: WatchItem[];
 }
 
@@ -144,7 +144,36 @@ function WatchRow({
   );
 }
 
-export default function WatchingClient({ userId, items }: WatchingClientProps) {
+function FreshSignalStrip({ items }: { items: WatchItem[] }) {
+  if (items.length === 0) return null;
+
+  return (
+    <section className="watching-signals-strip">
+      <div className="watching-signals-header">
+        <div>
+          <p className="monitoring-note-kicker">Monitoring signals</p>
+          <h2>Fresh changes worth checking first</h2>
+        </div>
+        <Link href="/hot" className="watching-signals-link">Open Hot →</Link>
+      </div>
+      <div className="watching-signals-list">
+        {items.map(item => (
+          <Link key={`${item.contextKey}:${item.placeId ?? item.id}`} href={placeHref(item)} className="watching-signal-pill">
+            <span className="watching-signal-pill-name">{item.name}</span>
+            <span className="watching-signal-pill-meta">{item.contextLabel || item.city}</span>
+            {item.significanceLevel && (
+              <span className={`hot-place-card-signal hot-place-card-signal-${item.significanceLevel}`}>
+                {item.signalLabel ?? item.significanceSummary ?? 'Fresh signal'}
+              </span>
+            )}
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export default function WatchingClient({ items }: WatchingClientProps) {
   const [checkedIn, setCheckedIn] = useState<Set<string>>(new Set());
 
   const handleCheckin = useCallback(async (item: WatchItem) => {
@@ -160,6 +189,18 @@ export default function WatchingClient({ userId, items }: WatchingClientProps) {
       // silently ignore — non-critical
     }
   }, []);
+
+  const recentSignalItems = useMemo(
+    () => items
+      .filter(i => i.hasRecentSignal && i.significanceLevel && SIGNIFICANCE_RANK[i.significanceLevel] >= SIGNIFICANCE_RANK.notable)
+      .sort((a, b) => {
+        const levelDiff = SIGNIFICANCE_RANK[b.significanceLevel ?? 'noise'] - SIGNIFICANCE_RANK[a.significanceLevel ?? 'noise'];
+        if (levelDiff !== 0) return levelDiff;
+        return new Date(b.monitorLastObservedAt ?? 0).getTime() - new Date(a.monitorLastObservedAt ?? 0).getTime();
+      })
+      .slice(0, 8),
+    [items],
+  );
 
   const dueItems = items.filter(i => i.dueNow);
   const otherItems = items.filter(i => !i.dueNow);
@@ -196,6 +237,8 @@ export default function WatchingClient({ userId, items }: WatchingClientProps) {
           </p>
         </div>
       )}
+
+      <FreshSignalStrip items={recentSignalItems} />
 
       {dueItems.length > 0 && (
         <section className="watch-section">
