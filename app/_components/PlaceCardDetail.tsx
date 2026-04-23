@@ -373,7 +373,30 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
       {/* ── Body ── */}
       <div className="place-detail-v2-body">
 
-        {/* Google Maps CTA removed — single link lives in the actions row below the map */}
+        {/* Required actions stay above the fold for place cards with place IDs */}
+        <div className="place-detail-actions-row">
+          {googleMapsUrl && card.type !== 'accommodation' && (
+            <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer"
+               className="place-detail-action-btn">
+              📍 View in Maps →
+            </a>
+          )}
+          {googleEarthUrl && (
+            <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
+               className="place-detail-action-btn">
+              🌍 Google Earth 3D →
+            </a>
+          )}
+          <ShareButton name={card.name} />
+          {userId && contextKey && card.place_id && (
+            <TriageWidget
+              userId={userId}
+              contextKey={contextKey}
+              contextLabel=""
+              placeId={card.place_id}
+            />
+          )}
+        </div>
 
         {/* ── ABOVE THE FOLD: hours first, then food strip, identity, narrative ── */}
 
@@ -563,26 +586,6 @@ export default function PlaceCardDetail({ card, userId, contextKey, discovery }:
         {contextKey && contextKey.startsWith('trip:') && card.place_id && (
           <TravelIntelWidget placeId={card.place_id} contextKey={contextKey} />
         )}
-
-        {/* ── Compact actions row ── */}
-        <div className="place-detail-actions-row">
-          {/* Maps link moved to address row above */}
-          {googleEarthUrl && (
-            <a href={googleEarthUrl} target="_blank" rel="noopener noreferrer"
-               className="place-detail-action-btn">
-              🌍 Google Earth 3D →
-            </a>
-          )}
-          <ShareButton name={card.name} />
-          {userId && contextKey && card.place_id && (
-            <TriageWidget
-              userId={userId}
-              contextKey={contextKey}
-              contextLabel=""
-              placeId={card.place_id}
-            />
-          )}
-        </div>
 
         {/* Map (compact 200px) */}
         <div className="place-detail-map-compact">

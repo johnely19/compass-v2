@@ -75,6 +75,40 @@ export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string
     };
   }
 
+  // Flat stub card format used by lightweight/generated place cards.
+  if (typeof raw.name === 'string' && typeof raw.type === 'string') {
+    const flat = raw as Record<string, unknown>;
+    const name = raw.name;
+    const type = raw.type;
+    const heroImage = typeof flat.hero_image === 'string' ? flat.hero_image : undefined;
+    const address = typeof flat.address === 'string' ? flat.address : undefined;
+    const city = typeof flat.city === 'string' ? flat.city : undefined;
+    const rating = typeof flat.rating === 'number' ? flat.rating : undefined;
+    const reviewCount = typeof flat.reviewCount === 'number'
+      ? flat.reviewCount
+      : typeof flat.user_rating_count === 'number'
+        ? flat.user_rating_count
+        : undefined;
+
+    return {
+      place_id: typeof flat.place_id === 'string' ? flat.place_id : '',
+      name,
+      type: normalizeType(type),
+      data: {
+        description: typeof flat.description === 'string' ? flat.description : '',
+        highlights: [],
+        images: mergePlaceCardImages(
+          heroImage ? [{ path: heroImage, category: 'general' }] : [],
+          manifestImages,
+        ),
+        ...(address ? { address } : {}),
+        ...(city ? { city } : {}),
+        ...(rating !== undefined ? { rating } : {}),
+        ...(reviewCount !== undefined ? { reviewCount } : {}),
+      },
+    };
+  }
+
   // V1 format
   const v1 = raw as unknown as V1Card;
   const identity = v1.identity ?? { name: 'Unknown' };
