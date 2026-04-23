@@ -2060,9 +2060,21 @@ a:hover {
   color: inherit;
 }
 
+.review-hub-signals {
+  margin-bottom: var(--space-lg);
+}
+
+.review-hub-signal-note {
+  margin: var(--space-sm) 0 0;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+
 .review-counts {
   display: flex;
   gap: 6px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
 /* ---- 21. Review Context ---- */
