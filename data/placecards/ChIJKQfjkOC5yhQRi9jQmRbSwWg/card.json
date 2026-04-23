@@ -1,0 +1,41 @@
+{
+  "place_id": "ChIJKQfjkOC5yhQRi9jQmRbSwWg",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJKQfjkOC5yhQRi9jQmRbSwWg",
+    "name": "İBB Casa Botter",
+    "city": "Istanbul",
+    "country": "Turkey",
+    "address": "Şahkulu, İstiklal Cd. No:235, 34421 Beyoğlu/İstanbul, Türkiye",
+    "type": "historical_landmark",
+    "subtype": "art_nouveau_house",
+    "rating": 4.7,
+    "review_count": 790,
+    "phone": "(0212) 249 95 65",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 10:00 AM – 7:00 PM",
+      "Wednesday: 10:00 AM – 7:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: 10:00 AM – 7:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for İstiklal Caddesi: Casa Botter is directly on the avenue and is one of the clearest pieces of restored architectural texture on the street — an art nouveau frontage now functioning as a public cultural stop instead of dead heritage scenery.",
+    "contextKey": "section:great-streets:istiklal-caddesi",
+    "discoveredAt": "2026-04-22T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A restored art nouveau building on İstiklal that helps explain the avenue's layered frontage and current cultural reuse.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why it teaches the street",
+        "body": "İstiklal is great because spectacle and everyday passage happen against a dense wall of historic buildings. Casa Botter makes that visible: a finely detailed façade, directly on the pedestrian stream, now reactivated as a cultural address rather than sealed-off ornament.",
+        "id": "block-istiklal-botter-1"
+      }
+    ]
+  }
+}

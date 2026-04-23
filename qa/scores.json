@@ -91,8 +91,54 @@
         "browse-places": 5.8
       },
       "averageOverall": 6.222222222222222
+    },
+    {
+      "timestamp": "2026-04-19T09:14:25.114Z",
+      "scores": {
+        "home-full": 7.6,
+        "placecard-restaurant-cookshop": 5,
+        "placecard-bar-balera": 7.6,
+        "placecard-restaurant-portici": 8,
+        "review-nyc": 4.6,
+        "review-toronto": 6,
+        "browse-places": 6.2,
+        "hot-page": 6.4
+      },
+      "averageOverall": 6.425
+    },
+    {
+      "timestamp": "2026-04-19T10:59:01.623Z",
+      "scores": {
+        "home-full": 7.6,
+        "placecard-restaurant-cookshop": 5,
+        "placecard-bar-balera": 7.6,
+        "placecard-restaurant-portici": 8,
+        "placecard-cafe-etape22": 6.6,
+        "placecard-cottage-muskoka": 5,
+        "review-nyc": 4.6,
+        "review-toronto": 6,
+        "browse-places": 6.2,
+        "hot-page": 6.4
+      },
+      "averageOverall": 6.3
+    },
+    {
+      "timestamp": "2026-04-23T06:07:41.639Z",
+      "scores": {
+        "home-full": 7.4,
+        "placecard-restaurant-cookshop": 5,
+        "placecard-bar-balera": 7.6,
+        "placecard-restaurant-portici": 8,
+        "placecard-cafe-etape22": 6.6,
+        "placecard-cottage-muskoka": 5,
+        "review-nyc": 4.6,
+        "review-toronto": 4.8,
+        "browse-places": 5.8,
+        "hot-page": 6.6
+      },
+      "averageOverall": 6.14
     }
   ],
-  "lastRun": "2026-04-16T07:06:36.187Z",
-  "currentAverage": 6.22
+  "lastRun": "2026-04-23T06:07:41.639Z",
+  "currentAverage": 6.14
 }

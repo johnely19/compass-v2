@@ -1,0 +1,42 @@
+{
+  "place_id": "ChIJb0WatJeNyRIRMDFFZfLXBu0",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJb0WatJeNyRIRMDFFZfLXBu0",
+    "name": "Book In Bar - Librairie et café",
+    "city": "Aix-en-Provence",
+    "country": "France",
+    "address": "4 Rue Joseph Cabassol, 13100 Aix-en-Provence, France",
+    "type": "book_store",
+    "subtype": "cafe",
+    "rating": 4.8,
+    "review_count": 1013,
+    "phone": "04 42 26 60 07",
+    "website": "http://www.bookinbar.com/",
+    "hours": [
+      "Monday: 10:00 AM – 7:00 PM",
+      "Tuesday: 10:00 AM – 7:00 PM",
+      "Wednesday: 10:00 AM – 7:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: Closed"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Cours Mirabeau: Book In Bar sits just off the boulevard and is exactly the kind of bookstore-café edge that helps explain why the promenade works — porous frontage, browsing, sitting, and intellectual life feeding back into the street.",
+    "contextKey": "section:great-streets:cours-mirabeau",
+    "discoveredAt": "2026-04-22T23:33:00.000Z"
+  },
+  "narrative": {
+    "summary": "A one-block-off bookstore-café that reinforces Cours Mirabeau's strolling, reading, and terrace culture.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why it teaches the street",
+        "body": "Cours Mirabeau is not only about plane trees and facades; it works because adjoining rooms of city life keep the promenade textured. Book In Bar is a near-perfect supporting edge: books, coffee, long daytime hours, and a threshold that encourages lingering before or after a walk on the Cours.",
+        "id": "block-cours-bookinbar-1"
+      }
+    ]
+  }
+}

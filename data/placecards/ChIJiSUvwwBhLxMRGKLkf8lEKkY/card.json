@@ -1,0 +1,42 @@
+{
+  "place_id": "ChIJiSUvwwBhLxMRGKLkf8lEKkY",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJiSUvwwBhLxMRGKLkf8lEKkY",
+    "name": "Harry's Bar",
+    "city": "Rome",
+    "country": "Italy",
+    "address": "Via Vittorio Veneto, 150, 00187 Roma RM, Italy",
+    "type": "bar",
+    "subtype": "restaurant",
+    "rating": 4.1,
+    "review_count": 1977,
+    "phone": "06 484643",
+    "website": "http://www.harrysbar.it/",
+    "hours": [
+      "Monday: 10:00 AM – 1:30 AM",
+      "Tuesday: 10:00 AM – 1:30 AM",
+      "Wednesday: 10:00 AM – 1:30 AM",
+      "Thursday: 10:00 AM – 1:30 AM",
+      "Friday: 10:00 AM – 1:30 AM",
+      "Saturday: 10:00 AM – 1:30 AM",
+      "Sunday: 10:00 AM – 5:30 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Via Veneto: Harry's Bar remains a directly-on-the-boulevard café-bar with long hours and real sidewalk presence, useful for understanding how the street's hotel-and-bar rhythm turns a wide Roman avenue into a social promenade.",
+    "contextKey": "section:great-streets:via-veneto",
+    "discoveredAt": "2026-04-22T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A classic Via Veneto frontage where the boulevard still reads as café society, not just a traffic corridor.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why it teaches the street",
+        "body": "Jacobs cares about how a street invites lingering. Harry's Bar shows the mechanism on Via Veneto: generous frontage, hospitality spilling toward the sidewalk, and hours late enough to keep the avenue animated after daytime sightseeing ends.",
+        "id": "block-veneto-harrys-1"
+      }
+    ]
+  }
+}

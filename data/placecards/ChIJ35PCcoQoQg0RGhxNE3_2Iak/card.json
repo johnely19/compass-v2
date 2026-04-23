@@ -1,0 +1,48 @@
+{
+  "place_id": "ChIJ35PCcoQoQg0RGhxNE3_2Iak",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJ35PCcoQoQg0RGhxNE3_2Iak",
+    "name": "Círculo de Bellas Artes",
+    "city": "Madrid",
+    "country": "Spain",
+    "address": "C. Alcalá, 42, Centro, 28014 Madrid, Spain",
+    "type": "cultural_center",
+    "subtype": "art_gallery",
+    "rating": 4.4,
+    "review_count": 33319,
+    "phone": "913 60 54 00",
+    "website": "https://www.circulobellasartes.com/",
+    "hours": [
+      "Monday: 10:00 AM – 1:00 AM",
+      "Tuesday: 10:00 AM – 1:00 AM",
+      "Wednesday: 10:00 AM – 1:00 AM",
+      "Thursday: 10:00 AM – 1:00 AM",
+      "Friday: 10:00 AM – 1:30 AM",
+      "Saturday: 10:00 AM – 1:30 AM",
+      "Sunday: 10:00 AM – 1:00 AM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Gran Vía: Círculo de Bellas Artes sits just off the avenue at Alcalá and gives the street one of its strongest cultural spillovers — rooftop, cinema, exhibitions, and late hours that keep the boulevard legible as public life rather than pure traffic or retail frontage.",
+    "contextKey": "section:great-streets:gran-via",
+    "discoveredAt": "2026-04-22T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A major civic-cultural edge one block off Gran Vía, with current exhibition and cinema programming that extends the street's evening life.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why it teaches the street",
+        "body": "Gran Vía works partly because its monumental frontage is backed by real destinations. Círculo de Bellas Artes shows that depth: an institution with galleries, screening rooms, rooftop views, and long operating hours feeding pedestrians back onto the avenue.",
+        "id": "block-granvia-cba-1"
+      },
+      {
+        "type": "prose",
+        "title": "Current signal",
+        "body": "The official programme currently lists La lechuza de Minerva and Eclosión exhibitions through 10 May 2026, plus ongoing cinema screenings — a strong sign this edge remains actively programmed now, not just architecturally important.",
+        "id": "block-granvia-cba-2"
+      }
+    ]
+  }
+}

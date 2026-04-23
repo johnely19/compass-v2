@@ -1,0 +1,42 @@
+{
+  "place_id": "ChIJHzRIuaUsDogRP_AJdMSgzjI",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJHzRIuaUsDogRP_AJdMSgzjI",
+    "name": "Chicago Cultural Center",
+    "city": "Chicago",
+    "country": "USA",
+    "address": "78 E Washington St, Chicago, IL 60602, USA",
+    "type": "cultural_center",
+    "subtype": "civic_institution",
+    "rating": 4.7,
+    "review_count": 5892,
+    "phone": "(312) 744-5000",
+    "website": "https://www.chicago.gov/city/en/depts/dca/supp_info/chicago_culturalcenter.html",
+    "hours": [
+      "Monday: 10:00 AM – 5:00 PM",
+      "Tuesday: 10:00 AM – 5:00 PM",
+      "Wednesday: 10:00 AM – 5:00 PM",
+      "Thursday: 10:00 AM – 5:00 PM",
+      "Friday: 10:00 AM – 5:00 PM",
+      "Saturday: 10:00 AM – 5:00 PM",
+      "Sunday: 10:00 AM – 5:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Michigan Avenue: the Chicago Cultural Center sits immediately off Michigan and gives the avenue one of its strongest free civic interiors — exhibitions, performances, and public rooms that deepen the street beyond retail and office frontage.",
+    "contextKey": "section:great-streets:michigan-ave",
+    "discoveredAt": "2026-04-22T23:33:00.000Z"
+  },
+  "narrative": {
+    "summary": "A major public cultural building just off Michigan Avenue that helps the boulevard read as civic space, not only commerce.",
+    "blocks": [
+      {
+        "type": "prose",
+        "title": "Why it teaches the street",
+        "body": "Michigan Avenue is strongest where monumental frontage connects to usable public interiors. The Cultural Center does that beautifully: a grand civic edge one block off the avenue, free to enter, and active enough to keep pedestrians circulating between the boulevard, Millennium Park, and the Loop.",
+        "id": "block-michigan-ccc-1"
+      }
+    ]
+  }
+}
