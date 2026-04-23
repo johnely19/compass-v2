@@ -31,6 +31,7 @@ export interface MonitoringActionSummary {
   action: 'review' | 'saved';
   tone: 'critical' | 'notable';
   count: number;
+  detail: string;
 }
 
 export interface IntelligenceDigestLike {
@@ -239,13 +240,15 @@ export function buildMonitoringActionPrompts(params: {
 export function summarizeMonitoringActionPrompts(prompts: MonitoringActionPrompt[]): MonitoringActionSummary | null {
   if (prompts.length === 0) return null;
   const first = prompts[0];
+  const action = first.action ?? 'review';
   return {
-    label: first.action === 'saved'
+    label: action === 'saved'
       ? (prompts.length > 1 ? `${prompts.length} backup moves ready` : 'Backup move ready')
       : (prompts.length > 1 ? `${prompts.length} review moves ready` : 'Review move ready'),
-    action: first.action ?? 'review',
+    action,
     tone: first.tone,
     count: prompts.length,
+    detail: first.detail,
   };
 }
 

@@ -46,6 +46,14 @@ interface MonitoringActionPrompt {
   action?: 'review' | 'saved';
 }
 
+interface MonitoringActionSummary {
+  label: string;
+  action: 'review' | 'saved';
+  tone: 'critical' | 'notable';
+  count: number;
+  detail: string;
+}
+
 interface TripPlanningWidgetProps {
   userId: string;
   contextKey: string;
@@ -56,6 +64,7 @@ interface TripPlanningWidgetProps {
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
   monitoringActionPrompts?: MonitoringActionPrompt[];
+  monitoringActionSummary?: MonitoringActionSummary | null;
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
@@ -116,6 +125,7 @@ export default function TripPlanningWidget({
   purpose,
   people,
   monitoringActionPrompts = [],
+  monitoringActionSummary = null,
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
   const [mounted, setMounted] = useState(false);
@@ -295,6 +305,21 @@ export default function TripPlanningWidget({
               {accomParsing ? 'Parsing...' : 'Save'}
             </button>
             <button className="tpw-accom-cancel" onClick={() => setAccomInputOpen(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      {monitoringActionSummary && (
+        <div className={`tpw-monitoring-checklist tpw-monitoring-checklist-${monitoringActionSummary.tone}`}>
+          <div className="tpw-monitoring-checklist-title">Action needed</div>
+          <div className="tpw-monitoring-checklist-row">
+            <span className="tpw-monitoring-checklist-copy">
+              <strong>{monitoringActionSummary.label}</strong>
+              <span>{monitoringActionSummary.detail}</span>
+            </span>
+            <Link href={monitoringPromptHref(monitoringActionSummary.action)} className="tpw-monitoring-checklist-link">
+              {monitoringPromptCta(monitoringActionSummary.action)} →
+            </Link>
           </div>
         </div>
       )}

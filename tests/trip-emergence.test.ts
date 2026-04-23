@@ -224,6 +224,7 @@ describe('summarizeMonitoringActionPrompts', () => {
       action: 'saved',
       tone: 'critical',
       count: 2,
+      detail: 'Sailor shows closure risk. Save a fallback now.',
     });
   });
 });

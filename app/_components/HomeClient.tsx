@@ -682,6 +682,7 @@ export default function HomeClient({
                 purpose={raw.purpose as string | undefined}
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}
                 monitoringActionPrompts={monitoringActionPrompts}
+                monitoringActionSummary={monitoringActionSummary}
               />
             </div>
           );

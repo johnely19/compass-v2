@@ -4075,6 +4075,68 @@ body {
 
 .tpw-accom-cancel:hover { color: var(--text-primary); }
 
+.tpw-monitoring-checklist {
+  margin-top: var(--space-sm);
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: color-mix(in srgb, var(--bg-secondary) 76%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-checklist-critical {
+  border-color: rgba(220, 38, 38, 0.28);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.tpw-monitoring-checklist-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.tpw-monitoring-checklist-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tpw-monitoring-checklist-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tpw-monitoring-checklist-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.tpw-monitoring-checklist-copy strong {
+  color: var(--text-primary);
+}
+
+.tpw-monitoring-checklist-link {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-checklist-link:hover {
+  text-decoration: underline;
+}
+
 .tpw-monitoring-prompts {
   margin-top: var(--space-sm);
   display: flex;
