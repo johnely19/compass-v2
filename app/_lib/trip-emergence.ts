@@ -26,6 +26,13 @@ export interface MonitoringActionPrompt {
   action?: 'review' | 'saved';
 }
 
+export interface MonitoringActionSummary {
+  label: string;
+  action: 'review' | 'saved';
+  tone: 'critical' | 'notable';
+  count: number;
+}
+
 export interface IntelligenceDigestLike {
   entryId: string;
   contextKey: string;
@@ -228,6 +235,19 @@ export function buildMonitoringActionPrompts(params: {
   return prompts;
 }
 
+
+export function summarizeMonitoringActionPrompts(prompts: MonitoringActionPrompt[]): MonitoringActionSummary | null {
+  if (prompts.length === 0) return null;
+  const first = prompts[0];
+  return {
+    label: first.action === 'saved'
+      ? (prompts.length > 1 ? `${prompts.length} backup moves ready` : 'Backup move ready')
+      : (prompts.length > 1 ? `${prompts.length} review moves ready` : 'Review move ready'),
+    action: first.action ?? 'review',
+    tone: first.tone,
+    count: prompts.length,
+  };
+}
 
 export function buildMonitoringPromptAttachmentChips(params: {
   contextKey: string;

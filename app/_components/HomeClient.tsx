@@ -10,7 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
-import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildMonitoringPromptAttachmentChips } from '../_lib/trip-emergence';
+import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildMonitoringPromptAttachmentChips, summarizeMonitoringActionPrompts } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -562,6 +562,7 @@ export default function HomeClient({
     contextKey: ctx.key,
     digestItems: digestItems.filter(item => item.contextKey === ctx.key),
   });
+  const monitoringActionSummary = summarizeMonitoringActionPrompts(monitoringActionPrompts);
 
   return (
     <main className="page focused-page">
@@ -639,6 +640,14 @@ export default function HomeClient({
           </div>
 
           <div className="focused-hero-right">
+            {ctx.type === 'trip' && monitoringActionSummary && (
+              <Link
+                href={monitoringActionSummary.action === 'saved' ? `${reviewUrl}?tab=saved` : reviewUrl}
+                className={`trip-action-summary trip-action-summary-${monitoringActionSummary.tone}`}
+              >
+                {monitoringActionSummary.label} →
+              </Link>
+            )}
             {ctx.type !== 'trip' && counts.saved > 0 && (
               <Link
                 href={`/review/${encodeURIComponent(ctx.key)}?tab=saved`}

@@ -495,6 +495,34 @@ a:hover {
   text-decoration: underline;
 }
 
+.trip-action-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--bg-secondary) 78%, transparent);
+}
+
+.trip-action-summary-critical {
+  border-color: rgba(220, 38, 38, 0.28);
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.trip-action-summary-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.trip-action-summary:hover {
+  text-decoration: underline;
+}
+
 .section-header {
   display: flex;
   align-items: flex-start;

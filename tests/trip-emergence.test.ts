@@ -6,6 +6,7 @@ import {
   buildMonitoringActionPrompts,
   buildMonitoringPromptAttachmentChips,
   diffTripEmergenceAttributes,
+  summarizeMonitoringActionPrompts,
 } from '../app/_lib/trip-emergence';
 
 describe('diffTripEmergenceAttributes', () => {
@@ -200,6 +201,32 @@ describe('buildMonitoringActionPrompts', () => {
   });
 });
 
+
+describe('summarizeMonitoringActionPrompts', () => {
+  test('returns a compact saved-summary badge when backup moves are present', () => {
+    const summary = summarizeMonitoringActionPrompts([
+      {
+        label: 'Line up a backup',
+        detail: 'Sailor shows closure risk. Save a fallback now.',
+        tone: 'critical',
+        action: 'saved',
+      },
+      {
+        label: 'Check momentum',
+        detail: 'The Jazz Gallery has shifted in the reviews. Decide if it still fits the trip.',
+        tone: 'notable',
+        action: 'review',
+      },
+    ]);
+
+    assert.deepEqual(summary, {
+      label: '2 backup moves ready',
+      action: 'saved',
+      tone: 'critical',
+      count: 2,
+    });
+  });
+});
 
 describe('buildMonitoringPromptAttachmentChips', () => {
   test('turns fresh monitoring signals into a single durable next-move attachment chip', () => {
