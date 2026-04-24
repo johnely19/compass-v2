@@ -27,7 +27,7 @@ function triageBlobPath(userId: string) {
   return `${BLOB_PREFIX}/${userId}/triage.json`;
 }
 
-async function loadDismissedPlaceIds(userId: string): Promise<Set<string>> {
+async function loadDismissedDiscoveryIds(userId: string): Promise<Set<string>> {
   try {
     const { blobs } = await list({ prefix: triageBlobPath(userId), limit: 1 });
     const blob = blobs[0];
@@ -39,8 +39,8 @@ async function loadDismissedPlaceIds(userId: string): Promise<Set<string>> {
     const store = (await res.json()) as TriageStore;
     const dismissed = new Set<string>();
     for (const ctx of Object.values(store)) {
-      for (const [placeId, entry] of Object.entries(ctx.triage ?? {})) {
-        if (entry.state === 'dismissed') dismissed.add(placeId);
+      for (const [discoveryId, entry] of Object.entries(ctx.triage ?? {})) {
+        if (entry.state === 'dismissed') dismissed.add(discoveryId);
       }
     }
     return dismissed;
@@ -49,9 +49,16 @@ async function loadDismissedPlaceIds(userId: string): Promise<Set<string>> {
   }
 }
 
-function filterDismissedDiscoveries(discoveries: Discovery[], dismissedPlaceIds: Set<string>): Discovery[] {
-  if (dismissedPlaceIds.size === 0) return discoveries;
-  return discoveries.filter((discovery) => !discovery.place_id || !dismissedPlaceIds.has(discovery.place_id));
+function getDiscoveryTriageId(discovery: Discovery): string | null {
+  return discovery.place_id || discovery.id || null;
+}
+
+function filterDismissedDiscoveries(discoveries: Discovery[], dismissedDiscoveryIds: Set<string>): Discovery[] {
+  if (dismissedDiscoveryIds.size === 0) return discoveries;
+  return discoveries.filter((discovery) => {
+    const triageId = getDiscoveryTriageId(discovery);
+    return !triageId || !dismissedDiscoveryIds.has(triageId);
+  });
 }
 
 function sortContexts(contexts: Context[]): Context[] {
@@ -102,7 +109,7 @@ export default async function HomePage() {
     (manifest?.contexts ?? []).filter(c => isContextActive(c)),
   );
   const discoveries = discoveriesData?.discoveries ?? [];
-  const dismissedPlaceIds = await loadDismissedPlaceIds(user.id);
+  const dismissedDiscoveryIds = await loadDismissedDiscoveryIds(user.id);
 
   // Filter out discoveries that are not fully built
   // A discovery must have at minimum: a name AND (address OR description OR rating)
@@ -119,7 +126,7 @@ export default async function HomePage() {
   const discoveries_final = fullyBuilt;
 
   const enrichedDiscoveries = enrichDiscoveriesWithImageMinimums(discoveries_final);
-  const visibleDiscoveries = filterDismissedDiscoveries(enrichedDiscoveries, dismissedPlaceIds);
+  const visibleDiscoveries = filterDismissedDiscoveries(enrichedDiscoveries, dismissedDiscoveryIds);
 
   // Group discoveries by context — fuzzy match on slug to handle key variants
   // Fix #108: deduplicate by place_id within each context bucket

@@ -27,12 +27,19 @@ interface Discovery {
   place_id?: string;
 }
 
+function getDiscoveryTriageId(discovery: Discovery): string | null {
+  return discovery.place_id || discovery.id || null;
+}
+
 function filterDismissedDiscoveries(
   discoveries: Discovery[],
-  dismissedPlaceIds: Set<string>,
+  dismissedDiscoveryIds: Set<string>,
 ): Discovery[] {
-  if (dismissedPlaceIds.size === 0) return discoveries;
-  return discoveries.filter((discovery) => !discovery.place_id || !dismissedPlaceIds.has(discovery.place_id));
+  if (dismissedDiscoveryIds.size === 0) return discoveries;
+  return discoveries.filter((discovery) => {
+    const triageId = getDiscoveryTriageId(discovery);
+    return !triageId || !dismissedDiscoveryIds.has(triageId);
+  });
 }
 
 function computeVisibleContexts(
@@ -125,6 +132,21 @@ describe('homepage context visibility', () => {
       filtered.map((discovery) => discovery.id),
       ['d2', 'd3'],
       'dismissed homepage cards should be removed from the server-rendered bucket',
+    );
+  });
+
+  test('filters dismissed discovery ids when a card was triaged without a place_id key', () => {
+    const discoveries: Discovery[] = [
+      { id: 'chat-1' },
+      { id: 'place-backed', place_id: 'place-1' },
+    ];
+
+    const filtered = filterDismissedDiscoveries(discoveries, new Set(['chat-1']));
+
+    assert.deepEqual(
+      filtered.map((discovery) => discovery.id),
+      ['place-backed'],
+      'legacy/id-keyed dismissals should stay hidden on server render after refresh',
     );
   });
 

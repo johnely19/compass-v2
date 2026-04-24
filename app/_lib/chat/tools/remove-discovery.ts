@@ -108,7 +108,7 @@ export async function removeDiscovery(
 
     const discovery = discData.discoveries[idx]!;
     const removedName = discovery.name;
-    const removedId = discovery.id;
+    const removedId = discovery.place_id || discovery.id;
 
     // Remove from discoveries array
     discData.discoveries.splice(idx, 1);
