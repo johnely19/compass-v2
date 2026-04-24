@@ -191,11 +191,14 @@ const TYPE_NORMALIZATION: Record<string, string> = {
   'live-music': 'music-venue',
   'live_music': 'music-venue',
   'live_music_venue': 'music-venue',
+  'live_music_bar': 'music-venue',
   'live music': 'music-venue',
   'live music venue': 'music-venue',
   'venue': 'music-venue',
   'comedy': 'theatre',
   'exhibition': 'gallery',
+  'art_gallery': 'gallery',
+  'art_museum': 'museum',
   'wine-bar': 'bar',
   'wine_bar': 'bar',
   'cocktail-bar': 'bar',
@@ -209,6 +212,7 @@ const TYPE_NORMALIZATION: Record<string, string> = {
   'specialty-shop': 'shop',
   'bookstore': 'shop',
   'bookshop': 'shop',
+  'book_store': 'shop',
   'street_art': 'gallery',
   'outdoor': 'park',
   'hiking trail': 'park',
@@ -219,9 +223,17 @@ const TYPE_NORMALIZATION: Record<string, string> = {
 
 function normalizeType(type: string | undefined | null): string {
   if (!type) return 'restaurant';
-  if (VALID_DISCOVERY_TYPES.has(type)) return type;
-  const mapped = TYPE_NORMALIZATION[type.toLowerCase()];
+  const normalized = type.toLowerCase().trim().replace(/\s+/g, '_');
+  if (VALID_DISCOVERY_TYPES.has(normalized)) return normalized;
+  const mapped = TYPE_NORMALIZATION[normalized];
   if (mapped) return mapped;
+  if (normalized.endsWith('_restaurant')) return 'restaurant';
+  if (normalized.endsWith('_gallery')) return 'gallery';
+  if (normalized.endsWith('_museum')) return 'museum';
+  if (normalized.endsWith('_park')) return 'park';
+  if (normalized.endsWith('_bar') || normalized.endsWith('_pub')) return 'bar';
+  if (normalized.endsWith('_bakery') || normalized.endsWith('_cafe') || normalized.endsWith('_coffee_shop')) return 'cafe';
+  if (normalized.endsWith('_store') || normalized.endsWith('_shop')) return 'shop';
   return 'restaurant'; // ultimate fallback
 }
 
@@ -261,7 +273,147 @@ function normalizeContextKey(key: string | undefined | null): string {
   return k;
 }
 
-function normalizeDiscoveries(raw: UserDiscoveries | Discovery[]): UserDiscoveries {
+function normalizeCityCandidate(city: string | undefined | null): string {
+  if (!city) return '';
+  return city
+    .replace(/^\d{4,6}\s+/, '')
+    .replace(/\s+[A-Z]{2}\s+[A-Z0-9 -]+$/i, '')
+    .replace(/\s+[A-Z]\d[A-Z]\s*\d[A-Z]\d$/i, '')
+    .trim();
+}
+
+function inferCityFromAddress(address: string | undefined | null): string {
+  if (!address) return '';
+
+  const parts = address.split(',').map((part) => part.trim()).filter(Boolean);
+  if (parts.length === 0) return '';
+
+  let candidate = '';
+  if (parts.length >= 4) {
+    candidate = parts[parts.length - 3] || '';
+  } else if (parts.length === 3) {
+    const middle = parts[1] || '';
+    const tail = parts[2] || '';
+    const middleLooksLikeStreet = /^\d/.test(middle) || /\b(st|street|ave|avenue|rd|road|blvd|boulevard|dr|drive|ln|lane|way|pl|place|square)\b/i.test(middle);
+    const tailLooksLikeCountry = /^(usa|canada|france|uk|united kingdom)$/i.test(tail);
+    candidate = middleLooksLikeStreet ? tail : (tailLooksLikeCountry ? middle : middle || tail);
+  } else if (parts.length >= 2) {
+    candidate = parts[1] || '';
+  }
+
+  const cleaned = normalizeCityCandidate(candidate);
+  if (!cleaned) return '';
+  if (/^(usa|canada|france|uk|united kingdom|ontario|quebec|ny|on|qc)$/i.test(cleaned)) {
+    return '';
+  }
+  return cleaned;
+}
+
+function inferCityFromContext(contextKey: string | undefined | null): string {
+  const key = (contextKey || '').toLowerCase();
+  if (!key) return '';
+  if (key.includes('brooklyn')) return 'Brooklyn';
+  if (key.includes('nyc') || key.includes('new-york') || key.includes('manhattan')) return 'New York';
+  if (key.includes('toronto')) return 'Toronto';
+  if (key.includes('paris')) return 'Paris';
+  if (key.includes('montreal')) return 'Montreal';
+  if (key.includes('boston')) return 'Boston';
+  return '';
+}
+
+function normalizeCity(params: {
+  city?: string | null;
+  address?: string | null;
+  contextKey?: string | null;
+}): string {
+  const normalizedContextKey = normalizeContextKey(params.contextKey);
+  const normalizedCity = normalizeCityCandidate(params.city);
+  const inferredFromAddress = inferCityFromAddress(params.address);
+  const inferredFromContext = inferCityFromContext(normalizedContextKey);
+
+  if (!normalizedCity) {
+    return inferredFromAddress || inferredFromContext || '';
+  }
+
+  if (/^toronto$/i.test(normalizedCity) && inferredFromContext && !/^toronto$/i.test(inferredFromContext)) {
+    return inferredFromAddress || inferredFromContext;
+  }
+
+  return normalizedCity;
+}
+
+function inferContextKey(contextKey: string | undefined | null, city: string | undefined | null): string {
+  const normalized = normalizeContextKey(contextKey);
+  if (normalized) return normalized;
+  const normalizedCity = normalizeCityCandidate(city);
+  if (!normalizedCity) return '';
+  const slug = normalizedCity.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+  return slug ? `radar:${slug}` : '';
+}
+
+function normalizeDiscoveryKey(discovery: Pick<Discovery, 'place_id' | 'contextKey' | 'name'>): string {
+  if (discovery.place_id && discovery.contextKey) return `place:${discovery.place_id}:${discovery.contextKey}`;
+  const normalizedName = (discovery.name || '').toLowerCase().replace(/[^a-z0-9 ]/g, '').replace(/\s+/g, ' ').trim();
+  return `name:${normalizedName}:${discovery.contextKey || ''}`;
+}
+
+function discoveryCompletenessScore(discovery: Partial<Discovery>): number {
+  return [
+    discovery.place_id,
+    discovery.address,
+    discovery.city,
+    discovery.heroImage,
+    discovery.source,
+    discovery.description,
+    discovery.rating,
+    discovery.match,
+  ].filter((value) => value !== undefined && value !== null && value !== '').length;
+}
+
+function mergeDiscoveryRecords(existing: Discovery, incoming: Discovery): Discovery {
+  const existingTime = Date.parse(existing.discoveredAt || '') || 0;
+  const incomingTime = Date.parse(incoming.discoveredAt || '') || 0;
+  const preferred = incomingTime >= existingTime ? incoming : existing;
+  const fallback = preferred === incoming ? existing : incoming;
+
+  return {
+    ...fallback,
+    ...preferred,
+    id: preferred.id || fallback.id,
+    name: preferred.name !== 'Unknown Place' ? preferred.name : fallback.name,
+    address: preferred.address || fallback.address,
+    city: preferred.city || fallback.city,
+    type: preferred.type !== 'restaurant' || !fallback.type ? preferred.type : fallback.type,
+    heroImage: preferred.heroImage || fallback.heroImage,
+    rating: preferred.rating ?? fallback.rating,
+    match: preferred.match ?? fallback.match,
+    source: preferred.source !== 'v1:migrated' ? preferred.source : fallback.source,
+    discoveredAt: existingTime >= incomingTime ? existing.discoveredAt : incoming.discoveredAt,
+  };
+}
+
+function dedupeDiscoveries(discoveries: Discovery[]): Discovery[] {
+  const deduped = new Map<string, Discovery>();
+
+  for (const discovery of discoveries) {
+    const key = normalizeDiscoveryKey(discovery);
+    const existing = deduped.get(key);
+
+    if (!existing) {
+      deduped.set(key, discovery);
+      continue;
+    }
+
+    const merged = mergeDiscoveryRecords(existing, discovery);
+    const existingScore = discoveryCompletenessScore(existing);
+    const incomingScore = discoveryCompletenessScore(discovery);
+    deduped.set(key, incomingScore >= existingScore ? merged : mergeDiscoveryRecords(discovery, existing));
+  }
+
+  return Array.from(deduped.values());
+}
+
+export function normalizeUserDiscoveries(raw: UserDiscoveries | Discovery[]): UserDiscoveries {
   // V1→V2 compatibility: V1 stores as raw array, V2 expects { discoveries: [...] }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const rawAny = raw as any;
@@ -272,29 +424,37 @@ function normalizeDiscoveries(raw: UserDiscoveries | Discovery[]): UserDiscoveri
       : [];
 
   // Normalize all fields for V1→V2 compatibility
-  const normalized = rawArray.map((d, i) => ({
-    ...d,
-    id: (d.id as string) || `v1_${i}`,
-    name: (d.name as string) || 'Unknown Place',
-    city: (d.city as string) || 'Toronto',
-    type: (() => {
-      // Priority: authoritative type from place card index (for cards with place_id)
-      const placeId = d.place_id as string | undefined;
-      const indexed = lookupTypeFromIndex(placeId);
-      if (indexed && VALID_DISCOVERY_TYPES.has(indexed)) return indexed;
-      // Fallback: normalize incoming type or infer from name
-      if (d.type) return normalizeType(d.type as string);
-      return inferTypeFromName(d.name as string);
-    })(),
-    rating: d.rating != null ? Number(d.rating) || undefined : undefined,
-    contextKey: normalizeContextKey(d.contextKey as string),
-    discoveredAt: (d.discoveredAt as string) || new Date().toISOString(),
-    placeIdStatus: (d.placeIdStatus as string) || (d.place_id ? 'verified' : 'missing'),
-    source: (d.source as string) || 'v1:migrated',
-  }));
+  const normalized = rawArray.map((d, i) => {
+    const city = normalizeCity({
+      city: d.city as string | null | undefined,
+      address: d.address as string | null | undefined,
+      contextKey: d.contextKey as string | null | undefined,
+    });
+
+    return {
+      ...d,
+      id: (d.id as string) || `v1_${i}`,
+      name: (d.name as string) || 'Unknown Place',
+      city,
+      type: (() => {
+        // Priority: authoritative type from place card index (for cards with place_id)
+        const placeId = d.place_id as string | undefined;
+        const indexed = lookupTypeFromIndex(placeId);
+        if (indexed && VALID_DISCOVERY_TYPES.has(indexed)) return indexed;
+        // Fallback: normalize incoming type or infer from name
+        if (d.type) return normalizeType(d.type as string);
+        return inferTypeFromName(d.name as string);
+      })(),
+      rating: d.rating != null ? Number(d.rating) || undefined : undefined,
+      contextKey: inferContextKey(d.contextKey as string | null | undefined, city),
+      discoveredAt: (d.discoveredAt as string) || new Date().toISOString(),
+      placeIdStatus: (d.placeIdStatus as string) || (d.place_id ? 'verified' : 'missing'),
+      source: (d.source as string) || 'v1:migrated',
+    };
+  }) as Discovery[];
 
   return {
-    discoveries: normalized,
+    discoveries: dedupeDiscoveries(normalized),
     updatedAt: !Array.isArray(rawAny) && typeof rawAny?.updatedAt === 'string'
       ? rawAny.updatedAt
       : new Date().toISOString(),
@@ -304,7 +464,7 @@ function normalizeDiscoveries(raw: UserDiscoveries | Discovery[]): UserDiscoveri
 export async function getUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
   const raw = await getUserData(userId, 'discoveries');
   if (!raw) return null;
-  return normalizeDiscoveries(raw as UserDiscoveries | Discovery[]);
+  return normalizeUserDiscoveries(raw as UserDiscoveries | Discovery[]);
 }
 
 export async function getDerivedUserDiscoveries(userId: string, historyLimit = 50): Promise<UserDiscoveries | null> {

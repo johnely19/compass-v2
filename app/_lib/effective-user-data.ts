@@ -2,7 +2,7 @@ import { deriveDiscoveryInventory } from './discovery-history';
 import { mergeDiscoveryInventories, mergeManifestInventories, readOwnerLocalDiscoveries, readOwnerLocalManifest } from './owner-local-inventory';
 import type { UserDiscoveries, UserManifest } from './types';
 import { getUserById } from './user';
-import { getUserDiscoveries, getUserManifest } from './user-data';
+import { getUserDiscoveries, getUserManifest, normalizeUserDiscoveries } from './user-data';
 
 function shouldUseOwnerLocalInventory(userId: string): boolean {
   return Boolean(getUserById(userId)?.isOwner);
@@ -24,7 +24,8 @@ export async function getWritableUserManifest(userId: string): Promise<UserManif
 export async function getEffectiveUserDiscoveries(userId: string): Promise<UserDiscoveries | null> {
   const discoveries = await getUserDiscoveries(userId);
   if (!shouldUseOwnerLocalInventory(userId)) return discoveries;
-  return mergeDiscoveryInventories(discoveries, readOwnerLocalDiscoveries());
+  const merged = mergeDiscoveryInventories(discoveries, readOwnerLocalDiscoveries());
+  return merged ? normalizeUserDiscoveries(merged) : null;
 }
 
 export async function getEffectiveDerivedUserDiscoveries(userId: string, historyLimit = 50): Promise<UserDiscoveries | null> {

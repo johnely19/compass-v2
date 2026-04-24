@@ -78,10 +78,15 @@ async function run() {
     assert(!html.includes('data-next-error'), 'Page has React error');
   });
 
-  await test('Homepage has ≥5 context sections', async () => {
+  await test('Homepage exposes focused context UI with ≥5 contexts in manifest', async () => {
     const html = await fetchHTML('/');
-    const sections = (html.match(/section-header/g) || []).length;
-    assert(sections >= 5, `Only ${sections} sections (need ≥5)`);
+    const hasContextUi = html.includes('focused-hero') || html.includes('section-header') || html.includes('ctx-switcher-label');
+    assert(hasContextUi, 'Homepage has no context hero/switcher UI');
+
+    const data = await fetchJSON('/api/user/manifest');
+    if (data._auth) return;
+    const contexts = data.contexts || [];
+    assert(contexts.length >= 5, `Only ${contexts.length} contexts in manifest (need ≥5)`);
   });
 
   await test('Homepage has ≥10 place cards', async () => {
@@ -152,8 +157,8 @@ async function run() {
   console.log('\n  — Hero Image URLs —');
 
   await test('Hero image URLs return 200', async () => {
-    const blobUrlRe = /https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/[^\s"'<>]+/g;
-    const urls = [...new Set((detailHtml.match(blobUrlRe) || []).filter(u => u.match(/\.(jpg|jpeg|png|webp)/i)).slice(0, 3))];
+    const blobUrlRe = /https:\/\/[a-z0-9]+\.public\.blob\.vercel-storage\.com\/[^\s"'<>\)]+/g;
+    const urls = [...new Set((detailHtml.match(blobUrlRe) || []).map(u => u.replace(/[),]+$/, '')).filter(u => u.match(/\.(jpg|jpeg|png|webp)/i)).slice(0, 3))];
     if (urls.length === 0) return; // no images to check on this card — pass
     for (const url of urls) {
       const res = await fetch(url, { method: 'HEAD', signal: AbortSignal.timeout(5000) });

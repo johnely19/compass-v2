@@ -4,6 +4,7 @@ import { put, list, del } from '@vercel/blob';
 import { COOKIE_NAME, getUserById } from '../../../_lib/user';
 import type { Discovery, DiscoveryType, PlaceIdStatus } from '../../../_lib/types';
 import { recordDiscoveryHistoryEvent } from '../../../_lib/discovery-history';
+import { getEffectiveUserDiscoveries, getEffectiveUserManifest } from '../../../_lib/effective-user-data';
 
 export const dynamic = 'force-dynamic';
 
@@ -195,7 +196,17 @@ export async function GET() {
   const user = getUserById(userId);
   if (!user) return NextResponse.json({ error: 'User not found' }, { status: 404 });
 
-  const discoveries = await readRawDiscoveries(userId);
+  const [effective, manifest] = await Promise.all([
+    getEffectiveUserDiscoveries(userId),
+    getEffectiveUserManifest(userId),
+  ]);
+  const fallbackContextKey = manifest?.contexts.find((context) => context.key.startsWith('radar:'))?.key
+    ?? manifest?.contexts[0]?.key
+    ?? 'radar:toronto-experiences';
+  const discoveries = (effective?.discoveries ?? []).map((discovery) => ({
+    ...discovery,
+    contextKey: discovery.contextKey || fallbackContextKey,
+  }));
   return NextResponse.json({ discoveries, count: discoveries.length });
 }
 
