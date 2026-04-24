@@ -112,6 +112,13 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
     }));
   }, [contextKey, contextLabel, contextEmoji, contextType, id, name, type, place_id]);
 
+  const handleOpenMaps = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mapsUrl) return;
+    window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+  }, [mapsUrl]);
+
   return (
     <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>
       <Link href={detailHref} className="place-card" aria-label={`Open ${name} in Compass`}>
@@ -161,16 +168,14 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           View details →
         </Link>
         {mapsUrl && (
-          <a
-            href={mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button
+            type="button"
             className="place-card-maps"
-            onClick={(e) => e.stopPropagation()}
+            onClick={handleOpenMaps}
             aria-label={`Open ${name} in Google Maps`}
           >
             Maps
-          </a>
+          </button>
         )}
       </div>
       {userId && place_id && (

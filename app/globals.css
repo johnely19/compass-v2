@@ -1176,6 +1176,14 @@ a:hover {
   transition: color var(--transition-fast);
 }
 
+.place-card-maps {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
 .place-card-detail-link {
   color: var(--text-primary);
   font-weight: 600;
