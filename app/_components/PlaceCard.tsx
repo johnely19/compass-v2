@@ -121,32 +121,19 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
     window.open(mapsUrl, '_blank', 'noopener,noreferrer');
   }, [mapsUrl]);
 
-  const handleCardClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    const target = e.target as HTMLElement;
-    if (target.closest('a, button, input, textarea, select, summary, [role="button"]')) {
-      return;
-    }
-    router.push(detailHref);
-  }, [detailHref, router]);
-
-  const handleCardKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
-    if (e.target !== e.currentTarget) return;
-    if (e.key !== 'Enter' && e.key !== ' ') return;
-    e.preventDefault();
+  const handleCardSurfaceClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target;
+    if (!(target instanceof Element)) return;
+    if (target.closest('a, button')) return;
     router.push(detailHref);
   }, [detailHref, router]);
 
   return (
     <div
-      style={{ position: 'relative' }}
-      className={isChatTarget ? 'place-card-chat-active' : ''}
-      onClick={handleCardClick}
-      onKeyDown={handleCardKeyDown}
-      role="link"
-      tabIndex={0}
-      aria-label={`Open ${name} in Compass`}
+      className={`place-card-shell${isChatTarget ? ' place-card-chat-active' : ''}`}
+      onClick={handleCardSurfaceClick}
     >
-      <div className="place-card">
+      <Link href={detailHref} className="place-card" aria-label={`Open ${name} in Compass`}>
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
           {!finalImageUrl && <span className="place-card-image-fallback" />}
           {/* Hidden img for onError detection - triggers on load failure */}
@@ -187,7 +174,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
             </div>
           )}
         </div>
-      </div>
+      </Link>
       <div className="place-card-footer">
         <Link href={detailHref} className="place-card-detail-link" aria-label={`View ${name} details in Compass`}>
           View details →
@@ -204,7 +191,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
         )}
       </div>
       {userId && place_id && (
-        <div className="place-card-triage-overlay" onClick={(e) => e.stopPropagation()}>
+        <div className="place-card-triage-overlay">
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
         </div>
       )}
