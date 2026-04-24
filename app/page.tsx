@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { list } from '@vercel/blob';
 import { getCurrentUser } from './_lib/user';
 import { getEffectiveDerivedUserDiscoveries, getEffectiveUserManifest } from './_lib/effective-user-data';
 import type { Context, Discovery } from './_lib/types';
@@ -15,6 +16,43 @@ import { buildHomepageDigest } from './_lib/monitor-digest';
 import HomeClient from './_components/HomeClient';
 
 export const dynamic = 'force-dynamic';
+
+const BLOB_PREFIX = 'users';
+
+type TriageEntry = { state: string };
+type ContextTriage = { triage?: Record<string, TriageEntry> };
+type TriageStore = Record<string, ContextTriage>;
+
+function triageBlobPath(userId: string) {
+  return `${BLOB_PREFIX}/${userId}/triage.json`;
+}
+
+async function loadDismissedPlaceIds(userId: string): Promise<Set<string>> {
+  try {
+    const { blobs } = await list({ prefix: triageBlobPath(userId), limit: 1 });
+    const blob = blobs[0];
+    if (!blob) return new Set();
+
+    const res = await fetch(blob.url, { cache: 'no-store' });
+    if (!res.ok) return new Set();
+
+    const store = (await res.json()) as TriageStore;
+    const dismissed = new Set<string>();
+    for (const ctx of Object.values(store)) {
+      for (const [placeId, entry] of Object.entries(ctx.triage ?? {})) {
+        if (entry.state === 'dismissed') dismissed.add(placeId);
+      }
+    }
+    return dismissed;
+  } catch {
+    return new Set();
+  }
+}
+
+function filterDismissedDiscoveries(discoveries: Discovery[], dismissedPlaceIds: Set<string>): Discovery[] {
+  if (dismissedPlaceIds.size === 0) return discoveries;
+  return discoveries.filter((discovery) => !discovery.place_id || !dismissedPlaceIds.has(discovery.place_id));
+}
 
 function sortContexts(contexts: Context[]): Context[] {
   return [...contexts].sort((a, b) => {
@@ -64,6 +102,7 @@ export default async function HomePage() {
     (manifest?.contexts ?? []).filter(c => isContextActive(c)),
   );
   const discoveries = discoveriesData?.discoveries ?? [];
+  const dismissedPlaceIds = await loadDismissedPlaceIds(user.id);
 
   // Filter out discoveries that are not fully built
   // A discovery must have at minimum: a name AND (address OR description OR rating)
@@ -80,13 +119,14 @@ export default async function HomePage() {
   const discoveries_final = fullyBuilt;
 
   const enrichedDiscoveries = enrichDiscoveriesWithImageMinimums(discoveries_final);
+  const visibleDiscoveries = filterDismissedDiscoveries(enrichedDiscoveries, dismissedPlaceIds);
 
   // Group discoveries by context — fuzzy match on slug to handle key variants
   // Fix #108: deduplicate by place_id within each context bucket
   const byContext = new Map<string, Discovery[]>();
   for (const ctx of contexts) {
     const ctxSlug = ctx.key.split(':').slice(1).join(':');
-    const matched = enrichedDiscoveries.filter(d => {
+    const matched = visibleDiscoveries.filter(d => {
       // Type-context compatibility check (e.g. no galleries in dinner outings)
       if (!isTypeCompatible(ctx.key, d.type)) return false;
       // Exact match first
@@ -113,8 +153,13 @@ export default async function HomePage() {
       return true;
     });
 
-    // Show all places — photos are guaranteed by ingest pipeline (Fix #234)
-    const withPhoto = deduped;
+    // Preserve context metadata on discoveries so card-level enrichment can
+    // still resolve photos even when a recommendation lacks a Google Place ID.
+    const withPhoto = deduped.map((d) => ({
+      ...d,
+      city: d.city || ctx.city,
+      contextLabel: (d as any).contextLabel || ctx.label,
+    }));
     byContext.set(ctx.key, withPhoto);
   }
 

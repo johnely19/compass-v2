@@ -22,6 +22,19 @@ interface Context {
   label: string;
 }
 
+interface Discovery {
+  id: string;
+  place_id?: string;
+}
+
+function filterDismissedDiscoveries(
+  discoveries: Discovery[],
+  dismissedPlaceIds: Set<string>,
+): Discovery[] {
+  if (dismissedPlaceIds.size === 0) return discoveries;
+  return discoveries.filter((discovery) => !discovery.place_id || !dismissedPlaceIds.has(discovery.place_id));
+}
+
 function computeVisibleContexts(
   contexts: Context[],
   byContext: Map<string, unknown[]>,
@@ -97,6 +110,42 @@ describe('homepage context visibility', () => {
     const byContext = new Map<string, unknown[]>();  // no entry for this key
     const visible = computeVisibleContexts(contexts, byContext);
     assert.equal(visible.length, 0, 'context absent from byContext should be hidden');
+  });
+
+  test('filters dismissed place_ids out of homepage buckets before rendering', () => {
+    const discoveries: Discovery[] = [
+      { id: 'd1', place_id: 'place-1' },
+      { id: 'd2', place_id: 'place-2' },
+      { id: 'd3' },
+    ];
+
+    const filtered = filterDismissedDiscoveries(discoveries, new Set(['place-1']));
+
+    assert.deepEqual(
+      filtered.map((discovery) => discovery.id),
+      ['d2', 'd3'],
+      'dismissed homepage cards should be removed from the server-rendered bucket',
+    );
+  });
+
+  test('hides non-trip contexts when dismissal empties their final homepage bucket', () => {
+    const contexts: Context[] = [
+      { key: 'outing:dinner', type: 'outing', label: 'Dinner' },
+      { key: 'trip:nyc-2026', type: 'trip', label: 'NYC Trip' },
+    ];
+
+    const byContext = new Map<string, Discovery[]>([
+      ['outing:dinner', filterDismissedDiscoveries([{ id: 'd1', place_id: 'place-1' }], new Set(['place-1']))],
+      ['trip:nyc-2026', filterDismissedDiscoveries([], new Set(['place-1']))],
+    ]);
+
+    const visible = computeVisibleContexts(contexts, byContext);
+
+    assert.deepEqual(
+      visible.map((context) => context.key),
+      ['trip:nyc-2026'],
+      'once dismissal empties a non-trip bucket, it should disappear from the homepage',
+    );
   });
 
 });
