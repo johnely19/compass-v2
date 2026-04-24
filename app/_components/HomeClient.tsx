@@ -561,6 +561,8 @@ export default function HomeClient({
         people: (ctx as unknown as Record<string, unknown>).people as Array<{ name: string; relation?: string }> | undefined,
         priorities: (ctx as unknown as Record<string, unknown>).priorities as string[] | undefined,
         base: (ctx as unknown as Record<string, unknown>).base as { address?: string; host?: string; zone?: string } | undefined,
+        accommodationName: (ctx as unknown as Record<string, unknown>).accommodationName as string | undefined,
+        accommodationAddress: (ctx as unknown as Record<string, unknown>).accommodationAddress as string | undefined,
       } satisfies TripEmergenceSnapshot, landingAttrs)
     : null;
   const effectiveCtx = optimisticTrip
@@ -570,6 +572,8 @@ export default function HomeClient({
         city: optimisticTrip.city,
         focus: optimisticTrip.focus,
         priorities: optimisticTrip.priorities,
+        accommodationName: optimisticTrip.accommodationName,
+        accommodationAddress: optimisticTrip.accommodationAddress,
       }
     : ctx;
   const monitoringHighlights = buildTripMonitoringHighlights({
@@ -645,6 +649,8 @@ export default function HomeClient({
                               ? '🛰️'
                               : attr.field === 'priorities'
                                 ? '⭐'
+                                : attr.field === 'accommodation'
+                                  ? '🏨'
                                 : '🏷';
                     return (
                       <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
@@ -661,6 +667,16 @@ export default function HomeClient({
                       ⭐ {p}
                     </span>
                   ))}
+                </div>
+              )}
+              {effectiveCtx.accommodationName && ctx.type === 'trip' && (
+                <div className="section-attr-pills">
+                  <span className="section-attr-pill">
+                    🏨 {effectiveCtx.accommodationName}
+                    {effectiveCtx.accommodationAddress && (
+                      <span className="section-attr-pill-sub"> · {effectiveCtx.accommodationAddress}</span>
+                    )}
+                  </span>
                 </div>
               )}
             </div>

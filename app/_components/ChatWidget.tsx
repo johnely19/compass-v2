@@ -324,6 +324,8 @@ export default function ChatWidget() {
               people: c.people,
               priorities: c.priorities,
               base: c.base,
+              accommodationName: c.accommodationName,
+              accommodationAddress: c.accommodationAddress,
             };
           }
           preContextSnapshots.current = snapshots;

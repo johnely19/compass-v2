@@ -10,10 +10,12 @@ export interface TripEmergenceSnapshot {
   people?: Array<{ name: string; relation?: string }>;
   priorities?: string[];
   base?: { address?: string; host?: string; zone?: string };
+  accommodationName?: string;
+  accommodationAddress?: string;
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base' | 'accommodation';
   value: string;
 }
 
@@ -97,6 +99,16 @@ export function diffTripEmergenceAttributes(
     } else if (nextZone && nextZone !== prevZone) {
       changedAttrs.push({ field: 'base', value: `Zone: ${nextZone}` });
     }
+  }
+
+  // Accommodation name changes
+  if (next.accommodationName && next.accommodationName !== previous.accommodationName) {
+    const value = next.accommodationAddress
+      ? `${next.accommodationName} · ${next.accommodationAddress}`
+      : next.accommodationName;
+    changedAttrs.push({ field: 'accommodation', value });
+  } else if (next.accommodationAddress && next.accommodationAddress !== previous.accommodationAddress && !next.accommodationName) {
+    changedAttrs.push({ field: 'accommodation', value: next.accommodationAddress });
   }
 
   return changedAttrs;
@@ -192,6 +204,16 @@ export function applyTripAttributeChips(
         } else {
           next.base = { ...existingBase, address: value.trim() };
         }
+      }
+    }
+
+    if (chip.field === 'accommodation') {
+      // Parse accommodation value: "The Liberty Hotel · 215 Chestnut St" or just "The Liberty Hotel"
+      const value = chip.value;
+      const parts = value.split(' · ');
+      next.accommodationName = parts[0].trim();
+      if (parts[1]) {
+        next.accommodationAddress = parts[1].trim();
       }
     }
   }

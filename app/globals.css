@@ -482,6 +482,12 @@ a:hover {
   pointer-events: none;
 }
 
+.section-attr-pill-sub {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
 .section-header {
   display: flex;
   align-items: flex-start;

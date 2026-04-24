@@ -64,6 +64,8 @@ export interface Context {
   active: boolean;
   status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
   anchor?: ContextAnchor;  // geographic anchor for proximity sorting
+  accommodationName?: string;
+  accommodationAddress?: string;
 }
 
 export interface UserManifest {

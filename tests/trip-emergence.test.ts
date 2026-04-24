@@ -297,3 +297,99 @@ describe('buildIntelligenceAttachmentChips', () => {
     ]);
   });
 });
+
+describe('accommodation field', () => {
+  test('surfaces accommodation name changes with address', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+      },
+      {
+        key: 'trip:nyc',
+        accommodationName: 'The Liberty Hotel',
+        accommodationAddress: '215 Chestnut St',
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'accommodation', value: 'The Liberty Hotel · 215 Chestnut St' },
+    ]);
+  });
+
+  test('surfaces accommodation name-only changes', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        accommodationName: 'Hilton Boston',
+      },
+      {
+        key: 'trip:nyc',
+        accommodationName: 'The Liberty Hotel',
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'accommodation', value: 'The Liberty Hotel' },
+    ]);
+  });
+
+  test('surfaces address-only changes when name is missing', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+      },
+      {
+        key: 'trip:nyc',
+        accommodationName: 'The Liberty Hotel',
+        accommodationAddress: '215 Chestnut St',
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'accommodation', value: 'The Liberty Hotel · 215 Chestnut St' },
+    ]);
+  });
+
+  test('applies accommodation chips from chat-emerged attributes', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        dates: 'August 2026',
+        city: 'New York',
+      },
+      [
+        { field: 'accommodation', value: 'The Liberty Hotel · 215 Chestnut St' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      dates: 'August 2026',
+      city: 'New York',
+      focus: [],
+      people: [],
+      priorities: [],
+      accommodationName: 'The Liberty Hotel',
+      accommodationAddress: '215 Chestnut St',
+    });
+  });
+
+  test('applies accommodation name-only chips', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+      },
+      [
+        { field: 'accommodation', value: 'Ace Hotel' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      focus: [],
+      people: [],
+      priorities: [],
+      accommodationName: 'Ace Hotel',
+    });
+  });
+});
