@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJAVoetfeipBIR1a1z3FTGCoY",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJAVoetfeipBIR1a1z3FTGCoY",
+    "name": "Mercat de la Boqueria",
+    "city": "Barcelona",
+    "country": "Spain",
+    "address": "La Rambla, 91, Ciutat Vella, 08001 Barcelona, Spain",
+    "type": "market",
+    "subtype": "food_market",
+    "rating": 4.5,
+    "review_count": 209590,
+    "phone": "934 13 23 03",
+    "website": "https://www.boqueria.barcelona/",
+    "hours": [
+      "Monday: 8:00 AM – 8:30 PM",
+      "Tuesday: 8:00 AM – 8:30 PM",
+      "Wednesday: 8:00 AM – 8:30 PM",
+      "Thursday: 8:00 AM – 8:30 PM",
+      "Friday: 8:00 AM – 8:30 PM",
+      "Saturday: 8:00 AM – 8:30 PM",
+      "Sunday: Closed"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Las Ramblas: Mercat de la Boqueria is directly on La Rambla and remains one of the promenade’s defining edge institutions.",
+    "contextKey": "section:great-streets:las-ramblas",
+    "discoveredAt": "2026-04-23T11:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "The market hall that turns La Rambla from promenade into urban interior.",
+    "blocks": []
+  }
+}

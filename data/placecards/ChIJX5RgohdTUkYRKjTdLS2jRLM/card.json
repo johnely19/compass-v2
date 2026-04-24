@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJX5RgohdTUkYRKjTdLS2jRLM",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJX5RgohdTUkYRKjTdLS2jRLM",
+    "name": "Magasin du Nord",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "address": "Kongens Nytorv 13, 1095 København, Denmark",
+    "type": "department_store",
+    "subtype": "department_store",
+    "rating": 4.2,
+    "review_count": 16985,
+    "phone": "33 11 44 33",
+    "website": "http://www.magasin.dk/sider/om-magasin/find-forretning/kongensnytorv.html",
+    "hours": [
+      "Monday: 10:00 AM – 8:00 PM",
+      "Tuesday: 10:00 AM – 8:00 PM",
+      "Wednesday: 10:00 AM – 8:00 PM",
+      "Thursday: 10:00 AM – 8:00 PM",
+      "Friday: 10:00 AM – 8:00 PM",
+      "Saturday: 10:00 AM – 8:00 PM",
+      "Sunday: 10:00 AM – 8:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Strøget: Magasin du Nord anchors the pedestrian street at Kongens Nytorv with a major active frontage and food-hall edge.",
+    "contextKey": "section:great-streets:stroget",
+    "discoveredAt": "2026-04-23T11:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A classic department-store anchor at the eastern threshold of Strøget.",
+    "blocks": []
+  }
+}

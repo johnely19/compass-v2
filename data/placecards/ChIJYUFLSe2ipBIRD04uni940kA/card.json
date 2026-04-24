@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJYUFLSe2ipBIRD04uni940kA",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJYUFLSe2ipBIRD04uni940kA",
+    "name": "Casa Batlló",
+    "city": "Barcelona",
+    "country": "Spain",
+    "address": "Pg. de Gràcia, 43, Eixample, 08007 Barcelona, Spain",
+    "type": "museum",
+    "subtype": "historical_landmark",
+    "rating": 4.7,
+    "review_count": 203161,
+    "phone": "932 16 03 06",
+    "website": "https://www.casabatllo.es/",
+    "hours": [
+      "Monday: 8:30 AM – 10:30 PM",
+      "Tuesday: 8:30 AM – 10:30 PM",
+      "Wednesday: 8:30 AM – 10:30 PM",
+      "Thursday: 8:30 AM – 10:30 PM",
+      "Friday: 8:30 AM – 10:30 PM",
+      "Saturday: 8:30 AM – 10:30 PM",
+      "Sunday: 8:30 AM – 10:30 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Passeig de Gràcia: Casa Batlló sits directly on the boulevard and is one of the core façades that make the street itself the destination.",
+    "contextKey": "section:great-streets:passeig-de-gracia",
+    "discoveredAt": "2026-04-23T11:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "An essential Passeig de Gràcia frontage — Gaudí as street wall, not isolated monument.",
+    "blocks": []
+  }
+}
