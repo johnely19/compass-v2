@@ -1064,9 +1064,12 @@ a:hover {
   transition: box-shadow var(--transition-base), transform var(--transition-base);
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.place-card:hover {
+.place-card:hover,
+[role="link"]:focus-visible > .place-card,
+[role="link"]:hover > .place-card {
   box-shadow: var(--card-shadow-hover);
   transform: translateY(-2px);
 }
