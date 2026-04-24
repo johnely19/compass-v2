@@ -2097,6 +2097,78 @@ a:hover {
   border-bottom: 2px solid var(--accent);
 }
 
+.review-monitoring-history {
+  display: grid;
+  gap: 12px;
+  margin-bottom: var(--space-lg);
+}
+
+.review-monitoring-history-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.review-monitoring-history-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.review-monitoring-history-title {
+  margin: 4px 0 0;
+  font-size: 1rem;
+}
+
+.review-monitoring-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.review-monitoring-history-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+}
+
+.review-monitoring-history-copy {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.review-monitoring-history-copy strong {
+  color: var(--text-primary);
+}
+
+.review-monitoring-history-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--accent);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.review-monitoring-history-link:hover {
+  text-decoration: underline;
+}
+
 .review-list {
   display: flex;
   flex-direction: column;
