@@ -123,12 +123,7 @@ function extractChangesFromSummary(summary: string): { movers: number; closures:
   return { movers, closures, openings };
 }
 
-export async function GET() {
-  const currentUser = await getCurrentUser();
-  if (!currentUser || !currentUser.isOwner) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-  }
-
+export async function getAdminDiscoData() {
   // --- Load cron jobs ---
   const cronPath = path.join(homeDir(), '.openclaw', 'cron', 'jobs.json');
   let allJobs: CronJob[] = [];
@@ -168,7 +163,6 @@ export async function GET() {
 
     runsToday += todayRuns.length;
 
-    // Only count as an active error if the job currently has consecutive errors
     const consecutiveErrs = job.state?.consecutiveErrors || 0;
     if (consecutiveErrs > 0) {
       errorsToday += consecutiveErrs;
@@ -178,18 +172,12 @@ export async function GET() {
     }
 
     for (const run of todayRuns) {
-      if (false) { // historical errors no longer counted — use consecutiveErrors instead
-        errorsToday++;
-      }
-
       if (run.summary) {
-        // Count verified discoveries from discovery jobs
         const isDiscoveryJob = job.name.toLowerCase().includes('discovery') ||
           job.name.toLowerCase().includes('source scout');
         if (isDiscoveryJob) {
           placesScannedToday += countVerifiedInSummary(run.summary);
         }
-        // Count changes from delta monitor
         if (job.name.toLowerCase().includes('delta monitor') || job.name.toLowerCase().includes('disco places')) {
           const { movers, closures, openings } = extractChangesFromSummary(run.summary);
           changesDetectedToday += movers + closures + openings;
@@ -198,7 +186,6 @@ export async function GET() {
     }
   }
 
-  // --- Count discoveries pushed today (from user Blob) ---
   let discoveriesToday = 0;
   const monitoring: MonitoringDigestResponse = {
     total: 0,
@@ -251,7 +238,6 @@ export async function GET() {
       .slice(0, 6);
   } catch { /* Blob unavailable in dev */ }
 
-  // --- Build job summary for UI ---
   const jobSummary = discoJobs.map(job => ({
     id: job.id,
     name: job.name,
@@ -262,7 +248,7 @@ export async function GET() {
     lastError: job.state?.lastError || null,
   }));
 
-  return NextResponse.json({
+  return {
     lastRunAtMs,
     lastRunStatus,
     lastJobName,
@@ -274,5 +260,14 @@ export async function GET() {
     errorDetails,
     monitoring,
     jobs: jobSummary,
-  });
+  };
+}
+
+export async function GET() {
+  const currentUser = await getCurrentUser();
+  if (!currentUser || !currentUser.isOwner) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  return NextResponse.json(await getAdminDiscoData());
 }

@@ -111,16 +111,7 @@ function collectUsage(): UsageEntry[] {
   return entries.sort((a, b) => a.ts - b.ts);
 }
 
-export async function GET() {
-  // Owner-only
-  const cookieStore = await cookies();
-  const userId = cookieStore.get(COOKIE_NAME)?.value;
-  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-
-  const users = loadUsers();
-  const user = users.users[userId];
-  if (!user?.isOwner) return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-
+export async function getAdminTokensData() {
   const now = Date.now();
   const h2Ago = now - 2 * 3600000;
   const entries = collectUsage();
@@ -179,5 +170,18 @@ export async function GET() {
       pct: total24h > 0 ? Math.round((tokens / total24h) * 100) : 0,
     }));
 
-  return NextResponse.json({ total24h, hourly, fiveMin, agents });
+  return { total24h, hourly, fiveMin, agents };
+}
+
+export async function GET() {
+  // Owner-only
+  const cookieStore = await cookies();
+  const userId = cookieStore.get(COOKIE_NAME)?.value;
+  if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+
+  const users = loadUsers();
+  const user = users.users[userId];
+  if (!user?.isOwner) return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+
+  return NextResponse.json(await getAdminTokensData());
 }

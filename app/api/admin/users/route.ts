@@ -22,13 +22,7 @@ interface UserWithData {
 
 export const dynamic = 'force-dynamic';
 
-export async function GET() {
-  const currentUser = await getCurrentUser();
-
-  if (!currentUser || !currentUser.isOwner) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-  }
-
+export async function getAdminUsersData() {
   const users = getAllUsers();
   const usersWithData: UserWithData[] = await Promise.all(
     users.map(async (user) => {
@@ -52,5 +46,15 @@ export async function GET() {
     })
   );
 
-  return NextResponse.json({ users: usersWithData });
+  return { users: usersWithData };
+}
+
+export async function GET() {
+  const currentUser = await getCurrentUser();
+
+  if (!currentUser || !currentUser.isOwner) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  return NextResponse.json(await getAdminUsersData());
 }

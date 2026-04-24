@@ -135,6 +135,16 @@ interface UserWithData {
   } | null;
 }
 
+export interface AdminPageData {
+  agents: AgentInfo[];
+  stats: AgentHealthStats | null;
+  crons: CronJob[];
+  tokenData: TokenData | null;
+  users: UserWithData[];
+  discoActivity: DiscoActivityData | null;
+  workers: WorkerInfo[];
+}
+
 /* ---- Helpers ---- */
 
 function formatRelativeTime(ts: string | number | null): string {
@@ -212,15 +222,25 @@ function Section({ title, emoji, count, children }: {
 
 type AdminTab = 'overview' | 'crons';
 
-export default function AdminClient() {
-  const [agents, setAgents] = useState<AgentInfo[]>([]);
-  const [stats, setStats] = useState<AgentHealthStats | null>(null);
-  const [crons, setCrons] = useState<CronJob[]>([]);
-  const [tokenData, setTokenData] = useState<TokenData | null>(null);
-  const [users, setUsers] = useState<UserWithData[]>([]);
-  const [discoActivity, setDiscoActivity] = useState<DiscoActivityData | null>(null);
-  const [workers, setWorkers] = useState<WorkerInfo[]>([]);
-  const [loading, setLoading] = useState(true);
+const EMPTY_ADMIN_PAGE_DATA: AdminPageData = {
+  agents: [],
+  stats: null,
+  crons: [],
+  tokenData: null,
+  users: [],
+  discoActivity: null,
+  workers: [],
+};
+
+export default function AdminClient({ initialData = EMPTY_ADMIN_PAGE_DATA }: { initialData?: AdminPageData }) {
+  const [agents, setAgents] = useState<AgentInfo[]>(initialData.agents);
+  const [stats, setStats] = useState<AgentHealthStats | null>(initialData.stats);
+  const [crons, setCrons] = useState<CronJob[]>(initialData.crons);
+  const [tokenData, setTokenData] = useState<TokenData | null>(initialData.tokenData);
+  const [users, setUsers] = useState<UserWithData[]>(initialData.users);
+  const [discoActivity, setDiscoActivity] = useState<DiscoActivityData | null>(initialData.discoActivity);
+  const [workers, setWorkers] = useState<WorkerInfo[]>(initialData.workers);
+  const [loading, setLoading] = useState(() => initialData === EMPTY_ADMIN_PAGE_DATA);
   const [expandedUsers, setExpandedUsers] = useState<Set<string>>(new Set());
   const [activeTab, setActiveTab] = useState<AdminTab>('overview');
   const [resettingUser, setResettingUser] = useState<string | null>(null);

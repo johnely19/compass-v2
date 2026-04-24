@@ -84,22 +84,17 @@ function getHealth(job: CronJob): 'healthy' | 'warning' | 'error' | 'unknown' {
   return 'unknown';
 }
 
-export async function GET() {
-  const currentUser = await getCurrentUser();
-  if (!currentUser || !currentUser.isOwner) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-  }
-
+export async function getAdminCronsData() {
   const cronPath = path.join(homeDir(), '.openclaw', 'cron', 'jobs.json');
   if (!existsSync(cronPath)) {
-    return NextResponse.json({ jobs: [] });
+    return { jobs: [] };
   }
 
   let cronFile: { jobs: CronJob[] };
   try {
     cronFile = JSON.parse(readFileSync(cronPath, 'utf-8'));
   } catch {
-    return NextResponse.json({ jobs: [] });
+    return { jobs: [] };
   }
 
   const jobs = cronFile.jobs.map(job => ({
@@ -117,5 +112,14 @@ export async function GET() {
     lastError: job.state?.lastError || null,
   }));
 
-  return NextResponse.json({ jobs });
+  return { jobs };
+}
+
+export async function GET() {
+  const currentUser = await getCurrentUser();
+  if (!currentUser || !currentUser.isOwner) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  return NextResponse.json(await getAdminCronsData());
 }

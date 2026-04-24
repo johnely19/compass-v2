@@ -183,18 +183,13 @@ function loadWorkers(): Array<{
   return workers.slice(0, 10);
 }
 
-export async function GET() {
-  const currentUser = await getCurrentUser();
-  if (!currentUser || !currentUser.isOwner) {
-    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-  }
-
+export async function getAdminAgentsData() {
   const agents = loadAgents();
   const stats = loadStats();
   const workers = loadWorkers();
   const totalTokens24h = agents.reduce((sum, a) => sum + a.totalTokens, 0);
 
-  return NextResponse.json({
+  return {
     agents,
     stats: {
       totalAgents: agents.length,
@@ -205,5 +200,14 @@ export async function GET() {
       totalTokens24h,
     },
     workers,
-  });
+  };
+}
+
+export async function GET() {
+  const currentUser = await getCurrentUser();
+  if (!currentUser || !currentUser.isOwner) {
+    return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+  }
+
+  return NextResponse.json(await getAdminAgentsData());
 }
