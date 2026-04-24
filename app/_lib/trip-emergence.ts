@@ -289,6 +289,28 @@ export function buildMonitoringTaskFromSummary(
   };
 }
 
+export function upsertMonitoringTask(
+  tasks: MonitoringTaskLike[] | undefined,
+  nextTask: MonitoringTaskLike,
+): MonitoringTaskLike[] {
+  const existingTasks = tasks ?? [];
+  const updatedAt = nextTask.updatedAt ?? new Date().toISOString();
+  const next = existingTasks
+    .filter((task) => task.id !== nextTask.id)
+    .map((task) => {
+      if (nextTask.status === 'open' && task.status === 'open') {
+        return {
+          ...task,
+          status: 'done' as const,
+          updatedAt,
+        };
+      }
+      return task;
+    });
+
+  return [nextTask, ...next];
+}
+
 export function resolveOpenMonitoringTask(
   tasks: MonitoringTaskLike[] | undefined,
   summary: MonitoringActionSummary | null | undefined,

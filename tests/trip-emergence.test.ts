@@ -9,6 +9,7 @@ import {
   diffTripEmergenceAttributes,
   resolveOpenMonitoringTask,
   resolveVisibleMonitoringSummary,
+  upsertMonitoringTask,
   summarizeMonitoringActionPrompts,
 } from '../app/_lib/trip-emergence';
 
@@ -253,6 +254,59 @@ describe('buildMonitoringTaskFromSummary', () => {
       createdAt: '2026-04-24T02:00:00.000Z',
       updatedAt: '2026-04-24T02:00:00.000Z',
     });
+  });
+});
+
+describe('upsertMonitoringTask', () => {
+  test('closes earlier open tasks when a new open monitoring task replaces them', () => {
+    const tasks = upsertMonitoringTask([
+      {
+        id: 'task-old',
+        label: 'Backup move ready',
+        detail: 'Old detail',
+        action: 'saved',
+        tone: 'critical',
+        status: 'open',
+        source: 'monitoring',
+        createdAt: '2026-04-24T01:00:00.000Z',
+        updatedAt: '2026-04-24T01:00:00.000Z',
+      },
+    ], {
+      id: 'task-new',
+      label: 'Review move ready',
+      detail: 'New detail',
+      action: 'review',
+      tone: 'notable',
+      status: 'open',
+      source: 'monitoring',
+      createdAt: '2026-04-24T02:00:00.000Z',
+      updatedAt: '2026-04-24T02:00:00.000Z',
+    });
+
+    assert.deepEqual(tasks, [
+      {
+        id: 'task-new',
+        label: 'Review move ready',
+        detail: 'New detail',
+        action: 'review',
+        tone: 'notable',
+        status: 'open',
+        source: 'monitoring',
+        createdAt: '2026-04-24T02:00:00.000Z',
+        updatedAt: '2026-04-24T02:00:00.000Z',
+      },
+      {
+        id: 'task-old',
+        label: 'Backup move ready',
+        detail: 'Old detail',
+        action: 'saved',
+        tone: 'critical',
+        status: 'done',
+        source: 'monitoring',
+        createdAt: '2026-04-24T01:00:00.000Z',
+        updatedAt: '2026-04-24T02:00:00.000Z',
+      },
+    ]);
   });
 });
 

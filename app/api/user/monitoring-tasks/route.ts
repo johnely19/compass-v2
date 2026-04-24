@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getCurrentUser } from '../../../_lib/user';
 import { getWritableUserManifest } from '../../../_lib/effective-user-data';
 import { setUserData } from '../../../_lib/user-data';
+import { upsertMonitoringTask } from '../../../_lib/trip-emergence';
 import type { MonitoringTask } from '../../../_lib/types';
 
 export const dynamic = 'force-dynamic';
@@ -52,10 +53,7 @@ export async function POST(request: NextRequest) {
 
     contexts[index] = {
       ...context,
-      monitoringTasks: [
-        nextTask,
-        ...existingTasks.filter((entry) => entry.id !== nextTask.id),
-      ],
+      monitoringTasks: upsertMonitoringTask(existingTasks, nextTask) as MonitoringTask[],
     };
 
     await setUserData(user.id, 'manifest', {
