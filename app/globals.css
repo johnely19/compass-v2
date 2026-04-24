@@ -482,6 +482,38 @@ a:hover {
   pointer-events: none;
 }
 
+.section-attr-pill-sub {
+  font-size: 0.7rem;
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+/* Transient landing chips row: visually distinct from durable emergence details */
+.landing-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed rgba(99, 179, 237, 0.25);
+}
+
+.section-attr-pill-landing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 0.73rem;
+  font-weight: 500;
+  background: rgba(144, 205, 244, 0.12);
+  color: rgba(49, 130, 206, 0.75);
+  border: 1px solid rgba(144, 205, 244, 0.3);
+  animation: attrPillLand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+             attrPillFade 2.5s ease 0.5s both;
+  pointer-events: none;
+}
+
 .section-header {
   display: flex;
   align-items: flex-start;
@@ -3919,6 +3951,24 @@ body {
 .tpw-notes-expand-purpose {
   font-size: 0.8rem;
   color: var(--text-secondary);
+}
+.tpw-notes-monitoring-lead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-xs);
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent, #f59e0b);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+.tpw-notes-monitoring-lead-icon {
+  font-size: 0.9rem;
+}
+.tpw-notes-monitoring-lead-text {
+  font-weight: 500;
 }
 .tpw-notes-expand-person {
   font-size: 0.8rem;

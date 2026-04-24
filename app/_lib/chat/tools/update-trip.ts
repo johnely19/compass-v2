@@ -36,6 +36,8 @@ export async function updateTrip(userId: string, input: UpdateTripInput): Promis
       ...(input.label && { label: input.label }),
       ...(input.emoji && { emoji: input.emoji }),
       ...(input.focus && { focus: input.focus }),
+      ...(input.accommodationName && { accommodationName: input.accommodationName }),
+      ...(input.accommodationAddress && { accommodationAddress: input.accommodationAddress }),
     };
 
     manifest.contexts[idx] = updated;

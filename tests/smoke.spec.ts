@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const PAGES = ['/', '/placecards', '/hot', '/review', '/admin'];
+const PAGES = ['/', '/chat', '/placecards', '/hot', '/review', '/admin'];
 
 test.describe('Page load and console error tests', () => {
   test.beforeEach(async ({ page }) => {

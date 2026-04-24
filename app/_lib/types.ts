@@ -60,9 +60,12 @@ export interface Context {
   dates?: string;
   parentTrip?: string;  // for outings nested in a trip
   focus: string[];      // "food", "jazz", "architecture"
+  priorities?: string[];
   active: boolean;
   status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
   anchor?: ContextAnchor;  // geographic anchor for proximity sorting
+  accommodationName?: string;
+  accommodationAddress?: string;
 }
 
 export interface UserManifest {
@@ -233,6 +236,9 @@ export interface ChatMessage {
   content: string;
   timestamp: string;
 }
+
+// Tools that trigger trip emergence events
+export type ToolUsed = 'create-context' | 'update-trip' | 'set-active-context';
 
 export interface UserChat {
   messages: ChatMessage[];

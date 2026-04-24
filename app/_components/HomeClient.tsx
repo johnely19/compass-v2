@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Context, Discovery } from '../_lib/types';
@@ -10,6 +10,7 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
+import { applyTripAttributeChips, buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildTripMonitoringHighlights, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -257,6 +258,8 @@ export default function HomeClient({
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
   const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
   const [, setTriageVersion] = useState(0);
+  const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
+  const digestHydratedContextsRef = useRef<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -476,6 +479,57 @@ export default function HomeClient({
     }
   }, [activeKey, broadcastActiveContext]);
 
+  const visibleDigestItems = useMemo(
+    () => digestItems.filter(item => item.contextKey === activeKey),
+    [digestItems, activeKey],
+  );
+
+  useEffect(() => {
+    if (!activeKey) return;
+
+    const entryIds = visibleDigestItems.map(item => item.entryId);
+    const hydrated = digestHydratedContextsRef.current.has(activeKey);
+
+    if (!hydrated) {
+      seenDigestEntryIdsRef.current[activeKey] = entryIds;
+      digestHydratedContextsRef.current.add(activeKey);
+      return;
+    }
+
+    if (visibleDigestItems.length === 0) {
+      seenDigestEntryIdsRef.current[activeKey] = [];
+      return;
+    }
+
+    const previousEntryIds = seenDigestEntryIdsRef.current[activeKey] ?? [];
+    const newChips = buildIntelligenceAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+    });
+
+    seenDigestEntryIdsRef.current[activeKey] = entryIds;
+
+    if (newChips.length === 0) return;
+
+    setAttachingAttrs(prev => ({
+      ...prev,
+      [activeKey]: [...(prev[activeKey] ?? []), ...newChips],
+    }));
+
+    const timer = setTimeout(() => {
+      setAttachingAttrs(prev => {
+        const next = { ...prev };
+        const remaining = (next[activeKey] ?? []).filter(attr => !newChips.some(chip => chip.field === attr.field && chip.value === attr.value));
+        if (remaining.length > 0) next[activeKey] = remaining;
+        else delete next[activeKey];
+        return next;
+      });
+    }, 3200);
+
+    return () => clearTimeout(timer);
+  }, [activeKey, visibleDigestItems]);
+
   if (contexts.length === 0) {
     return (
       <main className="page focused-page">
@@ -493,12 +547,52 @@ export default function HomeClient({
   }
 
   const ctx = contexts.find(c => c.key === activeKey) || contexts[0]!;
+  const landingAttrs = attachingAttrs[ctx.key] ?? [];
+  const optimisticTrip = ctx.type === 'trip'
+    ? applyTripAttributeChips({
+        key: ctx.key,
+        label: ctx.label,
+        type: ctx.type,
+        emoji: ctx.emoji,
+        dates: ctx.dates,
+        city: ctx.city,
+        focus: ctx.focus,
+        purpose: (ctx as unknown as Record<string, unknown>).purpose as string | undefined,
+        people: (ctx as unknown as Record<string, unknown>).people as Array<{ name: string; relation?: string }> | undefined,
+        priorities: (ctx as unknown as Record<string, unknown>).priorities as string[] | undefined,
+        base: (ctx as unknown as Record<string, unknown>).base as { address?: string; host?: string; zone?: string } | undefined,
+        accommodationName: (ctx as unknown as Record<string, unknown>).accommodationName as string | undefined,
+        accommodationAddress: (ctx as unknown as Record<string, unknown>).accommodationAddress as string | undefined,
+        anchorExperiences: (ctx as unknown as Record<string, unknown>).anchor_experiences as Array<{ name: string; type?: string; note?: string }> | undefined,
+        neighbourhoodPreferences: (ctx as unknown as Record<string, unknown>).neighbourhoodPreferences as string[] | undefined,
+      } satisfies TripEmergenceSnapshot, landingAttrs)
+    : null;
+  const effectiveCtx = optimisticTrip
+    ? {
+        ...ctx,
+        dates: optimisticTrip.dates,
+        city: optimisticTrip.city,
+        focus: optimisticTrip.focus,
+        priorities: optimisticTrip.priorities,
+        accommodationName: optimisticTrip.accommodationName,
+        accommodationAddress: optimisticTrip.accommodationAddress,
+        anchorExperiences: optimisticTrip.anchorExperiences,
+        neighbourhoodPreferences: optimisticTrip.neighbourhoodPreferences,
+      }
+    : ctx;
+  const monitoringHighlights = buildTripMonitoringHighlights({
+    contextKey: ctx.key,
+    digestItems: visibleDigestItems,
+  });
+  const monitoringPrompts = buildMonitoringActionPrompts({
+    contextKey: ctx.key,
+    digestItems: visibleDigestItems,
+  });
   const discoveries = discoveryMap[ctx.key] ?? [];
   const counts = mounted ? (contextCounts[ctx.key] ?? { saved: 0, dismissed: 0, resurfaced: 0 }) : { saved: 0, dismissed: 0, resurfaced: 0 };
-  const naturalDate = formatDateNatural(ctx.dates);
-  const description = buildDescription(ctx);
+  const naturalDate = formatDateNatural(effectiveCtx.dates);
+  const description = buildDescription(effectiveCtx);
   const isEmerging = emergingKeys.has(ctx.key);
-  const landingAttrs = attachingAttrs[ctx.key] ?? [];
 
   return (
     <main className="page focused-page">
@@ -545,10 +639,57 @@ export default function HomeClient({
                 <div className="section-desc-trip">{description}</div>
               )}
               {landingAttrs.length > 0 && (
+                <div className="landing-chips-row">
+                  {landingAttrs.map(attr => {
+                    const icon = attr.field === 'dates'
+                      ? '📅'
+                      : attr.field === 'city'
+                        ? '📍'
+                        : attr.field === 'purpose'
+                          ? '🎯'
+                          : attr.field === 'people'
+                            ? '👥'
+                            : attr.field === 'intelligence'
+                              ? '🛰️'
+                              : attr.field === 'priorities'
+                                ? '⭐'
+                                : attr.field === 'accommodation'
+                                  ? '🏨'
+                                : '🏷';
+                    return (
+                      <span key={`${attr.field}:${attr.value}`} className="section-attr-pill-landing">
+                        {icon} {attr.value}
+                      </span>
+                    );
+                  })}
+                </div>
+              )}
+              {effectiveCtx.priorities && effectiveCtx.priorities.length > 0 && ctx.type === 'trip' && (
                 <div className="section-attr-pills">
-                  {landingAttrs.map(attr => (
-                    <span key={attr.field} className="section-attr-pill">
-                      {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
+                  {effectiveCtx.priorities.map(p => (
+                    <span key={p} className="section-attr-pill">
+                      ⭐ {p}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {ctx.type === 'trip' && (() => {
+                const anchors = (effectiveCtx as unknown as Record<string, unknown>).anchorExperiences as Array<{ name: string; type?: string }> | undefined;
+                return anchors && anchors.length > 0 ? (
+                  <div className="section-attr-pills">
+                    {anchors.slice(0, 2).map((a, i) => (
+                      <span key={i} className="section-attr-pill">
+                        ⚓ {a.type ? `${a.name} (${a.type})` : a.name}
+                      </span>
+                    ))}
+                  </div>
+                ) : null;
+              })()}
+              {(effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences && (effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences.length > 0 && ctx.type === 'trip' && (
+                <div className="section-attr-pills">
+                  {((effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences as string[]).slice(0, 2).map(n => (
+                    <span key={n} className="section-attr-pill">
+                      📍 {n}
                     </span>
                   ))}
                 </div>
@@ -588,8 +729,11 @@ export default function HomeClient({
                 accommodation={contextMeta[ctx.key]?.accommodation as never}
                 bookingStatus={contextMeta[ctx.key]?.bookingStatus}
                 savedCount={counts.saved}
-                purpose={raw.purpose as string | undefined}
-                people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                purpose={optimisticTrip?.purpose ?? raw.purpose as string | undefined}
+                people={optimisticTrip?.people ?? raw.people as Array<{ name: string; relation?: string }> | undefined}
+                base={optimisticTrip?.base ?? raw.base as { address?: string; host?: string; zone?: string } | undefined}
+                monitoringHighlights={monitoringHighlights}
+                monitoringPrompts={monitoringPrompts}
               />
             </div>
           );

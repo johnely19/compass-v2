@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJd9RJT_aipBIRbit5aqjvWnM",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJd9RJT_aipBIRbit5aqjvWnM",
+    "name": "Virreina Palace",
+    "city": "Barcelona",
+    "country": "Spain",
+    "address": "La Rambla, 99, Ciutat Vella, 08002 Barcelona, Spain",
+    "type": "museum",
+    "subtype": "cultural_center",
+    "rating": 4.5,
+    "review_count": 2542,
+    "phone": "933 16 10 00",
+    "website": "http://ajuntament.barcelona.cat/lavirreina",
+    "hours": [
+      "Monday: Closed",
+      "Tuesday: 11:00 AM – 8:00 PM",
+      "Wednesday: 11:00 AM – 8:00 PM",
+      "Thursday: 11:00 AM – 8:00 PM",
+      "Friday: 11:00 AM – 8:00 PM",
+      "Saturday: 11:00 AM – 8:00 PM",
+      "Sunday: 11:00 AM – 8:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for the Las Ramblas section: La Virreina is directly on La Rambla and functions as one of the promenade's serious civic/cultural interiors.",
+    "contextKey": "section:great-streets:las-ramblas",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "Street-defining image centre on Las Ramblas — a palace that gives the promenade cultural weight.",
+    "blocks": []
+  }
+}

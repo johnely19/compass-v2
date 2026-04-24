@@ -1,9 +1,18 @@
 'use client';
 
 import { useState, useRef, useEffect, useCallback } from 'react';
+import { usePathname } from 'next/navigation';
 import type { ChatMessage } from '../_lib/types';
 import type { ChatTarget } from '../_lib/chat-target';
 import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
+import {
+  computeChangedAttributes,
+  computeNewContexts,
+  extractCreateContextUsed,
+  extractUpdateTripUsed,
+  parseToolEvent,
+} from '../_lib/chat/emergence-helpers';
+import type { TripEmergenceSnapshot } from '../_lib/trip-emergence';
 import styles from './ChatWidget.module.css';
 
 /**
@@ -43,6 +52,9 @@ function formatTime(isoString: string): string {
 }
 
 export default function ChatWidget() {
+  const pathname = usePathname();
+  const isDedicatedChatPage = pathname === '/chat';
+
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
@@ -50,7 +62,7 @@ export default function ChatWidget() {
   const [streamContent, setStreamContent] = useState('');
   const [toolStatus, setToolStatus] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const [chatExpanded, setChatExpanded] = useState(false);
+  const [chatExpanded, setChatExpanded] = useState(isDedicatedChatPage);
 
   // Active context key — synced from homepage
   const activeContextKeyRef = useRef<string | null>(null);
@@ -67,7 +79,7 @@ export default function ChatWidget() {
   const createContextUsed = useRef(false);
   const updateTripUsed = useRef<string | null>(null);
   const preContextKeys = useRef<Set<string>>(new Set());
-  const preContextSnapshots = useRef<Record<string, { dates?: string; city?: string; focus?: string[] }>>({});
+  const preContextSnapshots = useRef<Record<string, TripEmergenceSnapshot>>({});
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -190,6 +202,13 @@ export default function ChatWidget() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages, streamContent, toolStatus]);
 
+  // Open chat by default on the dedicated /chat page
+  useEffect(() => {
+    if (isDedicatedChatPage) {
+      setChatExpanded(true);
+    }
+  }, [isDedicatedChatPage]);
+
   // Focus input on mount
   useEffect(() => {
     inputRef.current?.focus();
@@ -212,6 +231,7 @@ export default function ChatWidget() {
     const decoder = new TextDecoder();
     let accumulated = '';
     let buffer = '';
+    const toolEvents: Array<{ tool: string; toolResult?: string; contextKey?: string }> = [];
 
     try {
       while (true) {
@@ -227,6 +247,13 @@ export default function ChatWidget() {
           const data = line.slice(6).trim();
           if (data === '[DONE]') continue;
 
+          const toolEvent = parseToolEvent(data);
+          if (toolEvent) {
+            toolEvents.push(toolEvent);
+            const label = TOOL_LABELS[toolEvent.tool] || `⚙️ Using ${toolEvent.tool}…`;
+            setToolStatus(label);
+          }
+
           try {
             const parsed = JSON.parse(data);
 
@@ -234,17 +261,6 @@ export default function ChatWidget() {
               accumulated += parsed.content;
               setStreamContent(accumulated);
               setToolStatus(null);
-            }
-
-            if (parsed.tool) {
-              const label = TOOL_LABELS[parsed.tool] || `⚙️ Using ${parsed.tool}…`;
-              setToolStatus(label);
-              if (parsed.tool === 'create-context') {
-                createContextUsed.current = true;
-              }
-              if (parsed.tool === 'update-trip') {
-                updateTripUsed.current = '__any__';
-              }
             }
 
             if (parsed.toolResult && typeof window !== 'undefined') {
@@ -273,6 +289,9 @@ export default function ChatWidget() {
       reader.releaseLock();
     }
 
+    createContextUsed.current = extractCreateContextUsed(toolEvents);
+    updateTripUsed.current = extractUpdateTripUsed(toolEvents);
+
     return accumulated;
   }, []);
 
@@ -296,11 +315,26 @@ export default function ChatWidget() {
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (data?.contexts) {
-          const ctxs = data.contexts as Array<{ key: string; dates?: string; city?: string; focus?: string[] }>;
+          const ctxs = data.contexts as TripEmergenceSnapshot[];
           preContextKeys.current = new Set(ctxs.map(c => c.key));
-          const snapshots: Record<string, { dates?: string; city?: string; focus?: string[] }> = {};
+          const snapshots: Record<string, TripEmergenceSnapshot> = {};
           for (const c of ctxs) {
-            snapshots[c.key] = { dates: c.dates, city: c.city, focus: c.focus };
+            snapshots[c.key] = {
+              key: c.key,
+              label: c.label,
+              type: c.type,
+              emoji: c.emoji,
+              dates: c.dates,
+              city: c.city,
+              focus: c.focus,
+              purpose: c.purpose,
+              people: c.people,
+              priorities: c.priorities,
+              base: c.base,
+              accommodationName: c.accommodationName,
+              accommodationAddress: c.accommodationAddress,
+              anchorExperiences: (c as unknown as Record<string, unknown>).anchor_experiences as Array<{ name: string; type?: string; note?: string }> | undefined,
+            };
           }
           preContextSnapshots.current = snapshots;
         }
@@ -375,9 +409,9 @@ export default function ChatWidget() {
               const res = await fetch('/api/contexts');
               if (res.ok) {
                 const data = await res.json();
-                const allCtxs = data.contexts as Array<{ key: string; label: string; type: string; emoji: string; dates?: string; city?: string; focus?: string[] }>;
+                const allCtxs = data.contexts as TripEmergenceSnapshot[];
 
-                const newCtxs = allCtxs.filter(c => !preContextKeys.current.has(c.key));
+                const newCtxs = computeNewContexts(preContextKeys.current, allCtxs);
                 for (const ctx of newCtxs) {
                   window.dispatchEvent(new CustomEvent('compass-trip-created', {
                     detail: { key: ctx.key, label: ctx.label, type: ctx.type, emoji: ctx.emoji },
@@ -390,19 +424,7 @@ export default function ChatWidget() {
 
                 if (updateTripUsed.current) {
                   for (const ctx of allCtxs) {
-                    const prev = preContextSnapshots.current[ctx.key];
-                    if (!prev) continue;
-                    const changedAttrs: Array<{ field: string; value: string }> = [];
-                    if (ctx.dates && ctx.dates !== prev.dates) {
-                      changedAttrs.push({ field: 'dates', value: ctx.dates });
-                    }
-                    if (ctx.city && ctx.city !== prev.city) {
-                      changedAttrs.push({ field: 'city', value: ctx.city });
-                    }
-                    const newFocus = (ctx.focus ?? []).filter(f => !(prev.focus ?? []).includes(f));
-                    if (newFocus.length > 0) {
-                      changedAttrs.push({ field: 'focus', value: newFocus.join(', ') });
-                    }
+                    const changedAttrs = computeChangedAttributes(preContextSnapshots.current[ctx.key], ctx);
                     if (changedAttrs.length > 0) {
                       window.dispatchEvent(new CustomEvent('compass-trip-attributes', {
                         detail: { key: ctx.key, attributes: changedAttrs },

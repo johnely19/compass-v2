@@ -30,6 +30,36 @@
         "title": "How to Walk It",
         "body": "Walk the full length. Jacobs is explicit: you have to walk a great street to understand it \u2014 the sequence, the proportions, how the edges change. Give it an hour minimum. Sit at a caf\u00e9 or on a bench midway. Notice what makes it feel alive.",
         "id": "block-walk-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJF7FPVAdhLxMR2qy4ik06IZE",
+        "name": "Doney Restaurant & Café",
+        "address": "Via Vittorio Veneto, 125, 00187 Roma RM, Italy",
+        "category": "café",
+        "rating": 3.9,
+        "why": "One of Via Veneto's classic hotel cafés, still sitting directly in the boulevard's theater of looking and being looked at. This is the seated street life Jacobs cares about, even if the glamour now feels more inherited than wild.",
+        "id": "place-vv-1"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJpduOjKphLxMRm7MPRmuuuKo",
+        "name": "Hotel Eden",
+        "address": "Via Ludovisi, 49, 00187 Roma RM, Italy",
+        "category": "hotel",
+        "rating": 4.7,
+        "why": "Just off Via Veneto at the top of the slope, this grande dame hotel helps explain the street's elegant edge condition. The luxury frontage and comings-and-goings keep the boulevard tied to Rome's old high-society geography.",
+        "id": "place-vv-2"
+      },
+      {
+        "type": "place",
+        "place_id": "ChIJb0X5yqthLxMRDQq8tS8qmtM",
+        "name": "Museo e Cripta dei Cappuccini",
+        "address": "Via Vittorio Veneto, 27, 00187 Roma RM, Italy",
+        "category": "museum",
+        "rating": 4.6,
+        "why": "At the Piazza Barberini end of Via Veneto, this odd and unforgettable museum gives the boulevard a distinctly Roman institutional anchor. It adds the kind of memorable termination and symbolic weight Jacobs notices in great streets.",
+        "id": "place-vv-3"
       }
     ]
   },
@@ -38,6 +68,7 @@
     "author": "Allan B. Jacobs",
     "visited": false,
     "country": "Italy",
-    "highlights": []
+    "highlights": ["Doney Restaurant & Café", "Hotel Eden", "Museo e Cripta dei Cappuccini"],
+    "placesUpdatedAt": "2026-04-14T15:36:00.000Z"
   }
 }

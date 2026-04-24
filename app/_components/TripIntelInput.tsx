@@ -8,6 +8,9 @@ interface TripIntelInputProps {
   inlineMode?: boolean; // always-visible transparent input row
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  base?: { address?: string; host?: string; zone?: string };
+  monitoringHighlights?: string[];
+  monitoringPrompts?: Array<{ label: string; detail: string }>;
 }
 
 interface SaveResult {
@@ -17,7 +20,7 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, base, monitoringHighlights = [], monitoringPrompts = [] }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -75,6 +78,8 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
 
   // Inline mode: always-visible single-line input (the "Trip Notes" row in the widget)
   if (inlineMode) {
+    const leadMonitoringHighlight = monitoringHighlights[0];
+    const remainingMonitoringHighlights = monitoringHighlights.slice(1);
     return (
       <div className="tpw-notes-row">
         <span className="tpw-label">Trip Notes</span>
@@ -83,6 +88,13 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
         </button>
         <div className={`tpw-notes-expand ${expandOpen ? 'open' : ''}`}>
           <div className="tpw-notes-expand-body">
+            {/* Lead monitoring signal — most important, show first */}
+            {leadMonitoringHighlight && (
+              <div className="tpw-notes-monitoring-lead">
+                <span className="tpw-notes-monitoring-lead-icon">👁</span>
+                <span className="tpw-notes-monitoring-lead-text">Watch now: {leadMonitoringHighlight}</span>
+              </div>
+            )}
             {purpose && <div className="tpw-notes-expand-purpose">Purpose: {purpose}</div>}
             {people && people.length > 0 && (
               <div>
@@ -92,6 +104,38 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
                     {p.relation && <span className="tpw-notes-expand-person-rel">({p.relation})</span>}
                   </span>
                 ))}
+              </div>
+            )}
+            {base && (base.address || base.host || base.zone) && (
+              <div className="tpw-notes-expand-base">
+                <span className="tpw-notes-expand-base-icon">🏠</span>
+                <span className="tpw-notes-expand-base-text">
+                  {base.address}
+                  {base.host && <span className="tpw-notes-expand-base-host"> ({base.host})</span>}
+                  {base.zone && <span className="tpw-notes-expand-base-zone"> · {base.zone}</span>}
+                </span>
+              </div>
+            )}
+            {remainingMonitoringHighlights.length > 0 && (
+              <div className="tpw-notes-monitoring">
+                <div className="tpw-notes-monitoring-label">Watch changes</div>
+                <div className="tpw-notes-monitoring-list">
+                  {remainingMonitoringHighlights.map((item, i) => (
+                    <div key={`${i}:${item}`} className="tpw-notes-monitoring-item">{item}</div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {monitoringPrompts.length > 0 && (
+              <div className="tpw-notes-monitoring">
+                <div className="tpw-notes-monitoring-label">Suggested next move</div>
+                <div className="tpw-notes-monitoring-list">
+                  {monitoringPrompts.map((item, i) => (
+                    <div key={`${i}:${item.label}`} className="tpw-notes-monitoring-item">
+                      <strong>{item.label}:</strong> {item.detail}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
             <button className="tpw-archive-btn" onClick={handleArchive} disabled={loading}>

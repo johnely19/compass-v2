@@ -1,0 +1,35 @@
+{
+  "place_id": "ChIJdTx2T-2ipBIRQM8Gwarzfik",
+  "source": "great-streets-monitor",
+  "identity": {
+    "place_id": "ChIJdTx2T-2ipBIRQM8Gwarzfik",
+    "name": "Casa Amatller",
+    "city": "Barcelona",
+    "country": "Spain",
+    "address": "Pg. de Gràcia, 41, Eixample, 08007 Barcelona, Spain",
+    "type": "museum",
+    "subtype": "historical_landmark",
+    "rating": 4.6,
+    "review_count": 4680,
+    "phone": "934 61 74 60",
+    "website": "https://amatller.org/",
+    "hours": [
+      "Monday: 10:00 AM – 7:00 PM",
+      "Tuesday: 10:00 AM – 7:00 PM",
+      "Wednesday: 10:00 AM – 7:00 PM",
+      "Thursday: 10:00 AM – 7:00 PM",
+      "Friday: 10:00 AM – 7:00 PM",
+      "Saturday: 10:00 AM – 7:00 PM",
+      "Sunday: 10:00 AM – 7:00 PM"
+    ]
+  },
+  "discovery": {
+    "text": "Verified for Passeig de Gràcia: Casa Amatller is one of the key modernista façades that makes the boulevard legible as architecture, patronage, and display.",
+    "contextKey": "section:great-streets:passeig-de-gracia",
+    "discoveredAt": "2026-04-04T23:29:00.000Z"
+  },
+  "narrative": {
+    "summary": "A core modernista house museum on Passeig de Gràcia's most important architectural block.",
+    "blocks": []
+  }
+}

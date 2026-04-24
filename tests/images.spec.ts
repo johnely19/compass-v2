@@ -67,7 +67,6 @@ test('review cards show preview images for the Ontario Cottage context', async (
 
 test('image-rich place cards expose at least three gallery images when available', async ({ page }) => {
   await page.goto(`/placecards/${IMAGE_RICH_PLACE_ID}`, { waitUntil: 'networkidle' });
-
   const galleryImages = page.locator('.place-detail-v2 .photo-gallery-item img');
   await expectLoadedGalleryImages(galleryImages, 3);
 });
