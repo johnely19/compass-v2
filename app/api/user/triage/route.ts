@@ -29,25 +29,33 @@ type ContextTriage = { triage: Record<string, TriageEntry>; seen?: Record<string
 type TriageStore = Record<string, ContextTriage>;
 
 async function loadServerStore(userId: string): Promise<TriageStore> {
-  const { blobs } = await list({ prefix: triageBlobPath(userId) });
-  if (blobs.length === 0) return {};
   try {
-    const b0 = blobs[0]; if (!b0) return {}; const res = await fetch(b0.url, { cache: 'no-store' });
-    if (!res.ok) return {};
-    return (await res.json()) as TriageStore;
+    const { blobs } = await list({ prefix: triageBlobPath(userId) });
+    if (blobs.length === 0) return {};
+    try {
+      const b0 = blobs[0]; if (!b0) return {}; const res = await fetch(b0.url, { cache: 'no-store' });
+      if (!res.ok) return {};
+      return (await res.json()) as TriageStore;
+    } catch {
+      return {};
+    }
   } catch {
     return {};
   }
 }
 
 async function saveServerStore(userId: string, store: TriageStore): Promise<void> {
-  // Delete old blob(s) first
-  const { blobs } = await list({ prefix: triageBlobPath(userId) });
-  await Promise.all(blobs.map(b => del(b.url)));
-  await put(triageBlobPath(userId), JSON.stringify(store), {
-    access: 'public',
-    addRandomSuffix: false,
-  });
+  try {
+    // Delete old blob(s) first
+    const { blobs } = await list({ prefix: triageBlobPath(userId) });
+    await Promise.all(blobs.map(b => del(b.url)));
+    await put(triageBlobPath(userId), JSON.stringify(store), {
+      access: 'public',
+      addRandomSuffix: false,
+    });
+  } catch {
+    // Blob unavailable in CI/local without token — keep triage local without failing the request.
+  }
 }
 
 /** Merge two TriageStore objects — keep the entry with the later updatedAt */
