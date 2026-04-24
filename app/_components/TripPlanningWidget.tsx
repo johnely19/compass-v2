@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
 import type { MonitoringTask } from '../_lib/types';
-import { buildMonitoringTaskFromSummary, resolveOpenMonitoringTask } from '../_lib/trip-emergence';
+import { buildMonitoringTaskFromSummary, resolveOpenMonitoringTask, shouldAutoCloseMonitoringTask } from '../_lib/trip-emergence';
 import TripIntelInput from './TripIntelInput';
 
 interface FlightLeg {
@@ -163,6 +163,45 @@ export default function TripPlanningWidget({
 
   useEffect(() => {
     const summary = monitoringActionSummary;
+    const currentOpenTask = monitoringTasks.find((task) => task.status === 'open') ?? persistedMonitoringTask;
+
+    if (currentOpenTask && shouldAutoCloseMonitoringTask(currentOpenTask, summary)) {
+      const closedTask: MonitoringTask = {
+        id: currentOpenTask.id,
+        label: currentOpenTask.label,
+        detail: currentOpenTask.detail,
+        action: currentOpenTask.action,
+        tone: currentOpenTask.tone,
+        source: 'monitoring',
+        status: 'done',
+        createdAt: currentOpenTask.createdAt ?? new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      };
+
+      let cancelled = false;
+      setTaskSyncing(true);
+      void (async () => {
+        try {
+          await fetch('/api/user/monitoring-tasks', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ contextKey, task: closedTask }),
+          });
+        } catch {
+          // keep optimistic close even if persistence fails
+        } finally {
+          if (!cancelled) {
+            setPersistedMonitoringTask(null);
+            setTaskSyncing(false);
+          }
+        }
+      })();
+
+      return () => {
+        cancelled = true;
+      };
+    }
+
     if (!summary) return;
     const nextTask = buildMonitoringTaskFromSummary(summary);
     const existing = monitoringTasks.find((task) => task.id === nextTask.id);
@@ -200,7 +239,7 @@ export default function TripPlanningWidget({
     return () => {
       cancelled = true;
     };
-  }, [contextKey, monitoringActionSummary, monitoringTasks]);
+  }, [contextKey, monitoringActionSummary, monitoringTasks, persistedMonitoringTask]);
 
   function toggle(field: 'travel' | 'accommodation') {
     if (field === 'accommodation' && planning.accommodation.status === 'open') {

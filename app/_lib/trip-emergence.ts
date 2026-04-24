@@ -311,6 +311,15 @@ export function upsertMonitoringTask(
   return [nextTask, ...next];
 }
 
+export function shouldAutoCloseMonitoringTask(
+  task: MonitoringTaskLike | null | undefined,
+  summary: MonitoringActionSummary | null | undefined,
+): boolean {
+  if (!task) return false;
+  if (task.status !== 'open') return false;
+  return !summary;
+}
+
 export function resolveOpenMonitoringTask(
   tasks: MonitoringTaskLike[] | undefined,
   summary: MonitoringActionSummary | null | undefined,

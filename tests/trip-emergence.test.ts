@@ -9,6 +9,7 @@ import {
   diffTripEmergenceAttributes,
   resolveOpenMonitoringTask,
   resolveVisibleMonitoringSummary,
+  shouldAutoCloseMonitoringTask,
   upsertMonitoringTask,
   summarizeMonitoringActionPrompts,
 } from '../app/_lib/trip-emergence';
@@ -307,6 +308,52 @@ describe('upsertMonitoringTask', () => {
         updatedAt: '2026-04-24T02:00:00.000Z',
       },
     ]);
+  });
+});
+
+describe('shouldAutoCloseMonitoringTask', () => {
+  test('auto-closes only when an open task remains but the summary is gone', () => {
+    assert.equal(shouldAutoCloseMonitoringTask({
+      id: 'task-open',
+      label: 'Backup move ready',
+      detail: 'Old detail',
+      action: 'saved',
+      tone: 'critical',
+      status: 'open',
+      source: 'monitoring',
+      createdAt: '2026-04-24T01:00:00.000Z',
+      updatedAt: '2026-04-24T01:00:00.000Z',
+    }, null), true);
+
+    assert.equal(shouldAutoCloseMonitoringTask({
+      id: 'task-done',
+      label: 'Backup move ready',
+      detail: 'Old detail',
+      action: 'saved',
+      tone: 'critical',
+      status: 'done',
+      source: 'monitoring',
+      createdAt: '2026-04-24T01:00:00.000Z',
+      updatedAt: '2026-04-24T01:00:00.000Z',
+    }, null), false);
+
+    assert.equal(shouldAutoCloseMonitoringTask({
+      id: 'task-open',
+      label: 'Backup move ready',
+      detail: 'Old detail',
+      action: 'saved',
+      tone: 'critical',
+      status: 'open',
+      source: 'monitoring',
+      createdAt: '2026-04-24T01:00:00.000Z',
+      updatedAt: '2026-04-24T01:00:00.000Z',
+    }, {
+      label: 'Backup move ready',
+      action: 'saved',
+      tone: 'critical',
+      count: 1,
+      detail: 'Old detail',
+    }), false);
   });
 });
 
