@@ -3952,6 +3952,24 @@ body {
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
+.tpw-notes-monitoring-lead {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-xs);
+  background: var(--bg-elevated);
+  border: 1px solid var(--accent, #f59e0b);
+  border-radius: 4px;
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  margin-bottom: var(--space-xs);
+}
+.tpw-notes-monitoring-lead-icon {
+  font-size: 0.9rem;
+}
+.tpw-notes-monitoring-lead-text {
+  font-weight: 500;
+}
 .tpw-notes-expand-person {
   font-size: 0.8rem;
   color: var(--text-muted);

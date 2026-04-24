@@ -78,6 +78,8 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
 
   // Inline mode: always-visible single-line input (the "Trip Notes" row in the widget)
   if (inlineMode) {
+    const leadMonitoringHighlight = monitoringHighlights[0];
+    const remainingMonitoringHighlights = monitoringHighlights.slice(1);
     return (
       <div className="tpw-notes-row">
         <span className="tpw-label">Trip Notes</span>
@@ -86,6 +88,13 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
         </button>
         <div className={`tpw-notes-expand ${expandOpen ? 'open' : ''}`}>
           <div className="tpw-notes-expand-body">
+            {/* Lead monitoring signal — most important, show first */}
+            {leadMonitoringHighlight && (
+              <div className="tpw-notes-monitoring-lead">
+                <span className="tpw-notes-monitoring-lead-icon">👁</span>
+                <span className="tpw-notes-monitoring-lead-text">Watch now: {leadMonitoringHighlight}</span>
+              </div>
+            )}
             {purpose && <div className="tpw-notes-expand-purpose">Purpose: {purpose}</div>}
             {people && people.length > 0 && (
               <div>
@@ -107,11 +116,11 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
                 </span>
               </div>
             )}
-            {monitoringHighlights.length > 0 && (
+            {remainingMonitoringHighlights.length > 0 && (
               <div className="tpw-notes-monitoring">
                 <div className="tpw-notes-monitoring-label">Watch changes</div>
                 <div className="tpw-notes-monitoring-list">
-                  {monitoringHighlights.map((item, i) => (
+                  {remainingMonitoringHighlights.map((item, i) => (
                     <div key={`${i}:${item}`} className="tpw-notes-monitoring-item">{item}</div>
                   ))}
                 </div>
