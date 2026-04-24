@@ -673,16 +673,6 @@ export default function HomeClient({
                   ))}
                 </div>
               )}
-              {effectiveCtx.accommodationName && ctx.type === 'trip' && (
-                <div className="section-attr-pills">
-                  <span className="section-attr-pill">
-                    🏨 {effectiveCtx.accommodationName}
-                    {effectiveCtx.accommodationAddress && (
-                      <span className="section-attr-pill-sub"> · {effectiveCtx.accommodationAddress}</span>
-                    )}
-                  </span>
-                </div>
-              )}
               {ctx.type === 'trip' && (() => {
                 const anchors = (effectiveCtx as unknown as Record<string, unknown>).anchorExperiences as Array<{ name: string; type?: string }> | undefined;
                 return anchors && anchors.length > 0 ? (
