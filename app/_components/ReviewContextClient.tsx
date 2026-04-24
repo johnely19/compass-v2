@@ -10,6 +10,7 @@ import TriageButtons from './TriageButtons';
 import ReviewMarkersMap from './ReviewMarkersMap';
 import AccommodationReviewLayout from './AccommodationReviewLayout';
 import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
+import { getRecentCompletedMonitoringTasks } from '../_lib/trip-emergence';
 
 type Tab = 'unreviewed' | 'saved' | 'dismissed';
 
@@ -170,6 +171,11 @@ export default function ReviewContextClient({
     { key: 'dismissed', label: 'Dismissed', count: counts.dismissed },
   ];
 
+  const completedMonitoringTasks = useMemo(
+    () => getRecentCompletedMonitoringTasks(context.monitoringTasks, 3),
+    [context.monitoringTasks],
+  );
+
   // Detect if >50% accommodation type → use rich layout
   const accommodationFraction = discoveries.length > 0
     ? discoveries.filter(d => d.type === 'accommodation').length / discoveries.length
@@ -198,6 +204,34 @@ export default function ReviewContextClient({
           contextLabel={context.label}
           city={context.city}
         />
+      )}
+
+      {completedMonitoringTasks.length > 0 && (
+        <section className="review-monitoring-history card">
+          <div className="review-monitoring-history-header">
+            <div>
+              <div className="review-monitoring-history-kicker">Monitoring history</div>
+              <h2 className="review-monitoring-history-title">Recently handled</h2>
+            </div>
+          </div>
+          <ul className="review-monitoring-history-list">
+            {completedMonitoringTasks.map((task) => (
+              <li key={task.id} className="review-monitoring-history-item">
+                <span className="review-monitoring-history-copy">
+                  <strong>{task.label}</strong>
+                  <span>{task.detail}</span>
+                </span>
+                <button
+                  type="button"
+                  className="review-monitoring-history-link"
+                  onClick={() => setTab(task.action === 'saved' ? 'saved' : 'unreviewed')}
+                >
+                  {task.action === 'saved' ? 'Review saved' : 'Keep reviewing'} →
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       <div className="review-tabs">

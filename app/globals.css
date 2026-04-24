@@ -479,7 +479,48 @@ a:hover {
   border: 1px solid rgba(99, 179, 237, 0.35);
   animation: attrPillLand 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both,
              attrPillFade 2.5s ease 0.5s both;
-  pointer-events: none;
+  pointer-events: auto;
+}
+
+.section-attr-pill-link {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  border-left: 1px solid rgba(99, 179, 237, 0.35);
+  margin-left: 4px;
+  padding-left: 6px;
+}
+
+.section-attr-pill-link:hover {
+  text-decoration: underline;
+}
+
+.trip-action-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid var(--card-border);
+  color: var(--text-primary);
+  background: color-mix(in srgb, var(--bg-secondary) 78%, transparent);
+}
+
+.trip-action-summary-critical {
+  border-color: rgba(220, 38, 38, 0.28);
+  background: rgba(220, 38, 38, 0.08);
+}
+
+.trip-action-summary-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.06);
+}
+
+.trip-action-summary:hover {
+  text-decoration: underline;
 }
 
 .section-header {
@@ -2054,6 +2095,78 @@ a:hover {
 .review-tab-active {
   color: var(--text-primary);
   border-bottom: 2px solid var(--accent);
+}
+
+.review-monitoring-history {
+  display: grid;
+  gap: 12px;
+  margin-bottom: var(--space-lg);
+}
+
+.review-monitoring-history-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.review-monitoring-history-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.review-monitoring-history-title {
+  margin: 4px 0 0;
+  font-size: 1rem;
+}
+
+.review-monitoring-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.review-monitoring-history-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--card-border);
+}
+
+.review-monitoring-history-copy {
+  display: grid;
+  gap: 4px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.review-monitoring-history-copy strong {
+  color: var(--text-primary);
+}
+
+.review-monitoring-history-link {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--accent);
+  background: transparent;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.review-monitoring-history-link:hover {
+  text-decoration: underline;
 }
 
 .review-list {
@@ -4033,6 +4146,222 @@ body {
 }
 
 .tpw-accom-cancel:hover { color: var(--text-primary); }
+
+.tpw-monitoring-checklist {
+  margin-top: var(--space-sm);
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid var(--card-border);
+  background: color-mix(in srgb, var(--bg-secondary) 76%, transparent);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-checklist-critical {
+  border-color: rgba(220, 38, 38, 0.28);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.tpw-monitoring-checklist-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.tpw-monitoring-checklist-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tpw-monitoring-checklist-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.tpw-monitoring-checklist-dismiss {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tpw-monitoring-checklist-dismiss:hover {
+  color: var(--text-primary);
+}
+
+.tpw-monitoring-checklist-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tpw-monitoring-checklist-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.tpw-monitoring-checklist-copy strong {
+  color: var(--text-primary);
+}
+
+.tpw-monitoring-checklist-link {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-checklist-link:hover {
+  text-decoration: underline;
+}
+
+.tpw-monitoring-prompts {
+  margin-top: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-prompts-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.tpw-monitoring-prompts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tpw-monitoring-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--card-border);
+  background: color-mix(in srgb, var(--bg-secondary) 72%, transparent);
+}
+
+.tpw-monitoring-prompt-critical {
+  border-color: rgba(220, 38, 38, 0.25);
+  background: rgba(220, 38, 38, 0.06);
+}
+
+.tpw-monitoring-prompt-notable {
+  border-color: rgba(37, 99, 235, 0.2);
+  background: rgba(37, 99, 235, 0.05);
+}
+
+.tpw-monitoring-prompt-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.tpw-monitoring-prompt-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.tpw-monitoring-prompt-detail {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.tpw-monitoring-prompt-link {
+  flex-shrink: 0;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-prompt-link:hover {
+  text-decoration: underline;
+}
+
+.tpw-monitoring-history {
+  display: grid;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.tpw-monitoring-history-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.tpw-monitoring-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tpw-monitoring-history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tpw-monitoring-history-copy {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.tpw-monitoring-history-copy strong {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tpw-monitoring-history-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-history-link:hover {
+  text-decoration: underline;
+}
 
 .tpw-flights {
   margin-top: var(--space-sm);

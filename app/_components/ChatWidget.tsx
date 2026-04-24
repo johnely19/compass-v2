@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, useCallback } from 'react';
 import type { ChatMessage } from '../_lib/types';
 import type { ChatTarget } from '../_lib/chat-target';
 import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
+import { diffTripEmergenceAttributes, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
 import styles from './ChatWidget.module.css';
 
 /**
@@ -67,7 +68,7 @@ export default function ChatWidget() {
   const createContextUsed = useRef(false);
   const updateTripUsed = useRef<string | null>(null);
   const preContextKeys = useRef<Set<string>>(new Set());
-  const preContextSnapshots = useRef<Record<string, { dates?: string; city?: string; focus?: string[] }>>({});
+  const preContextSnapshots = useRef<Record<string, TripEmergenceSnapshot>>({});
 
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -296,11 +297,21 @@ export default function ChatWidget() {
       .then(r => r.ok ? r.json() : null)
       .then(data => {
         if (data?.contexts) {
-          const ctxs = data.contexts as Array<{ key: string; dates?: string; city?: string; focus?: string[] }>;
+          const ctxs = data.contexts as TripEmergenceSnapshot[];
           preContextKeys.current = new Set(ctxs.map(c => c.key));
-          const snapshots: Record<string, { dates?: string; city?: string; focus?: string[] }> = {};
+          const snapshots: Record<string, TripEmergenceSnapshot> = {};
           for (const c of ctxs) {
-            snapshots[c.key] = { dates: c.dates, city: c.city, focus: c.focus };
+            snapshots[c.key] = {
+              key: c.key,
+              label: c.label,
+              type: c.type,
+              emoji: c.emoji,
+              dates: c.dates,
+              city: c.city,
+              focus: c.focus,
+              purpose: c.purpose,
+              people: c.people,
+            };
           }
           preContextSnapshots.current = snapshots;
         }
@@ -375,7 +386,7 @@ export default function ChatWidget() {
               const res = await fetch('/api/contexts');
               if (res.ok) {
                 const data = await res.json();
-                const allCtxs = data.contexts as Array<{ key: string; label: string; type: string; emoji: string; dates?: string; city?: string; focus?: string[] }>;
+                const allCtxs = data.contexts as TripEmergenceSnapshot[];
 
                 const newCtxs = allCtxs.filter(c => !preContextKeys.current.has(c.key));
                 for (const ctx of newCtxs) {
@@ -392,17 +403,7 @@ export default function ChatWidget() {
                   for (const ctx of allCtxs) {
                     const prev = preContextSnapshots.current[ctx.key];
                     if (!prev) continue;
-                    const changedAttrs: Array<{ field: string; value: string }> = [];
-                    if (ctx.dates && ctx.dates !== prev.dates) {
-                      changedAttrs.push({ field: 'dates', value: ctx.dates });
-                    }
-                    if (ctx.city && ctx.city !== prev.city) {
-                      changedAttrs.push({ field: 'city', value: ctx.city });
-                    }
-                    const newFocus = (ctx.focus ?? []).filter(f => !(prev.focus ?? []).includes(f));
-                    if (newFocus.length > 0) {
-                      changedAttrs.push({ field: 'focus', value: newFocus.join(', ') });
-                    }
+                    const changedAttrs = diffTripEmergenceAttributes(prev, ctx);
                     if (changedAttrs.length > 0) {
                       window.dispatchEvent(new CustomEvent('compass-trip-attributes', {
                         detail: { key: ctx.key, attributes: changedAttrs },

@@ -8,6 +8,12 @@ async function loginAsOwner(page: Page) {
   await page.goto(`/u/${OWNER_AUTH_CODE}`, { waitUntil: 'networkidle' });
 }
 
+async function switchToContext(page: Page, label: string) {
+  const switcher = page.getByRole('button', { name: /Trip|Outing|Radar|Wishlist|Ontario Cottage|NYC Solo Trip/i }).first();
+  await switcher.click();
+  await page.getByText(label, { exact: true }).click();
+}
+
 async function expectPreviewBackgrounds(
   locator: Locator,
   minimumCards: number,
@@ -48,10 +54,7 @@ async function expectLoadedGalleryImages(locator: Locator, minimumImages: number
 
 test('homepage place cards show preview images for the Ontario Cottage context', async ({ page }) => {
   await loginAsOwner(page);
-  await page.evaluate((contextKey) => {
-    window.localStorage.setItem('compass-active-context', contextKey);
-  }, IMAGE_RICH_CONTEXT_KEY);
-  await page.goto('/', { waitUntil: 'networkidle' });
+  await switchToContext(page, 'Ontario Cottage');
 
   const previews = page.locator('.place-card-image');
   await expectPreviewBackgrounds(previews, 3, { height: 150, width: 150 });

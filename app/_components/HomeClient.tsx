@@ -10,6 +10,8 @@ import BriefingBanner from './BriefingBanner';
 import Twemoji from './Twemoji';
 import TripPlanningWidget from './TripPlanningWidget';
 import ContextSwitcher from './ContextSwitcher';
+import { buildIntelligenceAttachmentChips, buildMonitoringActionPrompts, buildMonitoringPromptAttachmentChips, summarizeMonitoringActionPrompts } from '../_lib/trip-emergence';
+import type { TripAttributeChip } from '../_lib/trip-emergence';
 
 interface MonitoringQueueItem {
   id: string;
@@ -255,8 +257,10 @@ export default function HomeClient({
   const [mounted, setMounted] = useState(false);
   const [contextCounts, setContextCounts] = useState<Record<string, { saved: number; dismissed: number; resurfaced: number }>>({});
   const [emergingKeys, setEmergingKeys] = useState<Set<string>>(new Set());
-  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, Array<{ field: string; value: string }>>>({});
+  const [attachingAttrs, setAttachingAttrs] = useState<Record<string, TripAttributeChip[]>>({});
   const [, setTriageVersion] = useState(0);
+  const seenDigestEntryIdsRef = useRef<Record<string, string[]>>({});
+  const digestHydratedContextsRef = useRef<Set<string>>(new Set());
 
   // Active context key — persisted in localStorage
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -430,7 +434,7 @@ export default function HomeClient({
   useEffect(() => {
     const timers: ReturnType<typeof setTimeout>[] = [];
     const handler = (e: Event) => {
-      const detail = (e as CustomEvent<{ key: string; attributes: Array<{ field: string; value: string }> }>).detail;
+      const detail = (e as CustomEvent<{ key: string; attributes: TripAttributeChip[] }>).detail;
       if (!detail?.key || !detail.attributes?.length) return;
       setAttachingAttrs(prev => ({
         ...prev,
@@ -452,6 +456,61 @@ export default function HomeClient({
       timers.forEach(clearTimeout);
     };
   }, []);
+
+
+  useEffect(() => {
+    if (!activeKey) return;
+
+    const visibleDigestItems = digestItems.filter(item => item.contextKey === activeKey);
+    const entryIds = visibleDigestItems.map(item => item.entryId);
+    const hydrated = digestHydratedContextsRef.current.has(activeKey);
+
+    if (!hydrated) {
+      seenDigestEntryIdsRef.current[activeKey] = entryIds;
+      digestHydratedContextsRef.current.add(activeKey);
+      return;
+    }
+
+    if (visibleDigestItems.length === 0) {
+      seenDigestEntryIdsRef.current[activeKey] = [];
+      return;
+    }
+
+    const previousEntryIds = seenDigestEntryIdsRef.current[activeKey] ?? [];
+    const promptChips = buildMonitoringPromptAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+      limit: 1,
+    });
+    const intelChips = buildIntelligenceAttachmentChips({
+      contextKey: activeKey,
+      digestItems: visibleDigestItems,
+      previousEntryIds,
+      limit: 1,
+    });
+    seenDigestEntryIdsRef.current[activeKey] = entryIds;
+
+    const nextChips = [...promptChips, ...intelChips].slice(0, 2);
+    if (nextChips.length === 0) return;
+
+    setAttachingAttrs(prev => ({
+      ...prev,
+      [activeKey]: [...(prev[activeKey] ?? []), ...nextChips],
+    }));
+
+    const timer = setTimeout(() => {
+      setAttachingAttrs(prev => {
+        const next = { ...prev };
+        const remaining = (next[activeKey] ?? []).filter(attr => !nextChips.some(chip => chip.field === attr.field && chip.value === attr.value && chip.label === attr.label));
+        if (remaining.length > 0) next[activeKey] = remaining;
+        else delete next[activeKey];
+        return next;
+      });
+    }, 3200);
+
+    return () => clearTimeout(timer);
+  }, [activeKey, digestItems]);
 
   // Refresh data when chat mutates
   useEffect(() => {
@@ -499,6 +558,12 @@ export default function HomeClient({
   const description = buildDescription(ctx);
   const isEmerging = emergingKeys.has(ctx.key);
   const landingAttrs = attachingAttrs[ctx.key] ?? [];
+  const reviewUrl = `/review/${encodeURIComponent(ctx.key)}`;
+  const monitoringActionPrompts = buildMonitoringActionPrompts({
+    contextKey: ctx.key,
+    digestItems: digestItems.filter(item => item.contextKey === ctx.key),
+  });
+  const monitoringActionSummary = summarizeMonitoringActionPrompts(monitoringActionPrompts);
 
   return (
     <main className="page focused-page">
@@ -546,17 +611,44 @@ export default function HomeClient({
               )}
               {landingAttrs.length > 0 && (
                 <div className="section-attr-pills">
-                  {landingAttrs.map(attr => (
-                    <span key={attr.field} className="section-attr-pill">
-                      {attr.field === 'dates' ? '📅' : attr.field === 'city' ? '📍' : '🏷'} {attr.value}
-                    </span>
-                  ))}
+                  {landingAttrs.map(attr => {
+                    const icon = attr.icon ?? (attr.field === 'dates'
+                      ? '📅'
+                      : attr.field === 'city'
+                        ? '📍'
+                        : attr.field === 'purpose'
+                          ? '🎯'
+                          : attr.field === 'people'
+                            ? '👥'
+                            : attr.field === 'intelligence'
+                              ? '🛰️'
+                              : '🏷');
+                    const attrHref = attr.action === 'saved' ? `${reviewUrl}?tab=saved` : attr.action === 'review' ? reviewUrl : null;
+                    return (
+                      <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
+                        <span>{icon} {attr.label ? `${attr.label}: ` : ''}{attr.value}</span>
+                        {attrHref && (
+                          <Link href={attrHref} className="section-attr-pill-link">
+                            {attr.action === 'saved' ? 'Review saved' : 'Open review'} →
+                          </Link>
+                        )}
+                      </span>
+                    );
+                  })}
                 </div>
               )}
             </div>
           </div>
 
           <div className="focused-hero-right">
+            {ctx.type === 'trip' && monitoringActionSummary && (
+              <Link
+                href={monitoringActionSummary.action === 'saved' ? `${reviewUrl}?tab=saved` : reviewUrl}
+                className={`trip-action-summary trip-action-summary-${monitoringActionSummary.tone}`}
+              >
+                {monitoringActionSummary.label} →
+              </Link>
+            )}
             {ctx.type !== 'trip' && counts.saved > 0 && (
               <Link
                 href={`/review/${encodeURIComponent(ctx.key)}?tab=saved`}
@@ -590,6 +682,9 @@ export default function HomeClient({
                 savedCount={counts.saved}
                 purpose={raw.purpose as string | undefined}
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}
+                monitoringActionPrompts={monitoringActionPrompts}
+                monitoringActionSummary={monitoringActionSummary}
+                monitoringTasks={raw.monitoringTasks as import('../_lib/types').MonitoringTask[] | undefined}
               />
             </div>
           );
