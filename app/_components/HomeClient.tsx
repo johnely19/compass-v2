@@ -639,7 +639,7 @@ export default function HomeClient({
                 <div className="section-desc-trip">{description}</div>
               )}
               {landingAttrs.length > 0 && (
-                <div className="section-attr-pills">
+                <div className="landing-chips-row">
                   {landingAttrs.map(attr => {
                     const icon = attr.field === 'dates'
                       ? '📅'
@@ -657,7 +657,7 @@ export default function HomeClient({
                                   ? '🏨'
                                 : '🏷';
                     return (
-                      <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
+                      <span key={`${attr.field}:${attr.value}`} className="section-attr-pill-landing">
                         {icon} {attr.value}
                       </span>
                     );
