@@ -1,6 +1,8 @@
 import { describe, test } from 'node:test';
 import assert from 'node:assert/strict';
 
+import { diffTripEmergenceAttributes, applyTripAttributeChips } from '../app/_lib/trip-emergence';
+
 function reduceDigestHydration(params: {
   activeKey: string;
   visibleEntryIds: string[];
@@ -65,5 +67,75 @@ describe('intelligence digest hydration guard', () => {
 
     assert.equal(result.shouldAnimate, false);
     assert.deepEqual(result.seen, ['p1']);
+  });
+});
+
+describe('priority emergence — diff', () => {
+  test('emits a priorities chip when new priorities appear', () => {
+    const attrs = diffTripEmergenceAttributes(
+      { key: 'trip:nyc', priorities: ['Find a jazz club'] },
+      { key: 'trip:nyc', priorities: ['Find a jazz club', 'Book a rooftop restaurant'] },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'priorities', value: 'Book a rooftop restaurant' },
+    ]);
+  });
+
+  test('emits nothing when priorities are unchanged', () => {
+    const attrs = diffTripEmergenceAttributes(
+      { key: 'trip:nyc', priorities: ['Find a jazz club'] },
+      { key: 'trip:nyc', priorities: ['Find a jazz club'] },
+    );
+
+    assert.deepEqual(attrs, []);
+  });
+
+  test('emits all new priorities at once', () => {
+    const attrs = diffTripEmergenceAttributes(
+      { key: 'trip:nyc' },
+      { key: 'trip:nyc', priorities: ['Must-see museum', 'Hidden gem cafe', 'Night walk along the river'] },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'priorities', value: 'Must-see museum, Hidden gem cafe, Night walk along the river' },
+    ]);
+  });
+});
+
+describe('priority emergence — apply', () => {
+  test('optimistically folds incoming priorities chips into the trip snapshot', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:tokyo',
+        priorities: ['Visit the teamLab borderless museum'],
+      },
+      [
+        { field: 'priorities', value: 'Book a bullet train seat, Find a ramen spot' },
+      ],
+    );
+
+    assert.deepEqual(next.priorities, [
+      'Visit the teamLab borderless museum',
+      'Book a bullet train seat',
+      'Find a ramen spot',
+    ]);
+  });
+
+  test('deduplicates priorities on apply', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:tokyo',
+        priorities: ['Visit the teamLab borderless museum'],
+      },
+      [
+        { field: 'priorities', value: 'Visit the teamLab borderless museum, Explore Harajuku' },
+      ],
+    );
+
+    assert.deepEqual(next.priorities, [
+      'Visit the teamLab borderless museum',
+      'Explore Harajuku',
+    ]);
   });
 });

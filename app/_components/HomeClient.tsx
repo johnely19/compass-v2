@@ -559,6 +559,7 @@ export default function HomeClient({
         focus: ctx.focus,
         purpose: (ctx as unknown as Record<string, unknown>).purpose as string | undefined,
         people: (ctx as unknown as Record<string, unknown>).people as Array<{ name: string; relation?: string }> | undefined,
+        priorities: (ctx as unknown as Record<string, unknown>).priorities as string[] | undefined,
       } satisfies TripEmergenceSnapshot, landingAttrs)
     : null;
   const effectiveCtx = optimisticTrip
@@ -567,6 +568,7 @@ export default function HomeClient({
         dates: optimisticTrip.dates,
         city: optimisticTrip.city,
         focus: optimisticTrip.focus,
+        priorities: optimisticTrip.priorities,
       }
     : ctx;
   const monitoringHighlights = buildTripMonitoringHighlights({
@@ -640,13 +642,24 @@ export default function HomeClient({
                             ? '👥'
                             : attr.field === 'intelligence'
                               ? '🛰️'
-                              : '🏷';
+                              : attr.field === 'priorities'
+                                ? '⭐'
+                                : '🏷';
                     return (
                       <span key={`${attr.field}:${attr.value}`} className="section-attr-pill">
                         {icon} {attr.value}
                       </span>
                     );
                   })}
+                </div>
+              )}
+              {effectiveCtx.priorities && effectiveCtx.priorities.length > 0 && ctx.type === 'trip' && (
+                <div className="section-attr-pills">
+                  {effectiveCtx.priorities.map(p => (
+                    <span key={p} className="section-attr-pill">
+                      ⭐ {p}
+                    </span>
+                  ))}
                 </div>
               )}
             </div>

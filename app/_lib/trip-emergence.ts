@@ -8,10 +8,11 @@ export interface TripEmergenceSnapshot {
   focus?: string[];
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  priorities?: string[];
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities';
   value: string;
 }
 
@@ -73,6 +74,11 @@ export function diffTripEmergenceAttributes(
     changedAttrs.push({ field: 'people', value: newPeople.join(', ') });
   }
 
+  const newPriorities = (next.priorities ?? []).filter(p => !(previous.priorities ?? []).includes(p));
+  if (newPriorities.length > 0) {
+    changedAttrs.push({ field: 'priorities', value: newPriorities.join(', ') });
+  }
+
   return changedAttrs;
 }
 
@@ -101,6 +107,7 @@ export function applyTripAttributeChips(
     ...snapshot,
     focus: [...(snapshot.focus ?? [])],
     people: [...(snapshot.people ?? [])],
+    priorities: [...(snapshot.priorities ?? [])],
   };
 
   for (const chip of chips) {
@@ -137,6 +144,11 @@ export function applyTripAttributeChips(
           existing.push(normalized);
         }
       }
+    }
+
+    if (chip.field === 'priorities') {
+      const additions = chip.value.split(',').map(v => v.trim()).filter(Boolean);
+      next.priorities = [...new Set([...(next.priorities ?? []), ...additions])];
     }
   }
 

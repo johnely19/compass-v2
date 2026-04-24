@@ -100,6 +100,7 @@ describe('applyTripAttributeChips', () => {
         { name: 'Dessa', relation: 'daughter' },
         { name: 'Huzur', relation: 'wife' },
       ],
+      priorities: [],
     });
   });
 });

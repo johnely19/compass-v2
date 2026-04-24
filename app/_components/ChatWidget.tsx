@@ -322,6 +322,7 @@ export default function ChatWidget() {
               focus: c.focus,
               purpose: c.purpose,
               people: c.people,
+              priorities: c.priorities,
             };
           }
           preContextSnapshots.current = snapshots;
