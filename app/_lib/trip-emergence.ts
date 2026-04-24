@@ -320,6 +320,22 @@ export function shouldAutoCloseMonitoringTask(
   return !summary;
 }
 
+function monitoringTaskUpdatedAt(task: MonitoringTaskLike): number {
+  const value = task.updatedAt ?? task.createdAt;
+  const parsed = value ? new Date(value).getTime() : 0;
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+export function getRecentCompletedMonitoringTasks(
+  tasks: MonitoringTaskLike[] | undefined,
+  limit = 2,
+): MonitoringTaskLike[] {
+  return (tasks ?? [])
+    .filter((task) => task.status === 'done')
+    .sort((a, b) => monitoringTaskUpdatedAt(b) - monitoringTaskUpdatedAt(a))
+    .slice(0, limit);
+}
+
 export function resolveOpenMonitoringTask(
   tasks: MonitoringTaskLike[] | undefined,
   summary: MonitoringActionSummary | null | undefined,

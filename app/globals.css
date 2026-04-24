@@ -4235,6 +4235,62 @@ body {
   text-decoration: underline;
 }
 
+.tpw-monitoring-history {
+  display: grid;
+  gap: 8px;
+  padding-top: 2px;
+}
+
+.tpw-monitoring-history-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.tpw-monitoring-history-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.tpw-monitoring-history-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tpw-monitoring-history-copy {
+  display: grid;
+  gap: 4px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.tpw-monitoring-history-copy strong {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.tpw-monitoring-history-link {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tpw-monitoring-history-link:hover {
+  text-decoration: underline;
+}
+
 .tpw-flights {
   margin-top: var(--space-sm);
   display: flex;

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
 import type { MonitoringTask } from '../_lib/types';
-import { buildMonitoringTaskFromSummary, resolveOpenMonitoringTask, shouldAutoCloseMonitoringTask } from '../_lib/trip-emergence';
+import { buildMonitoringTaskFromSummary, getRecentCompletedMonitoringTasks, resolveOpenMonitoringTask, shouldAutoCloseMonitoringTask } from '../_lib/trip-emergence';
 import TripIntelInput from './TripIntelInput';
 
 interface FlightLeg {
@@ -299,6 +299,7 @@ export default function TripPlanningWidget({
     persistedMonitoringTask ? [persistedMonitoringTask] : monitoringTasks,
     monitoringActionSummary,
   );
+  const completedMonitoringTasks = getRecentCompletedMonitoringTasks(monitoringTasks);
   const monitoringPromptHref = (action?: MonitoringActionPrompt['action']) => {
     if (action === 'saved') return `${reviewUrl}?tab=saved`;
     return reviewUrl;
@@ -456,6 +457,25 @@ export default function TripPlanningWidget({
                 </span>
                 <Link href={monitoringPromptHref(prompt.action)} className="tpw-monitoring-prompt-link">
                   {monitoringPromptCta(prompt.action)} →
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {completedMonitoringTasks.length > 0 && (
+        <div className="tpw-monitoring-history">
+          <div className="tpw-monitoring-history-title">Recently handled</div>
+          <ul className="tpw-monitoring-history-list">
+            {completedMonitoringTasks.map(task => (
+              <li key={task.id} className="tpw-monitoring-history-item">
+                <span className="tpw-monitoring-history-copy">
+                  <strong>{task.label}</strong>
+                  <span>{task.detail}</span>
+                </span>
+                <Link href={monitoringPromptHref(task.action)} className="tpw-monitoring-history-link">
+                  {monitoringPromptCta(task.action)} →
                 </Link>
               </li>
             ))}

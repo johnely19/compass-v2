@@ -7,6 +7,7 @@ import {
   buildMonitoringPromptAttachmentChips,
   buildMonitoringTaskFromSummary,
   diffTripEmergenceAttributes,
+  getRecentCompletedMonitoringTasks,
   resolveOpenMonitoringTask,
   resolveVisibleMonitoringSummary,
   shouldAutoCloseMonitoringTask,
@@ -354,6 +355,48 @@ describe('shouldAutoCloseMonitoringTask', () => {
       count: 1,
       detail: 'Old detail',
     }), false);
+  });
+});
+
+describe('getRecentCompletedMonitoringTasks', () => {
+  test('returns the most recent completed tasks in descending updated order', () => {
+    const tasks = getRecentCompletedMonitoringTasks([
+      {
+        id: 'open-task',
+        label: 'Open',
+        detail: 'Still active',
+        action: 'review',
+        tone: 'notable',
+        status: 'open',
+        source: 'monitoring',
+        createdAt: '2026-04-24T01:00:00.000Z',
+        updatedAt: '2026-04-24T01:00:00.000Z',
+      },
+      {
+        id: 'done-old',
+        label: 'Done old',
+        detail: 'Handled first',
+        action: 'saved',
+        tone: 'critical',
+        status: 'done',
+        source: 'monitoring',
+        createdAt: '2026-04-24T01:00:00.000Z',
+        updatedAt: '2026-04-24T02:00:00.000Z',
+      },
+      {
+        id: 'done-new',
+        label: 'Done new',
+        detail: 'Handled later',
+        action: 'review',
+        tone: 'notable',
+        status: 'done',
+        source: 'monitoring',
+        createdAt: '2026-04-24T02:30:00.000Z',
+        updatedAt: '2026-04-24T03:00:00.000Z',
+      },
+    ]);
+
+    assert.deepEqual(tasks.map((task) => task.id), ['done-new', 'done-old']);
   });
 });
 
