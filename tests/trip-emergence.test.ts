@@ -153,6 +153,7 @@ describe('applyTripAttributeChips', () => {
       ],
       priorities: [],
       anchorExperiences: [],
+      neighbourhoodPreferences: [],
     });
   });
 
@@ -177,6 +178,7 @@ describe('applyTripAttributeChips', () => {
       people: [],
       priorities: [],
       anchorExperiences: [],
+      neighbourhoodPreferences: [],
       base: { address: '123 Bedford Ave', host: 'Sarah', zone: 'Brooklyn' },
     });
   });
@@ -199,6 +201,7 @@ describe('applyTripAttributeChips', () => {
       people: [],
       priorities: [],
       anchorExperiences: [],
+      neighbourhoodPreferences: [],
       base: { address: '123 Main St', host: 'John', zone: 'Williamsburg' },
     });
   });
@@ -373,6 +376,7 @@ describe('accommodation field', () => {
       people: [],
       priorities: [],
       anchorExperiences: [],
+      neighbourhoodPreferences: [],
       accommodationName: 'The Liberty Hotel',
       accommodationAddress: '215 Chestnut St',
     });
@@ -394,6 +398,7 @@ describe('accommodation field', () => {
       people: [],
       priorities: [],
       anchorExperiences: [],
+      neighbourhoodPreferences: [],
       accommodationName: 'Ace Hotel',
     });
   });
@@ -461,6 +466,7 @@ describe('anchor_experiences field', () => {
         { name: 'Guggenheim', type: 'gallery' },
         { name: 'MoMA', type: 'museum' },
       ],
+      neighbourhoodPreferences: [],
     });
   });
 
@@ -483,6 +489,7 @@ describe('anchor_experiences field', () => {
         { name: 'The Four Horsemen' },
         { name: 'Comedy Cellar' },
       ],
+      neighbourhoodPreferences: [],
     });
   });
 
@@ -506,6 +513,87 @@ describe('anchor_experiences field', () => {
         { name: 'Guggenheim', type: 'gallery' },
         { name: 'MoMA', type: 'museum' },
       ],
+      neighbourhoodPreferences: [],
+    });
+  });
+});
+
+describe('neighbourhoodPreferences field', () => {
+  test('surfaces new neighbourhood preferences, capped at 2', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        neighbourhoodPreferences: ['Williamsburg'],
+      },
+      {
+        key: 'trip:nyc',
+        neighbourhoodPreferences: ['Williamsburg', 'Ridgewood', 'Park Slope'],
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'neighbourhoods', value: 'Ridgewood, Park Slope' },
+    ]);
+  });
+
+  test('surfaces neighbourhood preferences without previous', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+      },
+      {
+        key: 'trip:nyc',
+        neighbourhoodPreferences: ['Williamsburg', 'Ridgewood'],
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'neighbourhoods', value: 'Williamsburg, Ridgewood' },
+    ]);
+  });
+
+  test('applies neighbourhood chips from chat-emerged attributes', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        dates: 'August 2026',
+        city: 'New York',
+      },
+      [
+        { field: 'neighbourhoods', value: 'Williamsburg, Ridgewood' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      dates: 'August 2026',
+      city: 'New York',
+      focus: [],
+      people: [],
+      priorities: [],
+      anchorExperiences: [],
+      neighbourhoodPreferences: ['Williamsburg', 'Ridgewood'],
+    });
+  });
+
+  test('deduplicates neighbourhood preferences', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        neighbourhoodPreferences: ['Williamsburg'],
+      },
+      [
+        { field: 'neighbourhoods', value: 'Williamsburg, Ridgewood' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      focus: [],
+      people: [],
+      priorities: [],
+      anchorExperiences: [],
+      neighbourhoodPreferences: ['Williamsburg', 'Ridgewood'],
     });
   });
 });

@@ -13,10 +13,11 @@ export interface TripEmergenceSnapshot {
   accommodationName?: string;
   accommodationAddress?: string;
   anchorExperiences?: Array<{ name: string; type?: string; note?: string }>;
+  neighbourhoodPreferences?: string[];
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base' | 'accommodation' | 'anchor';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base' | 'accommodation' | 'anchor' | 'neighbourhoods';
   value: string;
 }
 
@@ -124,6 +125,18 @@ export function diffTripEmergenceAttributes(
     });
   }
 
+  // Neighbourhood preferences - new items only, cap at 2 for low noise
+  const newNeighbourhoods = (next.neighbourhoodPreferences ?? []).filter(
+    n => !(previous.neighbourhoodPreferences ?? []).includes(n)
+  );
+  if (newNeighbourhoods.length > 0) {
+    const limited = newNeighbourhoods.slice(0, 2);
+    changedAttrs.push({
+      field: 'neighbourhoods',
+      value: limited.join(', '),
+    });
+  }
+
   return changedAttrs;
 }
 
@@ -154,6 +167,7 @@ export function applyTripAttributeChips(
     people: [...(snapshot.people ?? [])],
     priorities: [...(snapshot.priorities ?? [])],
     anchorExperiences: [...(snapshot.anchorExperiences ?? [])],
+    neighbourhoodPreferences: [...(snapshot.neighbourhoodPreferences ?? [])],
   };
 
   for (const chip of chips) {
@@ -245,6 +259,12 @@ export function applyTripAttributeChips(
           existing.add(item);
         }
       }
+    }
+
+    if (chip.field === 'neighbourhoods') {
+      // Parse neighbourhoods value: "Williamsburg, Ridgewood"
+      const additions = chip.value.split(',').map(v => v.trim()).filter(Boolean);
+      next.neighbourhoodPreferences = [...new Set([...(next.neighbourhoodPreferences ?? []), ...additions])];
     }
   }
 

@@ -564,6 +564,7 @@ export default function HomeClient({
         accommodationName: (ctx as unknown as Record<string, unknown>).accommodationName as string | undefined,
         accommodationAddress: (ctx as unknown as Record<string, unknown>).accommodationAddress as string | undefined,
         anchorExperiences: (ctx as unknown as Record<string, unknown>).anchor_experiences as Array<{ name: string; type?: string; note?: string }> | undefined,
+        neighbourhoodPreferences: (ctx as unknown as Record<string, unknown>).neighbourhoodPreferences as string[] | undefined,
       } satisfies TripEmergenceSnapshot, landingAttrs)
     : null;
   const effectiveCtx = optimisticTrip
@@ -576,6 +577,7 @@ export default function HomeClient({
         accommodationName: optimisticTrip.accommodationName,
         accommodationAddress: optimisticTrip.accommodationAddress,
         anchorExperiences: optimisticTrip.anchorExperiences,
+        neighbourhoodPreferences: optimisticTrip.neighbourhoodPreferences,
       }
     : ctx;
   const monitoringHighlights = buildTripMonitoringHighlights({
@@ -693,6 +695,15 @@ export default function HomeClient({
                   </div>
                 ) : null;
               })()}
+              {(effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences && (effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences.length > 0 && ctx.type === 'trip' && (
+                <div className="section-attr-pills">
+                  {((effectiveCtx as unknown as Record<string, unknown>).neighbourhoodPreferences as string[]).slice(0, 2).map(n => (
+                    <span key={n} className="section-attr-pill">
+                      📍 {n}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
