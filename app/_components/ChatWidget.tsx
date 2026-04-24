@@ -5,7 +5,14 @@ import { usePathname } from 'next/navigation';
 import type { ChatMessage } from '../_lib/types';
 import type { ChatTarget } from '../_lib/chat-target';
 import { chatTargetPill, CHAT_TARGET_EVENT, CHAT_TARGET_CLEAR_EVENT } from '../_lib/chat-target';
-import { diffTripEmergenceAttributes, type TripEmergenceSnapshot } from '../_lib/trip-emergence';
+import {
+  computeChangedAttributes,
+  computeNewContexts,
+  extractCreateContextUsed,
+  extractUpdateTripUsed,
+  parseToolEvent,
+} from '../_lib/chat/emergence-helpers';
+import type { TripEmergenceSnapshot } from '../_lib/trip-emergence';
 import styles from './ChatWidget.module.css';
 
 /**
@@ -224,6 +231,7 @@ export default function ChatWidget() {
     const decoder = new TextDecoder();
     let accumulated = '';
     let buffer = '';
+    const toolEvents: Array<{ tool: string; toolResult?: string; contextKey?: string }> = [];
 
     try {
       while (true) {
@@ -239,6 +247,13 @@ export default function ChatWidget() {
           const data = line.slice(6).trim();
           if (data === '[DONE]') continue;
 
+          const toolEvent = parseToolEvent(data);
+          if (toolEvent) {
+            toolEvents.push(toolEvent);
+            const label = TOOL_LABELS[toolEvent.tool] || `⚙️ Using ${toolEvent.tool}…`;
+            setToolStatus(label);
+          }
+
           try {
             const parsed = JSON.parse(data);
 
@@ -246,17 +261,6 @@ export default function ChatWidget() {
               accumulated += parsed.content;
               setStreamContent(accumulated);
               setToolStatus(null);
-            }
-
-            if (parsed.tool) {
-              const label = TOOL_LABELS[parsed.tool] || `⚙️ Using ${parsed.tool}…`;
-              setToolStatus(label);
-              if (parsed.tool === 'create-context') {
-                createContextUsed.current = true;
-              }
-              if (parsed.tool === 'update-trip') {
-                updateTripUsed.current = '__any__';
-              }
             }
 
             if (parsed.toolResult && typeof window !== 'undefined') {
@@ -284,6 +288,9 @@ export default function ChatWidget() {
     } finally {
       reader.releaseLock();
     }
+
+    createContextUsed.current = extractCreateContextUsed(toolEvents);
+    updateTripUsed.current = extractUpdateTripUsed(toolEvents);
 
     return accumulated;
   }, []);
@@ -404,7 +411,7 @@ export default function ChatWidget() {
                 const data = await res.json();
                 const allCtxs = data.contexts as TripEmergenceSnapshot[];
 
-                const newCtxs = allCtxs.filter(c => !preContextKeys.current.has(c.key));
+                const newCtxs = computeNewContexts(preContextKeys.current, allCtxs);
                 for (const ctx of newCtxs) {
                   window.dispatchEvent(new CustomEvent('compass-trip-created', {
                     detail: { key: ctx.key, label: ctx.label, type: ctx.type, emoji: ctx.emoji },
@@ -417,9 +424,7 @@ export default function ChatWidget() {
 
                 if (updateTripUsed.current) {
                   for (const ctx of allCtxs) {
-                    const prev = preContextSnapshots.current[ctx.key];
-                    if (!prev) continue;
-                    const changedAttrs = diffTripEmergenceAttributes(prev, ctx);
+                    const changedAttrs = computeChangedAttributes(preContextSnapshots.current[ctx.key], ctx);
                     if (changedAttrs.length > 0) {
                       window.dispatchEvent(new CustomEvent('compass-trip-attributes', {
                         detail: { key: ctx.key, attributes: changedAttrs },

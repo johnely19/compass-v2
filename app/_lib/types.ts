@@ -237,6 +237,9 @@ export interface ChatMessage {
   timestamp: string;
 }
 
+// Tools that trigger trip emergence events
+export type ToolUsed = 'create-context' | 'update-trip' | 'set-active-context';
+
 export interface UserChat {
   messages: ChatMessage[];
   updatedAt: string;
