@@ -30,6 +30,7 @@ test.describe('Homepage Layout', () => {
 
     test.skip(await page.locator('.place-card-detail-link').count() === 0, 'No homepage place cards are seeded for this user in the local fixture');
 
+    const cardShell = page.locator('.place-card-shell').first();
     const detailLink = page.locator('.place-card-detail-link').first();
     await expect(detailLink).toBeVisible({ timeout: 8000 });
     await expect(detailLink).toHaveAttribute('href', /\/placecards\/.+\?context=/);
@@ -42,13 +43,23 @@ test.describe('Homepage Layout', () => {
         .filter((href): href is string => Boolean(href));
     });
 
-    expect(cardHrefs.length).toBeGreaterThanOrEqual(1);
+    expect(cardHrefs.length).toBeGreaterThanOrEqual(2);
     expect(cardHrefs.every((href) => href.startsWith('/placecards/'))).toBe(true);
 
-    const cardShell = page.locator('.place-card').first();
+    const cardLink = page.locator('a.place-card').first();
     await Promise.all([
       page.waitForURL(/\/placecards\//),
-      cardShell.click({ position: { x: 24, y: 24 } }),
+      cardLink.click({ position: { x: 24, y: 24 } }),
+    ]);
+    await expect(page).toHaveURL(/\/placecards\//);
+
+    await page.goBack({ waitUntil: 'networkidle' });
+
+    const footer = cardShell.locator('.place-card-footer');
+    await expect(footer).toBeVisible();
+    await Promise.all([
+      page.waitForURL(/\/placecards\//),
+      footer.click({ position: { x: 6, y: 10 } }),
     ]);
     await expect(page).toHaveURL(/\/placecards\//);
 

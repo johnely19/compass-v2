@@ -1052,6 +1052,10 @@ a:hover {
 
 /* ---- 19. Place Card ---- */
 
+.place-card-shell {
+  position: relative;
+}
+
 .place-card {
   display: flex;
   flex-direction: column;
