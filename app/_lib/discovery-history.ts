@@ -141,20 +141,25 @@ export async function recordDiscoveryHistoryEvent(params: {
 }
 
 export async function listRecentDiscoveryHistory(userId: string, limit = 20): Promise<DiscoveryHistoryEvent[]> {
-  const { blobs } = await list({ prefix: historyPrefix(userId), limit: Math.max(limit, 20) });
-  const sorted = [...blobs].sort((a, b) => b.pathname.localeCompare(a.pathname)).slice(0, limit);
+  try {
+    const { blobs } = await list({ prefix: historyPrefix(userId), limit: Math.max(limit, 20) });
+    const sorted = [...blobs].sort((a, b) => b.pathname.localeCompare(a.pathname)).slice(0, limit);
 
-  const events = await Promise.all(sorted.map(async (blob) => {
-    try {
-      const res = await fetch(blob.url, { cache: 'no-store' });
-      if (!res.ok) return null;
-      return (await res.json()) as DiscoveryHistoryEvent;
-    } catch {
-      return null;
-    }
-  }));
+    const events = await Promise.all(sorted.map(async (blob) => {
+      try {
+        const res = await fetch(blob.url, { cache: 'no-store' });
+        if (!res.ok) return null;
+        return (await res.json()) as DiscoveryHistoryEvent;
+      } catch {
+        return null;
+      }
+    }));
 
-  return events.filter((event): event is DiscoveryHistoryEvent => Boolean(event));
+    return events.filter((event): event is DiscoveryHistoryEvent => Boolean(event));
+  } catch {
+    // Blob unavailable in CI/local without token — treat as no history rather than crashing pages.
+    return [];
+  }
 }
 
 export async function getRecentDiscoveryObservations(
