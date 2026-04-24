@@ -14,7 +14,7 @@ try {
   result.details.homeStatus = resp?.status();
   await page.waitForTimeout(1500); // let client hydrate
 
-  const cardLinks = page.locator('a[href*="/placecards/"]');
+  const cardLinks = page.locator('a.place-card');
   const cardCount = await cardLinks.count();
   result.details.cardCount = cardCount;
   result.homepage = (resp?.status() === 200) && cardCount > 0;
@@ -31,15 +31,43 @@ try {
   result.details.brokenImages = brokenImages;
   result.imagesOk = imgCount === 0 || brokenImages.length === 0;
 
-  // Place click — cards open /placecards/ route
+  // Place click — verify the live homepage uses the fixed shell structure and real click-through.
   if (cardCount > 0) {
-    const firstHref = await cardLinks.first().getAttribute('href');
+    const firstCard = cardLinks.first();
+    const firstHref = await firstCard.getAttribute('href');
+    const cardShell = firstCard.locator('xpath=..');
+    const mapsControl = cardShell.locator('.place-card-maps').first();
+    const detailLink = cardShell.locator('.place-card-detail-link').first();
+
     result.details.firstHref = firstHref;
-    const cardPage = await context.newPage();
-    const cardResp = await cardPage.goto(base + firstHref, { waitUntil: 'networkidle', timeout: 30000 });
-    result.details.placeUrl = cardPage.url();
-    result.placeClick = (cardResp?.status() || 0) < 400;
-    await cardPage.close();
+    result.details.firstCardShellClass = await cardShell.getAttribute('class');
+    result.details.firstCardHasDetailLink = await detailLink.count().then((count) => count > 0);
+    result.details.firstCardMapsTag = await mapsControl.count().then(async (count) => count > 0 ? mapsControl.evaluate((el) => el.tagName) : null);
+
+    await Promise.all([
+      page.waitForURL(/\/placecards\//, { timeout: 10000 }),
+      firstCard.click({ position: { x: 24, y: 24 } }),
+    ]);
+    result.details.placeUrl = page.url();
+    result.placeClick = /\/placecards\//.test(page.url());
+
+    await page.goBack({ waitUntil: 'networkidle', timeout: 10000 });
+    await page.waitForTimeout(1000);
+
+    const footer = page.locator('a.place-card').first().locator('xpath=..').locator('.place-card-footer');
+    if (await footer.count()) {
+      try {
+        await Promise.all([
+          page.waitForURL(/\/placecards\//, { timeout: 5000 }),
+          footer.click({ position: { x: 6, y: 10 } }),
+        ]);
+        result.details.footerGapClick = true;
+        await page.goBack({ waitUntil: 'networkidle', timeout: 10000 });
+        await page.waitForTimeout(1000);
+      } catch {
+        result.details.footerGapClick = false;
+      }
+    }
   }
 
   // Triage — look for save/dismiss buttons on the homepage
