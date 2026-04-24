@@ -15,6 +15,21 @@ async function loginAndGoHome(page: Page) {
 }
 
 test.describe('Homepage Layout', () => {
+  test('homepage discovery cards expose internal Compass detail links', async ({ page }) => {
+    await loginAndGoHome(page);
+
+    const detailLink = page.locator('.place-card-detail-link').first();
+    await expect(detailLink).toBeVisible({ timeout: 8000 });
+    await expect(detailLink).toHaveAttribute('href', /\/placecards\/.+\?context=/);
+
+    await Promise.all([
+      page.waitForURL(/\/placecards\//),
+      detailLink.click(),
+    ]);
+
+    await expect(page).toHaveURL(/\/placecards\//);
+  });
+
   test('renders single-track focused view with all key elements', async ({ page }) => {
     await loginAndGoHome(page);
 

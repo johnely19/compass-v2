@@ -8,6 +8,7 @@ import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
 import { getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import { buildPlaceCardPath } from '../_lib/app-url';
 
 interface PlaceCardProps {
   discovery: Discovery;
@@ -70,6 +71,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           color-mix(in srgb, var(--accent) 10%, var(--bg-primary)))`,
       };
 
+  const detailHref = buildPlaceCardPath(place_id || id, contextKey);
   const mapsUrl = place_id
     ? `https://www.google.com/maps/place/?q=place_id:${place_id}`
     : null;
@@ -112,7 +114,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
 
   return (
     <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>
-      <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
+      <Link href={detailHref} className="place-card" aria-label={`Open ${name} in Compass`}>
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
           {!finalImageUrl && <span className="place-card-image-fallback" />}
           {/* Hidden img for onError detection - triggers on load failure */}
@@ -154,12 +156,23 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           )}
         </div>
       </Link>
-      {mapsUrl && (
-        <div className="place-card-footer">
-          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
-            onClick={(e) => e.stopPropagation()}>View in Google Maps →</a>
-        </div>
-      )}
+      <div className="place-card-footer">
+        <Link href={detailHref} className="place-card-detail-link" aria-label={`View ${name} details in Compass`}>
+          View details →
+        </Link>
+        {mapsUrl && (
+          <a
+            href={mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="place-card-maps"
+            onClick={(e) => e.stopPropagation()}
+            aria-label={`Open ${name} in Google Maps`}
+          >
+            Maps
+          </a>
+        )}
+      </div>
       {userId && place_id && (
         <div className="place-card-triage-overlay">
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
