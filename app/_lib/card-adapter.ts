@@ -63,14 +63,31 @@ function normalizeType(raw?: string): DiscoveryType {
 export function adaptCard(raw: Record<string, unknown>, manifest?: Record<string, unknown>): PlaceCard {
   const manifestImages = manifest?.images as Array<{ path?: string; category?: string }> | undefined;
 
-  // Already V2 format?
-  if (raw.data && typeof raw.data === 'object' && raw.type) {
-    const v2 = raw as unknown as PlaceCard;
+  // Already V2 format, including lightweight stub cards that only have top-level fields.
+  if (raw.type && ('name' in raw || 'data' in raw)) {
+    const v2 = raw as Partial<PlaceCard> & {
+      address?: string;
+      city?: string;
+      rating?: number;
+      hero_image?: string | null;
+      heroImage?: string | null;
+    };
+    const baseImages = Array.isArray(v2.data?.images) ? v2.data.images : [];
+    const mergedImages = mergePlaceCardImages(baseImages, manifestImages);
+
     return {
-      ...v2,
+      place_id: v2.place_id ?? '',
+      name: v2.name ?? 'Unknown',
+      type: normalizeType(v2.type),
       data: {
+        description: typeof v2.data?.description === 'string' ? v2.data.description : '',
+        highlights: Array.isArray(v2.data?.highlights) ? v2.data.highlights : [],
         ...v2.data,
-        images: mergePlaceCardImages(v2.data.images, manifestImages),
+        images: mergedImages,
+        ...(v2.address ? { address: v2.address } : {}),
+        ...(v2.city ? { city: v2.city } : {}),
+        ...(v2.rating !== undefined ? { rating: v2.rating } : {}),
+        ...((v2.heroImage ?? v2.hero_image) ? { heroImage: v2.heroImage ?? v2.hero_image ?? undefined } : {}),
       },
     };
   }
