@@ -34,6 +34,18 @@ export interface MonitoringActionSummary {
   detail: string;
 }
 
+export interface MonitoringTaskLike {
+  id: string;
+  label: string;
+  detail: string;
+  action: 'review' | 'saved';
+  tone: 'critical' | 'notable';
+  status: 'open' | 'done';
+  source?: 'monitoring';
+  createdAt?: string;
+  updatedAt?: string;
+}
+
 export interface IntelligenceDigestLike {
   entryId: string;
   contextKey: string;
@@ -250,6 +262,41 @@ export function summarizeMonitoringActionPrompts(prompts: MonitoringActionPrompt
     count: prompts.length,
     detail: first.detail,
   };
+}
+
+function slugifyMonitoringTaskPart(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 48);
+}
+
+export function buildMonitoringTaskFromSummary(
+  summary: MonitoringActionSummary,
+  now = new Date().toISOString(),
+): MonitoringTaskLike {
+  return {
+    id: `monitoring-${summary.action}-${slugifyMonitoringTaskPart(summary.detail)}`,
+    label: summary.label,
+    detail: summary.detail,
+    action: summary.action,
+    tone: summary.tone,
+    status: 'open',
+    source: 'monitoring',
+    createdAt: now,
+    updatedAt: now,
+  };
+}
+
+export function resolveOpenMonitoringTask(
+  tasks: MonitoringTaskLike[] | undefined,
+  summary: MonitoringActionSummary | null | undefined,
+): MonitoringTaskLike | null {
+  const openTask = tasks?.find(task => task.status === 'open');
+  if (openTask) return openTask;
+  if (!summary) return null;
+  return buildMonitoringTaskFromSummary(summary);
 }
 
 export function resolveVisibleMonitoringSummary(

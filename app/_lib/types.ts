@@ -51,6 +51,20 @@ export interface ContextAnchor {
   radiusM: number;
 }
 
+export type MonitoringTaskStatus = 'open' | 'done';
+
+export interface MonitoringTask {
+  id: string;
+  label: string;
+  detail: string;
+  action: 'review' | 'saved';
+  tone: 'critical' | 'notable';
+  status: MonitoringTaskStatus;
+  source: 'monitoring';
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface Context {
   key: string;          // "trip:slug", "outing:slug", "radar:slug"
   label: string;        // "NYC Solo Trip"
@@ -63,6 +77,7 @@ export interface Context {
   active: boolean;
   status?: ContextStatus;  // defaults to 'active' if missing; overrides `active` when present
   anchor?: ContextAnchor;  // geographic anchor for proximity sorting
+  monitoringTasks?: MonitoringTask[];
 }
 
 export interface UserManifest {

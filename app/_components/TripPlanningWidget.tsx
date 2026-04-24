@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import type { ParsedAccommodation } from '../api/trip/parse-accommodation/route';
-import { resolveVisibleMonitoringSummary } from '../_lib/trip-emergence';
+import type { MonitoringTask } from '../_lib/types';
+import { buildMonitoringTaskFromSummary, resolveOpenMonitoringTask } from '../_lib/trip-emergence';
 import TripIntelInput from './TripIntelInput';
 
 interface FlightLeg {
@@ -66,10 +67,10 @@ interface TripPlanningWidgetProps {
   people?: Array<{ name: string; relation?: string }>;
   monitoringActionPrompts?: MonitoringActionPrompt[];
   monitoringActionSummary?: MonitoringActionSummary | null;
+  monitoringTasks?: MonitoringTask[];
 }
 
 const STORAGE_KEY_PREFIX = 'compass-trip-planning-';
-const MONITORING_DISMISS_KEY_PREFIX = 'compass-trip-monitoring-dismissed-';
 
 function load(userId: string, contextKey: string): TripPlanning {
   if (typeof window === 'undefined') return defaultPlanning();
@@ -117,10 +118,6 @@ function FlightCard({ leg, label }: { leg: FlightLeg; label: string }) {
   );
 }
 
-function monitoringDismissKey(userId: string, contextKey: string): string {
-  return `${MONITORING_DISMISS_KEY_PREFIX}${userId}-${contextKey}`;
-}
-
 export default function TripPlanningWidget({
   userId,
   contextKey,
@@ -132,6 +129,7 @@ export default function TripPlanningWidget({
   people,
   monitoringActionPrompts = [],
   monitoringActionSummary = null,
+  monitoringTasks = [],
 }: TripPlanningWidgetProps) {
   const [planning, setPlanning] = useState<TripPlanning>(defaultPlanning);
   const [mounted, setMounted] = useState(false);
@@ -142,16 +140,12 @@ export default function TripPlanningWidget({
   const [accomText, setAccomText] = useState('');
   const [accomParsing, setAccomParsing] = useState(false);
   const [parsedAccom, setParsedAccom] = useState<ParsedAccommodation | null>(null);
-  const [dismissedMonitoringSummary, setDismissedMonitoringSummary] = useState<string | null>(null);
+  const [taskSyncing, setTaskSyncing] = useState(false);
+  const [persistedMonitoringTask, setPersistedMonitoringTask] = useState<MonitoringTask | null>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
     const p = load(userId, contextKey);
-    try {
-      setDismissedMonitoringSummary(localStorage.getItem(monitoringDismissKey(userId, contextKey)));
-    } catch {
-      setDismissedMonitoringSummary(null);
-    }
     // Auto-mark booked if manifest has data
     if ((travel?.outbound || bookingStatus === 'fully-booked') && p.travel.status === 'open') {
       p.travel = { status: 'booked' };
@@ -161,6 +155,52 @@ export default function TripPlanningWidget({
     }
     setPlanning(p);
   }, [userId, contextKey, travel, accommodation, bookingStatus]);
+
+  useEffect(() => {
+    const openTask = monitoringTasks.find((task) => task.status === 'open') ?? null;
+    setPersistedMonitoringTask(openTask);
+  }, [monitoringTasks, contextKey]);
+
+  useEffect(() => {
+    const summary = monitoringActionSummary;
+    if (!summary) return;
+    const nextTask = buildMonitoringTaskFromSummary(summary);
+    const existing = monitoringTasks.find((task) => task.id === nextTask.id);
+    if (existing) {
+      setPersistedMonitoringTask(existing.status === 'open' ? existing : null);
+      return;
+    }
+
+    let cancelled = false;
+    setTaskSyncing(true);
+    void (async () => {
+      try {
+        const res = await fetch('/api/user/monitoring-tasks', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ contextKey, task: nextTask }),
+        });
+        if (!res.ok) throw new Error('task sync failed');
+        const body = await res.json() as { task?: MonitoringTask };
+        if (!cancelled && body.task) setPersistedMonitoringTask(body.task);
+      } catch {
+        if (!cancelled) {
+          setPersistedMonitoringTask({
+            ...nextTask,
+            source: 'monitoring',
+            createdAt: nextTask.createdAt ?? new Date().toISOString(),
+            updatedAt: nextTask.updatedAt ?? new Date().toISOString(),
+          });
+        }
+      } finally {
+        if (!cancelled) setTaskSyncing(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [contextKey, monitoringActionSummary, monitoringTasks]);
 
   function toggle(field: 'travel' | 'accommodation') {
     if (field === 'accommodation' && planning.accommodation.status === 'open') {
@@ -216,7 +256,10 @@ export default function TripPlanningWidget({
   }
 
   const reviewUrl = `/review/${encodeURIComponent(contextKey)}`;
-  const visibleMonitoringSummary = resolveVisibleMonitoringSummary(monitoringActionSummary, dismissedMonitoringSummary);
+  const visibleMonitoringTask = resolveOpenMonitoringTask(
+    persistedMonitoringTask ? [persistedMonitoringTask] : monitoringTasks,
+    monitoringActionSummary,
+  );
   const monitoringPromptHref = (action?: MonitoringActionPrompt['action']) => {
     if (action === 'saved') return `${reviewUrl}?tab=saved`;
     return reviewUrl;
@@ -225,12 +268,25 @@ export default function TripPlanningWidget({
     if (action === 'saved') return 'Review saved';
     return 'Open review';
   };
-  const dismissMonitoringSummary = () => {
-    if (!monitoringActionSummary) return;
-    setDismissedMonitoringSummary(monitoringActionSummary.detail);
+  const completeMonitoringTask = async () => {
+    if (!visibleMonitoringTask) return;
+    const completedTask: MonitoringTask = {
+      ...visibleMonitoringTask,
+      source: 'monitoring',
+      status: 'done',
+      updatedAt: new Date().toISOString(),
+      createdAt: visibleMonitoringTask.createdAt ?? new Date().toISOString(),
+    };
+    setPersistedMonitoringTask(null);
     try {
-      localStorage.setItem(monitoringDismissKey(userId, contextKey), monitoringActionSummary.detail);
-    } catch {}
+      await fetch('/api/user/monitoring-tasks', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ contextKey, task: completedTask }),
+      });
+    } catch {
+      // keep optimistic completion even if persistence fails; next server refresh can recreate if still relevant
+    }
   };
 
   // Build compact travel summary line
@@ -329,21 +385,21 @@ export default function TripPlanningWidget({
         </div>
       )}
 
-      {visibleMonitoringSummary && (
-        <div className={`tpw-monitoring-checklist tpw-monitoring-checklist-${visibleMonitoringSummary.tone}`}>
+      {visibleMonitoringTask && (
+        <div className={`tpw-monitoring-checklist tpw-monitoring-checklist-${visibleMonitoringTask.tone}`}>
           <div className="tpw-monitoring-checklist-header">
             <div className="tpw-monitoring-checklist-title">Action needed</div>
-            <button type="button" className="tpw-monitoring-checklist-dismiss" onClick={dismissMonitoringSummary}>
-              Dismiss
+            <button type="button" className="tpw-monitoring-checklist-dismiss" onClick={completeMonitoringTask}>
+              Done
             </button>
           </div>
           <div className="tpw-monitoring-checklist-row">
             <span className="tpw-monitoring-checklist-copy">
-              <strong>{visibleMonitoringSummary.label}</strong>
-              <span>{visibleMonitoringSummary.detail}</span>
+              <strong>{visibleMonitoringTask.label}</strong>
+              <span>{visibleMonitoringTask.detail}</span>
             </span>
-            <Link href={monitoringPromptHref(visibleMonitoringSummary.action)} className="tpw-monitoring-checklist-link">
-              {monitoringPromptCta(visibleMonitoringSummary.action)} →
+            <Link href={monitoringPromptHref(visibleMonitoringTask.action)} className="tpw-monitoring-checklist-link">
+              {taskSyncing ? 'Saving…' : `${monitoringPromptCta(visibleMonitoringTask.action)} →`}
             </Link>
           </div>
         </div>

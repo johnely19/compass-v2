@@ -684,6 +684,7 @@ export default function HomeClient({
                 people={raw.people as Array<{ name: string; relation?: string }> | undefined}
                 monitoringActionPrompts={monitoringActionPrompts}
                 monitoringActionSummary={monitoringActionSummary}
+                monitoringTasks={raw.monitoringTasks as import('../_lib/types').MonitoringTask[] | undefined}
               />
             </div>
           );

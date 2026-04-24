@@ -5,7 +5,9 @@ import {
   buildIntelligenceAttachmentChips,
   buildMonitoringActionPrompts,
   buildMonitoringPromptAttachmentChips,
+  buildMonitoringTaskFromSummary,
   diffTripEmergenceAttributes,
+  resolveOpenMonitoringTask,
   resolveVisibleMonitoringSummary,
   summarizeMonitoringActionPrompts,
 } from '../app/_lib/trip-emergence';
@@ -227,6 +229,64 @@ describe('summarizeMonitoringActionPrompts', () => {
       count: 2,
       detail: 'Sailor shows closure risk. Save a fallback now.',
     });
+  });
+});
+
+describe('buildMonitoringTaskFromSummary', () => {
+  test('creates a stable open task shape from a monitoring summary', () => {
+    const task = buildMonitoringTaskFromSummary({
+      label: 'Backup move ready',
+      action: 'saved',
+      tone: 'critical',
+      count: 1,
+      detail: 'Sailor shows closure risk. Save a fallback now.',
+    }, '2026-04-24T02:00:00.000Z');
+
+    assert.deepEqual(task, {
+      id: 'monitoring-saved-sailor-shows-closure-risk-save-a-fallback-now',
+      label: 'Backup move ready',
+      detail: 'Sailor shows closure risk. Save a fallback now.',
+      action: 'saved',
+      tone: 'critical',
+      status: 'open',
+      source: 'monitoring',
+      createdAt: '2026-04-24T02:00:00.000Z',
+      updatedAt: '2026-04-24T02:00:00.000Z',
+    });
+  });
+});
+
+describe('resolveOpenMonitoringTask', () => {
+  test('prefers persisted open tasks and falls back to the current summary', () => {
+    const summary = {
+      label: 'Backup move ready',
+      action: 'saved' as const,
+      tone: 'critical' as const,
+      count: 1,
+      detail: 'Sailor shows closure risk. Save a fallback now.',
+    };
+
+    assert.equal(resolveOpenMonitoringTask([
+      {
+        id: 'task-1',
+        label: 'Existing task',
+        detail: 'Already persisted',
+        action: 'review',
+        tone: 'notable',
+        status: 'open',
+      },
+    ], summary)?.id, 'task-1');
+
+    assert.equal(resolveOpenMonitoringTask([
+      {
+        id: 'task-2',
+        label: 'Completed task',
+        detail: 'Done already',
+        action: 'saved',
+        tone: 'critical',
+        status: 'done',
+      },
+    ], summary)?.detail, summary.detail);
   });
 });
 
