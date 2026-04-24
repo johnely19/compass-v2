@@ -9,12 +9,61 @@ import { test, expect, type Page } from '@playwright/test';
 // Auth is pre-seeded by global-setup.ts (compass-user cookie for qa-test-user)
 
 /** Navigate to homepage (auth already set by global-setup) */
-async function loginAndGoHome(page: Page) {
+async function loginAndGoHome(page: Page, userId?: string) {
+  if (userId) {
+    await page.context().addCookies([
+      {
+        name: 'compass-user',
+        value: userId,
+        url: 'http://localhost:3002',
+      },
+    ]);
+  }
+
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.waitForTimeout(1000); // let client hydrate
 }
 
 test.describe('Homepage Layout', () => {
+  test('homepage discovery cards expose only internal Compass links while keeping Maps as a separate action', async ({ page }) => {
+    await loginAndGoHome(page, 'john');
+
+    test.skip(await page.locator('.place-card-detail-link').count() === 0, 'No homepage place cards are seeded for this user in the local fixture');
+
+    const detailLink = page.locator('.place-card-detail-link').first();
+    await expect(detailLink).toBeVisible({ timeout: 8000 });
+    await expect(detailLink).toHaveAttribute('href', /\/placecards\/.+\?context=/);
+
+    const cardHrefs = await detailLink.evaluate((el) => {
+      const wrapper = el.parentElement?.parentElement;
+      if (!wrapper) return [] as string[];
+      return Array.from(wrapper.querySelectorAll('a'))
+        .map((anchor) => anchor.getAttribute('href'))
+        .filter((href): href is string => Boolean(href));
+    });
+
+    expect(cardHrefs.length).toBeGreaterThanOrEqual(1);
+    expect(cardHrefs.every((href) => href.startsWith('/placecards/'))).toBe(true);
+
+    const cardShell = page.locator('.place-card').first();
+    await Promise.all([
+      page.waitForURL(/\/placecards\//),
+      cardShell.click({ position: { x: 24, y: 24 } }),
+    ]);
+    await expect(page).toHaveURL(/\/placecards\//);
+
+    await page.goBack({ waitUntil: 'networkidle' });
+
+    const mapsButton = page.locator('.place-card-maps').first();
+    const [popup] = await Promise.all([
+      page.context().waitForEvent('page'),
+      mapsButton.click(),
+    ]);
+    await popup.waitForLoadState('domcontentloaded');
+    await expect(popup).toHaveURL(/google\.com\/maps\/place\/\?q=place_id:/);
+    await popup.close();
+  });
+
   test('renders single-track focused view with all key elements', async ({ page }) => {
     await loginAndGoHome(page);
 

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import type { Discovery } from '../_lib/types';
 import { dispatchChatTarget } from '../_lib/chat-target';
@@ -8,6 +9,7 @@ import TypeBadge from './TypeBadge';
 import TriageButtons from './TriageButtons';
 import { getDiscoveryPrimaryImageUrl } from '../_lib/image-url';
 import { getMonitorStatusLabel } from '../_lib/discovery-monitoring';
+import { buildPlaceCardPath } from '../_lib/app-url';
 
 interface PlaceCardProps {
   discovery: Discovery;
@@ -19,6 +21,7 @@ interface PlaceCardProps {
 }
 
 export default function PlaceCard({ discovery, contextKey, contextLabel, contextEmoji, contextType, userId }: PlaceCardProps) {
+  const router = useRouter();
   const { id, place_id, name, type } = discovery;
   // Ensure rating is a number (V1 data may have strings like "4.5")
   const rating = discovery.rating != null ? Number(discovery.rating) : null;
@@ -70,6 +73,7 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
           color-mix(in srgb, var(--accent) 10%, var(--bg-primary)))`,
       };
 
+  const detailHref = buildPlaceCardPath(place_id || id, contextKey);
   const mapsUrl = place_id
     ? `https://www.google.com/maps/place/?q=place_id:${place_id}`
     : null;
@@ -110,9 +114,39 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
     }));
   }, [contextKey, contextLabel, contextEmoji, contextType, id, name, type, place_id]);
 
+  const handleOpenMaps = useCallback((e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (!mapsUrl) return;
+    window.open(mapsUrl, '_blank', 'noopener,noreferrer');
+  }, [mapsUrl]);
+
+  const handleCardClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    if (target.closest('a, button, input, textarea, select, summary, [role="button"]')) {
+      return;
+    }
+    router.push(detailHref);
+  }, [detailHref, router]);
+
+  const handleCardKeyDown = useCallback((e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.target !== e.currentTarget) return;
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    e.preventDefault();
+    router.push(detailHref);
+  }, [detailHref, router]);
+
   return (
-    <div style={{ position: 'relative' }} className={isChatTarget ? 'place-card-chat-active' : ''}>
-      <Link href={`/placecards/${place_id || id}?context=${encodeURIComponent(contextKey)}`} className="place-card">
+    <div
+      style={{ position: 'relative' }}
+      className={isChatTarget ? 'place-card-chat-active' : ''}
+      onClick={handleCardClick}
+      onKeyDown={handleCardKeyDown}
+      role="link"
+      tabIndex={0}
+      aria-label={`Open ${name} in Compass`}
+    >
+      <div className="place-card">
         <div className="place-card-image" style={gradientStyle as React.CSSProperties}>
           {!finalImageUrl && <span className="place-card-image-fallback" />}
           {/* Hidden img for onError detection - triggers on load failure */}
@@ -153,15 +187,24 @@ export default function PlaceCard({ discovery, contextKey, contextLabel, context
             </div>
           )}
         </div>
-      </Link>
-      {mapsUrl && (
-        <div className="place-card-footer">
-          <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="place-card-maps"
-            onClick={(e) => e.stopPropagation()}>View in Google Maps →</a>
-        </div>
-      )}
+      </div>
+      <div className="place-card-footer">
+        <Link href={detailHref} className="place-card-detail-link" aria-label={`View ${name} details in Compass`}>
+          View details →
+        </Link>
+        {mapsUrl && (
+          <button
+            type="button"
+            className="place-card-maps"
+            onClick={handleOpenMaps}
+            aria-label={`Open ${name} in Google Maps`}
+          >
+            Maps
+          </button>
+        )}
+      </div>
       {userId && place_id && (
-        <div className="place-card-triage-overlay">
+        <div className="place-card-triage-overlay" onClick={(e) => e.stopPropagation()}>
           <TriageButtons userId={userId} contextKey={contextKey} placeId={place_id} size="sm" />
         </div>
       )}

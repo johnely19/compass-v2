@@ -1064,9 +1064,12 @@ a:hover {
   transition: box-shadow var(--transition-base), transform var(--transition-base);
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.place-card:hover {
+.place-card:hover,
+[role="link"]:focus-visible > .place-card,
+[role="link"]:hover > .place-card {
   box-shadow: var(--card-shadow-hover);
   transform: translateY(-2px);
 }
@@ -1169,15 +1172,33 @@ a:hover {
   gap: var(--space-sm);
 }
 
+.place-card-detail-link,
 .place-card-maps {
   font-size: 0.8rem;
-  color: var(--text-muted);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
+.place-card-maps {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.place-card-detail-link {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.place-card-detail-link:hover,
 .place-card-maps:hover {
   color: var(--accent);
+}
+
+.place-card-maps {
+  color: var(--text-muted);
 }
 
 /* Triage overlay — sits on top of card, outside the Link */
