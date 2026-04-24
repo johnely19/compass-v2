@@ -12,10 +12,11 @@ export interface TripEmergenceSnapshot {
   base?: { address?: string; host?: string; zone?: string };
   accommodationName?: string;
   accommodationAddress?: string;
+  anchorExperiences?: Array<{ name: string; type?: string; note?: string }>;
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base' | 'accommodation';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base' | 'accommodation' | 'anchor';
   value: string;
 }
 
@@ -111,6 +112,18 @@ export function diffTripEmergenceAttributes(
     changedAttrs.push({ field: 'accommodation', value: next.accommodationAddress });
   }
 
+  // Anchor experiences - new items only, cap at 2 for low noise
+  const newAnchors = (next.anchorExperiences ?? []).filter(
+    a => !(previous.anchorExperiences ?? []).some(p => p.name === a.name)
+  );
+  if (newAnchors.length > 0) {
+    const limited = newAnchors.slice(0, 2);
+    changedAttrs.push({
+      field: 'anchor',
+      value: limited.map(a => a.type ? `${a.name} (${a.type})` : a.name).join(', '),
+    });
+  }
+
   return changedAttrs;
 }
 
@@ -140,6 +153,7 @@ export function applyTripAttributeChips(
     focus: [...(snapshot.focus ?? [])],
     people: [...(snapshot.people ?? [])],
     priorities: [...(snapshot.priorities ?? [])],
+    anchorExperiences: [...(snapshot.anchorExperiences ?? [])],
   };
 
   for (const chip of chips) {
@@ -214,6 +228,22 @@ export function applyTripAttributeChips(
       next.accommodationName = parts[0].trim();
       if (parts[1]) {
         next.accommodationAddress = parts[1].trim();
+      }
+    }
+
+    if (chip.field === 'anchor') {
+      // Parse anchor value: "Guggenheim (gallery), MoMA (museum)" or just "The Four Horsemen"
+      const existing = new Set((next.anchorExperiences ?? []).map(a => a.name));
+      const items = chip.value.split(',').map(v => v.trim()).filter(Boolean);
+      for (const item of items) {
+        const match = item.match(/^(.+?)\s*\((.+)\)$/);
+        if (match && !existing.has(match[1].trim())) {
+          next.anchorExperiences!.push({ name: match[1].trim(), type: match[2].trim() });
+          existing.add(match[1].trim());
+        } else if (!match && !existing.has(item)) {
+          next.anchorExperiences!.push({ name: item });
+          existing.add(item);
+        }
       }
     }
   }

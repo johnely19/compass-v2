@@ -326,6 +326,7 @@ export default function ChatWidget() {
               base: c.base,
               accommodationName: c.accommodationName,
               accommodationAddress: c.accommodationAddress,
+              anchorExperiences: (c as unknown as Record<string, unknown>).anchor_experiences as Array<{ name: string; type?: string; note?: string }> | undefined,
             };
           }
           preContextSnapshots.current = snapshots;

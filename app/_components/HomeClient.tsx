@@ -563,6 +563,7 @@ export default function HomeClient({
         base: (ctx as unknown as Record<string, unknown>).base as { address?: string; host?: string; zone?: string } | undefined,
         accommodationName: (ctx as unknown as Record<string, unknown>).accommodationName as string | undefined,
         accommodationAddress: (ctx as unknown as Record<string, unknown>).accommodationAddress as string | undefined,
+        anchorExperiences: (ctx as unknown as Record<string, unknown>).anchor_experiences as Array<{ name: string; type?: string; note?: string }> | undefined,
       } satisfies TripEmergenceSnapshot, landingAttrs)
     : null;
   const effectiveCtx = optimisticTrip
@@ -574,6 +575,7 @@ export default function HomeClient({
         priorities: optimisticTrip.priorities,
         accommodationName: optimisticTrip.accommodationName,
         accommodationAddress: optimisticTrip.accommodationAddress,
+        anchorExperiences: optimisticTrip.anchorExperiences,
       }
     : ctx;
   const monitoringHighlights = buildTripMonitoringHighlights({
@@ -679,6 +681,18 @@ export default function HomeClient({
                   </span>
                 </div>
               )}
+              {ctx.type === 'trip' && (() => {
+                const anchors = (effectiveCtx as unknown as Record<string, unknown>).anchorExperiences as Array<{ name: string; type?: string }> | undefined;
+                return anchors && anchors.length > 0 ? (
+                  <div className="section-attr-pills">
+                    {anchors.slice(0, 2).map((a, i) => (
+                      <span key={i} className="section-attr-pill">
+                        ⚓ {a.type ? `${a.name} (${a.type})` : a.name}
+                      </span>
+                    ))}
+                  </div>
+                ) : null;
+              })()}
             </div>
           </div>
 

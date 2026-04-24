@@ -152,6 +152,7 @@ describe('applyTripAttributeChips', () => {
         { name: 'Huzur', relation: 'wife' },
       ],
       priorities: [],
+      anchorExperiences: [],
     });
   });
 
@@ -175,6 +176,7 @@ describe('applyTripAttributeChips', () => {
       focus: [],
       people: [],
       priorities: [],
+      anchorExperiences: [],
       base: { address: '123 Bedford Ave', host: 'Sarah', zone: 'Brooklyn' },
     });
   });
@@ -196,6 +198,7 @@ describe('applyTripAttributeChips', () => {
       focus: [],
       people: [],
       priorities: [],
+      anchorExperiences: [],
       base: { address: '123 Main St', host: 'John', zone: 'Williamsburg' },
     });
   });
@@ -369,6 +372,7 @@ describe('accommodation field', () => {
       focus: [],
       people: [],
       priorities: [],
+      anchorExperiences: [],
       accommodationName: 'The Liberty Hotel',
       accommodationAddress: '215 Chestnut St',
     });
@@ -389,7 +393,119 @@ describe('accommodation field', () => {
       focus: [],
       people: [],
       priorities: [],
+      anchorExperiences: [],
       accommodationName: 'Ace Hotel',
+    });
+  });
+});
+
+describe('anchor_experiences field', () => {
+  test('surfaces new anchor experiences, capped at 2', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        anchorExperiences: [{ name: 'Guggenheim', type: 'gallery' }],
+      },
+      {
+        key: 'trip:nyc',
+        anchorExperiences: [
+          { name: 'Guggenheim', type: 'gallery' },
+          { name: 'MoMA', type: 'museum' },
+          { name: 'Whitney Biennial', type: 'gallery' },
+          { name: 'Comedy Cellar', type: 'comedy' },
+        ],
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'anchor', value: 'MoMA (museum), Whitney Biennial (gallery)' },
+    ]);
+  });
+
+  test('surfaces anchor experiences without type', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+      },
+      {
+        key: 'trip:nyc',
+        anchorExperiences: [{ name: 'The Four Horsemen', note: 'Natural wine bar' }],
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'anchor', value: 'The Four Horsemen' },
+    ]);
+  });
+
+  test('applies anchor chips from chat-emerged attributes', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        dates: 'August 2026',
+        city: 'New York',
+      },
+      [
+        { field: 'anchor', value: 'Guggenheim (gallery), MoMA (museum)' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      dates: 'August 2026',
+      city: 'New York',
+      focus: [],
+      people: [],
+      priorities: [],
+      anchorExperiences: [
+        { name: 'Guggenheim', type: 'gallery' },
+        { name: 'MoMA', type: 'museum' },
+      ],
+    });
+  });
+
+  test('applies anchor chips without type', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+      },
+      [
+        { field: 'anchor', value: 'The Four Horsemen, Comedy Cellar' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      focus: [],
+      people: [],
+      priorities: [],
+      anchorExperiences: [
+        { name: 'The Four Horsemen' },
+        { name: 'Comedy Cellar' },
+      ],
+    });
+  });
+
+  test('deduplicates anchor experiences by name', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        anchorExperiences: [{ name: 'Guggenheim', type: 'gallery' }],
+      },
+      [
+        { field: 'anchor', value: 'Guggenheim (museum), MoMA (museum)' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      focus: [],
+      people: [],
+      priorities: [],
+      anchorExperiences: [
+        { name: 'Guggenheim', type: 'gallery' },
+        { name: 'MoMA', type: 'museum' },
+      ],
     });
   });
 });
