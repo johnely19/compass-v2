@@ -8,13 +8,31 @@ async function loginAsOwner(page: Page) {
   await page.goto(`/u/${OWNER_AUTH_CODE}`, { waitUntil: 'networkidle' });
 }
 
-async function expectPreviewBackgrounds(locator: Locator, minimumCards: number) {
+async function expectPreviewBackgrounds(
+  locator: Locator,
+  minimumCards: number,
+  minimumSize: { height?: number; width?: number } = {},
+) {
   const count = await locator.count();
   expect(count).toBeGreaterThanOrEqual(minimumCards);
 
   for (let i = 0; i < Math.min(count, minimumCards); i++) {
-    const backgroundImage = await locator.nth(i).evaluate((el) => getComputedStyle(el).backgroundImage);
+    const preview = locator.nth(i);
+    const backgroundImage = await preview.evaluate((el) => getComputedStyle(el).backgroundImage);
     expect(backgroundImage).not.toBe('none');
+
+    const box = await preview.evaluate((el) => {
+      const { width, height } = el.getBoundingClientRect();
+      return { width, height };
+    });
+
+    if (minimumSize.height != null) {
+      expect(box.height).toBeGreaterThanOrEqual(minimumSize.height);
+    }
+
+    if (minimumSize.width != null) {
+      expect(box.width).toBeGreaterThanOrEqual(minimumSize.width);
+    }
   }
 }
 
@@ -36,7 +54,7 @@ test('homepage place cards show preview images for the Ontario Cottage context',
   await page.goto('/', { waitUntil: 'networkidle' });
 
   const previews = page.locator('.place-card-image');
-  await expectPreviewBackgrounds(previews, 3);
+  await expectPreviewBackgrounds(previews, 3, { height: 150, width: 150 });
 });
 
 test('review cards show preview images for the Ontario Cottage context', async ({ page }) => {
@@ -49,7 +67,6 @@ test('review cards show preview images for the Ontario Cottage context', async (
 
 test('image-rich place cards expose at least three gallery images when available', async ({ page }) => {
   await page.goto(`/placecards/${IMAGE_RICH_PLACE_ID}`, { waitUntil: 'networkidle' });
-
   const galleryImages = page.locator('.place-detail-v2 .photo-gallery-item img');
   await expectLoadedGalleryImages(galleryImages, 3);
 });
