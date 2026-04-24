@@ -8,6 +8,7 @@ interface TripIntelInputProps {
   inlineMode?: boolean; // always-visible transparent input row
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  base?: { address?: string; host?: string; zone?: string };
   monitoringHighlights?: string[];
   monitoringPrompts?: Array<{ label: string; detail: string }>;
 }
@@ -19,7 +20,7 @@ interface SaveResult {
   tripFieldCount?: number;
 }
 
-export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, monitoringHighlights = [], monitoringPrompts = [] }: TripIntelInputProps) {
+export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpose, people, base, monitoringHighlights = [], monitoringPrompts = [] }: TripIntelInputProps) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -94,6 +95,16 @@ export default function TripIntelInput({ contextKey, onSaved, inlineMode, purpos
                     {p.relation && <span className="tpw-notes-expand-person-rel">({p.relation})</span>}
                   </span>
                 ))}
+              </div>
+            )}
+            {base && (base.address || base.host || base.zone) && (
+              <div className="tpw-notes-expand-base">
+                <span className="tpw-notes-expand-base-icon">🏠</span>
+                <span className="tpw-notes-expand-base-text">
+                  {base.address}
+                  {base.host && <span className="tpw-notes-expand-base-host"> ({base.host})</span>}
+                  {base.zone && <span className="tpw-notes-expand-base-zone"> · {base.zone}</span>}
+                </span>
               </div>
             )}
             {monitoringHighlights.length > 0 && (

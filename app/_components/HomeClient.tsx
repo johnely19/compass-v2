@@ -560,6 +560,7 @@ export default function HomeClient({
         purpose: (ctx as unknown as Record<string, unknown>).purpose as string | undefined,
         people: (ctx as unknown as Record<string, unknown>).people as Array<{ name: string; relation?: string }> | undefined,
         priorities: (ctx as unknown as Record<string, unknown>).priorities as string[] | undefined,
+        base: (ctx as unknown as Record<string, unknown>).base as { address?: string; host?: string; zone?: string } | undefined,
       } satisfies TripEmergenceSnapshot, landingAttrs)
     : null;
   const effectiveCtx = optimisticTrip
@@ -699,6 +700,7 @@ export default function HomeClient({
                 savedCount={counts.saved}
                 purpose={optimisticTrip?.purpose ?? raw.purpose as string | undefined}
                 people={optimisticTrip?.people ?? raw.people as Array<{ name: string; relation?: string }> | undefined}
+                base={optimisticTrip?.base ?? raw.base as { address?: string; host?: string; zone?: string } | undefined}
                 monitoringHighlights={monitoringHighlights}
                 monitoringPrompts={monitoringPrompts}
               />

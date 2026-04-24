@@ -48,6 +48,7 @@ interface TripPlanningWidgetProps {
   savedCount?: number;
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
+  base?: { address?: string; host?: string; zone?: string };
   monitoringHighlights?: string[];
   monitoringPrompts?: Array<{ label: string; detail: string }>;
 }
@@ -283,6 +284,7 @@ export default function TripPlanningWidget({
         inlineMode
         purpose={purpose}
         people={people}
+        base={base}
         monitoringHighlights={monitoringHighlights}
         monitoringPrompts={monitoringPrompts}
       />

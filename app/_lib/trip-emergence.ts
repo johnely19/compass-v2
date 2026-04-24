@@ -9,10 +9,11 @@ export interface TripEmergenceSnapshot {
   purpose?: string;
   people?: Array<{ name: string; relation?: string }>;
   priorities?: string[];
+  base?: { address?: string; host?: string; zone?: string };
 }
 
 export interface TripAttributeChip {
-  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities';
+  field: 'dates' | 'city' | 'focus' | 'purpose' | 'people' | 'intelligence' | 'priorities' | 'base';
   value: string;
 }
 
@@ -77,6 +78,25 @@ export function diffTripEmergenceAttributes(
   const newPriorities = (next.priorities ?? []).filter(p => !(previous.priorities ?? []).includes(p));
   if (newPriorities.length > 0) {
     changedAttrs.push({ field: 'priorities', value: newPriorities.join(', ') });
+  }
+
+  // Base field diffing - capture address, host, or zone changes
+  if (next.base) {
+    const prevBase = previous.base;
+    const prevAddr = prevBase?.address ?? '';
+    const nextAddr = next.base.address ?? '';
+    const prevHost = prevBase?.host ?? '';
+    const nextHost = next.base.host ?? '';
+    const prevZone = prevBase?.zone ?? '';
+    const nextZone = next.base.zone ?? '';
+
+    if (nextAddr && nextAddr !== prevAddr) {
+      changedAttrs.push({ field: 'base', value: nextAddr + (nextHost ? ` (${nextHost})` : '') });
+    } else if (nextHost && nextHost !== prevHost) {
+      changedAttrs.push({ field: 'base', value: `Host: ${nextHost}` });
+    } else if (nextZone && nextZone !== prevZone) {
+      changedAttrs.push({ field: 'base', value: `Zone: ${nextZone}` });
+    }
   }
 
   return changedAttrs;
@@ -149,6 +169,30 @@ export function applyTripAttributeChips(
     if (chip.field === 'priorities') {
       const additions = chip.value.split(',').map(v => v.trim()).filter(Boolean);
       next.priorities = [...new Set([...(next.priorities ?? []), ...additions])];
+    }
+
+    if (chip.field === 'base') {
+      // Parse base value: "123 Main St (John)" or "Host: John" or "Zone: Brooklyn"
+      const value = chip.value;
+      const existingBase = next.base ?? {};
+
+      // Check for "Host: X" or "Zone: X" format
+      const hostMatch = value.match(/^Host:\s*(.+)$/);
+      const zoneMatch = value.match(/^Zone:\s*(.+)$/);
+
+      if (hostMatch) {
+        next.base = { ...existingBase, host: hostMatch[1].trim() };
+      } else if (zoneMatch) {
+        next.base = { ...existingBase, zone: zoneMatch[1].trim() };
+      } else {
+        // Default: treat as address, optionally with host in parens
+        const addrMatch = value.match(/^(.+?)\s*\((.+)\)$/);
+        if (addrMatch) {
+          next.base = { ...existingBase, address: addrMatch[1].trim(), host: addrMatch[2].trim() };
+        } else {
+          next.base = { ...existingBase, address: value.trim() };
+        }
+      }
     }
   }
 

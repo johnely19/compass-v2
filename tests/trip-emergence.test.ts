@@ -67,6 +67,57 @@ describe('diffTripEmergenceAttributes', () => {
       { field: 'people', value: 'John, Dessa (daughter)' },
     ]);
   });
+
+  test('surfaces base address and host changes', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St', host: 'John' },
+      },
+      {
+        key: 'trip:nyc',
+        base: { address: '456 Park Ave', host: 'John', zone: 'Upper East Side' },
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'base', value: '456 Park Ave (John)' },
+    ]);
+  });
+
+  test('surfaces base zone changes separately', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St', zone: 'Brooklyn' },
+      },
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St', zone: 'Williamsburg' },
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'base', value: 'Zone: Williamsburg' },
+    ]);
+  });
+
+  test('surfaces host-only changes', () => {
+    const attrs = diffTripEmergenceAttributes(
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St', host: 'John' },
+      },
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St', host: 'Sarah' },
+      },
+    );
+
+    assert.deepEqual(attrs, [
+      { field: 'base', value: 'Host: Sarah' },
+    ]);
+  });
 });
 
 describe('applyTripAttributeChips', () => {
@@ -101,6 +152,51 @@ describe('applyTripAttributeChips', () => {
         { name: 'Huzur', relation: 'wife' },
       ],
       priorities: [],
+    });
+  });
+
+  test('applies base chips from chat-emerged attributes', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        dates: 'August 2026',
+        city: 'New York',
+      },
+      [
+        { field: 'base', value: '123 Bedford Ave (Sarah)' },
+        { field: 'base', value: 'Zone: Brooklyn' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      dates: 'August 2026',
+      city: 'New York',
+      focus: [],
+      people: [],
+      priorities: [],
+      base: { address: '123 Bedford Ave', host: 'Sarah', zone: 'Brooklyn' },
+    });
+  });
+
+  test('applies host-only and zone-only base chips', () => {
+    const next = applyTripAttributeChips(
+      {
+        key: 'trip:nyc',
+        base: { address: '123 Main St' },
+      },
+      [
+        { field: 'base', value: 'Host: John' },
+        { field: 'base', value: 'Zone: Williamsburg' },
+      ],
+    );
+
+    assert.deepEqual(next, {
+      key: 'trip:nyc',
+      focus: [],
+      people: [],
+      priorities: [],
+      base: { address: '123 Main St', host: 'John', zone: 'Williamsburg' },
     });
   });
 });
